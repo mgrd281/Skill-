@@ -17,6 +17,8 @@ export interface Tool {
   use: string[];
   desc: string;
   pushed: string | null;
+  license?: string | null;
+  archived?: boolean;
   added: string;
   order: number;
 }
@@ -94,3 +96,25 @@ export function url(path = ""): string {
 export const recentTools: Tool[] = [...tools]
   .sort((a, b) => b.added.localeCompare(a.added) || b.order - a.order)
   .slice(0, 30);
+
+// ---- شارات الحالة: أرشفة، قِدم، رخصة (تُحسب وقت البناء من بيانات GitHub) ----
+export interface Badge { kind: "ok" | "warn" | "bad"; text: string; latin?: string; title: string }
+const RESTRICTIVE = /AGPL|GPL|SSPL|BUSL|CC-BY-NC|Elastic|Commons|Sustainable/i;
+
+export function statusBadges(t: Tool, now = Date.now()): Badge[] {
+  const out: Badge[] = [];
+  if (t.archived) {
+    out.push({ kind: "bad", text: "مؤرشف", title: "المستودع مؤرشف: لم يعد صاحبه يطوّره" });
+  } else if (t.pushed) {
+    const days = (now - new Date(t.pushed).getTime()) / 864e5;
+    if (days > 365) out.push({ kind: "warn", text: "آخر تحديث", latin: t.pushed.slice(0, 7), title: "لم يُحدَّث المستودع منذ أكثر من سنة" });
+  }
+  const l = t.license;
+  if (l === "none") out.push({ kind: "bad", text: "بدون رخصة", title: "لا رخصة معلنة في المستودع: غالبًا لا يُسمح باستخدامه. اقرأ صفحته قبل الاعتماد عليه" });
+  else if (l === "other") out.push({ kind: "warn", text: "رخصة خاصة", title: "رخصة غير قياسية: اقرأ ملف الرخصة قبل الاستخدام التجاري" });
+  else if (l) {
+    const warn = RESTRICTIVE.test(l);
+    out.push({ kind: warn ? "warn" : "ok", text: "", latin: l, title: warn ? `رخصة ${l} لها شروط على الاستخدام التجاري: اقرأها` : `الرخصة: ${l}` });
+  }
+  return out;
+}

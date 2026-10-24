@@ -37,7 +37,10 @@ async function fetchRepo(full) {
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const j = await res.json();
-  return { stars: j.stargazers_count, pushed: (j.pushed_at || "").slice(0, 10) || null, archived: !!j.archived };
+  // الرخصة: معرّف SPDX مثل MIT، أو "none" إن لم تُعلَن رخصة، أو "other" إن لم تُصنَّف
+  const spdx = j.license?.spdx_id;
+  const license = !j.license ? "none" : !spdx || spdx === "NOASSERTION" ? "other" : spdx;
+  return { stars: j.stargazers_count, pushed: (j.pushed_at || "").slice(0, 10) || null, archived: !!j.archived, license };
 }
 
 const repos = [...new Set(tools.map(t => repoOf(t.gh)).filter(Boolean))];
@@ -64,9 +67,11 @@ for (const t of tools) {
   const r = info.get(repoOf(t.gh));
   if (!r) continue;
   const stars = formatStars(r.stars);
-  if (t.stars !== stars || t.pushed !== r.pushed) changed++;
+  if (t.stars !== stars || t.pushed !== r.pushed || t.license !== r.license || !!t.archived !== r.archived) changed++;
   t.stars = stars;
   t.pushed = r.pushed;
+  t.license = r.license;
+  t.archived = r.archived;
   if (r.archived) archived.push(t.name);
 }
 

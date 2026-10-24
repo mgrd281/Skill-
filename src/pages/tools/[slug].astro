@@ -2,7 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import Card from "../../components/Card.astro";
 import HeartLink from "../../components/HeartLink.astro";
-import { tools, projectById, categoryById, rich, isLatin, formatDate, host, isAppStore, repoLabel, url } from "../../lib/data";
+import { tools, projectById, categoryById, rich, isLatin, formatDate, host, isAppStore, repoLabel, url, statusBadges } from "../../lib/data";
 
 export function getStaticPaths() {
   return tools.map((t) => ({ params: { slug: t.slug }, props: { tool: t } }));
@@ -11,6 +11,8 @@ const { tool: t } = Astro.props;
 const cat = categoryById(t.cat);
 const related = tools.filter((x) => x.cat === t.cat && x.slug !== t.slug)
   .sort((a, b) => b.starsN - a.starsN || a.order - b.order).slice(0, 3);
+const badges = statusBadges(t);
+const warns = badges.filter((b) => b.kind !== "ok");
 const plain = t.desc.length > 155 ? t.desc.slice(0, 152) + "..." : t.desc;
 ---
 <Base title={`${t.name} | دليل أدوات التصميم والتطوير`} description={plain} path={`/tools/${t.slug}`}>
@@ -27,11 +29,17 @@ const plain = t.desc.length > 155 ? t.desc.slice(0, 152) + "..." : t.desc;
     <div class="meta">
       <span class="tag">{isLatin(t.kind) ? <bdi>{t.kind}</bdi> : t.kind}</span>
       {t.isNew && <span class="badge-new">جديد</span>}
+      {badges.map((b) => <span class={b.kind === "ok" ? "tag" : `tag tag-${b.kind}`} title={b.title}>{b.text}{b.text && b.latin ? " " : ""}{b.latin && <bdi>{b.latin}</bdi>}</span>)}
       <span set:html={rich(cat.name)} />
       {t.stars && <span class="stars" title="نجوم GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8z"/></svg>{t.stars}</span>}
       {t.pushed && <span class="when">آخر تحديث للمستودع: <bdi>{formatDate(t.pushed)}</bdi></span>}
     </div>
     <p class="desc" set:html={rich(t.desc)} />
+    {warns.length > 0 && (
+      <ul class="notice">
+        {warns.map((b) => <li class={`n-${b.kind}`}>{b.title}</li>)}
+      </ul>
+    )}
 
     {t.cmd && (
       <>

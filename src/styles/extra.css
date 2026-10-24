@@ -7,7 +7,7 @@ a.name:hover, a.name:focus-visible { color: var(--accent); text-decoration: unde
 .tool h1 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 4vw, 2rem); direction: ltr; text-align: right; unicode-bidi: isolate; }
 .tool .desc { font-size: 1.02rem; line-height: 1.85; }
 .tool .meta { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; color: var(--muted); font-size: .86rem; }
-.tool .meta .when bdi { font-family: var(--font-mono); }
+.tool .meta .when bdi { font-family: inherit; }
 .tool h2 { margin: 6px 0 0; font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; }
 .tool .uses { gap: 8px; }
 .tool .usechip { text-decoration: none; display: inline-block; }
@@ -72,3 +72,15 @@ a.name:hover, a.name:focus-visible { color: var(--accent); text-decoration: unde
 .favempty p { margin: 0; font-size: 1.05rem; font-weight: 600; }
 .favempty .sub { font-weight: 400; font-size: .92rem; color: var(--muted); margin-bottom: 8px; }
 #fav-grid { padding-top: 14px; }
+
+/* شارات الحالة */
+:root { --bad: #A3261D; --bad-soft: #FBE4E1; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bad: #FF8A80; --bad-soft: #3D1815; } }
+:root[data-theme="dark"] { --bad: #FF8A80; --bad-soft: #3D1815; }
+.tag-warn { background: var(--new-soft); color: var(--new); border: 1px solid transparent; font-weight: 600; }
+.tag-bad { background: var(--bad-soft); color: var(--bad); border: 1px solid transparent; font-weight: 600; }
+.tag bdi { font-family: var(--font-mono); font-size: .92em; }
+.notice { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.notice li { padding: 10px 12px; border-radius: 10px; font-size: .9rem; line-height: 1.7; }
+.notice .n-warn { background: var(--new-soft); color: var(--new); }
+.notice .n-bad { background: var(--bad-soft); color: var(--bad); }
