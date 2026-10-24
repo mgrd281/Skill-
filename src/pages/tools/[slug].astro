@@ -32,6 +32,10 @@ const plain = t.desc.length > 155 ? t.desc.slice(0, 152) + "..." : t.desc;
       {badges.map((b) => <span class={b.kind === "ok" ? "tag" : `tag tag-${b.kind}`} title={b.title}>{b.text}{b.text && b.latin ? " " : ""}{b.latin && <bdi>{b.latin}</bdi>}</span>)}
       <span set:html={rich(cat.name)} />
       {t.stars && <span class="stars" title="نجوم GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8z"/></svg>{t.stars}</span>}
+      <time class="addedchip lg" datetime={t.added} data-added={t.added} title={"أُضيفت إلى الدليل: " + formatDate(t.added.slice(0, 10))}>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+        <span class="added-text">{formatDate(t.added.slice(0, 10))}</span>
+      </time>
       {t.pushed && <span class="when">آخر تحديث للمستودع: <bdi>{formatDate(t.pushed)}</bdi></span>}
     </div>
     <p class="desc" set:html={rich(t.desc)} />
@@ -91,6 +95,8 @@ const plain = t.desc.length > 155 ? t.desc.slice(0, 152) + "..." : t.desc;
 <script>
   import { initCopy } from "../../scripts/copy.js";
   import { initFav } from "../../scripts/fav.js";
+  import { initDates } from "../../scripts/dates.js";
   initCopy(document);
   initFav();
+  initDates();
 </script>

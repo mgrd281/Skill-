@@ -88,3 +88,14 @@ a.name:hover, a.name:focus-visible { color: var(--accent); text-decoration: unde
 /* رقم التصنيف في الترتيب العام بالنجوم */
 .rank { flex: none; min-width: 34px; box-sizing: border-box; padding: 0 8px; text-align: center; border-radius: 999px; background: var(--chip); color: var(--muted); font: 600 .78rem/1.7 var(--font-mono); direction: ltr; }
 .rank[data-top="1"], .rank[data-top="2"], .rank[data-top="3"] { background: var(--new-soft); color: var(--new); }
+
+/* شارة تاريخ الإضافة */
+.addedchip { margin-inline-start: auto; display: inline-flex; align-items: center; gap: 6px; padding: 1px 11px 1px 9px; border-radius: 999px; font-size: .74rem; line-height: 1.8; color: var(--ink-2); background: var(--surface); border: 1px solid var(--line); box-shadow: 0 1px 2px rgb(20 27 38 / .07); white-space: nowrap; cursor: default; transition: border-color .15s ease, box-shadow .15s ease; }
+.addedchip:hover { border-color: var(--accent); box-shadow: 0 2px 8px rgb(36 70 214 / .14); }
+.addedchip svg { width: 13px; height: 13px; flex: none; color: var(--muted); }
+.addedchip[data-fresh="1"] { color: var(--accent); background: var(--accent-soft); border-color: transparent; font-weight: 600; }
+.addedchip[data-fresh="1"] svg { color: var(--accent); }
+.addedchip[data-fresh="1"]::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2.2s ease-out infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgb(36 70 214 / .5); } 70%, 100% { box-shadow: 0 0 0 7px rgb(36 70 214 / 0); } }
+.addedchip.lg { margin-inline-start: 0; font-size: .86rem; padding: 3px 14px 3px 12px; }
+.addedchip.lg svg { width: 15px; height: 15px; }

@@ -42,6 +42,7 @@ import { tools, url } from "../lib/data";
 <script>
   import { initCopy } from "../scripts/copy.js";
   import { initFav, getFavs, onFavChange, clearFavs } from "../scripts/fav.js";
+  import { initDates } from "../scripts/dates.js";
 
   const grid = document.getElementById("fav-grid");
   const pool = document.getElementById("pool");
@@ -67,6 +68,7 @@ import { tools, url } from "../lib/data";
 
   initCopy(document);
   initFav();
+  initDates();
   render();
   onFavChange(render);
   document.getElementById("fav-clear").addEventListener("click", () => {

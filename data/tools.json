@@ -3111,5 +3111,49 @@
     "desc": "مشغّل Rive الرسمي لتطبيقات iPhone وMac: أزرار ورسوم تفاعلية تتفاعل مع حالة التطبيق في SwiftUI.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
+  },
+  {
+    "slug": "understand-anything",
+    "cat": "devskills",
+    "name": "Understand Anything",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/Egonex-AI/Understand-Anything",
+    "site": "https://understand-anything.com",
+    "stars": "88.1k",
+    "cmd": "/plugin marketplace add Egonex-AI/Understand-Anything\n/plugin install understand-anything",
+    "use": [
+      "web",
+      "mobile",
+      "mac",
+      "dashboard",
+      "claude"
+    ],
+    "desc": "إضافة لـ Claude Code تحلّل مشروعك بوكلاء متعددين وتبني رسمًا معرفيًا لكل ملف ودالة وتبعية، مع لوحة تفاعلية للتصفح والبحث وطرح الأسئلة. مفيدة عند استلام مشروع كبير أو العودة إلى مشروع قديم. أول تحليل يستهلك رموزًا كثيرة على المشاريع الكبيرة، وما بعده تدريجي. تعمل أيضًا مع Codex وCursor وGemini CLI. رخصتها MIT.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-24T22:15:00Z"
+  },
+  {
+    "slug": "rea",
+    "cat": "devskills",
+    "name": "REA",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/morluto/rea",
+    "site": "https://rea.tools/",
+    "stars": "378k",
+    "cmd": "npx rea-agents setup",
+    "use": [
+      "mobile",
+      "mac",
+      "web"
+    ],
+    "desc": "خادم MCP يتيح لـ Claude تحليل التطبيقات والملفات التنفيذية: تطبيقات Electron وجافاسكريبت وملفات APK والمواقع وسجلات الشبكة، وحتى الملفات الأصلية عبر Hopper أو Ghidra أو IDA. التحليل محلي على جهازك. للأبحاث المشروعة وتحليل ما تملكه أو مصرّح لك بفحصه فقط، وأدوات IDA وHopper التجارية تحتاج ترخيصك الخاص. التقاط التشغيل يشغّل التطبيق بصلاحياتك. مشروع حديث ظهر في أكتوبر 2026 ونجومه كثيرة جدًا، فتحقق منه بنفسك قبل التثبيت. رخصته MIT ويحتاج Node.js 22 أو أحدث.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-24T22:15:00Z"
   }
 ]

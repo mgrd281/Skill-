@@ -12,7 +12,7 @@ try {
     if (saved.cat === "all" || data.cats.includes(saved.cat)) state.cat = saved.cat;
     state.onlyNew = !!saved.onlyNew;
     state.onlySkills = !!saved.onlySkills;
-    if (saved.sort === "stars") state.sort = "stars";
+    if (saved.sort === "stars" || saved.sort === "new") state.sort = saved.sort;
   }
 } catch (e) {}
 // الأدوات التي أخفاها الزائر من عرضه (محليًا في متصفحه فقط)
@@ -54,6 +54,7 @@ const cards = [...document.querySelectorAll(".card")].map((el) => ({
   search: el.dataset.search,
   starsN: Number(el.dataset.stars),
   order: Number(el.dataset.order),
+  added: el.dataset.added || "",
   pickBadge: el.querySelector(".badge-pick"),
   useChips: [...el.querySelectorAll(".usechip")],
   grid: el.parentNode,
@@ -118,13 +119,17 @@ function renderList() {
   cards.forEach((c) => { c.el.hidden = !visible.has(c); });
   const p = projectById(state.project);
 
-  if (state.sort === "stars") {
-    const sorted = [...visible].sort((a, b) => b.starsN - a.starsN || a.order - b.order);
+  if (state.sort === "stars" || state.sort === "new") {
+    const byNew = state.sort === "new";
+    const sorted = [...visible].sort(byNew
+      ? (a, b) => b.added.localeCompare(a.added) || b.order - a.order
+      : (a, b) => b.starsN - a.starsN || a.order - b.order);
+    $("flat-title").textContent = byNew ? "الأحدث إضافةً إلى الدليل" : "مرتبة حسب نجوم GitHub";
     let rank = 0;
     sorted.forEach((c) => {
       starsGrid.appendChild(c.el);
       // رقم التصنيف للأدوات التي لها نجوم فقط، والباقي في النهاية بلا رقم
-      if (c.starsN >= 0) { rank++; c.rankEl.textContent = "#" + rank; c.rankEl.dataset.top = rank <= 3 ? String(rank) : ""; c.rankEl.hidden = false; }
+      if (!byNew && c.starsN >= 0) { rank++; c.rankEl.textContent = "#" + rank; c.rankEl.dataset.top = rank <= 3 ? String(rank) : ""; c.rankEl.hidden = false; }
       else c.rankEl.hidden = true;
     });
     starsSection.hidden = sorted.length === 0;
@@ -208,7 +213,7 @@ qEl.addEventListener("input", () => {
   renderList();
 });
 sortEl.addEventListener("change", () => {
-  state.sort = sortEl.value === "stars" ? "stars" : "cat";
+  state.sort = ["stars", "new"].includes(sortEl.value) ? sortEl.value : "cat";
   save();
   renderList();
 });

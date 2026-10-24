@@ -1,5 +1,5 @@
 ---
-import { type Tool, projectById, rich, isLatin, repoLabel, host, isAppStore, url, statusBadges } from "../lib/data";
+import { type Tool, projectById, rich, isLatin, repoLabel, host, isAppStore, url, statusBadges, formatDate } from "../lib/data";
 interface Props { tool: Tool; linkName?: boolean; hideBtn?: boolean; favBtn?: boolean }
 const { tool: t, linkName = true, hideBtn = false, favBtn = true } = Astro.props;
 const search = [
@@ -17,6 +17,7 @@ const search = [
   data-use={t.use.join(" ")}
   data-stars={t.starsN}
   data-order={t.order}
+  data-added={t.added}
   data-search={search}
 >
   <div class="head">
@@ -45,6 +46,10 @@ const search = [
     {statusBadges(t).map((b) => (
       <span class={b.kind === "ok" ? "tag" : `tag tag-${b.kind}`} title={b.title}>{b.text}{b.text && b.latin ? " " : ""}{b.latin && <bdi>{b.latin}</bdi>}</span>
     ))}
+    <time class="addedchip" datetime={t.added} data-added={t.added} title={"أُضيفت إلى الدليل: " + formatDate(t.added.slice(0, 10))}>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+      <span class="added-text">{formatDate(t.added.slice(0, 10))}</span>
+    </time>
   </div>
   <p class="desc" set:html={rich(t.desc)} />
   <div class="uses">
