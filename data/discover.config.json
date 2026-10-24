@@ -1,0 +1,6 @@
+{
+  "topics": ["claude-skills", "agent-skills", "claude-code-plugin", "claude-code-skills", "mcp-server", "claude-code"],
+  "minStars": 500,
+  "pushedWithinDays": 90,
+  "maxPerRun": 12
+}

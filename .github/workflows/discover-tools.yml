@@ -1,0 +1,45 @@
+name: Discover new tools
+
+on:
+  schedule:
+    - cron: "43 5 * * 3" # كل يوم أربعاء 05:43 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Search GitHub
+        run: node scripts/discover.mjs --report candidates-report.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Open an issue with the candidates
+        if: hashFiles('candidates-report.md') != ''
+        run: |
+          gh issue create \
+            --title "مرشحون جدد للدليل ($(date +%F))" \
+            --body-file candidates-report.md
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Remember what was suggested
+        run: |
+          if git diff --quiet; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/discover-state.json
+          git commit -m "chore: record suggested candidates"
+          git push

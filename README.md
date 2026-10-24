@@ -18,6 +18,7 @@ src/
   scripts/filter.js         البحث والفلترة والترتيب
 scripts/
   update-stars.mjs  يجلب النجوم وتاريخ آخر تحديث من GitHub
+  discover.mjs      يبحث عن أدوات جديدة ويكتب تقريرًا للمراجعة
   check-data.mjs    يفحص سلامة البيانات
 .github/workflows/update-stars.yml  تحديث أسبوعي تلقائي
 ```
@@ -67,6 +68,20 @@ npm run build      # بناء الموقع في مجلد dist
 - للتشغيل اليدوي: تبويب **Actions** ثم **Update GitHub stars** ثم **Run workflow**.
 - محليًا: `npm run update-stars`. يعمل بدون توكن لكن بحد 60 طلبًا في الساعة، فاستخدم `GITHUB_TOKEN=ghp_xxx npm run update-stars`.
 - أي مستودع يفشل جلبه يبقى رقمه القديم، ولا يتوقف التحديث بسببه.
+
+## اكتشاف أدوات جديدة تلقائيًا
+
+ملف `.github/workflows/discover-tools.yml` يعمل كل يوم أربعاء، ويبحث في GitHub عن مستودعات جديدة بموضوعات مثل `claude-skills` و`mcp-server` و`agent-skills`، بشرط حد أدنى من النجوم ونشاط حديث. ثم يفتح **Issue** فيه المرشحون الجدد مع:
+
+- الوصف الأصلي، والنجوم، والرخصة، وآخر تحديث.
+- تحذيرات: بدون رخصة، رخصة AGPL، مستودع حديث جدًا بنجوم كثيرة، مهارة قد تنفّذ أوامر.
+- كتلة JSON جاهزة للنسخ إلى `data/tools.json`.
+
+لا يُضاف شيء إلى الموقع تلقائيًا. للموافقة على مرشح: انسخ كتلته وأكمل `desc` بالعربية و`cmd` و`use`، ثم `npm run check`. ولإخفاء مرشح تلقائيًا في المرات القادمة، أضف اسمه (مثل `owner/repo`) إلى `ignored` في `data/discover-state.json`.
+
+- الإعدادات (المواضيع، الحد الأدنى للنجوم، عدد المرشحين): `data/discover.config.json`.
+- تجربة محلية دون حفظ حالة: `GITHUB_TOKEN=ghp_xxx npm run discover`، فيكتب `candidates-report.md`.
+- المرشحون الذين عُرضوا مرة لا يظهرون ثانية (محفوظون في `data/discover-state.json`).
 
 ## النشر على Vercel
 

@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "update-stars": "node scripts/update-stars.mjs",
-    "check": "node scripts/check-data.mjs"
+    "check": "node scripts/check-data.mjs",
+    "discover": "node scripts/discover.mjs --report candidates-report.md --no-save"
   },
   "dependencies": {
     "astro": "^5.14.0"
