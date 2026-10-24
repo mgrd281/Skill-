@@ -15,7 +15,8 @@
       "shop"
     ],
     "desc": "مهارة Anthropic الرسمية لبناء واجهات مميزة بجودة إنتاج بدل الشكل العادي المكرر.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "impeccable",
@@ -33,7 +34,8 @@
       "shop"
     ],
     "desc": "تبني على Frontend Design وتضيف أوامر لمراجعة التصميم وتلميعه، مع قواعد تكشف أخطاء التصميم المولّد بالذكاء الاصطناعي.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "ui-ux-pro-max",
@@ -52,7 +54,8 @@
       "shop"
     ],
     "desc": "تحلل متطلبات مشروعك وتولّد له نظام تصميم كامل من ألوان وخطوط وتخطيط. تدعم الويب وFlutter وSwiftUI أيضًا.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "vercel-agent-skills",
@@ -69,7 +72,8 @@
       "mobile"
     ],
     "desc": "مجموعة Vercel الرسمية: إرشادات أداء React وNext.js، وفحص الواجهة بأكثر من 100 قاعدة تشمل حالات الأزرار والتركيز والتحميل، وتطبيقات React Native.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "ui-animation-skill",
@@ -86,7 +90,8 @@
       "landing"
     ],
     "desc": "تبني الحركة بالترتيب: الهدف ثم الأداة ثم المنحنى ثم المدة، ولا تضيف حركة بلا سبب. من مطوّر Sonner وVaul.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "brand-building-skills",
@@ -102,7 +107,8 @@
       "brand"
     ],
     "desc": "مهارات للاستراتيجية والاسم والهوية والنبرة والإطلاق، تعتمد كلها على ملف مركزي لهوية علامتك.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "design-md",
@@ -120,7 +126,8 @@
       "landing"
     ],
     "desc": "ملف تضعه في جذر مشروعك يشرح للذكاء الاصطناعي نظام تصميمك. انسخ نموذجًا جاهزًا مثل Stripe أو Linear وعدّله.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "canvas-design",
@@ -136,7 +143,8 @@
       "brand"
     ],
     "desc": "مهارة Anthropic لتصميم ملصقات وإعلانات ومواد بصرية كصور أو PDF.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "taste-skill",
@@ -156,7 +164,8 @@
       "brand"
     ],
     "desc": "تبعد Claude عن الواجهات العامة المكررة نحو تخطيط وخطوط وحركة مميزة، وفيها مهارات لإعادة تصميم موقع موجود.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "shadcn-ui-skill",
@@ -174,7 +183,8 @@
       "landing"
     ],
     "desc": "مهارة shadcn الرسمية: تعلّم Claude إضافة المكونات وتنسيقها وإصلاحها بالطريقة الصحيحة لمشروعك.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "anthropic-design-plugin",
@@ -193,7 +203,8 @@
       "dashboard"
     ],
     "desc": "إضافة Anthropic الرسمية: نقد التصميم، ومراجعة نظام التصميم، ونصوص الواجهة، وفحص إمكانية الوصول حسب WCAG.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "interface-design",
@@ -211,7 +222,8 @@
       "mobile"
     ],
     "desc": "مبادئ تصميم للوحات التحكم والتطبيقات، وتحفظ قرارات المسافات والألوان في ملف حتى يبقى التصميم ثابتًا بين الجلسات.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "google-stitch-skills",
@@ -230,7 +242,8 @@
       "dashboard"
     ],
     "desc": "مهارات Google الرسمية لتوليد الشاشات في Stitch وتحويلها إلى كود React أو shadcn. تحتاج إعداد Stitch MCP أولًا.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "frontend-slides",
@@ -246,7 +259,8 @@
       "brand"
     ],
     "desc": "عروض تقديمية أنيقة كصفحة HTML واحدة، أو تحويل ملفات PowerPoint، مع اختيار النمط وتصدير PDF.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "shopify-ai-toolkit",
@@ -262,7 +276,8 @@
       "shop"
     ],
     "desc": "مهارات Shopify الرسمية: أحدث وثائق Shopify، وفحص كود GraphQL وLiquid، وتنفيذ مهام المتجر عبر Shopify CLI.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "shopify-liquid-skills",
@@ -278,7 +293,8 @@
       "shop"
     ],
     "desc": "مهارة Shopify الرسمية لكتابة Liquid وCSS الثيم وإمكانية الوصول في مكونات المتجر. صغيرة لكنها رسمية.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "marketing-skills",
@@ -298,7 +314,8 @@
       "mobile"
     ],
     "desc": "50 دليل تسويق جاهز: كتابة النصوص، وتدقيق SEO، وتحسين التحويل، ورسائل البريد، والإعلانات. الأكثر تثبيتًا في التسويق.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "claude-seo",
@@ -316,7 +333,8 @@
       "landing"
     ],
     "desc": "تدقيق SEO كامل عبر أوامر /seo: التقني، والبيانات المنظمة، والبحث بالذكاء الاصطناعي، وhreflang للمتاجر متعددة اللغات.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "humanizer",
@@ -335,7 +353,8 @@
       "claude"
     ],
     "desc": "يعيد كتابة النص حتى لا يبدو مكتوبًا بالذكاء الاصطناعي، بفحص 25 نمطًا معروفًا. مصمم للإنجليزية.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "avoid-ai-writing",
@@ -354,7 +373,8 @@
       "claude"
     ],
     "desc": "يكشف أنماط الكتابة الآلية ويعيد صياغتها، مع وضع للفحص فقط. توجد له نسخة مجتمعية صغيرة للألمانية.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "anthropic-marketing-plugin",
@@ -373,7 +393,8 @@
       "shop"
     ],
     "desc": "إضافة Anthropic الرسمية للتسويق: كتابة المحتوى، وخطط الحملات، وفحص النصوص مقابل نبرة علامتك، وتسلسلات البريد.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "nexscope-ecommerce-skills",
@@ -389,7 +410,8 @@
       "shop"
     ],
     "desc": "حزمة تجارة إلكترونية: مولد أوصاف منتجات بحدود كل منصة مثل Shopify وAmazon، وGoogle Shopping، والبيع الدولي. جودتها متفاوتة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "claude-ads",
@@ -406,7 +428,8 @@
       "landing"
     ],
     "desc": "يدقق ويخطط الإعلانات على 12 منصة منها Google وMeta وAmazon، والتعديلات تبقى مسودات تنتظر موافقتك.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "matt-pocock-skills",
@@ -425,7 +448,8 @@
       "claude"
     ],
     "desc": "عادات هندسية للوكيل: يسألك عن الخطة قبل البرمجة، ويكتب الاختبارات أولًا، ويحلل الأخطاء الصعبة، ويراجع الكود.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "karpathy-guidelines",
@@ -445,7 +469,8 @@
       "claude"
     ],
     "desc": "أربع قواعد في ملف واحد: فكّر قبل البرمجة، والبساطة أولًا، وعدّل فقط ما طُلب، واعمل نحو هدف واضح.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "addy-osmani-agent-skills",
@@ -465,7 +490,8 @@
       "claude"
     ],
     "desc": "25 مهارة من التخطيط حتى الإطلاق: اختبار، ومراجعة كود، وأمان OWASP، وسرعة Core Web Vitals، وقوائم فحص قبل النشر.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "supabase-agent-skills",
@@ -484,7 +510,8 @@
       "booking"
     ],
     "desc": "مهارات Supabase الرسمية: استخدام منتجاتها بشكل صحيح، وأفضل ممارسات الأداء في قواعد بيانات Postgres.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "next-js-agent-skills",
@@ -503,7 +530,8 @@
       "mobile"
     ],
     "desc": "مهارات Next.js الرسمية: تتحقق من كل تعديل على خادم التطوير والمتصفح، وتكشف ما يكبّر حجم الصفحات. النجوم لمستودع Next.js كله.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "agent-browser",
@@ -522,7 +550,8 @@
       "dashboard"
     ],
     "desc": "متصفح سريع من Vercel يفتح الصفحات ويضغط ويملأ النماذج ويقرأ الأخطاء، ليتحقق Claude من المتجر أو التطبيق بنفسه.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "trail-of-bits-skills",
@@ -540,7 +569,8 @@
       "dashboard"
     ],
     "desc": "مهارات أمان من شركة تدقيق معروفة: مراجعة التعديلات أمنيًا، وكشف الإعدادات غير الآمنة، وفحص مخاطر حزم npm.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "claude-code-workflows",
@@ -559,7 +589,8 @@
       "claude"
     ],
     "desc": "متجر إضافات فيه 94 إضافة صغيرة للبرمجة والأمان والاختبار وقواعد البيانات، تثبّت منها ما تحتاجه فقط.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "flutter-agent-skills",
@@ -575,7 +606,8 @@
       "mobile"
     ],
     "desc": "مهارات فريق Flutter الرسمية: بنية التطبيق، والتخطيط المتجاوب، وإصلاح أخطاء overflow، والتوجيه، والترجمة، والاختبارات.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "swiftui-pro",
@@ -592,7 +624,8 @@
       "mac"
     ],
     "desc": "من Paul Hudson: يصلح أخطاء SwiftUI الشائعة. مفيد لأجزاء iOS الأصلية مثل الويدجت على الشاشة الرئيسية.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "capacitor-skills",
@@ -608,7 +641,8 @@
       "mobile"
     ],
     "desc": "حوالي 30 مهارة لتطبيقات Capacitor: الترقية بين الإصدارات، والإشعارات، والشراء داخل التطبيق. نجومها قليلة لكنها الأكمل.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "app-store-connect-skills",
@@ -624,7 +658,8 @@
       "mobile"
     ],
     "desc": "يدير App Store Connect من الطرفية: رفع النسخ، وTestFlight، ونصوص المتجر بعدة لغات، وإرسال المراجعة. يحتاج أداة asc أولًا.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "aso-skills",
@@ -640,7 +675,8 @@
       "mobile"
     ],
     "desc": "40 مهارة لتحسين ظهور التطبيق في المتجر: الكلمات المفتاحية، والعنوان، ولقطات الشاشة، وترجمة صفحة التطبيق.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "app-store-screenshots",
@@ -657,7 +693,8 @@
       "brand"
     ],
     "desc": "يحوّل لقطات تطبيقك إلى صور تسويقية لمتجر Apple وGoogle Play بإطارات أجهزة و18 نمطًا وعدة لغات، مع دعم الكتابة من اليمين لليسار.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "superpowers",
@@ -673,7 +710,8 @@
       "claude"
     ],
     "desc": "تعلّم Claude العصف الذهني والتخطيط والاختبار وإصلاح الأخطاء بشكل منظم. الأكثر نجومًا في هذا الدليل.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "webapp-testing",
@@ -690,7 +728,8 @@
       "web"
     ],
     "desc": "تختبر تطبيقك في المتصفح وتلتقط صورًا للأخطاء.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "skill-creator",
@@ -706,7 +745,8 @@
       "claude"
     ],
     "desc": "تساعدك تبني مهارة خاصة بك من الصفر وتختبرها، مثلًا لطريقتك في كتابة أوصاف المنتجات.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "awesome-claude-skills",
@@ -722,7 +762,8 @@
       "claude"
     ],
     "desc": "دليل لاكتشاف مئات المهارات الأخرى مرتبة حسب الاستخدام.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "find-skills",
@@ -738,7 +779,8 @@
       "claude"
     ],
     "desc": "اسأل Claude هل توجد مهارة لعمل ما، فيبحث في دليل المهارات ويثبّت المناسبة. الأكثر تثبيتًا على skills.sh.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "context7",
@@ -756,7 +798,8 @@
       "mobile"
     ],
     "desc": "يجلب أحدث وثائق المكتبات حتى لا يكتب Claude كودًا قديمًا.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "playwright-mcp",
@@ -774,7 +817,8 @@
       "shop"
     ],
     "desc": "يجعل Claude يفتح المتصفح ويضغط ويملأ النماذج ويختبر الموقع بنفسه.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "chrome-devtools-mcp",
@@ -793,7 +837,8 @@
       "landing"
     ],
     "desc": "من Google، لتشخيص أخطاء المتصفح وقياس سرعة الصفحات.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "shopify-dev-mcp",
@@ -809,7 +854,8 @@
       "shop"
     ],
     "desc": "يبحث في وثائق Shopify ويساعد في GraphQL ويتحقق من كود Liquid.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "21st-dev-magic-mcp",
@@ -826,7 +872,8 @@
       "landing"
     ],
     "desc": "يولّد مكونات React جاهزة من وصف نصي. يحتاج مفتاح API من موقعه.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "sentry-mcp",
@@ -844,7 +891,8 @@
       "mobile"
     ],
     "desc": "يقرأ أخطاء موقعك أو تطبيقك الحي ويساعد في إصلاحها.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "playwright",
@@ -861,7 +909,8 @@
       "shop"
     ],
     "desc": "يختبر الموقع تلقائيًا على Chrome وFirefox وSafari وشاشات الجوال.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "axe-core",
@@ -879,7 +928,8 @@
       "landing"
     ],
     "desc": "يفحص إمكانية الوصول مثل تباين الألوان والنصوص البديلة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "lighthouse-ci",
@@ -897,7 +947,8 @@
       "web"
     ],
     "desc": "يقيس الأداء وSEO مع كل تحديث وينبهك إذا ساءت النتيجة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "motion",
@@ -914,7 +965,8 @@
       "web"
     ],
     "desc": "حركات وانتقالات سلسة لمشاريع React وJavaScript.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "gsap",
@@ -932,7 +984,8 @@
       "web"
     ],
     "desc": "أقوى مكتبة للحركات المتقدمة وتأثيرات التمرير، وتعمل داخل ثيمات Shopify أيضًا.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "lenis",
@@ -949,7 +1002,8 @@
       "shop"
     ],
     "desc": "تمرير ناعم فاخر، يعمل بشكل ممتاز مع GSAP.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "autoanimate",
@@ -966,7 +1020,8 @@
       "dashboard"
     ],
     "desc": "حركة تلقائية عند إضافة العناصر أو حذفها بسطر واحد.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "rive",
@@ -984,7 +1039,8 @@
       "web"
     ],
     "desc": "رسوم متحركة تفاعلية تستجيب للماوس واللمس، على الويب وFlutter وiPhone. النسخة المجانية من المحرر تضيف شاشة Rive عند التصدير.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "dotlottie",
@@ -1002,7 +1058,8 @@
       "web"
     ],
     "desc": "يعرض رسوم Lottie المتحركة بحجم ملف صغير جدًا.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "remotion-skills",
@@ -1018,7 +1075,8 @@
       "brand"
     ],
     "desc": "تعلّم Claude قواعد Remotion لصنع فيديوهات دعائية بالكود بدون أخطاء توقيت.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "flutter-animate",
@@ -1034,7 +1092,8 @@
       "mobile"
     ],
     "desc": "حركات احترافية سهلة في تطبيقات Flutter.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "shadcn-ui",
@@ -1051,7 +1110,8 @@
       "dashboard"
     ],
     "desc": "مكونات جاهزة تنسخها إلى مشروعك وتعدّلها بحرية.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "radix-ui",
@@ -1068,7 +1128,8 @@
       "dashboard"
     ],
     "desc": "الأساس الذي بُني عليه shadcn. كل عنصر حزمة مستقلة، مثل نافذة الحوار في الأمر أدناه.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "magic-ui",
@@ -1084,7 +1145,8 @@
       "landing"
     ],
     "desc": "مكونات متحركة لصفحات الهبوط، تُضاف إلى مشروعك عبر أداة shadcn.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "aceternity-ui",
@@ -1100,7 +1162,8 @@
       "landing"
     ],
     "desc": "مكونات بتأثيرات بصرية فاخرة، مجانية للنسخ.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "daisyui",
@@ -1117,7 +1180,8 @@
       "landing"
     ],
     "desc": "مكونات Tailwind جاهزة بأسماء كلاسات بسيطة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "floating-ui",
@@ -1134,7 +1198,8 @@
       "dashboard"
     ],
     "desc": "يضع القوائم المنبثقة والتلميحات في المكان الصحيح دائمًا.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "sonner",
@@ -1151,7 +1216,8 @@
       "dashboard"
     ],
     "desc": "إشعارات منبثقة أنيقة تظهر وتختفي بنعومة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "vaul",
@@ -1168,7 +1234,8 @@
       "mobile"
     ],
     "desc": "قائمة سحب سفلية بأسلوب iOS لتطبيقات الويب على الجوال.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "tremor",
@@ -1184,7 +1251,8 @@
       "dashboard"
     ],
     "desc": "مكونات رسوم بيانية ولوحات تحكم للمبيعات والأرقام، تنسخها إلى مشروعك.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "lucide",
@@ -1202,7 +1270,8 @@
       "shop"
     ],
     "desc": "أيقونات خطية بسيطة ومتناسقة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "phosphor",
@@ -1220,7 +1289,8 @@
       "shop"
     ],
     "desc": "أيقونات بستة أوزان، من الرفيع إلى الممتلئ والثنائي اللون.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "tabler-icons",
@@ -1238,7 +1308,8 @@
       "shop"
     ],
     "desc": "أكثر من 6000 أيقونة مجانية بصيغة SVG.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "shopify-cli",
@@ -1254,7 +1325,8 @@
       "shop"
     ],
     "desc": "أداة Shopify الرسمية لتطوير الثيم على جهازك مع معاينة حية، ثم رفع التعديلات إلى المتجر.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "supabase",
@@ -1273,7 +1345,8 @@
       "booking"
     ],
     "desc": "قاعدة بيانات وتسجيل دخول وتخزين ملفات جاهزة لتطبيقات الويب والجوال، تعمل مع Next.js وFlutter.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "next-intl",
@@ -1290,7 +1363,8 @@
       "landing"
     ],
     "desc": "ترجمة تطبيقات Next.js إلى عدة لغات، مع روابط وتواريخ وأرقام بحسب كل لغة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "react-email",
@@ -1308,7 +1382,8 @@
       "brand"
     ],
     "desc": "تصميم رسائل البريد مثل تأكيد الطلب أو الحجز بمكونات React، لتظهر بشكل صحيح في أغلب برامج البريد.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "cookieconsent",
@@ -1325,7 +1400,8 @@
       "landing"
     ],
     "desc": "نافذة موافقة على الكوكيز خفيفة، تساعدك على الالتزام بـ GDPR بدون مكتبات إضافية.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "uptime-kuma",
@@ -1343,7 +1419,8 @@
       "landing"
     ],
     "desc": "يراقب موقعك أو متجرك على مدار الساعة وينبهك فورًا إذا توقف، عبر Telegram أو البريد.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "umami",
@@ -1361,7 +1438,8 @@
       "web"
     ],
     "desc": "إحصاءات زوار بسيطة بدون كوكيز، متوافقة مع GDPR.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "posthog",
@@ -1380,7 +1458,8 @@
       "landing"
     ],
     "desc": "تحليلات مع تسجيل جلسات الزوار وخرائط حرارية لتحسين المبيعات.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "fullcalendar",
@@ -1397,7 +1476,8 @@
       "dashboard"
     ],
     "desc": "تقويم متقدم بعرض يومي وأسبوعي وشهري مع السحب والإفلات.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "cal-com",
@@ -1413,7 +1493,8 @@
       "booking"
     ],
     "desc": "نظام حجز مواعيد مفتوح المصدر، والأمر أدناه يضيف نافذة الحجز إلى موقعك. نسخة الاستضافة الذاتية اسمها الآن Cal.diy.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "medplum",
@@ -1429,7 +1510,8 @@
       "booking"
     ],
     "desc": "منصة لبناء تطبيقات طبية على معيار FHIR.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "vercel-plugin",
@@ -1447,7 +1529,8 @@
       "claude"
     ],
     "desc": "إضافة Vercel الرسمية: 33 مهارة للنشر والنطاقات والكاش والجدار الناري، وأوامر جاهزة للنشر والحالة، ومعها Vercel MCP.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "vercel-mcp",
@@ -1465,7 +1548,8 @@
       "claude"
     ],
     "desc": "خادم Vercel الرسمي: يقرأ مشاريعك ونشراتك وسجلات الأخطاء والتحليلات، ويبحث في وثائق Vercel. يعطي Claude نفس صلاحيات حسابك، فأبقِ التأكيد مفعّلًا.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "ai-sdk-skill",
@@ -1482,7 +1566,8 @@
       "dashboard"
     ],
     "desc": "مهارة رسمية تعلّم Claude أحدث إصدار من AI SDK لإضافة محادثة ووكلاء ذكاء اصطناعي إلى تطبيق Next.js. النجوم لمستودع AI SDK كله.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "v0-mcp",
@@ -1500,7 +1585,8 @@
       "dashboard"
     ],
     "desc": "خادم v0 الرسمي: يرسل Claude وصف صفحة هبوط أو لوحة تحكم إلى v0 ويعيد الكود إلى مشروعك. يحتاج حساب v0.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "squirrelscan",
@@ -1520,7 +1606,8 @@
       "claude"
     ],
     "desc": "يفحص الموقع كاملًا بأكثر من 300 قاعدة: SEO، والسرعة، وترويسات الأمان، والروابط المعطلة، وإمكانية الوصول، ونافذة الكوكيز. معه مهارة يشغّلها Claude بأمر /audit-website. مشروع جديد.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "web-quality-skills",
@@ -1540,7 +1627,8 @@
       "claude"
     ],
     "desc": "ست مهارات تجعل Claude يقيس السرعة وCore Web Vitals وإمكانية الوصول وSEO بأرقام حقيقية من Lighthouse ثم يصلح المشاكل، صفحة بعد صفحة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "unlighthouse",
@@ -1558,7 +1646,8 @@
       "landing"
     ],
     "desc": "يمرّ على كل صفحات الموقع ويشغّل Lighthouse عليها، ويعرض تقريرًا بالصفحات الأبطأ والأضعف في SEO.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "lychee",
@@ -1576,7 +1665,8 @@
       "landing"
     ],
     "desc": "يكشف الروابط المعطلة بسرعة في الصفحات التي تعطيه إياها، مثل روابط خريطة الموقع.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "mdn-http-observatory",
@@ -1594,7 +1684,8 @@
       "dashboard"
     ],
     "desc": "فاحص Mozilla الرسمي لترويسات الأمان، ويعطي موقعك درجة ونتيجة لكل اختبار. في Shopify تتحكم المنصة بأغلب هذه الترويسات.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "hyperframes",
@@ -1613,7 +1704,8 @@
       "web"
     ],
     "desc": "إطار مفتوح من HeyGen يحوّل صفحات HTML وحركات GSAP وLottie إلى فيديو MP4، ومعه مهارات ليصنع Claude إعلانات وفيديوهات ترويجية بالكود.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "gsap-skills",
@@ -1631,7 +1723,8 @@
       "shop"
     ],
     "desc": "ثماني مهارات رسمية من GSAP لكتابة حركات صحيحة وسريعة: الخط الزمني، وتأثيرات التمرير، والإضافات، وReact.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "motion-design-skill",
@@ -1651,7 +1744,8 @@
       "shop"
     ],
     "desc": "مهارة رسمية من LottieFiles تجعل Claude يخطط التوقيت والانسيابية قبل كتابة الحركة، لتبقى حركات المتجر والتطبيق والإعلانات متناسقة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "motion-ai-kit",
@@ -1669,7 +1763,8 @@
       "dashboard"
     ],
     "desc": "أداة Motion الرسمية تضيف مهارة /motion وبحثًا في أحدث وثائق Motion. المستودع جديد جدًا، وبعض المزايا تحتاج اشتراك Motion+.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "rampstack-brand-build-skills",
@@ -1688,7 +1783,8 @@
       "shop"
     ],
     "desc": "103 مهارات، منها سلسلة كاملة للهوية: اكتشاف العلامة، والاسم، والشعار، والألوان والخطوط، ونبرة الكلام، ودليل الهوية.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "dembrandt",
@@ -1707,7 +1803,8 @@
       "landing"
     ],
     "desc": "يستخرج من موقعك الحالي الشعار والألوان والخطوط والمسافات ويحفظها كملف DESIGN.md، ليلتزم Claude بهويتك. استخدمه على مواقعك أنت فقط.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "canva-skills",
@@ -1725,7 +1822,8 @@
       "claude"
     ],
     "desc": "مهارات Canva الرسمية: تفحص التصميم مقابل هوية علامتك في Canva، وتغيّر مقاسه لكل منصة تواصل، وتعدّله. تحتاج حساب Canva.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "brand-guidelines-template",
@@ -1742,7 +1840,8 @@
       "claude"
     ],
     "desc": "قالب رسمي من Anthropic يجعل Claude يستخدم ألوانك وخطوطك تلقائيًا. يأتي بألوان Anthropic، فاستبدلها بألوان علامتك قبل الاستخدام.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "recraft-mcp",
@@ -1761,7 +1860,8 @@
       "web"
     ],
     "desc": "يولّد شعارات وأيقونات بصيغة متجهة، ويحوّل الشعار من صورة عادية إلى متجه. للاستخدام التجاري تحتاج خطة مدفوعة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "xcode-mcp",
@@ -1778,7 +1878,8 @@
       "mac"
     ],
     "desc": "خادم Apple الرسمي داخل Xcode: يبني المشروع ويشغّل الاختبارات ويعرض معاينات SwiftUI. فعّله أولًا من إعدادات Xcode، وافتح المشروع فيه.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "xcode-27-agent-skills",
@@ -1795,7 +1896,8 @@
       "mac"
     ],
     "desc": "مهارات كتبتها Apple وتأتي داخل Xcode 27: SwiftUI، وتحديث الاختبارات، وتدقيق إعدادات الأمان. تصدّرها بهذا الأمر ثم تضعها في مجلد مهارات Claude.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "mobilebuildmcp",
@@ -1812,7 +1914,8 @@
       "mac"
     ],
     "desc": "اسمه سابقًا XcodeBuildMCP: يجعل Claude يبني تطبيقك ويشغّله ويختبره على محاكي iPhone أو جهاز حقيقي أو Mac. يعمل مع تطبيقات Capacitor وFlutter أيضًا.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "claude-code-ios-simulator",
@@ -1829,7 +1932,8 @@
       "claude"
     ],
     "desc": "ميزة مدمجة في تطبيق Claude Code لسطح المكتب تعرض محاكي iPhone بجانب المحادثة، ليبني Claude التطبيق ويجرّبه بنفسه. ما زالت تجريبية.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "peekaboo",
@@ -1845,7 +1949,8 @@
       "mac"
     ],
     "desc": "يجعل Claude يلتقط صور الشاشة والتطبيقات على Mac ويضغط ويكتب داخلها. يحتاج صلاحيات تسجيل الشاشة وإمكانية الوصول.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "imcp",
@@ -1861,7 +1966,8 @@
       "mac"
     ],
     "desc": "تطبيق صغير في شريط Mac يعطي Claude وصولًا إلى الرسائل وجهات الاتصال والتقويم والتذكيرات والاختصارات، مع إذن منفصل لكل خدمة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "macos-automator-mcp",
@@ -1877,7 +1983,8 @@
       "mac"
     ],
     "desc": "يشغّل AppleScript على Mac مع مكتبة سكربتات جاهزة لـ Finder وSafari والبريد والملاحظات. راجع السكربت قبل تشغيله.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "dimillian-skills",
@@ -1894,7 +2001,8 @@
       "mac"
     ],
     "desc": "18 مهارة لتطبيقات Apple، منها تشخيص التطبيق على المحاكي، وملاحظات الإصدار لمتجر Apple، وتوقيع تطبيقات Mac وتحديثها.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "maestro-mcp",
@@ -1911,7 +2019,8 @@
       "web"
     ],
     "desc": "يجعل Claude يستخدم تطبيقك على محاكي iPhone أو Android ويحفظ الخطوات كاختبارات تتكرر. يعمل مع Flutter وCapacitor والتطبيقات الأصلية.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "lexware-office-mcp",
@@ -1928,7 +2037,8 @@
       "claude"
     ],
     "desc": "يربط Claude ببرنامج Lexware Office (lexoffice سابقًا): جهات الاتصال والفواتير والإيصالات والمدفوعات. مشروع مجتمعي، يعمل للقراءة فقط افتراضيًا، ويحتاج مفتاح API.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "norman-finance-mcp",
@@ -1945,7 +2055,8 @@
       "claude"
     ],
     "desc": "خادم رسمي لمنصة محاسبة ألمانية: فواتير ZUGFeRD، وتصنيف المعاملات، ومطابقة الإيصالات، وإقرار ضريبة القيمة المضافة عبر ELSTER، وتصدير DATEV للمستشار الضريبي.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "qonto-mcp",
@@ -1962,7 +2073,8 @@
       "claude"
     ],
     "desc": "خادم Qonto الرسمي لحساب الشركة البنكي: المعاملات والكشوف والإيصالات، وإنشاء الفواتير وعروض الأسعار. مفيد فقط إذا كان حسابك في Qonto.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "openaccountants-germany",
@@ -1979,7 +2091,8 @@
       "claude"
     ],
     "desc": "مهارات للضرائب الألمانية: إقرار ضريبة القيمة المضافة UStVA، والمحاسبة، والفاتورة الإلكترونية. مسودة لم يراجعها محاسب بعد، ولا تدعم نظام Kleinunternehmer.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "e-invoice-eu",
@@ -1997,7 +2110,8 @@
       "web"
     ],
     "desc": "مكتبة JavaScript تحوّل بيانات الفاتورة إلى فاتورة إلكترونية أوروبية بصيغة XRechnung أو ZUGFeRD. افحص كل فاتورة بعد إنشائها.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "kosit-validator",
@@ -2013,7 +2127,8 @@
       "finance"
     ],
     "desc": "الفاحص الرسمي الألماني للفواتير الإلكترونية XRechnung: يتأكد أن الملف صحيح قبل إرساله. يفحص الصيغة فقط، لا صحة الضريبة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "paperless-ngx",
@@ -2029,7 +2144,8 @@
       "finance"
     ],
     "desc": "أرشيف إلكتروني للإيصالات والفواتير على خادمك: يقرأ نص المستندات الممسوحة ويرتبها ويبحث فيها. تأكد مع مستشارك الضريبي أن طريقة الأرشفة مناسبة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "paperless-mcp",
@@ -2046,7 +2162,8 @@
       "claude"
     ],
     "desc": "يجعل Claude يبحث في أرشيف paperless-ngx ويقرأ المستندات ويضيف الوسوم ويرفع الملفات. مشروع مجتمعي وفيه أدوات حذف، فاضبط صلاحياته.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "better-icons",
@@ -2066,7 +2183,8 @@
       "claude"
     ],
     "desc": "يجعل Claude يبحث في أكثر من 150 مجموعة أيقونات ويعطيك الأيقونة كـ SVG أو كود React. الصق SVG في الصفحة مباشرة بدل تحميله من خادم خارجي، حفاظًا على خصوصية الزوار.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "hugeicons",
@@ -2085,7 +2203,8 @@
       "dashboard"
     ],
     "desc": "أكثر من 6000 أيقونة مجانية بنمط واحد لـ React وFlutter معًا، مع مهارة رسمية تمنع Claude من اختراع أسماء أيقونات. نمط واحد فقط مجاني والباقي مدفوع.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "thesvg",
@@ -2104,7 +2223,8 @@
       "landing"
     ],
     "desc": "أكثر من 7400 شعار علامة تجارية بصيغة SVG، منها شعارات الدفع والشحن مثل Klarna وPayPal وDHL. كل شعار ملك لصاحبه، فتحقق من شروط استخدامه.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "lucide-animated",
@@ -2122,7 +2242,8 @@
       "dashboard"
     ],
     "desc": "468 أيقونة Lucide متحركة تتحرك عند مرور الماوس، تضيف كل واحدة بأمر shadcn. مناسبة للأزرار والقوائم في Next.js.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "make-interfaces-feel-better",
@@ -2142,7 +2263,8 @@
       "claude"
     ],
     "desc": "مهارة للتفاصيل الصغيرة التي تجعل الأزرار والواجهة أفخم: انكماش خفيف عند الضغط، ومساحة لمس كافية، وانتقالات سريعة بين الحالات.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "react-bits",
@@ -2159,7 +2281,8 @@
       "landing"
     ],
     "desc": "مكونات React متحركة مجانية، منها 35 تفاعلًا صغيرًا وأزرار متحركة، تضيف كل واحد بأمر واحد. لا تعمل في ثيمات Shopify، وإعادة بيعها ممنوعة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "uiverse",
@@ -2177,7 +2300,8 @@
       "web"
     ],
     "desc": "أكثر من 3000 عنصر جاهز بـ CSS عادي، منها أكثر من 1200 زر وأدوات تحميل. تلصقها مباشرة في ثيم Shopify، لكن افحص التباين وحالة التركيز قبل النشر.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "anime-js",
@@ -2197,7 +2321,8 @@
       "dashboard"
     ],
     "desc": "محرك حركة خفيف يجمع الخط الزمني والتمرير وحركة SVG والنصوص والنوابض في مكتبة واحدة، ويعمل في ثيم Shopify بملف واحد. احفظ الملف داخل الثيم بدل تحميله من خادم خارجي.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "swup",
@@ -2216,7 +2341,8 @@
       "brand"
     ],
     "desc": "انتقالات ناعمة بين صفحات الموقع بدون إعادة تحميل كاملة، مناسبة لثيمات Shopify. بعد كل انتقال يجب إعادة تشغيل سكربتات الثيم والتتبع.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "number-flow",
@@ -2236,7 +2362,8 @@
       "booking"
     ],
     "desc": "يحرّك الأرقام بنعومة، مثل السعر ومجموع السلة والعدّادات، بالتنسيق الألماني لليورو، ويحترم إعداد تقليل الحركة تلقائيًا.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "three-js",
@@ -2255,7 +2382,8 @@
       "web"
     ],
     "desc": "المكتبة الأساسية للحركة ثلاثية الأبعاد في المتصفح: عارض منتجات ومشاهد وتأثيرات. حجمها كبير، فحمّلها عند الحاجة فقط.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "react-three-fiber",
@@ -2273,7 +2401,8 @@
       "web"
     ],
     "desc": "الطريقة المعتادة لبناء مشاهد Three.js متحركة كمكونات React داخل Next.js.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "three-js-skills",
@@ -2292,7 +2421,8 @@
       "claude"
     ],
     "desc": "عشر مهارات تعلّم Claude مكتبة Three.js، منها الحركة والمواد والظلال والتفاعل، مع نصائح للأداء.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "view-transitions-skill",
@@ -2310,7 +2440,8 @@
       "dashboard"
     ],
     "desc": "مهارة Vercel الرسمية لانتقالات الصفحات والعناصر المشتركة في Next.js بميزة ViewTransition في React، مع احترام تقليل الحركة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "fixing-motion-performance",
@@ -2330,7 +2461,8 @@
       "claude"
     ],
     "desc": "يكشف الحركات البطيئة والمتقطعة في الكود ويصلحها، لتبقى الحركة فاخرة وسريعة على الجوال.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "interaction-design-skill",
@@ -2350,7 +2482,8 @@
       "claude"
     ],
     "desc": "يعلّم Claude التفاعلات الصغيرة ومدد الحركة والانسيابية وحالات التحميل وانتقالات الصفحات، مع دعم تقليل الحركة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "lottie-creator-mcp",
@@ -2370,7 +2503,8 @@
       "shop"
     ],
     "desc": "خادم LottieFiles الرسمي: يرسم Claude الأشكال ويضبط الحركة داخل محرر Lottie Creator ويصدّر ملفًا واحدًا يعمل في الموقع وFlutter وiPhone. يجب أن يبقى المحرر مفتوحًا.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "rive-editor-mcp",
@@ -2389,7 +2523,8 @@
       "brand"
     ],
     "desc": "خادم Rive الرسمي داخل برنامج Rive: يبني Claude رسومًا تفاعلية تتفاعل مع الضغط والحالة، مثل الأزرار والشخصيات. يحتاج النسخة التجريبية المدفوعة من البرنامج مفتوحة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "text-to-lottie",
@@ -2410,7 +2545,8 @@
       "claude"
     ],
     "desc": "يكتب Claude رسوم Lottie متحركة جاهزة من وصف نصي، مع معاينة حية. ملفات صغيرة تعمل في ثيمات Shopify والتطبيقات.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "flutter-animations",
@@ -2427,7 +2563,8 @@
       "mac"
     ],
     "desc": "حزمة فريق Flutter الرسمية لانتقالات جاهزة بين الشاشات: تحوّل البطاقة إلى صفحة، والانزلاق، والتلاشي. النجوم لمستودع حزم Flutter كله.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "lottie-for-flutter",
@@ -2444,7 +2581,8 @@
       "mac"
     ],
     "desc": "المشغّل المعتاد لرسوم Lottie داخل تطبيقات Flutter على iPhone وAndroid وMac. مشروع مجتمعي.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "lottie-for-ios",
@@ -2461,7 +2599,8 @@
       "mac"
     ],
     "desc": "مشغّل Lottie الرسمي من Airbnb لتطبيقات iPhone وMac الأصلية، مع عرض جاهز لـ SwiftUI.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "pow",
@@ -2478,7 +2617,8 @@
       "mac"
     ],
     "desc": "تأثيرات SwiftUI جاهزة بسطر واحد، مثل الظهور والاهتزاز واللمعان، مع اهتزاز وصوت مناسبين. مجانية بالكامل.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "swiftui-animation-skill",
@@ -2495,7 +2635,8 @@
       "mac"
     ],
     "desc": "مهارة لبناء ومراجعة حركات SwiftUI الحديثة، وتفرض احترام إعداد تقليل الحركة. رخصتها تسمح ببناء تطبيقاتك لكنها ليست مفتوحة بالكامل.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "very-good-flutter-animations",
@@ -2511,7 +2652,8 @@
       "mobile"
     ],
     "desc": "مهارة من شركة Very Good Ventures لأفضل ممارسات الحركة في Flutter: الانتقالات بين الصفحات، وHero، والحركات المتتابعة، مع احترام تقليل الحركة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "capacitor-haptics",
@@ -2527,7 +2669,8 @@
       "mobile"
     ],
     "desc": "إضافة Capacitor الرسمية للاهتزاز الخفيف عند الضغط والنجاح، فيبدو التطبيق كأنه تطبيق أصلي عند دمجها مع الحركة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "remotion",
@@ -2547,7 +2690,8 @@
       "brand"
     ],
     "desc": "إطار React لصنع فيديوهات MP4 بالكود، مع أدوات للصوت والترجمة. مجاني للأفراد والشركات حتى 3 أشخاص، وبعدها يحتاج رخصة مدفوعة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "video-shotcraft",
@@ -2567,7 +2711,8 @@
       "brand"
     ],
     "desc": "مهارة تقود Claude خطوة بخطوة لصنع فيديو ترويجي لمنتج أو تطبيق في Remotion: القصة، واللقطات، والحركة، والصوت. فيها 152 وصفة لقطة جاهزة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "openmontage",
@@ -2586,7 +2731,8 @@
       "mobile"
     ],
     "desc": "مساحة إنتاج فيديو كاملة: يكتب Claude النص ويجهّز المواد ويحرّر ويصدّر بـ Remotion وFFmpeg. يعمل مجانًا، والمزوّدون الأفضل مدفوعون. رخصته AGPL.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "revideo",
@@ -2605,7 +2751,8 @@
       "brand"
     ],
     "desc": "إطار TypeScript لصنع الفيديو بالكود برخصة MIT مجانية دائمًا، بديل لـ Remotion عندما يكبر فريقك. ما زال في إصدار مبكر.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "iart-motion-skills",
@@ -2623,7 +2770,8 @@
       "landing"
     ],
     "desc": "حزم مهارات لفيديوهات التخفيضات وعرض المنتجات والنصوص المتحركة. عدّل تنسيق السعر إلى اليورو الألماني قبل الاستخدام.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "video-use",
@@ -2640,7 +2788,8 @@
       "brand"
     ],
     "desc": "يحرّر لقطاتك الخام تلقائيًا: يقص الفراغات ويضبط الألوان ويضيف الترجمة. يرسل الصوت إلى ElevenLabs، فانتبه للخصوصية إذا ظهر أشخاص.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "claude-motion",
@@ -2660,7 +2809,8 @@
       "claude"
     ],
     "desc": "ميزة تجريبية من Anthropic تحوّل وصفك ونصوصك وأسعارك وصورك إلى حركة قصيرة كود قابل للتعديل، وتصدّرها MP4. متاحة في خطط Team وEnterprise.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "figma-motion-skill",
@@ -2680,7 +2830,8 @@
       "shop"
     ],
     "desc": "مهارة Figma الرسمية: يضيف Claude الحركة والتوقيت إلى تصاميمك داخل Figma، وتصدّرها فيديو أو كود. ميزة الحركة في Figma ما زالت تجريبية.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "creatomate-mcp",
@@ -2698,7 +2849,8 @@
       "landing"
     ],
     "desc": "خادم رسمي لشركة أوروبية: يصنع Claude فيديوهات منتجات وإعلانات بالجملة من قوالب جاهزة. كل تصدير يستهلك رصيدًا مدفوعًا.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "shotstack-mcp",
@@ -2716,7 +2868,8 @@
       "landing"
     ],
     "desc": "خادم رسمي لتصدير الفيديو في السحابة مع قوالب وتوليد صور وصوت بالذكاء الاصطناعي. الدفع حسب الاستخدام، والاستضافة خارج الاتحاد الأوروبي.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "runway-mcp",
@@ -2734,7 +2887,8 @@
       "landing"
     ],
     "desc": "موصل Runway الرسمي: يولّد Claude مقاطع فيديو من وصف أو من صورة منتج، ويشمل نماذج Veo وKling. كل ثانية فيديو تستهلك رصيدًا.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "adobe-for-creativity",
@@ -2751,7 +2905,8 @@
       "brand"
     ],
     "desc": "موصل Adobe الرسمي بأدوات من Premiere وExpress وFirefly: يغيّر مقاس الفيديو للريلز، ويقص أفضل اللقطات، ويحرّك قوالب Express. لا يشمل After Effects.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "davinci-resolve-mcp",
@@ -2769,7 +2924,8 @@
       "mac"
     ],
     "desc": "يتحكم Claude ببرنامج DaVinci Resolve: المشاريع والخط الزمني وFusion للعناوين المتحركة والتصدير. مشروع مجتمعي، والدعم الكامل يحتاج نسخة Studio.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "mcp-for-blender",
@@ -2787,7 +2943,8 @@
       "mac"
     ],
     "desc": "يبني Claude مشاهد ثلاثية الأبعاد ويحرّكها في Blender، مثل دوران المنتج. يشغّل كودًا داخل Blender، فاحفظ عملك أولًا.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "after-effects-mcp",
@@ -2804,7 +2961,8 @@
       "mac"
     ],
     "desc": "يعدّل Claude مشاريع After Effects: التراكيب والطبقات والحركة. مشروع مجتمعي صغير، وAdobe لا تقدّم خادمًا رسميًا له. جرّبه على نسخة احتياطية.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "manim",
@@ -2821,7 +2979,8 @@
       "landing"
     ],
     "desc": "مكتبة Python لفيديوهات الشرح التعليمية والرسوم البيانية المتحركة بأسلوب قناة 3Blue1Brown. ممتازة للشرح، وأضعف لفيديوهات المنتجات.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "manim-skill",
@@ -2838,7 +2997,8 @@
       "claude"
     ],
     "desc": "مهارة تعلّم Claude كتابة فيديوهات Manim بشكل صحيح. لم تُحدَّث منذ يناير 2026.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "motion-canvas",
@@ -2856,7 +3016,8 @@
       "web"
     ],
     "desc": "أداة TypeScript لفيديوهات الشرح المتحركة مع محرر مرئي في المتصفح. آخر إصدار مستقر كان في ديسمبر 2024، وRevideo هو نسخته المحدّثة.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "theatre-js",
@@ -2874,7 +3035,8 @@
       "web"
     ],
     "desc": "محرر حركة مرئي للويب والمشاهد ثلاثية الأبعاد بخط زمني ومفاتيح حركة. تطويره العلني متوقف منذ 2024، ورخصة المحرر AGPL.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "editly",
@@ -2891,7 +3053,8 @@
       "brand"
     ],
     "desc": "يصنع فيديو من ملف وصف بسيط: مقاطع وصور ونصوص وانتقالات وموسيقى. سهل جدًا، لكن آخر إصدار له كان في 2022.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "kinocut-ffmpeg-mcp",
@@ -2909,7 +3072,8 @@
       "claude"
     ],
     "desc": "يجعل Claude يقص الفيديو ويدمجه ويحوّل صيغه عبر FFmpeg. أفضل خوادم FFmpeg MCP المتاحة، لكنه ما زال صغيرًا.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "alight-motion",
@@ -2927,7 +3091,8 @@
       "mobile"
     ],
     "desc": "تطبيق iPhone وiPad للموشن غرافيك: مفاتيح حركة وطبقات ونصوص متحركة، الأقرب إلى After Effects على الجوال. تحميله مجاني، والاشتراك يزيل العلامة المائية. لا يتحكم به Claude.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   },
   {
     "slug": "rive-for-ios",
@@ -2944,6 +3109,7 @@
       "mac"
     ],
     "desc": "مشغّل Rive الرسمي لتطبيقات iPhone وMac: أزرار ورسوم تفاعلية تتفاعل مع حالة التطبيق في SwiftUI.",
-    "pushed": null
+    "pushed": null,
+    "added": "2026-10-24T00:00:00Z"
   }
 ]

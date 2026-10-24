@@ -17,6 +17,7 @@ export interface Tool {
   use: string[];
   desc: string;
   pushed: string | null;
+  added: string;
   order: number;
 }
 export interface Category { id: string; name: string }
@@ -88,3 +89,8 @@ export function url(path = ""): string {
   const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   return base + "/" + path.replace(/^\//, "");
 }
+
+// أحدث الأدوات إضافة (للجرس وخلاصة RSS)
+export const recentTools: Tool[] = [...tools]
+  .sort((a, b) => b.added.localeCompare(a.added) || b.order - a.order)
+  .slice(0, 30);

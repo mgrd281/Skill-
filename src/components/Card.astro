@@ -1,7 +1,7 @@
 ---
 import { type Tool, projectById, rich, isLatin, repoLabel, host, isAppStore, url } from "../lib/data";
-interface Props { tool: Tool; linkName?: boolean }
-const { tool: t, linkName = true } = Astro.props;
+interface Props { tool: Tool; linkName?: boolean; hideBtn?: boolean }
+const { tool: t, linkName = true, hideBtn = false } = Astro.props;
 const search = [
   t.name, t.desc, t.kind, t.cmd || "",
   ...t.use.map((u) => projectById(u)?.name ?? ""),
@@ -25,6 +25,11 @@ const search = [
       <span class="stars" title="نجوم GitHub">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8z"/></svg>{t.stars}
       </span>
+    )}
+    {hideBtn && (
+      <button type="button" class="hide" data-hide={t.slug} aria-label={`إخفاء ${t.name} من عرضك`} title="إخفاء من عرضك (يمكن استعادتها)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18"/><path d="M10.6 6.1A9.9 9.9 0 0 1 12 6c5 0 9 4 10 6a13.6 13.6 0 0 1-2.6 3.3"/><path d="M6.6 6.7C4 8.2 2.4 10.4 2 12c1 2 5 6 10 6 1.5 0 2.9-.4 4.1-1"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
+      </button>
     )}
   </div>
   <div class="tags">

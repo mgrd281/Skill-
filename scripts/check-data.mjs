@@ -14,6 +14,7 @@ for (const t of tools) {
   if (!catIds.has(t.cat)) problems.push(`قسم غير معروف في ${t.name}: ${t.cat}`);
   for (const u of t.use) if (!projIds.has(u)) problems.push(`مشروع غير معروف في ${t.name}: ${u}`);
   for (const k of ["gh", "site"]) if (t[k] && !/^https:\/\//.test(t[k])) problems.push(`${k} ليس https في ${t.name}`);
+  if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/.test(t.added || "")) problems.push(`added غير صالح في ${t.name} (الصيغة: 2026-10-24T09:30:00Z)`);
   if (!t.gh && !t.site) problems.push(`لا رابط لـ ${t.name}`);
 }
 for (const p of projects) for (const k of p.picks) if (!slugs.has(slugify(k))) problems.push(`اقتراح غير موجود في ${p.id}: ${k}`);

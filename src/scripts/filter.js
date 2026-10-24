@@ -15,6 +15,17 @@ try {
     if (saved.sort === "stars") state.sort = "stars";
   }
 } catch (e) {}
+// الأدوات التي أخفاها الزائر من عرضه (محليًا في متصفحه فقط)
+const HKEY = "toolkit-hidden-v1";
+const hidden = new Set();
+try {
+  const h = JSON.parse(localStorage.getItem(HKEY) || "[]");
+  if (Array.isArray(h)) h.forEach((s) => typeof s === "string" && hidden.add(s));
+} catch (e) {}
+function saveHidden() {
+  try { localStorage.setItem(HKEY, JSON.stringify([...hidden])); } catch (e) {}
+}
+
 const hashId = (location.hash || "").replace("#", "");
 if (projectById(hashId)) state.project = hashId;
 
@@ -55,6 +66,7 @@ function inProject(c, pid) {
   return c.use.includes(pid) || !!(p && p.cats.includes(c.cat));
 }
 function matches(c, ignoreCat) {
+  if (hidden.has(c.slug)) return false;
   if (state.project && !inProject(c, state.project)) return false;
   if (!ignoreCat && state.cat !== "all" && c.cat !== state.cat) return false;
   if (state.onlyNew && !c.isNew) return false;
@@ -130,6 +142,8 @@ function renderList() {
   }
   emptyEl.hidden = visible.size !== 0;
   statusEl.textContent = "يظهر " + visible.size + " من " + data.total + (p ? " · " + p.name : "");
+  $("hiddenbar").hidden = hidden.size === 0;
+  $("hidden-n").textContent = "مخفية من عرضك: " + hidden.size;
 }
 
 function render() {
@@ -148,6 +162,7 @@ function setProject(id) {
 function goTo(slug) {
   const c = cards.find((x) => x.slug === slug);
   if (!c) return;
+  if (hidden.delete(slug)) { saveHidden(); render(); }
   if (!matches(c, false)) {
     state.cat = "all"; state.onlyNew = false; state.onlySkills = false; state.q = ""; qEl.value = "";
     if (state.project && !inProject(c, state.project)) state.project = null;
@@ -189,10 +204,79 @@ sortEl.addEventListener("change", () => {
   renderList();
 });
 $("list").addEventListener("click", (e) => {
+  const hb = e.target.closest(".hide");
+  if (hb) {
+    hidden.add(hb.dataset.hide);
+    saveHidden();
+    render();
+    refreshBell();
+    return;
+  }
   const u = e.target.closest(".usechip");
   if (!u) return;
   setProject(u.dataset.p);
   $("build-h").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
 });
+
+$("unhide").addEventListener("click", () => {
+  hidden.clear();
+  saveHidden();
+  render();
+  refreshBell();
+});
+
+// ---- جرس الإشعارات: الأدوات المضافة منذ آخر مرة قرأت فيها الإشعارات ----
+const SKEY = "toolkit-seen-v1";
+const bell = $("bell"), bellN = $("bell-n"), panel = $("notif"), listEl = $("notif-list"), emptyN = $("notif-empty");
+const newest = data.recent.length ? data.recent[0].added : "";
+let seen = null;
+try { seen = localStorage.getItem(SKEY); } catch (e) {}
+if (seen === null) {
+  // أول زيارة: لا نغمرك بكل الأدوات الحالية، نبدأ العدّ من الآن
+  seen = newest;
+  try { localStorage.setItem(SKEY, newest); } catch (e) {}
+}
+
+function unreadList() {
+  return data.recent.filter((r) => r.added > seen && !hidden.has(r.slug));
+}
+function refreshBell() {
+  const list = unreadList();
+  bellN.hidden = list.length === 0;
+  bellN.textContent = list.length > 9 ? "9+" : String(list.length);
+  bell.setAttribute("aria-label", list.length ? "الإشعارات: " + list.length + " أداة جديدة" : "الإشعارات: لا جديد");
+  listEl.textContent = "";
+  list.forEach((r) => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = data.base + r.slug;
+    const b = document.createElement("b"); b.textContent = r.name;
+    const s = document.createElement("small"); const d = document.createElement("bdi"); d.textContent = r.added.slice(0, 10); s.append(r.cat + " · ", d);
+    a.append(b, s);
+    li.append(a);
+    listEl.append(li);
+  });
+  emptyN.hidden = list.length !== 0;
+  $("notif-read").hidden = list.length === 0;
+}
+function togglePanel(open) {
+  panel.hidden = !open;
+  bell.setAttribute("aria-expanded", open ? "true" : "false");
+}
+bell.addEventListener("click", () => togglePanel(panel.hidden));
+document.addEventListener("click", (e) => {
+  if (!panel.hidden && !e.target.closest(".notif-wrap")) togglePanel(false);
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !panel.hidden) { togglePanel(false); bell.focus(); }
+});
+$("notif-read").addEventListener("click", () => {
+  seen = newest;
+  try { localStorage.setItem(SKEY, newest); } catch (e) {}
+  refreshBell();
+  togglePanel(false);
+});
+refreshBell();
+if (unreadList().length && !reduceMotion) bell.classList.add("ring");
 
 render();

@@ -121,6 +121,7 @@ const candidates = [...found.values()]
         slug: slugify(r.name), cat: g.cat, name: r.name, kind: g.kind, isNew: true, gh: r.html_url,
         site: r.homepage && /^https:\/\//.test(r.homepage) ? r.homepage : null,
         stars: formatStars(r.stargazers_count), cmd: null, use: [], desc: "", pushed: (r.pushed_at || "").slice(0, 10),
+        added: new Date().toISOString().slice(0, 19) + "Z",
       },
     };
   });

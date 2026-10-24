@@ -1,13 +1,16 @@
 ---
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
-import { tools, categories, projects, rich, starsUpdatedAt, formatDate } from "../lib/data";
+import { tools, categories, projects, rich, starsUpdatedAt, formatDate, recentTools, categoryById, url } from "../lib/data";
 
 const total = tools.length;
 const appData = {
   total,
   projects: projects.map((p) => ({ id: p.id, name: p.name, cats: p.cats ?? [], pickSlugs: p.pickSlugs })),
   cats: categories.map((c) => c.id),
+  base: url("tools/"),
+  feed: url("feed.xml"),
+  recent: recentTools.map((r) => ({ slug: r.slug, name: r.name, added: r.added, cat: categoryById(r.cat).name })),
 };
 ---
 <Base
@@ -16,6 +19,23 @@ const appData = {
 >
   <a class="skip" href="#list">تخطَّ إلى القائمة</a>
   <header class="top">
+    <div class="topbar">
+      <div class="notif-wrap">
+        <button type="button" id="bell" class="bell" aria-haspopup="dialog" aria-expanded="false" aria-controls="notif" aria-label="الإشعارات: أدوات جديدة">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+          <span class="dot" id="bell-n" hidden>0</span>
+        </button>
+        <div class="notif" id="notif" role="dialog" aria-label="أدوات جديدة" hidden>
+          <h3>جديد منذ زيارتك الأخيرة</h3>
+          <ul id="notif-list"></ul>
+          <p class="notif-empty" id="notif-empty">لا جديد منذ زيارتك الأخيرة.</p>
+          <div class="notif-actions">
+            <button type="button" class="linkbtn" id="notif-read">تم، قرأتها</button>
+            <a class="linkbtn" href={url("feed.xml")}>اشتراك <bdi>RSS</bdi></a>
+          </div>
+        </div>
+      </div>
+    </div>
     <h1>دليل أدوات التصميم والتطوير</h1>
     <p class="lead">
       <Fragment set:html={`${total} أداة مرتبة حسب القسم. لكل أداة وصف قصير، والمشاريع التي تفيدها، وأمر التثبيت، ورابط <bdi>GitHub</bdi> والموقع الرسمي.`} />
@@ -70,6 +90,7 @@ const appData = {
     </div>
     <div class="row">
       <p class="status" id="status" aria-live="polite"></p>
+      <p class="hiddenbar" id="hiddenbar" hidden><span id="hidden-n"></span> <button type="button" class="linkbtn" id="unhide">استعادة المخفية</button></p>
       <label class="sortbox" for="sort">الترتيب
         <select id="sort">
           <option value="cat">حسب القسم</option>
@@ -88,7 +109,7 @@ const appData = {
       <section class="cat" id={"cat-" + c.id} data-cat-section={c.id}>
         <h2><Fragment set:html={rich(c.name)} /><span class="n">{tools.filter((t) => t.cat === c.id).length}</span></h2>
         <div class="grid" data-grid={c.id}>
-          {tools.filter((t) => t.cat === c.id).map((t) => <Card tool={t} />)}
+          {tools.filter((t) => t.cat === c.id).map((t) => <Card tool={t} hideBtn />)}
         </div>
       </section>
     ))}

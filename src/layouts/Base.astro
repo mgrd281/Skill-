@@ -20,6 +20,7 @@ const icon =
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href={icon} />
+    <link rel="alternate" type="application/rss+xml" title="أحدث الأدوات المضافة" href={new URL("feed.xml", Astro.site).href} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ar_AR" />
     <meta property="og:title" content={title} />
