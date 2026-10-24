@@ -1,0 +1,40 @@
+name: Check links
+
+on:
+  schedule:
+    - cron: "11 7 * * 1" # كل يوم اثنين 07:11 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check every link
+        run: node scripts/check-links.mjs --report links-report.md
+
+      - name: Show the report in the run summary
+        if: hashFiles('links-report.md') != ''
+        run: cat links-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open or update the issue
+        if: hashFiles('links-report.md') != ''
+        run: |
+          TITLE="روابط معطلة أو منقولة في الدليل"
+          EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number,title --jq ".[] | select(.title == \"$TITLE\") | .number" | head -1)
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body-file links-report.md
+          else
+            gh issue create --title "$TITLE" --body-file links-report.md
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

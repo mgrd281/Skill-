@@ -10,7 +10,8 @@
     "update-stars": "node scripts/update-stars.mjs",
     "check": "node scripts/check-data.mjs",
     "discover": "node scripts/discover.mjs --report candidates-report.md --no-save",
-    "remove": "node scripts/remove-tool.mjs"
+    "remove": "node scripts/remove-tool.mjs",
+    "check-links": "node scripts/check-links.mjs --report links-report.md"
   },
   "dependencies": {
     "astro": "^5.14.0"
