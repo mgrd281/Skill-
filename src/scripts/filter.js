@@ -1,0 +1,198 @@
+// الفلترة والبحث والترتيب في الصفحة الرئيسية. الصفحة كاملة تُرسم وقت البناء،
+// وهذا السكربت يخفي ويُظهر ويعيد ترتيب البطاقات فقط.
+const KEY = "toolkit-filter-v2";
+const data = JSON.parse(document.getElementById("app-data").textContent);
+const projectById = (id) => data.projects.find((p) => p.id === id) || null;
+
+const state = { project: null, cat: "all", q: "", onlyNew: false, onlySkills: false, sort: "cat" };
+try {
+  const saved = JSON.parse(localStorage.getItem(KEY) || "{}");
+  if (saved && typeof saved === "object") {
+    if (projectById(saved.project)) state.project = saved.project;
+    if (saved.cat === "all" || data.cats.includes(saved.cat)) state.cat = saved.cat;
+    state.onlyNew = !!saved.onlyNew;
+    state.onlySkills = !!saved.onlySkills;
+    if (saved.sort === "stars") state.sort = "stars";
+  }
+} catch (e) {}
+const hashId = (location.hash || "").replace("#", "");
+if (projectById(hashId)) state.project = hashId;
+
+function save() {
+  try {
+    localStorage.setItem(KEY, JSON.stringify({
+      project: state.project, cat: state.cat, onlyNew: state.onlyNew, onlySkills: state.onlySkills, sort: state.sort,
+    }));
+  } catch (e) {}
+}
+
+const $ = (id) => document.getElementById(id);
+const projectsEl = $("projects"), chipsEl = $("chips"), statusEl = $("status"), qEl = $("q"), sortEl = $("sort");
+const emptyEl = $("empty"), starsSection = $("by-stars"), starsGrid = $("stars-grid");
+const adviceEls = [...document.querySelectorAll("[data-advice]")];
+const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const cards = [...document.querySelectorAll(".card")].map((el) => ({
+  el,
+  slug: el.dataset.slug,
+  cat: el.dataset.cat,
+  isNew: el.dataset.new === "1",
+  isSkill: el.dataset.kind === "Skill",
+  use: el.dataset.use.split(" "),
+  search: el.dataset.search,
+  starsN: Number(el.dataset.stars),
+  order: Number(el.dataset.order),
+  pickBadge: el.querySelector(".badge-pick"),
+  useChips: [...el.querySelectorAll(".usechip")],
+  grid: el.parentNode,
+}));
+const sections = [...document.querySelectorAll("[data-cat-section]")].map((s) => ({
+  el: s, id: s.dataset.catSection, grid: s.querySelector(".grid"), n: s.querySelector("h2 .n"),
+}));
+
+function inProject(c, pid) {
+  const p = projectById(pid);
+  return c.use.includes(pid) || !!(p && p.cats.includes(c.cat));
+}
+function matches(c, ignoreCat) {
+  if (state.project && !inProject(c, state.project)) return false;
+  if (!ignoreCat && state.cat !== "all" && c.cat !== state.cat) return false;
+  if (state.onlyNew && !c.isNew) return false;
+  if (state.onlySkills && !c.isSkill) return false;
+  if (!state.q) return true;
+  return state.q.split(/\s+/).every((w) => c.search.includes(w));
+}
+function countWith(flag) {
+  const keep = state[flag];
+  state[flag] = true;
+  const n = cards.filter((c) => matches(c, false)).length;
+  state[flag] = keep;
+  return n;
+}
+
+function syncChips() {
+  const base = cards.filter((c) => matches(c, true));
+  chipsEl.querySelectorAll(".chip").forEach((b) => {
+    const id = b.dataset.id;
+    let n;
+    if (id === "all") n = base.length;
+    else if (id === "new") n = countWith("onlyNew");
+    else if (id === "skill") n = countWith("onlySkills");
+    else n = base.filter((c) => c.cat === id).length;
+    b.querySelector(".n").textContent = n;
+    b.classList.toggle("zero", n === 0);
+    const on = id === "new" ? state.onlyNew : id === "skill" ? state.onlySkills : id === state.cat;
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+  });
+}
+
+function syncProject() {
+  projectsEl.querySelectorAll(".ptile").forEach((b) => {
+    b.setAttribute("aria-pressed", b.dataset.p === state.project ? "true" : "false");
+  });
+  adviceEls.forEach((a) => { a.hidden = a.dataset.advice !== state.project; });
+  const p = projectById(state.project);
+  cards.forEach((c) => {
+    const isPick = !!(p && p.pickSlugs.includes(c.slug));
+    c.pickBadge.hidden = !isPick;
+    c.el.classList.toggle("is-pick", isPick);
+    c.useChips.forEach((u) => u.classList.toggle("on", u.dataset.p === state.project));
+  });
+}
+
+function renderList() {
+  const visible = new Set(cards.filter((c) => matches(c, false)));
+  cards.forEach((c) => { c.el.hidden = !visible.has(c); });
+  const p = projectById(state.project);
+
+  if (state.sort === "stars") {
+    const sorted = [...visible].sort((a, b) => b.starsN - a.starsN || a.order - b.order);
+    sorted.forEach((c) => starsGrid.appendChild(c.el));
+    starsSection.hidden = sorted.length === 0;
+    starsSection.querySelector("h2 .n").textContent = sorted.length;
+    sections.forEach((s) => { s.el.hidden = true; });
+  } else {
+    starsSection.hidden = true;
+    sections.forEach((s) => {
+      const mine = cards.filter((c) => c.cat === s.id).sort((a, b) => {
+        if (p) {
+          let pa = p.pickSlugs.indexOf(a.slug), pb = p.pickSlugs.indexOf(b.slug);
+          pa = pa === -1 ? 99 : pa; pb = pb === -1 ? 99 : pb;
+          if (pa !== pb) return pa - pb;
+        }
+        return a.order - b.order;
+      });
+      mine.forEach((c) => s.grid.appendChild(c.el));
+      const n = mine.filter((c) => visible.has(c)).length;
+      s.n.textContent = n;
+      s.el.hidden = n === 0;
+    });
+  }
+  emptyEl.hidden = visible.size !== 0;
+  statusEl.textContent = "يظهر " + visible.size + " من " + data.total + (p ? " · " + p.name : "");
+}
+
+function render() {
+  syncProject();
+  syncChips();
+  renderList();
+  sortEl.value = state.sort;
+}
+
+function setProject(id) {
+  state.project = state.project === id ? null : id;
+  save();
+  render();
+}
+
+function goTo(slug) {
+  const c = cards.find((x) => x.slug === slug);
+  if (!c) return;
+  if (!matches(c, false)) {
+    state.cat = "all"; state.onlyNew = false; state.onlySkills = false; state.q = ""; qEl.value = "";
+    if (state.project && !inProject(c, state.project)) state.project = null;
+    save(); render();
+  }
+  c.el.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+  c.el.classList.remove("flash");
+  void c.el.offsetWidth;
+  c.el.classList.add("flash");
+}
+
+projectsEl.addEventListener("click", (e) => {
+  const b = e.target.closest(".ptile");
+  if (b) setProject(b.dataset.p);
+});
+document.querySelector(".build").addEventListener("click", (e) => {
+  const go = e.target.closest("[data-go]");
+  if (go) { goTo(go.dataset.go); return; }
+  if (e.target.closest("[data-clear]")) { state.project = null; save(); render(); }
+});
+chipsEl.addEventListener("click", (e) => {
+  const b = e.target.closest(".chip");
+  if (!b) return;
+  const id = b.dataset.id;
+  if (id === "new") state.onlyNew = !state.onlyNew;
+  else if (id === "skill") state.onlySkills = !state.onlySkills;
+  else state.cat = id;
+  save();
+  render();
+});
+qEl.addEventListener("input", () => {
+  state.q = qEl.value.trim().toLowerCase();
+  syncChips();
+  renderList();
+});
+sortEl.addEventListener("change", () => {
+  state.sort = sortEl.value === "stars" ? "stars" : "cat";
+  save();
+  renderList();
+});
+$("list").addEventListener("click", (e) => {
+  const u = e.target.closest(".usechip");
+  if (!u) return;
+  setProject(u.dataset.p);
+  $("build-h").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+});
+
+render();

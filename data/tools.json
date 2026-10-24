@@ -1,0 +1,2949 @@
+[
+  {
+    "slug": "frontend-design",
+    "cat": "design",
+    "name": "Frontend Design",
+    "kind": "Skill",
+    "isNew": false,
+    "gh": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
+    "site": null,
+    "stars": "180.3k",
+    "cmd": "npx skills add anthropics/skills --skill frontend-design",
+    "use": [
+      "web",
+      "landing",
+      "shop"
+    ],
+    "desc": "مهارة Anthropic الرسمية لبناء واجهات مميزة بجودة إنتاج بدل الشكل العادي المكرر.",
+    "pushed": null
+  },
+  {
+    "slug": "impeccable",
+    "cat": "design",
+    "name": "Impeccable",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/pbakaus/impeccable",
+    "site": "https://impeccable.style",
+    "stars": "82.2k",
+    "cmd": "npx skills add pbakaus/impeccable",
+    "use": [
+      "landing",
+      "web",
+      "shop"
+    ],
+    "desc": "تبني على Frontend Design وتضيف أوامر لمراجعة التصميم وتلميعه، مع قواعد تكشف أخطاء التصميم المولّد بالذكاء الاصطناعي.",
+    "pushed": null
+  },
+  {
+    "slug": "ui-ux-pro-max",
+    "cat": "design",
+    "name": "UI UX Pro Max",
+    "kind": "Skill",
+    "isNew": false,
+    "gh": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "site": "https://www.uupm.cc/",
+    "stars": "136.6k",
+    "cmd": "/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill\n/plugin install ui-ux-pro-max@ui-ux-pro-max-skill",
+    "use": [
+      "web",
+      "mobile",
+      "landing",
+      "shop"
+    ],
+    "desc": "تحلل متطلبات مشروعك وتولّد له نظام تصميم كامل من ألوان وخطوط وتخطيط. تدعم الويب وFlutter وSwiftUI أيضًا.",
+    "pushed": null
+  },
+  {
+    "slug": "vercel-agent-skills",
+    "cat": "vercel",
+    "name": "Vercel Agent Skills",
+    "kind": "Skill",
+    "isNew": false,
+    "gh": "https://github.com/vercel-labs/agent-skills",
+    "site": "https://skills.sh/vercel-labs/agent-skills",
+    "stars": "32.5k",
+    "cmd": "npx skills add vercel-labs/agent-skills",
+    "use": [
+      "web",
+      "mobile"
+    ],
+    "desc": "مجموعة Vercel الرسمية: إرشادات أداء React وNext.js، وفحص الواجهة بأكثر من 100 قاعدة تشمل حالات الأزرار والتركيز والتحميل، وتطبيقات React Native.",
+    "pushed": null
+  },
+  {
+    "slug": "ui-animation-skill",
+    "cat": "animation",
+    "name": "UI Animation Skill",
+    "kind": "Skill",
+    "isNew": false,
+    "gh": "https://github.com/emilkowalski/skills",
+    "site": "https://emilkowal.ski/skill",
+    "stars": "46.9k",
+    "cmd": "npx skills add emilkowalski/skills --skill animate",
+    "use": [
+      "web",
+      "landing"
+    ],
+    "desc": "تبني الحركة بالترتيب: الهدف ثم الأداة ثم المنحنى ثم المدة، ولا تضيف حركة بلا سبب. من مطوّر Sonner وVaul.",
+    "pushed": null
+  },
+  {
+    "slug": "brand-building-skills",
+    "cat": "brandskills",
+    "name": "Brand Building Skills",
+    "kind": "Skill",
+    "isNew": false,
+    "gh": "https://github.com/arnabbagxd/brand-building-skills",
+    "site": null,
+    "stars": "641",
+    "cmd": "npx skills add arnabbagxd/brand-building-skills",
+    "use": [
+      "brand"
+    ],
+    "desc": "مهارات للاستراتيجية والاسم والهوية والنبرة والإطلاق، تعتمد كلها على ملف مركزي لهوية علامتك.",
+    "pushed": null
+  },
+  {
+    "slug": "design-md",
+    "cat": "brandskills",
+    "name": "DESIGN.md",
+    "kind": "صيغة",
+    "isNew": false,
+    "gh": "https://github.com/VoltAgent/awesome-design-md",
+    "site": "https://getdesign.md/",
+    "stars": "120.1k",
+    "cmd": null,
+    "use": [
+      "brand",
+      "web",
+      "landing"
+    ],
+    "desc": "ملف تضعه في جذر مشروعك يشرح للذكاء الاصطناعي نظام تصميمك. انسخ نموذجًا جاهزًا مثل Stripe أو Linear وعدّله.",
+    "pushed": null
+  },
+  {
+    "slug": "canvas-design",
+    "cat": "brandskills",
+    "name": "Canvas Design",
+    "kind": "Skill",
+    "isNew": false,
+    "gh": "https://github.com/anthropics/skills/tree/main/skills/canvas-design",
+    "site": null,
+    "stars": "180.3k",
+    "cmd": "npx skills add anthropics/skills --skill canvas-design",
+    "use": [
+      "brand"
+    ],
+    "desc": "مهارة Anthropic لتصميم ملصقات وإعلانات ومواد بصرية كصور أو PDF.",
+    "pushed": null
+  },
+  {
+    "slug": "taste-skill",
+    "cat": "design",
+    "name": "Taste Skill",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/Leonxlnx/taste-skill",
+    "site": "https://tasteskill.dev",
+    "stars": "98.4k",
+    "cmd": "npx skills add https://github.com/Leonxlnx/taste-skill",
+    "use": [
+      "web",
+      "landing",
+      "shop",
+      "mobile",
+      "brand"
+    ],
+    "desc": "تبعد Claude عن الواجهات العامة المكررة نحو تخطيط وخطوط وحركة مميزة، وفيها مهارات لإعادة تصميم موقع موجود.",
+    "pushed": null
+  },
+  {
+    "slug": "shadcn-ui-skill",
+    "cat": "design",
+    "name": "shadcn/ui Skill",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/shadcn-ui/ui/tree/main/skills/shadcn",
+    "site": "https://ui.shadcn.com",
+    "stars": "125.8k",
+    "cmd": "npx skills add shadcn/ui",
+    "use": [
+      "web",
+      "dashboard",
+      "landing"
+    ],
+    "desc": "مهارة shadcn الرسمية: تعلّم Claude إضافة المكونات وتنسيقها وإصلاحها بالطريقة الصحيحة لمشروعك.",
+    "pushed": null
+  },
+  {
+    "slug": "anthropic-design-plugin",
+    "cat": "design",
+    "name": "Anthropic Design Plugin",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/design",
+    "site": null,
+    "stars": "30.0k",
+    "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install design@knowledge-work-plugins",
+    "use": [
+      "web",
+      "mobile",
+      "shop",
+      "dashboard"
+    ],
+    "desc": "إضافة Anthropic الرسمية: نقد التصميم، ومراجعة نظام التصميم، ونصوص الواجهة، وفحص إمكانية الوصول حسب WCAG.",
+    "pushed": null
+  },
+  {
+    "slug": "interface-design",
+    "cat": "design",
+    "name": "Interface Design",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/Dammyjay93/interface-design",
+    "site": "https://interface-design.dev",
+    "stars": "5.8k",
+    "cmd": "npx skills add https://github.com/dammyjay93/interface-design --skill interface-design",
+    "use": [
+      "dashboard",
+      "web",
+      "mobile"
+    ],
+    "desc": "مبادئ تصميم للوحات التحكم والتطبيقات، وتحفظ قرارات المسافات والألوان في ملف حتى يبقى التصميم ثابتًا بين الجلسات.",
+    "pushed": null
+  },
+  {
+    "slug": "google-stitch-skills",
+    "cat": "design",
+    "name": "Google Stitch Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/google-labs-code/stitch-skills",
+    "site": "https://stitch.withgoogle.com/docs/mcp/setup",
+    "stars": "8.5k",
+    "cmd": "npx skills add google-labs-code/stitch-skills",
+    "use": [
+      "web",
+      "mobile",
+      "landing",
+      "dashboard"
+    ],
+    "desc": "مهارات Google الرسمية لتوليد الشاشات في Stitch وتحويلها إلى كود React أو shadcn. تحتاج إعداد Stitch MCP أولًا.",
+    "pushed": null
+  },
+  {
+    "slug": "frontend-slides",
+    "cat": "design",
+    "name": "Frontend Slides",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/zarazhangrui/frontend-slides",
+    "site": null,
+    "stars": "30.8k",
+    "cmd": "/plugin marketplace add https://github.com/zarazhangrui/frontend-slides\n/plugin install frontend-slides@frontend-slides",
+    "use": [
+      "brand"
+    ],
+    "desc": "عروض تقديمية أنيقة كصفحة HTML واحدة، أو تحويل ملفات PowerPoint، مع اختيار النمط وتصدير PDF.",
+    "pushed": null
+  },
+  {
+    "slug": "shopify-ai-toolkit",
+    "cat": "shopmkt",
+    "name": "Shopify AI Toolkit",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/Shopify/shopify-ai-toolkit",
+    "site": "https://shopify.dev/docs/apps/build/ai-toolkit",
+    "stars": "589",
+    "cmd": "claude plugin install shopify-ai-toolkit@claude-plugins-official",
+    "use": [
+      "shop"
+    ],
+    "desc": "مهارات Shopify الرسمية: أحدث وثائق Shopify، وفحص كود GraphQL وLiquid، وتنفيذ مهام المتجر عبر Shopify CLI.",
+    "pushed": null
+  },
+  {
+    "slug": "shopify-liquid-skills",
+    "cat": "shopmkt",
+    "name": "Shopify Liquid Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/Shopify/liquid-skills",
+    "site": null,
+    "stars": "35",
+    "cmd": "/plugin marketplace add Shopify/liquid-skills\n/plugin install liquid-skills@liquid-skills",
+    "use": [
+      "shop"
+    ],
+    "desc": "مهارة Shopify الرسمية لكتابة Liquid وCSS الثيم وإمكانية الوصول في مكونات المتجر. صغيرة لكنها رسمية.",
+    "pushed": null
+  },
+  {
+    "slug": "marketing-skills",
+    "cat": "shopmkt",
+    "name": "Marketing Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/coreyhaines31/marketingskills",
+    "site": "https://marketing-skills.com",
+    "stars": "55.0k",
+    "cmd": "npx skills add coreyhaines31/marketingskills",
+    "use": [
+      "shop",
+      "web",
+      "landing",
+      "brand",
+      "mobile"
+    ],
+    "desc": "50 دليل تسويق جاهز: كتابة النصوص، وتدقيق SEO، وتحسين التحويل، ورسائل البريد، والإعلانات. الأكثر تثبيتًا في التسويق.",
+    "pushed": null
+  },
+  {
+    "slug": "claude-seo",
+    "cat": "quality",
+    "name": "Claude SEO",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/AgriciDaniel/claude-seo",
+    "site": "https://claude-seo.md",
+    "stars": "15.1k",
+    "cmd": "/plugin marketplace add AgriciDaniel/claude-seo\n/plugin install claude-seo@agricidaniel-claude-seo\n/seo setup",
+    "use": [
+      "shop",
+      "web",
+      "landing"
+    ],
+    "desc": "تدقيق SEO كامل عبر أوامر /seo: التقني، والبيانات المنظمة، والبحث بالذكاء الاصطناعي، وhreflang للمتاجر متعددة اللغات.",
+    "pushed": null
+  },
+  {
+    "slug": "humanizer",
+    "cat": "shopmkt",
+    "name": "Humanizer",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/blader/humanizer",
+    "site": "https://skills.sh/blader/humanizer",
+    "stars": "57.3k",
+    "cmd": "/plugin marketplace add blader/humanizer\n/plugin install humanizer@humanizer",
+    "use": [
+      "brand",
+      "web",
+      "shop",
+      "claude"
+    ],
+    "desc": "يعيد كتابة النص حتى لا يبدو مكتوبًا بالذكاء الاصطناعي، بفحص 25 نمطًا معروفًا. مصمم للإنجليزية.",
+    "pushed": null
+  },
+  {
+    "slug": "avoid-ai-writing",
+    "cat": "shopmkt",
+    "name": "Avoid AI Writing",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/conorbronsdon/avoid-ai-writing",
+    "site": "https://chainofthought.show/go/avoid-ai-writing/",
+    "stars": "5.0k",
+    "cmd": "/plugin marketplace add conorbronsdon/avoid-ai-writing\n/plugin install avoid-ai-writing@conorbronsdon-skills",
+    "use": [
+      "brand",
+      "web",
+      "shop",
+      "claude"
+    ],
+    "desc": "يكشف أنماط الكتابة الآلية ويعيد صياغتها، مع وضع للفحص فقط. توجد له نسخة مجتمعية صغيرة للألمانية.",
+    "pushed": null
+  },
+  {
+    "slug": "anthropic-marketing-plugin",
+    "cat": "shopmkt",
+    "name": "Anthropic Marketing Plugin",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/marketing",
+    "site": null,
+    "stars": "30.0k",
+    "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install marketing@knowledge-work-plugins",
+    "use": [
+      "brand",
+      "web",
+      "landing",
+      "shop"
+    ],
+    "desc": "إضافة Anthropic الرسمية للتسويق: كتابة المحتوى، وخطط الحملات، وفحص النصوص مقابل نبرة علامتك، وتسلسلات البريد.",
+    "pushed": null
+  },
+  {
+    "slug": "nexscope-ecommerce-skills",
+    "cat": "shopmkt",
+    "name": "Nexscope eCommerce Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/nexscope-ai/eCommerce-Skills",
+    "site": null,
+    "stars": "1k",
+    "cmd": "npx skills add nexscope-ai/eCommerce-Skills -g",
+    "use": [
+      "shop"
+    ],
+    "desc": "حزمة تجارة إلكترونية: مولد أوصاف منتجات بحدود كل منصة مثل Shopify وAmazon، وGoogle Shopping، والبيع الدولي. جودتها متفاوتة.",
+    "pushed": null
+  },
+  {
+    "slug": "claude-ads",
+    "cat": "shopmkt",
+    "name": "Claude Ads",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/AgriciDaniel/claude-ads",
+    "site": "https://claude-ads.md",
+    "stars": "8.5k",
+    "cmd": "/plugin marketplace add AgriciDaniel/claude-ads\n/plugin install claude-ads@ai-marketing-hub-claude-ads",
+    "use": [
+      "shop",
+      "landing"
+    ],
+    "desc": "يدقق ويخطط الإعلانات على 12 منصة منها Google وMeta وAmazon، والتعديلات تبقى مسودات تنتظر موافقتك.",
+    "pushed": null
+  },
+  {
+    "slug": "matt-pocock-skills",
+    "cat": "devskills",
+    "name": "Matt Pocock Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/mattpocock/skills",
+    "site": "https://aihero.dev/skills",
+    "stars": "294.1k",
+    "cmd": "claude plugin install mattpocock-skills@claude-plugins-official",
+    "use": [
+      "web",
+      "mobile",
+      "dashboard",
+      "claude"
+    ],
+    "desc": "عادات هندسية للوكيل: يسألك عن الخطة قبل البرمجة، ويكتب الاختبارات أولًا، ويحلل الأخطاء الصعبة، ويراجع الكود.",
+    "pushed": null
+  },
+  {
+    "slug": "karpathy-guidelines",
+    "cat": "devskills",
+    "name": "Karpathy Guidelines",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/multica-ai/andrej-karpathy-skills",
+    "site": null,
+    "stars": "220.6k",
+    "cmd": "/plugin marketplace add forrestchang/andrej-karpathy-skills\n/plugin install andrej-karpathy-skills@karpathy-skills",
+    "use": [
+      "web",
+      "mobile",
+      "dashboard",
+      "shop",
+      "claude"
+    ],
+    "desc": "أربع قواعد في ملف واحد: فكّر قبل البرمجة، والبساطة أولًا، وعدّل فقط ما طُلب، واعمل نحو هدف واضح.",
+    "pushed": null
+  },
+  {
+    "slug": "addy-osmani-agent-skills",
+    "cat": "devskills",
+    "name": "Addy Osmani Agent Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/addyosmani/agent-skills",
+    "site": "https://skills.addy.ie",
+    "stars": "105.9k",
+    "cmd": "npx skills add addyosmani/agent-skills",
+    "use": [
+      "web",
+      "mobile",
+      "dashboard",
+      "landing",
+      "claude"
+    ],
+    "desc": "25 مهارة من التخطيط حتى الإطلاق: اختبار، ومراجعة كود، وأمان OWASP، وسرعة Core Web Vitals، وقوائم فحص قبل النشر.",
+    "pushed": null
+  },
+  {
+    "slug": "supabase-agent-skills",
+    "cat": "devskills",
+    "name": "Supabase Agent Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/supabase/agent-skills",
+    "site": "https://supabase.com/docs/guides/getting-started/ai-skills",
+    "stars": "2.4k",
+    "cmd": "npx skills add supabase/agent-skills",
+    "use": [
+      "web",
+      "mobile",
+      "dashboard",
+      "booking"
+    ],
+    "desc": "مهارات Supabase الرسمية: استخدام منتجاتها بشكل صحيح، وأفضل ممارسات الأداء في قواعد بيانات Postgres.",
+    "pushed": null
+  },
+  {
+    "slug": "next-js-agent-skills",
+    "cat": "devskills",
+    "name": "Next.js Agent Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/vercel/next.js/tree/canary/skills",
+    "site": "https://nextjs.org",
+    "stars": "143k",
+    "cmd": "npx skills add vercel/next.js",
+    "use": [
+      "web",
+      "dashboard",
+      "landing",
+      "mobile"
+    ],
+    "desc": "مهارات Next.js الرسمية: تتحقق من كل تعديل على خادم التطوير والمتصفح، وتكشف ما يكبّر حجم الصفحات. النجوم لمستودع Next.js كله.",
+    "pushed": null
+  },
+  {
+    "slug": "agent-browser",
+    "cat": "devskills",
+    "name": "agent-browser",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/vercel-labs/agent-browser",
+    "site": "https://agent-browser.dev",
+    "stars": "41.1k",
+    "cmd": "npm install -g agent-browser\nagent-browser install\nnpx skills add vercel-labs/agent-browser",
+    "use": [
+      "web",
+      "shop",
+      "landing",
+      "dashboard"
+    ],
+    "desc": "متصفح سريع من Vercel يفتح الصفحات ويضغط ويملأ النماذج ويقرأ الأخطاء، ليتحقق Claude من المتجر أو التطبيق بنفسه.",
+    "pushed": null
+  },
+  {
+    "slug": "trail-of-bits-skills",
+    "cat": "devskills",
+    "name": "Trail of Bits Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/trailofbits/skills",
+    "site": null,
+    "stars": "6.9k",
+    "cmd": "/plugin marketplace add trailofbits/skills",
+    "use": [
+      "web",
+      "mobile",
+      "dashboard"
+    ],
+    "desc": "مهارات أمان من شركة تدقيق معروفة: مراجعة التعديلات أمنيًا، وكشف الإعدادات غير الآمنة، وفحص مخاطر حزم npm.",
+    "pushed": null
+  },
+  {
+    "slug": "claude-code-workflows",
+    "cat": "devskills",
+    "name": "Claude Code Workflows",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/wshobson/agents",
+    "site": null,
+    "stars": "41.0k",
+    "cmd": "/plugin marketplace add wshobson/agents",
+    "use": [
+      "web",
+      "mobile",
+      "dashboard",
+      "claude"
+    ],
+    "desc": "متجر إضافات فيه 94 إضافة صغيرة للبرمجة والأمان والاختبار وقواعد البيانات، تثبّت منها ما تحتاجه فقط.",
+    "pushed": null
+  },
+  {
+    "slug": "flutter-agent-skills",
+    "cat": "mobskills",
+    "name": "Flutter Agent Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/flutter/agent-plugins",
+    "site": "https://docs.flutter.dev/ai/agent-skills",
+    "stars": "3.1k",
+    "cmd": "claude plugin marketplace add flutter/agent-plugins\nclaude plugin install dart-flutter@dart-flutter",
+    "use": [
+      "mobile"
+    ],
+    "desc": "مهارات فريق Flutter الرسمية: بنية التطبيق، والتخطيط المتجاوب، وإصلاح أخطاء overflow، والتوجيه، والترجمة، والاختبارات.",
+    "pushed": null
+  },
+  {
+    "slug": "swiftui-pro",
+    "cat": "apple",
+    "name": "SwiftUI Pro",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/twostraws/SwiftUI-Agent-Skill",
+    "site": null,
+    "stars": "6.2k",
+    "cmd": "/plugin marketplace add twostraws/SwiftUI-Agent-Skill\n/plugin install swiftui-pro@swiftui-agent-skill",
+    "use": [
+      "mobile",
+      "mac"
+    ],
+    "desc": "من Paul Hudson: يصلح أخطاء SwiftUI الشائعة. مفيد لأجزاء iOS الأصلية مثل الويدجت على الشاشة الرئيسية.",
+    "pushed": null
+  },
+  {
+    "slug": "capacitor-skills",
+    "cat": "mobskills",
+    "name": "Capacitor Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/capawesome-team/skills",
+    "site": null,
+    "stars": "45",
+    "cmd": "npx skills add capawesome-team/skills",
+    "use": [
+      "mobile"
+    ],
+    "desc": "حوالي 30 مهارة لتطبيقات Capacitor: الترقية بين الإصدارات، والإشعارات، والشراء داخل التطبيق. نجومها قليلة لكنها الأكمل.",
+    "pushed": null
+  },
+  {
+    "slug": "app-store-connect-skills",
+    "cat": "apple",
+    "name": "App Store Connect Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/rorkai/app-store-connect-cli-skills",
+    "site": "https://asccli.sh",
+    "stars": "1.1k",
+    "cmd": "npx skills add rorkai/app-store-connect-cli-skills",
+    "use": [
+      "mobile"
+    ],
+    "desc": "يدير App Store Connect من الطرفية: رفع النسخ، وTestFlight، ونصوص المتجر بعدة لغات، وإرسال المراجعة. يحتاج أداة asc أولًا.",
+    "pushed": null
+  },
+  {
+    "slug": "aso-skills",
+    "cat": "mobskills",
+    "name": "ASO Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/appeeky/aso-skills",
+    "site": "https://appeeky.com/",
+    "stars": "2.2k",
+    "cmd": "npx skills add appeeky/aso-skills",
+    "use": [
+      "mobile"
+    ],
+    "desc": "40 مهارة لتحسين ظهور التطبيق في المتجر: الكلمات المفتاحية، والعنوان، ولقطات الشاشة، وترجمة صفحة التطبيق.",
+    "pushed": null
+  },
+  {
+    "slug": "app-store-screenshots",
+    "cat": "mobskills",
+    "name": "App Store Screenshots",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/ParthJadhav/app-store-screenshots",
+    "site": "https://www.parthjadhav.com/products/app-store-screenshots",
+    "stars": "7.4k",
+    "cmd": "npx skills add ParthJadhav/app-store-screenshots",
+    "use": [
+      "mobile",
+      "brand"
+    ],
+    "desc": "يحوّل لقطات تطبيقك إلى صور تسويقية لمتجر Apple وGoogle Play بإطارات أجهزة و18 نمطًا وعدة لغات، مع دعم الكتابة من اليمين لليسار.",
+    "pushed": null
+  },
+  {
+    "slug": "superpowers",
+    "cat": "general",
+    "name": "Superpowers",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/obra/superpowers",
+    "site": null,
+    "stars": "299.8k",
+    "cmd": "/plugin install superpowers@claude-plugins-official",
+    "use": [
+      "claude"
+    ],
+    "desc": "تعلّم Claude العصف الذهني والتخطيط والاختبار وإصلاح الأخطاء بشكل منظم. الأكثر نجومًا في هذا الدليل.",
+    "pushed": null
+  },
+  {
+    "slug": "webapp-testing",
+    "cat": "general",
+    "name": "Webapp Testing",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing",
+    "site": null,
+    "stars": "180.3k",
+    "cmd": "npx skills add anthropics/skills --skill webapp-testing",
+    "use": [
+      "claude",
+      "web"
+    ],
+    "desc": "تختبر تطبيقك في المتصفح وتلتقط صورًا للأخطاء.",
+    "pushed": null
+  },
+  {
+    "slug": "skill-creator",
+    "cat": "general",
+    "name": "Skill Creator",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
+    "site": null,
+    "stars": "180.3k",
+    "cmd": "npx skills add anthropics/skills --skill skill-creator",
+    "use": [
+      "claude"
+    ],
+    "desc": "تساعدك تبني مهارة خاصة بك من الصفر وتختبرها، مثلًا لطريقتك في كتابة أوصاف المنتجات.",
+    "pushed": null
+  },
+  {
+    "slug": "awesome-claude-skills",
+    "cat": "general",
+    "name": "awesome-claude-skills",
+    "kind": "دليل",
+    "isNew": true,
+    "gh": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "site": null,
+    "stars": "77.0k",
+    "cmd": null,
+    "use": [
+      "claude"
+    ],
+    "desc": "دليل لاكتشاف مئات المهارات الأخرى مرتبة حسب الاستخدام.",
+    "pushed": null
+  },
+  {
+    "slug": "find-skills",
+    "cat": "general",
+    "name": "find-skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/vercel-labs/skills",
+    "site": "https://skills.sh",
+    "stars": "35.2k",
+    "cmd": "npx skills add https://github.com/vercel-labs/skills --skill find-skills",
+    "use": [
+      "claude"
+    ],
+    "desc": "اسأل Claude هل توجد مهارة لعمل ما، فيبحث في دليل المهارات ويثبّت المناسبة. الأكثر تثبيتًا على skills.sh.",
+    "pushed": null
+  },
+  {
+    "slug": "context7",
+    "cat": "mcp",
+    "name": "Context7",
+    "kind": "MCP",
+    "isNew": false,
+    "gh": "https://github.com/upstash/context7",
+    "site": "https://context7.com",
+    "stars": "63.2k",
+    "cmd": "claude mcp add context7 -- npx -y @upstash/context7-mcp",
+    "use": [
+      "claude",
+      "web",
+      "mobile"
+    ],
+    "desc": "يجلب أحدث وثائق المكتبات حتى لا يكتب Claude كودًا قديمًا.",
+    "pushed": null
+  },
+  {
+    "slug": "playwright-mcp",
+    "cat": "mcp",
+    "name": "Playwright MCP",
+    "kind": "MCP",
+    "isNew": false,
+    "gh": "https://github.com/microsoft/playwright-mcp",
+    "site": "https://www.npmjs.com/package/@playwright/mcp",
+    "stars": "38.0k",
+    "cmd": "claude mcp add playwright npx @playwright/mcp@latest",
+    "use": [
+      "claude",
+      "web",
+      "shop"
+    ],
+    "desc": "يجعل Claude يفتح المتصفح ويضغط ويملأ النماذج ويختبر الموقع بنفسه.",
+    "pushed": null
+  },
+  {
+    "slug": "chrome-devtools-mcp",
+    "cat": "mcp",
+    "name": "Chrome DevTools MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "site": "https://developer.chrome.com/docs/devtools/agents",
+    "stars": "52.9k",
+    "cmd": "claude mcp add chrome-devtools -- npx -y chrome-devtools-mcp@latest",
+    "use": [
+      "claude",
+      "shop",
+      "web",
+      "landing"
+    ],
+    "desc": "من Google، لتشخيص أخطاء المتصفح وقياس سرعة الصفحات.",
+    "pushed": null
+  },
+  {
+    "slug": "shopify-dev-mcp",
+    "cat": "mcp",
+    "name": "Shopify Dev MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": null,
+    "site": "https://shopify.dev/docs/apps/build/devmcp",
+    "stars": null,
+    "cmd": "claude mcp add shopify-dev-mcp -- npx -y @shopify/dev-mcp@latest",
+    "use": [
+      "shop"
+    ],
+    "desc": "يبحث في وثائق Shopify ويساعد في GraphQL ويتحقق من كود Liquid.",
+    "pushed": null
+  },
+  {
+    "slug": "21st-dev-magic-mcp",
+    "cat": "mcp",
+    "name": "21st.dev Magic MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/21st-dev/magic-mcp",
+    "site": "https://21st.dev/mcp",
+    "stars": "5.6k",
+    "cmd": null,
+    "use": [
+      "web",
+      "landing"
+    ],
+    "desc": "يولّد مكونات React جاهزة من وصف نصي. يحتاج مفتاح API من موقعه.",
+    "pushed": null
+  },
+  {
+    "slug": "sentry-mcp",
+    "cat": "mcp",
+    "name": "Sentry MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/getsentry/sentry-mcp",
+    "site": "https://mcp.sentry.dev",
+    "stars": "837",
+    "cmd": "claude plugin marketplace add getsentry/sentry-mcp\nclaude plugin install sentry-mcp@sentry-mcp",
+    "use": [
+      "claude",
+      "web",
+      "mobile"
+    ],
+    "desc": "يقرأ أخطاء موقعك أو تطبيقك الحي ويساعد في إصلاحها.",
+    "pushed": null
+  },
+  {
+    "slug": "playwright",
+    "cat": "quality",
+    "name": "Playwright",
+    "kind": "مكتبة",
+    "isNew": false,
+    "gh": "https://github.com/microsoft/playwright",
+    "site": "https://playwright.dev",
+    "stars": "96.9k",
+    "cmd": "npm init playwright@latest",
+    "use": [
+      "web",
+      "shop"
+    ],
+    "desc": "يختبر الموقع تلقائيًا على Chrome وFirefox وSafari وشاشات الجوال.",
+    "pushed": null
+  },
+  {
+    "slug": "axe-core",
+    "cat": "quality",
+    "name": "axe-core",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/dequelabs/axe-core",
+    "site": "https://www.deque.com/axe/",
+    "stars": "7.5k",
+    "cmd": "npm install axe-core --save-dev",
+    "use": [
+      "web",
+      "shop",
+      "landing"
+    ],
+    "desc": "يفحص إمكانية الوصول مثل تباين الألوان والنصوص البديلة.",
+    "pushed": null
+  },
+  {
+    "slug": "lighthouse-ci",
+    "cat": "quality",
+    "name": "Lighthouse CI",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/GoogleChrome/lighthouse-ci",
+    "site": null,
+    "stars": "7.1k",
+    "cmd": "npm install -g @lhci/cli",
+    "use": [
+      "shop",
+      "landing",
+      "web"
+    ],
+    "desc": "يقيس الأداء وSEO مع كل تحديث وينبهك إذا ساءت النتيجة.",
+    "pushed": null
+  },
+  {
+    "slug": "motion",
+    "cat": "animation",
+    "name": "Motion",
+    "kind": "مكتبة",
+    "isNew": false,
+    "gh": "https://github.com/motiondivision/motion",
+    "site": "https://motion.dev",
+    "stars": "34.2k",
+    "cmd": "npm install motion",
+    "use": [
+      "landing",
+      "web"
+    ],
+    "desc": "حركات وانتقالات سلسة لمشاريع React وJavaScript.",
+    "pushed": null
+  },
+  {
+    "slug": "gsap",
+    "cat": "animation",
+    "name": "GSAP",
+    "kind": "مكتبة",
+    "isNew": false,
+    "gh": "https://github.com/greensock/GSAP",
+    "site": "https://gsap.com",
+    "stars": "29.3k",
+    "cmd": "npm install gsap",
+    "use": [
+      "landing",
+      "shop",
+      "web"
+    ],
+    "desc": "أقوى مكتبة للحركات المتقدمة وتأثيرات التمرير، وتعمل داخل ثيمات Shopify أيضًا.",
+    "pushed": null
+  },
+  {
+    "slug": "lenis",
+    "cat": "animation",
+    "name": "Lenis",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/darkroomengineering/lenis",
+    "site": "https://lenis.dev",
+    "stars": "15.6k",
+    "cmd": "npm i lenis",
+    "use": [
+      "landing",
+      "shop"
+    ],
+    "desc": "تمرير ناعم فاخر، يعمل بشكل ممتاز مع GSAP.",
+    "pushed": null
+  },
+  {
+    "slug": "autoanimate",
+    "cat": "animation",
+    "name": "AutoAnimate",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/formkit/auto-animate",
+    "site": "https://auto-animate.formkit.com",
+    "stars": "13.9k",
+    "cmd": "npm i @formkit/auto-animate",
+    "use": [
+      "web",
+      "dashboard"
+    ],
+    "desc": "حركة تلقائية عند إضافة العناصر أو حذفها بسطر واحد.",
+    "pushed": null
+  },
+  {
+    "slug": "rive",
+    "cat": "animation",
+    "name": "Rive",
+    "kind": "منصة",
+    "isNew": false,
+    "gh": "https://github.com/rive-app",
+    "site": "https://rive.app/",
+    "stars": null,
+    "cmd": "npm i @rive-app/canvas\nflutter pub add rive",
+    "use": [
+      "mobile",
+      "landing",
+      "web"
+    ],
+    "desc": "رسوم متحركة تفاعلية تستجيب للماوس واللمس، على الويب وFlutter وiPhone. النسخة المجانية من المحرر تضيف شاشة Rive عند التصدير.",
+    "pushed": null
+  },
+  {
+    "slug": "dotlottie",
+    "cat": "animation",
+    "name": "dotLottie",
+    "kind": "مكتبة",
+    "isNew": false,
+    "gh": "https://github.com/LottieFiles/dotlottie-web",
+    "site": "https://lottiefiles.com/dotlottie",
+    "stars": "857",
+    "cmd": "npm i @lottiefiles/dotlottie-web",
+    "use": [
+      "landing",
+      "shop",
+      "web"
+    ],
+    "desc": "يعرض رسوم Lottie المتحركة بحجم ملف صغير جدًا.",
+    "pushed": null
+  },
+  {
+    "slug": "remotion-skills",
+    "cat": "motiongfx",
+    "name": "Remotion Skills",
+    "kind": "Skill",
+    "isNew": false,
+    "gh": "https://github.com/remotion-dev/skills",
+    "site": "https://www.remotion.dev/docs/ai/skills",
+    "stars": "5.2k",
+    "cmd": "npx skills add remotion-dev/skills",
+    "use": [
+      "brand"
+    ],
+    "desc": "تعلّم Claude قواعد Remotion لصنع فيديوهات دعائية بالكود بدون أخطاء توقيت.",
+    "pushed": null
+  },
+  {
+    "slug": "flutter-animate",
+    "cat": "animation",
+    "name": "flutter_animate",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/gskinnerTeam/flutter_animate",
+    "site": "https://pub.dev/packages/flutter_animate",
+    "stars": null,
+    "cmd": "flutter pub add flutter_animate",
+    "use": [
+      "mobile"
+    ],
+    "desc": "حركات احترافية سهلة في تطبيقات Flutter.",
+    "pushed": null
+  },
+  {
+    "slug": "shadcn-ui",
+    "cat": "ui",
+    "name": "shadcn/ui",
+    "kind": "مكتبة",
+    "isNew": false,
+    "gh": "https://github.com/shadcn-ui/ui",
+    "site": "https://ui.shadcn.com",
+    "stars": "125.4k",
+    "cmd": "npx shadcn@latest init",
+    "use": [
+      "web",
+      "dashboard"
+    ],
+    "desc": "مكونات جاهزة تنسخها إلى مشروعك وتعدّلها بحرية.",
+    "pushed": null
+  },
+  {
+    "slug": "radix-ui",
+    "cat": "ui",
+    "name": "Radix UI",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/radix-ui/primitives",
+    "site": "https://radix-ui.com/primitives",
+    "stars": "19.2k",
+    "cmd": "npm install @radix-ui/react-dialog",
+    "use": [
+      "web",
+      "dashboard"
+    ],
+    "desc": "الأساس الذي بُني عليه shadcn. كل عنصر حزمة مستقلة، مثل نافذة الحوار في الأمر أدناه.",
+    "pushed": null
+  },
+  {
+    "slug": "magic-ui",
+    "cat": "ui",
+    "name": "Magic UI",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/magicuidesign/magicui",
+    "site": "https://magicui.design",
+    "stars": "22.1k",
+    "cmd": null,
+    "use": [
+      "landing"
+    ],
+    "desc": "مكونات متحركة لصفحات الهبوط، تُضاف إلى مشروعك عبر أداة shadcn.",
+    "pushed": null
+  },
+  {
+    "slug": "aceternity-ui",
+    "cat": "ui",
+    "name": "Aceternity UI",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": null,
+    "site": "https://ui.aceternity.com",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "landing"
+    ],
+    "desc": "مكونات بتأثيرات بصرية فاخرة، مجانية للنسخ.",
+    "pushed": null
+  },
+  {
+    "slug": "daisyui",
+    "cat": "ui",
+    "name": "daisyUI",
+    "kind": "مكتبة",
+    "isNew": false,
+    "gh": "https://github.com/saadeghi/daisyui",
+    "site": "https://daisyui.com",
+    "stars": "42.3k",
+    "cmd": "npm i -D daisyui@latest",
+    "use": [
+      "web",
+      "landing"
+    ],
+    "desc": "مكونات Tailwind جاهزة بأسماء كلاسات بسيطة.",
+    "pushed": null
+  },
+  {
+    "slug": "floating-ui",
+    "cat": "ui",
+    "name": "Floating UI",
+    "kind": "مكتبة",
+    "isNew": false,
+    "gh": "https://github.com/floating-ui/floating-ui",
+    "site": "https://floating-ui.com",
+    "stars": "32.7k",
+    "cmd": "npm install @floating-ui/dom",
+    "use": [
+      "web",
+      "dashboard"
+    ],
+    "desc": "يضع القوائم المنبثقة والتلميحات في المكان الصحيح دائمًا.",
+    "pushed": null
+  },
+  {
+    "slug": "sonner",
+    "cat": "ui",
+    "name": "Sonner",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/emilkowalski/sonner",
+    "site": "https://sonner.emilkowal.ski",
+    "stars": "12.8k",
+    "cmd": "npm install sonner",
+    "use": [
+      "web",
+      "dashboard"
+    ],
+    "desc": "إشعارات منبثقة أنيقة تظهر وتختفي بنعومة.",
+    "pushed": null
+  },
+  {
+    "slug": "vaul",
+    "cat": "ui",
+    "name": "Vaul",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/emilkowalski/vaul",
+    "site": "https://vaul.emilkowal.ski",
+    "stars": "8.6k",
+    "cmd": "npm install vaul",
+    "use": [
+      "web",
+      "mobile"
+    ],
+    "desc": "قائمة سحب سفلية بأسلوب iOS لتطبيقات الويب على الجوال.",
+    "pushed": null
+  },
+  {
+    "slug": "tremor",
+    "cat": "ui",
+    "name": "Tremor",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/tremorlabs/tremor",
+    "site": "https://tremor.so",
+    "stars": "3.6k",
+    "cmd": null,
+    "use": [
+      "dashboard"
+    ],
+    "desc": "مكونات رسوم بيانية ولوحات تحكم للمبيعات والأرقام، تنسخها إلى مشروعك.",
+    "pushed": null
+  },
+  {
+    "slug": "lucide",
+    "cat": "icons",
+    "name": "Lucide",
+    "kind": "مكتبة",
+    "isNew": false,
+    "gh": "https://github.com/lucide-icons/lucide",
+    "site": "https://lucide.dev",
+    "stars": "24.4k",
+    "cmd": "npm install lucide-react",
+    "use": [
+      "web",
+      "dashboard",
+      "shop"
+    ],
+    "desc": "أيقونات خطية بسيطة ومتناسقة.",
+    "pushed": null
+  },
+  {
+    "slug": "phosphor",
+    "cat": "icons",
+    "name": "Phosphor",
+    "kind": "مكتبة",
+    "isNew": false,
+    "gh": "https://github.com/phosphor-icons",
+    "site": "https://phosphoricons.com",
+    "stars": null,
+    "cmd": "npm i @phosphor-icons/react\nflutter pub add phosphor_flutter",
+    "use": [
+      "web",
+      "mobile",
+      "shop"
+    ],
+    "desc": "أيقونات بستة أوزان، من الرفيع إلى الممتلئ والثنائي اللون.",
+    "pushed": null
+  },
+  {
+    "slug": "tabler-icons",
+    "cat": "icons",
+    "name": "Tabler Icons",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/tabler/tabler-icons",
+    "site": "https://tabler.io/icons",
+    "stars": "21.6k",
+    "cmd": "npm install @tabler/icons-react",
+    "use": [
+      "web",
+      "dashboard",
+      "shop"
+    ],
+    "desc": "أكثر من 6000 أيقونة مجانية بصيغة SVG.",
+    "pushed": null
+  },
+  {
+    "slug": "shopify-cli",
+    "cat": "infra",
+    "name": "Shopify CLI",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/Shopify/cli",
+    "site": "https://shopify.dev",
+    "stars": "742",
+    "cmd": "npm install -g @shopify/cli",
+    "use": [
+      "shop"
+    ],
+    "desc": "أداة Shopify الرسمية لتطوير الثيم على جهازك مع معاينة حية، ثم رفع التعديلات إلى المتجر.",
+    "pushed": null
+  },
+  {
+    "slug": "supabase",
+    "cat": "infra",
+    "name": "Supabase",
+    "kind": "منصة",
+    "isNew": true,
+    "gh": "https://github.com/supabase/supabase",
+    "site": "https://supabase.com",
+    "stars": "107.9k",
+    "cmd": "npm install @supabase/supabase-js\nflutter pub add supabase_flutter",
+    "use": [
+      "web",
+      "mobile",
+      "dashboard",
+      "booking"
+    ],
+    "desc": "قاعدة بيانات وتسجيل دخول وتخزين ملفات جاهزة لتطبيقات الويب والجوال، تعمل مع Next.js وFlutter.",
+    "pushed": null
+  },
+  {
+    "slug": "next-intl",
+    "cat": "infra",
+    "name": "next-intl",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/amannn/next-intl",
+    "site": "https://next-intl.dev",
+    "stars": "4.4k",
+    "cmd": "npm install next-intl",
+    "use": [
+      "web",
+      "landing"
+    ],
+    "desc": "ترجمة تطبيقات Next.js إلى عدة لغات، مع روابط وتواريخ وأرقام بحسب كل لغة.",
+    "pushed": null
+  },
+  {
+    "slug": "react-email",
+    "cat": "infra",
+    "name": "React Email",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/resend/react-email",
+    "site": "https://react.email",
+    "stars": "19.6k",
+    "cmd": "npm i react-email@latest",
+    "use": [
+      "web",
+      "booking",
+      "brand"
+    ],
+    "desc": "تصميم رسائل البريد مثل تأكيد الطلب أو الحجز بمكونات React، لتظهر بشكل صحيح في أغلب برامج البريد.",
+    "pushed": null
+  },
+  {
+    "slug": "cookieconsent",
+    "cat": "infra",
+    "name": "CookieConsent",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/orestbida/cookieconsent",
+    "site": "https://playground.cookieconsent.orestbida.com/",
+    "stars": "5.7k",
+    "cmd": "npm i vanilla-cookieconsent",
+    "use": [
+      "web",
+      "landing"
+    ],
+    "desc": "نافذة موافقة على الكوكيز خفيفة، تساعدك على الالتزام بـ GDPR بدون مكتبات إضافية.",
+    "pushed": null
+  },
+  {
+    "slug": "uptime-kuma",
+    "cat": "infra",
+    "name": "Uptime Kuma",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/louislam/uptime-kuma",
+    "site": "https://uptime.kuma.pet",
+    "stars": "90.1k",
+    "cmd": "docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:2",
+    "use": [
+      "shop",
+      "web",
+      "landing"
+    ],
+    "desc": "يراقب موقعك أو متجرك على مدار الساعة وينبهك فورًا إذا توقف، عبر Telegram أو البريد.",
+    "pushed": null
+  },
+  {
+    "slug": "umami",
+    "cat": "analytics",
+    "name": "Umami",
+    "kind": "منصة",
+    "isNew": true,
+    "gh": "https://github.com/umami-software/umami",
+    "site": "https://umami.is",
+    "stars": "39.4k",
+    "cmd": null,
+    "use": [
+      "shop",
+      "landing",
+      "web"
+    ],
+    "desc": "إحصاءات زوار بسيطة بدون كوكيز، متوافقة مع GDPR.",
+    "pushed": null
+  },
+  {
+    "slug": "posthog",
+    "cat": "analytics",
+    "name": "PostHog",
+    "kind": "منصة",
+    "isNew": true,
+    "gh": "https://github.com/PostHog/posthog",
+    "site": "https://posthog.com",
+    "stars": "37.5k",
+    "cmd": "npm install posthog-js\nflutter pub add posthog_flutter",
+    "use": [
+      "web",
+      "mobile",
+      "shop",
+      "landing"
+    ],
+    "desc": "تحليلات مع تسجيل جلسات الزوار وخرائط حرارية لتحسين المبيعات.",
+    "pushed": null
+  },
+  {
+    "slug": "fullcalendar",
+    "cat": "booking",
+    "name": "FullCalendar",
+    "kind": "مكتبة",
+    "isNew": false,
+    "gh": "https://github.com/fullcalendar/fullcalendar",
+    "site": "https://fullcalendar.io",
+    "stars": "20.6k",
+    "cmd": "npm install @fullcalendar/core @fullcalendar/daygrid",
+    "use": [
+      "booking",
+      "dashboard"
+    ],
+    "desc": "تقويم متقدم بعرض يومي وأسبوعي وشهري مع السحب والإفلات.",
+    "pushed": null
+  },
+  {
+    "slug": "cal-com",
+    "cat": "booking",
+    "name": "Cal.com",
+    "kind": "منصة",
+    "isNew": false,
+    "gh": "https://github.com/calcom/cal.com",
+    "site": "https://cal.com",
+    "stars": "49.1k",
+    "cmd": "npm install @calcom/embed-react",
+    "use": [
+      "booking"
+    ],
+    "desc": "نظام حجز مواعيد مفتوح المصدر، والأمر أدناه يضيف نافذة الحجز إلى موقعك. نسخة الاستضافة الذاتية اسمها الآن Cal.diy.",
+    "pushed": null
+  },
+  {
+    "slug": "medplum",
+    "cat": "booking",
+    "name": "Medplum",
+    "kind": "منصة",
+    "isNew": false,
+    "gh": "https://github.com/medplum/medplum",
+    "site": "https://medplum.com",
+    "stars": "2.7k",
+    "cmd": "npm install @medplum/core",
+    "use": [
+      "booking"
+    ],
+    "desc": "منصة لبناء تطبيقات طبية على معيار FHIR.",
+    "pushed": null
+  },
+  {
+    "slug": "vercel-plugin",
+    "cat": "vercel",
+    "name": "Vercel Plugin",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/vercel/vercel-plugin",
+    "site": "https://vercel.com/docs/agent-resources/vercel-plugin",
+    "stars": "306",
+    "cmd": "npx plugins add vercel/vercel-plugin",
+    "use": [
+      "web",
+      "dashboard",
+      "claude"
+    ],
+    "desc": "إضافة Vercel الرسمية: 33 مهارة للنشر والنطاقات والكاش والجدار الناري، وأوامر جاهزة للنشر والحالة، ومعها Vercel MCP.",
+    "pushed": null
+  },
+  {
+    "slug": "vercel-mcp",
+    "cat": "vercel",
+    "name": "Vercel MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": null,
+    "site": "https://vercel.com/docs/agent-resources/vercel-mcp",
+    "stars": null,
+    "cmd": "claude mcp add --transport http vercel https://mcp.vercel.com",
+    "use": [
+      "web",
+      "dashboard",
+      "claude"
+    ],
+    "desc": "خادم Vercel الرسمي: يقرأ مشاريعك ونشراتك وسجلات الأخطاء والتحليلات، ويبحث في وثائق Vercel. يعطي Claude نفس صلاحيات حسابك، فأبقِ التأكيد مفعّلًا.",
+    "pushed": null
+  },
+  {
+    "slug": "ai-sdk-skill",
+    "cat": "vercel",
+    "name": "AI SDK Skill",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/vercel/ai",
+    "site": "https://ai-sdk.dev",
+    "stars": "27.4k",
+    "cmd": "npx skills add vercel/ai",
+    "use": [
+      "web",
+      "dashboard"
+    ],
+    "desc": "مهارة رسمية تعلّم Claude أحدث إصدار من AI SDK لإضافة محادثة ووكلاء ذكاء اصطناعي إلى تطبيق Next.js. النجوم لمستودع AI SDK كله.",
+    "pushed": null
+  },
+  {
+    "slug": "v0-mcp",
+    "cat": "vercel",
+    "name": "v0 MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": null,
+    "site": "https://v0.app/docs/api/v1/adapters/mcp-server",
+    "stars": null,
+    "cmd": "npx mcp-remote https://v0.app/api/mcp",
+    "use": [
+      "landing",
+      "web",
+      "dashboard"
+    ],
+    "desc": "خادم v0 الرسمي: يرسل Claude وصف صفحة هبوط أو لوحة تحكم إلى v0 ويعيد الكود إلى مشروعك. يحتاج حساب v0.",
+    "pushed": null
+  },
+  {
+    "slug": "squirrelscan",
+    "cat": "quality",
+    "name": "squirrelscan",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/squirrelscan/squirrelscan",
+    "site": "https://squirrelscan.com",
+    "stars": "252",
+    "cmd": "npm install -g squirrelscan",
+    "use": [
+      "shop",
+      "web",
+      "landing",
+      "dashboard",
+      "claude"
+    ],
+    "desc": "يفحص الموقع كاملًا بأكثر من 300 قاعدة: SEO، والسرعة، وترويسات الأمان، والروابط المعطلة، وإمكانية الوصول، ونافذة الكوكيز. معه مهارة يشغّلها Claude بأمر /audit-website. مشروع جديد.",
+    "pushed": null
+  },
+  {
+    "slug": "web-quality-skills",
+    "cat": "quality",
+    "name": "Web Quality Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/addyosmani/web-quality-skills",
+    "site": null,
+    "stars": "2.5k",
+    "cmd": "npx skills add addyosmani/web-quality-skills",
+    "use": [
+      "shop",
+      "web",
+      "landing",
+      "dashboard",
+      "claude"
+    ],
+    "desc": "ست مهارات تجعل Claude يقيس السرعة وCore Web Vitals وإمكانية الوصول وSEO بأرقام حقيقية من Lighthouse ثم يصلح المشاكل، صفحة بعد صفحة.",
+    "pushed": null
+  },
+  {
+    "slug": "unlighthouse",
+    "cat": "quality",
+    "name": "Unlighthouse",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/harlan-zw/unlighthouse",
+    "site": "https://unlighthouse.dev",
+    "stars": "4.9k",
+    "cmd": "npx unlighthouse --site <your-site>",
+    "use": [
+      "shop",
+      "web",
+      "landing"
+    ],
+    "desc": "يمرّ على كل صفحات الموقع ويشغّل Lighthouse عليها، ويعرض تقريرًا بالصفحات الأبطأ والأضعف في SEO.",
+    "pushed": null
+  },
+  {
+    "slug": "lychee",
+    "cat": "quality",
+    "name": "lychee",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/lycheeverse/lychee",
+    "site": "https://lychee.cli.rs",
+    "stars": "4k",
+    "cmd": "brew install lychee",
+    "use": [
+      "shop",
+      "web",
+      "landing"
+    ],
+    "desc": "يكشف الروابط المعطلة بسرعة في الصفحات التي تعطيه إياها، مثل روابط خريطة الموقع.",
+    "pushed": null
+  },
+  {
+    "slug": "mdn-http-observatory",
+    "cat": "quality",
+    "name": "MDN HTTP Observatory",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/mdn/mdn-http-observatory",
+    "site": "https://developer.mozilla.org/en-US/observatory",
+    "stars": "142",
+    "cmd": "npx @mdn/mdn-http-observatory <your-domain>",
+    "use": [
+      "web",
+      "landing",
+      "dashboard"
+    ],
+    "desc": "فاحص Mozilla الرسمي لترويسات الأمان، ويعطي موقعك درجة ونتيجة لكل اختبار. في Shopify تتحكم المنصة بأغلب هذه الترويسات.",
+    "pushed": null
+  },
+  {
+    "slug": "hyperframes",
+    "cat": "motiongfx",
+    "name": "HyperFrames",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/heygen-com/hyperframes",
+    "site": "https://hyperframes.dev",
+    "stars": "65.5k",
+    "cmd": "claude plugin marketplace add heygen-com/hyperframes\nclaude plugin install hyperframes@hyperframes",
+    "use": [
+      "shop",
+      "landing",
+      "brand",
+      "web"
+    ],
+    "desc": "إطار مفتوح من HeyGen يحوّل صفحات HTML وحركات GSAP وLottie إلى فيديو MP4، ومعه مهارات ليصنع Claude إعلانات وفيديوهات ترويجية بالكود.",
+    "pushed": null
+  },
+  {
+    "slug": "gsap-skills",
+    "cat": "animation",
+    "name": "GSAP Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/greensock/gsap-skills",
+    "site": null,
+    "stars": "14.1k",
+    "cmd": "npx skills add https://github.com/greensock/gsap-skills",
+    "use": [
+      "web",
+      "landing",
+      "shop"
+    ],
+    "desc": "ثماني مهارات رسمية من GSAP لكتابة حركات صحيحة وسريعة: الخط الزمني، وتأثيرات التمرير، والإضافات، وReact.",
+    "pushed": null
+  },
+  {
+    "slug": "motion-design-skill",
+    "cat": "animation",
+    "name": "Motion Design Skill",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/LottieFiles/motion-design-skill",
+    "site": null,
+    "stars": "2.2k",
+    "cmd": "npx skills add LottieFiles/motion-design-skill",
+    "use": [
+      "web",
+      "mobile",
+      "landing",
+      "brand",
+      "shop"
+    ],
+    "desc": "مهارة رسمية من LottieFiles تجعل Claude يخطط التوقيت والانسيابية قبل كتابة الحركة، لتبقى حركات المتجر والتطبيق والإعلانات متناسقة.",
+    "pushed": null
+  },
+  {
+    "slug": "motion-ai-kit",
+    "cat": "animation",
+    "name": "Motion AI Kit",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/motiondivision/ai-kit",
+    "site": "https://motion.dev/docs/ai-kit",
+    "stars": "1",
+    "cmd": "npx motion-ai",
+    "use": [
+      "web",
+      "landing",
+      "dashboard"
+    ],
+    "desc": "أداة Motion الرسمية تضيف مهارة /motion وبحثًا في أحدث وثائق Motion. المستودع جديد جدًا، وبعض المزايا تحتاج اشتراك Motion+.",
+    "pushed": null
+  },
+  {
+    "slug": "rampstack-brand-build-skills",
+    "cat": "brandskills",
+    "name": "Rampstack Brand Build Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/rampstackco/claude-skills",
+    "site": "https://rampstack.co",
+    "stars": "502",
+    "cmd": "/plugin marketplace add rampstackco/claude-skills\n/plugin install rampstack-skills@rampstack",
+    "use": [
+      "brand",
+      "web",
+      "landing",
+      "shop"
+    ],
+    "desc": "103 مهارات، منها سلسلة كاملة للهوية: اكتشاف العلامة، والاسم، والشعار، والألوان والخطوط، ونبرة الكلام، ودليل الهوية.",
+    "pushed": null
+  },
+  {
+    "slug": "dembrandt",
+    "cat": "brandskills",
+    "name": "Dembrandt",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/dembrandt/dembrandt",
+    "site": "https://dembrandt.com/",
+    "stars": "3.6k",
+    "cmd": "npm install -g dembrandt",
+    "use": [
+      "brand",
+      "web",
+      "shop",
+      "landing"
+    ],
+    "desc": "يستخرج من موقعك الحالي الشعار والألوان والخطوط والمسافات ويحفظها كملف DESIGN.md، ليلتزم Claude بهويتك. استخدمه على مواقعك أنت فقط.",
+    "pushed": null
+  },
+  {
+    "slug": "canva-skills",
+    "cat": "brandskills",
+    "name": "Canva Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/canva-sdks/canva-skills",
+    "site": null,
+    "stars": "125",
+    "cmd": "/plugin marketplace add canva-sdks/canva-skills\n/plugin install canva@canva-skills",
+    "use": [
+      "brand",
+      "shop",
+      "claude"
+    ],
+    "desc": "مهارات Canva الرسمية: تفحص التصميم مقابل هوية علامتك في Canva، وتغيّر مقاسه لكل منصة تواصل، وتعدّله. تحتاج حساب Canva.",
+    "pushed": null
+  },
+  {
+    "slug": "brand-guidelines-template",
+    "cat": "brandskills",
+    "name": "Brand Guidelines Template",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines",
+    "site": null,
+    "stars": "180.3k",
+    "cmd": "/plugin marketplace add anthropics/skills\n/plugin install example-skills@anthropic-agent-skills",
+    "use": [
+      "brand",
+      "claude"
+    ],
+    "desc": "قالب رسمي من Anthropic يجعل Claude يستخدم ألوانك وخطوطك تلقائيًا. يأتي بألوان Anthropic، فاستبدلها بألوان علامتك قبل الاستخدام.",
+    "pushed": null
+  },
+  {
+    "slug": "recraft-mcp",
+    "cat": "brandskills",
+    "name": "Recraft MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/recraft-ai/mcp-recraft-server",
+    "site": "https://www.recraft.ai/docs/mcp-reference/remote-server.md",
+    "stars": "60",
+    "cmd": "claude mcp add --transport http recraft https://mcp.recraft.ai/mcp",
+    "use": [
+      "brand",
+      "shop",
+      "mobile",
+      "web"
+    ],
+    "desc": "يولّد شعارات وأيقونات بصيغة متجهة، ويحوّل الشعار من صورة عادية إلى متجه. للاستخدام التجاري تحتاج خطة مدفوعة.",
+    "pushed": null
+  },
+  {
+    "slug": "xcode-mcp",
+    "cat": "apple",
+    "name": "Xcode MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": null,
+    "site": "https://developer.apple.com/documentation/xcode/giving-external-agents-access-to-xcode",
+    "stars": null,
+    "cmd": "claude mcp add --transport stdio xcode -- xcrun mcpbridge",
+    "use": [
+      "mobile",
+      "mac"
+    ],
+    "desc": "خادم Apple الرسمي داخل Xcode: يبني المشروع ويشغّل الاختبارات ويعرض معاينات SwiftUI. فعّله أولًا من إعدادات Xcode، وافتح المشروع فيه.",
+    "pushed": null
+  },
+  {
+    "slug": "xcode-27-agent-skills",
+    "cat": "apple",
+    "name": "Xcode 27 Agent Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": null,
+    "site": "https://developer.apple.com/videos/play/wwdc2026/269/",
+    "stars": null,
+    "cmd": "xcrun agent skills export",
+    "use": [
+      "mobile",
+      "mac"
+    ],
+    "desc": "مهارات كتبتها Apple وتأتي داخل Xcode 27: SwiftUI، وتحديث الاختبارات، وتدقيق إعدادات الأمان. تصدّرها بهذا الأمر ثم تضعها في مجلد مهارات Claude.",
+    "pushed": null
+  },
+  {
+    "slug": "mobilebuildmcp",
+    "cat": "apple",
+    "name": "MobileBuildMCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/getsentry/MobileBuildMCP",
+    "site": "https://www.mobilebuildmcp.com/docs",
+    "stars": "6.5k",
+    "cmd": "claude mcp add MobileBuildMCP -- npx -y mobilebuildmcp@latest mcp",
+    "use": [
+      "mobile",
+      "mac"
+    ],
+    "desc": "اسمه سابقًا XcodeBuildMCP: يجعل Claude يبني تطبيقك ويشغّله ويختبره على محاكي iPhone أو جهاز حقيقي أو Mac. يعمل مع تطبيقات Capacitor وFlutter أيضًا.",
+    "pushed": null
+  },
+  {
+    "slug": "claude-code-ios-simulator",
+    "cat": "apple",
+    "name": "Claude Code iOS Simulator",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": null,
+    "site": "https://code.claude.com/docs/en/desktop-ios-simulator",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "mobile",
+      "claude"
+    ],
+    "desc": "ميزة مدمجة في تطبيق Claude Code لسطح المكتب تعرض محاكي iPhone بجانب المحادثة، ليبني Claude التطبيق ويجرّبه بنفسه. ما زالت تجريبية.",
+    "pushed": null
+  },
+  {
+    "slug": "peekaboo",
+    "cat": "apple",
+    "name": "Peekaboo",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/openclaw/Peekaboo",
+    "site": "https://www.peekaboo.boo",
+    "stars": "5.3k",
+    "cmd": "brew install openclaw/tap/peekaboo",
+    "use": [
+      "mac"
+    ],
+    "desc": "يجعل Claude يلتقط صور الشاشة والتطبيقات على Mac ويضغط ويكتب داخلها. يحتاج صلاحيات تسجيل الشاشة وإمكانية الوصول.",
+    "pushed": null
+  },
+  {
+    "slug": "imcp",
+    "cat": "apple",
+    "name": "iMCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/mattt/iMCP",
+    "site": "https://iMCP.app/download",
+    "stars": "1.8k",
+    "cmd": "brew install --cask mattt/tap/iMCP",
+    "use": [
+      "mac"
+    ],
+    "desc": "تطبيق صغير في شريط Mac يعطي Claude وصولًا إلى الرسائل وجهات الاتصال والتقويم والتذكيرات والاختصارات، مع إذن منفصل لكل خدمة.",
+    "pushed": null
+  },
+  {
+    "slug": "macos-automator-mcp",
+    "cat": "apple",
+    "name": "macOS Automator MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/steipete/macos-automator-mcp",
+    "site": null,
+    "stars": "878",
+    "cmd": "npx -y --package @steipete/macos-automator-mcp macos-automator-mcp",
+    "use": [
+      "mac"
+    ],
+    "desc": "يشغّل AppleScript على Mac مع مكتبة سكربتات جاهزة لـ Finder وSafari والبريد والملاحظات. راجع السكربت قبل تشغيله.",
+    "pushed": null
+  },
+  {
+    "slug": "dimillian-skills",
+    "cat": "apple",
+    "name": "Dimillian Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/Dimillian/Skills",
+    "site": null,
+    "stars": "3.9k",
+    "cmd": "npx skills add dimillian/skills",
+    "use": [
+      "mobile",
+      "mac"
+    ],
+    "desc": "18 مهارة لتطبيقات Apple، منها تشخيص التطبيق على المحاكي، وملاحظات الإصدار لمتجر Apple، وتوقيع تطبيقات Mac وتحديثها.",
+    "pushed": null
+  },
+  {
+    "slug": "maestro-mcp",
+    "cat": "mobskills",
+    "name": "Maestro MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/mobile-dev-inc/Maestro",
+    "site": "https://maestro.dev",
+    "stars": "15.3k",
+    "cmd": "curl -fsSL \"https://get.maestro.mobile.dev\" | bash\nclaude mcp add maestro -- maestro mcp",
+    "use": [
+      "mobile",
+      "web"
+    ],
+    "desc": "يجعل Claude يستخدم تطبيقك على محاكي iPhone أو Android ويحفظ الخطوات كاختبارات تتكرر. يعمل مع Flutter وCapacitor والتطبيقات الأصلية.",
+    "pushed": null
+  },
+  {
+    "slug": "lexware-office-mcp",
+    "cat": "finance",
+    "name": "Lexware Office MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/JannikWempe/mcp-lexware-office",
+    "site": null,
+    "stars": "53",
+    "cmd": "npx -y --package=github:JannikWempe/mcp-lexware-office#semver:^3 lexware-office",
+    "use": [
+      "finance",
+      "claude"
+    ],
+    "desc": "يربط Claude ببرنامج Lexware Office (lexoffice سابقًا): جهات الاتصال والفواتير والإيصالات والمدفوعات. مشروع مجتمعي، يعمل للقراءة فقط افتراضيًا، ويحتاج مفتاح API.",
+    "pushed": null
+  },
+  {
+    "slug": "norman-finance-mcp",
+    "cat": "finance",
+    "name": "Norman Finance MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/norman-finance/norman-mcp-server",
+    "site": "https://norman.finance",
+    "stars": "59",
+    "cmd": "/plugin marketplace add norman-finance/norman-mcp-server\n/plugin install norman-finance@norman-finance",
+    "use": [
+      "finance",
+      "claude"
+    ],
+    "desc": "خادم رسمي لمنصة محاسبة ألمانية: فواتير ZUGFeRD، وتصنيف المعاملات، ومطابقة الإيصالات، وإقرار ضريبة القيمة المضافة عبر ELSTER، وتصدير DATEV للمستشار الضريبي.",
+    "pushed": null
+  },
+  {
+    "slug": "qonto-mcp",
+    "cat": "finance",
+    "name": "Qonto MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/qonto/qonto-mcp-server",
+    "site": "https://qonto.com",
+    "stars": "41",
+    "cmd": "claude mcp add --transport http qonto-mcp https://mcp.qonto.com/mcp",
+    "use": [
+      "finance",
+      "claude"
+    ],
+    "desc": "خادم Qonto الرسمي لحساب الشركة البنكي: المعاملات والكشوف والإيصالات، وإنشاء الفواتير وعروض الأسعار. مفيد فقط إذا كان حسابك في Qonto.",
+    "pushed": null
+  },
+  {
+    "slug": "openaccountants-germany",
+    "cat": "finance",
+    "name": "OpenAccountants Germany",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/openaccountants/openaccountants",
+    "site": "https://www.openaccountants.com/",
+    "stars": "426",
+    "cmd": "claude plugin marketplace add openaccountants/marketplace",
+    "use": [
+      "finance",
+      "claude"
+    ],
+    "desc": "مهارات للضرائب الألمانية: إقرار ضريبة القيمة المضافة UStVA، والمحاسبة، والفاتورة الإلكترونية. مسودة لم يراجعها محاسب بعد، ولا تدعم نظام Kleinunternehmer.",
+    "pushed": null
+  },
+  {
+    "slug": "e-invoice-eu",
+    "cat": "finance",
+    "name": "E-Invoice-EU",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/gflohr/e-invoice-eu",
+    "site": null,
+    "stars": "320",
+    "cmd": "npm install @e-invoice-eu/core",
+    "use": [
+      "finance",
+      "shop",
+      "web"
+    ],
+    "desc": "مكتبة JavaScript تحوّل بيانات الفاتورة إلى فاتورة إلكترونية أوروبية بصيغة XRechnung أو ZUGFeRD. افحص كل فاتورة بعد إنشائها.",
+    "pushed": null
+  },
+  {
+    "slug": "kosit-validator",
+    "cat": "finance",
+    "name": "KoSIT Validator",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/itplr-kosit/validator",
+    "site": null,
+    "stars": "187",
+    "cmd": "java -jar validator-<version>-standalone.jar -s <scenario-config-file>",
+    "use": [
+      "finance"
+    ],
+    "desc": "الفاحص الرسمي الألماني للفواتير الإلكترونية XRechnung: يتأكد أن الملف صحيح قبل إرساله. يفحص الصيغة فقط، لا صحة الضريبة.",
+    "pushed": null
+  },
+  {
+    "slug": "paperless-ngx",
+    "cat": "finance",
+    "name": "paperless-ngx",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/paperless-ngx/paperless-ngx",
+    "site": "https://docs.paperless-ngx.com/",
+    "stars": "44.9k",
+    "cmd": "bash -c \"$(curl -L https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/install-paperless-ngx.sh)\"",
+    "use": [
+      "finance"
+    ],
+    "desc": "أرشيف إلكتروني للإيصالات والفواتير على خادمك: يقرأ نص المستندات الممسوحة ويرتبها ويبحث فيها. تأكد مع مستشارك الضريبي أن طريقة الأرشفة مناسبة.",
+    "pushed": null
+  },
+  {
+    "slug": "paperless-mcp",
+    "cat": "finance",
+    "name": "Paperless MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/baruchiro/paperless-mcp",
+    "site": null,
+    "stars": "139",
+    "cmd": "npx -y @baruchiro/paperless-mcp@latest",
+    "use": [
+      "finance",
+      "claude"
+    ],
+    "desc": "يجعل Claude يبحث في أرشيف paperless-ngx ويقرأ المستندات ويضيف الوسوم ويرفع الملفات. مشروع مجتمعي وفيه أدوات حذف، فاضبط صلاحياته.",
+    "pushed": null
+  },
+  {
+    "slug": "better-icons",
+    "cat": "icons",
+    "name": "better-icons",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/better-auth/better-icons",
+    "site": null,
+    "stars": "1.2k",
+    "cmd": "npx skills add better-auth/better-icons",
+    "use": [
+      "shop",
+      "web",
+      "landing",
+      "dashboard",
+      "claude"
+    ],
+    "desc": "يجعل Claude يبحث في أكثر من 150 مجموعة أيقونات ويعطيك الأيقونة كـ SVG أو كود React. الصق SVG في الصفحة مباشرة بدل تحميله من خادم خارجي، حفاظًا على خصوصية الزوار.",
+    "pushed": null
+  },
+  {
+    "slug": "hugeicons",
+    "cat": "icons",
+    "name": "Hugeicons",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/hugeicons/hugeicons",
+    "site": "https://hugeicons.com/icons",
+    "stars": "1.2k",
+    "cmd": "npm i @hugeicons/react @hugeicons/core-free-icons\nflutter pub add hugeicons",
+    "use": [
+      "mobile",
+      "web",
+      "shop",
+      "dashboard"
+    ],
+    "desc": "أكثر من 6000 أيقونة مجانية بنمط واحد لـ React وFlutter معًا، مع مهارة رسمية تمنع Claude من اختراع أسماء أيقونات. نمط واحد فقط مجاني والباقي مدفوع.",
+    "pushed": null
+  },
+  {
+    "slug": "thesvg",
+    "cat": "icons",
+    "name": "theSVG",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/glincker/thesvg",
+    "site": "https://thesvg.org/",
+    "stars": "2.7k",
+    "cmd": "npm install thesvg\nnpx skills add glincker/thesvg",
+    "use": [
+      "shop",
+      "brand",
+      "web",
+      "landing"
+    ],
+    "desc": "أكثر من 7400 شعار علامة تجارية بصيغة SVG، منها شعارات الدفع والشحن مثل Klarna وPayPal وDHL. كل شعار ملك لصاحبه، فتحقق من شروط استخدامه.",
+    "pushed": null
+  },
+  {
+    "slug": "lucide-animated",
+    "cat": "icons",
+    "name": "lucide-animated",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/pqoqubbw/icons",
+    "site": "https://lucide-animated.com",
+    "stars": "8.1k",
+    "cmd": "npx shadcn@latest add \"https://lucide-animated.com/r/activity.json\"",
+    "use": [
+      "web",
+      "landing",
+      "dashboard"
+    ],
+    "desc": "468 أيقونة Lucide متحركة تتحرك عند مرور الماوس، تضيف كل واحدة بأمر shadcn. مناسبة للأزرار والقوائم في Next.js.",
+    "pushed": null
+  },
+  {
+    "slug": "make-interfaces-feel-better",
+    "cat": "ui",
+    "name": "Make Interfaces Feel Better",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/jakubkrehel/make-interfaces-feel-better",
+    "site": "https://jakub.kr/writing/details-that-make-interfaces-feel-better",
+    "stars": "3.5k",
+    "cmd": "npx skills add jakubkrehel/make-interfaces-feel-better",
+    "use": [
+      "web",
+      "shop",
+      "landing",
+      "dashboard",
+      "claude"
+    ],
+    "desc": "مهارة للتفاصيل الصغيرة التي تجعل الأزرار والواجهة أفخم: انكماش خفيف عند الضغط، ومساحة لمس كافية، وانتقالات سريعة بين الحالات.",
+    "pushed": null
+  },
+  {
+    "slug": "react-bits",
+    "cat": "ui",
+    "name": "React Bits",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/DavidHDev/react-bits",
+    "site": "https://reactbits.dev",
+    "stars": "48.8k",
+    "cmd": "npx shadcn@latest add @react-bits/HoldButton-TS-TW",
+    "use": [
+      "web",
+      "landing"
+    ],
+    "desc": "مكونات React متحركة مجانية، منها 35 تفاعلًا صغيرًا وأزرار متحركة، تضيف كل واحد بأمر واحد. لا تعمل في ثيمات Shopify، وإعادة بيعها ممنوعة.",
+    "pushed": null
+  },
+  {
+    "slug": "uiverse",
+    "cat": "ui",
+    "name": "Uiverse",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/uiverse-io/galaxy",
+    "site": "https://uiverse.io",
+    "stars": "13k",
+    "cmd": null,
+    "use": [
+      "shop",
+      "landing",
+      "web"
+    ],
+    "desc": "أكثر من 3000 عنصر جاهز بـ CSS عادي، منها أكثر من 1200 زر وأدوات تحميل. تلصقها مباشرة في ثيم Shopify، لكن افحص التباين وحالة التركيز قبل النشر.",
+    "pushed": null
+  },
+  {
+    "slug": "anime-js",
+    "cat": "animation",
+    "name": "Anime.js",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/juliangarnier/anime",
+    "site": "https://animejs.com",
+    "stars": "72.5k",
+    "cmd": "npm install animejs",
+    "use": [
+      "shop",
+      "web",
+      "landing",
+      "brand",
+      "dashboard"
+    ],
+    "desc": "محرك حركة خفيف يجمع الخط الزمني والتمرير وحركة SVG والنصوص والنوابض في مكتبة واحدة، ويعمل في ثيم Shopify بملف واحد. احفظ الملف داخل الثيم بدل تحميله من خادم خارجي.",
+    "pushed": null
+  },
+  {
+    "slug": "swup",
+    "cat": "animation",
+    "name": "Swup",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/swup/swup",
+    "site": "https://swup.js.org",
+    "stars": "5.2k",
+    "cmd": "npm install swup",
+    "use": [
+      "shop",
+      "web",
+      "landing",
+      "brand"
+    ],
+    "desc": "انتقالات ناعمة بين صفحات الموقع بدون إعادة تحميل كاملة، مناسبة لثيمات Shopify. بعد كل انتقال يجب إعادة تشغيل سكربتات الثيم والتتبع.",
+    "pushed": null
+  },
+  {
+    "slug": "number-flow",
+    "cat": "animation",
+    "name": "Number Flow",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/barvian/number-flow",
+    "site": "https://number-flow.barvian.me",
+    "stars": "7.7k",
+    "cmd": "npm i number-flow",
+    "use": [
+      "shop",
+      "dashboard",
+      "finance",
+      "landing",
+      "booking"
+    ],
+    "desc": "يحرّك الأرقام بنعومة، مثل السعر ومجموع السلة والعدّادات، بالتنسيق الألماني لليورو، ويحترم إعداد تقليل الحركة تلقائيًا.",
+    "pushed": null
+  },
+  {
+    "slug": "three-js",
+    "cat": "animation",
+    "name": "Three.js",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/mrdoob/three.js",
+    "site": "https://threejs.org",
+    "stars": "115.3k",
+    "cmd": "npm install --save three",
+    "use": [
+      "landing",
+      "brand",
+      "shop",
+      "web"
+    ],
+    "desc": "المكتبة الأساسية للحركة ثلاثية الأبعاد في المتصفح: عارض منتجات ومشاهد وتأثيرات. حجمها كبير، فحمّلها عند الحاجة فقط.",
+    "pushed": null
+  },
+  {
+    "slug": "react-three-fiber",
+    "cat": "animation",
+    "name": "React Three Fiber",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/pmndrs/react-three-fiber",
+    "site": "https://docs.pmnd.rs/react-three-fiber",
+    "stars": "32.9k",
+    "cmd": "npm install three @types/three @react-three/fiber",
+    "use": [
+      "landing",
+      "brand",
+      "web"
+    ],
+    "desc": "الطريقة المعتادة لبناء مشاهد Three.js متحركة كمكونات React داخل Next.js.",
+    "pushed": null
+  },
+  {
+    "slug": "three-js-skills",
+    "cat": "animation",
+    "name": "Three.js Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/cloudai-x/threejs-skills",
+    "site": null,
+    "stars": "3.4k",
+    "cmd": "npx skills add cloudai-x/threejs-skills",
+    "use": [
+      "landing",
+      "brand",
+      "web",
+      "claude"
+    ],
+    "desc": "عشر مهارات تعلّم Claude مكتبة Three.js، منها الحركة والمواد والظلال والتفاعل، مع نصائح للأداء.",
+    "pushed": null
+  },
+  {
+    "slug": "view-transitions-skill",
+    "cat": "animation",
+    "name": "View Transitions Skill",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-view-transitions",
+    "site": null,
+    "stars": "32.5k",
+    "cmd": "npx skills add https://github.com/vercel-labs/agent-skills --skill vercel-react-view-transitions",
+    "use": [
+      "web",
+      "landing",
+      "dashboard"
+    ],
+    "desc": "مهارة Vercel الرسمية لانتقالات الصفحات والعناصر المشتركة في Next.js بميزة ViewTransition في React، مع احترام تقليل الحركة.",
+    "pushed": null
+  },
+  {
+    "slug": "fixing-motion-performance",
+    "cat": "animation",
+    "name": "Fixing Motion Performance",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/ibelick/ui-skills",
+    "site": "https://www.ui-skills.com",
+    "stars": "9.5k",
+    "cmd": "npx skills add https://github.com/ibelick/ui-skills --skill fixing-motion-performance",
+    "use": [
+      "web",
+      "shop",
+      "landing",
+      "dashboard",
+      "claude"
+    ],
+    "desc": "يكشف الحركات البطيئة والمتقطعة في الكود ويصلحها، لتبقى الحركة فاخرة وسريعة على الجوال.",
+    "pushed": null
+  },
+  {
+    "slug": "interaction-design-skill",
+    "cat": "animation",
+    "name": "Interaction Design Skill",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/wshobson/agents",
+    "site": null,
+    "stars": "41.0k",
+    "cmd": "npx skills add https://github.com/wshobson/agents --skill interaction-design",
+    "use": [
+      "web",
+      "shop",
+      "dashboard",
+      "mobile",
+      "claude"
+    ],
+    "desc": "يعلّم Claude التفاعلات الصغيرة ومدد الحركة والانسيابية وحالات التحميل وانتقالات الصفحات، مع دعم تقليل الحركة.",
+    "pushed": null
+  },
+  {
+    "slug": "lottie-creator-mcp",
+    "cat": "animation",
+    "name": "Lottie Creator MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": null,
+    "site": "https://docs.lottiefiles.com/en/creator/13_ai-tools/lottie-creator-mcp",
+    "stars": null,
+    "cmd": "claude mcp add lottiefiles-creator -- npx -y @lottiefiles/creator-mcp@latest",
+    "use": [
+      "web",
+      "mobile",
+      "landing",
+      "brand",
+      "shop"
+    ],
+    "desc": "خادم LottieFiles الرسمي: يرسم Claude الأشكال ويضبط الحركة داخل محرر Lottie Creator ويصدّر ملفًا واحدًا يعمل في الموقع وFlutter وiPhone. يجب أن يبقى المحرر مفتوحًا.",
+    "pushed": null
+  },
+  {
+    "slug": "rive-editor-mcp",
+    "cat": "animation",
+    "name": "Rive Editor MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": null,
+    "site": "https://rive.app/docs/editor/ai/mcp",
+    "stars": null,
+    "cmd": "claude mcp add --transport http rive http://127.0.0.1:9791/mcp",
+    "use": [
+      "mobile",
+      "web",
+      "landing",
+      "brand"
+    ],
+    "desc": "خادم Rive الرسمي داخل برنامج Rive: يبني Claude رسومًا تفاعلية تتفاعل مع الضغط والحالة، مثل الأزرار والشخصيات. يحتاج النسخة التجريبية المدفوعة من البرنامج مفتوحة.",
+    "pushed": null
+  },
+  {
+    "slug": "text-to-lottie",
+    "cat": "animation",
+    "name": "Text-to-Lottie",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/diffusionstudio/lottie",
+    "site": "https://diffusion.studio",
+    "stars": "5.4k",
+    "cmd": "npx skills add diffusionstudio/lottie",
+    "use": [
+      "web",
+      "mobile",
+      "shop",
+      "landing",
+      "brand",
+      "claude"
+    ],
+    "desc": "يكتب Claude رسوم Lottie متحركة جاهزة من وصف نصي، مع معاينة حية. ملفات صغيرة تعمل في ثيمات Shopify والتطبيقات.",
+    "pushed": null
+  },
+  {
+    "slug": "flutter-animations",
+    "cat": "animation",
+    "name": "Flutter animations",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/flutter/packages/tree/main/packages/animations",
+    "site": "https://pub.dev/packages/animations",
+    "stars": "5.3k",
+    "cmd": "flutter pub add animations",
+    "use": [
+      "mobile",
+      "mac"
+    ],
+    "desc": "حزمة فريق Flutter الرسمية لانتقالات جاهزة بين الشاشات: تحوّل البطاقة إلى صفحة، والانزلاق، والتلاشي. النجوم لمستودع حزم Flutter كله.",
+    "pushed": null
+  },
+  {
+    "slug": "lottie-for-flutter",
+    "cat": "animation",
+    "name": "Lottie for Flutter",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/xvrh/lottie-flutter",
+    "site": "https://pub.dev/packages/lottie",
+    "stars": "1.3k",
+    "cmd": "flutter pub add lottie",
+    "use": [
+      "mobile",
+      "mac"
+    ],
+    "desc": "المشغّل المعتاد لرسوم Lottie داخل تطبيقات Flutter على iPhone وAndroid وMac. مشروع مجتمعي.",
+    "pushed": null
+  },
+  {
+    "slug": "lottie-for-ios",
+    "cat": "animation",
+    "name": "Lottie for iOS",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/airbnb/lottie-ios",
+    "site": "https://lottie.airbnb.tech",
+    "stars": "26.9k",
+    "cmd": ".package(url: \"https://github.com/airbnb/lottie-spm.git\", from: \"4.6.1\")",
+    "use": [
+      "mobile",
+      "mac"
+    ],
+    "desc": "مشغّل Lottie الرسمي من Airbnb لتطبيقات iPhone وMac الأصلية، مع عرض جاهز لـ SwiftUI.",
+    "pushed": null
+  },
+  {
+    "slug": "pow",
+    "cat": "animation",
+    "name": "Pow",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/EmergeTools/Pow",
+    "site": "https://movingparts.io/pow",
+    "stars": "4.4k",
+    "cmd": ".package(url: \"https://github.com/EmergeTools/Pow\", from: Version(1, 0, 0))",
+    "use": [
+      "mobile",
+      "mac"
+    ],
+    "desc": "تأثيرات SwiftUI جاهزة بسطر واحد، مثل الظهور والاهتزاز واللمعان، مع اهتزاز وصوت مناسبين. مجانية بالكامل.",
+    "pushed": null
+  },
+  {
+    "slug": "swiftui-animation-skill",
+    "cat": "animation",
+    "name": "SwiftUI Animation Skill",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/dpearson2699/swift-ios-skills",
+    "site": null,
+    "stars": "1.1k",
+    "cmd": "npx skills add https://github.com/dpearson2699/swift-ios-skills --skill swiftui-animation",
+    "use": [
+      "mobile",
+      "mac"
+    ],
+    "desc": "مهارة لبناء ومراجعة حركات SwiftUI الحديثة، وتفرض احترام إعداد تقليل الحركة. رخصتها تسمح ببناء تطبيقاتك لكنها ليست مفتوحة بالكامل.",
+    "pushed": null
+  },
+  {
+    "slug": "very-good-flutter-animations",
+    "cat": "animation",
+    "name": "Very Good Flutter Animations",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/VeryGoodOpenSource/vgv-ai-flutter-plugin",
+    "site": null,
+    "stars": "172",
+    "cmd": "npx skills add https://github.com/verygoodopensource/vgv-ai-flutter-plugin --skill animations",
+    "use": [
+      "mobile"
+    ],
+    "desc": "مهارة من شركة Very Good Ventures لأفضل ممارسات الحركة في Flutter: الانتقالات بين الصفحات، وHero، والحركات المتتابعة، مع احترام تقليل الحركة.",
+    "pushed": null
+  },
+  {
+    "slug": "capacitor-haptics",
+    "cat": "animation",
+    "name": "Capacitor Haptics",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/ionic-team/capacitor-haptics",
+    "site": null,
+    "stars": null,
+    "cmd": "npm install @capacitor/haptics\nnpx cap sync",
+    "use": [
+      "mobile"
+    ],
+    "desc": "إضافة Capacitor الرسمية للاهتزاز الخفيف عند الضغط والنجاح، فيبدو التطبيق كأنه تطبيق أصلي عند دمجها مع الحركة.",
+    "pushed": null
+  },
+  {
+    "slug": "remotion",
+    "cat": "motiongfx",
+    "name": "Remotion",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/remotion-dev/remotion",
+    "site": "https://remotion.dev",
+    "stars": "64.7k",
+    "cmd": "npx create-video@latest",
+    "use": [
+      "shop",
+      "web",
+      "mobile",
+      "landing",
+      "brand"
+    ],
+    "desc": "إطار React لصنع فيديوهات MP4 بالكود، مع أدوات للصوت والترجمة. مجاني للأفراد والشركات حتى 3 أشخاص، وبعدها يحتاج رخصة مدفوعة.",
+    "pushed": null
+  },
+  {
+    "slug": "video-shotcraft",
+    "cat": "motiongfx",
+    "name": "Video Shotcraft",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/Vincentwei1021/video-shotcraft",
+    "site": "https://vincentwei1021.github.io/video-shotcraft/",
+    "stars": "6.7k",
+    "cmd": "npx skills add Vincentwei1021/video-shotcraft",
+    "use": [
+      "shop",
+      "web",
+      "mobile",
+      "landing",
+      "brand"
+    ],
+    "desc": "مهارة تقود Claude خطوة بخطوة لصنع فيديو ترويجي لمنتج أو تطبيق في Remotion: القصة، واللقطات، والحركة، والصوت. فيها 152 وصفة لقطة جاهزة.",
+    "pushed": null
+  },
+  {
+    "slug": "openmontage",
+    "cat": "motiongfx",
+    "name": "OpenMontage",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/calesthio/OpenMontage",
+    "site": "https://www.openmontage.video/",
+    "stars": "68.0k",
+    "cmd": "git clone https://github.com/calesthio/OpenMontage.git\ncd OpenMontage\nmake setup",
+    "use": [
+      "shop",
+      "brand",
+      "landing",
+      "mobile"
+    ],
+    "desc": "مساحة إنتاج فيديو كاملة: يكتب Claude النص ويجهّز المواد ويحرّر ويصدّر بـ Remotion وFFmpeg. يعمل مجانًا، والمزوّدون الأفضل مدفوعون. رخصته AGPL.",
+    "pushed": null
+  },
+  {
+    "slug": "revideo",
+    "cat": "motiongfx",
+    "name": "Revideo",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/midrender/revideo",
+    "site": "https://midrender.com/revideo",
+    "stars": "4.1k",
+    "cmd": "npm init @revideo@latest",
+    "use": [
+      "shop",
+      "web",
+      "landing",
+      "brand"
+    ],
+    "desc": "إطار TypeScript لصنع الفيديو بالكود برخصة MIT مجانية دائمًا، بديل لـ Remotion عندما يكبر فريقك. ما زال في إصدار مبكر.",
+    "pushed": null
+  },
+  {
+    "slug": "iart-motion-skills",
+    "cat": "motiongfx",
+    "name": "iart Motion Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/iart-ai/motion-skills",
+    "site": "https://www.iart.ai",
+    "stars": "865",
+    "cmd": "npx skills add iart-ai/ecommerce-video-skills\nnpx skills add iart-ai/kinetic-typography-skills",
+    "use": [
+      "shop",
+      "brand",
+      "landing"
+    ],
+    "desc": "حزم مهارات لفيديوهات التخفيضات وعرض المنتجات والنصوص المتحركة. عدّل تنسيق السعر إلى اليورو الألماني قبل الاستخدام.",
+    "pushed": null
+  },
+  {
+    "slug": "video-use",
+    "cat": "motiongfx",
+    "name": "Video Use",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/browser-use/video-use",
+    "site": "https://video-use.com",
+    "stars": "29.2k",
+    "cmd": "git clone https://github.com/browser-use/video-use",
+    "use": [
+      "shop",
+      "brand"
+    ],
+    "desc": "يحرّر لقطاتك الخام تلقائيًا: يقص الفراغات ويضبط الألوان ويضيف الترجمة. يرسل الصوت إلى ElevenLabs، فانتبه للخصوصية إذا ظهر أشخاص.",
+    "pushed": null
+  },
+  {
+    "slug": "claude-motion",
+    "cat": "motiongfx",
+    "name": "Claude Motion",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": null,
+    "site": "https://support.claude.com/en/articles/17454997-get-started-with-claude-motion",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "brand",
+      "landing",
+      "dashboard",
+      "claude"
+    ],
+    "desc": "ميزة تجريبية من Anthropic تحوّل وصفك ونصوصك وأسعارك وصورك إلى حركة قصيرة كود قابل للتعديل، وتصدّرها MP4. متاحة في خطط Team وEnterprise.",
+    "pushed": null
+  },
+  {
+    "slug": "figma-motion-skill",
+    "cat": "motiongfx",
+    "name": "Figma Motion Skill",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/figma/mcp-server-guide",
+    "site": "https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server",
+    "stars": "2.1k",
+    "cmd": "claude mcp add --transport http figma https://mcp.figma.com/mcp",
+    "use": [
+      "brand",
+      "mobile",
+      "web",
+      "landing",
+      "shop"
+    ],
+    "desc": "مهارة Figma الرسمية: يضيف Claude الحركة والتوقيت إلى تصاميمك داخل Figma، وتصدّرها فيديو أو كود. ميزة الحركة في Figma ما زالت تجريبية.",
+    "pushed": null
+  },
+  {
+    "slug": "creatomate-mcp",
+    "cat": "motiongfx",
+    "name": "Creatomate MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": null,
+    "site": "https://creatomate.com/docs/fundamentals/getting-started/mcp-integration",
+    "stars": null,
+    "cmd": "claude mcp add creatomate --transport http https://api.creatomate.com/mcp",
+    "use": [
+      "shop",
+      "brand",
+      "landing"
+    ],
+    "desc": "خادم رسمي لشركة أوروبية: يصنع Claude فيديوهات منتجات وإعلانات بالجملة من قوالب جاهزة. كل تصدير يستهلك رصيدًا مدفوعًا.",
+    "pushed": null
+  },
+  {
+    "slug": "shotstack-mcp",
+    "cat": "motiongfx",
+    "name": "Shotstack MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": null,
+    "site": "https://shotstack.io/docs/guide/agents/mcp-server/",
+    "stars": null,
+    "cmd": "claude mcp add --transport http shotstack https://mcp.shotstack.io",
+    "use": [
+      "shop",
+      "brand",
+      "landing"
+    ],
+    "desc": "خادم رسمي لتصدير الفيديو في السحابة مع قوالب وتوليد صور وصوت بالذكاء الاصطناعي. الدفع حسب الاستخدام، والاستضافة خارج الاتحاد الأوروبي.",
+    "pushed": null
+  },
+  {
+    "slug": "runway-mcp",
+    "cat": "motiongfx",
+    "name": "Runway MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": null,
+    "site": "https://runway.com/mcp",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "brand",
+      "landing"
+    ],
+    "desc": "موصل Runway الرسمي: يولّد Claude مقاطع فيديو من وصف أو من صورة منتج، ويشمل نماذج Veo وKling. كل ثانية فيديو تستهلك رصيدًا.",
+    "pushed": null
+  },
+  {
+    "slug": "adobe-for-creativity",
+    "cat": "motiongfx",
+    "name": "Adobe for creativity",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": null,
+    "site": "https://www.adobe.com/adobe-connectors/adobe-for-claude.html",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "brand"
+    ],
+    "desc": "موصل Adobe الرسمي بأدوات من Premiere وExpress وFirefly: يغيّر مقاس الفيديو للريلز، ويقص أفضل اللقطات، ويحرّك قوالب Express. لا يشمل After Effects.",
+    "pushed": null
+  },
+  {
+    "slug": "davinci-resolve-mcp",
+    "cat": "motiongfx",
+    "name": "DaVinci Resolve MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/samuelgursky/davinci-resolve-mcp",
+    "site": null,
+    "stars": "2.2k",
+    "cmd": "npx davinci-resolve-mcp setup",
+    "use": [
+      "shop",
+      "brand",
+      "mac"
+    ],
+    "desc": "يتحكم Claude ببرنامج DaVinci Resolve: المشاريع والخط الزمني وFusion للعناوين المتحركة والتصدير. مشروع مجتمعي، والدعم الكامل يحتاج نسخة Studio.",
+    "pushed": null
+  },
+  {
+    "slug": "mcp-for-blender",
+    "cat": "motiongfx",
+    "name": "MCP for Blender",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/ahujasid/mcp-for-blender",
+    "site": "https://www.mcp-for-blender.com/",
+    "stars": "31.4k",
+    "cmd": "claude mcp add blender uvx mcp-for-blender",
+    "use": [
+      "shop",
+      "brand",
+      "mac"
+    ],
+    "desc": "يبني Claude مشاهد ثلاثية الأبعاد ويحرّكها في Blender، مثل دوران المنتج. يشغّل كودًا داخل Blender، فاحفظ عملك أولًا.",
+    "pushed": null
+  },
+  {
+    "slug": "after-effects-mcp",
+    "cat": "motiongfx",
+    "name": "After Effects MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/kumoproductions/mcp-aftereffects",
+    "site": null,
+    "stars": "106",
+    "cmd": "claude mcp add aftereffects -- npx -y @kumoproductions/mcp-aftereffects",
+    "use": [
+      "brand",
+      "mac"
+    ],
+    "desc": "يعدّل Claude مشاريع After Effects: التراكيب والطبقات والحركة. مشروع مجتمعي صغير، وAdobe لا تقدّم خادمًا رسميًا له. جرّبه على نسخة احتياطية.",
+    "pushed": null
+  },
+  {
+    "slug": "manim",
+    "cat": "motiongfx",
+    "name": "Manim",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/ManimCommunity/manim",
+    "site": "https://www.manim.community",
+    "stars": "40.2k",
+    "cmd": "pip install manim",
+    "use": [
+      "brand",
+      "landing"
+    ],
+    "desc": "مكتبة Python لفيديوهات الشرح التعليمية والرسوم البيانية المتحركة بأسلوب قناة 3Blue1Brown. ممتازة للشرح، وأضعف لفيديوهات المنتجات.",
+    "pushed": null
+  },
+  {
+    "slug": "manim-skill",
+    "cat": "motiongfx",
+    "name": "Manim Skill",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/adithya-s-k/manim_skill",
+    "site": null,
+    "stars": "1.0k",
+    "cmd": "npx skills add adithya-s-k/manim_skill",
+    "use": [
+      "brand",
+      "claude"
+    ],
+    "desc": "مهارة تعلّم Claude كتابة فيديوهات Manim بشكل صحيح. لم تُحدَّث منذ يناير 2026.",
+    "pushed": null
+  },
+  {
+    "slug": "motion-canvas",
+    "cat": "motiongfx",
+    "name": "Motion Canvas",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/motion-canvas/motion-canvas",
+    "site": "https://motion-canvas.io",
+    "stars": "19k",
+    "cmd": "npm init @motion-canvas@latest",
+    "use": [
+      "brand",
+      "landing",
+      "web"
+    ],
+    "desc": "أداة TypeScript لفيديوهات الشرح المتحركة مع محرر مرئي في المتصفح. آخر إصدار مستقر كان في ديسمبر 2024، وRevideo هو نسخته المحدّثة.",
+    "pushed": null
+  },
+  {
+    "slug": "theatre-js",
+    "cat": "motiongfx",
+    "name": "Theatre.js",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/theatre-js/theatre",
+    "site": "https://www.theatrejs.com",
+    "stars": "12.8k",
+    "cmd": null,
+    "use": [
+      "landing",
+      "brand",
+      "web"
+    ],
+    "desc": "محرر حركة مرئي للويب والمشاهد ثلاثية الأبعاد بخط زمني ومفاتيح حركة. تطويره العلني متوقف منذ 2024، ورخصة المحرر AGPL.",
+    "pushed": null
+  },
+  {
+    "slug": "editly",
+    "cat": "motiongfx",
+    "name": "editly",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/mifi/editly",
+    "site": null,
+    "stars": "5.5k",
+    "cmd": "npm i -g editly",
+    "use": [
+      "shop",
+      "brand"
+    ],
+    "desc": "يصنع فيديو من ملف وصف بسيط: مقاطع وصور ونصوص وانتقالات وموسيقى. سهل جدًا، لكن آخر إصدار له كان في 2022.",
+    "pushed": null
+  },
+  {
+    "slug": "kinocut-ffmpeg-mcp",
+    "cat": "motiongfx",
+    "name": "Kinocut FFmpeg MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/KyaniteLabs/kinocut",
+    "site": null,
+    "stars": "206",
+    "cmd": "claude mcp add kinocut -- uvx --from kinocut kino --mcp",
+    "use": [
+      "shop",
+      "brand",
+      "claude"
+    ],
+    "desc": "يجعل Claude يقص الفيديو ويدمجه ويحوّل صيغه عبر FFmpeg. أفضل خوادم FFmpeg MCP المتاحة، لكنه ما زال صغيرًا.",
+    "pushed": null
+  },
+  {
+    "slug": "alight-motion",
+    "cat": "motiongfx",
+    "name": "Alight Motion",
+    "kind": "تطبيق",
+    "isNew": true,
+    "gh": null,
+    "site": "https://apps.apple.com/app/id1459833443",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "brand",
+      "mobile"
+    ],
+    "desc": "تطبيق iPhone وiPad للموشن غرافيك: مفاتيح حركة وطبقات ونصوص متحركة، الأقرب إلى After Effects على الجوال. تحميله مجاني، والاشتراك يزيل العلامة المائية. لا يتحكم به Claude.",
+    "pushed": null
+  },
+  {
+    "slug": "rive-for-ios",
+    "cat": "animation",
+    "name": "Rive for iOS",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/rive-app/rive-ios",
+    "site": "https://rive.app",
+    "stars": "839",
+    "cmd": ".package(url: \"https://github.com/rive-app/rive-ios\", from: \"6.24.0\")",
+    "use": [
+      "mobile",
+      "mac"
+    ],
+    "desc": "مشغّل Rive الرسمي لتطبيقات iPhone وMac: أزرار ورسوم تفاعلية تتفاعل مع حالة التطبيق في SwiftUI.",
+    "pushed": null
+  }
+]

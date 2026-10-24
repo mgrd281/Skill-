@@ -1,0 +1,78 @@
+---
+import Base from "../../layouts/Base.astro";
+import Card from "../../components/Card.astro";
+import { tools, projectById, categoryById, rich, isLatin, formatDate, host, isAppStore, repoLabel, url } from "../../lib/data";
+
+export function getStaticPaths() {
+  return tools.map((t) => ({ params: { slug: t.slug }, props: { tool: t } }));
+}
+const { tool: t } = Astro.props;
+const cat = categoryById(t.cat);
+const related = tools.filter((x) => x.cat === t.cat && x.slug !== t.slug)
+  .sort((a, b) => b.starsN - a.starsN || a.order - b.order).slice(0, 3);
+const plain = t.desc.length > 155 ? t.desc.slice(0, 152) + "..." : t.desc;
+---
+<Base title={`${t.name} | دليل أدوات التصميم والتطوير`} description={plain} path={`/tools/${t.slug}`}>
+  <a class="crumb" href={url()}>← كل الأدوات</a>
+  <article class="tool">
+    <h1>{t.name}</h1>
+    <div class="meta">
+      <span class="tag">{isLatin(t.kind) ? <bdi>{t.kind}</bdi> : t.kind}</span>
+      {t.isNew && <span class="badge-new">جديد</span>}
+      <span set:html={rich(cat.name)} />
+      {t.stars && <span class="stars" title="نجوم GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8z"/></svg>{t.stars}</span>}
+      {t.pushed && <span class="when">آخر تحديث للمستودع: <bdi>{formatDate(t.pushed)}</bdi></span>}
+    </div>
+    <p class="desc" set:html={rich(t.desc)} />
+
+    {t.cmd && (
+      <>
+        <h2>التثبيت</h2>
+        <div class="cmd">
+          <pre><code>{t.cmd}</code></pre>
+          <button type="button" class="copy" aria-label="نسخ أمر التثبيت">نسخ</button>
+        </div>
+      </>
+    )}
+
+    <div class="links">
+      {t.gh ? (
+        <a class="btn gh" href={t.gh} target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m13.5 4-3 16"/></svg>
+          <span class="t"><b><bdi>GitHub</bdi></b><small>{repoLabel(t.gh)}</small></span>
+        </a>
+      ) : (
+        <span class="btn none"><span class="t"><b>بدون <bdi>GitHub</bdi></b><small>&nbsp;</small></span></span>
+      )}
+      {t.site ? (
+        <a class="btn site" href={t.site} target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg>
+          <span class="t"><b>{isAppStore(t.site) ? "App Store" : "الموقع الرسمي"}</b><small>{host(t.site)}</small></span>
+        </a>
+      ) : (
+        <span class="btn none"><span class="t"><b>لا يوجد موقع</b><small>&nbsp;</small></span></span>
+      )}
+    </div>
+
+    <h2>مفيد لمشاريع</h2>
+    <div class="uses">
+      {t.use.map((u) => <a class="usechip" href={url("#" + u)} set:html={rich(projectById(u)!.name)} />)}
+    </div>
+  </article>
+
+  {related.length > 0 && (
+    <section class="related">
+      <h2>أدوات مشابهة في نفس القسم</h2>
+      <div class="grid">{related.map((r) => <Card tool={r} />)}</div>
+    </section>
+  )}
+
+  <Fragment slot="footer">
+    <p>المعلومات مأخوذة من صفحة المشروع الرسمية، وقد تتغير. تحقق من الرخصة وشروط الاستخدام قبل الاعتماد على أي أداة في عمل تجاري.</p>
+  </Fragment>
+</Base>
+
+<script>
+  import { initCopy } from "../../scripts/copy.js";
+  initCopy(document);
+</script>

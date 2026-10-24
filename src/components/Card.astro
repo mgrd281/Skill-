@@ -1,0 +1,74 @@
+---
+import { type Tool, projectById, rich, isLatin, repoLabel, host, isAppStore, url } from "../lib/data";
+interface Props { tool: Tool; linkName?: boolean }
+const { tool: t, linkName = true } = Astro.props;
+const search = [
+  t.name, t.desc, t.kind, t.cmd || "",
+  ...t.use.map((u) => projectById(u)?.name ?? ""),
+].join(" ").toLowerCase();
+---
+<article
+  class="card"
+  id={"t-" + t.slug}
+  data-slug={t.slug}
+  data-cat={t.cat}
+  data-new={t.isNew ? "1" : "0"}
+  data-kind={t.kind}
+  data-use={t.use.join(" ")}
+  data-stars={t.starsN}
+  data-order={t.order}
+  data-search={search}
+>
+  <div class="head">
+    {linkName ? <a class="name" href={url("tools/" + t.slug)}>{t.name}</a> : <span class="name">{t.name}</span>}
+    {t.stars && (
+      <span class="stars" title="نجوم GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8z"/></svg>{t.stars}
+      </span>
+    )}
+  </div>
+  <div class="tags">
+    <span class="badge-pick" hidden>ابدأ بها</span>
+    {t.isNew && <span class="badge-new">جديد</span>}
+    <span class="tag">{isLatin(t.kind) ? <bdi>{t.kind}</bdi> : t.kind}</span>
+  </div>
+  <p class="desc" set:html={rich(t.desc)} />
+  <div class="uses">
+    <span class="l">مفيد لـ</span>
+    {t.use.map((u) => (
+      <button type="button" class="usechip" data-p={u} set:html={rich(projectById(u)!.name)} />
+    ))}
+  </div>
+  <div class="bottom">
+    {t.cmd && (
+      <div class="cmd">
+        <pre><code>{t.cmd}</code></pre>
+        <button type="button" class="copy" aria-label="نسخ أمر التثبيت">نسخ</button>
+      </div>
+    )}
+    <div class="links">
+      {t.gh ? (
+        <a class="btn gh" href={t.gh} target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m13.5 4-3 16"/></svg>
+          <span class="t"><b><bdi>GitHub</bdi></b><small>{repoLabel(t.gh)}</small></span>
+        </a>
+      ) : (
+        <span class="btn none">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m6 18 12-12"/></svg>
+          <span class="t"><b>بدون <bdi>GitHub</bdi></b><small>&nbsp;</small></span>
+        </span>
+      )}
+      {t.site ? (
+        <a class="btn site" href={t.site} target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg>
+          <span class="t"><b>{isAppStore(t.site) ? "App Store" : "الموقع الرسمي"}</b><small>{host(t.site)}</small></span>
+        </a>
+      ) : (
+        <span class="btn none">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m6 18 12-12"/></svg>
+          <span class="t"><b>لا يوجد موقع</b><small>&nbsp;</small></span>
+        </span>
+      )}
+    </div>
+  </div>
+</article>

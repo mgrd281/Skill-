@@ -1,0 +1,113 @@
+---
+import Base from "../layouts/Base.astro";
+import Card from "../components/Card.astro";
+import { tools, categories, projects, rich, starsUpdatedAt, formatDate } from "../lib/data";
+
+const total = tools.length;
+const appData = {
+  total,
+  projects: projects.map((p) => ({ id: p.id, name: p.name, cats: p.cats ?? [], pickSlugs: p.pickSlugs })),
+  cats: categories.map((c) => c.id),
+};
+---
+<Base
+  title="دليل أدوات التصميم والتطوير"
+  description={`${total} أداة ومهارة لـ Claude وخوادم MCP ومكتبات للتصميم والتطوير والموشن غرافيك وiPhone وMac، مع نجوم GitHub وأوامر التثبيت.`}
+>
+  <a class="skip" href="#list">تخطَّ إلى القائمة</a>
+  <header class="top">
+    <h1>دليل أدوات التصميم والتطوير</h1>
+    <p class="lead">
+      <Fragment set:html={`${total} أداة مرتبة حسب القسم. لكل أداة وصف قصير، والمشاريع التي تفيدها، وأمر التثبيت، ورابط <bdi>GitHub</bdi> والموقع الرسمي.`} />
+    </p>
+    <ul class="legend">
+      <li><span class="tag"><bdi>Skill</bdi></span> تعليمات تضيفها إلى <bdi>Claude</bdi></li>
+      <li><span class="tag"><bdi>MCP</bdi></span> يربط <bdi>Claude</bdi> بأداة خارجية</li>
+      <li><span class="tag">مكتبة</span> تُستخدم داخل كود الموقع</li>
+      <li><span class="badge-new">جديد</span> من الإضافات المقترحة</li>
+      <li><span class="badge-pick">ابدأ بها</span> أفضل بداية للمشروع المختار</li>
+    </ul>
+  </header>
+
+  <section class="build" aria-labelledby="build-h">
+    <h2 id="build-h">ماذا تبني؟</h2>
+    <p class="hint">اختر نوع مشروعك لترى الأدوات المفيدة له ونصيحة البداية.</p>
+    <div class="projects" id="projects">
+      {projects.map((p) => (
+        <button type="button" class="ptile" data-p={p.id} aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={p.icon} />
+          <span class="pl"><b set:html={rich(p.name)} /><small>{p.count} أداة</small></span>
+        </button>
+      ))}
+    </div>
+    {projects.map((p) => (
+      <div class="advice" data-advice={p.id} hidden>
+        <h3 set:html={rich(p.name)} />
+        <p set:html={rich(p.advice)} />
+        <div class="picks">
+          <span class="l">ابدأ بهذه:</span>
+          {p.picks.map((name, i) => (
+            <button type="button" class="pickbtn" data-go={p.pickSlugs[i]}><bdi>{name}</bdi></button>
+          ))}
+        </div>
+        <button type="button" class="clear" data-clear="1">عرض كل الأدوات</button>
+      </div>
+    ))}
+  </section>
+
+  <div class="bar">
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="ابحث باسم الأداة أو الاستخدام" autocomplete="off" aria-label="بحث" />
+    </div>
+    <div class="chips" id="chips" role="toolbar" aria-label="الأقسام">
+      <button type="button" class="chip" data-id="all">الكل<span class="n">{total}</span></button>
+      {categories.map((c) => (
+        <button type="button" class="chip" data-id={c.id}><Fragment set:html={rich(c.name)} /><span class="n"></span></button>
+      ))}
+      <button type="button" class="chip skillchip" data-id="skill">المهارات فقط<span class="n"></span></button>
+      <button type="button" class="chip newchip" data-id="new">الجديد فقط<span class="n"></span></button>
+    </div>
+    <div class="row">
+      <p class="status" id="status" aria-live="polite"></p>
+      <label class="sortbox" for="sort">الترتيب
+        <select id="sort">
+          <option value="cat">حسب القسم</option>
+          <option value="stars">الأكثر نجومًا</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <main id="list">
+    <section class="cat" id="by-stars" hidden>
+      <h2>مرتبة حسب نجوم <bdi>GitHub</bdi><span class="n"></span></h2>
+      <div class="grid" id="stars-grid"></div>
+    </section>
+    {categories.map((c) => (
+      <section class="cat" id={"cat-" + c.id} data-cat-section={c.id}>
+        <h2><Fragment set:html={rich(c.name)} /><span class="n">{tools.filter((t) => t.cat === c.id).length}</span></h2>
+        <div class="grid" data-grid={c.id}>
+          {tools.filter((t) => t.cat === c.id).map((t) => <Card tool={t} />)}
+        </div>
+      </section>
+    ))}
+    <p class="empty" id="empty" hidden>لا توجد نتيجة. جرّب كلمة أخرى أو اختر "الكل".</p>
+  </main>
+
+  <Fragment slot="footer">
+    <p>النجوم وروابط المواقع مأخوذة من صفحة كل مشروع على <bdi>GitHub</bdi>، وآخر تحديث لها بتاريخ {formatDate(starsUpdatedAt)}. مهارات <bdi>Anthropic</bdi> الأربع تعرض نجوم المستودع الذي يجمعها.</p>
+    <p>أوامر <bdi>/plugin</bdi> تُكتب داخل <bdi>Claude Code</bdi>. أوامر <bdi>npx</bdi> و<bdi>npm</bdi> و<bdi>flutter</bdi> و<bdi>docker</bdi> تُكتب في الطرفية داخل مجلد مشروعك.</p>
+    <p>لاكتشاف مهارات أخرى: <bdi>skills.sh</bdi> يرتّبها حسب عدد التثبيت ويعرض فحصًا أمنيًا لكل مهارة، و<bdi>claudemarketplaces.com</bdi> يرتّبها حسب القسم. المهارة قد تشغّل أوامر على جهازك، فثبّت من مصادر معروفة فقط.</p>
+    <p>رخص مجموعات الأيقونات والمكونات تختلف، وشعارات العلامات التجارية تبقى ملكًا لأصحابها. اقرأ الرخصة قبل الاستخدام التجاري.</p>
+    <p>استثناءات: روابط <bdi>Remotion Skills</bdi> و<bdi>flutter_animate</bdi> و<bdi>Shopify Dev MCP</bdi> من التوثيق الرسمي، و<bdi>Aceternity UI</bdi> موقع فقط بدون مستودع.</p>
+  </Fragment>
+
+  <script type="application/json" id="app-data" set:html={JSON.stringify(appData)} />
+</Base>
+
+<script>
+  import { initCopy } from "../scripts/copy.js";
+  import "../scripts/filter.js";
+  initCopy(document);
+</script>
