@@ -244,19 +244,26 @@ function refreshBell() {
   const list = unreadList();
   bellN.hidden = list.length === 0;
   bellN.textContent = list.length > 9 ? "9+" : String(list.length);
-  bell.setAttribute("aria-label", list.length ? "الإشعارات: " + list.length + " أداة جديدة" : "الإشعارات: لا جديد");
+  bell.setAttribute("aria-label", list.length ? "آخر الأدوات المضافة: " + list.length + " جديدة" : "آخر الأدوات المضافة");
+  // القائمة تعرض دائمًا آخر الأدوات المضافة، وما لم تقرأه بعد يحمل علامة "جديد"
+  const unreadSet = new Set(list.map((r) => r.slug));
+  const latest = data.recent.filter((r) => !hidden.has(r.slug)).slice(0, 8);
   listEl.textContent = "";
-  list.forEach((r) => {
+  latest.forEach((r) => {
     const li = document.createElement("li");
     const a = document.createElement("a");
     a.href = data.base + r.slug;
     const b = document.createElement("b"); b.textContent = r.name;
+    if (unreadSet.has(r.slug)) {
+      const nb = document.createElement("span"); nb.className = "badge-new"; nb.textContent = "جديد";
+      b.append(" ", nb);
+    }
     const s = document.createElement("small"); const d = document.createElement("bdi"); d.textContent = r.added.slice(0, 10); s.append(r.cat + " · ", d);
     a.append(b, s);
     li.append(a);
     listEl.append(li);
   });
-  emptyN.hidden = list.length !== 0;
+  emptyN.hidden = latest.length !== 0;
   $("notif-read").hidden = list.length === 0;
 }
 function togglePanel(open) {

@@ -42,3 +42,4 @@ a.name:hover, a.name:focus-visible { color: var(--accent); text-decoration: unde
 .hide:hover, .hide:focus-visible { color: var(--accent); background: var(--chip); opacity: 1; }
 .hide svg { width: 16px; height: 16px; }
 .hiddenbar { margin: 0; display: flex; align-items: center; gap: 8px; font-size: .8rem; color: var(--muted); }
+.notif li b .badge-new { margin-inline-start: 6px; font-weight: 600; vertical-align: 1px; }
