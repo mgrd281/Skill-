@@ -43,3 +43,32 @@ a.name:hover, a.name:focus-visible { color: var(--accent); text-decoration: unde
 .hide svg { width: 16px; height: 16px; }
 .hiddenbar { margin: 0; display: flex; align-items: center; gap: 8px; font-size: .8rem; color: var(--muted); }
 .notif li b .badge-new { margin-inline-start: 6px; font-weight: 600; vertical-align: 1px; }
+
+/* المفضلة */
+:root { --heart: #D81B60; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --heart: #FF6B9A; } }
+:root[data-theme="dark"] { --heart: #FF6B9A; }
+.topbar { gap: 8px; }
+.crumbrow { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 18px; }
+.crumbrow .crumb { margin-top: 0; }
+.heartlink { text-decoration: none; }
+.heartlink:hover { border-color: var(--heart); color: var(--heart); }
+.heartlink .dot { background: var(--heart); }
+.fav { margin-inline-start: auto; width: 28px; height: 28px; display: grid; place-items: center; flex: none; border: 0; background: transparent; color: var(--muted); border-radius: 8px; cursor: pointer; }
+.stars + .fav { margin-inline-start: 0; }
+.fav svg { width: 17px; height: 17px; transition: transform .15s ease; }
+.fav:hover, .fav:focus-visible { color: var(--heart); background: var(--chip); }
+.fav[aria-pressed="true"] { color: var(--heart); }
+.fav[aria-pressed="true"] svg { fill: currentColor; }
+.fav.pop svg { animation: pop .38s ease; }
+@keyframes pop { 0% { transform: scale(1); } 40% { transform: scale(1.35); } 100% { transform: scale(1); } }
+.fav + .hide { margin-inline-start: 0; }
+.favbtn-lg { width: auto; height: auto; justify-self: start; display: inline-flex; align-items: center; gap: 8px; margin: 0; padding: 8px 14px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); font: inherit; font-size: .9rem; font-weight: 500; border-radius: 12px; }
+.favbtn-lg svg { width: 18px; height: 18px; }
+.favbtn-lg[aria-pressed="true"] { border-color: var(--heart); }
+.favtools { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 6px; }
+.favempty { display: grid; justify-items: center; gap: 8px; text-align: center; padding: 56px 0 40px; color: var(--ink-2); }
+.favempty svg { width: 48px; height: 48px; color: var(--heart); opacity: .85; }
+.favempty p { margin: 0; font-size: 1.05rem; font-weight: 600; }
+.favempty .sub { font-weight: 400; font-size: .92rem; color: var(--muted); margin-bottom: 8px; }
+#fav-grid { padding-top: 14px; }

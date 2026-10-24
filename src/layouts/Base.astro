@@ -2,8 +2,8 @@
 import "../styles/global.css";
 import "../styles/extra.css";
 
-interface Props { title: string; description: string; path?: string }
-const { title, description, path = "/" } = Astro.props;
+interface Props { title: string; description: string; path?: string; noindex?: boolean }
+const { title, description, path = "/", noindex = false } = Astro.props;
 const canonical = new URL(path, Astro.site).href;
 const icon =
   "data:image/svg+xml," +
@@ -19,6 +19,7 @@ const icon =
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="icon" href={icon} />
     <link rel="alternate" type="application/rss+xml" title="أحدث الأدوات المضافة" href={new URL("feed.xml", Astro.site).href} />
     <meta property="og:type" content="website" />

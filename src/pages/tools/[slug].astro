@@ -1,6 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import Card from "../../components/Card.astro";
+import HeartLink from "../../components/HeartLink.astro";
 import { tools, projectById, categoryById, rich, isLatin, formatDate, host, isAppStore, repoLabel, url } from "../../lib/data";
 
 export function getStaticPaths() {
@@ -13,9 +14,16 @@ const related = tools.filter((x) => x.cat === t.cat && x.slug !== t.slug)
 const plain = t.desc.length > 155 ? t.desc.slice(0, 152) + "..." : t.desc;
 ---
 <Base title={`${t.name} | دليل أدوات التصميم والتطوير`} description={plain} path={`/tools/${t.slug}`}>
-  <a class="crumb" href={url()}>← كل الأدوات</a>
+  <div class="crumbrow">
+    <a class="crumb" href={url()}>← كل الأدوات</a>
+    <HeartLink />
+  </div>
   <article class="tool">
     <h1>{t.name}</h1>
+    <button type="button" class="fav favbtn-lg" data-fav={t.slug} data-name={t.name} aria-pressed="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+      <span class="fav-label">أضف إلى المفضلة</span>
+    </button>
     <div class="meta">
       <span class="tag">{isLatin(t.kind) ? <bdi>{t.kind}</bdi> : t.kind}</span>
       {t.isNew && <span class="badge-new">جديد</span>}
@@ -74,5 +82,7 @@ const plain = t.desc.length > 155 ? t.desc.slice(0, 152) + "..." : t.desc;
 
 <script>
   import { initCopy } from "../../scripts/copy.js";
+  import { initFav } from "../../scripts/fav.js";
   initCopy(document);
+  initFav();
 </script>
