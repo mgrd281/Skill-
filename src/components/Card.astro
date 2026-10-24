@@ -20,6 +20,7 @@ const search = [
   data-search={search}
 >
   <div class="head">
+    <span class="rank" hidden></span>
     {linkName ? <a class="name" href={url("tools/" + t.slug)}>{t.name}</a> : <span class="name">{t.name}</span>}
     {t.stars && (
       <span class="stars" title="نجوم GitHub">

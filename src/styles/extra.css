@@ -84,3 +84,7 @@ a.name:hover, a.name:focus-visible { color: var(--accent); text-decoration: unde
 .notice li { padding: 10px 12px; border-radius: 10px; font-size: .9rem; line-height: 1.7; }
 .notice .n-warn { background: var(--new-soft); color: var(--new); }
 .notice .n-bad { background: var(--bad-soft); color: var(--bad); }
+
+/* رقم التصنيف في الترتيب العام بالنجوم */
+.rank { flex: none; min-width: 34px; box-sizing: border-box; padding: 0 8px; text-align: center; border-radius: 999px; background: var(--chip); color: var(--muted); font: 600 .78rem/1.7 var(--font-mono); direction: ltr; }
+.rank[data-top="1"], .rank[data-top="2"], .rank[data-top="3"] { background: var(--new-soft); color: var(--new); }

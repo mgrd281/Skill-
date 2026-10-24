@@ -46,6 +46,7 @@ const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-mo
 const cards = [...document.querySelectorAll(".card")].map((el) => ({
   el,
   slug: el.dataset.slug,
+  rankEl: el.querySelector(".rank"),
   cat: el.dataset.cat,
   isNew: el.dataset.new === "1",
   isSkill: el.dataset.kind === "Skill",
@@ -119,12 +120,19 @@ function renderList() {
 
   if (state.sort === "stars") {
     const sorted = [...visible].sort((a, b) => b.starsN - a.starsN || a.order - b.order);
-    sorted.forEach((c) => starsGrid.appendChild(c.el));
+    let rank = 0;
+    sorted.forEach((c) => {
+      starsGrid.appendChild(c.el);
+      // رقم التصنيف للأدوات التي لها نجوم فقط، والباقي في النهاية بلا رقم
+      if (c.starsN >= 0) { rank++; c.rankEl.textContent = "#" + rank; c.rankEl.dataset.top = rank <= 3 ? String(rank) : ""; c.rankEl.hidden = false; }
+      else c.rankEl.hidden = true;
+    });
     starsSection.hidden = sorted.length === 0;
     starsSection.querySelector("h2 .n").textContent = sorted.length;
     sections.forEach((s) => { s.el.hidden = true; });
   } else {
     starsSection.hidden = true;
+    cards.forEach((c) => { c.rankEl.hidden = true; });
     sections.forEach((s) => {
       const mine = cards.filter((c) => c.cat === s.id).sort((a, b) => {
         if (p) {
@@ -132,7 +140,8 @@ function renderList() {
           pa = pa === -1 ? 99 : pa; pb = pb === -1 ? 99 : pb;
           if (pa !== pb) return pa - pb;
         }
-        return a.order - b.order;
+        // داخل كل قسم: الأعلى نجومًا أولًا، والتي بلا نجوم في النهاية
+        return b.starsN - a.starsN || a.order - b.order;
       });
       mine.forEach((c) => s.grid.appendChild(c.el));
       const n = mine.filter((c) => visible.has(c)).length;
