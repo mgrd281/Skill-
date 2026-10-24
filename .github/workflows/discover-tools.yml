@@ -2,7 +2,7 @@ name: Discover new tools
 
 on:
   schedule:
-    - cron: "43 5 * * 3" # كل يوم أربعاء 05:43 UTC
+    - cron: "43 6 * * 1" # كل يوم اثنين 06:43 UTC (بعد تحديث النجوم)
   workflow_dispatch: {}
 
 permissions:
