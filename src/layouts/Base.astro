@@ -1,6 +1,24 @@
 ---
+import "@fontsource/ibm-plex-sans-arabic/arabic-400.css";
+import "@fontsource/ibm-plex-sans-arabic/arabic-500.css";
+import "@fontsource/ibm-plex-sans-arabic/arabic-600.css";
+import "@fontsource/ibm-plex-sans-arabic/latin-400.css";
+import "@fontsource/ibm-plex-sans-arabic/latin-500.css";
+import "@fontsource/ibm-plex-sans-arabic/latin-600.css";
+import "@fontsource/noto-kufi-arabic/arabic-600.css";
+import "@fontsource/noto-kufi-arabic/arabic-700.css";
+import "@fontsource/noto-kufi-arabic/latin-600.css";
+import "@fontsource/noto-kufi-arabic/latin-700.css";
+import "@fontsource/ibm-plex-mono/latin-400.css";
+import "@fontsource/ibm-plex-mono/latin-500.css";
 import "../styles/global.css";
 import "../styles/extra.css";
+import { url } from "../lib/data";
+import sansAr400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-400-normal.woff2?url";
+import sansAr600 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-600-normal.woff2?url";
+import kufiAr700 from "@fontsource/noto-kufi-arabic/files/noto-kufi-arabic-arabic-700-normal.woff2?url";
+import kufiAr600 from "@fontsource/noto-kufi-arabic/files/noto-kufi-arabic-arabic-600-normal.woff2?url";
+import sansLat400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-latin-400-normal.woff2?url";
 
 interface Props { title: string; description: string; path?: string; noindex?: boolean }
 const { title, description, path = "/", noindex = false } = Astro.props;
@@ -21,19 +39,17 @@ const icon =
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex" />}
     <link rel="icon" href={icon} />
+    <link rel="apple-touch-icon" href={url("apple-touch-icon.png")} />
+    <meta name="theme-color" content="#F1F3F7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0F141B" media="(prefers-color-scheme: dark)" />
     <link rel="alternate" type="application/rss+xml" title="أحدث الأدوات المضافة" href={new URL("feed.xml", Astro.site).href} />
+    {[sansAr400, sansAr600, kufiAr700, kufiAr600, sansLat400].map((f) => <link rel="preload" href={f} as="font" type="font/woff2" crossorigin />)}
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ar_AR" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta name="twitter:card" content="summary" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Kufi+Arabic:wght@600;700&display=swap"
-    />
   </head>
   <body>
     <div class="wrap" dir="rtl" lang="ar">

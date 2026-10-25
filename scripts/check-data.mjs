@@ -18,5 +18,8 @@ for (const t of tools) {
   if (!t.gh && !t.site) problems.push(`لا رابط لـ ${t.name}`);
 }
 for (const p of projects) for (const k of p.picks) if (!slugs.has(slugify(k))) problems.push(`اقتراح غير موجود في ${p.id}: ${k}`);
+// تحذير لا يفشل الفحص: بيانات GitHub (التاريخ والرخصة) تملؤها update-stars.mjs
+const noMeta = tools.filter((t) => t.gh && (!t.pushed || t.license === undefined));
+if (noMeta.length) console.warn(`تحذير: ${noMeta.length} أداة بلا تاريخ تحديث أو رخصة (شارات الحالة لن تظهر لها). شغّل update-stars.`);
 if (problems.length) { console.error(problems.join("\n")); process.exit(1); }
 console.log(`OK: ${tools.length} أداة، ${cats.length} قسمًا، ${projects.length} مشروعًا`);

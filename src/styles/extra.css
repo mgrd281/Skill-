@@ -95,7 +95,30 @@ a.name:hover, a.name:focus-visible { color: var(--accent); text-decoration: unde
 .addedchip svg { width: 13px; height: 13px; flex: none; color: var(--muted); }
 .addedchip[data-fresh="1"] { color: var(--accent); background: var(--accent-soft); border-color: transparent; font-weight: 600; }
 .addedchip[data-fresh="1"] svg { color: var(--accent); }
-.addedchip[data-fresh="1"]::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2.2s ease-out infinite; }
+.addedchip[data-fresh="1"]::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2.2s ease-out 3; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgb(36 70 214 / .5); } 70%, 100% { box-shadow: 0 0 0 7px rgb(36 70 214 / 0); } }
 .addedchip.lg { margin-inline-start: 0; font-size: .86rem; padding: 3px 14px 3px 12px; }
 .addedchip.lg svg { width: 15px; height: 15px; }
+
+/* أداء: لا نرسم البطاقات خارج الشاشة حتى تقترب (المتصفح يتذكر الارتفاع الفعلي بعد أول عرض) */
+.card { content-visibility: auto; contain-intrinsic-size: auto 330px; }
+
+/* أهداف اللمس: المساحة القابلة للنقر تتوسع دون تغيير الشكل المرئي */
+.fav, .hide, .usechip { position: relative; }
+.fav::after, .hide::after { content: ""; position: absolute; inset: -8px; }
+.usechip::after { content: ""; position: absolute; inset: -6px -3px; }
+@media (pointer: coarse) {
+  .head { gap: 4px; }
+  .uses { gap: 8px 8px; }
+  .chip { min-height: 44px; padding-inline: 14px; }
+  .bell { width: 44px; height: 44px; }
+  #q { min-height: 44px; }
+  #sort { min-height: 44px; padding-inline: 10px; }
+  .copy { min-width: 72px; min-height: 44px; }
+  .cmd pre { padding-block: 12px; }
+  a.name { padding-block: 8px; margin-block: -8px; }
+  .linkbtn, .clear { padding-block: 12px; }
+}
+/* iOS Safari يكبّر الصفحة عند التركيز على حقل أصغر من 16px */
+@media (max-width: 700px) { #sort, #q { font-size: 16px; } }
+.notfound-btn { display: inline-flex; min-height: 44px; }
