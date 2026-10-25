@@ -44,8 +44,13 @@ export const categories: Category[] = categoriesJson;
 
 const rawProjects = projectsJson as Array<Omit<Project, "pickSlugs" | "count">>;
 
+// "جديد" تُشتق من تاريخ الإضافة (آخر 14 يومًا)، فتنتهي تلقائيًا بدل حقل يدوي يبقى مفعّلًا.
+export const NEW_DAYS = 14;
+const buildTime = Date.now();
+
 export const tools: Tool[] = (toolsJson as any[]).map((t, i) => ({
   ...t, order: i, starsN: parseStars(t.stars),
+  isNew: (buildTime - new Date(t.added).getTime()) / 864e5 <= NEW_DAYS,
 }));
 
 export function inProject(t: Tool, p: { id: string; cats?: string[] }): boolean {
@@ -99,6 +104,7 @@ export const recentTools: Tool[] = [...tools]
 
 // ---- شارات الحالة: أرشفة، قِدم، رخصة (تُحسب وقت البناء من بيانات GitHub) ----
 export interface Badge { kind: "ok" | "warn" | "bad"; text: string; latin?: string; title: string }
+const RUNS_REMOTE_SCRIPT = /(curl|wget)[^\n]*\|\s*(ba|z)?sh|(ba|z)?sh\s+-c\s+"\$\((curl|wget)/i;
 const RESTRICTIVE = /AGPL|GPL|SSPL|BUSL|CC-BY-NC|Elastic|Commons|Sustainable/i;
 
 export function statusBadges(t: Tool, now = Date.now()): Badge[] {
@@ -108,6 +114,9 @@ export function statusBadges(t: Tool, now = Date.now()): Badge[] {
   } else if (t.pushed) {
     const days = (now - new Date(t.pushed).getTime()) / 864e5;
     if (days > 365) out.push({ kind: "warn", text: "آخر تحديث", latin: t.pushed.slice(0, 7), title: "لم يُحدَّث المستودع منذ أكثر من سنة" });
+  }
+  if (t.cmd && RUNS_REMOTE_SCRIPT.test(t.cmd)) {
+    out.push({ kind: "warn", text: "ينفّذ سكربتًا من الإنترنت", title: "أمر التثبيت يحمّل سكربتًا من الإنترنت وينفّذه مباشرة. افتح مصدره واقرأه قبل تشغيله" });
   }
   const l = t.license;
   if (l === "none") out.push({ kind: "bad", text: "بدون رخصة", title: "لا رخصة معلنة في المستودع: غالبًا لا يُسمح باستخدامه. اقرأ صفحته قبل الاعتماد عليه" });

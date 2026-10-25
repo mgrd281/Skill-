@@ -45,7 +45,6 @@ npm run build      # بناء الموقع في مجلد dist
   "cat": "design",
   "name": "My Tool",
   "kind": "Skill",
-  "isNew": true,
   "gh": "https://github.com/owner/repo",
   "site": "https://example.com",
   "stars": null,
@@ -60,6 +59,7 @@ npm run build      # بناء الموقع في مجلد dist
 - `slug` هو الاسم بأحرف صغيرة وشرطات (نفس ما يُنتجه الاسم تلقائيًا).
 - `cat` أحد أرقام الأقسام في `categories.json`، و`use` أرقام المشاريع في `projects.json`.
 - `kind`: `Skill` أو `MCP` أو `مكتبة` أو `أداة` أو `تطبيق`.
+- شارة "جديد" تُحسب تلقائيًا من `added` (آخر 14 يومًا)، فلا حاجة لحقل `isNew`.
 - اترك `stars` و`pushed` على `null`، فسكربت التحديث يملؤهما.
 - بعد الإضافة شغّل `npm run check` للتأكد أن كل شيء سليم.
 
