@@ -1,11 +1,19 @@
 ---
-import { type Tool, projectById, rich, isLatin, repoLabel, host, isAppStore, url, statusBadges, formatDate } from "../lib/data";
+import Icon from "./Icon.astro";
+import { type Tool, projectById, rich, isLatin, repoLabel, host, isAppStore, url, statusBadges, formatDate, initials, categoryHue } from "../lib/data";
 interface Props { tool: Tool; linkName?: boolean; hideBtn?: boolean; favBtn?: boolean; rank?: number }
 const { tool: t, linkName = true, hideBtn = false, favBtn = true, rank } = Astro.props;
 const search = [
   t.name, t.desc, t.kind, t.cmd || "",
   ...t.use.map((u) => projectById(u)?.name ?? ""),
 ].join(" ").toLowerCase();
+// لون شارة النوع
+const KIND: Record<string, string> = { Skill: "skill", MCP: "mcp", "مكتبة": "lib", "أداة": "tool", "موقع": "site", "منصة": "platform", "تطبيق": "app" };
+const kindKey = KIND[t.kind] ?? "other";
+// أول ثلاثة مشاريع ظاهرة، والباقي خلف زر "+N"
+const SHOW = 3;
+const extra = t.use.slice(SHOW).map((u) => projectById(u)?.name ?? "").join("، ");
+const date = formatDate(t.added.slice(0, 10));
 ---
 <article
   class="card"
@@ -20,74 +28,81 @@ const search = [
   data-added={t.added}
   data-search={search}
 >
-  <div class="head">
-    <span class="rank" hidden={!rank} data-top={rank && rank <= 3 ? String(rank) : ""}>{rank ? "#" + rank : ""}</span>
-    {linkName ? <a class="name" href={url("tools/" + t.slug)}>{t.name}</a> : <span class="name">{t.name}</span>}
-    {t.stars && (
-      <span class="stars" title="نجوم GitHub">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8z"/></svg>{t.stars}
-      </span>
-    )}
-    {favBtn && (
-      <button type="button" class="fav" data-fav={t.slug} data-name={t.name} aria-pressed="false" aria-label={`أضف ${t.name} إلى المفضلة`} title="أضف إلى المفضلة">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-      </button>
-    )}
-    {hideBtn && (
-      <button type="button" class="hide" data-hide={t.slug} aria-label={`إخفاء ${t.name} من عرضك`} title="إخفاء من عرضك (يمكن استعادتها)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18"/><path d="M10.6 6.1A9.9 9.9 0 0 1 12 6c5 0 9 4 10 6a13.6 13.6 0 0 1-2.6 3.3"/><path d="M6.6 6.7C4 8.2 2.4 10.4 2 12c1 2 5 6 10 6 1.5 0 2.9-.4 4.1-1"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
-      </button>
-    )}
+  <div class="c-head">
+    <span class="mono" style={`--h:${categoryHue(t.cat)}`} aria-hidden="true">{initials(t.name)}</span>
+    <div class="c-id">
+      <div class="c-title">
+        <span class="rank" hidden={!rank} data-top={rank && rank <= 3 ? String(rank) : ""}>{rank ? "#" + rank : ""}</span>
+        {linkName ? <a class="name" href={url("tools/" + t.slug)}>{t.name}</a> : <span class="name">{t.name}</span>}
+      </div>
+      <div class="c-meta">
+        <span class="kind" data-k={kindKey}>{isLatin(t.kind) ? <bdi>{t.kind}</bdi> : t.kind}</span>
+        {t.stars && (
+          <span class="stars" title="نجوم GitHub"><Icon name="star" filled />{t.stars}</span>
+        )}
+        <time class="addedchip" datetime={t.added} data-added={t.added} title={"أُضيفت إلى الدليل: " + date}>
+          <Icon name="clock" /><span class="added-text">{date}</span>
+        </time>
+      </div>
+    </div>
+    <div class="c-act">
+      {favBtn && (
+        <button type="button" class="fav" data-fav={t.slug} data-name={t.name} aria-pressed="false" aria-label={`أضف ${t.name} إلى المفضلة`} title="أضف إلى المفضلة">
+          <Icon name="heart" />
+        </button>
+      )}
+      {hideBtn && (
+        <button type="button" class="hide" data-hide={t.slug} aria-label={`إخفاء ${t.name} من عرضك`} title="إخفاء من عرضك (يمكن استعادتها)">
+          <Icon name="eye-off" />
+        </button>
+      )}
+    </div>
   </div>
+
   <div class="tags">
     <span class="badge-pick" hidden>ابدأ بها</span>
     {t.isNew && <span class="badge-new">جديد</span>}
-    <span class="tag">{isLatin(t.kind) ? <bdi>{t.kind}</bdi> : t.kind}</span>
     {statusBadges(t).map((b) => (
       <span class={b.kind === "ok" ? "tag" : `tag tag-${b.kind}`} title={b.title}>{b.text}{b.text && b.latin ? " " : ""}{b.latin && <bdi>{b.latin}</bdi>}</span>
     ))}
-    <time class="addedchip" datetime={t.added} data-added={t.added} title={"أُضيفت إلى الدليل: " + formatDate(t.added.slice(0, 10))}>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
-      <span class="added-text">{formatDate(t.added.slice(0, 10))}</span>
-    </time>
   </div>
+
   <p class="desc" set:html={rich(t.desc)} />
+
   <div class="uses">
     <span class="l">مفيد لـ</span>
-    {t.use.map((u) => (
-      <button type="button" class="usechip" data-p={u} set:html={rich(projectById(u)!.name)} />
+    {t.use.map((u, i) => (
+      <button type="button" class={i < SHOW ? "usechip" : "usechip more"} data-p={u} set:html={rich(projectById(u)!.name)} />
     ))}
+    {t.use.length > SHOW && (
+      <button type="button" class="usemore" aria-expanded="false" title={extra}>+{t.use.length - SHOW}</button>
+    )}
   </div>
+
   <div class="bottom">
     {t.cmd && (
       <div class="cmd">
         <pre tabindex="0" aria-label="أمر التثبيت"><code>{t.cmd}</code></pre>
-        <button type="button" class="copy" aria-label="نسخ أمر التثبيت">نسخ</button>
+        <button type="button" class="copy" aria-label="نسخ أمر التثبيت">
+          <Icon name="copy" class="ic-copy" /><Icon name="check" class="ic-check" /><span class="copy-t">نسخ</span>
+        </button>
       </div>
     )}
-    <div class="links">
-      {t.gh ? (
-        <a class="btn gh" href={t.gh} target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m13.5 4-3 16"/></svg>
-          <span class="t"><b><bdi>GitHub</bdi></b><small>{repoLabel(t.gh)}</small></span>
-        </a>
-      ) : (
-        <span class="btn none">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m6 18 12-12"/></svg>
-          <span class="t"><b>بدون <bdi>GitHub</bdi></b><small>&nbsp;</small></span>
-        </span>
-      )}
-      {t.site ? (
-        <a class="btn site" href={t.site} target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg>
-          <span class="t"><b>{isAppStore(t.site) ? "App Store" : "الموقع الرسمي"}</b><small>{host(t.site)}</small></span>
-        </a>
-      ) : (
-        <span class="btn none">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m6 18 12-12"/></svg>
-          <span class="t"><b>لا يوجد موقع</b><small>&nbsp;</small></span>
-        </span>
-      )}
-    </div>
+    {(t.gh || t.site) && (
+      <div class="links">
+        {t.gh && (
+          <a class="btn gh" href={t.gh} target="_blank" rel="noopener noreferrer">
+            <Icon name="github" />
+            <span class="t"><b><bdi>GitHub</bdi></b><small>{repoLabel(t.gh)}</small></span>
+          </a>
+        )}
+        {t.site && (
+          <a class="btn site" href={t.site} target="_blank" rel="noopener noreferrer">
+            <Icon name="globe" />
+            <span class="t"><b>{isAppStore(t.site) ? "App Store" : "الموقع الرسمي"}</b><small>{host(t.site)}</small></span>
+          </a>
+        )}
+      </div>
+    )}
   </div>
 </article>

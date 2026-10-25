@@ -201,6 +201,7 @@ activeBar.addEventListener("click", (e) => {
   if (b) clearFilter(b.dataset.key);
 });
 $("clear-all").addEventListener("click", () => clearFilter("all"));
+$("empty-reset").addEventListener("click", () => clearFilter("all"));
 
 function render() {
   syncProject();

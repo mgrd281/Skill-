@@ -3,11 +3,12 @@ import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
 import HeartLink from "../components/HeartLink.astro";
 import ThemeToggle from "../components/ThemeToggle.astro";
+import Icon from "../components/Icon.astro";
 import { tools, url } from "../lib/data";
 ---
 <Base title="المفضلة | دليل أدوات التصميم والتطوير" description="الأدوات التي حفظتها في المفضلة." path="/favorites" noindex>
   <div class="crumbrow">
-    <a class="crumb" href={url()}>← كل الأدوات</a>
+    <a class="crumb" href={url()}><Icon name="arrow-right" />كل الأدوات</a>
     <div class="actions"><ThemeToggle /><HeartLink /></div>
   </div>
   <header class="top">
@@ -23,10 +24,10 @@ import { tools, url } from "../lib/data";
   <main id="fav-main">
     <div class="grid" id="fav-grid"></div>
     <div class="favempty" id="fav-empty" hidden>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+      <span class="empty-ic heart"><Icon name="heart" /></span>
       <p>لم تحفظ أي أداة بعد.</p>
       <p class="sub">اضغط على القلب في أي أداة لتجدها هنا لاحقًا.</p>
-      <a class="btn site" href={url()}><span class="t"><b>تصفح الأدوات</b><small>&nbsp;</small></span></a>
+      <a class="btn-primary" href={url()}><Icon name="search" />تصفح الأدوات</a>
     </div>
   </main>
 

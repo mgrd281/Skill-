@@ -3,7 +3,8 @@ import Base from "../../layouts/Base.astro";
 import Card from "../../components/Card.astro";
 import HeartLink from "../../components/HeartLink.astro";
 import ThemeToggle from "../../components/ThemeToggle.astro";
-import { tools, projectById, categoryById, rich, isLatin, formatDate, host, isAppStore, repoLabel, url, statusBadges } from "../../lib/data";
+import Icon from "../../components/Icon.astro";
+import { tools, projectById, categoryById, rich, isLatin, formatDate, host, isAppStore, repoLabel, url, statusBadges, initials, categoryHue } from "../../lib/data";
 
 export function getStaticPaths() {
   return tools.map((t) => ({ params: { slug: t.slug }, props: { tool: t } }));
@@ -15,75 +16,94 @@ const related = tools.filter((x) => x.cat === t.cat && x.slug !== t.slug)
 const badges = statusBadges(t);
 const warns = badges.filter((b) => b.kind !== "ok");
 const plain = t.desc.length > 155 ? t.desc.slice(0, 152) + "..." : t.desc;
+const KIND: Record<string, string> = { Skill: "skill", MCP: "mcp", "مكتبة": "lib", "أداة": "tool", "موقع": "site", "منصة": "platform", "تطبيق": "app" };
+const date = formatDate(t.added.slice(0, 10));
 ---
 <Base title={`${t.name} | دليل أدوات التصميم والتطوير`} description={plain} path={`/tools/${t.slug}`}>
   <div class="crumbrow">
-    <a class="crumb" href={url()}>← كل الأدوات</a>
+    <a class="crumb" href={url()}><Icon name="arrow-right" />كل الأدوات</a>
     <div class="actions"><ThemeToggle /><HeartLink /></div>
   </div>
+
   <article class="tool">
-    <h1>{t.name}</h1>
-    <button type="button" class="fav favbtn-lg" data-fav={t.slug} data-name={t.name} aria-pressed="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-      <span class="fav-label">أضف إلى المفضلة</span>
-    </button>
-    <div class="meta">
-      <span class="tag">{isLatin(t.kind) ? <bdi>{t.kind}</bdi> : t.kind}</span>
-      {t.isNew && <span class="badge-new">جديد</span>}
-      {badges.map((b) => <span class={b.kind === "ok" ? "tag" : `tag tag-${b.kind}`} title={b.title}>{b.text}{b.text && b.latin ? " " : ""}{b.latin && <bdi>{b.latin}</bdi>}</span>)}
-      <span set:html={rich(cat.name)} />
-      {t.stars && <span class="stars" title="نجوم GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8z"/></svg>{t.stars}</span>}
-      <time class="addedchip lg" datetime={t.added} data-added={t.added} title={"أُضيفت إلى الدليل: " + formatDate(t.added.slice(0, 10))}>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
-        <span class="added-text">{formatDate(t.added.slice(0, 10))}</span>
-      </time>
-      {t.pushed && <span class="when">آخر تحديث للمستودع: <bdi>{formatDate(t.pushed)}</bdi></span>}
-    </div>
-    <p class="desc" set:html={rich(t.desc)} />
-    {warns.length > 0 && (
-      <ul class="notice">
-        {warns.map((b) => <li class={`n-${b.kind}`}>{b.title}</li>)}
-      </ul>
-    )}
-
-    {t.cmd && (
-      <>
-        <h2>التثبيت</h2>
-        <div class="cmd">
-          <pre tabindex="0" aria-label="أمر التثبيت"><code>{t.cmd}</code></pre>
-          <button type="button" class="copy" aria-label="نسخ أمر التثبيت">نسخ</button>
+    <header class="tool-head">
+      <span class="mono lg" style={`--h:${categoryHue(t.cat)}`} aria-hidden="true">{initials(t.name)}</span>
+      <div class="tool-title">
+        <a class="tool-cat" href={url("#cat-" + t.cat)} set:html={rich(cat.name)} />
+        <h1>{t.name}</h1>
+        <div class="tool-badges">
+          <span class="kind" data-k={KIND[t.kind] ?? "other"}>{isLatin(t.kind) ? <bdi>{t.kind}</bdi> : t.kind}</span>
+          {t.isNew && <span class="badge-new">جديد</span>}
+          {badges.map((b) => <span class={b.kind === "ok" ? "tag" : `tag tag-${b.kind}`} title={b.title}>{b.text}{b.text && b.latin ? " " : ""}{b.latin && <bdi>{b.latin}</bdi>}</span>)}
         </div>
-      </>
-    )}
+      </div>
+    </header>
 
-    <div class="links">
-      {t.gh ? (
-        <a class="btn gh" href={t.gh} target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m13.5 4-3 16"/></svg>
-          <span class="t"><b><bdi>GitHub</bdi></b><small>{repoLabel(t.gh)}</small></span>
-        </a>
-      ) : (
-        <span class="btn none"><span class="t"><b>بدون <bdi>GitHub</bdi></b><small>&nbsp;</small></span></span>
-      )}
-      {t.site ? (
-        <a class="btn site" href={t.site} target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg>
-          <span class="t"><b>{isAppStore(t.site) ? "App Store" : "الموقع الرسمي"}</b><small>{host(t.site)}</small></span>
-        </a>
-      ) : (
-        <span class="btn none"><span class="t"><b>لا يوجد موقع</b><small>&nbsp;</small></span></span>
-      )}
-    </div>
+    <div class="tool-grid">
+      <aside class="tool-side">
+        <button type="button" class="fav favbtn-lg" data-fav={t.slug} data-name={t.name} aria-pressed="false">
+          <Icon name="heart" />
+          <span class="fav-label">أضف إلى المفضلة</span>
+        </button>
+        {t.gh && (
+          <a class="btn gh" href={t.gh} target="_blank" rel="noopener noreferrer">
+            <Icon name="github" />
+            <span class="t"><b><bdi>GitHub</bdi></b><small>{repoLabel(t.gh)}</small></span>
+            <Icon name="external" class="ext" />
+          </a>
+        )}
+        {t.site && (
+          <a class="btn site" href={t.site} target="_blank" rel="noopener noreferrer">
+            <Icon name="globe" />
+            <span class="t"><b>{isAppStore(t.site) ? "App Store" : "الموقع الرسمي"}</b><small>{host(t.site)}</small></span>
+            <Icon name="external" class="ext" />
+          </a>
+        )}
+        <dl class="facts">
+          {t.stars && <div><dt><Icon name="star" />نجوم <bdi>GitHub</bdi></dt><dd class="num">{t.stars}</dd></div>}
+          <div><dt><Icon name="box" />النوع</dt><dd>{isLatin(t.kind) ? <bdi>{t.kind}</bdi> : t.kind}</dd></div>
+          <div><dt><Icon name="folder" />القسم</dt><dd set:html={rich(cat.name)} /></div>
+          {t.license && <div><dt><Icon name="scale" />الرخصة</dt><dd>{t.license === "none" ? "بدون رخصة" : t.license === "other" ? "رخصة خاصة" : <bdi>{t.license}</bdi>}</dd></div>}
+          <div><dt><Icon name="calendar" />أُضيفت</dt><dd><time class="addedchip" datetime={t.added} data-added={t.added} title={"أُضيفت إلى الدليل: " + date}><span class="added-text">{date}</span></time></dd></div>
+          {t.pushed && <div><dt><Icon name="clock" />آخر تحديث</dt><dd>{formatDate(t.pushed)}</dd></div>}
+        </dl>
+      </aside>
 
-    <h2>مفيد لمشاريع</h2>
-    <div class="uses">
-      {t.use.map((u) => <a class="usechip" href={url("#" + u)} set:html={rich(projectById(u)!.name)} />)}
+      <div class="tool-main">
+        <p class="desc" set:html={rich(t.desc)} />
+        {warns.length > 0 && (
+          <ul class="notice">
+            {warns.map((b) => <li class={`n-${b.kind}`}><Icon name="alert" /><span>{b.title}</span></li>)}
+          </ul>
+        )}
+
+        {t.cmd && (
+          <section class="tool-sec">
+            <h2><Icon name="terminal" />التثبيت</h2>
+            <div class="cmd">
+              <pre tabindex="0" aria-label="أمر التثبيت"><code>{t.cmd}</code></pre>
+              <button type="button" class="copy" aria-label="نسخ أمر التثبيت">
+                <Icon name="copy" class="ic-copy" /><Icon name="check" class="ic-check" /><span class="copy-t">نسخ</span>
+              </button>
+            </div>
+          </section>
+        )}
+
+        <section class="tool-sec">
+          <h2><Icon name="compass" />مفيد لمشاريع</h2>
+          <div class="uses">
+            {t.use.map((u) => <a class="usechip" href={url("#" + u)} set:html={rich(projectById(u)!.name)} />)}
+          </div>
+        </section>
+      </div>
     </div>
   </article>
 
   {related.length > 0 && (
-    <section class="related">
-      <h2>أدوات مشابهة في نفس القسم</h2>
+    <section class="related sec">
+      <div class="sec-head">
+        <h2><span class="sec-ic"><Icon name="layers" /></span>أدوات مشابهة في نفس القسم</h2>
+      </div>
       <div class="grid">{related.map((r) => <Card tool={r} />)}</div>
     </section>
   )}

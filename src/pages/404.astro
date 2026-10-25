@@ -1,19 +1,20 @@
 ---
 import Base from "../layouts/Base.astro";
 import ThemeToggle from "../components/ThemeToggle.astro";
+import Icon from "../components/Icon.astro";
 import HeartLink from "../components/HeartLink.astro";
 import { categories, rich, url } from "../lib/data";
 ---
 <Base title="الصفحة غير موجودة | دليل أدوات التصميم والتطوير" description="الصفحة التي طلبتها غير موجودة." path="/404" noindex>
   <div class="crumbrow">
-    <a class="crumb" href={url()}>← كل الأدوات</a>
+    <a class="crumb" href={url()}><Icon name="arrow-right" />كل الأدوات</a>
     <div class="actions"><ThemeToggle /><HeartLink /></div>
   </div>
   <header class="top">
     <h1>الصفحة غير موجودة</h1>
     <p class="lead">قد يكون الرابط قديمًا أو أُزيلت الأداة من الدليل. ابحث من الصفحة الرئيسية أو افتح أحد الأقسام.</p>
   </header>
-  <p><a class="btn site notfound-btn" href={url()}><span class="t"><b>العودة إلى كل الأدوات</b><small>&nbsp;</small></span></a></p>
+  <p><a class="btn-primary" href={url()}><Icon name="home" />العودة إلى كل الأدوات</a></p>
   <section class="build" aria-labelledby="nf-h">
     <h2 id="nf-h">الأقسام</h2>
     <div class="chips wrapchips">

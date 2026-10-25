@@ -45,12 +45,14 @@ export const categories: Category[] = categoriesJson;
 const rawProjects = projectsJson as Array<Omit<Project, "pickSlugs" | "count">>;
 
 // "جديد" تُشتق من تاريخ الإضافة (آخر 14 يومًا)، فتنتهي تلقائيًا بدل حقل يدوي يبقى مفعّلًا.
+// أدوات الدفعة الأولى التي أُطلق بها الدليل لا تُعدّ جديدة، وإلا حملت كل البطاقات الشارة.
 export const NEW_DAYS = 14;
 const buildTime = Date.now();
+const catalogStart = (toolsJson as any[]).reduce((m, t) => (t.added < m ? t.added : m), "9999");
 
 export const tools: Tool[] = (toolsJson as any[]).map((t, i) => ({
   ...t, order: i, starsN: parseStars(t.stars),
-  isNew: (buildTime - new Date(t.added).getTime()) / 864e5 <= NEW_DAYS,
+  isNew: t.added > catalogStart && (buildTime - new Date(t.added).getTime()) / 864e5 <= NEW_DAYS,
 }));
 
 export function inProject(t: Tool, p: { id: string; cats?: string[] }): boolean {
@@ -126,4 +128,17 @@ export function statusBadges(t: Tool, now = Date.now()): Badge[] {
     out.push({ kind: warn ? "warn" : "ok", text: "", latin: l, title: warn ? `رخصة ${l} لها شروط على الاستخدام التجاري: اقرأها` : `الرخصة: ${l}` });
   }
   return out;
+}
+
+// ---- هوية بصرية لكل أداة: حرفان ولون من قسمها ----
+export function initials(name: string): string {
+  const words = name.split(/[\s\-_/.]+/).filter((w) => /[A-Za-z0-9]/.test(w));
+  if (words.length >= 2) return (words[0][0] + words[1][0]).toUpperCase();
+  const w = (words[0] || name).replace(/[^A-Za-z0-9]/g, "");
+  return (w[0] || "?").toUpperCase() + (w[1] || "").toLowerCase();
+}
+// درجة لون لكل قسم بخطوة الزاوية الذهبية حتى تتباعد الألوان المتجاورة
+export function categoryHue(id: string): number {
+  const i = Math.max(0, categories.findIndex((c) => c.id === id));
+  return Math.round((221 + i * 137.508) % 360);
 }
