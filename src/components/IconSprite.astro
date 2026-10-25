@@ -1,0 +1,9 @@
+---
+// يرسم مرة واحدة في الصفحة كل أيقونة استُخدمت فيها، لتشير إليها عناصر <Icon> بـ <use>.
+// يجب أن يُعرض بعد كل محتوى الصفحة (انظر Base.astro).
+import { usedIcons } from "../lib/icon-sprite";
+const symbols = usedIcons(Astro.locals)
+  .map(([id, body]) => `<symbol id="${id}" viewBox="0 0 256 256" fill="currentColor">${body}</symbol>`)
+  .join("");
+---
+{symbols && <svg class="sprite" width="0" height="0" aria-hidden="true" set:html={symbols} />}

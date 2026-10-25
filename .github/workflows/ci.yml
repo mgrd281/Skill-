@@ -26,3 +26,5 @@ jobs:
         run: npm run build
         env:
           SITE_URL: https://example.invalid
+      - name: Check icons
+        run: npm run check-icons

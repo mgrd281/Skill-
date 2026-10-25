@@ -2,6 +2,7 @@ import toolsJson from "../../data/tools.json";
 import categoriesJson from "../../data/categories.json";
 import projectsJson from "../../data/projects.json";
 import meta from "../../data/meta.json";
+import type { IconName } from "./icons";
 
 export interface Tool {
   slug: string;
@@ -138,23 +139,23 @@ export function initials(name: string): string {
   return (w[0] || "?").toUpperCase() + (w[1] || "").toLowerCase();
 }
 
-// ---- أيقونة لكل نوع وقسم ونوع مشروع (من مجموعة Icon.astro، بلون واحد) ----
-const KIND_ICON: Record<string, string> = {
-  Skill: "sparkles", MCP: "plug", "مكتبة": "box", "أداة": "wrench", "موقع": "globe", "منصة": "layers", "تطبيق": "phone",
+// ---- أيقونة لكل نوع وقسم ونوع مشروع (أسماء Phosphor من src/lib/icons.ts) ----
+const KIND_ICON: Record<string, IconName> = {
+  Skill: "sparkle", MCP: "plug", "مكتبة": "package", "أداة": "wrench", "موقع": "globe", "منصة": "stack", "تطبيق": "device-mobile",
 };
-export const kindIcon = (kind: string): any => KIND_ICON[kind] ?? "box";
+export const kindIcon = (kind: string): IconName => KIND_ICON[kind] ?? "package";
 
-const CAT_ICON: Record<string, string> = {
-  design: "pen-tool", brandskills: "palette", animation: "wand", motiongfx: "video", shopmkt: "bag",
-  devskills: "code", mobskills: "phone", apple: "devices", vercel: "rocket", general: "sparkles",
+const CAT_ICON: Record<string, IconName> = {
+  design: "pen-nib", brandskills: "palette", animation: "magic-wand", motiongfx: "video-camera", shopmkt: "bag",
+  devskills: "code", mobskills: "device-mobile", apple: "devices", vercel: "rocket-launch", general: "sparkle",
   docs: "file-text", business: "briefcase", data: "database", mcp: "plug", quality: "gauge",
-  ui: "layout", icons: "shapes", finance: "receipt", infra: "server", analytics: "chart-line",
-  booking: "calendar-check", writing: "pen-line", prompts: "message",
+  ui: "layout", icons: "shapes", finance: "receipt", infra: "hard-drives", analytics: "chart-line-up",
+  booking: "calendar-check", writing: "pencil-simple-line", prompts: "chat-circle-text",
 };
-export const categoryIcon = (id: string): any => CAT_ICON[id] ?? "folder";
+export const categoryIcon = (id: string): IconName => CAT_ICON[id] ?? "folder";
 
-const PROJECT_ICON: Record<string, string> = {
-  shop: "bag", web: "browser", mobile: "phone", mac: "laptop", landing: "megaphone", dashboard: "chart-bars",
-  brand: "palette", video: "video", anim: "wand", booking: "calendar-check", finance: "receipt", claude: "terminal",
+const PROJECT_ICON: Record<string, IconName> = {
+  shop: "bag", web: "browser", mobile: "device-mobile", mac: "laptop", landing: "megaphone", dashboard: "chart-bar",
+  brand: "palette", video: "video-camera", anim: "magic-wand", booking: "calendar-check", finance: "receipt", claude: "terminal-window",
 };
-export const projectIcon = (id: string): any => PROJECT_ICON[id] ?? "compass";
+export const projectIcon = (id: string): IconName => PROJECT_ICON[id] ?? "compass";

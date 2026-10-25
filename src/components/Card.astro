@@ -35,7 +35,7 @@ const date = formatDate(t.added.slice(0, 10));
       <div class="c-meta">
         <span class="kind"><Icon name={kindIcon(t.kind)} />{isLatin(t.kind) ? <bdi>{t.kind}</bdi> : t.kind}</span>
         {t.stars && (
-          <span class="stars" title="نجوم GitHub"><Icon name="star" filled />{t.stars}</span>
+          <span class="stars" title="نجوم GitHub"><Icon name="star" weight="fill" />{t.stars}</span>
         )}
         <time class="addedchip" datetime={t.added} data-added={t.added} title={"أُضيفت إلى الدليل: " + date}>
           <Icon name="clock" /><span class="added-text">{date}</span>
@@ -45,12 +45,12 @@ const date = formatDate(t.added.slice(0, 10));
     <div class="c-act">
       {favBtn && (
         <button type="button" class="fav" data-fav={t.slug} data-name={t.name} aria-pressed="false" aria-label={`أضف ${t.name} إلى المفضلة`} title="أضف إلى المفضلة">
-          <Icon name="heart" />
+          <Icon name="heart" class="h-off" /><Icon name="heart" weight="fill" class="h-on" />
         </button>
       )}
       {hideBtn && (
         <button type="button" class="hide" data-hide={t.slug} aria-label={`إخفاء ${t.name} من عرضك`} title="إخفاء من عرضك (يمكن استعادتها)">
-          <Icon name="eye-off" />
+          <Icon name="eye-slash" />
         </button>
       )}
     </div>
@@ -81,7 +81,7 @@ const date = formatDate(t.added.slice(0, 10));
       <div class="cmd">
         <pre tabindex="0" aria-label="أمر التثبيت"><code>{t.cmd}</code></pre>
         <button type="button" class="copy" aria-label="نسخ أمر التثبيت">
-          <Icon name="copy" class="ic-copy" /><Icon name="check" class="ic-check" /><span class="copy-t">نسخ</span>
+          <Icon name="copy" class="ic-copy" /><Icon name="check" weight="bold" class="ic-check" /><span class="copy-t">نسخ</span>
         </button>
       </div>
     )}
@@ -89,12 +89,12 @@ const date = formatDate(t.added.slice(0, 10));
       <div class="links">
         {t.gh && (
           <a class="lnk" href={t.gh} target="_blank" rel="noopener noreferrer" aria-label={`GitHub: ${t.name}`} title={repoLabel(t.gh)}>
-            <Icon name="github" /><bdi>GitHub</bdi><Icon name="chevron" class="chev" />
+            <Icon name="github-logo" /><bdi>GitHub</bdi><Icon name="caret-left" class="chev" />
           </a>
         )}
         {t.site && (
           <a class="lnk" href={t.site} target="_blank" rel="noopener noreferrer" aria-label={`${isAppStore(t.site) ? "App Store" : "الموقع الرسمي"}: ${t.name}`} title={host(t.site)}>
-            <Icon name="globe" />{isAppStore(t.site) ? "App Store" : "الموقع الرسمي"}<Icon name="chevron" class="chev" />
+            <Icon name="globe" />{isAppStore(t.site) ? "App Store" : "الموقع الرسمي"}<Icon name="caret-left" class="chev" />
           </a>
         )}
       </div>

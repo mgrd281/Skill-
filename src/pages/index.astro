@@ -37,10 +37,10 @@ const appData = {
       </div>
       <ul class="nf-list" id="notif-list"></ul>
       <div class="nf-empty" id="notif-empty">
-        <span class="empty-ic"><Icon name="bell" /></span>
+        <span class="empty-ic"><Icon name="bell" weight="duotone" /></span>
         <p>لا جديد الآن</p>
       </div>
-      <a class="nf-foot" href={url("feed.xml")}><Icon name="rss" />اشترك في خلاصة <bdi>RSS</bdi><Icon name="chevron" class="chev" /></a>
+      <a class="nf-foot" href={url("feed.xml")}><Icon name="rss-simple" />اشترك في خلاصة <bdi>RSS</bdi><Icon name="caret-left" class="chev" /></a>
     </div>
   </div>
 
@@ -53,7 +53,7 @@ const appData = {
       </p>
       <div class="cta" style="--i:3">
         <button type="button" class="btn-primary" data-focus-search>ابحث عن أداة</button>
-        <a class="link-more" href="#build-h">ماذا تبني؟<Icon name="chevron" /></a>
+        <a class="link-more" href="#build-h">ماذا تبني؟<Icon name="caret-left" /></a>
       </div>
     </div>
 
@@ -65,7 +65,7 @@ const appData = {
             <b>{t.name}</b>
             <small set:html={rich(categoryById(t.cat).name)} />
           </span>
-          {t.stars && <span class="stars"><Icon name="star" filled />{t.stars}</span>}
+          {t.stars && <span class="stars"><Icon name="star" weight="fill" />{t.stars}</span>}
         </a>
       ))}
     </div>
@@ -81,16 +81,16 @@ const appData = {
   <div class="bar">
     <div class="bar-row">
       <div class="search">
-        <Icon name="search" />
+        <Icon name="magnifying-glass" />
         <input id="q" type="search" placeholder="ابحث عن أداة" autocomplete="off" aria-label="بحث" enterkeyhint="search" />
-        <button type="button" class="q-clear" id="q-clear" aria-label="مسح البحث" hidden><Icon name="x" /></button>
+        <button type="button" class="q-clear" id="q-clear" aria-label="مسح البحث" hidden><Icon name="x" weight="bold" /></button>
         <kbd class="q-kbd" aria-hidden="true">/</kbd>
       </div>
       <button type="button" class="cat-btn" id="cat-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="catpanel">
-        <Icon name="grid" />
+        <Icon name="squares-four" />
         <span class="cat-label" id="cat-label">كل الأقسام</span>
         <span class="cat-badge" id="cat-badge" hidden>0</span>
-        <Icon name="chevron" class="cat-chev" />
+        <Icon name="caret-left" class="cat-chev" />
       </button>
     </div>
   </div>
@@ -103,11 +103,11 @@ const appData = {
     </div>
     <div class="cp-body" id="chips">
       <div class="cp-toggles" role="group" aria-label="تصفية إضافية">
-        <button type="button" class="chip skillchip" data-id="skill"><Icon name="sparkles" /><span class="cl">المهارات فقط</span><span class="n"></span></button>
+        <button type="button" class="chip skillchip" data-id="skill"><Icon name="sparkle" /><span class="cl">المهارات فقط</span><span class="n"></span></button>
         <button type="button" class="chip newchip" data-id="new"><Icon name="clock" /><span class="cl">الجديد فقط</span><span class="n"></span></button>
       </div>
       <div class="cp-grid" role="group" aria-label="الأقسام">
-        <button type="button" class="chip" data-id="all"><Icon name="grid" /><span class="cl">كل الأقسام</span><span class="n">{total}</span></button>
+        <button type="button" class="chip" data-id="all"><Icon name="squares-four" /><span class="cl">كل الأقسام</span><span class="n">{total}</span></button>
         {categories.map((c) => (
           <button type="button" class="chip" data-id={c.id}><Icon name={categoryIcon(c.id)} /><span class="cl" set:html={rich(c.name)} /><span class="n"></span></button>
         ))}
@@ -120,7 +120,7 @@ const appData = {
     <div class="projects" id="projects">
       {projects.map((p) => (
         <button type="button" class="ptile" data-p={p.id} aria-pressed="false">
-          <span class="pico"><Icon name={projectIcon(p.id)} /></span>
+          <span class="pico"><Icon name={projectIcon(p.id)} weight="duotone" /></span>
           <span class="pl"><b set:html={rich(p.name)} /><small>{p.count} أداة</small></span>
         </button>
       ))}
@@ -150,7 +150,7 @@ const appData = {
           <small class="li-cat" set:html={rich(categoryById(t.cat).name)} />
           <span class="li-foot">
             <span class="mono sm" aria-hidden="true">{initials(t.name)}</span>
-            {t.stars && <span class="stars"><Icon name="star" filled />{t.stars}</span>}
+            {t.stars && <span class="stars"><Icon name="star" weight="fill" />{t.stars}</span>}
           </span>
         </a>
       ))}
@@ -163,9 +163,9 @@ const appData = {
       <details class="legend-wrap">
         <summary><Icon name="info" />ما معنى الشارات؟</summary>
         <ul class="legend">
-          <li><span class="kind"><Icon name="sparkles" /><bdi>Skill</bdi></span> تعليمات تضيفها إلى <bdi>Claude</bdi></li>
+          <li><span class="kind"><Icon name="sparkle" /><bdi>Skill</bdi></span> تعليمات تضيفها إلى <bdi>Claude</bdi></li>
           <li><span class="kind"><Icon name="plug" /><bdi>MCP</bdi></span> يربط <bdi>Claude</bdi> بأداة خارجية</li>
-          <li><span class="kind"><Icon name="box" />مكتبة</span> تُستخدم داخل كود الموقع</li>
+          <li><span class="kind"><Icon name="package" />مكتبة</span> تُستخدم داخل كود الموقع</li>
           <li><span class="kind"><Icon name="wrench" />أداة</span> برنامج تشغّله على جهازك</li>
           <li><span class="kind"><Icon name="globe" />موقع</span> تستخدمه من المتصفح مباشرة</li>
           <li><span class="badge-new">جديد</span> أُضيفت خلال آخر 14 يومًا</li>
@@ -176,7 +176,7 @@ const appData = {
       </details>
     </div>
     <div class="activebar" id="activebar" hidden>
-      <span class="l"><Icon name="filter" />فلاتر مفعّلة:</span>
+      <span class="l"><Icon name="funnel" />فلاتر مفعّلة:</span>
       <span class="afs" id="active-chips"></span>
       <button type="button" class="linkbtn" id="clear-all">إزالة كل الفلاتر</button>
     </div>
@@ -200,13 +200,13 @@ const appData = {
     </section>
     {categories.map((c) => (
       <section class="cat" id={"cat-" + c.id} data-cat-section={c.id} hidden>
-        <h2 class="cat-title"><span class="ct-ic"><Icon name={categoryIcon(c.id)} /></span><span set:html={rich(c.name)} /><span class="n">{tools.filter((t) => t.cat === c.id).length}</span></h2>
+        <h2 class="cat-title"><span class="ct-ic"><Icon name={categoryIcon(c.id)} weight="duotone" /></span><span set:html={rich(c.name)} /><span class="n">{tools.filter((t) => t.cat === c.id).length}</span></h2>
         <div class="grid" data-grid={c.id}></div>
-        <button type="button" class="sec-more" data-cat={c.id} hidden>عرض كل الـ <span class="sm-n"></span> في هذا القسم<Icon name="chevron" /></button>
+        <button type="button" class="sec-more" data-cat={c.id} hidden>عرض كل الـ <span class="sm-n"></span> في هذا القسم<Icon name="caret-left" /></button>
       </section>
     ))}
     <div class="empty" id="empty" hidden>
-      <span class="empty-ic"><Icon name="search-x" /></span>
+      <span class="empty-ic"><Icon name="magnifying-glass" weight="duotone" /></span>
       <p>لا توجد نتيجة مطابقة.</p>
       <p class="sub">جرّب كلمة أخرى، أو أزل الفلاتر لترى كل الأدوات.</p>
       <button type="button" class="btn-primary" id="empty-reset">إزالة كل الفلاتر</button>

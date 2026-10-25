@@ -16,6 +16,8 @@ import Icon from "../components/Icon.astro";
 import Logo from "../components/Logo.astro";
 import ThemeToggle from "../components/ThemeToggle.astro";
 import HeartLink from "../components/HeartLink.astro";
+import IconSprite from "../components/IconSprite.astro";
+import { useIcon } from "../lib/icon-sprite";
 import sansAr400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-400-normal.woff2?url";
 import sansAr700 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-700-normal.woff2?url";
 import sansLat400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-latin-400-normal.woff2?url";
@@ -23,6 +25,12 @@ import sansLat400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-ara
 interface Props { title: string; description: string; path?: string; noindex?: boolean }
 const { title, description, path = "/", noindex = false } = Astro.props;
 const canonical = new URL(path, Astro.site).href;
+// يُرسم محتوى الصفحة أولًا حتى تُعرف كل أيقوناتها قبل رسم IconSprite،
+// وتُسجَّل أيقونات الإطار (ThemeToggle وHeartLink وزر الأعلى) هنا لأنها تُرسم مع القالب.
+const navExtra = await Astro.slots.render("nav-extra");
+const main = await Astro.slots.render("default");
+const footer = await Astro.slots.render("footer");
+for (const n of ["moon", "sun", "heart", "arrow-up"] as const) useIcon(Astro.locals, n);
 const icon =
   "data:image/svg+xml," +
   encodeURIComponent(
@@ -67,7 +75,7 @@ const icon =
           <a href={url("favorites")}>المفضلة</a>
         </nav>
         <div class="actions">
-          <slot name="nav-extra" />
+          <Fragment set:html={navExtra} />
           <ThemeToggle />
           <HeartLink />
         </div>
@@ -75,13 +83,13 @@ const icon =
     </header>
 
     <div class="wrap" id="main" dir="rtl" lang="ar">
-      <slot />
+      <Fragment set:html={main} />
     </div>
 
     <footer class="foot">
       <div class="foot-in">
         <div class="foot-notes">
-          <slot name="footer" />
+          <Fragment set:html={footer} />
         </div>
         <div class="foot-bottom">
           <a class="brand sm" href={url()}><Logo size={22} /><span>دليل الأدوات</span></a>
@@ -97,6 +105,7 @@ const icon =
 
     <button type="button" class="totop" id="totop" aria-label="العودة إلى الأعلى" title="العودة إلى الأعلى"><Icon name="arrow-up" /></button>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <IconSprite />
   </body>
 </html>
 
