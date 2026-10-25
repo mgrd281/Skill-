@@ -526,7 +526,7 @@ a.btn.site:hover { border-color: var(--accent); }
 @media (pointer: coarse) {
   .chip { min-height: 44px; }
   #sort { min-height: 44px; font-size: 16px; }
-  .fav, .hide { width: 36px; height: 36px; }
+  .fav:not(.favbtn-lg), .hide { width: 36px; height: 36px; }
   .copy { min-height: 44px; }
   .cmd pre { padding-block: 12px; }
   .afchip, .pickbtn { min-height: 44px; }
