@@ -27,8 +27,9 @@ import { type Lang, LANGS, DEFAULT_LANG, dirOf, LANG_NAME, OG_LOCALE, href, t as
 // path: مسار الصفحة بدون بادئة اللغة ("/" أو "/tools/x"). كل صفحة موجودة بالعربية والألمانية.
 // switchPath: وجهة زر اللغة إن اختلفت عن path (صفحة 404 تفتح الرئيسية باللغة الأخرى)
 // image: صورة المشاركة (مسار داخل الموقع)، والافتراضي صورة الرئيسية بلغة الصفحة. jsonLd: بيانات منظمة لمحركات البحث
-interface Props { title: string; description: string; path?: string; switchPath?: string; noindex?: boolean; lang?: Lang; image?: string; imageAlt?: string; jsonLd?: object[] }
-const { title, description, path = "/", switchPath = path, noindex = false, lang = DEFAULT_LANG, image = `og/home-${lang}.png`, imageAlt = title, jsonLd = [] } = Astro.props;
+// expect: معرّف عنصر يُنتظر قبل أول رسم للصفحة، حتى يجده الانتقال بين الصفحات (أيقونة صفحة الأداة)
+interface Props { title: string; description: string; path?: string; switchPath?: string; noindex?: boolean; lang?: Lang; image?: string; imageAlt?: string; jsonLd?: object[]; expect?: string }
+const { title, description, path = "/", switchPath = path, noindex = false, lang = DEFAULT_LANG, image = `og/home-${lang}.png`, imageAlt = title, jsonLd = [], expect } = Astro.props;
 const t = dict(lang);
 const other: Lang = lang === "ar" ? "de" : "ar";
 const abs = (l: Lang) => new URL(href(l, path), Astro.site).href;
@@ -56,7 +57,11 @@ const icon =
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <script is:inline>try{var t=localStorage.getItem("toolkit-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}</script>
+    <!-- الانتقال بين الصفحات (تفاصيله في global.css، قسم "الانتقال بين الصفحات"). التفعيل هنا لا في ملف CSS:
+         Chromium يقرأه لحظة ظهور الصفحة الجديدة، وقد يسبق ذلك تطبيق ملف CSS الخارجي فيُلغى الانتقال. -->
+    <style is:inline>@media (prefers-reduced-motion: no-preference) { @view-transition { navigation: auto; } }</style>
+    <script is:inline>try{var t=localStorage.getItem("toolkit-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}addEventListener("pagereveal",function(e){var v=e.viewTransition;if(v){document.documentElement.classList.add("vt-in");v.ready.catch(function(){})}})</script>
+    {expect && <link rel="expect" href={"#" + expect} blocking="render" />}
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
@@ -148,4 +153,5 @@ const icon =
 <script>
   import "../scripts/ui.js";
   import "../scripts/feedback.js";
+  import "../scripts/page-transition.js";
 </script>

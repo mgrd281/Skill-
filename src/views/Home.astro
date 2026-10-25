@@ -3,6 +3,7 @@
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
 import Icon from "../components/Icon.astro";
+import Odometer from "../components/Odometer.astro";
 import { tools, categories, projects, starsUpdatedAt, formatDate, recentTools, initials, kindIcon, kindLabel, categoryIcon, projectIcon, txt, catName, projName, projAdvice } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
 interface Props { lang: Lang }
@@ -16,6 +17,8 @@ const byStars = [...tools].sort((a, b) => b.starsN - a.starsN || a.order - b.ord
 const rankOf = new Map<string, number>();
 byStars.filter((x) => x.starsN >= 0).forEach((x, i) => rankOf.set(x.slug, i + 1));
 const latest = recentTools.slice(0, 6);
+// المعرض المتحرك: أعلى ثلاث أدوات، ومع كل منها أول سطر من أمر تثبيتها (--n عدد خطوات الكتابة)
+const showcase = byStars.slice(0, 3).map((x) => ({ ...x, line: x.cmd ? x.cmd.split("\n")[0] : "" }));
 const skillCount = tools.filter((x) => x.kind === "Skill").length;
 const siteCount = tools.filter((x) => x.kind === "موقع").length;
 const appData = {
@@ -76,24 +79,37 @@ const kinds: Array<[string, any, string]> = [
       </ul>
     </div>
 
-    <div class="showcase" aria-hidden="true">
-      {byStars.slice(0, 3).map((x, i) => (
-        <a class={`show-card s${i + 1}`} href={href(lang, "tools/" + x.slug)} tabindex="-1">
-          <span class="mono">{initials(x.name)}</span>
-          <span class="show-t">
-            <b>{x.name}</b>
-            <small set:html={txt(catName(x.cat, lang), lang)} />
+    <!-- معرض متحرك: أعلى ثلاث أدوات تتبادل الواجهة، ومع كل بطاقة يُكتب أمر تثبيتها ثم يُنسخ (src/scripts/hero.js).
+         data-pos: الواجهة 0، والتالية 1، والسابقة 2. بلا سكربت أو مع تقليل الحركة يبقى المعرض ثابتًا. -->
+    <div class="showcase" aria-hidden="true" data-deck>
+      {showcase.map((x, i) => (
+        <a class="deck-card" data-pos={i} href={href(lang, "tools/" + x.slug)} tabindex="-1">
+          <span class="show-card">
+            <span class="show-head">
+              <span class="mono">{initials(x.name)}</span>
+              <span class="show-t">
+                <span class="show-name"><span class="rank" data-top={i + 1}>#{i + 1}</span><b>{x.name}</b></span>
+                <small set:html={txt(catName(x.cat, lang), lang)} />
+              </span>
+              {x.stars && <span class="stars"><Icon name="star" weight="fill" />{x.stars}</span>}
+            </span>
+            {x.line && (
+              <span class="show-cmd">
+                <span class="show-ps">$</span>
+                <code style={`--n:${Math.min(x.line.length, 36)}`}>{x.line}</code>
+                <span class="show-copy"><Icon name="copy" class="ic-copy" /><Icon name="check" weight="bold" class="ic-check" /></span>
+              </span>
+            )}
           </span>
-          {x.stars && <span class="stars"><Icon name="star" weight="fill" />{x.stars}</span>}
         </a>
       ))}
     </div>
 
     <dl class="stats">
-      <div><dt>{t.statTools}</dt><dd>{total}</dd></div>
-      <div><dt set:html={t.statSkills_h} /><dd>{skillCount}</dd></div>
-      <div><dt>{t.statSites}</dt><dd>{siteCount}</dd></div>
-      <div><dt>{t.statCats}</dt><dd>{categories.length}</dd></div>
+      <div><dt>{t.statTools}</dt><dd><Odometer n={total} /></dd></div>
+      <div><dt set:html={t.statSkills_h} /><dd><Odometer n={skillCount} /></dd></div>
+      <div><dt>{t.statSites}</dt><dd><Odometer n={siteCount} /></dd></div>
+      <div><dt>{t.statCats}</dt><dd><Odometer n={categories.length} /></dd></div>
     </dl>
   </header>
 
@@ -122,13 +138,13 @@ const kinds: Array<[string, any, string]> = [
     </div>
     <div class="cp-body" id="chips">
       <div class="cp-toggles" role="group" aria-label={t.moreFilters}>
-        <button type="button" class="chip skillchip" data-id="skill"><Icon name="sparkle" /><span class="cl">{t.onlySkills}</span><span class="n"></span></button>
-        <button type="button" class="chip newchip" data-id="new"><Icon name="clock" /><span class="cl">{t.onlyNew}</span><span class="n"></span></button>
+        <button type="button" class="chip skillchip" data-id="skill" style="--ci:0"><Icon name="sparkle" /><span class="cl">{t.onlySkills}</span><span class="n"></span></button>
+        <button type="button" class="chip newchip" data-id="new" style="--ci:1"><Icon name="clock" /><span class="cl">{t.onlyNew}</span><span class="n"></span></button>
       </div>
       <div class="cp-grid" role="group" aria-label={t.catPanelTitle}>
-        <button type="button" class="chip" data-id="all"><Icon name="squares-four" /><span class="cl">{t.allCats}</span><span class="n">{total}</span></button>
-        {categories.map((c) => (
-          <button type="button" class="chip" data-id={c.id}><Icon name={categoryIcon(c.id)} /><span class="cl" set:html={txt(catName(c.id, lang), lang)} /><span class="n"></span></button>
+        <button type="button" class="chip" data-id="all" style="--ci:2"><Icon name="squares-four" /><span class="cl">{t.allCats}</span><span class="n">{total}</span></button>
+        {categories.map((c, i) => (
+          <button type="button" class="chip" data-id={c.id} style={`--ci:${i + 3}`}><Icon name={categoryIcon(c.id)} /><span class="cl" set:html={txt(catName(c.id, lang), lang)} /><span class="n"></span></button>
         ))}
       </div>
     </div>
@@ -137,8 +153,8 @@ const kinds: Array<[string, any, string]> = [
   <section class="band alt build" aria-labelledby="build-h">
     <h2 class="sec-title" id="build-h" set:html={t.buildTitle_h} />
     <div class="projects" id="projects">
-      {projects.map((p) => (
-        <button type="button" class="ptile" data-p={p.id} aria-pressed="false">
+      {projects.map((p, i) => (
+        <button type="button" class="ptile" data-p={p.id} aria-pressed="false" style={`--pi:${i}`}>
           <span class="pico"><Icon name={projectIcon(p.id)} weight="duotone" /></span>
           <span class="pl"><b set:html={txt(projName(p, lang), lang)} /><small>{t.nTools(p.count)}</small></span>
         </button>
@@ -245,6 +261,7 @@ const kinds: Array<[string, any, string]> = [
   import { initFav } from "../scripts/fav.js";
   import { initDates } from "../scripts/dates.js";
   import "../scripts/filter.js";
+  import "../scripts/hero.js";
   initCopy(document);
   initFav();
   initDates();

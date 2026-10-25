@@ -1,0 +1,8 @@
+---
+// رقم تدور خاناته حتى قيمته حين يظهر (src/scripts/hero.js).
+// القيمة الحقيقية نص مخفي لقارئات الشاشة ومحركات البحث، والخانات زخرفية تقف على القيمة النهائية
+// مباشرة إن لم يعمل السكربت أو مع تقليل الحركة، فلا يرى أحد رقمًا خاطئًا.
+interface Props { n: number }
+const s = String(Astro.props.n);
+---
+<span class="sr">{s}</span><span class="odo" aria-hidden="true">{[...s].map((ch, i) => /\d/.test(ch) ? <span class="odo-d" style={`--d:${ch};--i:${i}`} /> : <span>{ch}</span>)}</span>

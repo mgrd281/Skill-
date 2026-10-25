@@ -38,7 +38,7 @@ if (x.gh) jsonLd.push({
   ...(x.license && !["none", "other"].includes(x.license) ? { license: `https://spdx.org/licenses/${x.license}.html` } : {}),
 });
 ---
-<Base title={t.toolTitle(x.name)} description={plain} path={`/tools/${x.slug}`} lang={lang} image={`og/${x.slug}.png`} imageAlt={x.name} jsonLd={jsonLd}>
+<Base title={t.toolTitle(x.name)} description={plain} path={`/tools/${x.slug}`} lang={lang} image={`og/${x.slug}.png`} imageAlt={x.name} jsonLd={jsonLd} expect="tool-icon">
   <article class="product">
     <header class="p-hero">
       <nav class="p-crumb" aria-label={t.crumbAria}>
@@ -46,7 +46,7 @@ if (x.gh) jsonLd.push({
         <Icon name={fwd} />
         <a href={href(lang, "#cat-" + x.cat)}><Icon name={categoryIcon(x.cat)} /><span set:html={txt(cat, lang)} /></a>
       </nav>
-      <span class="mono xl" aria-hidden="true">{initials(x.name)}</span>
+      <span class="mono xl" id="tool-icon" aria-hidden="true">{initials(x.name)}</span>
       <h1>{x.name}</h1>
       <div class="p-badges">
         <span class="kind"><Icon name={kindIcon(x.kind)} /><Fragment set:html={kindHtml} /></span>
