@@ -1,4 +1,5 @@
 // المفضلة: قلب على كل أداة، والقائمة تُحفظ في متصفح الزائر وتظهر في صفحة /favorites
+import { L, fmt } from "../i18n/client.js";
 const KEY = "toolkit-fav-v1";
 let favs = load();
 const listeners = [];
@@ -40,17 +41,17 @@ export function sync() {
     const on = favs.includes(b.dataset.fav);
     b.setAttribute("aria-pressed", on ? "true" : "false");
     const name = b.dataset.name || "";
-    b.setAttribute("aria-label", on ? "إزالة " + name + " من المفضلة" : "أضف " + name + " إلى المفضلة");
-    b.title = on ? "إزالة من المفضلة" : "أضف إلى المفضلة";
+    b.setAttribute("aria-label", fmt(on ? L.favRemove : L.favAdd, { name }));
+    b.title = on ? L.favRemoveTitle : L.favAddTitle;
     const label = b.querySelector(".fav-label");
-    if (label) label.textContent = on ? "في المفضلة" : "أضف إلى المفضلة";
+    if (label) label.textContent = on ? L.favOn : L.favOff;
   });
   document.querySelectorAll(".favcount").forEach((c) => {
     c.hidden = favs.length === 0;
     c.textContent = favs.length > 99 ? "99+" : String(favs.length);
   });
   document.querySelectorAll(".heartlink").forEach((a) => {
-    a.setAttribute("aria-label", favs.length ? "المفضلة: " + favs.length + " أداة" : "المفضلة");
+    a.setAttribute("aria-label", favs.length ? fmt(L.favsN, { n: favs.length }) : L.favs);
   });
 }
 

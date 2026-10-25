@@ -1,5 +1,6 @@
 // تفاصيل الواجهة المشتركة بين كل الصفحات: إشعار قصير، زر العودة للأعلى، اختصار البحث،
 // توسيع مشاريع البطاقة، وظل الشريط اللاصق عند التمرير.
+import { L, homePath } from "../i18n/client.js";
 const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const BASE = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 
@@ -58,12 +59,12 @@ document.addEventListener("click", (e) => {
     more.dataset.label = more.dataset.label || more.textContent;
     const open = more.closest(".uses").classList.toggle("open");
     more.setAttribute("aria-expanded", open ? "true" : "false");
-    more.textContent = open ? "أقل" : more.dataset.label;
+    more.textContent = open ? L.less : more.dataset.label;
     return;
   }
   // خارج الصفحة الرئيسية: شريحة المشروع تفتح الرئيسية مفلترةً بذلك المشروع
   const chip = e.target.closest("button.usechip");
-  if (chip && !document.getElementById("list")) window.location.href = BASE + "#" + chip.dataset.p;
+  if (chip && !document.getElementById("list")) window.location.href = homePath(BASE) + "#" + chip.dataset.p;
 });
 
 // ظل خفيف للشريط اللاصق حين يلتصق بأعلى الشاشة

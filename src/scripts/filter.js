@@ -1,6 +1,7 @@
 // الفلترة والبحث والترتيب في الصفحة الرئيسية. الصفحة كاملة تُرسم وقت البناء،
 // وهذا السكربت يخفي ويُظهر ويعيد ترتيب البطاقات فقط.
 import { relative } from "./dates.js";
+import { L, fmt } from "../i18n/client.js";
 const KEY = "toolkit-filter-v3";
 const data = JSON.parse(document.getElementById("app-data").textContent);
 const projectById = (id) => data.projects.find((p) => p.id === id) || null;
@@ -110,7 +111,7 @@ function syncChips() {
     b.setAttribute("aria-pressed", on ? "true" : "false");
   });
   // زر "الأقسام": اسم القسم المختار وعدد خيارات التصفية الإضافية
-  $("cat-label").textContent = state.cat === "all" ? "كل الأقسام" : catLabel(state.cat);
+  $("cat-label").textContent = state.cat === "all" ? L.catBtnAll : catLabel(state.cat);
   const extra = (state.onlyNew ? 1 : 0) + (state.onlySkills ? 1 : 0);
   $("cat-badge").hidden = extra === 0;
   $("cat-badge").textContent = extra;
@@ -141,7 +142,7 @@ function renderList() {
     const sorted = [...visible].sort(byNew
       ? (a, b) => b.added.localeCompare(a.added) || b.order - a.order
       : (a, b) => b.starsN - a.starsN || a.order - b.order);
-    $("flat-title").textContent = byNew ? "الأحدث إضافةً أولًا." : "مرتبة حسب نجوم GitHub.";
+    $("flat-title").textContent = byNew ? L.byNew : L.byStars;
     let rank = 0;
     sorted.forEach((c, i) => {
       starsGrid.appendChild(c.el);
@@ -154,9 +155,9 @@ function renderList() {
     sections.forEach((s) => { s.el.hidden = true; });
     const left = sorted.length - state.limit;
     moreBtn.hidden = left <= 0;
-    moreN.textContent = left > 0 ? "(" + left + " أخرى)" : "";
+    moreN.textContent = left > 0 ? fmt(L.more, { n: left }) : "";
   } else {
-    $("flat-title").textContent = "مقسّمة حسب القسم.";
+    $("flat-title").textContent = L.byCat;
     starsSection.hidden = true;
     moreBtn.hidden = true;
     cards.forEach((c) => { c.rankEl.hidden = true; });
@@ -184,9 +185,9 @@ function renderList() {
   }
   $("flat-n").textContent = visible.size;
   emptyEl.hidden = visible.size !== 0;
-  statusEl.textContent = "يظهر " + visible.size + " من " + data.total + (p ? " · " + p.name : "");
+  statusEl.textContent = fmt(L.status, { n: visible.size, total: data.total }) + (p ? " · " + p.name : "");
   $("hiddenbar").hidden = hidden.size === 0;
-  $("hidden-n").textContent = "مخفية من عرضك: " + hidden.size;
+  $("hidden-n").textContent = fmt(L.hiddenN, { n: hidden.size });
 }
 
 const activeBar = $("activebar"), activeChips = $("active-chips");
@@ -200,16 +201,16 @@ function catLabel(id) {
 function syncActive() {
   const items = [];
   const p = projectById(state.project);
-  if (p) items.push(["project", "المشروع: " + p.name]);
-  if (state.cat !== "all") items.push(["cat", "القسم: " + catLabel(state.cat)]);
-  if (state.onlyNew) items.push(["onlyNew", "الجديد فقط"]);
-  if (state.onlySkills) items.push(["onlySkills", "المهارات فقط"]);
-  if (state.q) items.push(["q", "بحث: " + state.q]);
+  if (p) items.push(["project", L.fProject + p.name]);
+  if (state.cat !== "all") items.push(["cat", L.fCat + catLabel(state.cat)]);
+  if (state.onlyNew) items.push(["onlyNew", L.fNew]);
+  if (state.onlySkills) items.push(["onlySkills", L.fSkills]);
+  if (state.q) items.push(["q", L.fSearch + state.q]);
   activeChips.textContent = "";
   items.forEach(([key, text]) => {
     const b = document.createElement("button");
     b.type = "button"; b.className = "afchip"; b.dataset.key = key;
-    b.setAttribute("aria-label", "إزالة الفلتر: " + text);
+    b.setAttribute("aria-label", L.fRemove + text);
     b.append(text + " ×");
     activeChips.append(b);
   });
@@ -352,13 +353,21 @@ moreBtn.addEventListener("click", () => {
 
 // ---- لوحة الأقسام: قائمة منسدلة على الشاشات الكبيرة، وورقة من الأسفل على الجوال ----
 const catBtn = $("cat-btn"), catPanel = $("catpanel"), catBack = $("cat-backdrop");
+const sheetMq = window.matchMedia("(max-width: 700px)");
 function toggleCats(open) {
   if (open === !catPanel.hidden) return;
   catPanel.hidden = !open;
   catBack.hidden = !open;
   catBtn.setAttribute("aria-expanded", open ? "true" : "false");
   if (open) {
-    const r = document.querySelector(".bar").getBoundingClientRect();
+    const bar = document.querySelector(".bar");
+    let r = bar.getBoundingClientRect();
+    // على الشاشات الكبيرة تنزل اللوحة تحت الشريط: إن كان الشريط في أسفل الشاشة فلن تجد مكانًا،
+    // فننقل الشريط إلى أعلى الشاشة أولًا (ويلتصق هناك). على الجوال اللوحة ورقة من الأسفل فلا حاجة.
+    if (r.bottom > window.innerHeight * 0.55 && !sheetMq.matches) {
+      window.scrollTo({ top: window.scrollY + r.top, behavior: "instant" });
+      r = bar.getBoundingClientRect();
+    }
     catPanel.style.setProperty("--top", Math.max(8, r.bottom + 8) + "px");
     (catPanel.querySelector('.chip[aria-pressed="true"]') || catPanel.querySelector(".chip")).focus({ preventScroll: true });
   } else if (catPanel.contains(document.activeElement) || document.activeElement === document.body) {
@@ -394,7 +403,7 @@ function refreshBell() {
   const list = unreadList();
   bellN.hidden = list.length === 0;
   bellN.textContent = list.length > 9 ? "9+" : String(list.length);
-  bell.setAttribute("aria-label", list.length ? "آخر الأدوات المضافة: " + list.length + " جديدة" : "آخر الأدوات المضافة");
+  bell.setAttribute("aria-label", list.length ? fmt(L.bellN, { n: list.length }) : L.bell);
   // القائمة تعرض دائمًا آخر الأدوات المضافة، وما لم تقرأه بعد يحمل نقطة زرقاء
   const unreadSet = new Set(list.map((r) => r.slug));
   const latest = data.recent.filter((r) => !hidden.has(r.slug)).slice(0, 8);
@@ -416,7 +425,7 @@ function refreshBell() {
     a.append(mono, t);
     if (unread) {
       const dot = document.createElement("span"); dot.className = "nf-dot";
-      const sr = document.createElement("span"); sr.className = "sr"; sr.textContent = "غير مقروء";
+      const sr = document.createElement("span"); sr.className = "sr"; sr.textContent = L.unread;
       a.append(dot, sr);
     }
     li.append(a);

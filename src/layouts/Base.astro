@@ -11,7 +11,6 @@ import "@fontsource/ibm-plex-sans-arabic/latin-700.css";
 import "@fontsource/ibm-plex-mono/latin-400.css";
 import "@fontsource/ibm-plex-mono/latin-500.css";
 import "../styles/global.css";
-import { url } from "../lib/data";
 import Icon from "../components/Icon.astro";
 import Logo from "../components/Logo.astro";
 import ThemeToggle from "../components/ThemeToggle.astro";
@@ -21,16 +20,25 @@ import { useIcon } from "../lib/icon-sprite";
 import sansAr400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-400-normal.woff2?url";
 import sansAr700 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-700-normal.woff2?url";
 import sansLat400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-latin-400-normal.woff2?url";
+import sansLat700 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-latin-700-normal.woff2?url";
+import { type Lang, LANGS, DEFAULT_LANG, dirOf, LANG_NAME, OG_LOCALE, href, t as dict } from "../i18n";
 
-interface Props { title: string; description: string; path?: string; noindex?: boolean }
-const { title, description, path = "/", noindex = false } = Astro.props;
-const canonical = new URL(path, Astro.site).href;
+// path: مسار الصفحة بدون بادئة اللغة ("/" أو "/tools/x"). كل صفحة موجودة بالعربية والألمانية.
+// switchPath: وجهة زر اللغة إن اختلفت عن path (صفحة 404 تفتح الرئيسية باللغة الأخرى)
+interface Props { title: string; description: string; path?: string; switchPath?: string; noindex?: boolean; lang?: Lang }
+const { title, description, path = "/", switchPath = path, noindex = false, lang = DEFAULT_LANG } = Astro.props;
+const t = dict(lang);
+const other: Lang = lang === "ar" ? "de" : "ar";
+const abs = (l: Lang) => new URL(href(l, path), Astro.site).href;
+const canonical = abs(lang);
+// العربية تحتاج خطها العربي أولًا، والألمانية الحروف اللاتينية فقط
+const preloads = lang === "ar" ? [sansAr400, sansAr700, sansLat400] : [sansLat400, sansLat700];
 // يُرسم محتوى الصفحة أولًا حتى تُعرف كل أيقوناتها قبل رسم IconSprite،
 // وتُسجَّل أيقونات الإطار (ThemeToggle وHeartLink وزر الأعلى) هنا لأنها تُرسم مع القالب.
 const navExtra = await Astro.slots.render("nav-extra");
 const main = await Astro.slots.render("default");
 const footer = await Astro.slots.render("footer");
-for (const n of ["moon", "sun", "heart", "arrow-up"] as const) useIcon(Astro.locals, n);
+for (const n of ["moon", "sun", "heart", "arrow-up", "translate"] as const) useIcon(Astro.locals, n);
 const icon =
   "data:image/svg+xml," +
   encodeURIComponent(
@@ -38,7 +46,7 @@ const icon =
   );
 ---
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang={lang} dir={dirOf(lang)}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -47,42 +55,48 @@ const icon =
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex" />}
+    {!noindex && LANGS.map((l) => <link rel="alternate" hreflang={l} href={abs(l)} />)}
+    {!noindex && <link rel="alternate" hreflang="x-default" href={abs(DEFAULT_LANG)} />}
     <link rel="icon" href={icon} />
-    <link rel="apple-touch-icon" href={url("apple-touch-icon.png")} />
+    <link rel="apple-touch-icon" href={href(DEFAULT_LANG, "apple-touch-icon.png")} />
     <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
-    <link rel="alternate" type="application/rss+xml" title="أحدث الأدوات المضافة" href={new URL("feed.xml", Astro.site).href} />
-    {[sansAr400, sansAr700, sansLat400].map((f) => <link rel="preload" href={f} as="font" type="font/woff2" crossorigin />)}
+    <link rel="alternate" type="application/rss+xml" title={t.rssTitle} href={new URL(href(lang, "feed.xml"), Astro.site).href} />
+    {preloads.map((f) => <link rel="preload" href={f} as="font" type="font/woff2" crossorigin />)}
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:locale" content={OG_LOCALE[lang]} />
+    <meta property="og:locale:alternate" content={OG_LOCALE[other]} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta name="twitter:card" content="summary" />
   </head>
   <body>
-    <a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+    <a class="skip" href="#main">{t.skip}</a>
     <header class="gnav">
       <div class="gnav-in">
-        <a class="brand" href={url()} aria-label="دليل الأدوات: الصفحة الرئيسية">
+        <a class="brand" href={href(lang)} aria-label={t.homeAria}>
           <Logo size={28} />
-          <span>دليل الأدوات</span>
+          <span>{t.siteName}</span>
         </a>
-        <nav class="gnav-links" aria-label="التنقل الرئيسي">
-          <a href={url("#list")}>الأدوات</a>
-          <a href={url("#build-h")}>ماذا تبني؟</a>
-          <a href={url("#latest-h")}>الأحدث</a>
-          <a href={url("favorites")}>المفضلة</a>
+        <nav class="gnav-links" aria-label={t.navAria}>
+          <a href={href(lang, "#list")}>{t.navTools}</a>
+          <a href={href(lang, "#build-h")}>{t.navBuild}</a>
+          <a href={href(lang, "#latest-h")}>{t.navLatest}</a>
+          <a href={href(lang, "favorites")}>{t.navFavs}</a>
         </nav>
         <div class="actions">
+          <a class="bell langsw" href={href(other, switchPath)} hreflang={other} aria-label={t.langSwitchAria} title={LANG_NAME[other]}>
+            <Icon name="translate" /><span class="ls-t" lang={other}>{LANG_NAME[other]}</span>
+          </a>
           <Fragment set:html={navExtra} />
-          <ThemeToggle />
-          <HeartLink />
+          <ThemeToggle lang={lang} />
+          <HeartLink lang={lang} />
         </div>
       </div>
     </header>
 
-    <div class="wrap" id="main" dir="rtl" lang="ar">
+    <div class="wrap" id="main">
       <Fragment set:html={main} />
     </div>
 
@@ -92,18 +106,23 @@ const icon =
           <Fragment set:html={footer} />
         </div>
         <div class="foot-bottom">
-          <a class="brand sm" href={url()}><Logo size={22} /><span>دليل الأدوات</span></a>
-          <nav class="foot-nav" aria-label="روابط الموقع">
-            <a href={url()}>الرئيسية</a>
-            <a href={url("favorites")}>المفضلة</a>
-            <a href={url("feed.xml")}><bdi>RSS</bdi></a>
+          <a class="brand sm" href={href(lang)}><Logo size={22} /><span>{t.siteName}</span></a>
+          <nav class="foot-nav" aria-label={t.footNavAria}>
+            <a href={href(lang)}>{t.home}</a>
+            <a href={href(lang, "favorites")}>{t.navFavs}</a>
+            <a href={href(lang, "feed.xml")}><bdi>RSS</bdi></a>
           </nav>
-          <p class="foot-copy">البيانات من <bdi>GitHub</bdi> والمواقع الرسمية، وتُحدَّث النجوم أسبوعيًا.</p>
+          <nav class="foot-lang" aria-label={t.footLangAria}>
+            {LANGS.map((l) => l === lang
+              ? <span aria-current="true" lang={l}>{LANG_NAME[l]}</span>
+              : <a href={href(l, switchPath)} hreflang={l} lang={l}>{LANG_NAME[l]}</a>)}
+          </nav>
+          <p class="foot-copy" set:html={t.footCopy_h} />
         </div>
       </div>
     </footer>
 
-    <button type="button" class="totop" id="totop" aria-label="العودة إلى الأعلى" title="العودة إلى الأعلى"><Icon name="arrow-up" /></button>
+    <button type="button" class="totop" id="totop" aria-label={t.toTop} title={t.toTop}><Icon name="arrow-up" /></button>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <IconSprite />
   </body>

@@ -1,94 +1,117 @@
 [
   {
     "id": "design",
-    "name": "مهارات التصميم"
+    "name": "مهارات التصميم",
+    "name_de": "Design-Skills"
   },
   {
     "id": "brandskills",
-    "name": "الهوية والعلامة التجارية"
+    "name": "الهوية والعلامة التجارية",
+    "name_de": "Branding & Markenidentität"
   },
   {
     "id": "animation",
-    "name": "أنيميشن للمواقع والتطبيقات"
+    "name": "أنيميشن للمواقع والتطبيقات",
+    "name_de": "Animation für Websites & Apps"
   },
   {
     "id": "motiongfx",
-    "name": "موشن غرافيك وفيديو"
+    "name": "موشن غرافيك وفيديو",
+    "name_de": "Motion Graphics & Video"
   },
   {
     "id": "shopmkt",
-    "name": "مهارات المتجر والتسويق"
+    "name": "مهارات المتجر والتسويق",
+    "name_de": "Shop- & Marketing-Skills"
   },
   {
     "id": "devskills",
-    "name": "مهارات البرمجة والأمان"
+    "name": "مهارات البرمجة والأمان",
+    "name_de": "Entwicklungs- & Sicherheits-Skills"
   },
   {
     "id": "mobskills",
-    "name": "مهارات الجوال"
+    "name": "مهارات الجوال",
+    "name_de": "Mobile-Skills"
   },
   {
     "id": "apple",
-    "name": "iPhone وMac"
+    "name": "iPhone وMac",
+    "name_de": "iPhone & Mac"
   },
   {
     "id": "vercel",
-    "name": "Vercel والنشر"
+    "name": "Vercel والنشر",
+    "name_de": "Vercel & Deployment"
   },
   {
     "id": "general",
-    "name": "مهارات عامة"
+    "name": "مهارات عامة",
+    "name_de": "Allgemeine Skills"
   },
   {
     "id": "docs",
-    "name": "مهارات المستندات والإنتاجية"
+    "name": "مهارات المستندات والإنتاجية",
+    "name_de": "Dokumente & Produktivität"
   },
   {
     "id": "business",
-    "name": "مهارات الأعمال والإدارة"
+    "name": "مهارات الأعمال والإدارة",
+    "name_de": "Business & Management"
   },
   {
     "id": "data",
-    "name": "مهارات البيانات والبحث"
+    "name": "مهارات البيانات والبحث",
+    "name_de": "Daten & Recherche"
   },
   {
     "id": "mcp",
-    "name": "خوادم MCP"
+    "name": "خوادم MCP",
+    "name_de": "MCP-Server"
   },
   {
     "id": "quality",
-    "name": "فحص المواقع والجودة"
+    "name": "فحص المواقع والجودة",
+    "name_de": "Website-Prüfung & Qualität"
   },
   {
     "id": "ui",
-    "name": "مكونات الواجهات والأزرار"
+    "name": "مكونات الواجهات والأزرار",
+    "name_de": "UI-Komponenten & Buttons"
   },
   {
     "id": "icons",
-    "name": "أيقونات"
+    "name": "أيقونات",
+    "name_de": "Icons"
   },
   {
     "id": "finance",
-    "name": "فواتير وضرائب ومحاسبة"
+    "name": "فواتير وضرائب ومحاسبة",
+    "name_de": "Rechnungen, Steuern & Buchhaltung"
   },
   {
     "id": "infra",
-    "name": "بنية وتشغيل"
+    "name": "بنية وتشغيل",
+    "name_de": "Infrastruktur & Betrieb"
   },
   {
     "id": "analytics",
-    "name": "تحليلات الزوار"
+    "name": "تحليلات الزوار",
+    "name_de": "Besucher-Analytics"
   },
   {
     "id": "booking",
-    "name": "مواعيد وأنظمة طبية"
+    "name": "مواعيد وأنظمة طبية",
+    "name_de": "Termine & Medizinsysteme"
   },
   {
     "id": "writing",
-    "name": "مواقع الكتابة والتدقيق"
+    "name": "مواقع الكتابة والتدقيق",
+    "name_de": "Schreib- & Korrektur-Websites"
   },
   {
     "id": "prompts",
-    "name": "مواقع البرومبت"
+    "name": "مواقع البرومبت",
+    "name_de": "Prompt-Websites"
   }
 ]

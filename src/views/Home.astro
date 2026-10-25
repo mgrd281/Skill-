@@ -1,0 +1,242 @@
+---
+// الصفحة الرئيسية بلغة معينة. تُبنى من src/pages/index.astro (العربية) وsrc/pages/de/index.astro (الألمانية).
+import Base from "../layouts/Base.astro";
+import Card from "../components/Card.astro";
+import Icon from "../components/Icon.astro";
+import { tools, categories, projects, starsUpdatedAt, formatDate, recentTools, initials, kindIcon, kindLabel, categoryIcon, projectIcon, txt, catName, projName, projAdvice } from "../lib/data";
+import { type Lang, href, fwdIcon, t as dict } from "../i18n";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict(lang);
+const fwd = fwdIcon(lang);
+
+const total = tools.length;
+// الترتيب الافتراضي: الأعلى نجومًا أولًا (والتي بلا نجوم في النهاية)، ويُحسب وقت البناء فيتجدد مع تحديث النجوم الأسبوعي
+const byStars = [...tools].sort((a, b) => b.starsN - a.starsN || a.order - b.order);
+const rankOf = new Map<string, number>();
+byStars.filter((x) => x.starsN >= 0).forEach((x, i) => rankOf.set(x.slug, i + 1));
+const latest = recentTools.slice(0, 6);
+const skillCount = tools.filter((x) => x.kind === "Skill").length;
+const siteCount = tools.filter((x) => x.kind === "موقع").length;
+const appData = {
+  total,
+  projects: projects.map((p) => ({ id: p.id, name: projName(p, lang), cats: p.cats ?? [], pickSlugs: p.pickSlugs })),
+  cats: categories.map((c) => c.id),
+  base: href(lang, "tools/"),
+  feed: href(lang, "feed.xml"),
+  recent: recentTools.map((r) => ({ slug: r.slug, name: r.name, added: r.added, cat: catName(r.cat, lang) })),
+};
+const kinds: Array<[string, any, string]> = [
+  ["Skill", "sparkle", t.legendSkill_h],
+  ["MCP", "plug", t.legendMcp_h],
+];
+---
+<Base title={t.siteTitle} description={t.homeDesc(total)} lang={lang}>
+  <div class="notif-wrap" slot="nav-extra">
+    <button type="button" id="bell" class="bell" aria-haspopup="dialog" aria-expanded="false" aria-controls="notif" aria-label={t.bellAria}>
+      <Icon name="bell" />
+      <span class="dot" id="bell-n" hidden>0</span>
+    </button>
+    <div class="notif" id="notif" role="dialog" aria-labelledby="nf-h" hidden>
+      <div class="nf-head">
+        <h3 id="nf-h">{t.notifTitle}</h3>
+        <button type="button" class="linkbtn" id="notif-read">{t.notifRead}</button>
+      </div>
+      <ul class="nf-list" id="notif-list"></ul>
+      <div class="nf-empty" id="notif-empty">
+        <span class="empty-ic"><Icon name="bell" weight="duotone" /></span>
+        <p>{t.notifEmpty}</p>
+      </div>
+      <a class="nf-foot" href={href(lang, "feed.xml")}><Icon name="rss-simple" /><span set:html={t.notifRss_h} /><Icon name={fwd} class="chev" /></a>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="hero-text">
+      <p class="eyebrow" style="--i:0">{t.siteName}</p>
+      <h1 style="--i:1" set:html={t.heroH1_h} />
+      <p class="lead" style="--i:2" set:html={t.heroLead_h} />
+      <div class="cta" style="--i:3">
+        <button type="button" class="btn-primary" data-focus-search>{t.ctaSearch}</button>
+        <a class="link-more" href="#build-h">{t.navBuild}<Icon name={fwd} /></a>
+      </div>
+      <ul class="promise" style="--i:4">
+        <li><Icon name="magnifying-glass" weight="duotone" />{t.promiseSearch}</li>
+        <li><Icon name="squares-four" weight="duotone" />{t.promiseOne}</li>
+        <li><Icon name="copy" weight="duotone" />{t.promiseCmd}</li>
+      </ul>
+    </div>
+
+    <div class="showcase" aria-hidden="true">
+      {byStars.slice(0, 3).map((x, i) => (
+        <a class={`show-card s${i + 1}`} href={href(lang, "tools/" + x.slug)} tabindex="-1">
+          <span class="mono">{initials(x.name)}</span>
+          <span class="show-t">
+            <b>{x.name}</b>
+            <small set:html={txt(catName(x.cat, lang), lang)} />
+          </span>
+          {x.stars && <span class="stars"><Icon name="star" weight="fill" />{x.stars}</span>}
+        </a>
+      ))}
+    </div>
+
+    <dl class="stats">
+      <div><dt>{t.statTools}</dt><dd>{total}</dd></div>
+      <div><dt set:html={t.statSkills_h} /><dd>{skillCount}</dd></div>
+      <div><dt>{t.statSites}</dt><dd>{siteCount}</dd></div>
+      <div><dt>{t.statCats}</dt><dd>{categories.length}</dd></div>
+    </dl>
+  </header>
+
+  <div class="bar">
+    <div class="bar-row">
+      <div class="search">
+        <Icon name="magnifying-glass" />
+        <input id="q" type="search" placeholder={t.searchPh} autocomplete="off" aria-label={t.searchAria} enterkeyhint="search" />
+        <button type="button" class="q-clear" id="q-clear" aria-label={t.searchClear} hidden><Icon name="x" weight="bold" /></button>
+        <kbd class="q-kbd" aria-hidden="true">/</kbd>
+      </div>
+      <button type="button" class="cat-btn" id="cat-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="catpanel">
+        <Icon name="squares-four" />
+        <span class="cat-label" id="cat-label">{t.catBtnAll}</span>
+        <span class="cat-badge" id="cat-badge" hidden>0</span>
+        <Icon name="caret-left" class="cat-chev" />
+      </button>
+    </div>
+  </div>
+
+  <div class="cat-backdrop" id="cat-backdrop" hidden></div>
+  <div class="catpanel" id="catpanel" role="dialog" aria-label={t.catPanelAria} hidden>
+    <div class="cp-head">
+      <h3>{t.catPanelTitle}</h3>
+      <button type="button" class="linkbtn" id="cat-done">{t.done}</button>
+    </div>
+    <div class="cp-body" id="chips">
+      <div class="cp-toggles" role="group" aria-label={t.moreFilters}>
+        <button type="button" class="chip skillchip" data-id="skill"><Icon name="sparkle" /><span class="cl">{t.onlySkills}</span><span class="n"></span></button>
+        <button type="button" class="chip newchip" data-id="new"><Icon name="clock" /><span class="cl">{t.onlyNew}</span><span class="n"></span></button>
+      </div>
+      <div class="cp-grid" role="group" aria-label={t.catPanelTitle}>
+        <button type="button" class="chip" data-id="all"><Icon name="squares-four" /><span class="cl">{t.allCats}</span><span class="n">{total}</span></button>
+        {categories.map((c) => (
+          <button type="button" class="chip" data-id={c.id}><Icon name={categoryIcon(c.id)} /><span class="cl" set:html={txt(catName(c.id, lang), lang)} /><span class="n"></span></button>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <section class="band alt build" aria-labelledby="build-h">
+    <h2 class="sec-title" id="build-h" set:html={t.buildTitle_h} />
+    <div class="projects" id="projects">
+      {projects.map((p) => (
+        <button type="button" class="ptile" data-p={p.id} aria-pressed="false">
+          <span class="pico"><Icon name={projectIcon(p.id)} weight="duotone" /></span>
+          <span class="pl"><b set:html={txt(projName(p, lang), lang)} /><small>{t.nTools(p.count)}</small></span>
+        </button>
+      ))}
+    </div>
+    {projects.map((p) => (
+      <div class="advice" data-advice={p.id} hidden>
+        <h3 set:html={txt(projName(p, lang), lang)} />
+        <p set:html={txt(projAdvice(p, lang), lang)} />
+        <div class="picks">
+          <span class="l">{t.startWith}</span>
+          {p.picks.map((name, i) => (
+            <button type="button" class="pickbtn" data-go={p.pickSlugs[i]}><bdi>{name}</bdi></button>
+          ))}
+        </div>
+        <button type="button" class="clear" data-clear="1">{t.showAll}</button>
+      </div>
+    ))}
+  </section>
+
+  <section class="band latest" aria-labelledby="latest-h">
+    <h2 class="sec-title" id="latest-h" set:html={t.latestTitle_h} />
+    <div class="latest-row">
+      {latest.map((x) => (
+        <a class="latest-item" href={href(lang, "tools/" + x.slug)}>
+          <span class="li-new">{t.isNew}</span>
+          <b class="li-name">{x.name}</b>
+          <small class="li-cat" set:html={txt(catName(x.cat, lang), lang)} />
+          <span class="li-foot">
+            <span class="mono sm" aria-hidden="true">{initials(x.name)}</span>
+            {x.stars && <span class="stars"><Icon name="star" weight="fill" />{x.stars}</span>}
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <main class="band alt" id="list">
+    <div class="list-head">
+      <h2 class="sec-title"><b class="ttl">{t.allTools}</b> <span id="flat-title" set:html={t.byStars_h} /><span class="n" id="flat-n">{total}</span></h2>
+      <details class="legend-wrap">
+        <summary><Icon name="info" />{t.legendSummary}</summary>
+        <ul class="legend">
+          {kinds.map(([k, icon, text]) => (
+            <li><span class="kind"><Icon name={icon} /><bdi>{k}</bdi></span> <span set:html={text} /></li>
+          ))}
+          {([["مكتبة", t.legendLib], ["أداة", t.legendTool], ["موقع", t.legendSite]] as const).map(([k, text]) => (
+            <li><span class="kind"><Icon name={kindIcon(k)} />{kindLabel(k, lang)}</span> {text}</li>
+          ))}
+          <li><span class="badge-new">{t.isNew}</span> {t.legendNew}</li>
+          <li><span class="badge-pick">{t.pick}</span> {t.legendPick}</li>
+          <li><span class="tag tag-warn">{t.legendWarnTag}</span> {t.legendWarn}</li>
+          <li><span class="tag tag-bad">{t.legendBadTag}</span> {t.legendBad}</li>
+        </ul>
+      </details>
+    </div>
+    <div class="activebar" id="activebar" hidden>
+      <span class="l"><Icon name="funnel" />{t.activeFilters}</span>
+      <span class="afs" id="active-chips"></span>
+      <button type="button" class="linkbtn" id="clear-all">{t.clearAll}</button>
+    </div>
+    <div class="listinfo">
+      <p class="status" id="status" aria-live="polite"></p>
+      <p class="hiddenbar" id="hiddenbar" hidden><span id="hidden-n"></span> <button type="button" class="linkbtn" id="unhide">{t.unhide}</button></p>
+      <label class="sortbox" for="sort">
+        <span class="sl">{t.sortLabel}</span>
+        <select id="sort">
+          <option value="stars">{t.sortStars}</option>
+          <option value="cat">{t.sortCat}</option>
+          <option value="new">{t.sortNew}</option>
+        </select>
+      </label>
+    </div>
+    <section class="cat" id="by-stars" aria-labelledby="flat-title">
+      <div class="grid" id="stars-grid">
+        {byStars.map((x) => <Card tool={x} hideBtn rank={rankOf.get(x.slug)} lang={lang} />)}
+      </div>
+      <div class="more-wrap"><button type="button" class="btn-more" id="more" hidden>{t.showMore} <span id="more-n"></span></button></div>
+    </section>
+    {categories.map((c) => (
+      <section class="cat" id={"cat-" + c.id} data-cat-section={c.id} hidden>
+        <h2 class="cat-title"><span class="ct-ic"><Icon name={categoryIcon(c.id)} weight="duotone" /></span><span set:html={txt(catName(c.id, lang), lang)} /><span class="n">{tools.filter((x) => x.cat === c.id).length}</span></h2>
+        <div class="grid" data-grid={c.id}></div>
+        <button type="button" class="sec-more" data-cat={c.id} hidden><span set:html={t.secMore_h} /><Icon name={fwd} /></button>
+      </section>
+    ))}
+    <div class="empty" id="empty" hidden>
+      <span class="empty-ic"><Icon name="magnifying-glass" weight="duotone" /></span>
+      <p>{t.emptyTitle}</p>
+      <p class="sub">{t.emptySub}</p>
+      <button type="button" class="btn-primary" id="empty-reset">{t.clearAll}</button>
+    </div>
+  </main>
+
+  <Fragment slot="footer">
+    {t.homeFoot_h(formatDate(starsUpdatedAt, lang)).map((p) => <p set:html={p} />)}
+  </Fragment>
+
+  <script type="application/json" id="app-data" set:html={JSON.stringify(appData)} />
+</Base>
+
+<script>
+  import { initCopy } from "../scripts/copy.js";
+  import { initFav } from "../scripts/fav.js";
+  import { initDates } from "../scripts/dates.js";
+  import "../scripts/filter.js";
+  initCopy(document);
+  initFav();
+  initDates();
+</script>

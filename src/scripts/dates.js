@@ -1,8 +1,9 @@
-// يحوّل تاريخ الإضافة إلى صيغة نسبية بالعربية ("أمس"، "قبل 3 أيام")، ويضع التاريخ الكامل في التلميح.
+// يحوّل تاريخ الإضافة إلى صيغة نسبية بلغة الصفحة ("أمس"، "vor 3 Tagen")، ويضع التاريخ الكامل في التلميح.
+import { L } from "../i18n/client.js";
 let rtf, full;
 try {
-  rtf = new Intl.RelativeTimeFormat("ar-u-nu-latn", { numeric: "auto" });
-  full = new Intl.DateTimeFormat("ar-u-nu-latn", { dateStyle: "long" });
+  rtf = new Intl.RelativeTimeFormat(L.locale, { numeric: "auto" });
+  full = new Intl.DateTimeFormat(L.locale, { dateStyle: "long" });
 } catch (e) {}
 
 export function relative(iso, now = Date.now()) {
@@ -24,7 +25,7 @@ export function initDates(root = document) {
     if (!iso || isNaN(new Date(iso))) return;
     const text = el.querySelector(".added-text");
     if (text) text.textContent = relative(iso, now);
-    el.title = "أُضيفت إلى الدليل: " + full.format(new Date(iso));
+    el.title = L.addedOn + full.format(new Date(iso));
     el.dataset.fresh = (now - new Date(iso).getTime()) / 864e5 <= 3 ? "1" : "0";
   });
 }

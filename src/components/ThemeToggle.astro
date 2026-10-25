@@ -1,8 +1,12 @@
 ---
 import Icon from "./Icon.astro";
+import { type Lang, DEFAULT_LANG, t as dict } from "../i18n";
 // زر الوضع الداكن/الفاتح. الاختيار يُحفظ في المتصفح، وبدونه يتبع الموقع إعداد الجهاز.
+interface Props { lang?: Lang }
+const { lang = DEFAULT_LANG } = Astro.props;
+const t = dict(lang);
 ---
-<button type="button" class="bell themetoggle" data-theme-toggle aria-label="تبديل الوضع الداكن" title="الوضع الداكن / الفاتح">
+<button type="button" class="bell themetoggle" data-theme-toggle aria-label={t.themeAria} title={t.themeTitle}>
   <Icon name="moon" class="i-moon" />
   <Icon name="sun" class="i-sun" />
 </button>

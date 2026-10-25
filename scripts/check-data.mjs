@@ -6,8 +6,20 @@ const tools = read("tools.json"), cats = read("categories.json"), projects = rea
 const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const catIds = new Set(cats.map((c) => c.id)), projIds = new Set(projects.map((p) => p.id));
 const slugs = new Set(), problems = [];
+// الأنواع المعروفة (لكل نوع ترجمة ألمانية وأيقونة في src/lib/data.ts)
+const KINDS = ["Skill", "MCP", "مكتبة", "أداة", "موقع", "منصة", "تطبيق", "صيغة", "دليل"];
+// الحقول الألمانية (الموقع بلغتين): يجب أن تكون موجودة وبلا حروف عربية
+const AR = /[\u0600-\u06FF]/;
+const needDe = (val, what) => {
+  if (!val || !String(val).trim()) problems.push(`ترجمة ألمانية ناقصة: ${what}`);
+  else if (AR.test(val)) problems.push(`حروف عربية في الترجمة الألمانية: ${what}`);
+};
+for (const c of cats) needDe(c.name_de, `name_de للقسم ${c.id}`);
+for (const p of projects) { needDe(p.name_de, `name_de للمشروع ${p.id}`); needDe(p.advice_de, `advice_de للمشروع ${p.id}`); }
 for (const t of tools) {
   if (!t.name || !t.desc) problems.push(`ناقص: ${t.name || "(بدون اسم)"}`);
+  needDe(t.desc_de, `desc_de لـ ${t.name}`);
+  if (!KINDS.includes(t.kind)) problems.push(`نوع غير معروف في ${t.name}: ${t.kind} (أضفه مع ترجمته في src/lib/data.ts وهنا)`);
   if (t.slug !== slugify(t.name)) problems.push(`slug غير مطابق للاسم: ${t.name}`);
   if (slugs.has(t.slug)) problems.push(`slug مكرر: ${t.slug}`);
   slugs.add(t.slug);

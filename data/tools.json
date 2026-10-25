@@ -15,6 +15,7 @@
       "shop"
     ],
     "desc": "مهارة Anthropic الرسمية لبناء واجهات مميزة بجودة إنتاج بدل الشكل العادي المكرر.",
+    "desc_de": "Offizieller Skill von Anthropic zum Bauen unverwechselbarer Oberflächen in Produktionsqualität statt des üblichen Einheitslooks.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -34,6 +35,7 @@
       "shop"
     ],
     "desc": "تبني على Frontend Design وتضيف أوامر لمراجعة التصميم وتلميعه، مع قواعد تكشف أخطاء التصميم المولّد بالذكاء الاصطناعي.",
+    "desc_de": "Baut auf Frontend Design auf und ergänzt Befehle zum Prüfen und Verfeinern des Designs, dazu Regeln, die Fehler in KI-generiertem Design aufdecken.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -54,6 +56,7 @@
       "shop"
     ],
     "desc": "تحلل متطلبات مشروعك وتولّد له نظام تصميم كامل من ألوان وخطوط وتخطيط. تدعم الويب وFlutter وSwiftUI أيضًا.",
+    "desc_de": "Analysiert die Anforderungen deines Projekts und generiert dafür ein vollständiges Designsystem aus Farben, Schriften und Layout. Unterstützt neben dem Web auch Flutter und SwiftUI.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -72,6 +75,7 @@
       "mobile"
     ],
     "desc": "مجموعة Vercel الرسمية: إرشادات أداء React وNext.js، وفحص الواجهة بأكثر من 100 قاعدة تشمل حالات الأزرار والتركيز والتحميل، وتطبيقات React Native.",
+    "desc_de": "Offizielle Sammlung von Vercel: Performance-Richtlinien für React und Next.js, Prüfung der Oberfläche mit über 100 Regeln – darunter Button-, Fokus- und Ladezustände – sowie Apps mit React Native.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -90,6 +94,7 @@
       "landing"
     ],
     "desc": "تبني الحركة بالترتيب: الهدف ثم الأداة ثم المنحنى ثم المدة، ولا تضيف حركة بلا سبب. من مطوّر Sonner وVaul.",
+    "desc_de": "Baut Animationen in dieser Reihenfolge auf: erst der Zweck, dann das Tool, dann die Kurve, dann die Dauer – und fügt keine Animation ohne Grund hinzu. Vom Entwickler von Sonner und Vaul.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -107,6 +112,7 @@
       "brand"
     ],
     "desc": "مهارات للاستراتيجية والاسم والهوية والنبرة والإطلاق، تعتمد كلها على ملف مركزي لهوية علامتك.",
+    "desc_de": "Skills für Strategie, Namensfindung, Identität, Tonalität und Launch, die alle auf einer zentralen Datei mit deiner Markenidentität aufbauen.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -126,6 +132,7 @@
       "landing"
     ],
     "desc": "ملف تضعه في جذر مشروعك يشرح للذكاء الاصطناعي نظام تصميمك. انسخ نموذجًا جاهزًا مثل Stripe أو Linear وعدّله.",
+    "desc_de": "Eine Datei, die du ins Stammverzeichnis deines Projekts legst und die der KI dein Designsystem erklärt. Kopiere eine fertige Vorlage – z. B. Stripe oder Linear – und passe sie an.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -143,6 +150,7 @@
       "brand"
     ],
     "desc": "مهارة Anthropic لتصميم ملصقات وإعلانات ومواد بصرية كصور أو PDF.",
+    "desc_de": "Skill von Anthropic zum Gestalten von Postern, Anzeigen und visuellen Materialien als Bilder oder PDF.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -164,6 +172,7 @@
       "brand"
     ],
     "desc": "تبعد Claude عن الواجهات العامة المكررة نحو تخطيط وخطوط وحركة مميزة، وفيها مهارات لإعادة تصميم موقع موجود.",
+    "desc_de": "Lenkt Claude weg von generischen, austauschbaren Oberflächen hin zu Layout, Schriften und Animationen mit Charakter. Enthält außerdem Skills für das Redesign einer bestehenden Website.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -183,6 +192,7 @@
       "landing"
     ],
     "desc": "مهارة shadcn الرسمية: تعلّم Claude إضافة المكونات وتنسيقها وإصلاحها بالطريقة الصحيحة لمشروعك.",
+    "desc_de": "Offizieller Skill von shadcn: Bringt Claude bei, Komponenten auf die für dein Projekt richtige Weise hinzuzufügen, zu stylen und zu reparieren.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -203,6 +213,7 @@
       "dashboard"
     ],
     "desc": "إضافة Anthropic الرسمية: نقد التصميم، ومراجعة نظام التصميم، ونصوص الواجهة، وفحص إمكانية الوصول حسب WCAG.",
+    "desc_de": "Offizielles Plugin von Anthropic: Designkritik, Überprüfung des Designsystems, Texte für die Oberfläche und Prüfung der Barrierefreiheit nach WCAG.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -222,6 +233,7 @@
       "mobile"
     ],
     "desc": "مبادئ تصميم للوحات التحكم والتطبيقات، وتحفظ قرارات المسافات والألوان في ملف حتى يبقى التصميم ثابتًا بين الجلسات.",
+    "desc_de": "Designprinzipien für Dashboards und Apps. Speichert Entscheidungen zu Abständen und Farben in einer Datei, damit das Design über Sitzungen hinweg konsistent bleibt.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -242,6 +254,7 @@
       "dashboard"
     ],
     "desc": "مهارات Google الرسمية لتوليد الشاشات في Stitch وتحويلها إلى كود React أو shadcn. تحتاج إعداد Stitch MCP أولًا.",
+    "desc_de": "Offizielle Skills von Google, um Screens in Stitch zu generieren und in React- oder shadcn-Code umzuwandeln. Benötigt vorab die Einrichtung von Stitch MCP.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -259,6 +272,7 @@
       "brand"
     ],
     "desc": "عروض تقديمية أنيقة كصفحة HTML واحدة، أو تحويل ملفات PowerPoint، مع اختيار النمط وتصدير PDF.",
+    "desc_de": "Elegante Präsentationen als einzelne HTML-Seite oder Umwandlung von PowerPoint-Dateien, mit Stilauswahl und PDF-Export.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -276,6 +290,7 @@
       "shop"
     ],
     "desc": "مهارات Shopify الرسمية: أحدث وثائق Shopify، وفحص كود GraphQL وLiquid، وتنفيذ مهام المتجر عبر Shopify CLI.",
+    "desc_de": "Offizielle Skills von Shopify: die aktuellste Shopify-Dokumentation, Prüfung von GraphQL- und Liquid-Code sowie Ausführen von Shop-Aufgaben über die Shopify CLI.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -293,6 +308,7 @@
       "shop"
     ],
     "desc": "مهارة Shopify الرسمية لكتابة Liquid وCSS الثيم وإمكانية الوصول في مكونات المتجر. صغيرة لكنها رسمية.",
+    "desc_de": "Offizieller Skill von Shopify zum Schreiben von Liquid und Theme-CSS sowie für Barrierefreiheit in Shop-Komponenten. Klein, aber offiziell.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -314,6 +330,7 @@
       "mobile"
     ],
     "desc": "50 دليل تسويق جاهز: كتابة النصوص، وتدقيق SEO، وتحسين التحويل، ورسائل البريد، والإعلانات. الأكثر تثبيتًا في التسويق.",
+    "desc_de": "50 fertige Marketing-Leitfäden: Copywriting, SEO-Audits, Conversion-Optimierung, E-Mails und Anzeigen. Im Marketing am häufigsten installiert.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -333,6 +350,7 @@
       "landing"
     ],
     "desc": "تدقيق SEO كامل عبر أوامر /seo: التقني، والبيانات المنظمة، والبحث بالذكاء الاصطناعي، وhreflang للمتاجر متعددة اللغات.",
+    "desc_de": "Vollständiges SEO-Audit über /seo-Befehle: technisches SEO, strukturierte Daten, KI-Suche und hreflang für mehrsprachige Shops.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -353,6 +371,7 @@
       "claude"
     ],
     "desc": "يعيد كتابة النص حتى لا يبدو مكتوبًا بالذكاء الاصطناعي، بفحص 25 نمطًا معروفًا. مصمم للإنجليزية.",
+    "desc_de": "Schreibt Texte so um, dass sie nicht nach KI klingen, und prüft dafür 25 bekannte Muster. Für Englisch ausgelegt.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -373,6 +392,7 @@
       "claude"
     ],
     "desc": "يكشف أنماط الكتابة الآلية ويعيد صياغتها، مع وضع للفحص فقط. توجد له نسخة مجتمعية صغيرة للألمانية.",
+    "desc_de": "Erkennt Muster maschinell erzeugter Texte und formuliert sie um, inklusive eines reinen Prüfmodus. Für Deutsch gibt es eine kleine Community-Version.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -393,6 +413,7 @@
       "shop"
     ],
     "desc": "إضافة Anthropic الرسمية للتسويق: كتابة المحتوى، وخطط الحملات، وفحص النصوص مقابل نبرة علامتك، وتسلسلات البريد.",
+    "desc_de": "Offizielles Marketing-Plugin von Anthropic: Content-Erstellung, Kampagnenpläne, Abgleich von Texten mit der Tonalität deiner Marke und E-Mail-Sequenzen.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -410,6 +431,7 @@
       "shop"
     ],
     "desc": "حزمة تجارة إلكترونية: مولد أوصاف منتجات بحدود كل منصة مثل Shopify وAmazon، وGoogle Shopping، والبيع الدولي. جودتها متفاوتة.",
+    "desc_de": "E-Commerce-Paket: Generator für Produktbeschreibungen, der die Limits jeder Plattform wie Shopify und Amazon einhält, dazu Google Shopping und internationaler Verkauf. Die Qualität schwankt.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -428,6 +450,7 @@
       "landing"
     ],
     "desc": "يدقق ويخطط الإعلانات على 12 منصة منها Google وMeta وAmazon، والتعديلات تبقى مسودات تنتظر موافقتك.",
+    "desc_de": "Prüft und plant Anzeigen auf 12 Plattformen, darunter Google, Meta und Amazon. Änderungen bleiben Entwürfe, die auf deine Freigabe warten.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -448,6 +471,7 @@
       "claude"
     ],
     "desc": "عادات هندسية للوكيل: يسألك عن الخطة قبل البرمجة، ويكتب الاختبارات أولًا، ويحلل الأخطاء الصعبة، ويراجع الكود.",
+    "desc_de": "Engineering-Gewohnheiten für den Agenten: Er befragt dich vor dem Programmieren zum Plan, schreibt zuerst Tests, analysiert schwierige Fehler und führt Code-Reviews durch.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -469,6 +493,7 @@
       "claude"
     ],
     "desc": "أربع قواعد في ملف واحد: فكّر قبل البرمجة، والبساطة أولًا، وعدّل فقط ما طُلب، واعمل نحو هدف واضح.",
+    "desc_de": "Vier Regeln in einer Datei: erst denken, dann programmieren; Einfachheit zuerst; nur ändern, was verlangt wurde; auf ein klares Ziel hinarbeiten.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -490,6 +515,7 @@
       "claude"
     ],
     "desc": "25 مهارة من التخطيط حتى الإطلاق: اختبار، ومراجعة كود، وأمان OWASP، وسرعة Core Web Vitals، وقوائم فحص قبل النشر.",
+    "desc_de": "25 Skills von der Planung bis zum Launch: Testing, Code-Review, Sicherheit nach OWASP, Geschwindigkeit nach Core Web Vitals und Checklisten vor dem Deployment.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -510,6 +536,7 @@
       "booking"
     ],
     "desc": "مهارات Supabase الرسمية: استخدام منتجاتها بشكل صحيح، وأفضل ممارسات الأداء في قواعد بيانات Postgres.",
+    "desc_de": "Offizielle Skills von Supabase: korrekte Nutzung der Supabase-Produkte und Best Practices für die Performance von Postgres-Datenbanken.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -530,6 +557,7 @@
       "mobile"
     ],
     "desc": "مهارات Next.js الرسمية: تتحقق من كل تعديل على خادم التطوير والمتصفح، وتكشف ما يكبّر حجم الصفحات. النجوم لمستودع Next.js كله.",
+    "desc_de": "Offizielle Skills von Next.js: Sie prüfen jede Änderung auf dem Entwicklungsserver und im Browser und decken auf, was die Seitengröße erhöht. Die Sterne gelten für das gesamte Next.js-Repository.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -550,6 +578,7 @@
       "dashboard"
     ],
     "desc": "متصفح سريع من Vercel يفتح الصفحات ويضغط ويملأ النماذج ويقرأ الأخطاء، ليتحقق Claude من المتجر أو التطبيق بنفسه.",
+    "desc_de": "Schneller Browser von Vercel, der Seiten öffnet, klickt, Formulare ausfüllt und Fehler ausliest – damit Claude den Shop oder die App selbst überprüfen kann.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -569,6 +598,7 @@
       "dashboard"
     ],
     "desc": "مهارات أمان من شركة تدقيق معروفة: مراجعة التعديلات أمنيًا، وكشف الإعدادات غير الآمنة، وفحص مخاطر حزم npm.",
+    "desc_de": "Sicherheits-Skills einer bekannten Audit-Firma: Sicherheitsprüfung von Änderungen, Erkennen unsicherer Konfigurationen und Prüfung von npm-Paketen auf Risiken.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -589,6 +619,7 @@
       "claude"
     ],
     "desc": "متجر إضافات فيه 94 إضافة صغيرة للبرمجة والأمان والاختبار وقواعد البيانات، تثبّت منها ما تحتاجه فقط.",
+    "desc_de": "Plugin-Marktplatz mit 94 kleinen Plugins für Programmierung, Sicherheit, Testing und Datenbanken – du installierst nur, was du brauchst.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -606,6 +637,7 @@
       "mobile"
     ],
     "desc": "مهارات فريق Flutter الرسمية: بنية التطبيق، والتخطيط المتجاوب، وإصلاح أخطاء overflow، والتوجيه، والترجمة، والاختبارات.",
+    "desc_de": "Offizielle Skills des Flutter-Teams: App-Architektur, responsives Layout, Beheben von Overflow-Fehlern, Routing, Lokalisierung und Tests.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -624,6 +656,7 @@
       "mac"
     ],
     "desc": "من Paul Hudson: يصلح أخطاء SwiftUI الشائعة. مفيد لأجزاء iOS الأصلية مثل الويدجت على الشاشة الرئيسية.",
+    "desc_de": "Von Paul Hudson: Behebt häufige SwiftUI-Fehler. Nützlich für native iOS-Bestandteile wie Widgets auf dem Home-Bildschirm.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -641,6 +674,7 @@
       "mobile"
     ],
     "desc": "حوالي 30 مهارة لتطبيقات Capacitor: الترقية بين الإصدارات، والإشعارات، والشراء داخل التطبيق. نجومها قليلة لكنها الأكمل.",
+    "desc_de": "Rund 30 Skills für Capacitor-Apps: Upgrades zwischen Versionen, Benachrichtigungen und In-App-Käufe. Wenige Sterne, aber die umfassendste Sammlung.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -658,6 +692,7 @@
       "mobile"
     ],
     "desc": "يدير App Store Connect من الطرفية: رفع النسخ، وTestFlight، ونصوص المتجر بعدة لغات، وإرسال المراجعة. يحتاج أداة asc أولًا.",
+    "desc_de": "Verwaltet App Store Connect vom Terminal aus: Hochladen von Builds, TestFlight, Store-Texte in mehreren Sprachen und Einreichen zur Prüfung. Benötigt vorher das Tool asc.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -675,6 +710,7 @@
       "mobile"
     ],
     "desc": "40 مهارة لتحسين ظهور التطبيق في المتجر: الكلمات المفتاحية، والعنوان، ولقطات الشاشة، وترجمة صفحة التطبيق.",
+    "desc_de": "40 Skills für bessere Sichtbarkeit einer App im Store: Keywords, Titel, Screenshots und Übersetzung der App-Seite.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -693,6 +729,7 @@
       "brand"
     ],
     "desc": "يحوّل لقطات تطبيقك إلى صور تسويقية لمتجر Apple وGoogle Play بإطارات أجهزة و18 نمطًا وعدة لغات، مع دعم الكتابة من اليمين لليسار.",
+    "desc_de": "Macht aus Screenshots deiner App Marketingbilder für den Apple App Store und Google Play – mit Geräterahmen, 18 Stilen und mehreren Sprachen sowie Unterstützung für Schrift von rechts nach links.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -710,6 +747,7 @@
       "claude"
     ],
     "desc": "تعلّم Claude العصف الذهني والتخطيط والاختبار وإصلاح الأخطاء بشكل منظم. الأكثر نجومًا في هذا الدليل.",
+    "desc_de": "Bringt Claude bei, systematisch zu brainstormen, zu planen, zu testen und Fehler zu beheben. Das meistmarkierte Projekt in diesem Verzeichnis.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -728,6 +766,7 @@
       "web"
     ],
     "desc": "تختبر تطبيقك في المتصفح وتلتقط صورًا للأخطاء.",
+    "desc_de": "Testet deine App im Browser und macht Screenshots von Fehlern.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -745,6 +784,7 @@
       "claude"
     ],
     "desc": "تساعدك تبني مهارة خاصة بك من الصفر وتختبرها، مثلًا لطريقتك في كتابة أوصاف المنتجات.",
+    "desc_de": "Hilft dir, einen eigenen Skill von Grund auf zu bauen und zu testen – z. B. für deine Art, Produktbeschreibungen zu schreiben.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -762,6 +802,7 @@
       "claude"
     ],
     "desc": "دليل لاكتشاف مئات المهارات الأخرى مرتبة حسب الاستخدام.",
+    "desc_de": "Verzeichnis, um Hunderte weitere Skills zu entdecken – nach Anwendungsfall sortiert.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -779,6 +820,7 @@
       "claude"
     ],
     "desc": "اسأل Claude هل توجد مهارة لعمل ما، فيبحث في دليل المهارات ويثبّت المناسبة. الأكثر تثبيتًا على skills.sh.",
+    "desc_de": "Frag Claude, ob es einen Skill für eine bestimmte Aufgabe gibt – Claude durchsucht dann das Skill-Verzeichnis und installiert den passenden. Auf skills.sh am häufigsten installiert.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -798,6 +840,7 @@
       "mobile"
     ],
     "desc": "يجلب أحدث وثائق المكتبات حتى لا يكتب Claude كودًا قديمًا.",
+    "desc_de": "Holt die aktuellste Dokumentation von Bibliotheken, damit Claude keinen veralteten Code schreibt.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -817,6 +860,7 @@
       "shop"
     ],
     "desc": "يجعل Claude يفتح المتصفح ويضغط ويملأ النماذج ويختبر الموقع بنفسه.",
+    "desc_de": "Lässt Claude den Browser öffnen, klicken, Formulare ausfüllen und die Website selbst testen.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -837,6 +881,7 @@
       "landing"
     ],
     "desc": "من Google، لتشخيص أخطاء المتصفح وقياس سرعة الصفحات.",
+    "desc_de": "Von Google – zur Diagnose von Browserfehlern und zum Messen der Seitengeschwindigkeit.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -854,6 +899,7 @@
       "shop"
     ],
     "desc": "يبحث في وثائق Shopify ويساعد في GraphQL ويتحقق من كود Liquid.",
+    "desc_de": "Durchsucht die Shopify-Dokumentation, hilft bei GraphQL und prüft Liquid-Code.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -872,6 +918,7 @@
       "landing"
     ],
     "desc": "يولّد مكونات React جاهزة من وصف نصي. يحتاج مفتاح API من موقعه.",
+    "desc_de": "Erzeugt fertige React-Komponenten aus einer Textbeschreibung. Benötigt einen API-Schlüssel von 21st.dev.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -891,6 +938,7 @@
       "mobile"
     ],
     "desc": "يقرأ أخطاء موقعك أو تطبيقك الحي ويساعد في إصلاحها.",
+    "desc_de": "Liest die Fehler deiner Live-Website oder -App und hilft, sie zu beheben.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -909,6 +957,7 @@
       "shop"
     ],
     "desc": "يختبر الموقع تلقائيًا على Chrome وFirefox وSafari وشاشات الجوال.",
+    "desc_de": "Testet Websites automatisch in Chrome, Firefox und Safari sowie auf Smartphone-Bildschirmen.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -928,6 +977,7 @@
       "landing"
     ],
     "desc": "يفحص إمكانية الوصول مثل تباين الألوان والنصوص البديلة.",
+    "desc_de": "Prüft die Barrierefreiheit, z. B. Farbkontrast und Alternativtexte.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -947,6 +997,7 @@
       "web"
     ],
     "desc": "يقيس الأداء وSEO مع كل تحديث وينبهك إذا ساءت النتيجة.",
+    "desc_de": "Misst Performance und SEO bei jedem Update und warnt dich, wenn sich das Ergebnis verschlechtert.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -965,6 +1016,7 @@
       "web"
     ],
     "desc": "حركات وانتقالات سلسة لمشاريع React وJavaScript.",
+    "desc_de": "Flüssige Animationen und Übergänge für React- und JavaScript-Projekte.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -984,6 +1036,7 @@
       "web"
     ],
     "desc": "أقوى مكتبة للحركات المتقدمة وتأثيرات التمرير، وتعمل داخل ثيمات Shopify أيضًا.",
+    "desc_de": "Die leistungsstärkste Bibliothek für komplexe Animationen und Scroll-Effekte – funktioniert auch in Shopify-Themes.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1002,6 +1055,7 @@
       "shop"
     ],
     "desc": "تمرير ناعم فاخر، يعمل بشكل ممتاز مع GSAP.",
+    "desc_de": "Hochwertiges, sanftes Scrollen – funktioniert hervorragend mit GSAP.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1020,6 +1074,7 @@
       "dashboard"
     ],
     "desc": "حركة تلقائية عند إضافة العناصر أو حذفها بسطر واحد.",
+    "desc_de": "Automatische Animation beim Hinzufügen oder Entfernen von Elementen – mit einer einzigen Codezeile.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1039,6 +1094,7 @@
       "web"
     ],
     "desc": "رسوم متحركة تفاعلية تستجيب للماوس واللمس، على الويب وFlutter وiPhone. النسخة المجانية من المحرر تضيف شاشة Rive عند التصدير.",
+    "desc_de": "Interaktive Animationen, die auf Maus- und Touch-Eingaben reagieren – im Web, in Flutter und auf dem iPhone. Die kostenlose Version des Editors fügt beim Export einen Rive-Bildschirm hinzu.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1058,6 +1114,7 @@
       "web"
     ],
     "desc": "يعرض رسوم Lottie المتحركة بحجم ملف صغير جدًا.",
+    "desc_de": "Zeigt Lottie-Animationen mit sehr kleiner Dateigröße an.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1075,6 +1132,7 @@
       "brand"
     ],
     "desc": "تعلّم Claude قواعد Remotion لصنع فيديوهات دعائية بالكود بدون أخطاء توقيت.",
+    "desc_de": "Bringt Claude die Regeln von Remotion bei, damit Werbevideos per Code ohne Timing-Fehler entstehen.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1092,6 +1150,7 @@
       "mobile"
     ],
     "desc": "حركات احترافية سهلة في تطبيقات Flutter.",
+    "desc_de": "Einfache, professionelle Animationen in Flutter-Apps.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1110,6 +1169,7 @@
       "dashboard"
     ],
     "desc": "مكونات جاهزة تنسخها إلى مشروعك وتعدّلها بحرية.",
+    "desc_de": "Fertige Komponenten, die du in dein Projekt kopierst und frei anpasst.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1128,6 +1188,7 @@
       "dashboard"
     ],
     "desc": "الأساس الذي بُني عليه shadcn. كل عنصر حزمة مستقلة، مثل نافذة الحوار في الأمر أدناه.",
+    "desc_de": "Die Grundlage, auf der shadcn aufgebaut ist. Jedes Element ist ein eigenständiges Paket – etwa das Dialogfenster im Befehl unten.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1145,6 +1206,7 @@
       "landing"
     ],
     "desc": "مكونات متحركة لصفحات الهبوط، تُضاف إلى مشروعك عبر أداة shadcn.",
+    "desc_de": "Animierte Komponenten für Landingpages – sie werden über das shadcn-Tool zu deinem Projekt hinzugefügt.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1162,6 +1224,7 @@
       "landing"
     ],
     "desc": "مكونات بتأثيرات بصرية فاخرة، مجانية للنسخ.",
+    "desc_de": "Komponenten mit hochwertigen visuellen Effekten – kostenlos zum Kopieren.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1180,6 +1243,7 @@
       "landing"
     ],
     "desc": "مكونات Tailwind جاهزة بأسماء كلاسات بسيطة.",
+    "desc_de": "Fertige Tailwind-Komponenten mit einfachen Klassennamen.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1198,6 +1262,7 @@
       "dashboard"
     ],
     "desc": "يضع القوائم المنبثقة والتلميحات في المكان الصحيح دائمًا.",
+    "desc_de": "Positioniert Pop-up-Menüs und Tooltips immer an der richtigen Stelle.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1216,6 +1281,7 @@
       "dashboard"
     ],
     "desc": "إشعارات منبثقة أنيقة تظهر وتختفي بنعومة.",
+    "desc_de": "Elegante Pop-up-Benachrichtigungen, die sanft erscheinen und verschwinden.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1234,6 +1300,7 @@
       "mobile"
     ],
     "desc": "قائمة سحب سفلية بأسلوب iOS لتطبيقات الويب على الجوال.",
+    "desc_de": "Von unten ausziehbares Menü im iOS-Stil für Web-Apps auf dem Smartphone.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1251,6 +1318,7 @@
       "dashboard"
     ],
     "desc": "مكونات رسوم بيانية ولوحات تحكم للمبيعات والأرقام، تنسخها إلى مشروعك.",
+    "desc_de": "Diagramm- und Dashboard-Komponenten für Verkäufe und Kennzahlen – zum Kopieren in dein Projekt.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1270,6 +1338,7 @@
       "shop"
     ],
     "desc": "أيقونات خطية بسيطة ومتناسقة.",
+    "desc_de": "Einfache, einheitliche Linien-Icons.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1289,6 +1358,7 @@
       "shop"
     ],
     "desc": "أيقونات بستة أوزان، من الرفيع إلى الممتلئ والثنائي اللون.",
+    "desc_de": "Icons in sechs Strichstärken – von dünn bis gefüllt und zweifarbig.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1308,6 +1378,7 @@
       "shop"
     ],
     "desc": "أكثر من 6000 أيقونة مجانية بصيغة SVG.",
+    "desc_de": "Mehr als 6000 kostenlose Icons im SVG-Format.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1325,6 +1396,7 @@
       "shop"
     ],
     "desc": "أداة Shopify الرسمية لتطوير الثيم على جهازك مع معاينة حية، ثم رفع التعديلات إلى المتجر.",
+    "desc_de": "Offizielles Tool von Shopify, um das Theme auf deinem Rechner mit Live-Vorschau zu entwickeln und die Änderungen dann in den Shop hochzuladen.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1345,6 +1417,7 @@
       "booking"
     ],
     "desc": "قاعدة بيانات وتسجيل دخول وتخزين ملفات جاهزة لتطبيقات الويب والجوال، تعمل مع Next.js وFlutter.",
+    "desc_de": "Fertige Datenbank, Login und Dateispeicher für Web- und Smartphone-Apps – funktioniert mit Next.js und Flutter.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1363,6 +1436,7 @@
       "landing"
     ],
     "desc": "ترجمة تطبيقات Next.js إلى عدة لغات، مع روابط وتواريخ وأرقام بحسب كل لغة.",
+    "desc_de": "Übersetzung von Next.js-Apps in mehrere Sprachen – mit Links, Datumsangaben und Zahlen passend zur jeweiligen Sprache.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1382,6 +1456,7 @@
       "brand"
     ],
     "desc": "تصميم رسائل البريد مثل تأكيد الطلب أو الحجز بمكونات React، لتظهر بشكل صحيح في أغلب برامج البريد.",
+    "desc_de": "Gestaltung von E-Mails – z. B. Bestell- oder Buchungsbestätigungen – mit React-Komponenten, damit sie in den meisten E-Mail-Programmen korrekt angezeigt werden.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1400,6 +1475,7 @@
       "landing"
     ],
     "desc": "نافذة موافقة على الكوكيز خفيفة، تساعدك على الالتزام بـ GDPR بدون مكتبات إضافية.",
+    "desc_de": "Schlankes Banner für die Cookie-Einwilligung, das dir hilft, die DSGVO einzuhalten – ohne zusätzliche Bibliotheken.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1419,6 +1495,7 @@
       "landing"
     ],
     "desc": "يراقب موقعك أو متجرك على مدار الساعة وينبهك فورًا إذا توقف، عبر Telegram أو البريد.",
+    "desc_de": "Überwacht deine Website oder deinen Shop rund um die Uhr und warnt dich bei einem Ausfall sofort – per Telegram oder E-Mail.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1438,6 +1515,7 @@
       "web"
     ],
     "desc": "إحصاءات زوار بسيطة بدون كوكيز، متوافقة مع GDPR.",
+    "desc_de": "Einfache Besucherstatistiken ohne Cookies, DSGVO-konform.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1458,6 +1536,7 @@
       "landing"
     ],
     "desc": "تحليلات مع تسجيل جلسات الزوار وخرائط حرارية لتحسين المبيعات.",
+    "desc_de": "Analytics mit Aufzeichnung von Besuchersitzungen und Heatmaps, um die Verkäufe zu steigern.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1476,6 +1555,7 @@
       "dashboard"
     ],
     "desc": "تقويم متقدم بعرض يومي وأسبوعي وشهري مع السحب والإفلات.",
+    "desc_de": "Ausgefeilter Kalender mit Tages-, Wochen- und Monatsansicht sowie Drag-and-drop.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1493,6 +1573,7 @@
       "booking"
     ],
     "desc": "نظام حجز مواعيد مفتوح المصدر، والأمر أدناه يضيف نافذة الحجز إلى موقعك. نسخة الاستضافة الذاتية اسمها الآن Cal.diy.",
+    "desc_de": "Open-Source-System für Terminbuchungen – der Befehl unten fügt das Buchungsfenster zu deiner Website hinzu. Die selbst gehostete Version heißt jetzt Cal.diy.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1510,6 +1591,7 @@
       "booking"
     ],
     "desc": "منصة لبناء تطبيقات طبية على معيار FHIR.",
+    "desc_de": "Plattform zum Entwickeln medizinischer Apps auf Basis des FHIR-Standards.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1529,6 +1611,7 @@
       "claude"
     ],
     "desc": "إضافة Vercel الرسمية: 33 مهارة للنشر والنطاقات والكاش والجدار الناري، وأوامر جاهزة للنشر والحالة، ومعها Vercel MCP.",
+    "desc_de": "Offizielles Plugin von Vercel: 33 Skills für Deployment, Domains, Caching und Firewall, fertige Befehle für Deployment und Status, dazu Vercel MCP.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1548,6 +1631,7 @@
       "claude"
     ],
     "desc": "خادم Vercel الرسمي: يقرأ مشاريعك ونشراتك وسجلات الأخطاء والتحليلات، ويبحث في وثائق Vercel. يعطي Claude نفس صلاحيات حسابك، فأبقِ التأكيد مفعّلًا.",
+    "desc_de": "Offizieller MCP-Server von Vercel: liest deine Projekte, Deployments, Fehlerprotokolle und Analytics und durchsucht die Vercel-Dokumentation. Claude erhält dieselben Berechtigungen wie dein Konto – lass die Bestätigung daher aktiviert.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1566,6 +1650,7 @@
       "dashboard"
     ],
     "desc": "مهارة رسمية تعلّم Claude أحدث إصدار من AI SDK لإضافة محادثة ووكلاء ذكاء اصطناعي إلى تطبيق Next.js. النجوم لمستودع AI SDK كله.",
+    "desc_de": "Offizieller Skill, der Claude die neueste Version des AI SDK beibringt, um Chat und KI-Agenten in eine Next.js-App einzubauen. Die Sterne beziehen sich auf das gesamte Repository des AI SDK.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1585,6 +1670,7 @@
       "dashboard"
     ],
     "desc": "خادم v0 الرسمي: يرسل Claude وصف صفحة هبوط أو لوحة تحكم إلى v0 ويعيد الكود إلى مشروعك. يحتاج حساب v0.",
+    "desc_de": "Offizieller MCP-Server von v0: Claude schickt die Beschreibung einer Landingpage oder eines Dashboards an v0 und holt den Code zurück in dein Projekt. Benötigt ein v0-Konto.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1606,6 +1692,7 @@
       "claude"
     ],
     "desc": "يفحص الموقع كاملًا بأكثر من 300 قاعدة: SEO، والسرعة، وترويسات الأمان، والروابط المعطلة، وإمكانية الوصول، ونافذة الكوكيز. معه مهارة يشغّلها Claude بأمر /audit-website. مشروع جديد.",
+    "desc_de": "Prüft die gesamte Website anhand von mehr als 300 Regeln: SEO, Geschwindigkeit, Sicherheits-Header, defekte Links, Barrierefreiheit und Cookie-Banner. Dazu gibt es einen Skill, den Claude mit dem Befehl /audit-website ausführt. Neues Projekt.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1627,6 +1714,7 @@
       "claude"
     ],
     "desc": "ست مهارات تجعل Claude يقيس السرعة وCore Web Vitals وإمكانية الوصول وSEO بأرقام حقيقية من Lighthouse ثم يصلح المشاكل، صفحة بعد صفحة.",
+    "desc_de": "Sechs Skills, mit denen Claude Geschwindigkeit, Core Web Vitals, Barrierefreiheit und SEO anhand echter Lighthouse-Werte misst und die Probleme anschließend behebt – Seite für Seite.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1646,6 +1734,7 @@
       "landing"
     ],
     "desc": "يمرّ على كل صفحات الموقع ويشغّل Lighthouse عليها، ويعرض تقريرًا بالصفحات الأبطأ والأضعف في SEO.",
+    "desc_de": "Durchläuft alle Seiten der Website, führt jeweils Lighthouse aus und zeigt einen Bericht mit den langsamsten und SEO-schwächsten Seiten.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1665,6 +1754,7 @@
       "landing"
     ],
     "desc": "يكشف الروابط المعطلة بسرعة في الصفحات التي تعطيه إياها، مثل روابط خريطة الموقع.",
+    "desc_de": "Findet schnell defekte Links auf den Seiten, die du ihm übergibst – z. B. die Links aus der Sitemap.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1684,6 +1774,7 @@
       "dashboard"
     ],
     "desc": "فاحص Mozilla الرسمي لترويسات الأمان، ويعطي موقعك درجة ونتيجة لكل اختبار. في Shopify تتحكم المنصة بأغلب هذه الترويسات.",
+    "desc_de": "Mozillas offizielles Prüftool für Sicherheits-Header gibt deiner Website eine Note und für jeden Test ein Ergebnis. Bei Shopify steuert die Plattform die meisten dieser Header.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1704,6 +1795,7 @@
       "web"
     ],
     "desc": "إطار مفتوح من HeyGen يحوّل صفحات HTML وحركات GSAP وLottie إلى فيديو MP4، ومعه مهارات ليصنع Claude إعلانات وفيديوهات ترويجية بالكود.",
+    "desc_de": "Open-Source-Framework von HeyGen, das HTML-Seiten sowie GSAP- und Lottie-Animationen in MP4-Videos umwandelt. Dazu gibt es Skills, mit denen Claude Werbespots und Promo-Videos per Code erstellt.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1723,6 +1815,7 @@
       "shop"
     ],
     "desc": "ثماني مهارات رسمية من GSAP لكتابة حركات صحيحة وسريعة: الخط الزمني، وتأثيرات التمرير، والإضافات، وReact.",
+    "desc_de": "Acht offizielle Skills von GSAP, um korrekte und schnelle Animationen zu schreiben: Timelines, Scroll-Effekte, Plugins und React.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1744,6 +1837,7 @@
       "shop"
     ],
     "desc": "مهارة رسمية من LottieFiles تجعل Claude يخطط التوقيت والانسيابية قبل كتابة الحركة، لتبقى حركات المتجر والتطبيق والإعلانات متناسقة.",
+    "desc_de": "Offizieller Skill von LottieFiles, mit dem Claude Timing und Easing vor dem Schreiben der Animation plant, damit Animationen in Shop, App und Anzeigen konsistent bleiben.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1763,6 +1857,7 @@
       "dashboard"
     ],
     "desc": "أداة Motion الرسمية تضيف مهارة /motion وبحثًا في أحدث وثائق Motion. المستودع جديد جدًا، وبعض المزايا تحتاج اشتراك Motion+.",
+    "desc_de": "Das offizielle Tool von Motion fügt den Skill /motion und eine Suche in der neuesten Motion-Dokumentation hinzu. Das Repository ist sehr neu, und einige Funktionen benötigen ein Motion+-Abo.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1783,6 +1878,7 @@
       "shop"
     ],
     "desc": "103 مهارات، منها سلسلة كاملة للهوية: اكتشاف العلامة، والاسم، والشعار، والألوان والخطوط، ونبرة الكلام، ودليل الهوية.",
+    "desc_de": "103 Skills, darunter eine komplette Reihe zur Markenidentität: Markenfindung, Name, Logo, Farben und Schriften, Tonalität und Markenhandbuch.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1803,6 +1899,7 @@
       "landing"
     ],
     "desc": "يستخرج من موقعك الحالي الشعار والألوان والخطوط والمسافات ويحفظها كملف DESIGN.md، ليلتزم Claude بهويتك. استخدمه على مواقعك أنت فقط.",
+    "desc_de": "Extrahiert Logo, Farben, Schriften und Abstände aus deiner bestehenden Website und speichert sie als DESIGN.md-Datei, damit Claude sich an deine Markenidentität hält. Verwende es nur für deine eigenen Websites.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1822,6 +1919,7 @@
       "claude"
     ],
     "desc": "مهارات Canva الرسمية: تفحص التصميم مقابل هوية علامتك في Canva، وتغيّر مقاسه لكل منصة تواصل، وتعدّله. تحتاج حساب Canva.",
+    "desc_de": "Die offiziellen Canva-Skills gleichen ein Design mit deiner Markenidentität in Canva ab, passen seine Größe für jede Social-Media-Plattform an und bearbeiten es. Dafür wird ein Canva-Konto benötigt.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1840,6 +1938,7 @@
       "claude"
     ],
     "desc": "قالب رسمي من Anthropic يجعل Claude يستخدم ألوانك وخطوطك تلقائيًا. يأتي بألوان Anthropic، فاستبدلها بألوان علامتك قبل الاستخدام.",
+    "desc_de": "Offizielle Vorlage von Anthropic, mit der Claude automatisch deine Farben und Schriften verwendet. Sie ist mit den Farben von Anthropic vorbelegt, ersetze diese daher vor der Nutzung durch die Farben deiner Marke.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1860,6 +1959,7 @@
       "web"
     ],
     "desc": "يولّد شعارات وأيقونات بصيغة متجهة، ويحوّل الشعار من صورة عادية إلى متجه. للاستخدام التجاري تحتاج خطة مدفوعة.",
+    "desc_de": "Generiert Logos und Icons im Vektorformat und wandelt ein Logo von einem normalen Bild in eine Vektorgrafik um. Für die kommerzielle Nutzung benötigst du einen kostenpflichtigen Tarif.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1878,6 +1978,7 @@
       "mac"
     ],
     "desc": "خادم Apple الرسمي داخل Xcode: يبني المشروع ويشغّل الاختبارات ويعرض معاينات SwiftUI. فعّله أولًا من إعدادات Xcode، وافتح المشروع فيه.",
+    "desc_de": "Apples offizieller MCP-Server in Xcode baut das Projekt, führt die Tests aus und zeigt SwiftUI-Vorschauen an. Aktiviere ihn zuerst in den Xcode-Einstellungen und öffne das Projekt darin.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1896,6 +1997,7 @@
       "mac"
     ],
     "desc": "مهارات كتبتها Apple وتأتي داخل Xcode 27: SwiftUI، وتحديث الاختبارات، وتدقيق إعدادات الأمان. تصدّرها بهذا الأمر ثم تضعها في مجلد مهارات Claude.",
+    "desc_de": "Von Apple geschriebene Skills, die in Xcode 27 enthalten sind: SwiftUI, Aktualisierung von Tests und Prüfung der Sicherheitseinstellungen. Du exportierst sie mit diesem Befehl und legst sie dann in den Skills-Ordner von Claude.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1914,6 +2016,7 @@
       "mac"
     ],
     "desc": "اسمه سابقًا XcodeBuildMCP: يجعل Claude يبني تطبيقك ويشغّله ويختبره على محاكي iPhone أو جهاز حقيقي أو Mac. يعمل مع تطبيقات Capacitor وFlutter أيضًا.",
+    "desc_de": "Hieß früher XcodeBuildMCP und lässt Claude deine App im iPhone-Simulator, auf einem echten Gerät oder auf dem Mac bauen, starten und testen. Funktioniert auch mit Capacitor- und Flutter-Apps.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1932,6 +2035,7 @@
       "claude"
     ],
     "desc": "ميزة مدمجة في تطبيق Claude Code لسطح المكتب تعرض محاكي iPhone بجانب المحادثة، ليبني Claude التطبيق ويجرّبه بنفسه. ما زالت تجريبية.",
+    "desc_de": "In die Desktop-App von Claude Code integrierte Funktion, die neben dem Chat einen iPhone-Simulator anzeigt, damit Claude die App selbst baut und ausprobiert. Noch experimentell.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1949,6 +2053,7 @@
       "mac"
     ],
     "desc": "يجعل Claude يلتقط صور الشاشة والتطبيقات على Mac ويضغط ويكتب داخلها. يحتاج صلاحيات تسجيل الشاشة وإمكانية الوصول.",
+    "desc_de": "Lässt Claude auf dem Mac Screenshots vom Bildschirm und von Apps aufnehmen sowie darin klicken und tippen. Benötigt die Berechtigungen „Bildschirmaufnahme“ und „Bedienungshilfen“.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1966,6 +2071,7 @@
       "mac"
     ],
     "desc": "تطبيق صغير في شريط Mac يعطي Claude وصولًا إلى الرسائل وجهات الاتصال والتقويم والتذكيرات والاختصارات، مع إذن منفصل لكل خدمة.",
+    "desc_de": "Kleine App in der Menüleiste des Mac, die Claude Zugriff auf Nachrichten, Kontakte, Kalender, Erinnerungen und Kurzbefehle gibt – mit einer eigenen Berechtigung für jeden Dienst.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -1983,6 +2089,7 @@
       "mac"
     ],
     "desc": "يشغّل AppleScript على Mac مع مكتبة سكربتات جاهزة لـ Finder وSafari والبريد والملاحظات. راجع السكربت قبل تشغيله.",
+    "desc_de": "Führt AppleScript auf dem Mac aus und bringt eine Bibliothek fertiger Skripte für Finder, Safari, Mail und Notizen mit. Prüfe das Skript, bevor du es ausführst.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2001,6 +2108,7 @@
       "mac"
     ],
     "desc": "18 مهارة لتطبيقات Apple، منها تشخيص التطبيق على المحاكي، وملاحظات الإصدار لمتجر Apple، وتوقيع تطبيقات Mac وتحديثها.",
+    "desc_de": "18 Skills für Apple-Apps, darunter App-Diagnose im Simulator, Versionshinweise für den App Store sowie Signieren und Aktualisieren von Mac-Apps.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2019,6 +2127,7 @@
       "web"
     ],
     "desc": "يجعل Claude يستخدم تطبيقك على محاكي iPhone أو Android ويحفظ الخطوات كاختبارات تتكرر. يعمل مع Flutter وCapacitor والتطبيقات الأصلية.",
+    "desc_de": "Lässt Claude deine App im iPhone-Simulator oder Android-Emulator bedienen und speichert die Schritte als wiederholbare Tests. Funktioniert mit Flutter, Capacitor und nativen Apps.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2037,6 +2146,7 @@
       "claude"
     ],
     "desc": "يربط Claude ببرنامج Lexware Office (lexoffice سابقًا): جهات الاتصال والفواتير والإيصالات والمدفوعات. مشروع مجتمعي، يعمل للقراءة فقط افتراضيًا، ويحتاج مفتاح API.",
+    "desc_de": "Verbindet Claude mit der Software Lexware Office (früher lexoffice): Kontakte, Rechnungen, Belege und Zahlungen. Community-Projekt, arbeitet standardmäßig nur lesend und benötigt einen API-Schlüssel.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2055,6 +2165,7 @@
       "claude"
     ],
     "desc": "خادم رسمي لمنصة محاسبة ألمانية: فواتير ZUGFeRD، وتصنيف المعاملات، ومطابقة الإيصالات، وإقرار ضريبة القيمة المضافة عبر ELSTER، وتصدير DATEV للمستشار الضريبي.",
+    "desc_de": "Offizieller MCP-Server einer deutschen Buchhaltungsplattform: ZUGFeRD-Rechnungen, Kategorisierung von Transaktionen, Belegabgleich, Umsatzsteuermeldung über ELSTER und DATEV-Export für den Steuerberater.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2073,6 +2184,7 @@
       "claude"
     ],
     "desc": "خادم Qonto الرسمي لحساب الشركة البنكي: المعاملات والكشوف والإيصالات، وإنشاء الفواتير وعروض الأسعار. مفيد فقط إذا كان حسابك في Qonto.",
+    "desc_de": "Offizieller MCP-Server von Qonto für das Geschäftskonto: Transaktionen, Kontoauszüge und Belege sowie das Erstellen von Rechnungen und Angeboten. Nur nützlich, wenn du dein Konto bei Qonto führst.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2091,6 +2203,7 @@
       "claude"
     ],
     "desc": "مهارات للضرائب الألمانية: إقرار ضريبة القيمة المضافة UStVA، والمحاسبة، والفاتورة الإلكترونية. مسودة لم يراجعها محاسب بعد، ولا تدعم نظام Kleinunternehmer.",
+    "desc_de": "Skills für deutsche Steuern: Umsatzsteuer-Voranmeldung (UStVA), Buchhaltung und E-Rechnung. Ein Entwurf, den noch kein Buchhalter geprüft hat. Die Kleinunternehmerregelung wird nicht unterstützt.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2110,6 +2223,7 @@
       "web"
     ],
     "desc": "مكتبة JavaScript تحوّل بيانات الفاتورة إلى فاتورة إلكترونية أوروبية بصيغة XRechnung أو ZUGFeRD. افحص كل فاتورة بعد إنشائها.",
+    "desc_de": "JavaScript-Bibliothek, die Rechnungsdaten in eine europäische E-Rechnung im Format XRechnung oder ZUGFeRD umwandelt. Prüfe jede Rechnung nach dem Erstellen.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2127,6 +2241,7 @@
       "finance"
     ],
     "desc": "الفاحص الرسمي الألماني للفواتير الإلكترونية XRechnung: يتأكد أن الملف صحيح قبل إرساله. يفحص الصيغة فقط، لا صحة الضريبة.",
+    "desc_de": "Der offizielle deutsche Validator für E-Rechnungen im Format XRechnung stellt vor dem Versand sicher, dass die Datei gültig ist. Er prüft nur das Format, nicht die steuerliche Richtigkeit.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2144,6 +2259,7 @@
       "finance"
     ],
     "desc": "أرشيف إلكتروني للإيصالات والفواتير على خادمك: يقرأ نص المستندات الممسوحة ويرتبها ويبحث فيها. تأكد مع مستشارك الضريبي أن طريقة الأرشفة مناسبة.",
+    "desc_de": "Digitales Archiv für Belege und Rechnungen auf deinem Server, das den Text gescannter Dokumente ausliest, sie ordnet und durchsuchbar macht. Kläre mit deinem Steuerberater, ob diese Art der Archivierung geeignet ist.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2162,6 +2278,7 @@
       "claude"
     ],
     "desc": "يجعل Claude يبحث في أرشيف paperless-ngx ويقرأ المستندات ويضيف الوسوم ويرفع الملفات. مشروع مجتمعي وفيه أدوات حذف، فاضبط صلاحياته.",
+    "desc_de": "Lässt Claude im paperless-ngx-Archiv suchen, Dokumente lesen, Tags hinzufügen und Dateien hochladen. Community-Projekt, das auch Tools zum Löschen enthält – passe seine Berechtigungen also entsprechend an.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2183,6 +2300,7 @@
       "claude"
     ],
     "desc": "يجعل Claude يبحث في أكثر من 150 مجموعة أيقونات ويعطيك الأيقونة كـ SVG أو كود React. الصق SVG في الصفحة مباشرة بدل تحميله من خادم خارجي، حفاظًا على خصوصية الزوار.",
+    "desc_de": "Lässt Claude in mehr als 150 Icon-Sets suchen und liefert dir das Icon als SVG oder React-Code. Füge das SVG direkt in die Seite ein, statt es von einem externen Server zu laden – zum Schutz der Privatsphäre der Besucher.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2203,6 +2321,7 @@
       "dashboard"
     ],
     "desc": "أكثر من 6000 أيقونة مجانية بنمط واحد لـ React وFlutter معًا، مع مهارة رسمية تمنع Claude من اختراع أسماء أيقونات. نمط واحد فقط مجاني والباقي مدفوع.",
+    "desc_de": "Mehr als 6000 kostenlose Icons in einem Stil für React und Flutter zugleich, dazu ein offizieller Skill, der verhindert, dass Claude Icon-Namen erfindet. Nur ein Stil ist kostenlos, die übrigen sind kostenpflichtig.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2223,6 +2342,7 @@
       "landing"
     ],
     "desc": "أكثر من 7400 شعار علامة تجارية بصيغة SVG، منها شعارات الدفع والشحن مثل Klarna وPayPal وDHL. كل شعار ملك لصاحبه، فتحقق من شروط استخدامه.",
+    "desc_de": "Mehr als 7400 Markenlogos im SVG-Format, darunter Zahlungs- und Versandlogos wie Klarna, PayPal und DHL. Jedes Logo ist Eigentum seines Inhabers, prüfe daher die jeweiligen Nutzungsbedingungen.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2242,6 +2362,7 @@
       "dashboard"
     ],
     "desc": "468 أيقونة Lucide متحركة تتحرك عند مرور الماوس، تضيف كل واحدة بأمر shadcn. مناسبة للأزرار والقوائم في Next.js.",
+    "desc_de": "468 animierte Lucide-Icons, die sich beim Überfahren mit der Maus bewegen. Du fügst jedes einzeln mit einem shadcn-Befehl hinzu. Geeignet für Buttons und Menüs in Next.js.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2263,6 +2384,7 @@
       "claude"
     ],
     "desc": "مهارة للتفاصيل الصغيرة التي تجعل الأزرار والواجهة أفخم: انكماش خفيف عند الضغط، ومساحة لمس كافية، وانتقالات سريعة بين الحالات.",
+    "desc_de": "Skill für die kleinen Details, durch die Buttons und Oberfläche hochwertiger wirken: leichtes Schrumpfen beim Drücken, ausreichend große Touch-Flächen und schnelle Übergänge zwischen Zuständen.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2281,6 +2403,7 @@
       "landing"
     ],
     "desc": "مكونات React متحركة مجانية، منها 35 تفاعلًا صغيرًا وأزرار متحركة، تضيف كل واحد بأمر واحد. لا تعمل في ثيمات Shopify، وإعادة بيعها ممنوعة.",
+    "desc_de": "Kostenlose animierte React-Komponenten, darunter 35 Mikrointeraktionen und animierte Buttons. Du fügst jede mit einem einzigen Befehl hinzu. Sie funktionieren nicht in Shopify-Themes, und der Weiterverkauf ist verboten.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2300,6 +2423,7 @@
       "web"
     ],
     "desc": "أكثر من 3000 عنصر جاهز بـ CSS عادي، منها أكثر من 1200 زر وأدوات تحميل. تلصقها مباشرة في ثيم Shopify، لكن افحص التباين وحالة التركيز قبل النشر.",
+    "desc_de": "Mehr als 3000 fertige Elemente in reinem CSS, darunter mehr als 1200 Buttons sowie Ladeanimationen. Du fügst sie direkt in ein Shopify-Theme ein, prüfe aber vor der Veröffentlichung Kontrast und Fokuszustand.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2321,6 +2445,7 @@
       "dashboard"
     ],
     "desc": "محرك حركة خفيف يجمع الخط الزمني والتمرير وحركة SVG والنصوص والنوابض في مكتبة واحدة، ويعمل في ثيم Shopify بملف واحد. احفظ الملف داخل الثيم بدل تحميله من خادم خارجي.",
+    "desc_de": "Schlanke Animations-Engine, die Timelines, Scroll-Effekte, SVG- und Textanimationen sowie Federeffekte in einer Bibliothek vereint und in einem Shopify-Theme mit nur einer Datei läuft. Speichere die Datei im Theme, statt sie von einem externen Server zu laden.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2341,6 +2466,7 @@
       "brand"
     ],
     "desc": "انتقالات ناعمة بين صفحات الموقع بدون إعادة تحميل كاملة، مناسبة لثيمات Shopify. بعد كل انتقال يجب إعادة تشغيل سكربتات الثيم والتتبع.",
+    "desc_de": "Sanfte Übergänge zwischen den Seiten einer Website ohne komplettes Neuladen, geeignet für Shopify-Themes. Nach jedem Übergang müssen Theme- und Tracking-Skripte erneut ausgeführt werden.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2362,6 +2488,7 @@
       "booking"
     ],
     "desc": "يحرّك الأرقام بنعومة، مثل السعر ومجموع السلة والعدّادات، بالتنسيق الألماني لليورو، ويحترم إعداد تقليل الحركة تلقائيًا.",
+    "desc_de": "Animiert Zahlen sanft – etwa Preis, Warenkorbsumme und Zähler – im deutschen Euro-Format und berücksichtigt automatisch die Einstellung „Bewegung reduzieren“.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2382,6 +2509,7 @@
       "web"
     ],
     "desc": "المكتبة الأساسية للحركة ثلاثية الأبعاد في المتصفح: عارض منتجات ومشاهد وتأثيرات. حجمها كبير، فحمّلها عند الحاجة فقط.",
+    "desc_de": "Die zentrale Bibliothek für 3D-Animation im Browser: Produkt-Viewer, Szenen und Effekte. Sie ist groß, lade sie daher nur bei Bedarf.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2401,6 +2529,7 @@
       "web"
     ],
     "desc": "الطريقة المعتادة لبناء مشاهد Three.js متحركة كمكونات React داخل Next.js.",
+    "desc_de": "Der übliche Weg, animierte Three.js-Szenen als React-Komponenten in Next.js zu bauen.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2421,6 +2550,7 @@
       "claude"
     ],
     "desc": "عشر مهارات تعلّم Claude مكتبة Three.js، منها الحركة والمواد والظلال والتفاعل، مع نصائح للأداء.",
+    "desc_de": "Zehn Skills, die Claude die Bibliothek Three.js beibringen, darunter Animation, Materialien, Schatten und Interaktion, ergänzt um Tipps zur Performance.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2440,6 +2570,7 @@
       "dashboard"
     ],
     "desc": "مهارة Vercel الرسمية لانتقالات الصفحات والعناصر المشتركة في Next.js بميزة ViewTransition في React، مع احترام تقليل الحركة.",
+    "desc_de": "Offizieller Skill von Vercel für Seiten- und Shared-Element-Übergänge in Next.js mit der ViewTransition-Funktion von React, unter Berücksichtigung reduzierter Bewegung.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2461,6 +2592,7 @@
       "claude"
     ],
     "desc": "يكشف الحركات البطيئة والمتقطعة في الكود ويصلحها، لتبقى الحركة فاخرة وسريعة على الجوال.",
+    "desc_de": "Erkennt langsame und ruckelnde Animationen im Code und behebt sie, damit Bewegungen auf dem Smartphone hochwertig und schnell bleiben.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2482,6 +2614,7 @@
       "claude"
     ],
     "desc": "يعلّم Claude التفاعلات الصغيرة ومدد الحركة والانسيابية وحالات التحميل وانتقالات الصفحات، مع دعم تقليل الحركة.",
+    "desc_de": "Bringt Claude Mikrointeraktionen, Animationsdauern, Easing, Ladezustände und Seitenübergänge bei, mit Unterstützung für reduzierte Bewegung.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2503,6 +2636,7 @@
       "shop"
     ],
     "desc": "خادم LottieFiles الرسمي: يرسم Claude الأشكال ويضبط الحركة داخل محرر Lottie Creator ويصدّر ملفًا واحدًا يعمل في الموقع وFlutter وiPhone. يجب أن يبقى المحرر مفتوحًا.",
+    "desc_de": "Offizieller MCP-Server von LottieFiles: Claude zeichnet im Editor Lottie Creator Formen, stellt die Animation ein und exportiert eine einzige Datei, die auf der Website, in Flutter und auf dem iPhone funktioniert. Der Editor muss geöffnet bleiben.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2523,6 +2657,7 @@
       "brand"
     ],
     "desc": "خادم Rive الرسمي داخل برنامج Rive: يبني Claude رسومًا تفاعلية تتفاعل مع الضغط والحالة، مثل الأزرار والشخصيات. يحتاج النسخة التجريبية المدفوعة من البرنامج مفتوحة.",
+    "desc_de": "Offizieller MCP-Server von Rive, direkt in der Rive-Software: Claude baut interaktive Grafiken, die auf Klicks und Zustände reagieren, etwa Buttons und Figuren. Benötigt die geöffnete, kostenpflichtige Beta-Version der Software.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2545,6 +2680,7 @@
       "claude"
     ],
     "desc": "يكتب Claude رسوم Lottie متحركة جاهزة من وصف نصي، مع معاينة حية. ملفات صغيرة تعمل في ثيمات Shopify والتطبيقات.",
+    "desc_de": "Claude schreibt fertige Lottie-Animationen anhand einer Textbeschreibung, mit Live-Vorschau. Kleine Dateien, die in Shopify-Themes und in Apps funktionieren.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2563,6 +2699,7 @@
       "mac"
     ],
     "desc": "حزمة فريق Flutter الرسمية لانتقالات جاهزة بين الشاشات: تحوّل البطاقة إلى صفحة، والانزلاق، والتلاشي. النجوم لمستودع حزم Flutter كله.",
+    "desc_de": "Offizielles Paket des Flutter-Teams für fertige Übergänge zwischen Bildschirmen: Verwandlung einer Karte in eine Seite, Gleiten und Überblenden. Die Sterne gelten für das gesamte Repository der Flutter-Pakete.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2581,6 +2718,7 @@
       "mac"
     ],
     "desc": "المشغّل المعتاد لرسوم Lottie داخل تطبيقات Flutter على iPhone وAndroid وMac. مشروع مجتمعي.",
+    "desc_de": "Der gängige Player für Lottie-Animationen in Flutter-Apps auf iPhone, Android und Mac. Community-Projekt.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2599,6 +2737,7 @@
       "mac"
     ],
     "desc": "مشغّل Lottie الرسمي من Airbnb لتطبيقات iPhone وMac الأصلية، مع عرض جاهز لـ SwiftUI.",
+    "desc_de": "Offizieller Lottie-Player von Airbnb für native iPhone- und Mac-Apps, mit fertiger View für SwiftUI.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2617,6 +2756,7 @@
       "mac"
     ],
     "desc": "تأثيرات SwiftUI جاهزة بسطر واحد، مثل الظهور والاهتزاز واللمعان، مع اهتزاز وصوت مناسبين. مجانية بالكامل.",
+    "desc_de": "Fertige SwiftUI-Effekte mit einer einzigen Codezeile, etwa Erscheinen, Wackeln und Glänzen – mit passendem haptischem Feedback und Sound. Komplett kostenlos.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2635,6 +2775,7 @@
       "mac"
     ],
     "desc": "مهارة لبناء ومراجعة حركات SwiftUI الحديثة، وتفرض احترام إعداد تقليل الحركة. رخصتها تسمح ببناء تطبيقاتك لكنها ليست مفتوحة بالكامل.",
+    "desc_de": "Skill zum Erstellen und Prüfen moderner SwiftUI-Animationen, der die Beachtung der Einstellung „Bewegung reduzieren“ erzwingt. Die Lizenz erlaubt dir, damit deine Apps zu bauen, ist aber nicht vollständig offen.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2652,6 +2793,7 @@
       "mobile"
     ],
     "desc": "مهارة من شركة Very Good Ventures لأفضل ممارسات الحركة في Flutter: الانتقالات بين الصفحات، وHero، والحركات المتتابعة، مع احترام تقليل الحركة.",
+    "desc_de": "Skill des Unternehmens Very Good Ventures mit Best Practices für Animationen in Flutter: Seitenübergänge, Hero und gestaffelte Animationen – unter Beachtung von „Bewegung reduzieren“.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2669,6 +2811,7 @@
       "mobile"
     ],
     "desc": "إضافة Capacitor الرسمية للاهتزاز الخفيف عند الضغط والنجاح، فيبدو التطبيق كأنه تطبيق أصلي عند دمجها مع الحركة.",
+    "desc_de": "Offizielles Capacitor-Plugin für leichtes haptisches Feedback beim Tippen und bei Erfolg – in Kombination mit Animationen wirkt die App dadurch wie eine native App.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2690,6 +2833,7 @@
       "brand"
     ],
     "desc": "إطار React لصنع فيديوهات MP4 بالكود، مع أدوات للصوت والترجمة. مجاني للأفراد والشركات حتى 3 أشخاص، وبعدها يحتاج رخصة مدفوعة.",
+    "desc_de": "React-Framework, um MP4-Videos per Code zu erstellen, mit Tools für Audio und Untertitel. Kostenlos für Einzelpersonen und Unternehmen mit bis zu 3 Personen, darüber hinaus wird eine kostenpflichtige Lizenz benötigt.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2711,6 +2855,7 @@
       "brand"
     ],
     "desc": "مهارة تقود Claude خطوة بخطوة لصنع فيديو ترويجي لمنتج أو تطبيق في Remotion: القصة، واللقطات، والحركة، والصوت. فيها 152 وصفة لقطة جاهزة.",
+    "desc_de": "Skill, der Claude Schritt für Schritt durch die Erstellung eines Werbevideos für ein Produkt oder eine App in Remotion führt: Story, Shots, Animation und Sound. Enthält 152 fertige Shot-Rezepte.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2731,6 +2876,7 @@
       "mobile"
     ],
     "desc": "مساحة إنتاج فيديو كاملة: يكتب Claude النص ويجهّز المواد ويحرّر ويصدّر بـ Remotion وFFmpeg. يعمل مجانًا، والمزوّدون الأفضل مدفوعون. رخصته AGPL.",
+    "desc_de": "Kompletter Workspace für die Videoproduktion: Claude schreibt das Skript, bereitet das Material vor, bearbeitet und exportiert mit Remotion und FFmpeg. Kostenlos nutzbar, die besseren Anbieter sind kostenpflichtig. Lizenz: AGPL.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2751,6 +2897,7 @@
       "brand"
     ],
     "desc": "إطار TypeScript لصنع الفيديو بالكود برخصة MIT مجانية دائمًا، بديل لـ Remotion عندما يكبر فريقك. ما زال في إصدار مبكر.",
+    "desc_de": "TypeScript-Framework, um Videos per Code zu erstellen, unter MIT-Lizenz und dauerhaft kostenlos – eine Alternative zu Remotion, wenn dein Team wächst. Noch in einer frühen Version.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2770,6 +2917,7 @@
       "landing"
     ],
     "desc": "حزم مهارات لفيديوهات التخفيضات وعرض المنتجات والنصوص المتحركة. عدّل تنسيق السعر إلى اليورو الألماني قبل الاستخدام.",
+    "desc_de": "Skill-Pakete für Rabatt-Videos, Produktpräsentationen und animierte Texte. Stelle vor der Nutzung das Preisformat auf das deutsche Euro-Format um.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2788,6 +2936,7 @@
       "brand"
     ],
     "desc": "يحرّر لقطاتك الخام تلقائيًا: يقص الفراغات ويضبط الألوان ويضيف الترجمة. يرسل الصوت إلى ElevenLabs، فانتبه للخصوصية إذا ظهر أشخاص.",
+    "desc_de": "Bearbeitet dein Rohmaterial automatisch: schneidet Pausen heraus, passt die Farben an und fügt Untertitel hinzu. Sendet die Tonspur an ElevenLabs – achte also auf den Datenschutz, wenn Personen darin vorkommen.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2809,6 +2958,7 @@
       "claude"
     ],
     "desc": "ميزة تجريبية من Anthropic تحوّل وصفك ونصوصك وأسعارك وصورك إلى حركة قصيرة كود قابل للتعديل، وتصدّرها MP4. متاحة في خطط Team وEnterprise.",
+    "desc_de": "Experimentelle Funktion von Anthropic, die deine Beschreibung, Texte, Preise und Bilder in eine kurze Animation als bearbeitbaren Code verwandelt und als MP4 exportiert. Verfügbar in den Tarifen Team und Enterprise.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2830,6 +2980,7 @@
       "shop"
     ],
     "desc": "مهارة Figma الرسمية: يضيف Claude الحركة والتوقيت إلى تصاميمك داخل Figma، وتصدّرها فيديو أو كود. ميزة الحركة في Figma ما زالت تجريبية.",
+    "desc_de": "Offizieller Skill von Figma: Claude ergänzt deine Designs in Figma um Animationen und Timing, und du exportierst sie als Video oder Code. Die Animationsfunktion in Figma ist noch experimentell.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2849,6 +3000,7 @@
       "landing"
     ],
     "desc": "خادم رسمي لشركة أوروبية: يصنع Claude فيديوهات منتجات وإعلانات بالجملة من قوالب جاهزة. كل تصدير يستهلك رصيدًا مدفوعًا.",
+    "desc_de": "Offizieller Server eines europäischen Unternehmens: Claude erstellt Produkt- und Werbevideos in großen Mengen aus fertigen Vorlagen. Jeder Export verbraucht kostenpflichtige Credits.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2868,6 +3020,7 @@
       "landing"
     ],
     "desc": "خادم رسمي لتصدير الفيديو في السحابة مع قوالب وتوليد صور وصوت بالذكاء الاصطناعي. الدفع حسب الاستخدام، والاستضافة خارج الاتحاد الأوروبي.",
+    "desc_de": "Offizieller Server für den Videoexport in der Cloud, mit Vorlagen sowie KI-Generierung von Bildern und Audio. Abrechnung nach Nutzung, Hosting außerhalb der EU.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2887,6 +3040,7 @@
       "landing"
     ],
     "desc": "موصل Runway الرسمي: يولّد Claude مقاطع فيديو من وصف أو من صورة منتج، ويشمل نماذج Veo وKling. كل ثانية فيديو تستهلك رصيدًا.",
+    "desc_de": "Offizieller Connector von Runway: Claude generiert Videoclips aus einer Beschreibung oder einem Produktbild, inklusive der Modelle Veo und Kling. Jede Videosekunde verbraucht Credits.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2905,6 +3059,7 @@
       "brand"
     ],
     "desc": "موصل Adobe الرسمي بأدوات من Premiere وExpress وFirefly: يغيّر مقاس الفيديو للريلز، ويقص أفضل اللقطات، ويحرّك قوالب Express. لا يشمل After Effects.",
+    "desc_de": "Offizieller Connector von Adobe mit Tools aus Premiere, Express und Firefly: passt die Videogröße für Reels an, schneidet die besten Szenen heraus und animiert Express-Vorlagen. After Effects ist nicht enthalten.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2924,6 +3079,7 @@
       "mac"
     ],
     "desc": "يتحكم Claude ببرنامج DaVinci Resolve: المشاريع والخط الزمني وFusion للعناوين المتحركة والتصدير. مشروع مجتمعي، والدعم الكامل يحتاج نسخة Studio.",
+    "desc_de": "Claude steuert DaVinci Resolve: Projekte, Timeline, Fusion für animierte Titel und Export. Community-Projekt; für die volle Unterstützung wird die Studio-Version benötigt.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2943,6 +3099,7 @@
       "mac"
     ],
     "desc": "يبني Claude مشاهد ثلاثية الأبعاد ويحرّكها في Blender، مثل دوران المنتج. يشغّل كودًا داخل Blender، فاحفظ عملك أولًا.",
+    "desc_de": "Claude baut 3D-Szenen in Blender und animiert sie, etwa ein sich drehendes Produkt. Führt Code in Blender aus – speichere also zuerst deine Arbeit.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2961,6 +3118,7 @@
       "mac"
     ],
     "desc": "يعدّل Claude مشاريع After Effects: التراكيب والطبقات والحركة. مشروع مجتمعي صغير، وAdobe لا تقدّم خادمًا رسميًا له. جرّبه على نسخة احتياطية.",
+    "desc_de": "Claude bearbeitet After-Effects-Projekte: Kompositionen, Ebenen und Animationen. Kleines Community-Projekt – Adobe bietet dafür keinen offiziellen Server an. Teste es an einer Sicherungskopie.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2979,6 +3137,7 @@
       "landing"
     ],
     "desc": "مكتبة Python لفيديوهات الشرح التعليمية والرسوم البيانية المتحركة بأسلوب قناة 3Blue1Brown. ممتازة للشرح، وأضعف لفيديوهات المنتجات.",
+    "desc_de": "Python-Bibliothek für lehrreiche Erklärvideos und animierte Diagramme im Stil des Kanals 3Blue1Brown. Hervorragend für Erklärungen, schwächer bei Produktvideos.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -2997,6 +3156,7 @@
       "claude"
     ],
     "desc": "مهارة تعلّم Claude كتابة فيديوهات Manim بشكل صحيح. لم تُحدَّث منذ يناير 2026.",
+    "desc_de": "Skill, der Claude beibringt, Manim-Videos korrekt zu schreiben. Seit Januar 2026 nicht aktualisiert.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -3016,6 +3176,7 @@
       "web"
     ],
     "desc": "أداة TypeScript لفيديوهات الشرح المتحركة مع محرر مرئي في المتصفح. آخر إصدار مستقر كان في ديسمبر 2024، وRevideo هو نسخته المحدّثة.",
+    "desc_de": "TypeScript-Tool für animierte Erklärvideos mit visuellem Editor im Browser. Die letzte stabile Version erschien im Dezember 2024; Revideo ist die aktualisierte Fassung davon.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -3035,6 +3196,7 @@
       "web"
     ],
     "desc": "محرر حركة مرئي للويب والمشاهد ثلاثية الأبعاد بخط زمني ومفاتيح حركة. تطويره العلني متوقف منذ 2024، ورخصة المحرر AGPL.",
+    "desc_de": "Visueller Animationseditor für das Web und 3D-Szenen mit Timeline und Keyframes. Die öffentliche Entwicklung ruht seit 2024; die Lizenz des Editors ist AGPL.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -3053,6 +3215,7 @@
       "brand"
     ],
     "desc": "يصنع فيديو من ملف وصف بسيط: مقاطع وصور ونصوص وانتقالات وموسيقى. سهل جدًا، لكن آخر إصدار له كان في 2022.",
+    "desc_de": "Erstellt ein Video aus einer einfachen Beschreibungsdatei: Clips, Bilder, Texte, Übergänge und Musik. Sehr einfach, aber die letzte Version erschien 2022.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -3072,6 +3235,7 @@
       "claude"
     ],
     "desc": "يجعل Claude يقص الفيديو ويدمجه ويحوّل صيغه عبر FFmpeg. أفضل خوادم FFmpeg MCP المتاحة، لكنه ما زال صغيرًا.",
+    "desc_de": "Lässt Claude Videos per FFmpeg schneiden, zusammenfügen und in andere Formate umwandeln. Der beste verfügbare FFmpeg-MCP-Server, aber noch ein kleines Projekt.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -3091,6 +3255,7 @@
       "mobile"
     ],
     "desc": "تطبيق iPhone وiPad للموشن غرافيك: مفاتيح حركة وطبقات ونصوص متحركة، الأقرب إلى After Effects على الجوال. تحميله مجاني، والاشتراك يزيل العلامة المائية. لا يتحكم به Claude.",
+    "desc_de": "iPhone- und iPad-App für Motion Graphics: Keyframes, Ebenen und animierte Texte – kommt After Effects auf dem Smartphone am nächsten. Kostenloser Download, das Abo entfernt das Wasserzeichen. Nicht von Claude steuerbar.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -3109,6 +3274,7 @@
       "mac"
     ],
     "desc": "مشغّل Rive الرسمي لتطبيقات iPhone وMac: أزرار ورسوم تفاعلية تتفاعل مع حالة التطبيق في SwiftUI.",
+    "desc_de": "Offizieller Rive-Player für iPhone- und Mac-Apps: Buttons und interaktive Grafiken, die in SwiftUI auf den Zustand der App reagieren.",
     "pushed": null,
     "added": "2026-10-24T00:00:00Z"
   },
@@ -3130,6 +3296,7 @@
       "claude"
     ],
     "desc": "إضافة لـ Claude Code تحلّل مشروعك بوكلاء متعددين وتبني رسمًا معرفيًا لكل ملف ودالة وتبعية، مع لوحة تفاعلية للتصفح والبحث وطرح الأسئلة. مفيدة عند استلام مشروع كبير أو العودة إلى مشروع قديم. أول تحليل يستهلك رموزًا كثيرة على المشاريع الكبيرة، وما بعده تدريجي. تعمل أيضًا مع Codex وCursor وGemini CLI. رخصتها MIT.",
+    "desc_de": "Plugin für Claude Code, das dein Projekt mit mehreren Agenten analysiert und einen Wissensgraphen aller Dateien, Funktionen und Abhängigkeiten erstellt – mit interaktivem Dashboard zum Navigieren, Suchen und Stellen von Fragen. Nützlich bei der Übernahme eines großen Projekts oder der Rückkehr zu einem alten. Die erste Analyse verbraucht bei großen Projekten viele Tokens, weitere Analysen laufen inkrementell. Funktioniert auch mit Codex, Cursor und Gemini CLI. Lizenz: MIT.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -3151,6 +3318,7 @@
       "web"
     ],
     "desc": "خادم MCP يتيح لـ Claude تحليل التطبيقات والملفات التنفيذية: تطبيقات Electron وجافاسكريبت وملفات APK والمواقع وسجلات الشبكة، وحتى الملفات الأصلية عبر Hopper أو Ghidra أو IDA. التحليل محلي على جهازك. للأبحاث المشروعة وتحليل ما تملكه أو مصرّح لك بفحصه فقط، وأدوات IDA وHopper التجارية تحتاج ترخيصك الخاص. التقاط التشغيل يشغّل التطبيق بصلاحياتك. مشروع حديث ظهر في أكتوبر 2026 ونجومه كثيرة جدًا، فتحقق منه بنفسك قبل التثبيت. رخصته MIT ويحتاج Node.js 22 أو أحدث.",
+    "desc_de": "MCP-Server, mit dem Claude Apps und ausführbare Dateien analysieren kann: Electron-Apps, JavaScript, APK-Dateien, Websites und Netzwerk-Logs, sogar native Binärdateien über Hopper, Ghidra oder IDA. Die Analyse läuft lokal auf deinem Gerät. Nur für legitime Forschung und die Analyse dessen, was dir gehört oder wofür du eine Prüfberechtigung hast; die kommerziellen Tools IDA und Hopper benötigen deine eigene Lizenz. Die Laufzeitaufzeichnung führt die App mit deinen Berechtigungen aus. Neues Projekt, erschienen im Oktober 2026, mit sehr vielen Sternen – prüfe es daher selbst vor der Installation. Lizenz: MIT; benötigt Node.js 22 oder neuer.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -3172,6 +3340,7 @@
       "brand"
     ],
     "desc": "يولّد فيديو قصيرًا بجودة عالية من موضوع أو كلمة مفتاحية: يكتب النص، ويختار اللقطات، ويضيف التعليق الصوتي والترجمة والموسيقى. يعمل من واجهة ويب أو من الطرفية، ومفيد لفيديوهات تيك توك وريلز ويوتيوب شورتس لمتجرك. الصوت عبر Edge TTS مجاني بلا مفتاح، أما النموذج اللغوي واللقطات والصوت المتقدم فتحتاج مفاتيح API خاصة بك وقد تكون مدفوعة. الحزمة الرسمية على PyPI اسمها mpt فقط، وحزمة MoneyPrinterTurbo هناك من طرف ثالث. يحتاج Python 3.11 أو أحدث. رخصته MIT.",
+    "desc_de": "Erzeugt aus einem Thema oder Stichwort ein kurzes Video in hoher Qualität: schreibt das Skript, wählt das Filmmaterial aus und fügt Voice-over, Untertitel und Musik hinzu. Läuft über eine Weboberfläche oder im Terminal und eignet sich für TikTok-, Reels- und YouTube-Shorts-Videos für deinen Shop. Die Sprachausgabe über Edge TTS ist kostenlos und ohne Schlüssel; Sprachmodell, Filmmaterial und erweiterte Sprachausgabe benötigen dagegen deine eigenen API-Schlüssel und können kostenpflichtig sein. Das offizielle Paket auf PyPI heißt nur mpt – das dortige Paket MoneyPrinterTurbo stammt von Dritten. Benötigt Python 3.11 oder neuer. Lizenz: MIT.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -3193,6 +3362,7 @@
       "brand"
     ],
     "desc": "يحسّن صياغة النص ويصحح أخطاءه ويقترح بدائل في الأسلوب والنبرة، ويدعم تسع لغات منها الألمانية والإنجليزية (الأمريكية والبريطانية). مفيد لوصف المنتجات ورسائل العملاء بالألمانية. لا يدعم العربية. مجاني بحد أحرف لكل نص، وPro مدفوعة بلا حد، والنسخة المجانية قد تُستخدم نصوصها لتحسين الخدمة.",
+    "desc_de": "Verbessert Formulierungen, korrigiert Fehler und schlägt Alternativen für Stil und Tonfall vor; unterstützt neun Sprachen, darunter Deutsch und Englisch (amerikanisch und britisch). Nützlich für Produktbeschreibungen und Kundennachrichten auf Deutsch. Unterstützt kein Arabisch. Kostenlos mit Zeichenlimit pro Text, Pro ist kostenpflichtig und ohne Limit; Texte aus der kostenlosen Version können zur Verbesserung des Dienstes verwendet werden.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3214,6 +3384,7 @@
       "brand"
     ],
     "desc": "مترجم يدعم أكثر من 30 لغة منها العربية الفصحى والألمانية والإنجليزية، ويترجم النصوص والمستندات (PDF وWord وPowerPoint) مع الحفاظ على التنسيق. يفيد في نقل صفحات المتجر ورسائله بين اللغات الثلاث. مجاني بحدود، وPro مدفوعة بحدود أعلى وقواميس مصطلحات. راجع الترجمة العربية قبل النشر.",
+    "desc_de": "Übersetzer für mehr als 30 Sprachen, darunter Hocharabisch, Deutsch und Englisch; übersetzt Texte und Dokumente (PDF, Word und PowerPoint) unter Beibehaltung der Formatierung. Hilfreich, um Shop-Seiten und -Nachrichten zwischen den drei Sprachen zu übertragen. Kostenlos mit Limits, Pro ist kostenpflichtig, mit höheren Limits und Glossaren. Prüfe die arabische Übersetzung vor der Veröffentlichung.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3236,6 +3407,7 @@
       "brand"
     ],
     "desc": "مدقق إملائي ونحوي وأسلوبي مفتوح المصدر يدعم الألمانية والإنجليزية والعربية وأكثر من 25 لغة، ويعمل من الموقع وبإضافة المتصفح، ويمكن تشغيل خادمه على جهازك. نسخة مجانية، وPremium مدفوعة تضيف فحوصًا أكثر للإنجليزية والألمانية وغيرهما دون العربية. دقته بالعربية أقل منها بالألمانية والإنجليزية.",
+    "desc_de": "Open-Source-Prüftool für Rechtschreibung, Grammatik und Stil; unterstützt Deutsch, Englisch, Arabisch und mehr als 25 weitere Sprachen. Funktioniert auf der Website und als Browser-Erweiterung, der Server lässt sich auch auf deinem Gerät betreiben. Kostenlose Version verfügbar; das kostenpflichtige Premium ergänzt weitere Prüfungen für Englisch, Deutsch und andere Sprachen, nicht aber für Arabisch. Auf Arabisch ist es weniger genau als auf Deutsch und Englisch.",
     "pushed": null,
     "license": "LGPL-2.1",
     "archived": false,
@@ -3257,6 +3429,7 @@
       "brand"
     ],
     "desc": "مدقق ألماني من دار Duden يصحح الإملاء والنحو والترقيم ويقترح تحسين الأسلوب، ويعمل على الموقع وبإضافات Chrome وFirefox وEdge وWord. الفحص الأساسي مجاني بحد أحرف صغير بدون تسجيل، وPremium المدفوعة تضيف فحص الأسلوب والمرادفات وحدودًا أعلى. للألمانية فقط.",
+    "desc_de": "Prüftool für deutsche Texte vom Duden-Verlag: korrigiert Rechtschreibung, Grammatik und Zeichensetzung und schlägt stilistische Verbesserungen vor. Funktioniert auf der Website sowie über Add-ons für Chrome, Firefox, Edge und Word. Die Basisprüfung ist kostenlos, ohne Registrierung und mit kleinem Zeichenlimit; das kostenpflichtige Premium ergänzt Stilprüfung, Synonyme und höhere Limits. Nur für Deutsch.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3278,6 +3451,7 @@
       "web"
     ],
     "desc": "يحلل نصك الألماني ويقيس سهولة قراءته بمؤشر Flesch ومؤشر خاص بالموقع، ويفحصه وفق مفهوم هامبورغ للوضوح وينبّه إلى الجمل والكلمات الطويلة، فيناسب صفحات المنتجات والنشرات. النسخة الأساسية مجانية بدون تسجيل وفيها حد استخدام، وPremium مدفوعة. للألمانية فقط.",
+    "desc_de": "Analysiert deinen deutschen Text und misst seine Lesbarkeit mit dem Flesch-Index und einem eigenen Index der Website, prüft ihn nach dem Hamburger Verständlichkeitskonzept und weist auf lange Sätze und Wörter hin – passend für Produktseiten und Newsletter. Die Basisversion ist kostenlos, ohne Registrierung nutzbar und hat ein Nutzungslimit; Premium ist kostenpflichtig. Nur für Deutsch.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3299,6 +3473,7 @@
       "brand"
     ],
     "desc": "يصحح الإملاء والقواعد ويقترح تحسين الوضوح والنبرة بأكثر من 20 لغة منها الإنجليزية والألمانية والفرنسية والإسبانية. لا يقدم اقتراحات كتابة بالعربية، ومترجمه فقط يدعمها. نسخة مجانية محدودة، وPro مدفوعة تفتح الاقتراحات المتقدمة وإعادة كتابة الفقرات. الشركة الأم صارت Superhuman والمنتج ما زال Grammarly.",
+    "desc_de": "Korrigiert Rechtschreibung und Grammatik und schlägt Verbesserungen für Klarheit und Tonfall vor – in mehr als 20 Sprachen, darunter Englisch, Deutsch, Französisch und Spanisch. Keine Schreibvorschläge auf Arabisch, nur der Übersetzer von Grammarly unterstützt die Sprache. Eingeschränkte kostenlose Version; das kostenpflichtige Pro schaltet erweiterte Vorschläge und das Umschreiben von Absätzen frei. Das Mutterunternehmen heißt inzwischen Superhuman, das Produkt weiterhin Grammarly.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3320,6 +3495,7 @@
       "shop"
     ],
     "desc": "يلوّن الجمل الصعبة والمبنية للمجهول والكلمات المعقدة في نصك الإنجليزي ويعطيه درجة قراءة، فيساعدك على كتابة نصوص تسويقية قصيرة وواضحة. محرر الويب مجاني بدون ذكاء اصطناعي، وPlus مدفوعة بإعادة صياغة الجمل، وتطبيق Mac وPC بدفعة واحدة. للإنجليزية فقط.",
+    "desc_de": "Markiert schwer lesbare Sätze, Passivsätze und komplizierte Wörter in deinem englischen Text farbig und vergibt eine Lesbarkeitsstufe – und hilft dir so, kurze, klare Marketingtexte zu schreiben. Der Web-Editor ist kostenlos und ohne KI, Plus ist kostenpflichtig und formuliert Sätze um, die App für Mac und PC gibt es per Einmalzahlung. Nur für Englisch.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3340,6 +3516,7 @@
       "landing"
     ],
     "desc": "أدوات كتابة تشمل مدقق قواعد ومعيد صياغة ومترجمًا وملخصًا؛ يصحح الإنجليزية والألمانية والفرنسية والإسبانية والبرتغالية، ويعيد الصياغة بأكثر من 25 لغة. مفيد لتنويع جمل الإعلان والوصف. الأدوات الأساسية مجانية، وأنماط الصياغة الكاملة بلا حد كلمات في Premium المدفوعة. دعم العربية غير مؤكد.",
+    "desc_de": "Schreibtools mit Grammatikprüfung, Paraphrasierungs-Tool, Übersetzer und Textzusammenfassung; korrigiert Englisch, Deutsch, Französisch, Spanisch und Portugiesisch und formuliert in mehr als 25 Sprachen um. Nützlich, um Sätze in Anzeigen und Beschreibungen zu variieren. Die Basis-Tools sind kostenlos, die vollständigen Umformulierungsmodi ohne Wortlimit gibt es im kostenpflichtigen Premium. Unterstützung für Arabisch ist nicht bestätigt.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3360,6 +3537,7 @@
       "landing"
     ],
     "desc": "محرر ومدقق للنصوص الإنجليزية الطويلة، يعطي تقارير عن الأسلوب والتكرار وطول الجمل وسهولة القراءة مع اقتراحات إعادة صياغة، ويناسب المدونات وصفحات العلامة التجارية. للإنجليزية فقط. الخطة المجانية تحرر 500 كلمة في المرة، وPremium مدفوعة بلا حد كلمات.",
+    "desc_de": "Editor und Prüftool für lange englische Texte: liefert Berichte zu Stil, Wiederholungen, Satzlänge und Lesbarkeit mit Vorschlägen zum Umformulieren und eignet sich für Blogs und Markenseiten. Nur für Englisch. Der kostenlose Tarif bearbeitet 500 Wörter pro Durchgang, Premium ist kostenpflichtig und ohne Wortlimit.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3381,6 +3559,7 @@
       "landing"
     ],
     "desc": "مدقق عربي (صححلي) يصحح الإملاء والنحو والترقيم ويشكّل النص تلقائيًا، ويعمل من الموقع وبإضافة المتصفح. يناسب مراجعة نصوص المتجر والإعلانات العربية قبل النشر. خطة مجانية محدودة بدون بطاقة، واشتراكات مدفوعة بحدود أعلى. للفصحى فقط وليس اللهجات.",
+    "desc_de": "Prüftool für arabische Texte (Sahehly): korrigiert Rechtschreibung, Grammatik und Zeichensetzung, versieht den Text automatisch mit Vokalzeichen und funktioniert auf der Website sowie als Browser-Erweiterung. Eignet sich, um arabische Shop-Texte und Anzeigen vor der Veröffentlichung zu prüfen. Eingeschränkter kostenloser Tarif ohne Kreditkarte, kostenpflichtige Abos mit höheren Limits. Nur für Hocharabisch, nicht für Dialekte.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3402,6 +3581,7 @@
       "landing"
     ],
     "desc": "مساعد كتابة عربي (قلم) يدقق الإملاء والنحو والترقيم ويقترح صياغات بديلة ويضيف التشكيل بدرجات مختلفة. له إضافات لـ Microsoft Office والمتصفح وWordPress، وخدمات تدقيق بشري وفحص اقتباس. تجربة مجانية محدودة عند التسجيل ثم اشتراك مدفوع.",
+    "desc_de": "Schreibassistent für Arabisch (Qalam): prüft Rechtschreibung, Grammatik und Zeichensetzung, schlägt alternative Formulierungen vor und setzt Vokalzeichen in verschiedenen Abstufungen. Bietet Add-ons für Microsoft Office, den Browser und WordPress sowie Dienste für Korrekturlesen durch Menschen und Plagiatsprüfung. Begrenzte kostenlose Testphase nach der Registrierung, danach ein kostenpflichtiges Abo.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3423,6 +3603,7 @@
       "landing"
     ],
     "desc": "مدقق عربي (لسان) بالذكاء الاصطناعي يكشف أخطاء الإملاء والنحو والصرف والأسلوب والترقيم، ويقترح إكمالًا تلقائيًا وإعادة صياغة، وله ملحق لـ Google Workspace. الخطة المجانية تشمل الإملاء والتنسيق، وPremium المدفوعة تضيف النحو والتدقيق المتقدم والكتابة بالذكاء الاصطناعي.",
+    "desc_de": "KI-gestützte Textprüfung für Arabisch (Lisan): erkennt Fehler in Rechtschreibung, Grammatik, Morphologie, Stil und Zeichensetzung, schlägt automatische Vervollständigungen und Umformulierungen vor und bietet ein Add-on für Google Workspace. Der kostenlose Tarif umfasst Rechtschreibung und Formatierung, der kostenpflichtige Premium-Tarif ergänzt Grammatik, erweiterte Prüfung und Schreiben mit KI.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3443,6 +3624,7 @@
       "landing"
     ],
     "desc": "ميزات الذكاء الاصطناعي المدمجة في لوحة Shopify: Magic يكتب أوصاف المنتجات من بضع كلمات بنبرة تختارها، وSidekick مساعد يجيب عن أسئلة المتجر وينفذ مهامه. مجانية ضمن Shopify وحدود Sidekick تختلف بحسب الخطة. تدعم الألمانية والإنجليزية وست لغات أخرى، والعربية غير مدعومة رسميًا.",
+    "desc_de": "In das Shopify-Dashboard integrierte KI-Funktionen: Magic schreibt Produktbeschreibungen aus wenigen Wörtern in einem Ton deiner Wahl; Sidekick ist ein Assistent, der Fragen zum Shop beantwortet und Shop-Aufgaben erledigt. Kostenlos in Shopify enthalten, die Limits von Sidekick hängen vom Tarif ab. Unterstützt Deutsch, Englisch und sechs weitere Sprachen; Arabisch wird offiziell nicht unterstützt.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3463,6 +3645,7 @@
       "landing"
     ],
     "desc": "منصة كتابة موجهة للتجارة الإلكترونية: تسحب منتجات Shopify وتولّد أوصافًا محسّنة لمحركات البحث بالجملة وتنشرها في المتجر، وتترجم بأكثر من 40 لغة منها العربية. مدفوعة بتجربة مجانية قصيرة، وأسعار باقات المتاجر لا تظهر بوضوح في صفحتها الرسمية.",
+    "desc_de": "Auf E-Commerce ausgerichtete Schreibplattform: importiert Shopify-Produkte, erstellt suchmaschinenoptimierte Beschreibungen in großen Mengen, veröffentlicht sie im Shop und übersetzt in mehr als 40 Sprachen, darunter Arabisch. Kostenpflichtig mit kurzer kostenloser Testphase; die Preise der Shop-Pakete sind auf der offiziellen Website nicht klar ersichtlich.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3484,6 +3667,7 @@
       "landing"
     ],
     "desc": "منصة تسويق بالذكاء الاصطناعي فيها وكيل لوصف المنتجات ووكيل ترجمة بـ27 لغة منها العربية والألمانية، لتوليد نصوص الكتالوج وترجمتها دفعة واحدة. اشتراك مدفوع، والعربية متاحة عبر وكيل الترجمة فقط ولا تظهر ضمن لغات إعداد مساحة العمل.",
+    "desc_de": "KI-Marketingplattform mit einem Agenten für Produktbeschreibungen und einem Übersetzungsagenten für 27 Sprachen, darunter Arabisch und Deutsch, um Katalogtexte in einem Durchgang zu erstellen und zu übersetzen. Kostenpflichtiges Abo; Arabisch ist nur über den Übersetzungsagenten verfügbar und taucht nicht unter den Sprachen für die Workspace-Einrichtung auf.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3505,6 +3689,7 @@
       "brand"
     ],
     "desc": "منصة ألمانية للكتابة التسويقية بالذكاء الاصطناعي تولّد أوصاف المنتجات والإعلانات والمقالات بأكثر من 20 لغة أبرزها الألمانية، وتقول إن خوادمها في ألمانيا ومتوافقة مع GDPR. مدفوعة مع تجربة مجانية قصيرة. العربية غير مذكورة ضمن لغاتها.",
+    "desc_de": "Deutsche KI-Plattform für Marketingtexte: erstellt Produktbeschreibungen, Anzeigen und Artikel in mehr als 20 Sprachen, allen voran Deutsch, und ist nach eigenen Angaben DSGVO-konform mit Servern in Deutschland. Kostenpflichtig mit kurzer kostenloser Testphase. Arabisch wird unter den Sprachen nicht genannt.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3526,6 +3711,7 @@
       "landing"
     ],
     "desc": "قاموس عربي-ألماني مجاني يضم أكثر من 629 ألف كلمة وعبارة، مع النطق الصوتي ولوحات مفاتيح عربية وألمانية وجداول تصريف الأفعال ومترجم نصوص مجاني. يفيد في اختيار الكلمة الصحيحة عند نقل وصف المنتج بين العربية والألمانية. خطة PONS Pur المدفوعة اختيارية.",
+    "desc_de": "Kostenloses Wörterbuch Arabisch-Deutsch mit mehr als 629.000 Wörtern und Wendungen, Audio-Aussprache, Tastaturen für Arabisch und Deutsch, Konjugationstabellen und einem kostenlosen Textübersetzer. Hilft bei der Wahl des richtigen Wortes, wenn Produktbeschreibungen zwischen Arabisch und Deutsch übertragen werden. Der kostenpflichtige Tarif PONS Pur ist optional.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3547,6 +3733,7 @@
       "landing"
     ],
     "desc": "معجم ألماني رقمي مجاني من أكاديمية برلين-براندنبورغ للعلوم، يشرح معاني الكلمات واستعمالاتها، وأداة Wortprofil فيه تعرض الكلمات التي ترد معها عادةً، لتتأكد أن عبارتك الألمانية طبيعية. المحتوى بالألمانية، وبعض المتون النصية لها شروط استخدام خاصة.",
+    "desc_de": "Kostenloses digitales Wörterbuch der deutschen Sprache von der Berlin-Brandenburgischen Akademie der Wissenschaften: erklärt Bedeutung und Gebrauch von Wörtern, und das Tool Wortprofil zeigt, mit welchen Wörtern sie typischerweise vorkommen – so prüfst du, ob deine deutsche Formulierung natürlich klingt. Inhalte auf Deutsch; für einige Textkorpora gelten eigene Nutzungsbedingungen.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3568,6 +3755,7 @@
       "landing"
     ],
     "desc": "قاموس مرادفات ألماني مجاني يحرره مجتمع المستخدمين، يقترح كلمات بديلة لتجنب تكرار اللفظ نفسه في أوصاف المنتجات والنصوص. بياناته قابلة للتنزيل برخصة CC BY-SA أو LGPL مع ذكر المصدر، وشيفرة الموقع مفتوحة. للألمانية فقط.",
+    "desc_de": "Kostenloses deutsches Synonymwörterbuch, das von der Nutzer-Community bearbeitet wird: schlägt alternative Wörter vor, um Wiederholungen desselben Begriffs in Produktbeschreibungen und Texten zu vermeiden. Die Daten lassen sich unter der Lizenz CC BY-SA oder LGPL mit Quellenangabe herunterladen, der Code der Website ist Open Source. Nur für Deutsch.",
     "pushed": null,
     "license": "AGPL-3.0",
     "archived": false,
@@ -3587,6 +3775,7 @@
       "claude"
     ],
     "desc": "المرجع الرسمي من Anthropic لكتابة أوامر Claude: الوضوح والأمثلة وعلامات XML والتفكير واستخدام الأدوات وأنظمة الوكلاء، مع صفحة مستقلة لكل نموذج حديث مثل Sonnet 5.5 وOpus 5.5. ضُمّت إليه صفحات الأساليب القديمة. مجاني بالإنجليزية، وله نسخة ألمانية.",
+    "desc_de": "Offizielle Referenz von Anthropic zum Schreiben von Prompts für Claude: Klarheit, Beispiele, XML-Tags, Thinking, Tool-Nutzung und Agentensysteme, mit einer eigenen Seite für jedes aktuelle Modell wie Sonnet 5.5 und Opus 5.5. Die früheren Seiten zu einzelnen Techniken wurden darin zusammengeführt. Kostenlos auf Englisch, zusätzlich gibt es eine deutsche Version.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3606,6 +3795,7 @@
       "claude"
     ],
     "desc": "صفحة Anthropic الرسمية التي تنشر نص التعليمات الأساسية (system prompt) التي يعمل بها Claude في موقع claude.ai وتطبيقي iOS وAndroid، لكل نموذج مع تواريخ التحديث. مثال عملي تتعلم منه صياغة تعليماتك الخاصة. لا تنطبق على Claude API. مجانية بالإنجليزية.",
+    "desc_de": "Offizielle Seite von Anthropic, die den Wortlaut der grundlegenden Anweisungen (System-Prompt) veröffentlicht, mit denen Claude auf der Website claude.ai sowie in den Apps für iOS und Android arbeitet – für jedes Modell, mit dem Datum jeder Aktualisierung. Ein Praxisbeispiel, an dem du lernst, eigene Anweisungen zu formulieren. Gilt nicht für die Claude API. Kostenlos auf Englisch.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3625,6 +3815,7 @@
       "claude"
     ],
     "desc": "دفتر ملاحظات (notebook) من Anthropic يحل مشكلة الصفحة البيضاء: تكتب مهمتك فيولّد Claude قالب أمر جاهزًا بمتغيراته لتجربه وتعدّله. يعمل في Colab أو على جهازك بمفتاح API، ومصمم للأوامر ذات الدور الواحد لا المحادثات الطويلة. مجاني، والتشغيل يستهلك رصيد API.",
+    "desc_de": "Ein Notebook von Anthropic, das das Problem des leeren Blatts löst: Du beschreibst deine Aufgabe, und Claude erstellt eine fertige Prompt-Vorlage samt Variablen, die du testen und anpassen kannst. Läuft mit einem API-Schlüssel in Colab oder auf deinem Rechner und ist für Single-Turn-Prompts gedacht, nicht für lange Unterhaltungen. Kostenlos; die Ausführung verbraucht API-Credits.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3645,6 +3836,7 @@
       "web"
     ],
     "desc": "وصفات وأكواد جاهزة للنسخ من Anthropic في أقسام مثل الوكلاء والأدوات والتقييم والمهارات والرؤية، بينها وصفة Prompting for frontend aesthetics لتحسين شكل الواجهات التي يولدها Claude. تحتاج مفتاح Claude API، والأمثلة بلغة Python غالبًا. مجانية بالإنجليزية.",
+    "desc_de": "Rezepte und kopierfertiger Code von Anthropic in Bereichen wie Agenten, Tools, Evaluierung, Skills und Vision, darunter das Rezept „Prompting for frontend aesthetics“, mit dem von Claude erzeugte Oberflächen besser aussehen. Benötigt einen API-Schlüssel für die Claude API, die Beispiele sind meist in Python. Kostenlos auf Englisch.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -3664,6 +3856,7 @@
       "claude"
     ],
     "desc": "دورة تفاعلية من Anthropic في 9 فصول تعلّمك أساسيات كتابة الأوامر: الوضوح وتحديد الدور وفصل البيانات وتنسيق المخرجات والتفكير خطوة بخطوة والأمثلة وتجنب الهلوسة، مع تمارين ومفتاح إجابات، ونسخة أخف في Google Sheets. كُتبت لنماذج Claude 3، فاتبع دليل الممارسات الحديث عند الاختلاف.",
+    "desc_de": "Interaktiver Kurs von Anthropic in 9 Kapiteln, der dir die Grundlagen des Prompt-Schreibens beibringt: Klarheit, Rollenzuweisung, Trennung von Daten, Formatierung der Ausgabe, schrittweises Denken, Beispiele und Vermeidung von Halluzinationen – mit Übungen, Lösungsschlüssel und einer schlankeren Version in Google Sheets. Für Claude-3-Modelle geschrieben; halte dich bei Abweichungen an den aktuellen Best-Practices-Leitfaden.",
     "pushed": null,
     "license": "none",
     "archived": false,
@@ -3683,6 +3876,7 @@
       "claude"
     ],
     "desc": "منصة Anthropic الرسمية لدورات Claude المجانية: Claude 101 وClaude Code 101 وClaude Platform 101 وClaude Code in Action وMCP ودورات AI Fluency. تتصفح الكتالوج بدون تسجيل، وحساب Claude المجاني يحفظ تقدمك ويمنحك شارات إتمام مجانية. ليست دورة مخصصة لكتابة الأوامر.",
+    "desc_de": "Offizielle Plattform von Anthropic für kostenlose Claude-Kurse: Claude 101, Claude Code 101, Claude Platform 101, Claude Code in Action, MCP und die Kurse zu AI Fluency. Den Katalog durchstöberst du ohne Registrierung; ein kostenloses Claude-Konto speichert deinen Fortschritt und gibt dir kostenlose Abschluss-Badges. Kein Kurs speziell zum Schreiben von Prompts.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3704,6 +3898,7 @@
       "shop"
     ],
     "desc": "مكتبة مفتوحة المصدر للأوامر الجاهزة (كانت Awesome ChatGPT Prompts) تتصفحها وتنسخ منها وتضيف أوامرك، وتعمل مع Claude وChatGPT وGemini. لها أمر npx وخادم MCP وإضافة Claude Code للبحث فيها من الطرفية. مجانية، وأوامرها من المجتمع فراجع كل أمر قبل استعماله.",
+    "desc_de": "Open-Source-Bibliothek mit fertigen Prompts (früher Awesome ChatGPT Prompts): Du stöberst darin, kopierst Prompts und fügst eigene hinzu; funktioniert mit Claude, ChatGPT und Gemini. Bietet einen npx-Befehl, einen MCP-Server und ein Plugin für Claude Code, um sie aus dem Terminal zu durchsuchen. Kostenlos; die Prompts stammen aus der Community, prüfe daher jeden vor der Verwendung.",
     "pushed": null,
     "license": "other",
     "archived": false,
@@ -3724,6 +3919,7 @@
       "brand"
     ],
     "desc": "دليل مجاني من فريق DAIR.AI يجمع تقنيات كتابة الأوامر (zero-shot وfew-shot وسلسلة التفكير وRAG) والوكلاء ومراجع بحثية. يتوفر بـ13 لغة، وفي مستودعه ترجمة عربية جزئية. الدليل مجاني، ودورات DAIR.AI Academy المرتبطة به مدفوعة.",
+    "desc_de": "Kostenloser Leitfaden des DAIR.AI-Teams mit Prompting-Techniken (Zero-Shot, Few-Shot, Chain-of-Thought und RAG), Agenten und wissenschaftlichen Quellen. In 13 Sprachen verfügbar; im Repository gibt es eine teilweise arabische Übersetzung. Der Leitfaden ist kostenlos, die zugehörigen Kurse der DAIR.AI Academy sind kostenpflichtig.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -3743,6 +3939,7 @@
       "web"
     ],
     "desc": "إرشادات OpenAI الرسمية لكتابة أوامر نماذج GPT-5: ضبط جهد الاستدلال، وتعليمات المثابرة للوكلاء، وترتيب القواعد الحرجة أولًا للنماذج الصغيرة، مع أدلة منفصلة لكل إصدار في OpenAI Cookbook. مجانية بالإنجليزية، وتفيدك إن استعملت OpenAI إلى جانب Claude.",
+    "desc_de": "Offizielle Richtlinien von OpenAI zum Schreiben von Prompts für GPT-5-Modelle: Reasoning-Aufwand einstellen, Agenten zu Beharrlichkeit anweisen und bei kleinen Modellen kritische Regeln zuerst nennen – mit separaten Leitfäden für jede Version im OpenAI Cookbook. Kostenlos auf Englisch; hilfreich, wenn du OpenAI neben Claude nutzt.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3763,6 +3960,7 @@
       "brand"
     ],
     "desc": "منصة OpenAI التعليمية العامة، وفيها حزم أوامر جاهزة منها حزمة للأعمال الصغيرة تغطي الحملات التسويقية ورسائل العملاء والعمليات، وقوالب GPT لمتاجر صغيرة. التصفح بدون تسجيل، وبعض الدورات تحتاج حساب ChatGPT. الأوامر مكتوبة لـ ChatGPT ويمكن تكييفها مع Claude.",
+    "desc_de": "Allgemeine Lernplattform von OpenAI mit fertigen Prompt-Paketen, darunter eines für kleine Unternehmen zu Marketingkampagnen, Kundennachrichten und Betriebsabläufen, sowie GPT-Vorlagen für kleine Shops. Stöbern ohne Registrierung, einige Kurse benötigen ein ChatGPT-Konto. Die Prompts sind für ChatGPT geschrieben und lassen sich an Claude anpassen.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3783,6 +3981,7 @@
       "video"
     ],
     "desc": "مكتبة بحث في أوامر صور وفيديو الذكاء الاصطناعي: تفتح الصورة فترى الأمر والنموذج الذي أنتجها (Midjourney وStable Diffusion وFLUX وSora وVeo وKling) وتنسخه وتعدّله. صفحات البحث العامة متاحة بدون اشتراك، وخطط Starter وPRO المدفوعة للتوليد بالرصيد. فيه أقسام محتوى صريح فتجنبها.",
+    "desc_de": "Durchsuchbare Bibliothek mit Prompts für KI-Bilder und -Videos: Du öffnest ein Bild, siehst den Prompt und das Modell, das es erzeugt hat (Midjourney, Stable Diffusion, FLUX, Sora, Veo und Kling), und kannst ihn kopieren und anpassen. Die öffentlichen Suchseiten sind ohne Abo zugänglich, die kostenpflichtigen Tarife Starter und PRO dienen dem Generieren mit Credits. Enthält Bereiche mit expliziten Inhalten – meide sie.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3803,6 +4002,7 @@
       "shop"
     ],
     "desc": "وثائق Midjourney الرسمية المجانية لكتابة أوامر الصور: أساسيات الوصف، والأوامر المتعددة والأوزان، والصور المرجعية، والتباديل، وقائمة المعاملات. تفيد في صور المنتجات والهوية البصرية. التوليد نفسه يحتاج اشتراكًا مدفوعًا.",
+    "desc_de": "Offizielle, kostenlose Dokumentation von Midjourney zum Schreiben von Bild-Prompts: Grundlagen der Beschreibung, Multi-Prompts und Gewichtungen, Referenzbilder, Permutationen und die Liste der Parameter. Hilfreich für Produktfotos und die visuelle Identität. Das Generieren selbst benötigt ein kostenpflichtiges Abo.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3823,6 +4023,7 @@
       "shop"
     ],
     "desc": "دليل Google Cloud (مارس 2026) لكتابة أوامر صور Nano Banana 2 وPro: صيغة الموضوع والفعل والمكان والتكوين والأسلوب، وتحرير الصور، والصور المرجعية، وكتابة نص داخل الصورة بعدة لغات، ومثاله يترجم ملصق منتج إلى الكورية والعربية. المقال مجاني، وتكلفة النماذج غير مذكورة فيه.",
+    "desc_de": "Leitfaden von Google Cloud (März 2026) zum Schreiben von Bild-Prompts für Nano Banana 2 und Pro: das Schema aus Motiv, Aktion, Ort, Komposition und Stil, Bildbearbeitung, Referenzbilder und Text im Bild in mehreren Sprachen – das Beispiel übersetzt ein Produktetikett ins Koreanische und Arabische. Der Artikel ist kostenlos, die Kosten der Modelle werden darin nicht genannt.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3843,6 +4044,7 @@
       "brand"
     ],
     "desc": "دليل Google Cloud (أكتوبر 2025) لكتابة أوامر فيديو Veo 3.1: صيغة السينماتوغرافيا والموضوع والحركة والسياق والأسلوب، ومصطلحات حركة الكاميرا، وأوامر الحوار والمؤثرات الصوتية، وتحريك صورة، والانتقال بين أول إطار وآخر إطار. مقال مجاني يفيد في فيديوهات المنتجات والإعلانات.",
+    "desc_de": "Leitfaden von Google Cloud (Oktober 2025) zum Schreiben von Video-Prompts für Veo 3.1: das Schema aus Kinematografie, Motiv, Bewegung, Kontext und Stil, Begriffe für Kamerabewegungen, Prompts für Dialoge und Soundeffekte, das Animieren eines Bildes und Übergänge vom ersten zum letzten Frame. Kostenloser Artikel, hilfreich für Produktvideos und Werbung.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3863,6 +4065,7 @@
       "brand"
     ],
     "desc": "أدلة Runway الرسمية لكتابة أوامر الفيديو: ابدأ بحركة بسيطة ثم أضف حركة الكاميرا والمشهد والأسلوب، مع مرجع لمصطلحات الكاميرا (pan وdolly وorbit) وأدلة للنص إلى فيديو والصورة إلى فيديو. الأدلة مجانية، والتوليد برصيد مدفوع، والخطة المجانية 125 رصيدًا لمرة واحدة.",
+    "desc_de": "Offizielle Leitfäden von Runway zum Schreiben von Video-Prompts: Beginne mit einer einfachen Bewegung und ergänze dann Kamerabewegung, Szene und Stil – dazu eine Referenz für Kamerabegriffe (pan, dolly, orbit) und Leitfäden für Text-zu-Video und Bild-zu-Video. Die Leitfäden sind kostenlos, das Generieren läuft über kostenpflichtige Credits; der kostenlose Tarif bietet einmalig 125 Credits.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3883,6 +4086,7 @@
       "claude"
     ],
     "desc": "سوق لشراء وبيع الأوامر الجاهزة لـ Midjourney وChatGPT وFLUX وغيرها؛ يأتي كل أمر بأمثلة ودليل من صانعه وترخيص استخدام تجاري. أغلب الأوامر مدفوعة وجودتها تختلف من بائع لآخر، والمكتبات المجانية تغطي كثيرًا منها.",
+    "desc_de": "Marktplatz zum Kaufen und Verkaufen fertiger Prompts für Midjourney, ChatGPT, FLUX u. a.; jeder Prompt kommt mit Beispielen, einer Anleitung des Erstellers und einer Lizenz zur kommerziellen Nutzung. Die meisten Prompts sind kostenpflichtig, ihre Qualität schwankt von Verkäufer zu Verkäufer, und kostenlose Bibliotheken decken vieles davon ab.",
     "pushed": null,
     "license": null,
     "archived": false,
@@ -3903,6 +4107,7 @@
       "web"
     ],
     "desc": "أداة سطر أوامر مفتوحة المصدر تختبر أوامرك على عدة نماذج (Claude وGPT وGemini وغيرها) وتقارن نتائجها جنبًا إلى جنب، وتفحص التطبيقات بحثًا عن ثغرات، وتعمل في CI. تفيد من يضيف ميزة ذكاء اصطناعي إلى متجره أو تطبيقه. تحتاج مفاتيح API، والشركة صارت جزءًا من OpenAI مع بقاء الشيفرة MIT.",
+    "desc_de": "Open-Source-Kommandozeilentool, das deine Prompts mit mehreren Modellen testet (Claude, GPT, Gemini u. a.), die Ergebnisse direkt nebeneinander vergleicht, Apps auf Sicherheitslücken prüft und in CI läuft. Hilfreich für alle, die ihrem Shop oder ihrer App eine KI-Funktion hinzufügen. Benötigt API-Schlüssel; das Unternehmen gehört inzwischen zu OpenAI, der Code steht weiterhin unter MIT-Lizenz.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -3923,6 +4128,7 @@
       "claude"
     ],
     "desc": "منصة مفتوحة المصدر لإدارة الأوامر وتتبع استدعاءات النماذج وتقييمها: تحفظ إصدارات الأوامر وتجربها في Playground وتقارن نتائجها. تستضيفها بنفسك بـ Docker Compose أو تستعمل السحابة بخطة مجانية. موجهة للمطورين، وأصبحت جزءًا من ClickHouse منذ يناير 2026.",
+    "desc_de": "Open-Source-Plattform für Prompt-Management sowie Tracing und Evaluierung von Modellaufrufen: speichert Prompt-Versionen, testet sie im Playground und vergleicht ihre Ergebnisse. Du hostest sie selbst mit Docker Compose oder nutzt die Cloud mit kostenlosem Tarif. Richtet sich an Entwickler; gehört seit Januar 2026 zu ClickHouse.",
     "pushed": null,
     "license": "other",
     "archived": false,
@@ -3942,6 +4148,7 @@
       "claude"
     ],
     "desc": "ست مهارات من Steph Ango (kepano) تعلّم Claude صيغ Obsidian: ملاحظات Markdown بروابط wikilinks وCallouts، وملفات Bases وCanvas، وأوامر Obsidian CLI، واستخراج نص نظيف من صفحات الويب. مفيدة لمن يدير قاعدة معرفة أو ملاحظات عمل داخل مخزن Obsidian.",
+    "desc_de": "Sechs Skills von Steph Ango (kepano), die Claude die Formate von Obsidian beibringen: Markdown-Notizen mit Wikilinks und Callouts, Bases- und Canvas-Dateien, Befehle der Obsidian CLI und das Extrahieren von sauberem Text aus Webseiten. Hilfreich für alle, die in einem Obsidian-Vault eine Wissensdatenbank oder Arbeitsnotizen pflegen.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -3961,6 +4168,7 @@
       "claude"
     ],
     "desc": "إضافة Notion الرسمية لـ Claude Code: تضم أربع مهارات (حفظ المعرفة، وتحضير الاجتماعات، وتوثيق البحث، وتحويل المواصفات إلى مهام) وتصل Claude بخادم Notion MCP مع أوامر مثل /Notion:search و/Notion:create-page. تتطلب حساب Notion وتسجيل دخول OAuth.",
+    "desc_de": "Offizielles Notion-Plugin für Claude Code: enthält vier Skills (Wissen festhalten, Meetings vorbereiten, Recherchen dokumentieren, Spezifikationen in Aufgaben umwandeln) und verbindet Claude mit dem MCP-Server von Notion, inklusive Befehlen wie /Notion:search und /Notion:create-page. Benötigt ein Notion-Konto und eine Anmeldung per OAuth.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -3981,6 +4189,7 @@
       "shop"
     ],
     "desc": "أداة مفتوحة من Microsoft تحوّل ملفات PDF وWord وExcel وPowerPoint والصور والصوت وصفحات HTML إلى Markdown منظم يسهل على Claude قراءته. مفيدة لتجهيز كتالوجات الموردين وفواتير PDF وجداول المنتجات قبل تحليلها. تتطلب Python 3.10 أو أحدث.",
+    "desc_de": "Open-Source-Tool von Microsoft, das PDF-, Word-, Excel- und PowerPoint-Dateien, Bilder, Audio und HTML-Seiten in strukturiertes Markdown umwandelt, das Claude leicht lesen kann. Hilfreich, um Lieferantenkataloge, PDF-Rechnungen und Produkttabellen vor der Analyse aufzubereiten. Benötigt Python 3.10 oder neuer.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4002,6 +4211,7 @@
       "dashboard"
     ],
     "desc": "مهارة تجعل Claude يعرض الشرح كصفحة HTML منسّقة بدل نص الطرفية: مخططات انسيابية وجداول مقارنة ومراجعة للتعديلات والخطط وعروض شرائح (ويمكن تصديرها إلى PPTX بدقة محدودة). مفيدة لتوضيح خطوات الطلبات أو بنية الموقع لفريقك. يكفي متصفح لعرض الناتج.",
+    "desc_de": "Skill, mit dem Claude Erklärungen als gestaltete HTML-Seite statt als Terminaltext ausgibt: Flussdiagramme, Vergleichstabellen, Reviews von Änderungen und Plänen sowie Präsentationen (als PPTX exportierbar, allerdings mit eingeschränkter Genauigkeit). Hilfreich, um deinem Team Bestellabläufe oder den Aufbau der Website zu erklären. Zum Ansehen des Ergebnisses genügt ein Browser.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4022,6 +4232,7 @@
       "web"
     ],
     "desc": "الإضافة الرسمية من draw.io: يولّد Claude مخططات قابلة للتحرير بصيغة .drawio (انسيابية، وهياكل، وخرائط موقع) من وصف نصي أو Mermaid، ويصدّرها إلى PNG وSVG وPDF. النسخة المستضافة تعرض المخطط داخل المحادثة لكنها ترسل محتواه إلى خادم mcp.draw.io، والتصدير يحتاج draw.io Desktop.",
+    "desc_de": "Offizielles Plugin von draw.io: Claude erstellt bearbeitbare Diagramme im Format .drawio (Flussdiagramme, Strukturdiagramme, Sitemaps) aus einer Textbeschreibung oder Mermaid und exportiert sie als PNG, SVG und PDF. Die gehostete Version zeigt das Diagramm im Chat an, sendet seinen Inhalt aber an den Server mcp.draw.io; für den Export wird draw.io Desktop benötigt.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4044,6 +4255,7 @@
       "web"
     ],
     "desc": "مهارة تجعل Claude يكتب ويترجم ويدقق عربية سليمة وطبيعية: الفصحى وأربع لهجات (المصرية والشامية والخليجية والمغاربية)، مع تفادي علامات الترجمة الآلية مثل «قام بـ» و«من قبل» وأخطاء الهمزة والتاء المربوطة. مفيدة لوصف المنتجات ونصوص المتجر. يُنصح بمراجعة ناطق أصلي قبل النشر.",
+    "desc_de": "Skill, mit dem Claude korrektes und natürliches Arabisch schreibt, übersetzt und Korrektur liest: Hocharabisch und vier Dialekte (Ägyptisch, Levantinisch, Golf-Arabisch und Maghrebinisch) – unter Vermeidung typischer Merkmale maschineller Übersetzung wie „qāma bi-“ und „min qibal“ sowie von Fehlern bei Hamza und Tā marbūṭa. Hilfreich für Produktbeschreibungen und Shop-Texte. Vor der Veröffentlichung empfiehlt sich eine Prüfung durch Muttersprachler.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4066,6 +4278,7 @@
       "landing"
     ],
     "desc": "مهارة تساعد Claude على إخراج عربية صحيحة من أول مرة: اتصال الحروف، واتجاه الصفحة من اليمين إلى اليسار، وترتيب العربية مع الأرقام والإنجليزية في صفحات الويب وتطبيقات الجوال وملفات PDF وWord وPowerPoint والرسوم. تتضمن أداة فحص لأخطاء RTL. المشروع حديث (أكتوبر 2026) وصغير.",
+    "desc_de": "Skill, der Claude hilft, Arabisch auf Anhieb korrekt auszugeben: verbundene Buchstaben, Leserichtung von rechts nach links und die Anordnung von Arabisch zusammen mit Zahlen und Englisch auf Webseiten, in mobilen Apps, in PDF-, Word- und PowerPoint-Dateien sowie in Grafiken. Enthält ein Prüftool für RTL-Fehler. Das Projekt ist neu (Oktober 2026) und klein.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4085,6 +4298,7 @@
       "claude"
     ],
     "desc": "وكيل مفتوح المصدر للبحث عن وظيفة يعمل داخل Claude Code: يقيّم إعلان الوظيفة مقابل سيرتك الذاتية، ويعدّ سيرة PDF متوافقة مع أنظمة ATS ورسالة تغطية، ويتتبع طلباتك، وأنت من يضغط إرسال. سيرتك تُرسل إلى مزوّد الذكاء الاصطناعي الذي تختاره، ووجود مفتاح ANTHROPIC_API_KEY في البيئة يجعل الاستهلاك يُحتسب بالرموز.",
+    "desc_de": "Open-Source-Agent für die Jobsuche, der in Claude Code läuft: bewertet eine Stellenanzeige im Abgleich mit deinem Lebenslauf, erstellt einen ATS-kompatiblen Lebenslauf als PDF sowie ein Anschreiben und verfolgt deine Bewerbungen – auf „Senden“ klickst du selbst. Dein Lebenslauf wird an den KI-Anbieter deiner Wahl übermittelt; ist ANTHROPIC_API_KEY als Umgebungsvariable gesetzt, wird die Nutzung nach Tokens abgerechnet.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4105,6 +4319,7 @@
       "claude"
     ],
     "desc": "مهارات DuckDB الرسمية لـ Claude Code: قراءة ملفات CSV وJSON وParquet وExcel محليًا أو من التخزين السحابي، والاستعلام عنها بـ SQL أو بسؤال بلغة طبيعية، والبحث في وثائق DuckDB. مفيدة لتحليل ملفات كبيرة من تصدير المتجر دون إعداد قاعدة بيانات. تتطلب DuckDB CLI ولم تُختبر كاملًا على Windows.",
+    "desc_de": "Offizielle Skills von DuckDB für Claude Code: CSV-, JSON-, Parquet- und Excel-Dateien lokal oder aus dem Cloud-Speicher lesen, per SQL oder in natürlicher Sprache abfragen und die DuckDB-Dokumentation durchsuchen. Hilfreich, um große Dateien aus Shop-Exporten zu analysieren, ohne eine Datenbank einzurichten. Die DuckDB CLI wird benötigt; unter Windows nicht vollständig getestet.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4126,6 +4341,7 @@
       "brand"
     ],
     "desc": "مهارة بحث تجمع ما قاله الناس عن أي موضوع خلال آخر 30 يومًا من Reddit وHacker News وPolymarket وGitHub وغيرها، وتُرتّبه بحسب التفاعل ثم تُلخّصه في تقرير واحد. مفيدة لمعرفة آراء العملاء والمنافسين قبل إطلاق منتج. مصادر مثل X وTikTok تحتاج مفاتيح اختيارية بعضها مدفوع.",
+    "desc_de": "Recherche-Skill, der sammelt, was Menschen in den letzten 30 Tagen auf Reddit, Hacker News, Polymarket, GitHub u. a. zu einem beliebigen Thema gesagt haben, die Beiträge nach Engagement ordnet und in einem einzigen Bericht zusammenfasst. Hilfreich, um vor der Einführung eines Produkts die Meinungen von Kunden und Wettbewerbern zu kennen. Quellen wie X und TikTok benötigen optionale API-Schlüssel, teils kostenpflichtig.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4145,6 +4361,7 @@
       "claude"
     ],
     "desc": "177 مهارة علمية من K-Dense (كانت تُعرف باسم claude-scientific-skills) تغطي الأحياء والكيمياء والطب والفيزياء وتحليل البيانات وكتابة الأبحاث والمراجعة الأدبية، مع مهارة للبحث في نحو 80 قاعدة بيانات علمية. مفيدة للباحثين والطلاب. كثير منها يحتاج مفاتيح API وحزم Python منفصلة.",
+    "desc_de": "177 wissenschaftliche Skills von K-Dense (früher bekannt als claude-scientific-skills) zu Biologie, Chemie, Medizin, Physik, Datenanalyse, wissenschaftlichem Schreiben und Literaturreviews, dazu ein Skill für die Suche in rund 80 wissenschaftlichen Datenbanken. Hilfreich für Forschende und Studierende. Viele davon benötigen API-Schlüssel und separate Python-Pakete.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4165,6 +4382,7 @@
       "web"
     ],
     "desc": "مهارة تحفظ خطة المهمة على القرص في ثلاثة ملفات Markdown (الخطة والنتائج والتقدم) فيستأنف Claude عمله بعد /clear أو ضغط السياق أو انقطاع الجلسة. مفيدة للمهام الطويلة مثل بناء متجر أو موقع كامل. تتوفر نسخ مترجمة للعربية والألمانية، وتضيف hooks تعمل في كل دورة.",
+    "desc_de": "Skill, der den Aufgabenplan in drei Markdown-Dateien (Plan, Erkenntnisse, Fortschritt) auf der Festplatte speichert, sodass Claude nach /clear, einer Kontext-Komprimierung oder einem Sitzungsabbruch weiterarbeiten kann. Hilfreich für lange Aufgaben wie den Aufbau eines kompletten Shops oder einer Website. Übersetzte Versionen gibt es für Arabisch und Deutsch; fügt Hooks hinzu, die bei jedem Durchlauf ausgeführt werden.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4184,6 +4402,7 @@
       "claude"
     ],
     "desc": "إضافة ذاكرة دائمة لـ Claude Code: تسجّل ما يفعله Claude في كل جلسة وتضغطه بالذكاء الاصطناعي ثم تعيد المعلومات المناسبة في الجلسات التالية، مع بحث في السجل عبر أدوات MCP، فلا تعيد شرح مشروعك كل مرة. تعمل بخدمة محلية (Bun وSQLite)، وقد يعرض المثبّت اشتراكًا سحابيًا مدفوعًا بعد تجربة مجانية.",
+    "desc_de": "Plugin für ein dauerhaftes Gedächtnis in Claude Code: zeichnet auf, was Claude in jeder Sitzung tut, komprimiert es per KI und stellt in späteren Sitzungen die passenden Informationen wieder bereit, samt Suche im Verlauf über MCP-Tools – so musst du dein Projekt nicht jedes Mal neu erklären. Läuft als lokaler Dienst (Bun und SQLite); der Installer kann ein kostenpflichtiges Cloud-Abo nach einer kostenlosen Testphase anbieten.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4203,6 +4422,7 @@
       "claude"
     ],
     "desc": "18 مهارة تشرح هندسة السياق لوكلاء الذكاء الاصطناعي: أساسيات السياق وتدهوره وضغطه، وأنظمة الذاكرة، وأنماط تعدد الوكلاء، وتصميم الأدوات والتقييم. موجّهة لمن يبني وكلاء أو يدير جلسات طويلة، وليست للاستخدام اليومي العادي. المحتوى بالإنجليزية.",
+    "desc_de": "18 Skills, die Context Engineering für KI-Agenten erklären: Grundlagen des Kontexts, seine Verschlechterung und Komprimierung, Gedächtnissysteme, Multi-Agenten-Muster, Tool-Design und Evaluierung. Gedacht für alle, die Agenten bauen oder lange Sitzungen führen, nicht für die normale Alltagsnutzung. Inhalte auf Englisch.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4223,6 +4443,7 @@
       "shop"
     ],
     "desc": "مهارة تترجم كتبًا ومستندات كاملة (PDF وDOCX وEPUB) بوكلاء فرعيين يعملون بالتوازي، ثم تبني الناتج بصيغ HTML وDOCX وEPUB وPDF. من اللغات المعلنة الألمانية والإنجليزية والفرنسية والإسبانية، والعربية غير مذكورة صراحة. تحتاج Calibre وPandoc وPython، وتستهلك رموزًا كثيرة.",
+    "desc_de": "Skill, der ganze Bücher und Dokumente (PDF, DOCX, EPUB) mit parallel arbeitenden Subagenten übersetzt und das Ergebnis anschließend als HTML, DOCX, EPUB und PDF erzeugt. Zu den angegebenen Sprachen gehören Deutsch, Englisch, Französisch und Spanisch; Arabisch wird nicht ausdrücklich genannt. Benötigt Calibre, Pandoc und Python und verbraucht viele Tokens.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4244,6 +4465,7 @@
       "mobile"
     ],
     "desc": "مهارات Stripe الرسمية تعلّم Claude بناء الدفع بالطريقة الصحيحة: اختيار Checkout أو PaymentIntents، والاشتراكات والضرائب، وتأمين Webhooks والمفاتيح، وترقية إصدار API. تفيد عند إضافة الدفع لتطبيق أو موقع خارج Shopify. تحتاج حساب Stripe للتجربة.",
+    "desc_de": "Offizielle Skills von Stripe, die Claude beibringen, Zahlungen richtig umzusetzen: Wahl zwischen Checkout und PaymentIntents, Abos und Steuern, Absicherung von Webhooks und Schlüsseln sowie Upgrade der API-Version. Hilfreich beim Einbau von Zahlungen in eine App oder Website außerhalb von Shopify. Zum Ausprobieren wird ein Stripe-Konto benötigt.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4265,6 +4487,7 @@
       "mobile"
     ],
     "desc": "إضافة PayPal الرسمية لـ Claude Code: مهارة تلقّن Claude أفضل ممارسات تكامل الدفع (Checkout وPay Later والاشتراكات وWebhooks)، وأوامر لفحص الأخطاء وحسابات الاختبار، وخادم MCP تجريبي للفواتير والطلبات. تحتاج حساب مطوّر PayPal ورمز وصول للبيئة التجريبية.",
+    "desc_de": "Offizielles PayPal-Plugin für Claude Code: enthält einen Skill, der Claude Best Practices für die Zahlungsintegration beibringt (Checkout, Pay Later, Abos und Webhooks), Befehle zur Fehlersuche und für Testkonten sowie einen Sandbox-MCP-Server für Rechnungen und Bestellungen. Benötigt ein PayPal-Entwicklerkonto und ein Zugriffstoken für die Sandbox.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4286,6 +4509,7 @@
       "dashboard"
     ],
     "desc": "مهارات Cloudflare الرسمية لنشر الواجهات والخدمات على Workers عبر Wrangler، وتدقيق Core Web Vitals، وإضافة حماية Turnstile من الروبوتات، وإعداد إرسال البريد. تُثبَّت كإضافة تضم خادم Cloudflare MCP، وتحتاج حساب Cloudflare.",
+    "desc_de": "Offizielle Skills von Cloudflare, um Oberflächen und Dienste per Wrangler auf Workers bereitzustellen, Core Web Vitals zu prüfen, Bot-Schutz mit Turnstile hinzuzufügen und den E-Mail-Versand einzurichten. Die Installation erfolgt als Plugin, das den MCP-Server von Cloudflare enthält; ein Cloudflare-Konto wird benötigt.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4306,6 +4530,7 @@
       "dashboard"
     ],
     "desc": "الحزمة الرسمية من AWS لوكلاء الترميز: مهارات لاختيار الخدمات وكتابة CDK وCloudFormation والنشر والأمان وتحسين التكلفة، مع خادم AWS MCP. تحتاج حساب AWS وبيانات اعتماد محلية وأداة uv، وهي موجهة لمن يستضيف تطبيقاته على AWS.",
+    "desc_de": "Offizielles Paket von AWS für Coding-Agenten: Skills für die Auswahl von Diensten, das Schreiben von CDK und CloudFormation, Deployment, Sicherheit und Kostenoptimierung, dazu der MCP-Server von AWS. Benötigt ein AWS-Konto, lokale Zugangsdaten und das Tool uv; richtet sich an alle, die ihre Apps auf AWS hosten.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4325,6 +4550,7 @@
       "mobile"
     ],
     "desc": "مهارات Expo الرسمية لتطبيقات React Native: التنقل عبر Expo Router، والرسوم المتحركة، وجلب البيانات، وترقية إصدار SDK، وبناء التطبيق ونشره على المتجرين. مهارات خدمات EAS تخص منتجات مدفوعة، والإضافة تضم خادم Expo MCP.",
+    "desc_de": "Offizielle Expo-Skills für React-Native-Apps: Navigation mit Expo Router, Animationen, Datenabruf, Upgrade der SDK-Version sowie Build und Veröffentlichung der App in beiden App-Stores. Die Skills für EAS-Dienste betreffen kostenpflichtige Produkte, und das Plugin enthält den Expo-MCP-Server.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4344,6 +4570,7 @@
       "mobile"
     ],
     "desc": "مهارات Google الرسمية لتطوير Android: أكثر من 30 مهارة تغطي Jetpack Compose وNavigation 3 وتحسين الأداء وR8 وفحص ANR وتحديث Play Billing وأمان الأذونات. تُثبَّت عبر Android CLI أو كإضافة لـ Claude Code.",
+    "desc_de": "Offizielle Google-Skills für die Android-Entwicklung: über 30 Skills zu Jetpack Compose, Navigation 3, Performance-Optimierung, R8, ANR-Analyse, Aktualisierung von Play Billing und Sicherheit von Berechtigungen. Installation über die Android CLI oder als Plugin für Claude Code.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4363,6 +4590,7 @@
       "mobile"
     ],
     "desc": "مهارات من شركة Callstack المتخصصة في React Native: تحسين الأداء والذاكرة وحجم الحزمة، وReact Navigation، وترقية إصدار React Native، وبناء ملفات تجريبية لـ iOS وAndroid في GitHub Actions، وتقييم الانتقال التدريجي من تطبيق أصلي.",
+    "desc_de": "Skills von Callstack, einem auf React Native spezialisierten Unternehmen: Optimierung von Performance, Speicher und Bundle-Größe, React Navigation, Upgrade der React-Native-Version, Test-Builds für iOS und Android in GitHub Actions sowie Bewertung einer schrittweisen Migration von einer nativen App.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4383,6 +4611,7 @@
       "web"
     ],
     "desc": "مهارات Firebase الرسمية: إعداد Firebase CLI، وتسجيل الدخول، وقواعد بيانات Firestore، والاستضافة، وCrashlytics لتتبع انهيار التطبيق، وRemote Config، ومراجعة قواعد الأمان. مناسبة لتطبيقات الجوال والويب، وتحتاج مشروع Firebase في حساب Google.",
+    "desc_de": "Offizielle Firebase-Skills: Einrichtung der Firebase CLI, Nutzeranmeldung, Firestore-Datenbanken, Hosting, Crashlytics zur Verfolgung von App-Abstürzen, Remote Config und Prüfung der Sicherheitsregeln. Geeignet für Mobil- und Web-Apps; benötigt ein Firebase-Projekt in einem Google-Konto.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4402,6 +4631,7 @@
       "mobile"
     ],
     "desc": "إضافة RevenueCat الرسمية لإدارة الاشتراكات والشراء داخل التطبيق: ينشئ Claude المنتجات والعروض والصلاحيات، ويركّب Purchases SDK في تطبيقات iOS وAndroid وFlutter وReact Native، ويقرأ بيانات الإيرادات. تحتاج حساب RevenueCat وتسجيل دخول OAuth.",
+    "desc_de": "Offizielles RevenueCat-Plugin zur Verwaltung von Abos und In-App-Käufen: Claude legt Produkte, Angebote und Berechtigungen an, integriert das Purchases SDK in iOS-, Android-, Flutter- und React-Native-Apps und liest Umsatzdaten aus. Benötigt ein RevenueCat-Konto und eine Anmeldung per OAuth.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4423,6 +4653,7 @@
       "shop"
     ],
     "desc": "مهارات Sentry الرسمية لمراقبة الأخطاء: تضيف Sentry إلى مشروعك بعد اكتشاف المنصة، وتجلب أخطاء الإنتاج مع سياقها وتقترح الإصلاح، وتنشئ التنبيهات. تُثبَّت كإضافة تضم خادم Sentry MCP، وتحتاج حساب Sentry.",
+    "desc_de": "Offizielle Sentry-Skills für die Fehlerüberwachung: Sie fügen Sentry nach Erkennung der Plattform zu deinem Projekt hinzu, rufen Produktionsfehler samt Kontext ab, schlagen Korrekturen vor und richten Alerts ein. Installation als Plugin, das den Sentry-MCP-Server enthält; benötigt ein Sentry-Konto.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4443,6 +4674,7 @@
       "dashboard"
     ],
     "desc": "مهارات Neon الرسمية لقاعدة Postgres السحابية: أفضل ممارسات الاتصال والاستعلام، وفروع قاعدة البيانات للاختبار الآمن، وتقليل تكاليف نقل البيانات، وNeon Auth وتخزين الملفات. تفيد مع Drizzle وNext.js، وأغلبها يحتاج حساب Neon.",
+    "desc_de": "Offizielle Neon-Skills für die Postgres-Datenbank in der Cloud: Best Practices für Verbindungen und Abfragen, Datenbank-Branches für sicheres Testen, Senkung der Kosten für Datentransfer, Neon Auth und Dateispeicher. Nützlich in Kombination mit Drizzle und Next.js; die meisten davon benötigen ein Neon-Konto.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4464,6 +4696,7 @@
       "dashboard"
     ],
     "desc": "مهارات Clerk الرسمية لتسجيل الدخول وإدارة المستخدمين: إضافة Clerk إلى Next.js وReact وVue وNuxt وExpo وiOS وAndroid، وبناء نماذج دخول مخصصة، والمؤسسات والاشتراكات وWebhooks، واختبارها بـ Playwright. تحتاج حساب Clerk.",
+    "desc_de": "Offizielle Clerk-Skills für Anmeldung und Benutzerverwaltung: Einbindung von Clerk in Next.js, React, Vue, Nuxt, Expo, iOS und Android, Erstellung eigener Anmeldeformulare, Organisationen, Abos und Webhooks sowie Tests mit Playwright. Benötigt ein Clerk-Konto.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4485,6 +4718,7 @@
       "booking"
     ],
     "desc": "مهارات Resend الرسمية لإرسال واستقبال البريد: استخدام Resend API وCLI، وبناء قوالب بمكونات React Email، وإرشادات تحسين وصول الرسائل لصندوق الوارد. تفيد لرسائل تأكيد الطلب أو الحجز من تطبيقك. تحتاج حساب Resend ومفتاح API.",
+    "desc_de": "Offizielle Resend-Skills zum Senden und Empfangen von E-Mails: Nutzung der Resend API und CLI, Erstellung von Vorlagen mit React-Email-Komponenten und Leitlinien für eine bessere Zustellbarkeit in den Posteingang. Nützlich für Bestell- oder Buchungsbestätigungen aus deiner App. Benötigt ein Resend-Konto und einen API-Schlüssel.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4506,6 +4740,7 @@
       "dashboard"
     ],
     "desc": "مهارات من Semgrep تجعل Claude يكتب كودًا آمنًا: إرشادات OWASP Top 10 لأكثر من 15 لغة وللبنية التحتية، وأمان تطبيقات النماذج اللغوية، وتشغيل فحص Semgrep وكتابة قواعد مخصصة. نسخة تجريبية بترخيص Semgrep Rules الذي ليس مفتوح المصدر.",
+    "desc_de": "Skills von Semgrep, mit denen Claude sicheren Code schreibt: OWASP-Top-10-Leitlinien für mehr als 15 Sprachen und für Infrastruktur, Sicherheit von LLM-Anwendungen, Ausführen von Semgrep-Scans und Schreiben eigener Regeln. Beta-Version unter der Semgrep Rules License, die nicht Open Source ist.",
     "pushed": null,
     "license": "other",
     "archived": false,
@@ -4527,6 +4762,7 @@
       "claude"
     ],
     "desc": "أداة Microsoft الرسمية لتشغيل المتصفح من سطر الأوامر مع مهارة جاهزة لـ Claude: يفتح الصفحات ويضغط ويملأ النماذج ويلتقط الصور لاختبار الموقع أو التطبيق، بتكلفة سياق أقل من Playwright MCP. تحتاج Node.js 18 أو أحدث.",
+    "desc_de": "Offizielles Microsoft-Tool zur Browsersteuerung über die Kommandozeile, mit fertigem Skill für Claude: öffnet Seiten, klickt, füllt Formulare aus und erstellt Screenshots, um Websites oder Apps zu testen – mit geringerem Kontextverbrauch als Playwright MCP. Benötigt Node.js 18 oder neuer.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4548,6 +4784,7 @@
       "claude"
     ],
     "desc": "يتيح لـ Claude التحكم في Chrome عبر سكربتات JavaScript قصيرة، مع صفحات تبقى مفتوحة بين الأوامر ولقطات مقروءة للصفحة، ويمكنه الاتصال بمتصفحك المفتوح. يفيد في اختبار المتجر والتطبيق. شرح GitHub يخص إصدار 1.0 التجريبي، وأمر npm يثبّت حاليًا الإصدار المستقر 0.2.9.",
+    "desc_de": "Ermöglicht Claude, Chrome über kurze JavaScript-Skripte zu steuern – mit Seiten, die zwischen Befehlen geöffnet bleiben, und lesbaren Snapshots der Seite; kann sich außerdem mit deinem geöffneten Browser verbinden. Nützlich zum Testen von Shop und App. Die Beschreibung auf GitHub bezieht sich auf die Vorabversion 1.0, der npm-Befehl installiert derzeit die stabile Version 0.2.9.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4569,6 +4806,7 @@
       "dashboard"
     ],
     "desc": "مهارة Anthropic لإنشاء جداول Excel وتعديلها وتنظيف ملفات CSV غير المرتبة، بصيغ حقيقية وإعادة حساب للتأكد من خلوها من الأخطاء. تناسب قوائم الأسعار والمخزون وملفات المنتجات. رخصتها مملوكة (المصدر متاح وليس مفتوحًا) فلا يجوز تعديلها أو إعادة توزيعها.",
+    "desc_de": "Skill von Anthropic zum Erstellen und Bearbeiten von Excel-Tabellen und zum Bereinigen unordentlicher CSV-Dateien – mit echten Formeln und Neuberechnung, um Fehlerfreiheit sicherzustellen. Geeignet für Preislisten, Lagerbestände und Produktdateien. Proprietäre Lizenz (Quellcode verfügbar, aber nicht Open Source), daher sind Änderung und Weiterverbreitung nicht erlaubt.",
     "pushed": null,
     "license": "other",
     "archived": false,
@@ -4590,6 +4828,7 @@
       "brand"
     ],
     "desc": "مهارة Anthropic لإنشاء مستندات Word وقراءتها وتعديلها، مع فهرس محتويات وترقيم صفحات وتعليقات وتعقّب التغييرات. تفيد في العقود والخطابات وقوالب الفواتير. رخصتها مملوكة (المصدر متاح وليس مفتوحًا) فلا يجوز تعديلها أو إعادة توزيعها.",
+    "desc_de": "Skill von Anthropic zum Erstellen, Lesen und Bearbeiten von Word-Dokumenten – mit Inhaltsverzeichnis, Seitennummerierung, Kommentaren und Änderungsnachverfolgung. Nützlich für Verträge, Briefe und Rechnungsvorlagen. Proprietäre Lizenz (Quellcode verfügbar, aber nicht Open Source), daher sind Änderung und Weiterverbreitung nicht erlaubt.",
     "pushed": null,
     "license": "other",
     "archived": false,
@@ -4610,6 +4849,7 @@
       "finance"
     ],
     "desc": "مهارة Anthropic للعمل على ملفات PDF: استخراج النصوص والجداول، ودمج الملفات وتقسيمها، وتعبئة النماذج، وإضافة علامة مائية، والتعرف الضوئي (OCR) على المستندات الممسوحة. مفيدة لفواتير الموردين وأوراق الشحن. رخصتها مملوكة (المصدر متاح وليس مفتوحًا).",
+    "desc_de": "Skill von Anthropic für die Arbeit mit PDF-Dateien: Texte und Tabellen extrahieren, Dateien zusammenführen und aufteilen, Formulare ausfüllen, Wasserzeichen hinzufügen und gescannte Dokumente per Texterkennung (OCR) erfassen. Nützlich für Lieferantenrechnungen und Versandpapiere. Proprietäre Lizenz (Quellcode verfügbar, aber nicht Open Source).",
     "pushed": null,
     "license": "other",
     "archived": false,
@@ -4630,6 +4870,7 @@
       "brand"
     ],
     "desc": "مهارة Anthropic لإنشاء عروض PowerPoint وقراءتها وتعديلها، مع مخططات أصلية وملاحظات للمتحدث وقوالب جاهزة، ثم فحص الشرائح بصريًا قبل التسليم. تناسب عروض المنتجات والموردين. رخصتها مملوكة (المصدر متاح وليس مفتوحًا).",
+    "desc_de": "Skill von Anthropic zum Erstellen, Lesen und Bearbeiten von PowerPoint-Präsentationen – mit nativen Diagrammen, Sprechernotizen und fertigen Vorlagen; anschließend werden die Folien vor der Übergabe visuell geprüft. Geeignet für Produkt- und Lieferantenpräsentationen. Proprietäre Lizenz (Quellcode verfügbar, aber nicht Open Source).",
     "pushed": null,
     "license": "other",
     "archived": false,
@@ -4651,6 +4892,7 @@
       "brand"
     ],
     "desc": "إضافة Anthropic الرسمية للأعمال الصغيرة، تضم 44 مهارة: تخطيط المخزون وإعادة الطلب من بيانات Shopify، ومتابعة تقييمات العملاء، والتدفق النقدي وتحصيل الفواتير، والتسويق وSEO. كل خطوة تمس المال أو العملاء تنتظر موافقتك. وحسابات الضرائب فيها أمريكية فقط.",
+    "desc_de": "Offizielles Anthropic-Plugin für kleine Unternehmen mit 44 Skills: Bestandsplanung und Nachbestellung auf Basis von Shopify-Daten, Beobachtung von Kundenbewertungen, Cashflow und Einzug offener Rechnungen, Marketing und SEO. Jeder Schritt, der Geld oder Kunden betrifft, wartet auf deine Freigabe. Die Steuerberechnungen darin gelten nur für die USA.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4671,6 +4913,7 @@
       "web"
     ],
     "desc": "إضافة Anthropic الرسمية لخدمة العملاء: تصنيف التذاكر وترتيب أولوياتها، وصياغة ردود مهنية، وتجهيز ملف التصعيد، وتحويل المشكلات المحلولة إلى مقالات مركز مساعدة. تناسب بريد المتجر وصفحة الأسئلة الشائعة. الربط مع Intercom وHubSpot اختياري.",
+    "desc_de": "Offizielles Anthropic-Plugin für den Kundenservice: Tickets kategorisieren und priorisieren, professionelle Antworten formulieren, Eskalationsunterlagen vorbereiten und gelöste Probleme in Help-Center-Artikel umwandeln. Geeignet für das E-Mail-Postfach des Shops und die FAQ-Seite. Die Anbindung an Intercom und HubSpot ist optional.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4691,6 +4934,7 @@
       "web"
     ],
     "desc": "إضافة Anthropic الرسمية للشؤون القانونية: مراجعة العقود مقابل قواعدك، وفرز اتفاقيات السرية، وفحص الامتثال (GDPR وغيره)، وصياغة ردود على طلبات أصحاب البيانات. قواعدها الافتراضية أمريكية فعدّلها لألمانيا، ولا تغني عن محامٍ.",
+    "desc_de": "Offizielles Anthropic-Plugin für Rechtsangelegenheiten: Verträge anhand deiner Regeln prüfen, Geheimhaltungsvereinbarungen vorsortieren, die Compliance (DSGVO u. a.) kontrollieren und Antworten auf Anfragen betroffener Personen formulieren. Die Standardregeln sind US-amerikanisch – passe sie für Deutschland an. Ersetzt keinen Anwalt.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4711,6 +4955,7 @@
       "finance"
     ],
     "desc": "إضافة Anthropic الرسمية للعمليات: تقييم الموردين من حيث التكلفة والمخاطر والتجديد، وتوثيق الإجراءات (SOP وRACI)، وكتابة runbook للمهام المتكررة، وتقارير الحالة. تفيد في تنظيم الموردين والشحن. تعمل دون ربط أدوات.",
+    "desc_de": "Offizielles Anthropic-Plugin für Betriebsabläufe: Lieferanten nach Kosten, Risiken und Vertragsverlängerung bewerten, Prozesse dokumentieren (SOP und RACI), Runbooks für wiederkehrende Aufgaben schreiben und Statusberichte erstellen. Nützlich, um Lieferanten und Versand zu organisieren. Funktioniert ohne angebundene Tools.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4732,6 +4977,7 @@
       "finance"
     ],
     "desc": "إضافة Anthropic الرسمية لتحليل البيانات: كتابة استعلامات SQL، واستكشاف الجداول، ورسم المخططات، وبناء لوحات HTML تفاعلية، ومراجعة التحليل قبل مشاركته. تعمل مع ملفات CSV وExcel مثل تصدير طلبات المتجر، ويمكن ربطها بـ BigQuery وSnowflake.",
+    "desc_de": "Offizielles Anthropic-Plugin für Datenanalyse: SQL-Abfragen schreiben, Tabellen erkunden, Diagramme erstellen, interaktive HTML-Dashboards bauen und Analysen vor dem Teilen prüfen. Funktioniert mit CSV- und Excel-Dateien wie etwa dem Bestellexport des Shops und lässt sich mit BigQuery und Snowflake verbinden.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4753,6 +4999,7 @@
       "shop"
     ],
     "desc": "مهارة Anthropic الرسمية لبناء خوادم MCP جيدة التصميم تتيح لـ Claude استخدام خدمة خارجية عبر أدوات واضحة، بلغة Python (FastMCP) أو TypeScript. مفيدة لربط واجهة API لمورّدك أو أداتك الداخلية بـ Claude. تتطلب معرفة برمجية.",
+    "desc_de": "Offizieller Anthropic-Skill zum Bauen gut gestalteter MCP-Server, über die Claude einen externen Dienst mit klar definierten Tools nutzen kann – in Python (FastMCP) oder TypeScript. Nützlich, um die API deines Lieferanten oder dein internes Tool mit Claude zu verbinden. Benötigt Programmierkenntnisse.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4774,6 +5021,7 @@
       "shop"
     ],
     "desc": "مرجع Anthropic الرسمي لبناء تطبيقات بـ Claude API وSDK: النماذج والأسعار والبث واستدعاء الأدوات والتخزين المؤقت وترحيل الكود بين النماذج، بلغات Python وTypeScript وJava وGo وRuby وC# وPHP. مفيد لإضافة مساعد ذكي إلى موقعك. الكود الناتج يحتاج مفتاح Claude API واستخدامه مدفوع.",
+    "desc_de": "Offizielle Anthropic-Referenz zum Entwickeln von Apps mit der Claude API und dem SDK: Modelle, Preise, Streaming, Tool-Aufrufe, Caching und Code-Migration zwischen Modellen – in Python, TypeScript, Java, Go, Ruby, C# und PHP. Nützlich, um deiner Website einen KI-Assistenten hinzuzufügen. Der erzeugte Code benötigt einen Claude-API-Schlüssel, und die Nutzung ist kostenpflichtig.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4795,6 +5043,7 @@
       "claude"
     ],
     "desc": "إضافة Anthropic الرسمية لمراجعة أمان الكود الذي يكتبه Claude: تنبيه فوري للأنماط الخطرة، ومراجعة للفروقات عند انتهاء Claude من كل رد، ومراجعة عند commit تكشف الحقن وXSS وSSRF والأسرار المكتوبة في الكود. تستهلك رموزًا إضافية وترسل الفروقات إلى نموذج Claude.",
+    "desc_de": "Offizielles Anthropic-Plugin zur Sicherheitsprüfung des Codes, den Claude schreibt: sofortige Warnung bei gefährlichen Mustern, Prüfung der Diffs nach jeder abgeschlossenen Antwort von Claude und eine Prüfung beim Commit, die Injections, XSS, SSRF und hartcodierte Secrets aufdeckt. Verbraucht zusätzliche Tokens und sendet die Diffs an das Claude-Modell.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4815,6 +5064,7 @@
       "claude"
     ],
     "desc": "إضافة Anthropic الرسمية لمراجعة طلبات الدمج (Pull Requests): الأمر /code-review يشغّل عدة وكلاء بالتوازي للبحث عن الأخطاء والتحقق من التزام الكود بتعليمات CLAUDE.md، ثم ينشر الملاحظات عالية الثقة فقط. تحتاج مستودع GitHub وأداة gh.",
+    "desc_de": "Offizielles Anthropic-Plugin für das Review von Pull Requests: Der Befehl /code-review startet mehrere Agenten parallel, die nach Fehlern suchen und prüfen, ob der Code die Anweisungen in CLAUDE.md einhält; anschließend veröffentlicht er nur Anmerkungen mit hoher Konfidenz. Benötigt ein GitHub-Repository und das Tool gh.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4834,6 +5084,7 @@
       "claude"
     ],
     "desc": "مهارة Anthropic الرسمية تقترح عليك دورة أو شرحًا من Claude Academy عندما تسأل كيف تستخدم Claude أو إحدى ميزاته، بعد أن تجيب عن سؤالك أولًا. تقترح عنصرين كحد أقصى ولا تخترع محتوى. محتوى Academy عبر موصل Claude بالإنجليزية فقط، وبعض الدورات تطلب تسجيل دخول.",
+    "desc_de": "Offizieller Anthropic-Skill, der dir einen Kurs oder ein Tutorial aus der Claude Academy vorschlägt, wenn du fragst, wie du Claude oder eine seiner Funktionen nutzt – nachdem er zuerst deine Frage beantwortet hat. Schlägt höchstens zwei Einträge vor und erfindet keine Inhalte. Academy-Inhalte über den Claude-Connector gibt es nur auf Englisch, und einige Kurse erfordern eine Anmeldung.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4855,6 +5106,7 @@
       "landing"
     ],
     "desc": "تسع مهارات تعلّم Claude تنظيف كتالوج متجر Shopify وتحسينه: تدقيق المنتجات الناقصة، وتحديد تصنيف كل منتج، وملء عناوين وأوصاف SEO والنص البديل للصور، وتحويلات 301 بعد نقل الموقع، وبيانات JSON-LD. تغيّر بيانات المتجر الحي مباشرة، فخذ نسخة احتياطية وراجع المعاينة قبل أي كتابة.",
+    "desc_de": "Neun Skills, die Claude beibringen, den Katalog eines Shopify-Shops zu bereinigen und zu optimieren: Audit unvollständiger Produkte, Bestimmung der Kategorie jedes Produkts, Ausfüllen von SEO-Titeln und -Beschreibungen sowie Alt-Texten für Bilder, 301-Weiterleitungen nach einem Website-Umzug und JSON-LD-Daten. Sie ändern die Daten des Live-Shops direkt – erstelle daher ein Backup und prüfe vor jedem Schreibvorgang die Vorschau.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4875,6 +5127,7 @@
       "brand"
     ],
     "desc": "دليل شامل للتسويق بالبريد على شكل مهارة: يبني رسائل الترحيب والسلة المتروكة وما بعد الشراء، ويكتب نصوصًا لا تبدو آلية، ويشخّص أسباب وصول رسائلك إلى البريد المزعج، ويراجع الامتثال لـ GDPR قبل أي إرسال. فيه دليل عملي لمتاجر DTC. بالإنجليزية فقط، ومؤلفه شريك مؤسس في Nitrosend ويصرّح بذلك.",
+    "desc_de": "Umfassender Leitfaden für E-Mail-Marketing in Form eines Skills: erstellt Willkommens-, Warenkorbabbruch- und Post-Purchase-Mails, schreibt Texte, die nicht maschinell klingen, diagnostiziert, warum deine Mails im Spam landen, und prüft vor jedem Versand die DSGVO-Konformität. Enthält einen Praxisleitfaden für DTC-Shops. Nur auf Englisch; der Autor ist Mitgründer von Nitrosend und legt das offen.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4896,6 +5149,7 @@
       "landing"
     ],
     "desc": "سبع مهارات تحوّل صورة واحدة لمنتجك إلى حزمة صور جاهزة للبيع: صور رئيسية تلتزم بقواعد Amazon، وصفحات A+، ولقطات متعددة الزوايا للأزياء، وإعلانات لـ Meta وTikTok وGoogle، ومنشورات اجتماعية. تحتاج مفتاح API لمولّد صور وتتحمّل تكلفته، والمشروع ما زال في مرحلة alpha.",
+    "desc_de": "Sieben Skills, die aus einem einzigen Foto deines Produkts ein verkaufsfertiges Bildpaket machen: Hauptbilder, die den Amazon-Regeln entsprechen, A+-Seiten, Aufnahmen aus mehreren Blickwinkeln für Mode, Anzeigen für Meta, TikTok und Google sowie Social-Media-Posts. Benötigt einen API-Schlüssel für einen Bildgenerator, dessen Kosten du trägst; das Projekt ist noch im Alpha-Stadium.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4917,6 +5171,7 @@
       "brand"
     ],
     "desc": "23 مهارة تنتج مواد حملة إعلانية من صورة منتج وملخص قصير: فيديو UGC بممثل رقمي، وفيديو إعلاني، وإعلانات صور، وصور منتج احترافية، مع نص الإعلان والتعليق الصوتي وتحليل إعلانات المنافسين. تحتاج مفاتيح WaveSpeed أو fal أو رصيدًا مدفوعًا من SuperCMO، وترسل إحصاءات استخدام مجهولة يمكن إيقافها.",
+    "desc_de": "23 Skills, die aus einem Produktfoto und einem kurzen Briefing Material für eine Werbekampagne erstellen: UGC-Video mit digitalem Darsteller, Werbevideo, Bildanzeigen und professionelle Produktfotos, dazu Anzeigentext, Voiceover und Analyse der Anzeigen von Mitbewerbern. Benötigt API-Schlüssel von WaveSpeed oder fal oder kostenpflichtige Credits von SuperCMO und sendet anonyme Nutzungsstatistiken, die sich deaktivieren lassen.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -4938,6 +5193,7 @@
       "landing"
     ],
     "desc": "يحوّل طلبك العادي إلى مهمة توليد صور بنماذج Gemini (Nano Banana) داخل Claude Code: مشاهد منتجات، وصور حملات، وتعديل صورة موجودة، ومقارنة عدة صياغات. يعرض الخطة والتكلفة التقديرية ويطلب موافقتك قبل كل طلب مدفوع. يحتاج مفتاح Gemini API بحساب فوترة، ولا يعمل على Windows مباشرة.",
+    "desc_de": "Macht aus deiner normalen Anfrage einen Bildgenerierungsauftrag mit Gemini-Modellen (Nano Banana) in Claude Code: Produktszenen, Kampagnenbilder, Bearbeitung eines vorhandenen Bildes und Vergleich mehrerer Prompt-Formulierungen. Zeigt den Plan und die geschätzten Kosten an und fragt vor jeder kostenpflichtigen Anfrage nach deiner Zustimmung. Benötigt einen Gemini-API-Schlüssel mit aktivierter Abrechnung und läuft nicht direkt unter Windows.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4959,6 +5215,7 @@
       "shop"
     ],
     "desc": "المهارات الرسمية من ElevenLabs: تحويل النص إلى صوت بأكثر من 90 لغة، ودبلجة الفيديو إلى لغات أخرى مع الحفاظ على صوت المتحدث، وتوليد مؤثرات وموسيقى، وعزل الكلام عن الضوضاء. تفيد في تعليق صوتي لفيديوهات المنتجات بالألمانية والعربية. تحتاج مفتاح ElevenLabs API، وحدود الاستخدام حسب خطتك.",
+    "desc_de": "Die offiziellen Skills von ElevenLabs: Text-to-Speech in über 90 Sprachen, Synchronisation von Videos in andere Sprachen unter Beibehaltung der Sprecherstimme, Erzeugung von Soundeffekten und Musik sowie Trennung von Sprache und Störgeräuschen. Nützlich für Voiceovers zu Produktvideos auf Deutsch und Arabisch. Benötigt einen ElevenLabs-API-Schlüssel; die Nutzungslimits richten sich nach deinem Tarif.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -4980,6 +5237,7 @@
       "shop"
     ],
     "desc": "ثلاث مهارات رسمية من HeyGen: إنشاء مقدّم رقمي من صورة، وتحويل فكرة إلى فيديو يقدّمه، وترجمة فيديو جاهز ودبلجته بصوت مستنسخ ومزامنة شفاه (175+ لغة). مناسبة لفيديو تعريفي بالمتجر بعدة لغات. تحتاج حساب HeyGen ومفتاح API يُحاسب منفصلًا، وتستنسخ الوجه والصوت، فاحصل على إذن أصحابهما.",
+    "desc_de": "Drei offizielle Skills von HeyGen: aus einem Foto einen digitalen Moderator erstellen, eine Idee in ein Video verwandeln, das dieser präsentiert, und ein fertiges Video mit geklonter Stimme und Lippensynchronisation übersetzen und synchronisieren (175+ Sprachen). Geeignet für ein mehrsprachiges Vorstellungsvideo des Shops. Benötigt ein HeyGen-Konto und einen separat abgerechneten API-Schlüssel. Gesicht und Stimme werden geklont – hol daher die Erlaubnis der betreffenden Personen ein.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -5001,6 +5259,7 @@
       "brand"
     ],
     "desc": "مهارات لتوليد الصور والفيديو والصوت عبر نماذج fal.ai، منها مهارات جاهزة لتصوير المنتجات والإعلانات ودفعات صور المتجر، وإعلانات المبدعين UGC، وحزم الحملات التسويقية. تعمل عبر أداة genmedia وتحتاج مفتاح fal API، وتتحمّل تكلفة التوليد، ويُثبَّت genmedia بسكربت من الإنترنت.",
+    "desc_de": "Skills zum Generieren von Bildern, Videos und Audio mit fal.ai-Modellen, darunter fertige Skills für Produktfotografie und Anzeigen, Shop-Bilder im Batch, UGC-Creator-Anzeigen und Pakete für Marketingkampagnen. Sie laufen über das Tool genmedia und benötigen einen fal-API-Schlüssel; die Kosten der Generierung trägst du. Die Installation von genmedia erfolgt per Skript aus dem Internet.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -5022,6 +5281,7 @@
       "landing"
     ],
     "desc": "يقيس مدى ظهور موقعك في إجابات ChatGPT وClaude وPerplexity وGoogle AI Overviews: درجة قابلية الاستشهاد بمحتواك، وسماح ملف robots.txt لزواحف الذكاء الاصطناعي، وإنشاء llms.txt، والبيانات المنظمة، وتقارير PDF. التثبيت بسكربت من الإنترنت ويحتاج Python 3.10 أو أحدث.",
+    "desc_de": "Misst, wie sichtbar deine Website in den Antworten von ChatGPT, Claude, Perplexity und Google AI Overviews ist: Score für die Zitierfähigkeit deiner Inhalte, Prüfung, ob die robots.txt KI-Crawler zulässt, Erstellung einer llms.txt, strukturierte Daten und PDF-Berichte. Installation per Skript aus dem Internet; benötigt Python 3.10 oder neuer.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -5043,6 +5303,7 @@
       "video"
     ],
     "desc": "حزمة من 106 مهارات لإدارة المحتوى الاجتماعي من الاستراتيجية إلى النشر: ملف العلامة ودليل النبرة، وتقويم المحتوى، وكتابة الكابشن وسيناريوهات Reels وTikTok، وخطط Instagram وPinterest وFacebook وYouTube. لا ينشر شيئًا دون موافقتك الصريحة. تثبيتها كلها ثقيل على السياق، فاختر ما تحتاجه.",
+    "desc_de": "Paket aus 106 Skills zur Verwaltung von Social-Media-Content von der Strategie bis zur Veröffentlichung: Markenprofil und Tonalitäts-Leitfaden, Content-Kalender, Captions und Skripte für Reels und TikTok sowie Pläne für Instagram, Pinterest, Facebook und YouTube. Veröffentlicht nichts ohne deine ausdrückliche Zustimmung. Alle zu installieren belastet den Kontext stark – wähle also nur aus, was du brauchst.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -5063,6 +5324,7 @@
       "brand"
     ],
     "desc": "يتيح لـ Claude جدولة المنشورات ونشرها على أكثر من 28 منصة، منها Instagram وTikTok وPinterest وFacebook وYouTube، عبر Postiz وواجهته الطرفية مع رفع الصور والفيديو قبل النشر. يحتاج حساب Postiz سحابيًا أو مستضافًا ذاتيًا. رخصته AGPL-3.0، وراجع كل منشور قبل جدولته.",
+    "desc_de": "Ermöglicht Claude, Beiträge auf über 28 Plattformen zu planen und zu veröffentlichen, darunter Instagram, TikTok, Pinterest, Facebook und YouTube – über Postiz und dessen Terminal-Oberfläche, inklusive Upload von Bildern und Videos vor dem Veröffentlichen. Benötigt ein Postiz-Konto (Cloud oder selbst gehostet). Lizenz: AGPL-3.0; prüfe jeden Beitrag, bevor du ihn einplanst.",
     "pushed": null,
     "license": "AGPL-3.0",
     "archived": false,
@@ -5084,6 +5346,7 @@
       "landing"
     ],
     "desc": "مكتبة تسويق مفتوحة بالعربية والإنجليزية فيها مهارات Claude لإعلانات المنطقة العربية (تدقيق الحسابات، وخطط الميزانية، وعائد الطلبات المسلّمة مع الدفع عند الاستلام)، ومحوّل نصوص إعلانية إلى عامية عربية طبيعية، وقوالب بريد وأرقام مرجعية موثقة. أمثلتها موجهة لسوق مصر والخليج لا ألمانيا.",
+    "desc_de": "Offene Marketing-Bibliothek auf Arabisch und Englisch mit Claude-Skills für Werbung im arabischen Raum (Account-Audits, Budgetpläne und Rendite auf zugestellte Bestellungen bei Nachnahme), einem Konverter für Anzeigentexte in natürliches umgangssprachliches Arabisch sowie E-Mail-Vorlagen und belegten Benchmarks. Die Beispiele sind auf den Markt in Ägypten und am Golf ausgerichtet, nicht auf Deutschland.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -5105,6 +5368,7 @@
       "brand"
     ],
     "desc": "محرك مدوّنة كامل لـ Claude Code: تخطيط المواضيع، وكتابة مقالات محسّنة لـ Google ولاستشهاد محركات الذكاء الاصطناعي، وتقييم كل مسودة من 100 نقطة قبل تسليمها، مع بيانات منظمة وصور وتصدير HTML وPDF ونشر متعدد اللغات. مناسب لمدوّنة المتجر، لكنه ثقيل (31 مهارة فرعية) ويحتاج Python 3.11 أو أحدث.",
+    "desc_de": "Komplette Blog-Engine für Claude Code: Themenplanung, Schreiben von Artikeln, die für Google und für Zitate durch KI-Suchmaschinen optimiert sind, und Bewertung jedes Entwurfs auf einer 100-Punkte-Skala vor der Übergabe, dazu strukturierte Daten, Bilder, HTML- und PDF-Export sowie mehrsprachige Veröffentlichung. Geeignet für einen Shop-Blog, aber umfangreich (31 Unter-Skills); benötigt Python 3.11 oder neuer.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -5126,6 +5390,7 @@
       "video"
     ],
     "desc": "يحوّل مقالًا أو فيديو YouTube أو بودكاست إلى منشورات لـ 17 منصة: خيط X، ومنشور LinkedIn، وكاروسيل Instagram، وسيناريو TikTok، ووصف دبابيس Pinterest، ونشرة بريدية، مع تقويم نشر لأسبوع. يُثبَّت بسكربت من الإنترنت ويحتاج Python 3.10 أو أحدث، وآخر تحديث له في أبريل 2026.",
+    "desc_de": "Verwandelt einen Artikel, ein YouTube-Video oder einen Podcast in Beiträge für 17 Plattformen: X-Thread, LinkedIn-Post, Instagram-Karussell, TikTok-Skript, Pin-Beschreibungen für Pinterest und E-Mail-Newsletter, dazu ein Veröffentlichungsplan für eine Woche. Installation per Skript aus dem Internet; benötigt Python 3.10 oder neuer. Zuletzt aktualisiert im April 2026.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -5146,6 +5411,7 @@
       "web"
     ],
     "desc": "21 مهارة لصناعة المحتوى: إنفوغرافيك وصور أغلفة ورسوم توضيحية للمقالات وعروض شرائح، وتوليد صور عبر عدة مزودين، ونشر على X، واستخراج نص يوتيوب وترجمته. تركيزها قوي على المنصات الصينية. مهارتان تستخدمان واجهات غير رسمية عبر كوكيز المتصفح، فاستخدمهما على مسؤوليتك.",
+    "desc_de": "21 Skills für die Content-Erstellung: Infografiken, Titelbilder, Illustrationen für Artikel, Folienpräsentationen, Bildgenerierung über mehrere Anbieter, Veröffentlichung auf X sowie Extraktion und Übersetzung von YouTube-Transkripten. Starker Fokus auf chinesische Plattformen. Zwei Skills nutzen inoffizielle Schnittstellen über Browser-Cookies – verwende sie auf eigene Verantwortung.",
     "pushed": null,
     "license": "MIT",
     "archived": false,
@@ -5166,6 +5432,7 @@
       "brand"
     ],
     "desc": "خادم MCP رسمي من vidIQ يربط Claude ببيانات YouTube الحية: بحث الكلمات المفتاحية، والفيديوهات الرائجة، وتحليل المنافسين، وتقييم العناوين والصور المصغرة، مع دراسة محتوى Instagram وTikTok القصير. يضم 14 مهارة لسير العمل. يحتاج حساب vidIQ وقد تستهلك أدواته رصيدًا، والمستودع جديد وعدد نجومه قليل.",
+    "desc_de": "Offizieller MCP-Server von vidIQ, der Claude mit Live-Daten von YouTube verbindet: Keyword-Recherche, Trend-Videos, Konkurrenzanalyse und Bewertung von Titeln und Thumbnails, dazu Analyse von Kurzvideo-Content auf Instagram und TikTok. Enthält 14 Workflow-Skills. Benötigt ein vidIQ-Konto, die Tools können Credits verbrauchen, und das Repository ist neu und hat nur wenige Sterne.",
     "pushed": null,
     "license": "Apache-2.0",
     "archived": false,
@@ -5186,6 +5453,7 @@
       "shop"
     ],
     "desc": "خادم MCP يربط Google Search Console بـ Claude: يعرض الاستعلامات التي تجلب الزوار مع النقرات والظهور ومتوسط الترتيب، ويقارن فترتين، ويفحص حالة فهرسة صفحاتك ومشكلات Rich Results، ويعرض خرائط الموقع ويرسلها. مشروع مجتمعي وليس من Google، ويحتاج إعداد مفاتيح Google Cloud يدويًا أولًا.",
+    "desc_de": "MCP-Server, der die Google Search Console mit Claude verbindet: zeigt die Suchanfragen, die Besucher bringen, mit Klicks, Impressionen und durchschnittlicher Position, vergleicht zwei Zeiträume, prüft den Indexierungsstatus deiner Seiten und Probleme mit Rich Results, zeigt Sitemaps an und reicht sie ein. Community-Projekt, nicht von Google; benötigt zuerst eine manuelle Einrichtung von Google-Cloud-Schlüsseln.",
     "pushed": null,
     "license": "MIT",
     "archived": false,

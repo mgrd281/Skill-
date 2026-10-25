@@ -2,8 +2,10 @@
   {
     "id": "shop",
     "name": "متجر Shopify",
+    "name_de": "Shopify-Shop",
     "icon": "<path d=\"M5.5 8h13l-1.2 12.2H6.7L5.5 8z\"/><path d=\"M9 10V6.8a3 3 0 0 1 6 0V10\"/>",
     "advice": "ثيمات Shopify مبنية على Liquid، لذلك مكتبات React مثل shadcn وSonner لا تعمل فيها مباشرة. ما يعمل: مكتبات JavaScript العادية مثل GSAP وLenis، وأيقونات SVG، وسكربتات التحليلات.",
+    "advice_de": "Shopify-Themes basieren auf Liquid, deshalb laufen React-Bibliotheken wie shadcn und Sonner dort nicht direkt. Was funktioniert: normale JavaScript-Bibliotheken wie GSAP und Lenis, SVG-Icons und Analytics-Skripte.",
     "picks": [
       "Shopify AI Toolkit",
       "Shopify CLI",
@@ -15,8 +17,10 @@
   {
     "id": "web",
     "name": "تطبيق ويب",
+    "name_de": "Web-App",
     "icon": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 9h18\"/><path d=\"M6.5 6.5h.01M9 6.5h.01\"/>",
     "advice": "مناسب لمشاريع Next.js وReact. اجعل shadcn/ui أساس المكونات، وSupabase للبيانات وتسجيل الدخول، ثم أضف الباقي حسب الحاجة.",
+    "advice_de": "Passt zu Projekten mit Next.js und React. Nimm shadcn/ui als Basis für die Komponenten und Supabase für Daten und Login, und ergänze den Rest nach Bedarf.",
     "picks": [
       "shadcn/ui",
       "Supabase",
@@ -28,8 +32,10 @@
   {
     "id": "mobile",
     "name": "تطبيق iPhone وجوال",
+    "name_de": "iPhone- & Mobile-App",
     "icon": "<rect x=\"7\" y=\"2.5\" width=\"10\" height=\"19\" rx=\"2.2\"/><path d=\"M11 18.5h2\"/>",
     "advice": "إذا كان تطبيقك مبنيًا بـ Flutter فابدأ بمهارات Flutter الرسمية. وإذا كان مبنيًا بتقنيات الويب مثل Capacitor فكل أدوات تطبيق الويب تعمل فيه أيضًا. ولتجربته على محاكي iPhone استخدم MobileBuildMCP أو Maestro.",
+    "advice_de": "Ist deine App mit Flutter gebaut, starte mit den offiziellen Flutter-Skills. Basiert sie auf Webtechnologien wie Capacitor, funktionieren auch alle Tools für Web-Apps. Zum Testen im iPhone-Simulator nutzt du MobileBuildMCP oder Maestro.",
     "picks": [
       "Flutter Agent Skills",
       "MobileBuildMCP",
@@ -41,8 +47,10 @@
   {
     "id": "mac",
     "name": "تطبيق Mac",
+    "name_de": "Mac-App",
     "icon": "<rect x=\"4\" y=\"4.5\" width=\"16\" height=\"11.5\" rx=\"1.6\"/><path d=\"M2 19.5h20\"/>",
     "advice": "لبناء تطبيق Mac أو iPhone استخدم أدوات Apple الرسمية: خادم Xcode MCP ومهارات Xcode 27. ولأتمتة جهاز Mac نفسه، مثل التقويم والرسائل والبريد، توجد خوادم MCP تعمل بإذنك وتطلب صلاحيات من النظام، فامنحها لما تحتاجه فقط.",
+    "advice_de": "Für Mac- oder iPhone-Apps nutzt du die offiziellen Apple-Tools: den Xcode MCP-Server und die Xcode 27 Skills. Um den Mac selbst zu automatisieren, etwa Kalender, Nachrichten und Mail, gibt es MCP-Server, die mit deiner Erlaubnis arbeiten und Systemberechtigungen anfordern – gib ihnen nur, was sie wirklich brauchen.",
     "picks": [
       "Xcode MCP",
       "Xcode 27 Agent Skills",
@@ -54,8 +62,10 @@
   {
     "id": "landing",
     "name": "صفحة هبوط",
+    "name_de": "Landingpage",
     "icon": "<path d=\"M4 10.5v3a1 1 0 0 0 1 1h2.5l5 4V5.5l-5 4H5a1 1 0 0 0-1 1z\"/><path d=\"M15.8 9a4.5 4.5 0 0 1 0 6\"/><path d=\"M18.5 6.5a8.5 8.5 0 0 1 0 11\"/>",
     "advice": "حركة واحدة مدروسة أفضل من تأثيرات كثيرة. اجمع GSAP مع Lenis للتمرير، وقِس السرعة بـ Lighthouse CI قبل النشر، ولا تنسَ نافذة موافقة الكوكيز.",
+    "advice_de": "Eine durchdachte Animation wirkt besser als viele Effekte. Kombiniere GSAP mit Lenis fürs Scrollen, miss die Geschwindigkeit vor dem Livegang mit Lighthouse CI und vergiss das Cookie-Banner nicht.",
     "picks": [
       "Taste Skill",
       "Impeccable",
@@ -67,8 +77,10 @@
   {
     "id": "dashboard",
     "name": "لوحة تحكم",
+    "name_de": "Dashboard",
     "icon": "<path d=\"M3 20.5h18\"/><path d=\"M6.5 17V11\"/><path d=\"M11.5 17V6\"/><path d=\"M16.5 17v-4\"/>",
     "advice": "Tremor للرسوم البيانية فوق shadcn/ui للمكونات، وSonner لرسائل التأكيد بعد الحفظ، وSupabase لتخزين البيانات.",
+    "advice_de": "Tremor für Diagramme, aufgebaut auf shadcn/ui für die Komponenten, Sonner für Bestätigungen nach dem Speichern und Supabase für die Daten.",
     "picks": [
       "Tremor",
       "shadcn/ui",
@@ -80,8 +92,10 @@
   {
     "id": "brand",
     "name": "هوية وتسويق",
+    "name_de": "Marke & Marketing",
     "icon": "<path d=\"M12 3.2a8.8 8.8 0 1 0 0 17.6c1 0 1.6-.7 1.6-1.5 0-.5-.3-.9-.3-1.4 0-.9.7-1.6 1.6-1.6h1.9a4 4 0 0 0 4-4c0-5-4-9.1-8.8-9.1z\"/><path d=\"M7.6 11h.01M10 7.3h.01M14.4 7.3h.01\"/>",
     "advice": "ابدأ بمهارات الهوية لتحديد الاسم والشعار والألوان والنبرة، ثم ثبّتها في ملف DESIGN.md حتى تلتزم بها كل التصاميم والفيديوهات والرسائل. وإذا كان لديك موقع قائم، يستخرج Dembrandt هويته الحالية تلقائيًا.",
+    "advice_de": "Starte mit den Branding-Skills, um Name, Logo, Farben und Tonalität festzulegen, und halte alles in einer DESIGN.md fest, damit sich alle Designs, Videos und Texte daran halten. Hast du schon eine Website, liest Dembrandt deine bestehende Identität automatisch aus.",
     "picks": [
       "Rampstack Brand Build Skills",
       "Brand Building Skills",
@@ -93,8 +107,10 @@
   {
     "id": "video",
     "name": "فيديو وموشن غرافيك",
+    "name_de": "Video & Motion Graphics",
     "icon": "<rect x=\"3\" y=\"5.5\" width=\"13\" height=\"13\" rx=\"2\"/><path d=\"m16 10 5-3v10l-5-3\"/>",
     "advice": "للفيديوهات الترويجية والإعلانات: Remotion أو HyperFrames لصنعها بالكود، وFigma أو After Effects إذا كنت تصمم بنفسك، وأدوات الذكاء الاصطناعي مثل Runway عندما تحتاج لقطات مولّدة. أدوات السحابة تستهلك رصيدًا مدفوعًا مع كل فيديو.",
+    "advice_de": "Für Werbe- und Promo-Videos: Remotion oder HyperFrames, um sie per Code zu erstellen, Figma oder After Effects, wenn du selbst gestaltest, und KI-Tools wie Runway, wenn du generierte Aufnahmen brauchst. Cloud-Tools verbrauchen bei jedem Video kostenpflichtige Credits.",
     "picks": [
       "Remotion",
       "Video Shotcraft",
@@ -109,8 +125,10 @@
   {
     "id": "anim",
     "name": "أنيميشن",
+    "name_de": "Animation",
     "icon": "<path d=\"M3.5 18.5c3.5-8 7-12.5 10.5-12.5\"/><circle cx=\"17\" cy=\"6\" r=\"2.6\"/><path d=\"M3.5 12.5h3M5 8.5h2.5\"/>",
     "advice": "لحركة المواقع والتطبيقات: Anime.js أو GSAP للمواقع ومتاجر Shopify، وحزمة animations الرسمية وLottie لتطبيقات Flutter وiPhone. حركة قليلة ومدروسة أفضل من الكثير، واحترم إعداد تقليل الحركة عند المستخدم.",
+    "advice_de": "Für Bewegung in Websites und Apps: Anime.js oder GSAP für Websites und Shopify-Shops, das offizielle animations-Paket und Lottie für Flutter- und iPhone-Apps. Wenige, gezielte Animationen wirken besser als viele – und respektiere die Einstellung „Bewegung reduzieren“.",
     "picks": [
       "Anime.js",
       "GSAP Skills",
@@ -125,8 +143,10 @@
   {
     "id": "booking",
     "name": "حجز ومواعيد",
+    "name_de": "Buchung & Termine",
     "icon": "<rect x=\"3.5\" y=\"5\" width=\"17\" height=\"15.5\" rx=\"2\"/><path d=\"M3.5 10h17M8 3v4M16 3v4\"/><path d=\"M8 14h3\"/>",
     "advice": "Cal.com يعطيك نظام حجز جاهزًا، وFullCalendar إذا أردت بناء التقويم بنفسك. بيانات المرضى من أكثر البيانات حساسية في أوروبا، فخطّط للاستضافة والصلاحيات من البداية.",
+    "advice_de": "Cal.com liefert dir ein fertiges Buchungssystem, FullCalendar, wenn du den Kalender selbst bauen willst. Patientendaten gehören in Europa zu den sensibelsten Daten – plane Hosting und Zugriffsrechte deshalb von Anfang an.",
     "picks": [
       "Cal.com",
       "FullCalendar",
@@ -138,8 +158,10 @@
   {
     "id": "finance",
     "name": "فواتير ومحاسبة",
+    "name_de": "Rechnungen & Buchhaltung",
     "icon": "<path d=\"M6 3h12v18l-2-1.4-2 1.4-2-1.4-2 1.4-2-1.4L6 21V3z\"/><path d=\"M9 8h6M9 12h6M9 16h3\"/>",
     "advice": "هذه الأدوات تنظّم الفواتير والإيصالات وتربط Claude ببرنامج المحاسبة أو البنك، لكنها لا تغني عن مستشارك الضريبي. الفاتورة الإلكترونية (E-Rechnung) صارت مطلوبة بين الشركات في ألمانيا: استقبالها منذ 2025، وإصدارها يصبح إلزاميًا على مراحل حتى 2028. فواتير الزبائن الأفراد غير مشمولة. ابدأ بوضع القراءة فقط، لأن بياناتك المالية تمر عبر الذكاء الاصطناعي.",
+    "advice_de": "Diese Tools organisieren Rechnungen und Belege und verbinden Claude mit deiner Buchhaltungssoftware oder Bank, ersetzen aber nicht deinen Steuerberater. Die E-Rechnung ist zwischen Unternehmen in Deutschland Pflicht: Empfangen seit 2025, das Ausstellen wird schrittweise bis 2028 verpflichtend. Rechnungen an Privatkunden sind nicht betroffen. Starte im Nur-Lese-Modus, denn deine Finanzdaten laufen dabei durch eine KI.",
     "picks": [
       "paperless-ngx",
       "Lexware Office MCP",
@@ -151,8 +173,10 @@
   {
     "id": "claude",
     "name": "العمل مع Claude",
+    "name_de": "Arbeiten mit Claude",
     "icon": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"m7 9.5 3 2.5-3 2.5\"/><path d=\"M13 15h4\"/>",
     "advice": "هذه تحسّن طريقة عمل Claude نفسه في أي مشروع. أغلبها يعمل داخل Claude Code على جهازك. ثبّت القليل الذي تحتاجه فقط، فكل مهارة إضافية تُثقل عمل Claude.",
+    "advice_de": "Diese Tools verbessern, wie Claude selbst in jedem Projekt arbeitet. Die meisten laufen in Claude Code auf deinem Rechner. Installiere nur das Wenige, das du wirklich brauchst – jeder zusätzliche Skill belastet Claude.",
     "picks": [
       "Superpowers",
       "Matt Pocock Skills",

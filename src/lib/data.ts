@@ -3,6 +3,7 @@ import categoriesJson from "../../data/categories.json";
 import projectsJson from "../../data/projects.json";
 import meta from "../../data/meta.json";
 import type { IconName } from "./icons";
+import type { Lang } from "../i18n";
 
 export interface Tool {
   slug: string;
@@ -17,15 +18,16 @@ export interface Tool {
   cmd: string | null;
   use: string[];
   desc: string;
+  desc_de: string;
   pushed: string | null;
   license?: string | null;
   archived?: boolean;
   added: string;
   order: number;
 }
-export interface Category { id: string; name: string }
+export interface Category { id: string; name: string; name_de: string }
 export interface Project {
-  id: string; name: string; icon: string; advice: string; picks: string[];
+  id: string; name: string; name_de: string; icon: string; advice: string; advice_de: string; picks: string[];
   pickSlugs: string[]; cats?: string[]; count: number;
 }
 
@@ -77,6 +79,28 @@ const LATIN = /[A-Za-z][\w+\-\/@.]*[A-Za-z0-9](?:\s+[A-Za-z0-9][\w+\-\/@.]*[A-Za
 export function rich(s: string): string {
   return esc(s).replace(LATIN, (m) => "<bdi>" + m + "</bdi>");
 }
+// نص بلغة الصفحة: العربية تعزل الكلمات اللاتينية بـ <bdi>، والألمانية نص عادي
+export const txt = (s: string, lang: Lang) => (lang === "ar" ? rich(s) : esc(s));
+
+// ---- الحقول المترجمة: الحقل العربي اسمه الأصلي، والألماني بلاحقة _de ----
+function de(value: string | undefined, what: string): string {
+  if (!value) throw new Error(`ترجمة ألمانية ناقصة: ${what}. أضفها في data/ ثم شغّل npm run check.`);
+  return value;
+}
+export const toolDesc = (t: Tool, lang: Lang) => (lang === "de" ? de(t.desc_de, `desc_de لـ ${t.name}`) : t.desc);
+export const catName = (id: string, lang: Lang) => {
+  const c = categoryById(id);
+  return lang === "de" ? de(c.name_de, `name_de للقسم ${id}`) : c.name;
+};
+export const projName = (p: Project, lang: Lang) => (lang === "de" ? de(p.name_de, `name_de للمشروع ${p.id}`) : p.name);
+export const projAdvice = (p: Project, lang: Lang) => (lang === "de" ? de(p.advice_de, `advice_de للمشروع ${p.id}`) : p.advice);
+// أنواع الأدوات وترجمتها (القائمة نفسها في scripts/check-data.mjs)
+const KIND_DE: Record<string, string> = {
+  Skill: "Skill", MCP: "MCP", "مكتبة": "Bibliothek", "أداة": "Tool", "موقع": "Website", "منصة": "Plattform", "تطبيق": "App",
+  "صيغة": "Format", "دليل": "Verzeichnis",
+};
+export const kindLabel = (kind: string, lang: Lang) => (lang === "de" ? de(KIND_DE[kind], `اسم النوع ${kind}`) : kind);
+
 export function host(url: string): string {
   try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return url; }
 }
@@ -88,8 +112,11 @@ export function repoLabel(url: string): string {
 export const isLatin = (s: string) => /^[\x00-\x7F]+$/.test(s);
 export const isAppStore = (u: string) => /apps\.apple\.com/.test(u);
 
-export function formatDate(iso: string): string {
-  const [y, m, d] = iso.split("-").map(Number);
+export function formatDate(iso: string, lang: Lang = "ar"): string {
+  const [y, m, d] = iso.slice(0, 10).split("-").map(Number);
+  if (lang === "de") {
+    return new Intl.DateTimeFormat("de-DE", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(Date.UTC(y, m - 1, d));
+  }
   const months = ["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"];
   return `${d} ${months[m - 1]} ${y}`;
 }
@@ -110,23 +137,43 @@ export interface Badge { kind: "ok" | "warn" | "bad"; text: string; latin?: stri
 const RUNS_REMOTE_SCRIPT = /(curl|wget)[^\n]*\|\s*(ba|z)?sh|(ba|z)?sh\s+-c\s+"\$\((curl|wget)/i;
 const RESTRICTIVE = /AGPL|GPL|SSPL|BUSL|CC-BY-NC|Elastic|Commons|Sustainable/i;
 
-export function statusBadges(t: Tool, now = Date.now()): Badge[] {
+const BADGE = {
+  ar: {
+    archived: "مؤرشف", archivedT: "المستودع مؤرشف: لم يعد صاحبه يطوّره",
+    old: "آخر تحديث", oldT: "لم يُحدَّث المستودع منذ أكثر من سنة",
+    script: "ينفّذ سكربتًا من الإنترنت", scriptT: "أمر التثبيت يحمّل سكربتًا من الإنترنت وينفّذه مباشرة. افتح مصدره واقرأه قبل تشغيله",
+    none: "بدون رخصة", noneT: "لا رخصة معلنة في المستودع: غالبًا لا يُسمح باستخدامه. اقرأ صفحته قبل الاعتماد عليه",
+    other: "رخصة خاصة", otherT: "رخصة غير قياسية: اقرأ ملف الرخصة قبل الاستخدام التجاري",
+    restrictT: (l: string) => `رخصة ${l} لها شروط على الاستخدام التجاري: اقرأها`, licT: (l: string) => `الرخصة: ${l}`,
+  },
+  de: {
+    archived: "Archiviert", archivedT: "Das Repository ist archiviert und wird nicht mehr weiterentwickelt",
+    old: "Letztes Update", oldT: "Das Repository wurde seit über einem Jahr nicht aktualisiert",
+    script: "Skript aus dem Internet", scriptT: "Der Installationsbefehl lädt ein Skript aus dem Internet und führt es direkt aus. Öffne und lies die Quelle, bevor du es startest",
+    none: "Keine Lizenz", noneT: "Im Repository ist keine Lizenz angegeben – die Nutzung ist dann meist nicht erlaubt. Lies die Projektseite, bevor du dich darauf verlässt",
+    other: "Eigene Lizenz", otherT: "Keine Standardlizenz: Lies die Lizenzdatei vor einer kommerziellen Nutzung",
+    restrictT: (l: string) => `Die Lizenz ${l} hat Bedingungen für die kommerzielle Nutzung: Lies sie`, licT: (l: string) => `Lizenz: ${l}`,
+  },
+};
+
+export function statusBadges(t: Tool, lang: Lang = "ar", now = Date.now()): Badge[] {
+  const b = BADGE[lang];
   const out: Badge[] = [];
   if (t.archived) {
-    out.push({ kind: "bad", text: "مؤرشف", title: "المستودع مؤرشف: لم يعد صاحبه يطوّره" });
+    out.push({ kind: "bad", text: b.archived, title: b.archivedT });
   } else if (t.pushed) {
     const days = (now - new Date(t.pushed).getTime()) / 864e5;
-    if (days > 365) out.push({ kind: "warn", text: "آخر تحديث", latin: t.pushed.slice(0, 7), title: "لم يُحدَّث المستودع منذ أكثر من سنة" });
+    if (days > 365) out.push({ kind: "warn", text: b.old, latin: t.pushed.slice(0, 7), title: b.oldT });
   }
   if (t.cmd && RUNS_REMOTE_SCRIPT.test(t.cmd)) {
-    out.push({ kind: "warn", text: "ينفّذ سكربتًا من الإنترنت", title: "أمر التثبيت يحمّل سكربتًا من الإنترنت وينفّذه مباشرة. افتح مصدره واقرأه قبل تشغيله" });
+    out.push({ kind: "warn", text: b.script, title: b.scriptT });
   }
   const l = t.license;
-  if (l === "none") out.push({ kind: "bad", text: "بدون رخصة", title: "لا رخصة معلنة في المستودع: غالبًا لا يُسمح باستخدامه. اقرأ صفحته قبل الاعتماد عليه" });
-  else if (l === "other") out.push({ kind: "warn", text: "رخصة خاصة", title: "رخصة غير قياسية: اقرأ ملف الرخصة قبل الاستخدام التجاري" });
+  if (l === "none") out.push({ kind: "bad", text: b.none, title: b.noneT });
+  else if (l === "other") out.push({ kind: "warn", text: b.other, title: b.otherT });
   else if (l) {
     const warn = RESTRICTIVE.test(l);
-    out.push({ kind: warn ? "warn" : "ok", text: "", latin: l, title: warn ? `رخصة ${l} لها شروط على الاستخدام التجاري: اقرأها` : `الرخصة: ${l}` });
+    out.push({ kind: warn ? "warn" : "ok", text: "", latin: l, title: warn ? b.restrictT(l) : b.licT(l) });
   }
   return out;
 }
@@ -142,6 +189,7 @@ export function initials(name: string): string {
 // ---- أيقونة لكل نوع وقسم ونوع مشروع (أسماء Phosphor من src/lib/icons.ts) ----
 const KIND_ICON: Record<string, IconName> = {
   Skill: "sparkle", MCP: "plug", "مكتبة": "package", "أداة": "wrench", "موقع": "globe", "منصة": "stack", "تطبيق": "device-mobile",
+  "صيغة": "file-text", "دليل": "compass",
 };
 export const kindIcon = (kind: string): IconName => KIND_ICON[kind] ?? "package";
 

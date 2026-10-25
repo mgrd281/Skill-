@@ -53,7 +53,13 @@
   --font-display: -apple-system, BlinkMacSystemFont, "SF Arabic", "SF Pro Display", "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
   --font-mono: ui-monospace, "SF Mono", "IBM Plex Mono", SFMono-Regular, Menlo, Consolas, monospace;
   color-scheme: light;
+
+  /* اتجاه الصفحة: العربية من اليمين، والألمانية من اليسار (html[dir="ltr"]) */
+  --start: right;
+  --end: left;
+  --fwd: -1; /* اتجاه "التالي": سالب = لليسار */
 }
+html[dir="ltr"] { --start: left; --end: right; --fwd: 1; }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #000000; --bg-alt: #161617; --card: #1C1C1E; --fill: rgb(118 118 128 / .24); --fill-2: rgb(118 118 128 / .16);
@@ -126,7 +132,7 @@ kbd {
 }
 .link-more .i { width: 16px; height: 16px; transition: translate var(--dur) var(--ease); }
 .link-more:hover { text-decoration: underline; text-underline-offset: 4px; }
-.link-more:hover .i { translate: -3px 0; }
+.link-more:hover .i { translate: calc(var(--fwd) * 3px) 0; }
 .clear, .linkbtn {
   justify-self: start; border: 0; background: transparent; color: var(--accent);
   font: inherit; font-size: .9rem; padding: 6px 0; cursor: pointer; border-radius: 4px;
@@ -151,6 +157,18 @@ kbd {
 .gnav-links a:hover { color: var(--ink); }
 @media (min-width: 860px) { .gnav-links { display: flex; } }
 .actions { display: flex; align-items: center; gap: 2px; margin-inline-start: auto; }
+/* زر اللغة: أيقونة على الجوال، وأيقونة مع اسم اللغة على الشاشات الأوسع */
+.bell.langsw { width: auto; min-width: 40px; padding-inline: 10px; gap: 6px; display: inline-flex; align-items: center; justify-content: center; font-size: .86rem; font-weight: 500; white-space: nowrap; }
+.bell.langsw .i { width: 19px; height: 19px; }
+.langsw .ls-t { display: none; }
+@media (min-width: 700px) { .langsw .ls-t { display: inline; } .bell.langsw { padding-inline: 12px 14px; } }
+.brand span { white-space: nowrap; }
+/* على الشاشات الضيقة جدًا: أزرار الشريط أصغر قليلًا حتى يتسع اسم الدليل */
+@media (max-width: 420px) {
+  .gnav-in { gap: 12px; }
+  .actions .bell { width: 38px; height: 38px; }
+  .bell.langsw { min-width: 38px; padding-inline: 9px; }
+}
 @media (min-width: 860px) { .actions { margin-inline-start: 0; } }
 .bell {
   position: relative; width: 40px; height: 40px; flex: none; display: grid; place-items: center;
@@ -181,7 +199,7 @@ kbd {
   position: absolute; top: 50px; inset-inline-end: -8px; z-index: 60;
   width: min(380px, calc(100vw - 24px)); background: var(--card); border-radius: var(--r-lg);
   border: 1px solid var(--line); display: grid; overflow: hidden;
-  transform-origin: top left; animation: drop-in var(--dur) var(--ease-out);
+  transform-origin: top var(--end); animation: drop-in var(--dur) var(--ease-out);
 }
 @media (max-width: 520px) {
   .notif { position: fixed; top: 60px; inset-inline: 12px; width: auto; }
@@ -197,7 +215,7 @@ kbd {
 .nf-item:hover, .nf-item:focus-visible { background: var(--fill-2); }
 .nf-item .mono { background: var(--bg-alt); }
 .nf-t { display: grid; min-width: 0; flex: 1; line-height: 1.4; }
-.nf-t b { direction: ltr; text-align: right; unicode-bidi: isolate; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nf-t b { direction: ltr; text-align: var(--start); unicode-bidi: isolate; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .nf-item.unread .nf-t b { font-weight: 700; }
 .nf-t small { color: var(--muted); font-size: .8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .nf-dot { flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
@@ -255,7 +273,7 @@ kbd {
   .show-card.s3 { transform: translate(-50%, -50%) translate(-10%, 60%) rotate(-3deg) scale(.84); }
 }
 .show-t { display: grid; min-width: 0; flex: 1; line-height: 1.35; }
-.show-t b { direction: ltr; text-align: right; unicode-bidi: isolate; font-weight: 700; font-size: 1.08rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.show-t b { direction: ltr; text-align: var(--start); unicode-bidi: isolate; font-weight: 700; font-size: 1.08rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .show-t small { color: var(--muted); font-size: .82rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 @keyframes float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
 
@@ -439,7 +457,7 @@ kbd {
 @media (hover: hover) { .latest-item:hover { scale: 1.02; border-color: var(--line); } }
 .li-new { display: inline-flex; align-items: center; gap: 6px; font-size: .8rem; font-weight: 600; color: var(--accent); }
 .li-new::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
-.li-name { direction: ltr; text-align: right; unicode-bidi: isolate; font: 700 1.45rem/1.25 var(--font-display); overflow-wrap: anywhere; }
+.li-name { direction: ltr; text-align: var(--start); unicode-bidi: isolate; font: 700 1.45rem/1.25 var(--font-display); overflow-wrap: anywhere; }
 .li-cat { color: var(--muted); font-size: .9rem; }
 .li-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 16px; }
 .latest-item .mono { background: var(--bg); }
@@ -497,7 +515,7 @@ kbd {
 }
 .sec-more .i { width: 15px; height: 15px; transition: translate var(--dur) var(--ease); }
 .sec-more:hover { text-decoration: underline; text-underline-offset: 4px; }
-.sec-more:hover .i { translate: -3px 0; }
+.sec-more:hover .i { translate: calc(var(--fwd) * 3px) 0; }
 .status { font-size: .88rem; color: var(--muted); margin: 0; font-variant-numeric: tabular-nums; }
 .hiddenbar { margin: 0; display: flex; align-items: center; gap: 8px; font-size: .88rem; color: var(--muted); }
 .cat { scroll-margin-top: 140px; }
@@ -635,7 +653,7 @@ a.name:hover { color: var(--accent); }
 .lnk > .i:first-child { width: 17px; height: 17px; }
 .lnk .chev { width: 14px; height: 14px; margin-inline-start: -2px; transition: translate var(--dur) var(--ease); }
 .lnk:hover { text-decoration: underline; text-underline-offset: 4px; }
-.lnk:hover .chev { translate: -3px 0; }
+.lnk:hover .chev { translate: calc(var(--fwd) * 3px) 0; }
 
 /* ---------- الحالة الفارغة ---------- */
 .empty, .favempty {
@@ -695,7 +713,7 @@ a.name:hover { color: var(--accent); }
 .specs dd.ic .i { width: 18px; height: 18px; color: var(--muted); }
 .specs dd a { text-decoration: none; }
 .specs dd a:hover { text-decoration: underline; }
-.specs dd.num { direction: ltr; text-align: right; }
+.specs dd.num { direction: ltr; text-align: var(--start); }
 .specs .addedchip { color: inherit; }
 
 /* ---------- المفضلة ---------- */
@@ -714,6 +732,10 @@ a.name:hover { color: var(--accent); }
 .foot-nav a:first-child { border: 0; padding-inline-start: 0; }
 .foot-nav a:hover { text-decoration: underline; }
 .foot-copy { margin: 0; margin-inline-start: auto; }
+.foot-lang { display: flex; gap: 14px; }
+.foot-lang a { color: var(--ink-2); text-decoration: none; }
+.foot-lang a:hover { text-decoration: underline; }
+.foot-lang [aria-current] { color: var(--ink); font-weight: 600; }
 
 /* ---------- العودة للأعلى والإشعار القصير ---------- */
 .totop {
@@ -773,6 +795,15 @@ a.name:hover { color: var(--accent); }
 @keyframes reveal { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: none; } }
 
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 220ms; animation-timing-function: var(--ease); }
+
+/* ---------- الألمانية ---------- */
+/* كلمات ألمانية طويلة: تقسيم المقاطع للنصوص في الأعمدة الضيقة على الجوال فقط، وليس للعناوين أو الفقرات الوسطية */
+@media (max-width: 600px) {
+  html[lang="de"] :is(.desc, .advice p, .p-note, .specs dd, .foot-notes p) { hyphens: auto; -webkit-hyphens: auto; }
+}
+/* تتبع أحرف خفيف للعناوين اللاتينية الكبيرة كما في عناوين Apple (ممنوع على العربية) */
+html[lang="de"] :is(.hero h1, .page-hero h1, .p-hero h1, .sec-title, .stats dd) { letter-spacing: -0.015em; }
+html[lang="de"] .hero h1 { max-width: 17ch; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }

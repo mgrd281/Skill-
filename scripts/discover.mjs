@@ -120,7 +120,7 @@ const candidates = [...found.values()]
       stub: {
         slug: slugify(r.name), cat: g.cat, name: r.name, kind: g.kind, isNew: true, gh: r.html_url,
         site: r.homepage && /^https:\/\//.test(r.homepage) ? r.homepage : null,
-        stars: formatStars(r.stargazers_count), cmd: null, use: [], desc: "", pushed: (r.pushed_at || "").slice(0, 10),
+        stars: formatStars(r.stargazers_count), cmd: null, use: [], desc: "", desc_de: "", pushed: (r.pushed_at || "").slice(0, 10),
         added: new Date().toISOString().slice(0, 19) + "Z",
       },
     };
@@ -133,7 +133,7 @@ if (candidates.length && reportPath) {
   const lines = [];
   lines.push(`وجد البحث الأسبوعي مستودعات جديدة تستحق النظر (العدد: ${candidates.length}). لم يُضف أي منها إلى الموقع.`);
   lines.push("");
-  lines.push("**كيف تراجع:** اقرأ كل مرشح، وإن أعجبك فانسخ كتلة JSON إلى آخر `data/tools.json`، واكتب `desc` بالعربية، وأضف `cmd` و`use`، ثم شغّل `npm run check`. ولإخفاء مرشح لا تريده، أضف اسمه إلى `ignored` في `data/discover-state.json`.");
+  lines.push("**كيف تراجع:** اقرأ كل مرشح، وإن أعجبك فانسخ كتلة JSON إلى آخر `data/tools.json`، واكتب `desc` بالعربية و`desc_de` بالألمانية، وأضف `cmd` و`use`، ثم شغّل `npm run check`. ولإخفاء مرشح لا تريده، أضف اسمه إلى `ignored` في `data/discover-state.json`.");
   lines.push("");
   for (const c of candidates) {
     lines.push(`### [${c.full}](${c.url}) · ⭐ ${formatStars(c.stars)}`);

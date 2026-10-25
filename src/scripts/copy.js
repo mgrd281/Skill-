@@ -1,5 +1,6 @@
 // نسخ أمر التثبيت عند الضغط على زر "نسخ" داخل أي .cmd
 import { toast } from "./ui.js";
+import { L } from "../i18n/client.js";
 
 export function initCopy(root = document) {
   root.addEventListener("click", (e) => {
@@ -9,12 +10,12 @@ export function initCopy(root = document) {
     const label = c.querySelector(".copy-t");
     const text = code.textContent;
     const done = (msg, ok) => {
-      if (label) label.textContent = ok ? "تم" : "نسخ";
+      if (label) label.textContent = ok ? L.copied : L.copy;
       c.classList.toggle("copied", ok);
       toast(msg);
       setTimeout(() => {
         c.classList.remove("copied");
-        if (label) label.textContent = "نسخ";
+        if (label) label.textContent = L.copy;
       }, 1800);
     };
     const fallback = () => {
@@ -25,10 +26,10 @@ export function initCopy(root = document) {
         sel.removeAllRanges();
         sel.addRange(r);
       } catch (err) {}
-      done("حدّد الأمر وانسخه يدويًا", false);
+      done(L.copyManual, false);
     };
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(() => done("تم نسخ أمر التثبيت", true), fallback);
+      navigator.clipboard.writeText(text).then(() => done(L.copiedToast, true), fallback);
     } else {
       fallback();
     }

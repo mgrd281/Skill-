@@ -1,8 +1,11 @@
 ---
 import Icon from "./Icon.astro";
-import { url } from "../lib/data";
+import { type Lang, DEFAULT_LANG, href, t as dict } from "../i18n";
+interface Props { lang?: Lang }
+const { lang = DEFAULT_LANG } = Astro.props;
+const t = dict(lang);
 ---
-<a class="bell heartlink" href={url("favorites")} aria-label="المفضلة" title="المفضلة">
+<a class="bell heartlink" href={href(lang, "favorites")} aria-label={t.navFavs} title={t.navFavs}>
   <Icon name="heart" />
   <span class="dot favcount" hidden>0</span>
 </a>
