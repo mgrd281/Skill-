@@ -152,7 +152,8 @@ kbd {
 .brand.sm { font-size: .86rem; gap: 8px; }
 .logo .spark { transform-box: fill-box; transform-origin: center; transition: transform var(--dur-slow) var(--spring); }
 .brand:hover .spark { transform: rotate(90deg) scale(1.15); }
-.gnav .brand .spark { animation: twinkle 1s var(--ease-out) .3s both; }
+/* backwards لا both: بعد انتهاء الدخول تعود الأنماط العادية فيعمل :hover (both يثبّت الحالة النهائية فيتجاهله) */
+.gnav .brand .spark { animation: twinkle 1s var(--ease-out) .3s backwards; }
 @keyframes twinkle { from { transform: rotate(-120deg) scale(.2); opacity: 0; } to { transform: none; opacity: 1; } }
 .gnav-links { display: none; gap: 28px; margin-inline: auto; }
 .gnav-links a { color: var(--ink-2); text-decoration: none; font-size: .88rem; transition: color var(--dur) var(--ease); }

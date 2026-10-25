@@ -46,11 +46,6 @@ for (const n of ["moon", "sun", "heart", "arrow-up", "translate", "star"] as con
 // أيقونات نافذة الرأي (Feedback.astro) بأوزانها الخاصة
 useIcon(Astro.locals, "star", "fill");
 useIcon(Astro.locals, "x", "bold");
-const icon =
-  "data:image/svg+xml," +
-  encodeURIComponent(
-    `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='#2446D6'/><rect x='7' y='7' width='8' height='8' rx='2.4' fill='#fff'/><rect x='7' y='17' width='8' height='8' rx='2.4' fill='#fff' fill-opacity='.6'/><rect x='17' y='17' width='8' height='8' rx='2.4' fill='#fff'/><path d='M21 6.2Q21.6 10.4 25.8 11Q21.6 11.6 21 15.8Q20.4 11.6 16.2 11Q20.4 10.4 21 6.2Z' fill='#FFC94D'/></svg>`
-  );
 ---
 <!doctype html>
 <html lang={lang} dir={dirOf(lang)}>
@@ -68,8 +63,13 @@ const icon =
     {noindex && <meta name="robots" content="noindex" />}
     {!noindex && LANGS.map((l) => <link rel="alternate" hreflang={l} href={abs(l)} />)}
     {!noindex && <link rel="alternate" hreflang="x-default" href={abs(DEFAULT_LANG)} />}
-    <link rel="icon" href={icon} />
+    <!-- الأيقونات: SVG للمتصفحات الحديثة، وICO (16/32/48) لغيرها ولمحركات البحث التي تطلب /favicon.ico، وPNG لـ iOS. تُولَّد بـ npm run brand -->
+    <link rel="icon" href={href(DEFAULT_LANG, "favicon.ico")} sizes="48x48" />
+    <link rel="icon" href={href(DEFAULT_LANG, "favicon.svg")} type="image/svg+xml" />
     <link rel="apple-touch-icon" href={href(DEFAULT_LANG, "apple-touch-icon.png")} />
+    <link rel="manifest" href={href(lang, "manifest.webmanifest")} />
+    <meta name="application-name" content={t.siteName} />
+    <meta name="apple-mobile-web-app-title" content={t.siteName} />
     <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
     <link rel="alternate" type="application/rss+xml" title={t.rssTitle} href={new URL(href(lang, "feed.xml"), Astro.site).href} />

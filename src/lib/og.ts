@@ -6,6 +6,7 @@ import path from "node:path";
 import satori from "satori";
 import { Resvg } from "@resvg/resvg-js";
 import { type Tool, initials, isLatin } from "./data";
+import { markDataUrl } from "./brand.js";
 
 // المسار من جذر المشروع: هذا الملف يُجمَّع في مجلد آخر وقت البناء فلا يصلح المسار النسبي
 const font = (p: string) => fs.readFileSync(path.join(process.cwd(), "node_modules", p));
@@ -20,10 +21,8 @@ const h = (type: string, style: Record<string, any>, ...children: any[]): Node =
   type, props: { style: { display: "flex", ...style }, children: children.length === 1 ? children[0] : children },
 });
 
-// شعار الدليل (نفس Logo.astro) كصورة SVG
-const LOGO = "data:image/svg+xml;base64," + Buffer.from(
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="#2446D6"/><rect x="7" y="7" width="8" height="8" rx="2.4" fill="#fff"/><rect x="7" y="17" width="8" height="8" rx="2.4" fill="#fff" fill-opacity=".6"/><rect x="17" y="17" width="8" height="8" rx="2.4" fill="#fff"/><path d="M21 6.2Q21.6 10.4 25.8 11Q21.6 11.6 21 15.8Q20.4 11.6 16.2 11Q20.4 10.4 21 6.2Z" fill="#FFC94D"/></svg>`
-).toString("base64");
+// شعار الدليل (الرسم في brand.js) كصورة SVG
+const LOGO = markDataUrl();
 
 // نجمة Phosphor الممتلئة بلون النجوم في الموقع (الخط لا يحتوي الرمز ★)
 const STAR = "data:image/svg+xml;base64," + Buffer.from(

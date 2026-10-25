@@ -28,3 +28,5 @@ jobs:
           SITE_URL: https://example.invalid
       - name: Check icons
         run: npm run check-icons
+      - name: Check brand assets
+        run: npm run check-brand

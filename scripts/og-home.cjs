@@ -6,12 +6,13 @@ const fs = require("fs");
 // الخطوط مضمّنة كـ data URL: الصفحة المؤقتة لا تستطيع تحميل ملفات محلية
 const font = (w, sub) => "data:font/woff2;base64," + fs.readFileSync(path.join(__dirname, "..", "node_modules", `@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-${sub}-${w}-normal.woff2`)).toString("base64");
 const RANGE = { arabic: "U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F", latin: "U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC" };
-const LOGO = `<svg viewBox="0 0 32 32" width="64" height="64"><rect width="32" height="32" rx="9" fill="#2446D6"/><rect x="7" y="7" width="8" height="8" rx="2.4" fill="#fff"/><rect x="7" y="17" width="8" height="8" rx="2.4" fill="#fff" fill-opacity=".6"/><rect x="17" y="17" width="8" height="8" rx="2.4" fill="#fff"/><path d="M21 6.2Q21.6 10.4 25.8 11Q21.6 11.6 21 15.8Q20.4 11.6 16.2 11Q20.4 10.4 21 6.2Z" fill="#FFC94D"/></svg>`;
+let LOGO; // الشعار من src/lib/brand.js (وحدة ESM فتُحمَّل داخل الدالة غير المتزامنة)
 const T = {
   ar: { dir: "rtl", name: "دليل الأدوات", h: 'أدوات تساعدك في&nbsp;عملك، <span>كل يوم.</span>', sub: "مهارات Claude وخوادم MCP ومكتبات ومواقع مختارة بعناية، مع أمر التثبيت لكل أداة." },
   de: { dir: "ltr", name: "Tool-Verzeichnis", h: 'Tools, die dir bei der Arbeit helfen. <span>Jeden&nbsp;Tag.</span>', sub: "Claude-Skills, MCP-Server, Bibliotheken und Websites – sorgfältig ausgewählt, mit Installationsbefehl." },
 };
 (async () => {
+  LOGO = (await import("../src/lib/brand.js")).markSvg({ size: 64 });
   const b = await chromium.launch();
   const p = await b.newPage({ viewport: { width: 1200, height: 630 } });
   for (const [lang, t] of Object.entries(T)) {

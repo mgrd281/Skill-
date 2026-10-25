@@ -136,6 +136,15 @@ npm run build      # بناء الموقع في مجلد dist
 - **بيانات منظمة (JSON-LD):** الرئيسية فيها `WebSite` وقائمة أعلى 10 أدوات، وصفحة الأداة فيها مسار الصفحة `BreadcrumbList` و`SoftwareSourceCode` للأدوات التي لها مستودع.
 - **زر مشاركة** في صفحة كل أداة: قائمة المشاركة في الجوال، ونسخ الرابط على الحاسوب.
 
+## الشعار والأيقونات
+
+رسم الشعار في مكان واحد هو `src/lib/brand.js`، وتستخدمه الواجهة وصور المشاركة ومجموعة الأيقونات، فلا ينسخ أحد SVG الشعار إلى ملف آخر.
+
+- **التوليد:** `npm run brand` يكتب في `public/`: `favicon.svg` و`favicon.ico` (16 و32 و48) و`apple-touch-icon.png` (180) و`icon-192.png` و`icon-512.png` و`icon-maskable-512.png` و`logo.svg`، وفي `public/brand/`: `avatar-1024.png` (صورة الحساب على المنصات) و`logo-1024.png` و`logo-mono.svg` (لون واحد للأختام). ارفع الملفات الناتجة مع التعديل.
+- **التحقق:** `npm run check-brand` بعد البناء (ويعمل في CI): الملفات موجودة بأحجامها، ووسوم `<head>` تشير إلى ملفات موجودة، وأيقونات manifest بأحجامها المعلنة.
+- **manifest** بلغتين من `src/lib/manifest.ts` (`/manifest.webmanifest` و`/de/manifest.webmanifest`): يقرؤه أندرويد وChrome عند "إضافة إلى الشاشة الرئيسية".
+- **لماذا ملفات حقيقية وليس رابط data-URI؟** Safari على iPhone وزاحف أيقونات Google لا يقرآن أيقونة مضمّنة في الصفحة، ويطلبان `/favicon.ico` و`apple-touch-icon`.
+
 ## النشر على Vercel
 
 1. افتح `vercel.com/new` واستورد المستودع.
