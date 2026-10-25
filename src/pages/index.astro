@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
 import Icon from "../components/Icon.astro";
-import { tools, categories, projects, rich, starsUpdatedAt, formatDate, recentTools, categoryById, url, initials, categoryHue } from "../lib/data";
+import { tools, categories, projects, rich, starsUpdatedAt, formatDate, recentTools, categoryById, url, initials, kindIcon, categoryIcon, projectIcon } from "../lib/data";
 
 const total = tools.length;
 // الترتيب الافتراضي: الأعلى نجومًا أولًا (والتي بلا نجوم في النهاية)، ويُحسب وقت البناء فيتجدد مع تحديث النجوم الأسبوعي
@@ -30,14 +30,17 @@ const appData = {
       <Icon name="bell" />
       <span class="dot" id="bell-n" hidden>0</span>
     </button>
-    <div class="notif" id="notif" role="dialog" aria-label="آخر الأدوات المضافة" hidden>
-      <h3>آخر الأدوات المضافة</h3>
-      <ul id="notif-list"></ul>
-      <p class="notif-empty" id="notif-empty">لا توجد أدوات مضافة بعد.</p>
-      <div class="notif-actions">
-        <button type="button" class="linkbtn" id="notif-read">تم، قرأتها</button>
-        <a class="linkbtn" href={url("feed.xml")}>اشتراك <bdi>RSS</bdi></a>
+    <div class="notif" id="notif" role="dialog" aria-labelledby="nf-h" hidden>
+      <div class="nf-head">
+        <h3 id="nf-h">الإشعارات</h3>
+        <button type="button" class="linkbtn" id="notif-read">تحديد الكل كمقروء</button>
       </div>
+      <ul class="nf-list" id="notif-list"></ul>
+      <div class="nf-empty" id="notif-empty">
+        <span class="empty-ic"><Icon name="bell" /></span>
+        <p>لا جديد الآن</p>
+      </div>
+      <a class="nf-foot" href={url("feed.xml")}><Icon name="rss" />اشترك في خلاصة <bdi>RSS</bdi><Icon name="chevron" class="chev" /></a>
     </div>
   </div>
 
@@ -100,13 +103,13 @@ const appData = {
     </div>
     <div class="cp-body" id="chips">
       <div class="cp-toggles" role="group" aria-label="تصفية إضافية">
-        <button type="button" class="chip skillchip" data-id="skill">المهارات فقط<span class="n"></span></button>
-        <button type="button" class="chip newchip" data-id="new">الجديد فقط<span class="n"></span></button>
+        <button type="button" class="chip skillchip" data-id="skill"><Icon name="sparkles" /><span class="cl">المهارات فقط</span><span class="n"></span></button>
+        <button type="button" class="chip newchip" data-id="new"><Icon name="clock" /><span class="cl">الجديد فقط</span><span class="n"></span></button>
       </div>
       <div class="cp-grid" role="group" aria-label="الأقسام">
-        <button type="button" class="chip" data-id="all">كل الأقسام<span class="n">{total}</span></button>
+        <button type="button" class="chip" data-id="all"><Icon name="grid" /><span class="cl">كل الأقسام</span><span class="n">{total}</span></button>
         {categories.map((c) => (
-          <button type="button" class="chip" data-id={c.id}><span set:html={rich(c.name)} /><span class="n"></span></button>
+          <button type="button" class="chip" data-id={c.id}><Icon name={categoryIcon(c.id)} /><span class="cl" set:html={rich(c.name)} /><span class="n"></span></button>
         ))}
       </div>
     </div>
@@ -117,7 +120,7 @@ const appData = {
     <div class="projects" id="projects">
       {projects.map((p) => (
         <button type="button" class="ptile" data-p={p.id} aria-pressed="false">
-          <span class="pico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={p.icon} /></span>
+          <span class="pico"><Icon name={projectIcon(p.id)} /></span>
           <span class="pl"><b set:html={rich(p.name)} /><small>{p.count} أداة</small></span>
         </button>
       ))}
@@ -160,11 +163,11 @@ const appData = {
       <details class="legend-wrap">
         <summary><Icon name="info" />ما معنى الشارات؟</summary>
         <ul class="legend">
-          <li><span class="kind" data-k="skill"><bdi>Skill</bdi></span> تعليمات تضيفها إلى <bdi>Claude</bdi></li>
-          <li><span class="kind" data-k="mcp"><bdi>MCP</bdi></span> يربط <bdi>Claude</bdi> بأداة خارجية</li>
-          <li><span class="kind" data-k="lib">مكتبة</span> تُستخدم داخل كود الموقع</li>
-          <li><span class="kind" data-k="tool">أداة</span> برنامج تشغّله على جهازك</li>
-          <li><span class="kind" data-k="site">موقع</span> تستخدمه من المتصفح مباشرة</li>
+          <li><span class="kind"><Icon name="sparkles" /><bdi>Skill</bdi></span> تعليمات تضيفها إلى <bdi>Claude</bdi></li>
+          <li><span class="kind"><Icon name="plug" /><bdi>MCP</bdi></span> يربط <bdi>Claude</bdi> بأداة خارجية</li>
+          <li><span class="kind"><Icon name="box" />مكتبة</span> تُستخدم داخل كود الموقع</li>
+          <li><span class="kind"><Icon name="wrench" />أداة</span> برنامج تشغّله على جهازك</li>
+          <li><span class="kind"><Icon name="globe" />موقع</span> تستخدمه من المتصفح مباشرة</li>
           <li><span class="badge-new">جديد</span> أُضيفت خلال آخر 14 يومًا</li>
           <li><span class="badge-pick">ابدأ بها</span> أفضل بداية للمشروع المختار</li>
           <li><span class="tag tag-warn">تنبيه</span> مستودع قديم أو رخصة بشروط أو سكربت من الإنترنت</li>
@@ -197,7 +200,7 @@ const appData = {
     </section>
     {categories.map((c) => (
       <section class="cat" id={"cat-" + c.id} data-cat-section={c.id} hidden>
-        <h2 class="cat-title"><span set:html={rich(c.name)} /><span class="n">{tools.filter((t) => t.cat === c.id).length}</span></h2>
+        <h2 class="cat-title"><span class="ct-ic"><Icon name={categoryIcon(c.id)} /></span><span set:html={rich(c.name)} /><span class="n">{tools.filter((t) => t.cat === c.id).length}</span></h2>
         <div class="grid" data-grid={c.id}></div>
         <button type="button" class="sec-more" data-cat={c.id} hidden>عرض كل الـ <span class="sm-n"></span> في هذا القسم<Icon name="chevron" /></button>
       </section>

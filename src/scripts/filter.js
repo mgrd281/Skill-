@@ -1,8 +1,16 @@
 // الفلترة والبحث والترتيب في الصفحة الرئيسية. الصفحة كاملة تُرسم وقت البناء،
 // وهذا السكربت يخفي ويُظهر ويعيد ترتيب البطاقات فقط.
+import { relative } from "./dates.js";
 const KEY = "toolkit-filter-v3";
 const data = JSON.parse(document.getElementById("app-data").textContent);
 const projectById = (id) => data.projects.find((p) => p.id === id) || null;
+// حرفان لكل أداة، بنفس طريقة initials في src/lib/data.ts
+function initials(name) {
+  const words = name.split(/[\s\-_/.]+/).filter((w) => /[A-Za-z0-9]/.test(w));
+  if (words.length >= 2) return (words[0][0] + words[1][0]).toUpperCase();
+  const w = (words[0] || name).replace(/[^A-Za-z0-9]/g, "");
+  return (w[0] || "?").toUpperCase() + (w[1] || "").toLowerCase();
+}
 
 // القائمة لا تعرض كل الأدوات دفعة واحدة: 12 أولًا ثم "عرض المزيد"، و6 لكل قسم في عرض الأقسام
 const PAGE = 12, SECTION_CAP = 6;
@@ -387,21 +395,30 @@ function refreshBell() {
   bellN.hidden = list.length === 0;
   bellN.textContent = list.length > 9 ? "9+" : String(list.length);
   bell.setAttribute("aria-label", list.length ? "آخر الأدوات المضافة: " + list.length + " جديدة" : "آخر الأدوات المضافة");
-  // القائمة تعرض دائمًا آخر الأدوات المضافة، وما لم تقرأه بعد يحمل علامة "جديد"
+  // القائمة تعرض دائمًا آخر الأدوات المضافة، وما لم تقرأه بعد يحمل نقطة زرقاء
   const unreadSet = new Set(list.map((r) => r.slug));
   const latest = data.recent.filter((r) => !hidden.has(r.slug)).slice(0, 8);
   listEl.textContent = "";
   latest.forEach((r) => {
+    const unread = unreadSet.has(r.slug);
     const li = document.createElement("li");
     const a = document.createElement("a");
     a.href = data.base + r.slug;
+    a.className = "nf-item" + (unread ? " unread" : "");
+    const mono = document.createElement("span"); mono.className = "mono sm"; mono.setAttribute("aria-hidden", "true"); mono.textContent = initials(r.name);
+    const t = document.createElement("span"); t.className = "nf-t";
     const b = document.createElement("b"); b.textContent = r.name;
-    if (unreadSet.has(r.slug)) {
-      const nb = document.createElement("span"); nb.className = "badge-new"; nb.textContent = "جديد";
-      b.append(" ", nb);
+    const sm = document.createElement("small");
+    let when = r.added.slice(0, 10);
+    try { when = relative(r.added); } catch (e) {}
+    sm.textContent = r.cat + " · " + when;
+    t.append(b, sm);
+    a.append(mono, t);
+    if (unread) {
+      const dot = document.createElement("span"); dot.className = "nf-dot";
+      const sr = document.createElement("span"); sr.className = "sr"; sr.textContent = "غير مقروء";
+      a.append(dot, sr);
     }
-    const s = document.createElement("small"); const d = document.createElement("bdi"); d.textContent = r.added.slice(0, 10); s.append(r.cat + " · ", d);
-    a.append(b, s);
     li.append(a);
     listEl.append(li);
   });

@@ -2,7 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import Card from "../../components/Card.astro";
 import Icon from "../../components/Icon.astro";
-import { tools, projectById, categoryById, rich, isLatin, formatDate, host, isAppStore, repoLabel, url, statusBadges, initials } from "../../lib/data";
+import { tools, projectById, categoryById, rich, isLatin, formatDate, host, isAppStore, repoLabel, url, statusBadges, initials, kindIcon, categoryIcon } from "../../lib/data";
 
 export function getStaticPaths() {
   return tools.map((t) => ({ params: { slug: t.slug }, props: { tool: t } }));
@@ -14,7 +14,6 @@ const related = tools.filter((x) => x.cat === t.cat && x.slug !== t.slug)
 const badges = statusBadges(t);
 const warns = badges.filter((b) => b.kind !== "ok");
 const plain = t.desc.length > 155 ? t.desc.slice(0, 152) + "..." : t.desc;
-const KIND: Record<string, string> = { Skill: "skill", MCP: "mcp", "مكتبة": "lib", "أداة": "tool", "موقع": "site", "منصة": "platform", "تطبيق": "app" };
 const date = formatDate(t.added.slice(0, 10));
 const license = t.license === "none" ? "بدون رخصة" : t.license === "other" ? "رخصة خاصة" : t.license;
 ---
@@ -24,12 +23,12 @@ const license = t.license === "none" ? "بدون رخصة" : t.license === "othe
       <nav class="p-crumb" aria-label="مسار الصفحة">
         <a href={url("#list")}>الأدوات</a>
         <Icon name="chevron" />
-        <a href={url("#cat-" + t.cat)} set:html={rich(cat.name)} />
+        <a href={url("#cat-" + t.cat)}><Icon name={categoryIcon(t.cat)} /><span set:html={rich(cat.name)} /></a>
       </nav>
       <span class="mono xl" aria-hidden="true">{initials(t.name)}</span>
       <h1>{t.name}</h1>
       <div class="p-badges">
-        <span class="kind" data-k={KIND[t.kind] ?? "other"}>{isLatin(t.kind) ? <bdi>{t.kind}</bdi> : t.kind}</span>
+        <span class="kind"><Icon name={kindIcon(t.kind)} />{isLatin(t.kind) ? <bdi>{t.kind}</bdi> : t.kind}</span>
         {t.stars && <span class="stars"><Icon name="star" filled />{t.stars}</span>}
         {t.isNew && <span class="badge-new">جديد</span>}
         {badges.map((b) => <span class={b.kind === "ok" ? "tag" : `tag tag-${b.kind}`} title={b.title}>{b.text}{b.text && b.latin ? " " : ""}{b.latin && <bdi>{b.latin}</bdi>}</span>)}
@@ -81,8 +80,8 @@ const license = t.license === "none" ? "بدون رخصة" : t.license === "othe
       <div class="specs">
         <h2 class="sec-title">المواصفات.</h2>
         <dl>
-          <div><dt>النوع</dt><dd>{isLatin(t.kind) ? <bdi>{t.kind}</bdi> : t.kind}</dd></div>
-          <div><dt>القسم</dt><dd set:html={rich(cat.name)} /></div>
+          <div><dt>النوع</dt><dd class="ic"><Icon name={kindIcon(t.kind)} />{isLatin(t.kind) ? <bdi>{t.kind}</bdi> : t.kind}</dd></div>
+          <div><dt>القسم</dt><dd class="ic"><Icon name={categoryIcon(t.cat)} /><span set:html={rich(cat.name)} /></dd></div>
           {t.stars && <div><dt>نجوم <bdi>GitHub</bdi></dt><dd class="num">{t.stars}</dd></div>}
           {license && <div><dt>الرخصة</dt><dd>{isLatin(license) ? <bdi>{license}</bdi> : license}</dd></div>}
           {t.gh && <div><dt>المستودع</dt><dd><a href={t.gh} target="_blank" rel="noopener noreferrer"><bdi>{repoLabel(t.gh)}</bdi></a></dd></div>}

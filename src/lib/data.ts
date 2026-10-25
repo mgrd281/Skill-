@@ -137,8 +137,24 @@ export function initials(name: string): string {
   const w = (words[0] || name).replace(/[^A-Za-z0-9]/g, "");
   return (w[0] || "?").toUpperCase() + (w[1] || "").toLowerCase();
 }
-// درجة لون لكل قسم بخطوة الزاوية الذهبية حتى تتباعد الألوان المتجاورة
-export function categoryHue(id: string): number {
-  const i = Math.max(0, categories.findIndex((c) => c.id === id));
-  return Math.round((221 + i * 137.508) % 360);
-}
+
+// ---- أيقونة لكل نوع وقسم ونوع مشروع (من مجموعة Icon.astro، بلون واحد) ----
+const KIND_ICON: Record<string, string> = {
+  Skill: "sparkles", MCP: "plug", "مكتبة": "box", "أداة": "wrench", "موقع": "globe", "منصة": "layers", "تطبيق": "phone",
+};
+export const kindIcon = (kind: string): any => KIND_ICON[kind] ?? "box";
+
+const CAT_ICON: Record<string, string> = {
+  design: "pen-tool", brandskills: "palette", animation: "wand", motiongfx: "video", shopmkt: "bag",
+  devskills: "code", mobskills: "phone", apple: "devices", vercel: "rocket", general: "sparkles",
+  docs: "file-text", business: "briefcase", data: "database", mcp: "plug", quality: "gauge",
+  ui: "layout", icons: "shapes", finance: "receipt", infra: "server", analytics: "chart-line",
+  booking: "calendar-check", writing: "pen-line", prompts: "message",
+};
+export const categoryIcon = (id: string): any => CAT_ICON[id] ?? "folder";
+
+const PROJECT_ICON: Record<string, string> = {
+  shop: "bag", web: "browser", mobile: "phone", mac: "laptop", landing: "megaphone", dashboard: "chart-bars",
+  brand: "palette", video: "video", anim: "wand", booking: "calendar-check", finance: "receipt", claude: "terminal",
+};
+export const projectIcon = (id: string): any => PROJECT_ICON[id] ?? "compass";

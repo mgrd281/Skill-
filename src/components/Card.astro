@@ -1,15 +1,12 @@
 ---
 import Icon from "./Icon.astro";
-import { type Tool, projectById, rich, isLatin, repoLabel, host, isAppStore, url, statusBadges, formatDate, initials } from "../lib/data";
+import { type Tool, projectById, rich, isLatin, repoLabel, host, isAppStore, url, statusBadges, formatDate, initials, kindIcon } from "../lib/data";
 interface Props { tool: Tool; linkName?: boolean; hideBtn?: boolean; favBtn?: boolean; rank?: number }
 const { tool: t, linkName = true, hideBtn = false, favBtn = true, rank } = Astro.props;
 const search = [
   t.name, t.desc, t.kind, t.cmd || "",
   ...t.use.map((u) => projectById(u)?.name ?? ""),
 ].join(" ").toLowerCase();
-// لون شارة النوع
-const KIND: Record<string, string> = { Skill: "skill", MCP: "mcp", "مكتبة": "lib", "أداة": "tool", "موقع": "site", "منصة": "platform", "تطبيق": "app" };
-const kindKey = KIND[t.kind] ?? "other";
 // أول ثلاثة مشاريع ظاهرة، والباقي خلف زر "+N"
 const SHOW = 3;
 const extra = t.use.slice(SHOW).map((u) => projectById(u)?.name ?? "").join("، ");
@@ -36,7 +33,7 @@ const date = formatDate(t.added.slice(0, 10));
         {linkName ? <a class="name" href={url("tools/" + t.slug)}>{t.name}</a> : <span class="name">{t.name}</span>}
       </div>
       <div class="c-meta">
-        <span class="kind" data-k={kindKey}>{isLatin(t.kind) ? <bdi>{t.kind}</bdi> : t.kind}</span>
+        <span class="kind"><Icon name={kindIcon(t.kind)} />{isLatin(t.kind) ? <bdi>{t.kind}</bdi> : t.kind}</span>
         {t.stars && (
           <span class="stars" title="نجوم GitHub"><Icon name="star" filled />{t.stars}</span>
         )}
