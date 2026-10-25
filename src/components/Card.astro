@@ -1,7 +1,7 @@
 ---
 import { type Tool, projectById, rich, isLatin, repoLabel, host, isAppStore, url, statusBadges, formatDate } from "../lib/data";
-interface Props { tool: Tool; linkName?: boolean; hideBtn?: boolean; favBtn?: boolean }
-const { tool: t, linkName = true, hideBtn = false, favBtn = true } = Astro.props;
+interface Props { tool: Tool; linkName?: boolean; hideBtn?: boolean; favBtn?: boolean; rank?: number }
+const { tool: t, linkName = true, hideBtn = false, favBtn = true, rank } = Astro.props;
 const search = [
   t.name, t.desc, t.kind, t.cmd || "",
   ...t.use.map((u) => projectById(u)?.name ?? ""),
@@ -21,7 +21,7 @@ const search = [
   data-search={search}
 >
   <div class="head">
-    <span class="rank" hidden></span>
+    <span class="rank" hidden={!rank} data-top={rank && rank <= 3 ? String(rank) : ""}>{rank ? "#" + rank : ""}</span>
     {linkName ? <a class="name" href={url("tools/" + t.slug)}>{t.name}</a> : <span class="name">{t.name}</span>}
     {t.stars && (
       <span class="stars" title="نجوم GitHub">

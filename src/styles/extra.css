@@ -122,3 +122,22 @@ a.name:hover, a.name:focus-visible { color: var(--accent); text-decoration: unde
 /* iOS Safari يكبّر الصفحة عند التركيز على حقل أصغر من 16px */
 @media (max-width: 700px) { #sort, #q { font-size: 16px; } }
 .notfound-btn { display: inline-flex; min-height: 44px; }
+
+/* أحدث الأدوات المضافة: صندوق ثابت لا تؤثر عليه الفلاتر */
+.latest { padding-block: 18px 2px; display: grid; gap: 10px; }
+.latest h2 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 1.12rem; }
+.latest-row { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(210px, 1fr); gap: 10px; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: thin; padding-bottom: 4px; }
+.latest-item { scroll-snap-align: start; display: grid; gap: 2px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); text-decoration: none; min-width: 0; }
+.latest-item:hover, .latest-item:focus-visible { border-color: var(--accent); }
+.latest-item b { direction: ltr; text-align: right; unicode-bidi: isolate; font-weight: 600; overflow-wrap: anywhere; }
+.latest-item small { color: var(--muted); font-size: .76rem; }
+.latest-item .meta { display: flex; justify-content: space-between; gap: 8px; font: .74rem var(--font-mono); color: var(--muted); direction: ltr; }
+.latest-item .stars { margin: 0; }
+
+/* شريط الفلاتر المفعّلة */
+.activebar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 12px; padding: 10px 12px; border-radius: 10px; background: var(--accent-soft); font-size: .86rem; }
+.activebar .l { font-weight: 600; }
+.afs { display: contents; }
+.afchip { border: 1px solid var(--accent); background: var(--surface); color: var(--accent); border-radius: 999px; padding: 3px 12px; font: inherit; font-size: .82rem; cursor: pointer; min-height: 32px; }
+.afchip:hover, .afchip:focus-visible { background: var(--accent); color: var(--on-accent); }
+@media (pointer: coarse) { .afchip { min-height: 44px; padding-inline: 14px; } }

@@ -5,6 +5,11 @@ import HeartLink from "../components/HeartLink.astro";
 import { tools, categories, projects, rich, starsUpdatedAt, formatDate, recentTools, categoryById, url } from "../lib/data";
 
 const total = tools.length;
+// الترتيب الافتراضي: الأعلى نجومًا أولًا (والتي بلا نجوم في النهاية)، ويُحسب وقت البناء فيتجدد مع تحديث النجوم الأسبوعي
+const byStars = [...tools].sort((a, b) => b.starsN - a.starsN || a.order - b.order);
+const rankOf = new Map<string, number>();
+byStars.filter((t) => t.starsN >= 0).forEach((t, i) => rankOf.set(t.slug, i + 1));
+const latest = recentTools.slice(0, 6);
 const appData = {
   total,
   projects: projects.map((p) => ({ id: p.id, name: p.name, cats: p.cats ?? [], pickSlugs: p.pickSlugs })),
@@ -96,25 +101,44 @@ const appData = {
       <p class="hiddenbar" id="hiddenbar" hidden><span id="hidden-n"></span> <button type="button" class="linkbtn" id="unhide">استعادة المخفية</button></p>
       <label class="sortbox" for="sort">الترتيب
         <select id="sort">
-          <option value="cat">حسب القسم، والأعلى نجومًا أولًا</option>
           <option value="stars">تصنيف عام: من الأعلى نجومًا إلى الأقل</option>
+          <option value="cat">حسب القسم، والأعلى نجومًا أولًا</option>
           <option value="new">الأحدث إضافةً إلى الدليل</option>
         </select>
       </label>
     </div>
   </div>
 
+  <div class="activebar" id="activebar" hidden>
+    <span class="l">فلاتر مفعّلة:</span>
+    <span class="afs" id="active-chips"></span>
+    <button type="button" class="linkbtn" id="clear-all">إزالة كل الفلاتر</button>
+  </div>
+
+  <section class="latest" aria-labelledby="latest-h">
+    <h2 id="latest-h">أحدث الأدوات المضافة</h2>
+    <div class="latest-row">
+      {latest.map((t) => (
+        <a class="latest-item" href={url("tools/" + t.slug)}>
+          <b>{t.name}</b>
+          <small><Fragment set:html={rich(categoryById(t.cat).name)} /></small>
+          <span class="meta"><bdi>{t.added.slice(0, 10)}</bdi>{t.stars && <span class="stars">★ {t.stars}</span>}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
   <main id="list">
-    <section class="cat" id="by-stars" hidden>
-      <h2><span id="flat-title">مرتبة حسب نجوم <bdi>GitHub</bdi></span><span class="n"></span></h2>
-      <div class="grid" id="stars-grid"></div>
+    <section class="cat" id="by-stars">
+      <h2><span id="flat-title">مرتبة حسب نجوم <bdi>GitHub</bdi></span><span class="n">{total}</span></h2>
+      <div class="grid" id="stars-grid">
+        {byStars.map((t) => <Card tool={t} hideBtn rank={rankOf.get(t.slug)} />)}
+      </div>
     </section>
     {categories.map((c) => (
-      <section class="cat" id={"cat-" + c.id} data-cat-section={c.id}>
+      <section class="cat" id={"cat-" + c.id} data-cat-section={c.id} hidden>
         <h2><Fragment set:html={rich(c.name)} /><span class="n">{tools.filter((t) => t.cat === c.id).length}</span></h2>
-        <div class="grid" data-grid={c.id}>
-          {tools.filter((t) => t.cat === c.id).map((t) => <Card tool={t} hideBtn />)}
-        </div>
+        <div class="grid" data-grid={c.id}></div>
       </section>
     ))}
     <p class="empty" id="empty" hidden>لا توجد نتيجة. جرّب كلمة أخرى أو اختر "الكل".</p>

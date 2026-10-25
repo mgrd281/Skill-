@@ -1,10 +1,10 @@
 // الفلترة والبحث والترتيب في الصفحة الرئيسية. الصفحة كاملة تُرسم وقت البناء،
 // وهذا السكربت يخفي ويُظهر ويعيد ترتيب البطاقات فقط.
-const KEY = "toolkit-filter-v2";
+const KEY = "toolkit-filter-v3";
 const data = JSON.parse(document.getElementById("app-data").textContent);
 const projectById = (id) => data.projects.find((p) => p.id === id) || null;
 
-const state = { project: null, cat: "all", q: "", onlyNew: false, onlySkills: false, sort: "cat" };
+const state = { project: null, cat: "all", q: "", onlyNew: false, onlySkills: false, sort: "stars" };
 try {
   const saved = JSON.parse(localStorage.getItem(KEY) || "{}");
   if (saved && typeof saved === "object") {
@@ -12,7 +12,7 @@ try {
     if (saved.cat === "all" || data.cats.includes(saved.cat)) state.cat = saved.cat;
     state.onlyNew = !!saved.onlyNew;
     state.onlySkills = !!saved.onlySkills;
-    if (saved.sort === "stars" || saved.sort === "new") state.sort = saved.sort;
+    if (["stars", "cat", "new"].includes(saved.sort)) state.sort = saved.sort;
   }
 } catch (e) {}
 // الأدوات التي أخفاها الزائر من عرضه (محليًا في متصفحه فقط)
@@ -160,8 +160,51 @@ function renderList() {
   $("hidden-n").textContent = "مخفية من عرضك: " + hidden.size;
 }
 
+const activeBar = $("activebar"), activeChips = $("active-chips");
+function catLabel(id) {
+  const b = chipsEl.querySelector('.chip[data-id="' + id + '"]');
+  if (!b) return id;
+  const c = b.cloneNode(true);
+  c.querySelectorAll(".n").forEach((n) => n.remove());
+  return c.textContent.trim();
+}
+function syncActive() {
+  const items = [];
+  const p = projectById(state.project);
+  if (p) items.push(["project", "المشروع: " + p.name]);
+  if (state.cat !== "all") items.push(["cat", "القسم: " + catLabel(state.cat)]);
+  if (state.onlyNew) items.push(["onlyNew", "الجديد فقط"]);
+  if (state.onlySkills) items.push(["onlySkills", "المهارات فقط"]);
+  if (state.q) items.push(["q", "بحث: " + state.q]);
+  activeChips.textContent = "";
+  items.forEach(([key, text]) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "afchip"; b.dataset.key = key;
+    b.setAttribute("aria-label", "إزالة الفلتر: " + text);
+    b.append(text + " ×");
+    activeChips.append(b);
+  });
+  activeBar.hidden = items.length === 0;
+}
+function clearFilter(key) {
+  if (key === "project") state.project = null;
+  else if (key === "cat") state.cat = "all";
+  else if (key === "onlyNew") state.onlyNew = false;
+  else if (key === "onlySkills") state.onlySkills = false;
+  else if (key === "q") { state.q = ""; qEl.value = ""; }
+  else if (key === "all") { state.project = null; state.cat = "all"; state.onlyNew = false; state.onlySkills = false; state.q = ""; qEl.value = ""; }
+  save();
+  render();
+}
+activeBar.addEventListener("click", (e) => {
+  const b = e.target.closest(".afchip");
+  if (b) clearFilter(b.dataset.key);
+});
+$("clear-all").addEventListener("click", () => clearFilter("all"));
+
 function render() {
   syncProject();
+  syncActive();
   syncChips();
   renderList();
   sortEl.value = state.sort;
@@ -210,10 +253,11 @@ chipsEl.addEventListener("click", (e) => {
 qEl.addEventListener("input", () => {
   state.q = qEl.value.trim().toLowerCase();
   syncChips();
+  syncActive();
   renderList();
 });
 sortEl.addEventListener("change", () => {
-  state.sort = ["stars", "new"].includes(sortEl.value) ? sortEl.value : "cat";
+  state.sort = ["cat", "new"].includes(sortEl.value) ? sortEl.value : "stars";
   save();
   renderList();
 });
