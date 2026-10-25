@@ -143,7 +143,7 @@ const ar = {
 
   // نافذة الرأي
   fbTitle: "كيف تجد الدليل؟",
-  fbSub: "رأيك يساعدنا على تحسينه، ولن يأخذ أكثر من دقيقة.",
+  fbSub: "رأيك يساعدنا على تحسينه.",
   fbRate: "قيّم الدليل",
   fbStar: (n: number) => `${n} من 5`,
   fbMsg: "اترك رسالة (اختياري)",
@@ -153,6 +153,11 @@ const ar = {
   fbThanks: "شكرًا لك! وصلنا رأيك.",
   fbPrivacy: "نحفظ التقييم والرسالة فقط، بلا اسم أو بريد.",
   fbOpen: "رأيك في الدليل",
+  fbHint: "اختر تقييمك",
+  fbLabels: ["سيئ", "مقبول", "جيد", "رائع", "ممتاز"],
+  fbPhLow: "ما الذي يمكن أن نحسّنه؟",
+  fbPhHigh: "ما الذي أعجبك أكثر؟",
+  fbThanksSub: "سنقرأ رأيك بعناية.",
   share: "مشاركة",
   shareAria: (name: string) => `مشاركة صفحة ${name}`,
 };
@@ -296,7 +301,7 @@ const de: Dict = {
   feedDesc: "Die zuletzt ins Verzeichnis aufgenommenen Tools",
 
   fbTitle: "Wie gefällt dir das Verzeichnis?",
-  fbSub: "Dein Feedback hilft uns, es besser zu machen – dauert keine Minute.",
+  fbSub: "Dein Feedback macht es besser.",
   fbRate: "Verzeichnis bewerten",
   fbStar: (n: number) => `${n} von 5`,
   fbMsg: "Nachricht hinterlassen (optional)",
@@ -306,6 +311,11 @@ const de: Dict = {
   fbThanks: "Danke! Dein Feedback ist angekommen.",
   fbPrivacy: "Wir speichern nur Bewertung und Nachricht – ohne Name oder E-Mail.",
   fbOpen: "Feedback geben",
+  fbHint: "Tippe auf einen Stern",
+  fbLabels: ["Schlecht", "Okay", "Gut", "Sehr gut", "Hervorragend"],
+  fbPhLow: "Was können wir verbessern?",
+  fbPhHigh: "Was gefällt dir am meisten?",
+  fbThanksSub: "Wir lesen jedes Feedback sorgfältig.",
   share: "Teilen",
   shareAria: (name: string) => `Seite von ${name} teilen`,
 };

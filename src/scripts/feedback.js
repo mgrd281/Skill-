@@ -22,6 +22,8 @@ if (box) {
   const form = document.getElementById("fb-form"), stars = document.getElementById("fb-stars");
   const send = document.getElementById("fb-send"), err = document.getElementById("fb-err");
   const done = document.getElementById("fb-done"), msg = document.getElementById("fb-msg");
+  const more = document.getElementById("fb-more"), word = document.getElementById("fb-word");
+  const labels = JSON.parse(box.dataset.labels || "[]");
   let timer = null, opener = null;
 
   function open(manual) {
@@ -41,12 +43,27 @@ if (box) {
     if (opener && document.contains(opener)) opener.focus({ preventScroll: true });
   }
 
-  // تلوين النجوم حتى النجمة المختارة أو التي تحت المؤشر
-  const paint = (n) => { stars.dataset.v = n || ""; };
+  // تلوين النجوم حتى النجمة المختارة أو التي تحت المؤشر، مع كلمة تصف التقييم تحتها
+  const paint = (n) => {
+    stars.dataset.v = n || "";
+    word.textContent = n ? labels[n - 1] : box.dataset.hint;
+    word.classList.toggle("on", !!n);
+  };
   const checked = () => Number(form.rating.value) || 0;
-  stars.addEventListener("pointerover", (e) => { const l = e.target.closest("label"); if (l) paint(l.dataset.n); });
+  stars.addEventListener("pointerover", (e) => { const l = e.target.closest("label"); if (l) paint(Number(l.dataset.n)); });
   stars.addEventListener("pointerleave", () => paint(checked()));
-  stars.addEventListener("change", () => { paint(checked()); send.disabled = !checked(); });
+  stars.addEventListener("change", () => {
+    const n = checked();
+    paint(n);
+    send.disabled = !n;
+    // بعد اختيار التقييم تنفتح الرسالة بسؤال يناسبه: ما الذي يُحسَّن، أو ما الذي أعجبك
+    msg.placeholder = n <= 3 ? box.dataset.phLow : box.dataset.phHigh;
+    if (!more.classList.contains("open")) {
+      more.classList.add("open");
+      msg.tabIndex = 0;
+      send.tabIndex = 0;
+    }
+  });
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -62,6 +79,7 @@ if (box) {
       if (!r.ok) throw new Error(String(r.status));
       form.hidden = true;
       done.hidden = false;
+      box.classList.add("sent");
       write(KEY, { state: "done", at: Date.now() });
       setTimeout(() => close(null), 3200);
     } catch (x) {
@@ -74,7 +92,7 @@ if (box) {
   document.getElementById("fb-x").addEventListener("click", () => close(form.hidden ? null : "dismissed"));
   box.addEventListener("keydown", (e) => { if (e.key === "Escape") close(form.hidden ? null : "dismissed"); });
   document.addEventListener("click", (e) => {
-    if (e.target instanceof Element && e.target.closest("[data-feedback]")) { e.preventDefault(); form.hidden = false; done.hidden = true; open(true); }
+    if (e.target instanceof Element && e.target.closest("[data-feedback]")) { e.preventDefault(); form.hidden = false; done.hidden = true; box.classList.remove("sent"); open(true); }
   });
 
   // عدّاد وقت التصفح الفعلي: يتقدم فقط والصفحة ظاهرة
