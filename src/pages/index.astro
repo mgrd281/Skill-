@@ -23,7 +23,7 @@ const appData = {
 ---
 <Base
   title="دليل أدوات التصميم والتطوير"
-  description={`${total} أداة ومهارة لـ Claude وخوادم MCP ومكتبات للتصميم والتطوير والموشن غرافيك وiPhone وMac، ومواقع للكتابة والبرومبت، مع نجوم GitHub وأوامر التثبيت.`}
+  description={`أدوات تساعدك في عملك كل يوم، كلها في مكان واحد: ${total} أداة ومهارة لـ Claude وخوادم MCP ومكتبات للتصميم والتطوير والموشن غرافيك وiPhone وMac، ومواقع للكتابة والبرومبت، مع نجوم GitHub وأوامر التثبيت.`}
 >
   <div class="notif-wrap" slot="nav-extra">
     <button type="button" id="bell" class="bell" aria-haspopup="dialog" aria-expanded="false" aria-controls="notif" aria-label="الإشعارات: أدوات جديدة">
@@ -47,7 +47,7 @@ const appData = {
   <header class="hero">
     <div class="hero-text">
       <p class="eyebrow" style="--i:0">دليل الأدوات</p>
-      <h1 style="--i:1">كل ما تحتاجه للتصميم والتطوير. <span class="accent">في مكان واحد.</span></h1>
+      <h1 style="--i:1">أدوات تساعدك في&nbsp;عملك، <span class="accent">كل يوم.</span></h1>
       <p class="lead" style="--i:2">
         <Fragment set:html={`مهارات <bdi>Claude</bdi> وخوادم <bdi>MCP</bdi> ومكتبات ومواقع مختارة بعناية، مرتبة بنجوم <bdi>GitHub</bdi>، مع أمر التثبيت لكل أداة.`} />
       </p>
@@ -55,6 +55,11 @@ const appData = {
         <button type="button" class="btn-primary" data-focus-search>ابحث عن أداة</button>
         <a class="link-more" href="#build-h">ماذا تبني؟<Icon name="caret-left" /></a>
       </div>
+      <ul class="promise" style="--i:4">
+        <li><Icon name="magnifying-glass" weight="duotone" />لا تحتاج أن تبحث</li>
+        <li><Icon name="squares-four" weight="duotone" />كل شيء في مكان واحد</li>
+        <li><Icon name="copy" weight="duotone" />أمر التثبيت جاهز</li>
+      </ul>
     </div>
 
     <div class="showcase" aria-hidden="true">
