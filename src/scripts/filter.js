@@ -194,7 +194,7 @@ function clearFilter(key) {
   else if (key === "q") { state.q = ""; qEl.value = ""; }
   else if (key === "all") { state.project = null; state.cat = "all"; state.onlyNew = false; state.onlySkills = false; state.q = ""; qEl.value = ""; }
   save();
-  render();
+  smooth(render);
 }
 activeBar.addEventListener("click", (e) => {
   const b = e.target.closest(".afchip");
@@ -210,10 +210,16 @@ function render() {
   sortEl.value = state.sort;
 }
 
+// انتقال ناعم بين حالات الفلترة إن دعمه المتصفح (ويُتجاوز مع تقليل الحركة)
+function smooth(fn) {
+  if (reduceMotion || !document.startViewTransition) return fn();
+  document.startViewTransition(fn);
+}
+
 function setProject(id) {
   state.project = state.project === id ? null : id;
   save();
-  render();
+  smooth(render);
 }
 
 function goTo(slug) {
@@ -248,7 +254,7 @@ chipsEl.addEventListener("click", (e) => {
   else if (id === "skill") state.onlySkills = !state.onlySkills;
   else state.cat = id;
   save();
-  render();
+  smooth(render);
 });
 qEl.addEventListener("input", () => {
   state.q = qEl.value.trim().toLowerCase();
@@ -259,7 +265,7 @@ qEl.addEventListener("input", () => {
 sortEl.addEventListener("change", () => {
   state.sort = ["cat", "new"].includes(sortEl.value) ? sortEl.value : "stars";
   save();
-  renderList();
+  smooth(renderList);
 });
 $("list").addEventListener("click", (e) => {
   const hb = e.target.closest(".hide");

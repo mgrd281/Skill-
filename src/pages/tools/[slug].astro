@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import Card from "../../components/Card.astro";
 import HeartLink from "../../components/HeartLink.astro";
+import ThemeToggle from "../../components/ThemeToggle.astro";
 import { tools, projectById, categoryById, rich, isLatin, formatDate, host, isAppStore, repoLabel, url, statusBadges } from "../../lib/data";
 
 export function getStaticPaths() {
@@ -18,7 +19,7 @@ const plain = t.desc.length > 155 ? t.desc.slice(0, 152) + "..." : t.desc;
 <Base title={`${t.name} | دليل أدوات التصميم والتطوير`} description={plain} path={`/tools/${t.slug}`}>
   <div class="crumbrow">
     <a class="crumb" href={url()}>← كل الأدوات</a>
-    <HeartLink />
+    <div class="actions"><ThemeToggle /><HeartLink /></div>
   </div>
   <article class="tool">
     <h1>{t.name}</h1>
@@ -49,7 +50,7 @@ const plain = t.desc.length > 155 ? t.desc.slice(0, 152) + "..." : t.desc;
       <>
         <h2>التثبيت</h2>
         <div class="cmd">
-          <pre><code>{t.cmd}</code></pre>
+          <pre tabindex="0" aria-label="أمر التثبيت"><code>{t.cmd}</code></pre>
           <button type="button" class="copy" aria-label="نسخ أمر التثبيت">نسخ</button>
         </div>
       </>

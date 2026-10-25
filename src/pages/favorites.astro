@@ -2,12 +2,13 @@
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
 import HeartLink from "../components/HeartLink.astro";
+import ThemeToggle from "../components/ThemeToggle.astro";
 import { tools, url } from "../lib/data";
 ---
 <Base title="المفضلة | دليل أدوات التصميم والتطوير" description="الأدوات التي حفظتها في المفضلة." path="/favorites" noindex>
   <div class="crumbrow">
     <a class="crumb" href={url()}>← كل الأدوات</a>
-    <HeartLink />
+    <div class="actions"><ThemeToggle /><HeartLink /></div>
   </div>
   <header class="top">
     <h1>المفضلة</h1>

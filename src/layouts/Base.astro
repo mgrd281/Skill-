@@ -12,7 +12,6 @@ import "@fontsource/noto-kufi-arabic/latin-700.css";
 import "@fontsource/ibm-plex-mono/latin-400.css";
 import "@fontsource/ibm-plex-mono/latin-500.css";
 import "../styles/global.css";
-import "../styles/extra.css";
 import { url } from "../lib/data";
 import sansAr400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-400-normal.woff2?url";
 import sansAr600 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-600-normal.woff2?url";
@@ -34,6 +33,7 @@ const icon =
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script is:inline>try{var t=localStorage.getItem("toolkit-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}</script>
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />

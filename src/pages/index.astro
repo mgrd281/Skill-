@@ -2,6 +2,7 @@
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
 import HeartLink from "../components/HeartLink.astro";
+import ThemeToggle from "../components/ThemeToggle.astro";
 import { tools, categories, projects, rich, starsUpdatedAt, formatDate, recentTools, categoryById, url } from "../lib/data";
 
 const total = tools.length;
@@ -10,6 +11,8 @@ const byStars = [...tools].sort((a, b) => b.starsN - a.starsN || a.order - b.ord
 const rankOf = new Map<string, number>();
 byStars.filter((t) => t.starsN >= 0).forEach((t, i) => rankOf.set(t.slug, i + 1));
 const latest = recentTools.slice(0, 6);
+// لون مميز خفيف لكل نوع مشروع (درجة اللون فقط، والإضاءة تأتي من الوضع الفاتح/الداكن)
+const hues = [152, 221, 262, 200, 20, 190, 330, 280, 42, 172, 120, 238];
 const appData = {
   total,
   projects: projects.map((p) => ({ id: p.id, name: p.name, cats: p.cats ?? [], pickSlugs: p.pickSlugs })),
@@ -24,46 +27,89 @@ const appData = {
   description={`${total} أداة ومهارة لـ Claude وخوادم MCP ومكتبات للتصميم والتطوير والموشن غرافيك وiPhone وMac، مع نجوم GitHub وأوامر التثبيت.`}
 >
   <a class="skip" href="#list">تخطَّ إلى القائمة</a>
-  <header class="top">
+  <header class="hero">
     <div class="topbar">
-      <HeartLink />
-      <div class="notif-wrap">
-        <button type="button" id="bell" class="bell" aria-haspopup="dialog" aria-expanded="false" aria-controls="notif" aria-label="الإشعارات: أدوات جديدة">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
-          <span class="dot" id="bell-n" hidden>0</span>
-        </button>
-        <div class="notif" id="notif" role="dialog" aria-label="آخر الأدوات المضافة" hidden>
-          <h3>آخر الأدوات المضافة</h3>
-          <ul id="notif-list"></ul>
-          <p class="notif-empty" id="notif-empty">لا توجد أدوات مضافة بعد.</p>
-          <div class="notif-actions">
-            <button type="button" class="linkbtn" id="notif-read">تم، قرأتها</button>
-            <a class="linkbtn" href={url("feed.xml")}>اشتراك <bdi>RSS</bdi></a>
+      <a class="brand" href={url()} aria-label="الصفحة الرئيسية">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M9 17l5 5 9-12" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>دليل الأدوات</span>
+      </a>
+      <div class="actions">
+        <ThemeToggle />
+        <HeartLink />
+        <div class="notif-wrap">
+          <button type="button" id="bell" class="bell" aria-haspopup="dialog" aria-expanded="false" aria-controls="notif" aria-label="الإشعارات: أدوات جديدة">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+            <span class="dot" id="bell-n" hidden>0</span>
+          </button>
+          <div class="notif" id="notif" role="dialog" aria-label="آخر الأدوات المضافة" hidden>
+            <h3>آخر الأدوات المضافة</h3>
+            <ul id="notif-list"></ul>
+            <p class="notif-empty" id="notif-empty">لا توجد أدوات مضافة بعد.</p>
+            <div class="notif-actions">
+              <button type="button" class="linkbtn" id="notif-read">تم، قرأتها</button>
+              <a class="linkbtn" href={url("feed.xml")}>اشتراك <bdi>RSS</bdi></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <h1>دليل أدوات التصميم والتطوير</h1>
+    <h1>دليل أدوات <span class="accent">التصميم والتطوير</span></h1>
     <p class="lead">
-      <Fragment set:html={`${total} أداة مرتبة حسب القسم. لكل أداة وصف قصير، والمشاريع التي تفيدها، وأمر التثبيت، ورابط <bdi>GitHub</bdi> والموقع الرسمي.`} />
+      <Fragment set:html={`مهارات <bdi>Claude</bdi> وخوادم <bdi>MCP</bdi> ومكتبات مختارة، مرتبة بنجوم <bdi>GitHub</bdi>. لكل أداة وصف قصير وأمر التثبيت والمشاريع التي تفيدها.`} />
     </p>
-    <ul class="legend">
-      <li><span class="tag"><bdi>Skill</bdi></span> تعليمات تضيفها إلى <bdi>Claude</bdi></li>
-      <li><span class="tag"><bdi>MCP</bdi></span> يربط <bdi>Claude</bdi> بأداة خارجية</li>
-      <li><span class="tag">مكتبة</span> تُستخدم داخل كود الموقع</li>
-      <li><span class="badge-new">جديد</span> أُضيفت خلال آخر 14 يومًا</li>
-      <li><span class="badge-pick">ابدأ بها</span> أفضل بداية للمشروع المختار</li>
-      <li><span class="tag tag-warn">تنبيه</span> مستودع قديم أو رخصة بشروط، و<span class="tag tag-bad">خطر</span> مؤرشف أو بلا رخصة</li>
+    <ul class="stats">
+      <li><b>{total}</b> أداة</li>
+      <li><b>{categories.length}</b> قسمًا</li>
+      <li><b>{projects.length}</b> نوع مشروع</li>
+      <li>النجوم محدّثة <b>{formatDate(starsUpdatedAt)}</b></li>
     </ul>
+    <details class="legend-wrap">
+      <summary>ما معنى الشارات؟</summary>
+      <ul class="legend">
+        <li><span class="tag"><bdi>Skill</bdi></span> تعليمات تضيفها إلى <bdi>Claude</bdi></li>
+        <li><span class="tag"><bdi>MCP</bdi></span> يربط <bdi>Claude</bdi> بأداة خارجية</li>
+        <li><span class="tag">مكتبة</span> تُستخدم داخل كود الموقع</li>
+        <li><span class="badge-new">جديد</span> أُضيفت خلال آخر 14 يومًا</li>
+        <li><span class="badge-pick">ابدأ بها</span> أفضل بداية للمشروع المختار</li>
+        <li><span class="tag tag-warn">تنبيه</span> مستودع قديم أو رخصة بشروط أو سكربت من الإنترنت</li>
+        <li><span class="tag tag-bad">خطر</span> مؤرشف أو بلا رخصة</li>
+      </ul>
+    </details>
   </header>
+
+  <div class="bar">
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="ابحث باسم الأداة أو الاستخدام" autocomplete="off" aria-label="بحث" />
+    </div>
+    <div class="chips" id="chips" role="toolbar" aria-label="الأقسام">
+      <button type="button" class="chip" data-id="all">الكل<span class="n">{total}</span></button>
+      {categories.map((c) => (
+        <button type="button" class="chip" data-id={c.id}><span set:html={rich(c.name)} /><span class="n"></span></button>
+      ))}
+      <button type="button" class="chip skillchip" data-id="skill">المهارات فقط<span class="n"></span></button>
+      <button type="button" class="chip newchip" data-id="new">الجديد فقط<span class="n"></span></button>
+    </div>
+    <div class="row">
+      <p class="status" id="status" aria-live="polite"></p>
+      <p class="hiddenbar" id="hiddenbar" hidden><span id="hidden-n"></span> <button type="button" class="linkbtn" id="unhide">استعادة المخفية</button></p>
+      <label class="sortbox" for="sort"><span class="sl">الترتيب</span>
+        <select id="sort">
+          <option value="stars">الأعلى نجومًا</option>
+          <option value="cat">حسب القسم</option>
+          <option value="new">الأحدث إضافةً</option>
+        </select>
+      </label>
+    </div>
+  </div>
 
   <section class="build" aria-labelledby="build-h">
     <h2 id="build-h">ماذا تبني؟</h2>
     <p class="hint">اختر نوع مشروعك لترى الأدوات المفيدة له ونصيحة البداية.</p>
     <div class="projects" id="projects">
-      {projects.map((p) => (
-        <button type="button" class="ptile" data-p={p.id} aria-pressed="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={p.icon} />
+      {projects.map((p, i) => (
+        <button type="button" class="ptile" data-p={p.id} aria-pressed="false" style={`--h:${hues[i % hues.length]}`}>
+          <span class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={p.icon} /></span>
           <span class="pl"><b set:html={rich(p.name)} /><small>{p.count} أداة</small></span>
         </button>
       ))}
@@ -82,32 +128,6 @@ const appData = {
       </div>
     ))}
   </section>
-
-  <div class="bar">
-    <div class="search">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input id="q" type="search" placeholder="ابحث باسم الأداة أو الاستخدام" autocomplete="off" aria-label="بحث" />
-    </div>
-    <div class="chips" id="chips" role="toolbar" aria-label="الأقسام">
-      <button type="button" class="chip" data-id="all">الكل<span class="n">{total}</span></button>
-      {categories.map((c) => (
-        <button type="button" class="chip" data-id={c.id}><Fragment set:html={rich(c.name)} /><span class="n"></span></button>
-      ))}
-      <button type="button" class="chip skillchip" data-id="skill">المهارات فقط<span class="n"></span></button>
-      <button type="button" class="chip newchip" data-id="new">الجديد فقط<span class="n"></span></button>
-    </div>
-    <div class="row">
-      <p class="status" id="status" aria-live="polite"></p>
-      <p class="hiddenbar" id="hiddenbar" hidden><span id="hidden-n"></span> <button type="button" class="linkbtn" id="unhide">استعادة المخفية</button></p>
-      <label class="sortbox" for="sort">الترتيب
-        <select id="sort">
-          <option value="stars">تصنيف عام: من الأعلى نجومًا إلى الأقل</option>
-          <option value="cat">حسب القسم، والأعلى نجومًا أولًا</option>
-          <option value="new">الأحدث إضافةً إلى الدليل</option>
-        </select>
-      </label>
-    </div>
-  </div>
 
   <div class="activebar" id="activebar" hidden>
     <span class="l">فلاتر مفعّلة:</span>
@@ -137,7 +157,7 @@ const appData = {
     </section>
     {categories.map((c) => (
       <section class="cat" id={"cat-" + c.id} data-cat-section={c.id} hidden>
-        <h2><Fragment set:html={rich(c.name)} /><span class="n">{tools.filter((t) => t.cat === c.id).length}</span></h2>
+        <h2><span set:html={rich(c.name)} /><span class="n">{tools.filter((t) => t.cat === c.id).length}</span></h2>
         <div class="grid" data-grid={c.id}></div>
       </section>
     ))}
