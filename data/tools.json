@@ -7,7 +7,7 @@
     "isNew": false,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
     "site": null,
-    "stars": "180.3k",
+    "stars": "183.7k",
     "cmd": "npx skills add anthropics/skills --skill frontend-design",
     "use": [
       "web",
@@ -137,7 +137,7 @@
     "isNew": false,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/canvas-design",
     "site": null,
-    "stars": "180.3k",
+    "stars": "183.7k",
     "cmd": "npx skills add anthropics/skills --skill canvas-design",
     "use": [
       "brand"
@@ -194,7 +194,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/design",
     "site": null,
-    "stars": "30.0k",
+    "stars": "32.9k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install design@knowledge-work-plugins",
     "use": [
       "web",
@@ -384,7 +384,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/marketing",
     "site": null,
-    "stars": "30.0k",
+    "stars": "32.9k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install marketing@knowledge-work-plugins",
     "use": [
       "brand",
@@ -721,7 +721,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing",
     "site": null,
-    "stars": "180.3k",
+    "stars": "183.7k",
     "cmd": "npx skills add anthropics/skills --skill webapp-testing",
     "use": [
       "claude",
@@ -739,7 +739,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
     "site": null,
-    "stars": "180.3k",
+    "stars": "183.7k",
     "cmd": "npx skills add anthropics/skills --skill skill-creator",
     "use": [
       "claude"
@@ -1833,7 +1833,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines",
     "site": null,
-    "stars": "180.3k",
+    "stars": "183.7k",
     "cmd": "/plugin marketplace add anthropics/skills\n/plugin install example-skills@anthropic-agent-skills",
     "use": [
       "brand",
@@ -3176,5 +3176,2019 @@
     "license": "MIT",
     "archived": false,
     "added": "2026-10-25T15:59:36Z"
+  },
+  {
+    "slug": "deepl-write",
+    "cat": "writing",
+    "name": "DeepL Write",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://www.deepl.com/en/write",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "landing",
+      "brand"
+    ],
+    "desc": "يحسّن صياغة النص ويصحح أخطاءه ويقترح بدائل في الأسلوب والنبرة، ويدعم تسع لغات منها الألمانية والإنجليزية (الأمريكية والبريطانية). مفيد لوصف المنتجات ورسائل العملاء بالألمانية. لا يدعم العربية. مجاني بحد أحرف لكل نص، وPro مدفوعة بلا حد، والنسخة المجانية قد تُستخدم نصوصها لتحسين الخدمة.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "deepl-translator",
+    "cat": "writing",
+    "name": "DeepL Translator",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://www.deepl.com/en/translator",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "landing",
+      "brand"
+    ],
+    "desc": "مترجم يدعم أكثر من 30 لغة منها العربية الفصحى والألمانية والإنجليزية، ويترجم النصوص والمستندات (PDF وWord وPowerPoint) مع الحفاظ على التنسيق. يفيد في نقل صفحات المتجر ورسائله بين اللغات الثلاث. مجاني بحدود، وPro مدفوعة بحدود أعلى وقواميس مصطلحات. راجع الترجمة العربية قبل النشر.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "languagetool",
+    "cat": "writing",
+    "name": "LanguageTool",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": "https://github.com/languagetool-org/languagetool",
+    "site": "https://languagetool.org",
+    "stars": "15.2k",
+    "cmd": null,
+    "use": [
+      "shop",
+      "web",
+      "landing",
+      "brand"
+    ],
+    "desc": "مدقق إملائي ونحوي وأسلوبي مفتوح المصدر يدعم الألمانية والإنجليزية والعربية وأكثر من 25 لغة، ويعمل من الموقع وبإضافة المتصفح، ويمكن تشغيل خادمه على جهازك. نسخة مجانية، وPremium مدفوعة تضيف فحوصًا أكثر للإنجليزية والألمانية وغيرهما دون العربية. دقته بالعربية أقل منها بالألمانية والإنجليزية.",
+    "pushed": null,
+    "license": "LGPL-2.1",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "duden-mentor",
+    "cat": "writing",
+    "name": "Duden Mentor",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://www.duden.de/schreibassistent",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "landing",
+      "brand"
+    ],
+    "desc": "مدقق ألماني من دار Duden يصحح الإملاء والنحو والترقيم ويقترح تحسين الأسلوب، ويعمل على الموقع وبإضافات Chrome وFirefox وEdge وWord. الفحص الأساسي مجاني بحد أحرف صغير بدون تسجيل، وPremium المدفوعة تضيف فحص الأسلوب والمرادفات وحدودًا أعلى. للألمانية فقط.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "wortliga",
+    "cat": "writing",
+    "name": "Wortliga",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://wortliga.de/textanalyse/",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "landing",
+      "web"
+    ],
+    "desc": "يحلل نصك الألماني ويقيس سهولة قراءته بمؤشر Flesch ومؤشر خاص بالموقع، ويفحصه وفق مفهوم هامبورغ للوضوح وينبّه إلى الجمل والكلمات الطويلة، فيناسب صفحات المنتجات والنشرات. النسخة الأساسية مجانية بدون تسجيل وفيها حد استخدام، وPremium مدفوعة. للألمانية فقط.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "grammarly",
+    "cat": "writing",
+    "name": "Grammarly",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://www.grammarly.com/",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "landing",
+      "brand"
+    ],
+    "desc": "يصحح الإملاء والقواعد ويقترح تحسين الوضوح والنبرة بأكثر من 20 لغة منها الإنجليزية والألمانية والفرنسية والإسبانية. لا يقدم اقتراحات كتابة بالعربية، ومترجمه فقط يدعمها. نسخة مجانية محدودة، وPro مدفوعة تفتح الاقتراحات المتقدمة وإعادة كتابة الفقرات. الشركة الأم صارت Superhuman والمنتج ما زال Grammarly.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "hemingway-editor",
+    "cat": "writing",
+    "name": "Hemingway Editor",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://hemingwayapp.com/",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "landing",
+      "brand",
+      "shop"
+    ],
+    "desc": "يلوّن الجمل الصعبة والمبنية للمجهول والكلمات المعقدة في نصك الإنجليزي ويعطيه درجة قراءة، فيساعدك على كتابة نصوص تسويقية قصيرة وواضحة. محرر الويب مجاني بدون ذكاء اصطناعي، وPlus مدفوعة بإعادة صياغة الجمل، وتطبيق Mac وPC بدفعة واحدة. للإنجليزية فقط.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "quillbot",
+    "cat": "writing",
+    "name": "QuillBot",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://quillbot.com/",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "landing"
+    ],
+    "desc": "أدوات كتابة تشمل مدقق قواعد ومعيد صياغة ومترجمًا وملخصًا؛ يصحح الإنجليزية والألمانية والفرنسية والإسبانية والبرتغالية، ويعيد الصياغة بأكثر من 25 لغة. مفيد لتنويع جمل الإعلان والوصف. الأدوات الأساسية مجانية، وأنماط الصياغة الكاملة بلا حد كلمات في Premium المدفوعة. دعم العربية غير مؤكد.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "prowritingaid",
+    "cat": "writing",
+    "name": "ProWritingAid",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://prowritingaid.com/",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "brand",
+      "landing"
+    ],
+    "desc": "محرر ومدقق للنصوص الإنجليزية الطويلة، يعطي تقارير عن الأسلوب والتكرار وطول الجمل وسهولة القراءة مع اقتراحات إعادة صياغة، ويناسب المدونات وصفحات العلامة التجارية. للإنجليزية فقط. الخطة المجانية تحرر 500 كلمة في المرة، وPremium مدفوعة بلا حد كلمات.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "sahehly",
+    "cat": "writing",
+    "name": "Sahehly",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://sahehly.com",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "brand",
+      "landing"
+    ],
+    "desc": "مدقق عربي (صححلي) يصحح الإملاء والنحو والترقيم ويشكّل النص تلقائيًا، ويعمل من الموقع وبإضافة المتصفح. يناسب مراجعة نصوص المتجر والإعلانات العربية قبل النشر. خطة مجانية محدودة بدون بطاقة، واشتراكات مدفوعة بحدود أعلى. للفصحى فقط وليس اللهجات.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "qalam",
+    "cat": "writing",
+    "name": "Qalam",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://qalam.ai",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "brand",
+      "landing"
+    ],
+    "desc": "مساعد كتابة عربي (قلم) يدقق الإملاء والنحو والترقيم ويقترح صياغات بديلة ويضيف التشكيل بدرجات مختلفة. له إضافات لـ Microsoft Office والمتصفح وWordPress، وخدمات تدقيق بشري وفحص اقتباس. تجربة مجانية محدودة عند التسجيل ثم اشتراك مدفوع.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "lisan",
+    "cat": "writing",
+    "name": "Lisan",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://www.lisan.ai/",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "brand",
+      "landing"
+    ],
+    "desc": "مدقق عربي (لسان) بالذكاء الاصطناعي يكشف أخطاء الإملاء والنحو والصرف والأسلوب والترقيم، ويقترح إكمالًا تلقائيًا وإعادة صياغة، وله ملحق لـ Google Workspace. الخطة المجانية تشمل الإملاء والتنسيق، وPremium المدفوعة تضيف النحو والتدقيق المتقدم والكتابة بالذكاء الاصطناعي.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "shopify-magic-and-sidekick",
+    "cat": "writing",
+    "name": "Shopify Magic and Sidekick",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": null,
+    "site": "https://www.shopify.com/magic",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "landing"
+    ],
+    "desc": "ميزات الذكاء الاصطناعي المدمجة في لوحة Shopify: Magic يكتب أوصاف المنتجات من بضع كلمات بنبرة تختارها، وSidekick مساعد يجيب عن أسئلة المتجر وينفذ مهامه. مجانية ضمن Shopify وحدود Sidekick تختلف بحسب الخطة. تدعم الألمانية والإنجليزية وست لغات أخرى، والعربية غير مدعومة رسميًا.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "hypotenuse-ai",
+    "cat": "writing",
+    "name": "Hypotenuse AI",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://www.hypotenuse.ai/",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "landing"
+    ],
+    "desc": "منصة كتابة موجهة للتجارة الإلكترونية: تسحب منتجات Shopify وتولّد أوصافًا محسّنة لمحركات البحث بالجملة وتنشرها في المتجر، وتترجم بأكثر من 40 لغة منها العربية. مدفوعة بتجربة مجانية قصيرة، وأسعار باقات المتاجر لا تظهر بوضوح في صفحتها الرسمية.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "jasper",
+    "cat": "writing",
+    "name": "Jasper",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://www.jasper.ai/",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "brand",
+      "landing"
+    ],
+    "desc": "منصة تسويق بالذكاء الاصطناعي فيها وكيل لوصف المنتجات ووكيل ترجمة بـ27 لغة منها العربية والألمانية، لتوليد نصوص الكتالوج وترجمتها دفعة واحدة. اشتراك مدفوع، والعربية متاحة عبر وكيل الترجمة فقط ولا تظهر ضمن لغات إعداد مساحة العمل.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "neuroflash",
+    "cat": "writing",
+    "name": "neuroflash",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://neuroflash.com/de/",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "landing",
+      "brand"
+    ],
+    "desc": "منصة ألمانية للكتابة التسويقية بالذكاء الاصطناعي تولّد أوصاف المنتجات والإعلانات والمقالات بأكثر من 20 لغة أبرزها الألمانية، وتقول إن خوادمها في ألمانيا ومتوافقة مع GDPR. مدفوعة مع تجربة مجانية قصيرة. العربية غير مذكورة ضمن لغاتها.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "pons-dictionary",
+    "cat": "writing",
+    "name": "PONS Dictionary",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://en.pons.com/translate/arabic-german",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "brand",
+      "landing"
+    ],
+    "desc": "قاموس عربي-ألماني مجاني يضم أكثر من 629 ألف كلمة وعبارة، مع النطق الصوتي ولوحات مفاتيح عربية وألمانية وجداول تصريف الأفعال ومترجم نصوص مجاني. يفيد في اختيار الكلمة الصحيحة عند نقل وصف المنتج بين العربية والألمانية. خطة PONS Pur المدفوعة اختيارية.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "dwds",
+    "cat": "writing",
+    "name": "DWDS",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://www.dwds.de/",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "brand",
+      "landing"
+    ],
+    "desc": "معجم ألماني رقمي مجاني من أكاديمية برلين-براندنبورغ للعلوم، يشرح معاني الكلمات واستعمالاتها، وأداة Wortprofil فيه تعرض الكلمات التي ترد معها عادةً، لتتأكد أن عبارتك الألمانية طبيعية. المحتوى بالألمانية، وبعض المتون النصية لها شروط استخدام خاصة.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "openthesaurus",
+    "cat": "writing",
+    "name": "OpenThesaurus",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": "https://github.com/danielnaber/openthesaurus",
+    "site": "https://www.openthesaurus.de",
+    "stars": "169",
+    "cmd": null,
+    "use": [
+      "shop",
+      "brand",
+      "landing"
+    ],
+    "desc": "قاموس مرادفات ألماني مجاني يحرره مجتمع المستخدمين، يقترح كلمات بديلة لتجنب تكرار اللفظ نفسه في أوصاف المنتجات والنصوص. بياناته قابلة للتنزيل برخصة CC BY-SA أو LGPL مع ذكر المصدر، وشيفرة الموقع مفتوحة. للألمانية فقط.",
+    "pushed": null,
+    "license": "AGPL-3.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "claude-prompting-best-practices",
+    "cat": "prompts",
+    "name": "Claude Prompting Best Practices",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "claude"
+    ],
+    "desc": "المرجع الرسمي من Anthropic لكتابة أوامر Claude: الوضوح والأمثلة وعلامات XML والتفكير واستخدام الأدوات وأنظمة الوكلاء، مع صفحة مستقلة لكل نموذج حديث مثل Sonnet 5.5 وOpus 5.5. ضُمّت إليه صفحات الأساليب القديمة. مجاني بالإنجليزية، وله نسخة ألمانية.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "claude-system-prompts",
+    "cat": "prompts",
+    "name": "Claude System Prompts",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://platform.claude.com/docs/en/release-notes/system-prompts/overview",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "claude"
+    ],
+    "desc": "صفحة Anthropic الرسمية التي تنشر نص التعليمات الأساسية (system prompt) التي يعمل بها Claude في موقع claude.ai وتطبيقي iOS وAndroid، لكل نموذج مع تواريخ التحديث. مثال عملي تتعلم منه صياغة تعليماتك الخاصة. لا تنطبق على Claude API. مجانية بالإنجليزية.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "claude-metaprompt",
+    "cat": "prompts",
+    "name": "Claude Metaprompt",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": null,
+    "site": "https://platform.claude.com/cookbook/misc-metaprompt",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "claude"
+    ],
+    "desc": "دفتر ملاحظات (notebook) من Anthropic يحل مشكلة الصفحة البيضاء: تكتب مهمتك فيولّد Claude قالب أمر جاهزًا بمتغيراته لتجربه وتعدّله. يعمل في Colab أو على جهازك بمفتاح API، ومصمم للأوامر ذات الدور الواحد لا المحادثات الطويلة. مجاني، والتشغيل يستهلك رصيد API.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "claude-cookbook",
+    "cat": "prompts",
+    "name": "Claude Cookbook",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/claude-cookbooks",
+    "site": "https://platform.claude.com/cookbook",
+    "stars": "53.8k",
+    "cmd": null,
+    "use": [
+      "claude",
+      "web"
+    ],
+    "desc": "وصفات وأكواد جاهزة للنسخ من Anthropic في أقسام مثل الوكلاء والأدوات والتقييم والمهارات والرؤية، بينها وصفة Prompting for frontend aesthetics لتحسين شكل الواجهات التي يولدها Claude. تحتاج مفتاح Claude API، والأمثلة بلغة Python غالبًا. مجانية بالإنجليزية.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "anthropic-prompt-engineering-tutorial",
+    "cat": "prompts",
+    "name": "Anthropic Prompt Engineering Tutorial",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/prompt-eng-interactive-tutorial",
+    "site": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview",
+    "stars": "38.7k",
+    "cmd": null,
+    "use": [
+      "claude"
+    ],
+    "desc": "دورة تفاعلية من Anthropic في 9 فصول تعلّمك أساسيات كتابة الأوامر: الوضوح وتحديد الدور وفصل البيانات وتنسيق المخرجات والتفكير خطوة بخطوة والأمثلة وتجنب الهلوسة، مع تمارين ومفتاح إجابات، ونسخة أخف في Google Sheets. كُتبت لنماذج Claude 3، فاتبع دليل الممارسات الحديث عند الاختلاف.",
+    "pushed": null,
+    "license": "none",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "claude-academy",
+    "cat": "prompts",
+    "name": "Claude Academy",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://academy.claude.com/courses",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "claude"
+    ],
+    "desc": "منصة Anthropic الرسمية لدورات Claude المجانية: Claude 101 وClaude Code 101 وClaude Platform 101 وClaude Code in Action وMCP ودورات AI Fluency. تتصفح الكتالوج بدون تسجيل، وحساب Claude المجاني يحفظ تقدمك ويمنحك شارات إتمام مجانية. ليست دورة مخصصة لكتابة الأوامر.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "prompts-chat",
+    "cat": "prompts",
+    "name": "prompts.chat",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": "https://github.com/f/prompts.chat",
+    "site": "https://prompts.chat",
+    "stars": "174.5k",
+    "cmd": "/plugin marketplace add f/prompts.chat\n/plugin install prompts.chat@prompts.chat",
+    "use": [
+      "claude",
+      "brand",
+      "shop"
+    ],
+    "desc": "مكتبة مفتوحة المصدر للأوامر الجاهزة (كانت Awesome ChatGPT Prompts) تتصفحها وتنسخ منها وتضيف أوامرك، وتعمل مع Claude وChatGPT وGemini. لها أمر npx وخادم MCP وإضافة Claude Code للبحث فيها من الطرفية. مجانية، وأوامرها من المجتمع فراجع كل أمر قبل استعماله.",
+    "pushed": null,
+    "license": "other",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "prompt-engineering-guide",
+    "cat": "prompts",
+    "name": "Prompt Engineering Guide",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": "https://github.com/dair-ai/Prompt-Engineering-Guide",
+    "site": "https://www.promptingguide.ai",
+    "stars": "79.5k",
+    "cmd": null,
+    "use": [
+      "claude",
+      "brand"
+    ],
+    "desc": "دليل مجاني من فريق DAIR.AI يجمع تقنيات كتابة الأوامر (zero-shot وfew-shot وسلسلة التفكير وRAG) والوكلاء ومراجع بحثية. يتوفر بـ13 لغة، وفي مستودعه ترجمة عربية جزئية. الدليل مجاني، ودورات DAIR.AI Academy المرتبطة به مدفوعة.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "openai-prompt-guidance",
+    "cat": "prompts",
+    "name": "OpenAI Prompt Guidance",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://developers.openai.com/api/docs/guides/prompt-guidance",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "web"
+    ],
+    "desc": "إرشادات OpenAI الرسمية لكتابة أوامر نماذج GPT-5: ضبط جهد الاستدلال، وتعليمات المثابرة للوكلاء، وترتيب القواعد الحرجة أولًا للنماذج الصغيرة، مع أدلة منفصلة لكل إصدار في OpenAI Cookbook. مجانية بالإنجليزية، وتفيدك إن استعملت OpenAI إلى جانب Claude.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "openai-academy",
+    "cat": "prompts",
+    "name": "OpenAI Academy",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://academy.openai.com",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "brand"
+    ],
+    "desc": "منصة OpenAI التعليمية العامة، وفيها حزم أوامر جاهزة منها حزمة للأعمال الصغيرة تغطي الحملات التسويقية ورسائل العملاء والعمليات، وقوالب GPT لمتاجر صغيرة. التصفح بدون تسجيل، وبعض الدورات تحتاج حساب ChatGPT. الأوامر مكتوبة لـ ChatGPT ويمكن تكييفها مع Claude.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "prompthero",
+    "cat": "prompts",
+    "name": "PromptHero",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://prompthero.com",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "brand",
+      "video"
+    ],
+    "desc": "مكتبة بحث في أوامر صور وفيديو الذكاء الاصطناعي: تفتح الصورة فترى الأمر والنموذج الذي أنتجها (Midjourney وStable Diffusion وFLUX وSora وVeo وKling) وتنسخه وتعدّله. صفحات البحث العامة متاحة بدون اشتراك، وخطط Starter وPRO المدفوعة للتوليد بالرصيد. فيه أقسام محتوى صريح فتجنبها.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "midjourney-docs",
+    "cat": "prompts",
+    "name": "Midjourney Docs",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://docs.midjourney.com/hc/en-us/articles/32023408776205-Prompt-Basics",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "brand",
+      "shop"
+    ],
+    "desc": "وثائق Midjourney الرسمية المجانية لكتابة أوامر الصور: أساسيات الوصف، والأوامر المتعددة والأوزان، والصور المرجعية، والتباديل، وقائمة المعاملات. تفيد في صور المنتجات والهوية البصرية. التوليد نفسه يحتاج اشتراكًا مدفوعًا.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "nano-banana-prompting-guide",
+    "cat": "prompts",
+    "name": "Nano Banana Prompting Guide",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-nano-banana",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "brand",
+      "shop"
+    ],
+    "desc": "دليل Google Cloud (مارس 2026) لكتابة أوامر صور Nano Banana 2 وPro: صيغة الموضوع والفعل والمكان والتكوين والأسلوب، وتحرير الصور، والصور المرجعية، وكتابة نص داخل الصورة بعدة لغات، ومثاله يترجم ملصق منتج إلى الكورية والعربية. المقال مجاني، وتكلفة النماذج غير مذكورة فيه.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "veo-3-1-prompting-guide",
+    "cat": "prompts",
+    "name": "Veo 3.1 Prompting Guide",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-veo-3-1",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "video",
+      "brand"
+    ],
+    "desc": "دليل Google Cloud (أكتوبر 2025) لكتابة أوامر فيديو Veo 3.1: صيغة السينماتوغرافيا والموضوع والحركة والسياق والأسلوب، ومصطلحات حركة الكاميرا، وأوامر الحوار والمؤثرات الصوتية، وتحريك صورة، والانتقال بين أول إطار وآخر إطار. مقال مجاني يفيد في فيديوهات المنتجات والإعلانات.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "runway-prompting-guides",
+    "cat": "prompts",
+    "name": "Runway Prompting Guides",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://help.runwayml.com/hc/en-us/sections/23989550580627-Prompting-Guides-Examples",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "video",
+      "brand"
+    ],
+    "desc": "أدلة Runway الرسمية لكتابة أوامر الفيديو: ابدأ بحركة بسيطة ثم أضف حركة الكاميرا والمشهد والأسلوب، مع مرجع لمصطلحات الكاميرا (pan وdolly وorbit) وأدلة للنص إلى فيديو والصورة إلى فيديو. الأدلة مجانية، والتوليد برصيد مدفوع، والخطة المجانية 125 رصيدًا لمرة واحدة.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "promptbase",
+    "cat": "prompts",
+    "name": "PromptBase",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": null,
+    "site": "https://promptbase.com",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "brand",
+      "claude"
+    ],
+    "desc": "سوق لشراء وبيع الأوامر الجاهزة لـ Midjourney وChatGPT وFLUX وغيرها؛ يأتي كل أمر بأمثلة ودليل من صانعه وترخيص استخدام تجاري. أغلب الأوامر مدفوعة وجودتها تختلف من بائع لآخر، والمكتبات المجانية تغطي كثيرًا منها.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "promptfoo",
+    "cat": "prompts",
+    "name": "promptfoo",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/promptfoo/promptfoo",
+    "site": "https://www.promptfoo.dev",
+    "stars": "26.4k",
+    "cmd": "npm install -g promptfoo\npromptfoo init --example getting-started",
+    "use": [
+      "claude",
+      "web"
+    ],
+    "desc": "أداة سطر أوامر مفتوحة المصدر تختبر أوامرك على عدة نماذج (Claude وGPT وGemini وغيرها) وتقارن نتائجها جنبًا إلى جنب، وتفحص التطبيقات بحثًا عن ثغرات، وتعمل في CI. تفيد من يضيف ميزة ذكاء اصطناعي إلى متجره أو تطبيقه. تحتاج مفاتيح API، والشركة صارت جزءًا من OpenAI مع بقاء الشيفرة MIT.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "langfuse",
+    "cat": "prompts",
+    "name": "Langfuse",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/langfuse/langfuse",
+    "site": "https://langfuse.com",
+    "stars": "36.5k",
+    "cmd": "git clone --depth=1 https://github.com/langfuse/langfuse.git\ncd langfuse\ndocker compose up",
+    "use": [
+      "web",
+      "claude"
+    ],
+    "desc": "منصة مفتوحة المصدر لإدارة الأوامر وتتبع استدعاءات النماذج وتقييمها: تحفظ إصدارات الأوامر وتجربها في Playground وتقارن نتائجها. تستضيفها بنفسك بـ Docker Compose أو تستعمل السحابة بخطة مجانية. موجهة للمطورين، وأصبحت جزءًا من ClickHouse منذ يناير 2026.",
+    "pushed": null,
+    "license": "other",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "obsidian-skills",
+    "cat": "docs",
+    "name": "Obsidian Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/kepano/obsidian-skills",
+    "site": null,
+    "stars": "50.1k",
+    "cmd": "/plugin marketplace add kepano/obsidian-skills\n/plugin install obsidian@obsidian-skills",
+    "use": [
+      "claude"
+    ],
+    "desc": "ست مهارات من Steph Ango (kepano) تعلّم Claude صيغ Obsidian: ملاحظات Markdown بروابط wikilinks وCallouts، وملفات Bases وCanvas، وأوامر Obsidian CLI، واستخراج نص نظيف من صفحات الويب. مفيدة لمن يدير قاعدة معرفة أو ملاحظات عمل داخل مخزن Obsidian.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "notion-plugin",
+    "cat": "docs",
+    "name": "Notion Plugin",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/makenotion/claude-code-notion-plugin",
+    "site": "https://developers.notion.com/docs/mcp",
+    "stars": "499",
+    "cmd": "/plugin marketplace add makenotion/claude-code-notion-plugin\n/plugin install notion-workspace-plugin@notion-plugin-marketplace",
+    "use": [
+      "claude"
+    ],
+    "desc": "إضافة Notion الرسمية لـ Claude Code: تضم أربع مهارات (حفظ المعرفة، وتحضير الاجتماعات، وتوثيق البحث، وتحويل المواصفات إلى مهام) وتصل Claude بخادم Notion MCP مع أوامر مثل /Notion:search و/Notion:create-page. تتطلب حساب Notion وتسجيل دخول OAuth.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "markitdown",
+    "cat": "docs",
+    "name": "MarkItDown",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/microsoft/markitdown",
+    "site": "https://pypi.org/project/markitdown/",
+    "stars": "192.1k",
+    "cmd": "pip install 'markitdown[all]'",
+    "use": [
+      "claude",
+      "shop"
+    ],
+    "desc": "أداة مفتوحة من Microsoft تحوّل ملفات PDF وWord وExcel وPowerPoint والصور والصوت وصفحات HTML إلى Markdown منظم يسهل على Claude قراءته. مفيدة لتجهيز كتالوجات الموردين وفواتير PDF وجداول المنتجات قبل تحليلها. تتطلب Python 3.10 أو أحدث.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "visual-explainer",
+    "cat": "docs",
+    "name": "Visual Explainer",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/nicobailon/visual-explainer",
+    "site": null,
+    "stars": "10.6k",
+    "cmd": "/plugin marketplace add nicobailon/visual-explainer\n/plugin install visual-explainer@visual-explainer-marketplace",
+    "use": [
+      "claude",
+      "web",
+      "dashboard"
+    ],
+    "desc": "مهارة تجعل Claude يعرض الشرح كصفحة HTML منسّقة بدل نص الطرفية: مخططات انسيابية وجداول مقارنة ومراجعة للتعديلات والخطط وعروض شرائح (ويمكن تصديرها إلى PPTX بدقة محدودة). مفيدة لتوضيح خطوات الطلبات أو بنية الموقع لفريقك. يكفي متصفح لعرض الناتج.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "draw-io-mcp",
+    "cat": "docs",
+    "name": "draw.io MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/jgraph/drawio-mcp",
+    "site": "https://www.drawio.com/mcp/",
+    "stars": "5.7k",
+    "cmd": "/plugin marketplace add jgraph/drawio-mcp\n/plugin install drawio@drawio",
+    "use": [
+      "claude",
+      "web"
+    ],
+    "desc": "الإضافة الرسمية من draw.io: يولّد Claude مخططات قابلة للتحرير بصيغة .drawio (انسيابية، وهياكل، وخرائط موقع) من وصف نصي أو Mermaid، ويصدّرها إلى PNG وSVG وPDF. النسخة المستضافة تعرض المخطط داخل المحادثة لكنها ترسل محتواه إلى خادم mcp.draw.io، والتصدير يحتاج draw.io Desktop.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "arabic-writing-skill",
+    "cat": "docs",
+    "name": "Arabic Writing Skill",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/ahmeddabak/claude-arabic-writing",
+    "site": null,
+    "stars": "19",
+    "cmd": "git clone https://github.com/ahmeddabak/claude-arabic-writing.git\ncp -r claude-arabic-writing/skills/arabic-writing ~/.claude/skills/arabic-writing",
+    "use": [
+      "claude",
+      "shop",
+      "landing",
+      "web"
+    ],
+    "desc": "مهارة تجعل Claude يكتب ويترجم ويدقق عربية سليمة وطبيعية: الفصحى وأربع لهجات (المصرية والشامية والخليجية والمغاربية)، مع تفادي علامات الترجمة الآلية مثل «قام بـ» و«من قبل» وأخطاء الهمزة والتاء المربوطة. مفيدة لوصف المنتجات ونصوص المتجر. يُنصح بمراجعة ناطق أصلي قبل النشر.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "arabic-ready",
+    "cat": "docs",
+    "name": "Arabic Ready",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/jubyuhanna-create/arabic-ready",
+    "site": null,
+    "stars": "12",
+    "cmd": "/plugin marketplace add jubyuhanna-create/arabic-ready\n/plugin install arabic-ready@arabic-ready",
+    "use": [
+      "claude",
+      "web",
+      "mobile",
+      "landing"
+    ],
+    "desc": "مهارة تساعد Claude على إخراج عربية صحيحة من أول مرة: اتصال الحروف، واتجاه الصفحة من اليمين إلى اليسار، وترتيب العربية مع الأرقام والإنجليزية في صفحات الويب وتطبيقات الجوال وملفات PDF وWord وPowerPoint والرسوم. تتضمن أداة فحص لأخطاء RTL. المشروع حديث (أكتوبر 2026) وصغير.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "career-ops",
+    "cat": "docs",
+    "name": "Career Ops",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/career-ops-hq/career-ops",
+    "site": "https://career-ops.org",
+    "stars": "77.2k",
+    "cmd": "npx @santifer/career-ops init\ncd career-ops\nclaude",
+    "use": [
+      "claude"
+    ],
+    "desc": "وكيل مفتوح المصدر للبحث عن وظيفة يعمل داخل Claude Code: يقيّم إعلان الوظيفة مقابل سيرتك الذاتية، ويعدّ سيرة PDF متوافقة مع أنظمة ATS ورسالة تغطية، ويتتبع طلباتك، وأنت من يضغط إرسال. سيرتك تُرسل إلى مزوّد الذكاء الاصطناعي الذي تختاره، ووجود مفتاح ANTHROPIC_API_KEY في البيئة يجعل الاستهلاك يُحتسب بالرموز.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "duckdb-skills",
+    "cat": "data",
+    "name": "DuckDB Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/duckdb/duckdb-skills",
+    "site": "https://duckdb.org",
+    "stars": "610",
+    "cmd": "/plugin marketplace add duckdb/duckdb-skills\n/plugin install duckdb-skills@duckdb-skills",
+    "use": [
+      "dashboard",
+      "claude"
+    ],
+    "desc": "مهارات DuckDB الرسمية لـ Claude Code: قراءة ملفات CSV وJSON وParquet وExcel محليًا أو من التخزين السحابي، والاستعلام عنها بـ SQL أو بسؤال بلغة طبيعية، والبحث في وثائق DuckDB. مفيدة لتحليل ملفات كبيرة من تصدير المتجر دون إعداد قاعدة بيانات. تتطلب DuckDB CLI ولم تُختبر كاملًا على Windows.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "last30days",
+    "cat": "data",
+    "name": "last30days",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/mvanhorn/last30days-skill",
+    "site": null,
+    "stars": "65.4k",
+    "cmd": "/plugin marketplace add mvanhorn/last30days-skill\n/plugin install last30days",
+    "use": [
+      "claude",
+      "shop",
+      "brand"
+    ],
+    "desc": "مهارة بحث تجمع ما قاله الناس عن أي موضوع خلال آخر 30 يومًا من Reddit وHacker News وPolymarket وGitHub وغيرها، وتُرتّبه بحسب التفاعل ثم تُلخّصه في تقرير واحد. مفيدة لمعرفة آراء العملاء والمنافسين قبل إطلاق منتج. مصادر مثل X وTikTok تحتاج مفاتيح اختيارية بعضها مدفوع.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "scientific-agent-skills",
+    "cat": "data",
+    "name": "Scientific Agent Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "site": "https://k-dense.ai",
+    "stars": "54.6k",
+    "cmd": "npx skills add K-Dense-AI/scientific-agent-skills",
+    "use": [
+      "claude"
+    ],
+    "desc": "177 مهارة علمية من K-Dense (كانت تُعرف باسم claude-scientific-skills) تغطي الأحياء والكيمياء والطب والفيزياء وتحليل البيانات وكتابة الأبحاث والمراجعة الأدبية، مع مهارة للبحث في نحو 80 قاعدة بيانات علمية. مفيدة للباحثين والطلاب. كثير منها يحتاج مفاتيح API وحزم Python منفصلة.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "planning-with-files",
+    "cat": "general",
+    "name": "Planning with Files",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/OthmanAdi/planning-with-files",
+    "site": null,
+    "stars": "27.6k",
+    "cmd": "/plugin marketplace add OthmanAdi/planning-with-files\n/plugin install planning-with-files@planning-with-files",
+    "use": [
+      "claude",
+      "web"
+    ],
+    "desc": "مهارة تحفظ خطة المهمة على القرص في ثلاثة ملفات Markdown (الخطة والنتائج والتقدم) فيستأنف Claude عمله بعد /clear أو ضغط السياق أو انقطاع الجلسة. مفيدة للمهام الطويلة مثل بناء متجر أو موقع كامل. تتوفر نسخ مترجمة للعربية والألمانية، وتضيف hooks تعمل في كل دورة.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "claude-mem",
+    "cat": "general",
+    "name": "Claude-Mem",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/thedotmack/claude-mem",
+    "site": "https://docs.claude-mem.ai/",
+    "stars": "103.0k",
+    "cmd": "/plugin marketplace add thedotmack/claude-mem\n/plugin install claude-mem",
+    "use": [
+      "claude"
+    ],
+    "desc": "إضافة ذاكرة دائمة لـ Claude Code: تسجّل ما يفعله Claude في كل جلسة وتضغطه بالذكاء الاصطناعي ثم تعيد المعلومات المناسبة في الجلسات التالية، مع بحث في السجل عبر أدوات MCP، فلا تعيد شرح مشروعك كل مرة. تعمل بخدمة محلية (Bun وSQLite)، وقد يعرض المثبّت اشتراكًا سحابيًا مدفوعًا بعد تجربة مجانية.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "context-engineering-skills",
+    "cat": "general",
+    "name": "Context Engineering Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "site": null,
+    "stars": "18.2k",
+    "cmd": "/plugin marketplace add muratcankoylan/Agent-Skills-for-Context-Engineering\n/plugin install context-engineering@context-engineering-marketplace",
+    "use": [
+      "claude"
+    ],
+    "desc": "18 مهارة تشرح هندسة السياق لوكلاء الذكاء الاصطناعي: أساسيات السياق وتدهوره وضغطه، وأنظمة الذاكرة، وأنماط تعدد الوكلاء، وتصميم الأدوات والتقييم. موجّهة لمن يبني وكلاء أو يدير جلسات طويلة، وليست للاستخدام اليومي العادي. المحتوى بالإنجليزية.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "translate-book",
+    "cat": "docs",
+    "name": "Translate Book",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/deusyu/translate-book",
+    "site": null,
+    "stars": "2.1k",
+    "cmd": "npx skills add deusyu/translate-book -a claude-code -g",
+    "use": [
+      "claude",
+      "shop"
+    ],
+    "desc": "مهارة تترجم كتبًا ومستندات كاملة (PDF وDOCX وEPUB) بوكلاء فرعيين يعملون بالتوازي، ثم تبني الناتج بصيغ HTML وDOCX وEPUB وPDF. من اللغات المعلنة الألمانية والإنجليزية والفرنسية والإسبانية، والعربية غير مذكورة صراحة. تحتاج Calibre وPandoc وPython، وتستهلك رموزًا كثيرة.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "stripe-agent-skills",
+    "cat": "devskills",
+    "name": "Stripe Agent Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/stripe/ai",
+    "site": "https://docs.stripe.com/skills",
+    "stars": "2.0k",
+    "cmd": "claude plugin install stripe@claude-plugins-official",
+    "use": [
+      "shop",
+      "web",
+      "mobile"
+    ],
+    "desc": "مهارات Stripe الرسمية تعلّم Claude بناء الدفع بالطريقة الصحيحة: اختيار Checkout أو PaymentIntents، والاشتراكات والضرائب، وتأمين Webhooks والمفاتيح، وترقية إصدار API. تفيد عند إضافة الدفع لتطبيق أو موقع خارج Shopify. تحتاج حساب Stripe للتجربة.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "paypal-ai-toolkit",
+    "cat": "devskills",
+    "name": "PayPal AI Toolkit",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/paypal/AI-Toolkit",
+    "site": "https://claude.com/plugins/paypal",
+    "stars": "35",
+    "cmd": "/plugin install paypal@claude-plugins-official",
+    "use": [
+      "shop",
+      "web",
+      "mobile"
+    ],
+    "desc": "إضافة PayPal الرسمية لـ Claude Code: مهارة تلقّن Claude أفضل ممارسات تكامل الدفع (Checkout وPay Later والاشتراكات وWebhooks)، وأوامر لفحص الأخطاء وحسابات الاختبار، وخادم MCP تجريبي للفواتير والطلبات. تحتاج حساب مطوّر PayPal ورمز وصول للبيئة التجريبية.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "cloudflare-skills",
+    "cat": "infra",
+    "name": "Cloudflare Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/cloudflare/skills",
+    "site": null,
+    "stars": "3.2k",
+    "cmd": "/plugin marketplace add cloudflare/skills\n/plugin install cloudflare@cloudflare",
+    "use": [
+      "web",
+      "shop",
+      "dashboard"
+    ],
+    "desc": "مهارات Cloudflare الرسمية لنشر الواجهات والخدمات على Workers عبر Wrangler، وتدقيق Core Web Vitals، وإضافة حماية Turnstile من الروبوتات، وإعداد إرسال البريد. تُثبَّت كإضافة تضم خادم Cloudflare MCP، وتحتاج حساب Cloudflare.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "aws-agent-toolkit",
+    "cat": "infra",
+    "name": "AWS Agent Toolkit",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/aws/agent-toolkit-for-aws",
+    "site": "https://docs.aws.amazon.com/agent-toolkit/latest/userguide/",
+    "stars": "3.3k",
+    "cmd": "/plugin install aws-core@claude-plugins-official",
+    "use": [
+      "web",
+      "dashboard"
+    ],
+    "desc": "الحزمة الرسمية من AWS لوكلاء الترميز: مهارات لاختيار الخدمات وكتابة CDK وCloudFormation والنشر والأمان وتحسين التكلفة، مع خادم AWS MCP. تحتاج حساب AWS وبيانات اعتماد محلية وأداة uv، وهي موجهة لمن يستضيف تطبيقاته على AWS.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "expo-skills",
+    "cat": "mobskills",
+    "name": "Expo Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/expo/skills",
+    "site": "https://docs.expo.dev/skills/",
+    "stars": "3.0k",
+    "cmd": "claude plugin install expo@claude-plugins-official",
+    "use": [
+      "mobile"
+    ],
+    "desc": "مهارات Expo الرسمية لتطبيقات React Native: التنقل عبر Expo Router، والرسوم المتحركة، وجلب البيانات، وترقية إصدار SDK، وبناء التطبيق ونشره على المتجرين. مهارات خدمات EAS تخص منتجات مدفوعة، والإضافة تضم خادم Expo MCP.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "android-skills",
+    "cat": "mobskills",
+    "name": "Android Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/android/skills",
+    "site": "https://developer.android.com/tools/agents/android-skills",
+    "stars": "9.7k",
+    "cmd": "/plugin marketplace add android/skills\n/plugin install android-skills@android-skills",
+    "use": [
+      "mobile"
+    ],
+    "desc": "مهارات Google الرسمية لتطوير Android: أكثر من 30 مهارة تغطي Jetpack Compose وNavigation 3 وتحسين الأداء وR8 وفحص ANR وتحديث Play Billing وأمان الأذونات. تُثبَّت عبر Android CLI أو كإضافة لـ Claude Code.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "callstack-agent-skills",
+    "cat": "mobskills",
+    "name": "Callstack Agent Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/callstackincubator/agent-skills",
+    "site": "https://www.callstack.com/",
+    "stars": "1.7k",
+    "cmd": "npx skills@latest add callstackincubator/agent-skills --skill '*'",
+    "use": [
+      "mobile"
+    ],
+    "desc": "مهارات من شركة Callstack المتخصصة في React Native: تحسين الأداء والذاكرة وحجم الحزمة، وReact Navigation، وترقية إصدار React Native، وبناء ملفات تجريبية لـ iOS وAndroid في GitHub Actions، وتقييم الانتقال التدريجي من تطبيق أصلي.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "firebase-agent-skills",
+    "cat": "mobskills",
+    "name": "Firebase Agent Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/firebase/agent-skills",
+    "site": "https://firebase.google.com/docs/ai-assistance/agent-skills",
+    "stars": "487",
+    "cmd": "claude plugin marketplace add firebase/skills\nclaude plugin install firebase@firebase",
+    "use": [
+      "mobile",
+      "web"
+    ],
+    "desc": "مهارات Firebase الرسمية: إعداد Firebase CLI، وتسجيل الدخول، وقواعد بيانات Firestore، والاستضافة، وCrashlytics لتتبع انهيار التطبيق، وRemote Config، ومراجعة قواعد الأمان. مناسبة لتطبيقات الجوال والويب، وتحتاج مشروع Firebase في حساب Google.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "revenuecat-ai-toolkit",
+    "cat": "mobskills",
+    "name": "RevenueCat AI Toolkit",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/RevenueCat/ai-toolkit",
+    "site": "https://www.revenuecat.com/docs",
+    "stars": "75",
+    "cmd": "claude plugins marketplace add RevenueCat/ai-toolkit\nclaude plugins install revenuecat",
+    "use": [
+      "mobile"
+    ],
+    "desc": "إضافة RevenueCat الرسمية لإدارة الاشتراكات والشراء داخل التطبيق: ينشئ Claude المنتجات والعروض والصلاحيات، ويركّب Purchases SDK في تطبيقات iOS وAndroid وFlutter وReact Native، ويقرأ بيانات الإيرادات. تحتاج حساب RevenueCat وتسجيل دخول OAuth.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "sentry-for-ai",
+    "cat": "infra",
+    "name": "Sentry for AI",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/getsentry/sentry-for-ai",
+    "site": "https://skills.sentry.dev",
+    "stars": "272",
+    "cmd": "claude plugin install sentry@claude-plugins-official",
+    "use": [
+      "web",
+      "mobile",
+      "shop"
+    ],
+    "desc": "مهارات Sentry الرسمية لمراقبة الأخطاء: تضيف Sentry إلى مشروعك بعد اكتشاف المنصة، وتجلب أخطاء الإنتاج مع سياقها وتقترح الإصلاح، وتنشئ التنبيهات. تُثبَّت كإضافة تضم خادم Sentry MCP، وتحتاج حساب Sentry.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "neon-agent-skills",
+    "cat": "devskills",
+    "name": "Neon Agent Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/neondatabase/agent-skills",
+    "site": "https://neon.com",
+    "stars": "105",
+    "cmd": "npx skills add neondatabase/agent-skills",
+    "use": [
+      "web",
+      "dashboard"
+    ],
+    "desc": "مهارات Neon الرسمية لقاعدة Postgres السحابية: أفضل ممارسات الاتصال والاستعلام، وفروع قاعدة البيانات للاختبار الآمن، وتقليل تكاليف نقل البيانات، وNeon Auth وتخزين الملفات. تفيد مع Drizzle وNext.js، وأغلبها يحتاج حساب Neon.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "clerk-skills",
+    "cat": "devskills",
+    "name": "Clerk Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/clerk/skills",
+    "site": "https://clerk.com/docs",
+    "stars": "89",
+    "cmd": "npx skills add clerk/skills",
+    "use": [
+      "web",
+      "mobile",
+      "dashboard"
+    ],
+    "desc": "مهارات Clerk الرسمية لتسجيل الدخول وإدارة المستخدمين: إضافة Clerk إلى Next.js وReact وVue وNuxt وExpo وiOS وAndroid، وبناء نماذج دخول مخصصة، والمؤسسات والاشتراكات وWebhooks، واختبارها بـ Playwright. تحتاج حساب Clerk.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "resend-skills",
+    "cat": "infra",
+    "name": "Resend Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/resend/resend-skills",
+    "site": "https://resend.com",
+    "stars": "206",
+    "cmd": "npx skills add resend/resend-skills",
+    "use": [
+      "web",
+      "shop",
+      "booking"
+    ],
+    "desc": "مهارات Resend الرسمية لإرسال واستقبال البريد: استخدام Resend API وCLI، وبناء قوالب بمكونات React Email، وإرشادات تحسين وصول الرسائل لصندوق الوارد. تفيد لرسائل تأكيد الطلب أو الحجز من تطبيقك. تحتاج حساب Resend ومفتاح API.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "semgrep-skills",
+    "cat": "devskills",
+    "name": "Semgrep Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/semgrep/skills",
+    "site": "https://semgrep.dev",
+    "stars": "332",
+    "cmd": "npx skills add semgrep/skills",
+    "use": [
+      "web",
+      "mobile",
+      "dashboard"
+    ],
+    "desc": "مهارات من Semgrep تجعل Claude يكتب كودًا آمنًا: إرشادات OWASP Top 10 لأكثر من 15 لغة وللبنية التحتية، وأمان تطبيقات النماذج اللغوية، وتشغيل فحص Semgrep وكتابة قواعد مخصصة. نسخة تجريبية بترخيص Semgrep Rules الذي ليس مفتوح المصدر.",
+    "pushed": null,
+    "license": "other",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "playwright-cli",
+    "cat": "devskills",
+    "name": "Playwright CLI",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/microsoft/playwright-cli",
+    "site": null,
+    "stars": "14.6k",
+    "cmd": "npm install -g @playwright/cli@latest\nplaywright-cli install --skills",
+    "use": [
+      "web",
+      "shop",
+      "claude"
+    ],
+    "desc": "أداة Microsoft الرسمية لتشغيل المتصفح من سطر الأوامر مع مهارة جاهزة لـ Claude: يفتح الصفحات ويضغط ويملأ النماذج ويلتقط الصور لاختبار الموقع أو التطبيق، بتكلفة سياق أقل من Playwright MCP. تحتاج Node.js 18 أو أحدث.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "dev-browser",
+    "cat": "devskills",
+    "name": "dev-browser",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/SawyerHood/dev-browser",
+    "site": null,
+    "stars": "6.7k",
+    "cmd": "npm install -g dev-browser\ndev-browser install-skill --claude",
+    "use": [
+      "web",
+      "shop",
+      "claude"
+    ],
+    "desc": "يتيح لـ Claude التحكم في Chrome عبر سكربتات JavaScript قصيرة، مع صفحات تبقى مفتوحة بين الأوامر ولقطات مقروءة للصفحة، ويمكنه الاتصال بمتصفحك المفتوح. يفيد في اختبار المتجر والتطبيق. شرح GitHub يخص إصدار 1.0 التجريبي، وأمر npm يثبّت حاليًا الإصدار المستقر 0.2.9.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "excel-xlsx-skill",
+    "cat": "docs",
+    "name": "Excel XLSX Skill",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/skills/tree/main/skills/xlsx",
+    "site": null,
+    "stars": "183.7k",
+    "cmd": "npx skills add anthropics/skills --skill xlsx",
+    "use": [
+      "shop",
+      "finance",
+      "dashboard"
+    ],
+    "desc": "مهارة Anthropic لإنشاء جداول Excel وتعديلها وتنظيف ملفات CSV غير المرتبة، بصيغ حقيقية وإعادة حساب للتأكد من خلوها من الأخطاء. تناسب قوائم الأسعار والمخزون وملفات المنتجات. رخصتها مملوكة (المصدر متاح وليس مفتوحًا) فلا يجوز تعديلها أو إعادة توزيعها.",
+    "pushed": null,
+    "license": "other",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "word-docx-skill",
+    "cat": "docs",
+    "name": "Word DOCX Skill",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/skills/tree/main/skills/docx",
+    "site": null,
+    "stars": "183.7k",
+    "cmd": "npx skills add anthropics/skills --skill docx",
+    "use": [
+      "shop",
+      "finance",
+      "brand"
+    ],
+    "desc": "مهارة Anthropic لإنشاء مستندات Word وقراءتها وتعديلها، مع فهرس محتويات وترقيم صفحات وتعليقات وتعقّب التغييرات. تفيد في العقود والخطابات وقوالب الفواتير. رخصتها مملوكة (المصدر متاح وليس مفتوحًا) فلا يجوز تعديلها أو إعادة توزيعها.",
+    "pushed": null,
+    "license": "other",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "pdf-skill",
+    "cat": "docs",
+    "name": "PDF Skill",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/skills/tree/main/skills/pdf",
+    "site": null,
+    "stars": "183.7k",
+    "cmd": "npx skills add anthropics/skills --skill pdf",
+    "use": [
+      "shop",
+      "finance"
+    ],
+    "desc": "مهارة Anthropic للعمل على ملفات PDF: استخراج النصوص والجداول، ودمج الملفات وتقسيمها، وتعبئة النماذج، وإضافة علامة مائية، والتعرف الضوئي (OCR) على المستندات الممسوحة. مفيدة لفواتير الموردين وأوراق الشحن. رخصتها مملوكة (المصدر متاح وليس مفتوحًا).",
+    "pushed": null,
+    "license": "other",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "powerpoint-pptx-skill",
+    "cat": "docs",
+    "name": "PowerPoint PPTX Skill",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/skills/tree/main/skills/pptx",
+    "site": null,
+    "stars": "183.7k",
+    "cmd": "npx skills add anthropics/skills --skill pptx",
+    "use": [
+      "shop",
+      "brand"
+    ],
+    "desc": "مهارة Anthropic لإنشاء عروض PowerPoint وقراءتها وتعديلها، مع مخططات أصلية وملاحظات للمتحدث وقوالب جاهزة، ثم فحص الشرائح بصريًا قبل التسليم. تناسب عروض المنتجات والموردين. رخصتها مملوكة (المصدر متاح وليس مفتوحًا).",
+    "pushed": null,
+    "license": "other",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "anthropic-small-business-plugin",
+    "cat": "business",
+    "name": "Anthropic Small Business Plugin",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business",
+    "site": null,
+    "stars": "32.9k",
+    "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install small-business@knowledge-work-plugins",
+    "use": [
+      "shop",
+      "finance",
+      "brand"
+    ],
+    "desc": "إضافة Anthropic الرسمية للأعمال الصغيرة، تضم 44 مهارة: تخطيط المخزون وإعادة الطلب من بيانات Shopify، ومتابعة تقييمات العملاء، والتدفق النقدي وتحصيل الفواتير، والتسويق وSEO. كل خطوة تمس المال أو العملاء تنتظر موافقتك. وحسابات الضرائب فيها أمريكية فقط.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "anthropic-customer-support-plugin",
+    "cat": "business",
+    "name": "Anthropic Customer Support Plugin",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/customer-support",
+    "site": null,
+    "stars": "32.9k",
+    "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install customer-support@knowledge-work-plugins",
+    "use": [
+      "shop",
+      "web"
+    ],
+    "desc": "إضافة Anthropic الرسمية لخدمة العملاء: تصنيف التذاكر وترتيب أولوياتها، وصياغة ردود مهنية، وتجهيز ملف التصعيد، وتحويل المشكلات المحلولة إلى مقالات مركز مساعدة. تناسب بريد المتجر وصفحة الأسئلة الشائعة. الربط مع Intercom وHubSpot اختياري.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "anthropic-legal-plugin",
+    "cat": "business",
+    "name": "Anthropic Legal Plugin",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/legal",
+    "site": null,
+    "stars": "32.9k",
+    "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install legal@knowledge-work-plugins",
+    "use": [
+      "shop",
+      "web"
+    ],
+    "desc": "إضافة Anthropic الرسمية للشؤون القانونية: مراجعة العقود مقابل قواعدك، وفرز اتفاقيات السرية، وفحص الامتثال (GDPR وغيره)، وصياغة ردود على طلبات أصحاب البيانات. قواعدها الافتراضية أمريكية فعدّلها لألمانيا، ولا تغني عن محامٍ.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "anthropic-operations-plugin",
+    "cat": "business",
+    "name": "Anthropic Operations Plugin",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/operations",
+    "site": null,
+    "stars": "32.9k",
+    "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install operations@knowledge-work-plugins",
+    "use": [
+      "shop",
+      "finance"
+    ],
+    "desc": "إضافة Anthropic الرسمية للعمليات: تقييم الموردين من حيث التكلفة والمخاطر والتجديد، وتوثيق الإجراءات (SOP وRACI)، وكتابة runbook للمهام المتكررة، وتقارير الحالة. تفيد في تنظيم الموردين والشحن. تعمل دون ربط أدوات.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "anthropic-data-plugin",
+    "cat": "data",
+    "name": "Anthropic Data Plugin",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/data",
+    "site": null,
+    "stars": "32.9k",
+    "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install data@knowledge-work-plugins",
+    "use": [
+      "dashboard",
+      "shop",
+      "finance"
+    ],
+    "desc": "إضافة Anthropic الرسمية لتحليل البيانات: كتابة استعلامات SQL، واستكشاف الجداول، ورسم المخططات، وبناء لوحات HTML تفاعلية، ومراجعة التحليل قبل مشاركته. تعمل مع ملفات CSV وExcel مثل تصدير طلبات المتجر، ويمكن ربطها بـ BigQuery وSnowflake.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "mcp-builder",
+    "cat": "devskills",
+    "name": "MCP Builder",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder",
+    "site": null,
+    "stars": "183.7k",
+    "cmd": "npx skills add anthropics/skills --skill mcp-builder",
+    "use": [
+      "claude",
+      "web",
+      "shop"
+    ],
+    "desc": "مهارة Anthropic الرسمية لبناء خوادم MCP جيدة التصميم تتيح لـ Claude استخدام خدمة خارجية عبر أدوات واضحة، بلغة Python (FastMCP) أو TypeScript. مفيدة لربط واجهة API لمورّدك أو أداتك الداخلية بـ Claude. تتطلب معرفة برمجية.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "claude-api-skill",
+    "cat": "devskills",
+    "name": "Claude API Skill",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/skills/tree/main/skills/claude-api",
+    "site": null,
+    "stars": "183.7k",
+    "cmd": "npx skills add anthropics/skills --skill claude-api",
+    "use": [
+      "claude",
+      "web",
+      "shop"
+    ],
+    "desc": "مرجع Anthropic الرسمي لبناء تطبيقات بـ Claude API وSDK: النماذج والأسعار والبث واستدعاء الأدوات والتخزين المؤقت وترحيل الكود بين النماذج، بلغات Python وTypeScript وJava وGo وRuby وC# وPHP. مفيد لإضافة مساعد ذكي إلى موقعك. الكود الناتج يحتاج مفتاح Claude API واستخدامه مدفوع.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "anthropic-security-guidance-plugin",
+    "cat": "devskills",
+    "name": "Anthropic Security Guidance Plugin",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance",
+    "site": null,
+    "stars": "44.5k",
+    "cmd": "/plugin install security-guidance@claude-plugins-official",
+    "use": [
+      "web",
+      "shop",
+      "claude"
+    ],
+    "desc": "إضافة Anthropic الرسمية لمراجعة أمان الكود الذي يكتبه Claude: تنبيه فوري للأنماط الخطرة، ومراجعة للفروقات عند انتهاء Claude من كل رد، ومراجعة عند commit تكشف الحقن وXSS وSSRF والأسرار المكتوبة في الكود. تستهلك رموزًا إضافية وترسل الفروقات إلى نموذج Claude.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "anthropic-code-review-plugin",
+    "cat": "devskills",
+    "name": "Anthropic Code Review Plugin",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review",
+    "site": null,
+    "stars": "44.5k",
+    "cmd": "/plugin install code-review@claude-plugins-official",
+    "use": [
+      "web",
+      "claude"
+    ],
+    "desc": "إضافة Anthropic الرسمية لمراجعة طلبات الدمج (Pull Requests): الأمر /code-review يشغّل عدة وكلاء بالتوازي للبحث عن الأخطاء والتحقق من التزام الكود بتعليمات CLAUDE.md، ثم ينشر الملاحظات عالية الثقة فقط. تحتاج مستودع GitHub وأداة gh.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "claude-academy-guide",
+    "cat": "data",
+    "name": "Claude Academy Guide",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/skills/tree/main/skills/academy-guide",
+    "site": "https://academy.claude.com",
+    "stars": "183.7k",
+    "cmd": "npx skills add anthropics/skills --skill academy-guide",
+    "use": [
+      "claude"
+    ],
+    "desc": "مهارة Anthropic الرسمية تقترح عليك دورة أو شرحًا من Claude Academy عندما تسأل كيف تستخدم Claude أو إحدى ميزاته، بعد أن تجيب عن سؤالك أولًا. تقترح عنصرين كحد أقصى ولا تخترع محتوى. محتوى Academy عبر موصل Claude بالإنجليزية فقط، وبعض الدورات تطلب تسجيل دخول.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "awesome-ecom-skills",
+    "cat": "shopmkt",
+    "name": "Awesome Ecom Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/kgelster/awesome-ecom-skills",
+    "site": null,
+    "stars": "50",
+    "cmd": "/plugin marketplace add kgelster/awesome-ecom-skills\n/plugin install ecom@kgelster",
+    "use": [
+      "shop",
+      "web",
+      "landing"
+    ],
+    "desc": "تسع مهارات تعلّم Claude تنظيف كتالوج متجر Shopify وتحسينه: تدقيق المنتجات الناقصة، وتحديد تصنيف كل منتج، وملء عناوين وأوصاف SEO والنص البديل للصور، وتحويلات 301 بعد نقل الموقع، وبيانات JSON-LD. تغيّر بيانات المتجر الحي مباشرة، فخذ نسخة احتياطية وراجع المعاينة قبل أي كتابة.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "email-marketing-bible",
+    "cat": "shopmkt",
+    "name": "Email Marketing Bible",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/CosmoBlk/email-marketing-bible",
+    "site": "https://emailmarketingskill.com",
+    "stars": "354",
+    "cmd": "/plugin marketplace add CosmoBlk/email-marketing-bible\n/plugin install email-marketing-bible@email-marketing-bible",
+    "use": [
+      "shop",
+      "brand"
+    ],
+    "desc": "دليل شامل للتسويق بالبريد على شكل مهارة: يبني رسائل الترحيب والسلة المتروكة وما بعد الشراء، ويكتب نصوصًا لا تبدو آلية، ويشخّص أسباب وصول رسائلك إلى البريد المزعج، ويراجع الامتثال لـ GDPR قبل أي إرسال. فيه دليل عملي لمتاجر DTC. بالإنجليزية فقط، ومؤلفه شريك مؤسس في Nitrosend ويصرّح بذلك.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "product-shots",
+    "cat": "shopmkt",
+    "name": "Product Shots",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/motiful/product-shots",
+    "site": null,
+    "stars": "117",
+    "cmd": "npx skills add motiful/product-shots",
+    "use": [
+      "shop",
+      "brand",
+      "landing"
+    ],
+    "desc": "سبع مهارات تحوّل صورة واحدة لمنتجك إلى حزمة صور جاهزة للبيع: صور رئيسية تلتزم بقواعد Amazon، وصفحات A+، ولقطات متعددة الزوايا للأزياء، وإعلانات لـ Meta وTikTok وGoogle، ومنشورات اجتماعية. تحتاج مفتاح API لمولّد صور وتتحمّل تكلفته، والمشروع ما زال في مرحلة alpha.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "supercmo-skills",
+    "cat": "motiongfx",
+    "name": "SuperCMO Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/SupercmoHQ/superCMO-skills",
+    "site": "https://getsupercmo.ai",
+    "stars": "215",
+    "cmd": "/plugin marketplace add SupercmoHQ/superCMO-skills\n/plugin install supercmo@superCMO-skills",
+    "use": [
+      "shop",
+      "video",
+      "brand"
+    ],
+    "desc": "23 مهارة تنتج مواد حملة إعلانية من صورة منتج وملخص قصير: فيديو UGC بممثل رقمي، وفيديو إعلاني، وإعلانات صور، وصور منتج احترافية، مع نص الإعلان والتعليق الصوتي وتحليل إعلانات المنافسين. تحتاج مفاتيح WaveSpeed أو fal أو رصيدًا مدفوعًا من SuperCMO، وترسل إحصاءات استخدام مجهولة يمكن إيقافها.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "banana-claude",
+    "cat": "brandskills",
+    "name": "Banana Claude",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/AgriciDaniel/banana-claude",
+    "site": null,
+    "stars": "1.1k",
+    "cmd": "/plugin marketplace add AgriciDaniel/banana-claude\n/plugin install banana-claude@banana-claude-marketplace\n/plugin enable banana-claude@banana-claude-marketplace\n/reload-plugins",
+    "use": [
+      "brand",
+      "shop",
+      "landing"
+    ],
+    "desc": "يحوّل طلبك العادي إلى مهمة توليد صور بنماذج Gemini (Nano Banana) داخل Claude Code: مشاهد منتجات، وصور حملات، وتعديل صورة موجودة، ومقارنة عدة صياغات. يعرض الخطة والتكلفة التقديرية ويطلب موافقتك قبل كل طلب مدفوع. يحتاج مفتاح Gemini API بحساب فوترة، ولا يعمل على Windows مباشرة.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "elevenlabs-skills",
+    "cat": "motiongfx",
+    "name": "ElevenLabs Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/elevenlabs/skills",
+    "site": "https://elevenlabs.io",
+    "stars": "508",
+    "cmd": "npx skills add elevenlabs/skills",
+    "use": [
+      "video",
+      "brand",
+      "shop"
+    ],
+    "desc": "المهارات الرسمية من ElevenLabs: تحويل النص إلى صوت بأكثر من 90 لغة، ودبلجة الفيديو إلى لغات أخرى مع الحفاظ على صوت المتحدث، وتوليد مؤثرات وموسيقى، وعزل الكلام عن الضوضاء. تفيد في تعليق صوتي لفيديوهات المنتجات بالألمانية والعربية. تحتاج مفتاح ElevenLabs API، وحدود الاستخدام حسب خطتك.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "heygen-skills",
+    "cat": "motiongfx",
+    "name": "HeyGen Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/heygen-com/skills",
+    "site": "https://developers.heygen.com/docs/quick-start",
+    "stars": "519",
+    "cmd": "gh skill install heygen-com/skills heygen-avatar\ngh skill install heygen-com/skills heygen-video\ngh skill install heygen-com/skills heygen-translate",
+    "use": [
+      "video",
+      "brand",
+      "shop"
+    ],
+    "desc": "ثلاث مهارات رسمية من HeyGen: إنشاء مقدّم رقمي من صورة، وتحويل فكرة إلى فيديو يقدّمه، وترجمة فيديو جاهز ودبلجته بصوت مستنسخ ومزامنة شفاه (175+ لغة). مناسبة لفيديو تعريفي بالمتجر بعدة لغات. تحتاج حساب HeyGen ومفتاح API يُحاسب منفصلًا، وتستنسخ الوجه والصوت، فاحصل على إذن أصحابهما.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "fal-ai-skills",
+    "cat": "motiongfx",
+    "name": "fal.ai Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/fal-ai-community/skills",
+    "site": "https://fal.ai",
+    "stars": "256",
+    "cmd": "curl https://genmedia.sh/install -fsS | bash\ngenmedia setup\ngenmedia init",
+    "use": [
+      "video",
+      "shop",
+      "brand"
+    ],
+    "desc": "مهارات لتوليد الصور والفيديو والصوت عبر نماذج fal.ai، منها مهارات جاهزة لتصوير المنتجات والإعلانات ودفعات صور المتجر، وإعلانات المبدعين UGC، وحزم الحملات التسويقية. تعمل عبر أداة genmedia وتحتاج مفتاح fal API، وتتحمّل تكلفة التوليد، ويُثبَّت genmedia بسكربت من الإنترنت.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "geo-seo-claude",
+    "cat": "shopmkt",
+    "name": "GEO SEO Claude",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/zubair-trabzada/geo-seo-claude",
+    "site": null,
+    "stars": "11.2k",
+    "cmd": "curl -fsSL https://raw.githubusercontent.com/zubair-trabzada/geo-seo-claude/main/install.sh | bash",
+    "use": [
+      "shop",
+      "web",
+      "landing"
+    ],
+    "desc": "يقيس مدى ظهور موقعك في إجابات ChatGPT وClaude وPerplexity وGoogle AI Overviews: درجة قابلية الاستشهاد بمحتواك، وسماح ملف robots.txt لزواحف الذكاء الاصطناعي، وإنشاء llms.txt، والبيانات المنظمة، وتقارير PDF. التثبيت بسكربت من الإنترنت ويحتاج Python 3.10 أو أحدث.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "social-media-skills",
+    "cat": "shopmkt",
+    "name": "Social Media Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/social-media-skills/skills",
+    "site": "https://social-media-skills.com",
+    "stars": "196",
+    "cmd": "/plugin marketplace add social-media-skills/skills\n/plugin install social-media-skills@social-media-skills",
+    "use": [
+      "shop",
+      "brand",
+      "video"
+    ],
+    "desc": "حزمة من 106 مهارات لإدارة المحتوى الاجتماعي من الاستراتيجية إلى النشر: ملف العلامة ودليل النبرة، وتقويم المحتوى، وكتابة الكابشن وسيناريوهات Reels وTikTok، وخطط Instagram وPinterest وFacebook وYouTube. لا ينشر شيئًا دون موافقتك الصريحة. تثبيتها كلها ثقيل على السياق، فاختر ما تحتاجه.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "postiz-agent",
+    "cat": "shopmkt",
+    "name": "Postiz Agent",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/gitroomhq/postiz-agent",
+    "site": "https://postiz.com/agent",
+    "stars": "543",
+    "cmd": "npx skills add gitroomhq/postiz-agent\nnpm install -g postiz",
+    "use": [
+      "shop",
+      "brand"
+    ],
+    "desc": "يتيح لـ Claude جدولة المنشورات ونشرها على أكثر من 28 منصة، منها Instagram وTikTok وPinterest وFacebook وYouTube، عبر Postiz وواجهته الطرفية مع رفع الصور والفيديو قبل النشر. يحتاج حساب Postiz سحابيًا أو مستضافًا ذاتيًا. رخصته AGPL-3.0، وراجع كل منشور قبل جدولته.",
+    "pushed": null,
+    "license": "AGPL-3.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "growth-marketing-os",
+    "cat": "shopmkt",
+    "name": "Growth Marketing OS",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/growthack88/growth-marketing-os",
+    "site": "https://mahmoudomar.com",
+    "stars": "124",
+    "cmd": "/plugin marketplace add growthack88/growth-marketing-os\n/plugin install mena-ads@growth-marketing-os",
+    "use": [
+      "shop",
+      "brand",
+      "landing"
+    ],
+    "desc": "مكتبة تسويق مفتوحة بالعربية والإنجليزية فيها مهارات Claude لإعلانات المنطقة العربية (تدقيق الحسابات، وخطط الميزانية، وعائد الطلبات المسلّمة مع الدفع عند الاستلام)، ومحوّل نصوص إعلانية إلى عامية عربية طبيعية، وقوالب بريد وأرقام مرجعية موثقة. أمثلتها موجهة لسوق مصر والخليج لا ألمانيا.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "claude-blog",
+    "cat": "shopmkt",
+    "name": "Claude Blog",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/AgriciDaniel/claude-blog",
+    "site": null,
+    "stars": "2.5k",
+    "cmd": "/plugin marketplace add AgriciDaniel/claude-blog\n/plugin install claude-blog@agricidaniel-blog",
+    "use": [
+      "shop",
+      "web",
+      "brand"
+    ],
+    "desc": "محرك مدوّنة كامل لـ Claude Code: تخطيط المواضيع، وكتابة مقالات محسّنة لـ Google ولاستشهاد محركات الذكاء الاصطناعي، وتقييم كل مسودة من 100 نقطة قبل تسليمها، مع بيانات منظمة وصور وتصدير HTML وPDF ونشر متعدد اللغات. مناسب لمدوّنة المتجر، لكنه ثقيل (31 مهارة فرعية) ويحتاج Python 3.11 أو أحدث.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "claude-repurpose",
+    "cat": "shopmkt",
+    "name": "Claude Repurpose",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/AgriciDaniel/claude-repurpose",
+    "site": null,
+    "stars": "162",
+    "cmd": "curl -fsSL https://raw.githubusercontent.com/AgriciDaniel/claude-repurpose/main/install.sh | bash",
+    "use": [
+      "brand",
+      "shop",
+      "video"
+    ],
+    "desc": "يحوّل مقالًا أو فيديو YouTube أو بودكاست إلى منشورات لـ 17 منصة: خيط X، ومنشور LinkedIn، وكاروسيل Instagram، وسيناريو TikTok، ووصف دبابيس Pinterest، ونشرة بريدية، مع تقويم نشر لأسبوع. يُثبَّت بسكربت من الإنترنت ويحتاج Python 3.10 أو أحدث، وآخر تحديث له في أبريل 2026.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "baoyu-skills",
+    "cat": "brandskills",
+    "name": "Baoyu Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/JimLiu/baoyu-skills",
+    "site": null,
+    "stars": "26.9k",
+    "cmd": "npx skills add jimliu/baoyu-skills",
+    "use": [
+      "brand",
+      "web"
+    ],
+    "desc": "21 مهارة لصناعة المحتوى: إنفوغرافيك وصور أغلفة ورسوم توضيحية للمقالات وعروض شرائح، وتوليد صور عبر عدة مزودين، ونشر على X، واستخراج نص يوتيوب وترجمته. تركيزها قوي على المنصات الصينية. مهارتان تستخدمان واجهات غير رسمية عبر كوكيز المتصفح، فاستخدمهما على مسؤوليتك.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "vidiq-mcp",
+    "cat": "shopmkt",
+    "name": "vidIQ MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/vid-io/vidiq-mcp",
+    "site": "https://vidiq.com/mcp",
+    "stars": "5",
+    "cmd": "claude plugin marketplace add vid-io/vidiq-mcp\nclaude plugin install vidiq@vidiq-plugins",
+    "use": [
+      "video",
+      "brand"
+    ],
+    "desc": "خادم MCP رسمي من vidIQ يربط Claude ببيانات YouTube الحية: بحث الكلمات المفتاحية، والفيديوهات الرائجة، وتحليل المنافسين، وتقييم العناوين والصور المصغرة، مع دراسة محتوى Instagram وTikTok القصير. يضم 14 مهارة لسير العمل. يحتاج حساب vidIQ وقد تستهلك أدواته رصيدًا، والمستودع جديد وعدد نجومه قليل.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "search-console-mcp",
+    "cat": "shopmkt",
+    "name": "Search Console MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/AminForou/mcp-gsc",
+    "site": null,
+    "stars": "2.0k",
+    "cmd": "claude mcp add --env GSC_OAUTH_CLIENT_SECRETS_FILE=/full/path/to/client_secrets.json gscServer -- uvx mcp-search-console",
+    "use": [
+      "web",
+      "shop"
+    ],
+    "desc": "خادم MCP يربط Google Search Console بـ Claude: يعرض الاستعلامات التي تجلب الزوار مع النقرات والظهور ومتوسط الترتيب، ويقارن فترتين، ويفحص حالة فهرسة صفحاتك ومشكلات Rich Results، ويعرض خرائط الموقع ويرسلها. مشروع مجتمعي وليس من Google، ويحتاج إعداد مفاتيح Google Cloud يدويًا أولًا.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T18:11:55Z"
   }
 ]

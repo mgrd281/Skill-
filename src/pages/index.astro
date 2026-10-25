@@ -24,7 +24,7 @@ const appData = {
 ---
 <Base
   title="دليل أدوات التصميم والتطوير"
-  description={`${total} أداة ومهارة لـ Claude وخوادم MCP ومكتبات للتصميم والتطوير والموشن غرافيك وiPhone وMac، مع نجوم GitHub وأوامر التثبيت.`}
+  description={`${total} أداة ومهارة لـ Claude وخوادم MCP ومكتبات للتصميم والتطوير والموشن غرافيك وiPhone وMac، ومواقع للكتابة والبرومبت، مع نجوم GitHub وأوامر التثبيت.`}
 >
   <a class="skip" href="#list">تخطَّ إلى القائمة</a>
   <header class="hero">
@@ -55,7 +55,7 @@ const appData = {
     </div>
     <h1>دليل أدوات <span class="accent">التصميم والتطوير</span></h1>
     <p class="lead">
-      <Fragment set:html={`مهارات <bdi>Claude</bdi> وخوادم <bdi>MCP</bdi> ومكتبات مختارة، مرتبة بنجوم <bdi>GitHub</bdi>. لكل أداة وصف قصير وأمر التثبيت والمشاريع التي تفيدها.`} />
+      <Fragment set:html={`مهارات <bdi>Claude</bdi> وخوادم <bdi>MCP</bdi> ومكتبات مختارة، ومواقع تساعدك في الكتابة وكتابة البرومبت، مرتبة بنجوم <bdi>GitHub</bdi>. لكل أداة وصف قصير وأمر التثبيت والمشاريع التي تفيدها.`} />
     </p>
     <ul class="stats">
       <li><b>{total}</b> أداة</li>
@@ -69,6 +69,7 @@ const appData = {
         <li><span class="tag"><bdi>Skill</bdi></span> تعليمات تضيفها إلى <bdi>Claude</bdi></li>
         <li><span class="tag"><bdi>MCP</bdi></span> يربط <bdi>Claude</bdi> بأداة خارجية</li>
         <li><span class="tag">مكتبة</span> تُستخدم داخل كود الموقع</li>
+        <li><span class="tag">موقع</span> تستخدمه من المتصفح مباشرة</li>
         <li><span class="badge-new">جديد</span> أُضيفت خلال آخر 14 يومًا</li>
         <li><span class="badge-pick">ابدأ بها</span> أفضل بداية للمشروع المختار</li>
         <li><span class="tag tag-warn">تنبيه</span> مستودع قديم أو رخصة بشروط أو سكربت من الإنترنت</li>
@@ -165,7 +166,7 @@ const appData = {
   </main>
 
   <Fragment slot="footer">
-    <p>النجوم وروابط المواقع مأخوذة من صفحة كل مشروع على <bdi>GitHub</bdi>، وآخر تحديث لها بتاريخ {formatDate(starsUpdatedAt)}. مهارات <bdi>Anthropic</bdi> الأربع تعرض نجوم المستودع الذي يجمعها.</p>
+    <p>النجوم وروابط المواقع مأخوذة من صفحة كل مشروع على <bdi>GitHub</bdi>، وآخر تحديث لها بتاريخ {formatDate(starsUpdatedAt)}. مهارات <bdi>Anthropic</bdi> وإضافاتها، وكل مهارة داخل مستودع يضم عدة مهارات، تعرض نجوم ذلك المستودع كله.</p>
     <p>أوامر <bdi>/plugin</bdi> تُكتب داخل <bdi>Claude Code</bdi>. أوامر <bdi>npx</bdi> و<bdi>npm</bdi> و<bdi>flutter</bdi> و<bdi>docker</bdi> تُكتب في الطرفية داخل مجلد مشروعك.</p>
     <p>لاكتشاف مهارات أخرى: <bdi>skills.sh</bdi> يرتّبها حسب عدد التثبيت ويعرض فحصًا أمنيًا لكل مهارة، و<bdi>claudemarketplaces.com</bdi> يرتّبها حسب القسم. المهارة قد تشغّل أوامر على جهازك، فثبّت من مصادر معروفة فقط.</p>
     <p>رخص مجموعات الأيقونات والمكونات تختلف، وشعارات العلامات التجارية تبقى ملكًا لأصحابها. اقرأ الرخصة قبل الاستخدام التجاري.</p>
