@@ -3155,5 +3155,26 @@
     "license": "MIT",
     "archived": false,
     "added": "2026-10-24T22:15:00Z"
+  },
+  {
+    "slug": "moneyprinterturbo",
+    "cat": "motiongfx",
+    "name": "MoneyPrinterTurbo",
+    "kind": "أداة",
+    "isNew": true,
+    "gh": "https://github.com/harry0703/MoneyPrinterTurbo",
+    "site": null,
+    "stars": "135k",
+    "cmd": "python -m pip install mpt\nmpt webui",
+    "use": [
+      "video",
+      "shop",
+      "brand"
+    ],
+    "desc": "يولّد فيديو قصيرًا بجودة عالية من موضوع أو كلمة مفتاحية: يكتب النص، ويختار اللقطات، ويضيف التعليق الصوتي والترجمة والموسيقى. يعمل من واجهة ويب أو من الطرفية، ومفيد لفيديوهات تيك توك وريلز ويوتيوب شورتس لمتجرك. الصوت عبر Edge TTS مجاني بلا مفتاح، أما النموذج اللغوي واللقطات والصوت المتقدم فتحتاج مفاتيح API خاصة بك وقد تكون مدفوعة. الحزمة الرسمية على PyPI اسمها mpt فقط، وحزمة MoneyPrinterTurbo هناك من طرف ثالث. يحتاج Python 3.11 أو أحدث. رخصته MIT.",
+    "pushed": null,
+    "license": "MIT",
+    "archived": false,
+    "added": "2026-10-25T15:59:36Z"
   }
 ]
