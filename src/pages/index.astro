@@ -1,10 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
-import HeartLink from "../components/HeartLink.astro";
-import ThemeToggle from "../components/ThemeToggle.astro";
 import Icon from "../components/Icon.astro";
-import Logo from "../components/Logo.astro";
 import { tools, categories, projects, rich, starsUpdatedAt, formatDate, recentTools, categoryById, url, initials, categoryHue } from "../lib/data";
 
 const total = tools.length;
@@ -15,8 +12,6 @@ byStars.filter((t) => t.starsN >= 0).forEach((t, i) => rankOf.set(t.slug, i + 1)
 const latest = recentTools.slice(0, 6);
 const skillCount = tools.filter((t) => t.kind === "Skill").length;
 const siteCount = tools.filter((t) => t.kind === "موقع").length;
-// لون مميز خفيف لكل نوع مشروع (درجة اللون فقط، والإضاءة تأتي من الوضع الفاتح/الداكن)
-const hues = [152, 221, 262, 200, 20, 190, 330, 280, 42, 172, 120, 238];
 const appData = {
   total,
   projects: projects.map((p) => ({ id: p.id, name: p.name, cats: p.cats ?? [], pickSlugs: p.pickSlugs })),
@@ -30,77 +25,54 @@ const appData = {
   title="دليل أدوات التصميم والتطوير"
   description={`${total} أداة ومهارة لـ Claude وخوادم MCP ومكتبات للتصميم والتطوير والموشن غرافيك وiPhone وMac، ومواقع للكتابة والبرومبت، مع نجوم GitHub وأوامر التثبيت.`}
 >
-  <a class="skip" href="#list">تخطَّ إلى القائمة</a>
+  <div class="notif-wrap" slot="nav-extra">
+    <button type="button" id="bell" class="bell" aria-haspopup="dialog" aria-expanded="false" aria-controls="notif" aria-label="الإشعارات: أدوات جديدة">
+      <Icon name="bell" />
+      <span class="dot" id="bell-n" hidden>0</span>
+    </button>
+    <div class="notif" id="notif" role="dialog" aria-label="آخر الأدوات المضافة" hidden>
+      <h3>آخر الأدوات المضافة</h3>
+      <ul id="notif-list"></ul>
+      <p class="notif-empty" id="notif-empty">لا توجد أدوات مضافة بعد.</p>
+      <div class="notif-actions">
+        <button type="button" class="linkbtn" id="notif-read">تم، قرأتها</button>
+        <a class="linkbtn" href={url("feed.xml")}>اشتراك <bdi>RSS</bdi></a>
+      </div>
+    </div>
+  </div>
+
   <header class="hero">
-    <div class="topbar">
-      <a class="brand" href={url()} aria-label="دليل الأدوات: الصفحة الرئيسية">
-        <Logo />
-        <span>دليل الأدوات</span>
-      </a>
-      <div class="actions">
-        <ThemeToggle />
-        <HeartLink />
-        <div class="notif-wrap">
-          <button type="button" id="bell" class="bell" aria-haspopup="dialog" aria-expanded="false" aria-controls="notif" aria-label="الإشعارات: أدوات جديدة">
-            <Icon name="bell" />
-            <span class="dot" id="bell-n" hidden>0</span>
-          </button>
-          <div class="notif" id="notif" role="dialog" aria-label="آخر الأدوات المضافة" hidden>
-            <h3>آخر الأدوات المضافة</h3>
-            <ul id="notif-list"></ul>
-            <p class="notif-empty" id="notif-empty">لا توجد أدوات مضافة بعد.</p>
-            <div class="notif-actions">
-              <button type="button" class="linkbtn" id="notif-read">تم، قرأتها</button>
-              <a class="linkbtn" href={url("feed.xml")}>اشتراك <bdi>RSS</bdi></a>
-            </div>
-          </div>
-        </div>
+    <div class="hero-text">
+      <p class="eyebrow" style="--i:0">دليل الأدوات</p>
+      <h1 style="--i:1">كل ما تحتاجه للتصميم والتطوير. <span class="accent">في مكان واحد.</span></h1>
+      <p class="lead" style="--i:2">
+        <Fragment set:html={`مهارات <bdi>Claude</bdi> وخوادم <bdi>MCP</bdi> ومكتبات ومواقع مختارة بعناية، مرتبة بنجوم <bdi>GitHub</bdi>، مع أمر التثبيت لكل أداة.`} />
+      </p>
+      <div class="cta" style="--i:3">
+        <button type="button" class="btn-primary" data-focus-search>ابحث عن أداة</button>
+        <a class="link-more" href="#build-h">ماذا تبني؟<Icon name="chevron" /></a>
       </div>
     </div>
 
-    <div class="hero-body">
-      <div class="hero-text">
-        <p class="eyebrow" style="--i:0"><Icon name="sparkles" /> مختارة بعناية، ومحدّثة كل أسبوع</p>
-        <h1 style="--i:1">دليل أدوات <span class="accent">التصميم والتطوير</span></h1>
-        <p class="lead" style="--i:2">
-          <Fragment set:html={`مهارات <bdi>Claude</bdi> وخوادم <bdi>MCP</bdi> ومكتبات مختارة، ومواقع تساعدك في الكتابة وكتابة البرومبت، مرتبة بنجوم <bdi>GitHub</bdi>. لكل أداة وصف قصير وأمر التثبيت والمشاريع التي تفيدها.`} />
-        </p>
-        <div class="cta" style="--i:3">
-          <button type="button" class="btn-primary" data-focus-search><Icon name="search" />ابحث عن أداة <kbd>/</kbd></button>
-          <a class="btn-ghost" href="#build-h"><Icon name="compass" />ماذا تبني؟</a>
-        </div>
-        <dl class="stats" style="--i:4">
-          <div><dt>أداة</dt><dd>{total}</dd></div>
-          <div><dt><bdi>Skill</bdi></dt><dd>{skillCount}</dd></div>
-          <div><dt>موقعًا</dt><dd>{siteCount}</dd></div>
-          <div><dt>قسمًا</dt><dd>{categories.length}</dd></div>
-        </dl>
-        <details class="legend-wrap" style="--i:5">
-          <summary><Icon name="info" />ما معنى الشارات؟ <span class="upd">النجوم محدّثة {formatDate(starsUpdatedAt)}</span></summary>
-          <ul class="legend">
-            <li><span class="kind" data-k="skill"><bdi>Skill</bdi></span> تعليمات تضيفها إلى <bdi>Claude</bdi></li>
-            <li><span class="kind" data-k="mcp"><bdi>MCP</bdi></span> يربط <bdi>Claude</bdi> بأداة خارجية</li>
-            <li><span class="kind" data-k="lib">مكتبة</span> تُستخدم داخل كود الموقع</li>
-            <li><span class="kind" data-k="tool">أداة</span> برنامج تشغّله على جهازك</li>
-            <li><span class="kind" data-k="site">موقع</span> تستخدمه من المتصفح مباشرة</li>
-            <li><span class="badge-new">جديد</span> أُضيفت خلال آخر 14 يومًا</li>
-            <li><span class="badge-pick">ابدأ بها</span> أفضل بداية للمشروع المختار</li>
-            <li><span class="tag tag-warn">تنبيه</span> مستودع قديم أو رخصة بشروط أو سكربت من الإنترنت</li>
-            <li><span class="tag tag-bad">خطر</span> مؤرشف أو بلا رخصة</li>
-          </ul>
-        </details>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <span class="art-spark"><Icon name="sparkles" /></span>
-        {byStars.slice(0, 3).map((t) => (
-          <a class="art-card" href={url("tools/" + t.slug)} tabindex="-1">
-            <span class="mono" style={`--h:${categoryHue(t.cat)}`}>{initials(t.name)}</span>
-            <span class="li-t"><b>{t.name}</b><small set:html={rich(categoryById(t.cat).name)} /></span>
-            {t.stars && <span class="stars"><Icon name="star" filled />{t.stars}</span>}
-          </a>
-        ))}
-      </div>
+    <div class="showcase" aria-hidden="true">
+      {byStars.slice(0, 3).map((t, i) => (
+        <a class={`show-card s${i + 1}`} href={url("tools/" + t.slug)} tabindex="-1">
+          <span class="mono">{initials(t.name)}</span>
+          <span class="show-t">
+            <b>{t.name}</b>
+            <small set:html={rich(categoryById(t.cat).name)} />
+          </span>
+          {t.stars && <span class="stars"><Icon name="star" filled />{t.stars}</span>}
+        </a>
+      ))}
     </div>
+
+    <dl class="stats">
+      <div><dt>أداة مختارة</dt><dd>{total}</dd></div>
+      <div><dt>مهارة <bdi>Skill</bdi></dt><dd>{skillCount}</dd></div>
+      <div><dt>موقعًا للكتابة والبرومبت</dt><dd>{siteCount}</dd></div>
+      <div><dt>قسمًا</dt><dd>{categories.length}</dd></div>
+    </dl>
   </header>
 
   <div class="bar">
@@ -124,22 +96,19 @@ const appData = {
     <div class="chips" id="chips" role="group" aria-label="الأقسام">
       <button type="button" class="chip" data-id="all">الكل<span class="n">{total}</span></button>
       {categories.map((c) => (
-        <button type="button" class="chip" data-id={c.id} style={`--h:${categoryHue(c.id)}`}><span class="cdot" aria-hidden="true"></span><span set:html={rich(c.name)} /><span class="n"></span></button>
+        <button type="button" class="chip" data-id={c.id}><span set:html={rich(c.name)} /><span class="n"></span></button>
       ))}
       <button type="button" class="chip skillchip" data-id="skill">المهارات فقط<span class="n"></span></button>
       <button type="button" class="chip newchip" data-id="new">الجديد فقط<span class="n"></span></button>
     </div>
   </div>
 
-  <section class="build sec" aria-labelledby="build-h">
-    <div class="sec-head">
-      <h2 id="build-h"><span class="sec-ic"><Icon name="compass" /></span>ماذا تبني؟</h2>
-      <p class="hint">اختر نوع مشروعك لترى الأدوات المفيدة له ونصيحة البداية.</p>
-    </div>
+  <section class="band alt build" aria-labelledby="build-h">
+    <h2 class="sec-title" id="build-h">ماذا تبني؟ <span>اختر نوع مشروعك لترى ما يناسبه ونصيحة البداية.</span></h2>
     <div class="projects" id="projects">
-      {projects.map((p, i) => (
-        <button type="button" class="ptile" data-p={p.id} aria-pressed="false" style={`--h:${hues[i % hues.length]}`}>
-          <span class="pico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={p.icon} /></span>
+      {projects.map((p) => (
+        <button type="button" class="ptile" data-p={p.id} aria-pressed="false">
+          <span class="pico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={p.icon} /></span>
           <span class="pl"><b set:html={rich(p.name)} /><small>{p.count} أداة</small></span>
         </button>
       ))}
@@ -159,44 +128,58 @@ const appData = {
     ))}
   </section>
 
-  <section class="latest sec" aria-labelledby="latest-h">
-    <div class="sec-head">
-      <h2 id="latest-h"><span class="sec-ic"><Icon name="sparkles" /></span>أحدث الأدوات المضافة</h2>
-    </div>
+  <section class="band latest" aria-labelledby="latest-h">
+    <h2 class="sec-title" id="latest-h">الأحدث. <span>آخر ما أضفناه إلى الدليل.</span></h2>
     <div class="latest-row">
       {latest.map((t) => (
         <a class="latest-item" href={url("tools/" + t.slug)}>
-          <span class="mono sm" style={`--h:${categoryHue(t.cat)}`} aria-hidden="true">{initials(t.name)}</span>
-          <span class="li-t">
-            <b>{t.name}</b>
-            <small set:html={rich(categoryById(t.cat).name)} />
+          <span class="li-new">جديد</span>
+          <b class="li-name">{t.name}</b>
+          <small class="li-cat" set:html={rich(categoryById(t.cat).name)} />
+          <span class="li-foot">
+            <span class="mono sm" aria-hidden="true">{initials(t.name)}</span>
+            {t.stars && <span class="stars"><Icon name="star" filled />{t.stars}</span>}
           </span>
-          {t.stars && <span class="stars"><Icon name="star" filled />{t.stars}</span>}
         </a>
       ))}
     </div>
   </section>
 
-  <div class="activebar" id="activebar" hidden>
-    <span class="l"><Icon name="filter" />فلاتر مفعّلة:</span>
-    <span class="afs" id="active-chips"></span>
-    <button type="button" class="linkbtn" id="clear-all">إزالة كل الفلاتر</button>
-  </div>
-
-  <main id="list">
+  <main class="band alt" id="list">
+    <div class="list-head">
+      <h2 class="sec-title"><span id="flat-title">كل الأدوات، مرتبة حسب نجوم <bdi>GitHub</bdi></span><span class="n" id="flat-n">{total}</span></h2>
+      <details class="legend-wrap">
+        <summary><Icon name="info" />ما معنى الشارات؟</summary>
+        <ul class="legend">
+          <li><span class="kind" data-k="skill"><bdi>Skill</bdi></span> تعليمات تضيفها إلى <bdi>Claude</bdi></li>
+          <li><span class="kind" data-k="mcp"><bdi>MCP</bdi></span> يربط <bdi>Claude</bdi> بأداة خارجية</li>
+          <li><span class="kind" data-k="lib">مكتبة</span> تُستخدم داخل كود الموقع</li>
+          <li><span class="kind" data-k="tool">أداة</span> برنامج تشغّله على جهازك</li>
+          <li><span class="kind" data-k="site">موقع</span> تستخدمه من المتصفح مباشرة</li>
+          <li><span class="badge-new">جديد</span> أُضيفت خلال آخر 14 يومًا</li>
+          <li><span class="badge-pick">ابدأ بها</span> أفضل بداية للمشروع المختار</li>
+          <li><span class="tag tag-warn">تنبيه</span> مستودع قديم أو رخصة بشروط أو سكربت من الإنترنت</li>
+          <li><span class="tag tag-bad">خطر</span> مؤرشف أو بلا رخصة</li>
+        </ul>
+      </details>
+    </div>
+    <div class="activebar" id="activebar" hidden>
+      <span class="l"><Icon name="filter" />فلاتر مفعّلة:</span>
+      <span class="afs" id="active-chips"></span>
+      <button type="button" class="linkbtn" id="clear-all">إزالة كل الفلاتر</button>
+    </div>
     <div class="listinfo">
       <p class="status" id="status" aria-live="polite"></p>
       <p class="hiddenbar" id="hiddenbar" hidden><span id="hidden-n"></span> <button type="button" class="linkbtn" id="unhide">استعادة المخفية</button></p>
     </div>
-    <section class="cat" id="by-stars">
-      <h2><span class="sec-ic"><Icon name="trophy" /></span><span id="flat-title">مرتبة حسب نجوم <bdi>GitHub</bdi></span><span class="n">{total}</span></h2>
+    <section class="cat" id="by-stars" aria-labelledby="flat-title">
       <div class="grid" id="stars-grid">
         {byStars.map((t) => <Card tool={t} hideBtn rank={rankOf.get(t.slug)} />)}
       </div>
     </section>
     {categories.map((c) => (
       <section class="cat" id={"cat-" + c.id} data-cat-section={c.id} hidden>
-        <h2><span class="sec-ic tint" style={`--h:${categoryHue(c.id)}`}><Icon name="layers" /></span><span set:html={rich(c.name)} /><span class="n">{tools.filter((t) => t.cat === c.id).length}</span></h2>
+        <h2 class="cat-title"><span set:html={rich(c.name)} /><span class="n">{tools.filter((t) => t.cat === c.id).length}</span></h2>
         <div class="grid" data-grid={c.id}></div>
       </section>
     ))}
@@ -204,7 +187,7 @@ const appData = {
       <span class="empty-ic"><Icon name="search-x" /></span>
       <p>لا توجد نتيجة مطابقة.</p>
       <p class="sub">جرّب كلمة أخرى، أو أزل الفلاتر لترى كل الأدوات.</p>
-      <button type="button" class="btn-ghost" id="empty-reset"><Icon name="x" />إزالة كل الفلاتر</button>
+      <button type="button" class="btn-primary" id="empty-reset">إزالة كل الفلاتر</button>
     </div>
   </main>
 

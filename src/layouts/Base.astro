@@ -1,24 +1,23 @@
 ---
+// على أجهزة Apple يُستخدم خط النظام (SF Arabic وSF Pro)، وعلى غيرها IBM Plex Sans Arabic المستضاف محليًا.
 import "@fontsource/ibm-plex-sans-arabic/arabic-400.css";
 import "@fontsource/ibm-plex-sans-arabic/arabic-500.css";
 import "@fontsource/ibm-plex-sans-arabic/arabic-600.css";
+import "@fontsource/ibm-plex-sans-arabic/arabic-700.css";
 import "@fontsource/ibm-plex-sans-arabic/latin-400.css";
 import "@fontsource/ibm-plex-sans-arabic/latin-500.css";
 import "@fontsource/ibm-plex-sans-arabic/latin-600.css";
-import "@fontsource/noto-kufi-arabic/arabic-600.css";
-import "@fontsource/noto-kufi-arabic/arabic-700.css";
-import "@fontsource/noto-kufi-arabic/latin-600.css";
-import "@fontsource/noto-kufi-arabic/latin-700.css";
+import "@fontsource/ibm-plex-sans-arabic/latin-700.css";
 import "@fontsource/ibm-plex-mono/latin-400.css";
 import "@fontsource/ibm-plex-mono/latin-500.css";
 import "../styles/global.css";
 import { url } from "../lib/data";
 import Icon from "../components/Icon.astro";
 import Logo from "../components/Logo.astro";
+import ThemeToggle from "../components/ThemeToggle.astro";
+import HeartLink from "../components/HeartLink.astro";
 import sansAr400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-400-normal.woff2?url";
-import sansAr600 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-600-normal.woff2?url";
-import kufiAr700 from "@fontsource/noto-kufi-arabic/files/noto-kufi-arabic-arabic-700-normal.woff2?url";
-import kufiAr600 from "@fontsource/noto-kufi-arabic/files/noto-kufi-arabic-arabic-600-normal.woff2?url";
+import sansAr700 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-700-normal.woff2?url";
 import sansLat400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-latin-400-normal.woff2?url";
 
 interface Props { title: string; description: string; path?: string; noindex?: boolean }
@@ -42,10 +41,10 @@ const icon =
     {noindex && <meta name="robots" content="noindex" />}
     <link rel="icon" href={icon} />
     <link rel="apple-touch-icon" href={url("apple-touch-icon.png")} />
-    <meta name="theme-color" content="#F6F7FA" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0B0F15" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
     <link rel="alternate" type="application/rss+xml" title="أحدث الأدوات المضافة" href={new URL("feed.xml", Astro.site).href} />
-    {[sansAr400, sansAr600, kufiAr700, kufiAr600, sansLat400].map((f) => <link rel="preload" href={f} as="font" type="font/woff2" crossorigin />)}
+    {[sansAr400, sansAr700, sansLat400].map((f) => <link rel="preload" href={f} as="font" type="font/woff2" crossorigin />)}
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ar_AR" />
     <meta property="og:title" content={title} />
@@ -54,25 +53,48 @@ const icon =
     <meta name="twitter:card" content="summary" />
   </head>
   <body>
-    <div class="wrap" dir="rtl" lang="ar">
-      <slot />
-      <footer class="foot">
-        <div class="foot-top">
-          <a class="brand" href={url()}>
-            <Logo />
-            <span>دليل الأدوات</span>
-          </a>
-          <nav class="foot-nav" aria-label="روابط الموقع">
-            <a href={url()}><Icon name="home" />الرئيسية</a>
-            <a href={url("favorites")}><Icon name="heart" />المفضلة</a>
-            <a href={url("feed.xml")}><Icon name="rss" /><bdi>RSS</bdi></a>
-          </nav>
+    <a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+    <header class="gnav">
+      <div class="gnav-in">
+        <a class="brand" href={url()} aria-label="دليل الأدوات: الصفحة الرئيسية">
+          <Logo size={28} />
+          <span>دليل الأدوات</span>
+        </a>
+        <nav class="gnav-links" aria-label="التنقل الرئيسي">
+          <a href={url("#list")}>الأدوات</a>
+          <a href={url("#build-h")}>ماذا تبني؟</a>
+          <a href={url("#latest-h")}>الأحدث</a>
+          <a href={url("favorites")}>المفضلة</a>
+        </nav>
+        <div class="actions">
+          <slot name="nav-extra" />
+          <ThemeToggle />
+          <HeartLink />
         </div>
+      </div>
+    </header>
+
+    <div class="wrap" id="main" dir="rtl" lang="ar">
+      <slot />
+    </div>
+
+    <footer class="foot">
+      <div class="foot-in">
         <div class="foot-notes">
           <slot name="footer" />
         </div>
-      </footer>
-    </div>
+        <div class="foot-bottom">
+          <a class="brand sm" href={url()}><Logo size={22} /><span>دليل الأدوات</span></a>
+          <nav class="foot-nav" aria-label="روابط الموقع">
+            <a href={url()}>الرئيسية</a>
+            <a href={url("favorites")}>المفضلة</a>
+            <a href={url("feed.xml")}><bdi>RSS</bdi></a>
+          </nav>
+          <p class="foot-copy">البيانات من <bdi>GitHub</bdi> والمواقع الرسمية، وتُحدَّث النجوم أسبوعيًا.</p>
+        </div>
+      </div>
+    </footer>
+
     <button type="button" class="totop" id="totop" aria-label="العودة إلى الأعلى" title="العودة إلى الأعلى"><Icon name="arrow-up" /></button>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
   </body>

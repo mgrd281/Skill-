@@ -1,6 +1,6 @@
 ---
 import Icon from "./Icon.astro";
-import { type Tool, projectById, rich, isLatin, repoLabel, host, isAppStore, url, statusBadges, formatDate, initials, categoryHue } from "../lib/data";
+import { type Tool, projectById, rich, isLatin, repoLabel, host, isAppStore, url, statusBadges, formatDate, initials } from "../lib/data";
 interface Props { tool: Tool; linkName?: boolean; hideBtn?: boolean; favBtn?: boolean; rank?: number }
 const { tool: t, linkName = true, hideBtn = false, favBtn = true, rank } = Astro.props;
 const search = [
@@ -29,7 +29,7 @@ const date = formatDate(t.added.slice(0, 10));
   data-search={search}
 >
   <div class="c-head">
-    <span class="mono" style={`--h:${categoryHue(t.cat)}`} aria-hidden="true">{initials(t.name)}</span>
+    <span class="mono" aria-hidden="true">{initials(t.name)}</span>
     <div class="c-id">
       <div class="c-title">
         <span class="rank" hidden={!rank} data-top={rank && rank <= 3 ? String(rank) : ""}>{rank ? "#" + rank : ""}</span>
@@ -91,15 +91,13 @@ const date = formatDate(t.added.slice(0, 10));
     {(t.gh || t.site) && (
       <div class="links">
         {t.gh && (
-          <a class="btn gh" href={t.gh} target="_blank" rel="noopener noreferrer">
-            <Icon name="github" />
-            <span class="t"><b><bdi>GitHub</bdi></b><small>{repoLabel(t.gh)}</small></span>
+          <a class="lnk" href={t.gh} target="_blank" rel="noopener noreferrer" aria-label={`GitHub: ${t.name}`} title={repoLabel(t.gh)}>
+            <Icon name="github" /><bdi>GitHub</bdi><Icon name="chevron" class="chev" />
           </a>
         )}
         {t.site && (
-          <a class="btn site" href={t.site} target="_blank" rel="noopener noreferrer">
-            <Icon name="globe" />
-            <span class="t"><b>{isAppStore(t.site) ? "App Store" : "الموقع الرسمي"}</b><small>{host(t.site)}</small></span>
+          <a class="lnk" href={t.site} target="_blank" rel="noopener noreferrer" aria-label={`${isAppStore(t.site) ? "App Store" : "الموقع الرسمي"}: ${t.name}`} title={host(t.site)}>
+            <Icon name="globe" />{isAppStore(t.site) ? "App Store" : "الموقع الرسمي"}<Icon name="chevron" class="chev" />
           </a>
         )}
       </div>

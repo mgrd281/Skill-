@@ -124,7 +124,7 @@ function renderList() {
     const sorted = [...visible].sort(byNew
       ? (a, b) => b.added.localeCompare(a.added) || b.order - a.order
       : (a, b) => b.starsN - a.starsN || a.order - b.order);
-    $("flat-title").textContent = byNew ? "الأحدث إضافةً إلى الدليل" : "مرتبة حسب نجوم GitHub";
+    $("flat-title").textContent = byNew ? "كل الأدوات، الأحدث إضافةً أولًا" : "كل الأدوات، مرتبة حسب نجوم GitHub";
     let rank = 0;
     sorted.forEach((c) => {
       starsGrid.appendChild(c.el);
@@ -133,9 +133,9 @@ function renderList() {
       else c.rankEl.hidden = true;
     });
     starsSection.hidden = sorted.length === 0;
-    starsSection.querySelector("h2 .n").textContent = sorted.length;
     sections.forEach((s) => { s.el.hidden = true; });
   } else {
+    $("flat-title").textContent = "كل الأدوات حسب القسم";
     starsSection.hidden = true;
     cards.forEach((c) => { c.rankEl.hidden = true; });
     sections.forEach((s) => {
@@ -154,6 +154,7 @@ function renderList() {
       s.el.hidden = n === 0;
     });
   }
+  $("flat-n").textContent = visible.size;
   emptyEl.hidden = visible.size !== 0;
   statusEl.textContent = "يظهر " + visible.size + " من " + data.total + (p ? " · " + p.name : "");
   $("hiddenbar").hidden = hidden.size === 0;
