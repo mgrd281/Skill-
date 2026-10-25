@@ -20,8 +20,25 @@ const plain = desc.length > 155 ? desc.slice(0, 152) + "..." : desc;
 const date = formatDate(x.added.slice(0, 10), lang);
 const license = x.license === "none" ? t.noLicense : x.license === "other" ? t.otherLicense : x.license;
 const kindHtml = isLatin(kind) ? `<bdi>${kind}</bdi>` : kind;
+// بيانات منظمة: مسار الصفحة (يظهر في نتائج Google) ووصف المشروع البرمجي
+const abs = (p: string) => new URL(href(lang, p), Astro.site).href;
+const jsonLd: object[] = [
+  {
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: t.navTools, item: abs("") },
+      { "@type": "ListItem", position: 2, name: cat, item: abs("#cat-" + x.cat) },
+      { "@type": "ListItem", position: 3, name: x.name, item: abs("tools/" + x.slug) },
+    ],
+  },
+];
+if (x.gh) jsonLd.push({
+  "@context": "https://schema.org", "@type": "SoftwareSourceCode", name: x.name, description: desc,
+  codeRepository: x.gh, url: abs("tools/" + x.slug), inLanguage: lang,
+  ...(x.license && !["none", "other"].includes(x.license) ? { license: `https://spdx.org/licenses/${x.license}.html` } : {}),
+});
 ---
-<Base title={t.toolTitle(x.name)} description={plain} path={`/tools/${x.slug}`} lang={lang}>
+<Base title={t.toolTitle(x.name)} description={plain} path={`/tools/${x.slug}`} lang={lang} image={`og/${x.slug}.png`} imageAlt={x.name} jsonLd={jsonLd}>
   <article class="product">
     <header class="p-hero">
       <nav class="p-crumb" aria-label={t.crumbAria}>
@@ -50,6 +67,9 @@ const kindHtml = isLatin(kind) ? `<bdi>${kind}</bdi>` : kind;
         <button type="button" class="fav favbtn-lg" data-fav={x.slug} data-name={x.name} aria-pressed="false">
           <Icon name="heart" class="h-off" /><Icon name="heart" weight="fill" class="h-on" />
           <span class="fav-label">{t.favAddTitle}</span>
+        </button>
+        <button type="button" class="sharebtn" data-share data-title={x.name} aria-label={t.shareAria(x.name)}>
+          <Icon name="export" /><span>{t.share}</span>
         </button>
       </div>
       {warns.length > 0 && (

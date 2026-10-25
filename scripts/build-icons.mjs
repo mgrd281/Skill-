@@ -7,7 +7,7 @@ import path from "node:path";
 const NAMES = [
   // الواجهة
   "arrow-up", "bell", "caret-left", "caret-right", "check", "clock", "copy", "eye-slash", "funnel", "github-logo", "globe",
-  "heart", "info", "magnifying-glass", "moon", "rss-simple", "squares-four", "star", "sun", "translate", "warning", "x",
+  "export", "heart", "info", "magnifying-glass", "moon", "rss-simple", "squares-four", "star", "sun", "translate", "warning", "x",
   // أنواع الأدوات
   "sparkle", "plug", "package", "wrench", "stack", "device-mobile",
   // الأقسام ومشاريع "ماذا تبني؟"

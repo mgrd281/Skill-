@@ -26,12 +26,21 @@ const appData = {
   feed: href(lang, "feed.xml"),
   recent: recentTools.map((r) => ({ slug: r.slug, name: r.name, added: r.added, cat: catName(r.cat, lang) })),
 };
+// بيانات منظمة: اسم الموقع وأعلى الأدوات نجومًا
+const abs = (p: string) => new URL(href(lang, p), Astro.site).href;
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "WebSite", name: t.siteName, alternateName: t.siteTitle, url: abs(""), inLanguage: lang, description: t.homeDesc(total) },
+  {
+    "@context": "https://schema.org", "@type": "ItemList", name: t.allTools,
+    itemListElement: byStars.slice(0, 10).map((x, i) => ({ "@type": "ListItem", position: i + 1, name: x.name, url: abs("tools/" + x.slug) })),
+  },
+];
 const kinds: Array<[string, any, string]> = [
   ["Skill", "sparkle", t.legendSkill_h],
   ["MCP", "plug", t.legendMcp_h],
 ];
 ---
-<Base title={t.siteTitle} description={t.homeDesc(total)} lang={lang}>
+<Base title={t.siteTitle} description={t.homeDesc(total)} lang={lang} jsonLd={jsonLd}>
   <div class="notif-wrap" slot="nav-extra">
     <button type="button" id="bell" class="bell" aria-haspopup="dialog" aria-expanded="false" aria-controls="notif" aria-label={t.bellAria}>
       <Icon name="bell" />

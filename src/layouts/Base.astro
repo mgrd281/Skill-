@@ -16,6 +16,7 @@ import Logo from "../components/Logo.astro";
 import ThemeToggle from "../components/ThemeToggle.astro";
 import HeartLink from "../components/HeartLink.astro";
 import IconSprite from "../components/IconSprite.astro";
+import Feedback from "../components/Feedback.astro";
 import { useIcon } from "../lib/icon-sprite";
 import sansAr400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-400-normal.woff2?url";
 import sansAr700 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-700-normal.woff2?url";
@@ -25,12 +26,14 @@ import { type Lang, LANGS, DEFAULT_LANG, dirOf, LANG_NAME, OG_LOCALE, href, t as
 
 // path: مسار الصفحة بدون بادئة اللغة ("/" أو "/tools/x"). كل صفحة موجودة بالعربية والألمانية.
 // switchPath: وجهة زر اللغة إن اختلفت عن path (صفحة 404 تفتح الرئيسية باللغة الأخرى)
-interface Props { title: string; description: string; path?: string; switchPath?: string; noindex?: boolean; lang?: Lang }
-const { title, description, path = "/", switchPath = path, noindex = false, lang = DEFAULT_LANG } = Astro.props;
+// image: صورة المشاركة (مسار داخل الموقع)، والافتراضي صورة الرئيسية بلغة الصفحة. jsonLd: بيانات منظمة لمحركات البحث
+interface Props { title: string; description: string; path?: string; switchPath?: string; noindex?: boolean; lang?: Lang; image?: string; imageAlt?: string; jsonLd?: object[] }
+const { title, description, path = "/", switchPath = path, noindex = false, lang = DEFAULT_LANG, image = `og/home-${lang}.png`, imageAlt = title, jsonLd = [] } = Astro.props;
 const t = dict(lang);
 const other: Lang = lang === "ar" ? "de" : "ar";
 const abs = (l: Lang) => new URL(href(l, path), Astro.site).href;
 const canonical = abs(lang);
+const ogImage = new URL(href(DEFAULT_LANG, image), Astro.site).href;
 // العربية تحتاج خطها العربي أولًا، والألمانية الحروف اللاتينية فقط
 const preloads = lang === "ar" ? [sansAr400, sansAr700, sansLat400] : [sansLat400, sansLat700];
 // يُرسم محتوى الصفحة أولًا حتى تُعرف كل أيقوناتها قبل رسم IconSprite،
@@ -38,7 +41,11 @@ const preloads = lang === "ar" ? [sansAr400, sansAr700, sansLat400] : [sansLat40
 const navExtra = await Astro.slots.render("nav-extra");
 const main = await Astro.slots.render("default");
 const footer = await Astro.slots.render("footer");
-for (const n of ["moon", "sun", "heart", "arrow-up", "translate"] as const) useIcon(Astro.locals, n);
+for (const n of ["moon", "sun", "heart", "arrow-up", "translate", "star"] as const) useIcon(Astro.locals, n);
+// أيقونات نافذة الرأي (Feedback.astro) بأوزانها الخاصة
+useIcon(Astro.locals, "star", "fill");
+useIcon(Astro.locals, "x", "bold");
+useIcon(Astro.locals, "check", "bold");
 const icon =
   "data:image/svg+xml," +
   encodeURIComponent(
@@ -69,7 +76,16 @@ const icon =
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:site_name" content={t.siteName} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={imageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    {jsonLd.map((d) => <script type="application/ld+json" set:html={JSON.stringify(d)} />)}
   </head>
   <body>
     <a class="skip" href="#main">{t.skip}</a>
@@ -111,6 +127,7 @@ const icon =
             <a href={href(lang)}>{t.home}</a>
             <a href={href(lang, "favorites")}>{t.navFavs}</a>
             <a href={href(lang, "feed.xml")}><bdi>RSS</bdi></a>
+            <button type="button" data-feedback>{t.fbOpen}</button>
           </nav>
           <nav class="foot-lang" aria-label={t.footLangAria}>
             {LANGS.map((l) => l === lang
@@ -124,10 +141,12 @@ const icon =
 
     <button type="button" class="totop" id="totop" aria-label={t.toTop} title={t.toTop}><Icon name="arrow-up" /></button>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <Feedback lang={lang} />
     <IconSprite />
   </body>
 </html>
 
 <script>
   import "../scripts/ui.js";
+  import "../scripts/feedback.js";
 </script>

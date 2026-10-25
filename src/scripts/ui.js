@@ -53,6 +53,14 @@ if (q) {
 
 document.addEventListener("click", (e) => {
   if (!(e.target instanceof Element)) return;
+  // زر المشاركة: قائمة المشاركة في الجوال، ونسخ الرابط على الحاسوب
+  const sh = e.target.closest("[data-share]");
+  if (sh) {
+    const data = { title: sh.dataset.title || document.title, url: location.href.split("#")[0] };
+    if (navigator.share) navigator.share(data).catch(() => {});
+    else navigator.clipboard?.writeText(data.url).then(() => toast(L.shareCopied), () => {});
+    return;
+  }
   if (e.target.closest("[data-focus-search]")) { e.preventDefault(); focusSearch(); return; }
   const more = e.target.closest(".usemore");
   if (more) {

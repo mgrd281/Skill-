@@ -1,0 +1,39 @@
+---
+// نافذة "رأيك": تظهر على يمين الشاشة بعد دقيقة من التصفح (src/scripts/feedback.js)، أو من رابط في التذييل.
+// تُرسل إلى api/feedback.js. أيقوناتها مسجلة يدويًا في Base.astro لأنها تُرسم مع القالب.
+import Icon from "./Icon.astro";
+import { type Lang, t as dict } from "../i18n";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict(lang);
+---
+<div class="fb" id="fb" role="dialog" aria-labelledby="fb-h" hidden>
+  <button type="button" class="fb-x" id="fb-x" aria-label={t.fbClose} title={t.fbClose}><Icon name="x" weight="bold" /></button>
+  <form class="fb-form" id="fb-form" novalidate>
+    <h2 class="fb-h" id="fb-h">{t.fbTitle}</h2>
+    <p class="fb-sub">{t.fbSub}</p>
+    <fieldset class="fb-stars" id="fb-stars">
+      <legend class="sr">{t.fbRate}</legend>
+      {[1, 2, 3, 4, 5].map((n) => (
+        <>
+          <input type="radio" name="rating" value={n} id={"fb-r" + n} class="fb-r" />
+          <label for={"fb-r" + n} data-n={n}>
+            <Icon name="star" class="s-off" /><Icon name="star" weight="fill" class="s-on" /><span class="sr">{t.fbStar(n)}</span>
+          </label>
+        </>
+      ))}
+    </fieldset>
+    <label class="fb-l" for="fb-msg">{t.fbMsg}</label>
+    <textarea id="fb-msg" name="message" rows="3" maxlength="1000" placeholder={t.fbMsgPh}></textarea>
+    <input type="text" name="website" class="fb-hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <p class="fb-err" id="fb-err" role="alert" hidden></p>
+    <div class="fb-foot">
+      <small>{t.fbPrivacy}</small>
+      <button type="submit" class="btn-primary fb-send" id="fb-send" disabled>{t.fbSend}</button>
+    </div>
+  </form>
+  <div class="fb-done" id="fb-done" hidden>
+    <span class="fb-ok"><Icon name="check" weight="bold" /></span>
+    <p>{t.fbThanks}</p>
+  </div>
+</div>

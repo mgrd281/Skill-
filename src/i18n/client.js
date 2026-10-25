@@ -33,6 +33,8 @@ const ar = {
   less: "أقل",
   addedOn: "أُضيفت إلى الدليل: ",
   locale: "ar-u-nu-latn",
+  fbError: "تعذّر الإرسال الآن. حاول مرة أخرى بعد قليل.",
+  shareCopied: "تم نسخ رابط الصفحة",
 };
 
 const de = {
@@ -69,6 +71,8 @@ const de = {
   less: "Weniger",
   addedOn: "Ins Verzeichnis aufgenommen: ",
   locale: "de-DE",
+  fbError: "Senden gerade nicht möglich. Versuch es gleich noch einmal.",
+  shareCopied: "Link kopiert",
 };
 
 export const LANG = document.documentElement.lang === "de" ? "de" : "ar";

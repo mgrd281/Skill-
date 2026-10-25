@@ -140,6 +140,21 @@ const ar = {
   // خلاصة RSS
   feedTitle: "دليل أدوات التصميم والتطوير: أحدث الإضافات",
   feedDesc: "أحدث الأدوات المضافة إلى الدليل",
+
+  // نافذة الرأي
+  fbTitle: "كيف تجد الدليل؟",
+  fbSub: "رأيك يساعدنا على تحسينه، ولن يأخذ أكثر من دقيقة.",
+  fbRate: "قيّم الدليل",
+  fbStar: (n: number) => `${n} من 5`,
+  fbMsg: "اترك رسالة (اختياري)",
+  fbMsgPh: "ما الذي أعجبك؟ وما الذي ينقصك؟",
+  fbSend: "إرسال",
+  fbClose: "إغلاق",
+  fbThanks: "شكرًا لك! وصلنا رأيك.",
+  fbPrivacy: "نحفظ التقييم والرسالة فقط، بلا اسم أو بريد.",
+  fbOpen: "رأيك في الدليل",
+  share: "مشاركة",
+  shareAria: (name: string) => `مشاركة صفحة ${name}`,
 };
 
 type Dict = typeof ar;
@@ -279,6 +294,20 @@ const de: Dict = {
 
   feedTitle: "Tool-Verzeichnis: zuletzt hinzugefügt",
   feedDesc: "Die zuletzt ins Verzeichnis aufgenommenen Tools",
+
+  fbTitle: "Wie gefällt dir das Verzeichnis?",
+  fbSub: "Dein Feedback hilft uns, es besser zu machen – dauert keine Minute.",
+  fbRate: "Verzeichnis bewerten",
+  fbStar: (n: number) => `${n} von 5`,
+  fbMsg: "Nachricht hinterlassen (optional)",
+  fbMsgPh: "Was gefällt dir? Was fehlt dir?",
+  fbSend: "Senden",
+  fbClose: "Schließen",
+  fbThanks: "Danke! Dein Feedback ist angekommen.",
+  fbPrivacy: "Wir speichern nur Bewertung und Nachricht – ohne Name oder E-Mail.",
+  fbOpen: "Feedback geben",
+  share: "Teilen",
+  shareAria: (name: string) => `Seite von ${name} teilen`,
 };
 
 export const ui = { ar, de };
