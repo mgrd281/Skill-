@@ -83,23 +83,32 @@ const appData = {
         <button type="button" class="q-clear" id="q-clear" aria-label="مسح البحث" hidden><Icon name="x" /></button>
         <kbd class="q-kbd" aria-hidden="true">/</kbd>
       </div>
-      <label class="sortbox" for="sort">
-        <Icon name="sort" />
-        <span class="sl">الترتيب</span>
-        <select id="sort">
-          <option value="stars">الأعلى نجومًا</option>
-          <option value="cat">حسب القسم</option>
-          <option value="new">الأحدث إضافةً</option>
-        </select>
-      </label>
+      <button type="button" class="cat-btn" id="cat-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="catpanel">
+        <Icon name="grid" />
+        <span class="cat-label" id="cat-label">كل الأقسام</span>
+        <span class="cat-badge" id="cat-badge" hidden>0</span>
+        <Icon name="chevron" class="cat-chev" />
+      </button>
     </div>
-    <div class="chips" id="chips" role="group" aria-label="الأقسام">
-      <button type="button" class="chip" data-id="all">الكل<span class="n">{total}</span></button>
-      {categories.map((c) => (
-        <button type="button" class="chip" data-id={c.id}><span set:html={rich(c.name)} /><span class="n"></span></button>
-      ))}
-      <button type="button" class="chip skillchip" data-id="skill">المهارات فقط<span class="n"></span></button>
-      <button type="button" class="chip newchip" data-id="new">الجديد فقط<span class="n"></span></button>
+  </div>
+
+  <div class="cat-backdrop" id="cat-backdrop" hidden></div>
+  <div class="catpanel" id="catpanel" role="dialog" aria-label="اختر القسم" hidden>
+    <div class="cp-head">
+      <h3>الأقسام</h3>
+      <button type="button" class="linkbtn" id="cat-done">تم</button>
+    </div>
+    <div class="cp-body" id="chips">
+      <div class="cp-toggles" role="group" aria-label="تصفية إضافية">
+        <button type="button" class="chip skillchip" data-id="skill">المهارات فقط<span class="n"></span></button>
+        <button type="button" class="chip newchip" data-id="new">الجديد فقط<span class="n"></span></button>
+      </div>
+      <div class="cp-grid" role="group" aria-label="الأقسام">
+        <button type="button" class="chip" data-id="all">كل الأقسام<span class="n">{total}</span></button>
+        {categories.map((c) => (
+          <button type="button" class="chip" data-id={c.id}><span set:html={rich(c.name)} /><span class="n"></span></button>
+        ))}
+      </div>
     </div>
   </div>
 
@@ -147,7 +156,7 @@ const appData = {
 
   <main class="band alt" id="list">
     <div class="list-head">
-      <h2 class="sec-title"><span id="flat-title">كل الأدوات، مرتبة حسب نجوم <bdi>GitHub</bdi></span><span class="n" id="flat-n">{total}</span></h2>
+      <h2 class="sec-title"><b class="ttl">كل الأدوات.</b> <span id="flat-title">مرتبة حسب نجوم <bdi>GitHub</bdi>.</span><span class="n" id="flat-n">{total}</span></h2>
       <details class="legend-wrap">
         <summary><Icon name="info" />ما معنى الشارات؟</summary>
         <ul class="legend">
@@ -171,16 +180,26 @@ const appData = {
     <div class="listinfo">
       <p class="status" id="status" aria-live="polite"></p>
       <p class="hiddenbar" id="hiddenbar" hidden><span id="hidden-n"></span> <button type="button" class="linkbtn" id="unhide">استعادة المخفية</button></p>
+      <label class="sortbox" for="sort">
+        <span class="sl">الترتيب:</span>
+        <select id="sort">
+          <option value="stars">الأعلى نجومًا</option>
+          <option value="cat">حسب القسم</option>
+          <option value="new">الأحدث إضافةً</option>
+        </select>
+      </label>
     </div>
     <section class="cat" id="by-stars" aria-labelledby="flat-title">
       <div class="grid" id="stars-grid">
         {byStars.map((t) => <Card tool={t} hideBtn rank={rankOf.get(t.slug)} />)}
       </div>
+      <div class="more-wrap"><button type="button" class="btn-more" id="more" hidden>عرض المزيد <span id="more-n"></span></button></div>
     </section>
     {categories.map((c) => (
       <section class="cat" id={"cat-" + c.id} data-cat-section={c.id} hidden>
         <h2 class="cat-title"><span set:html={rich(c.name)} /><span class="n">{tools.filter((t) => t.cat === c.id).length}</span></h2>
         <div class="grid" data-grid={c.id}></div>
+        <button type="button" class="sec-more" data-cat={c.id} hidden>عرض كل الـ <span class="sm-n"></span> في هذا القسم<Icon name="chevron" /></button>
       </section>
     ))}
     <div class="empty" id="empty" hidden>
