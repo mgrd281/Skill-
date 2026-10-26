@@ -28,6 +28,7 @@
   --red: #C4281C;
   --red-soft: rgb(255 59 48 / .12);
   --star: #E9A700;
+  --ring: #6E8BFF; /* حلقة زر الصعود: تقع على دائرة --ink، فهي أزرق فاتح في الوضع الفاتح وأزرق الهوية في الداكن */
   --icon-tile: #FFFFFF; /* بلاطة أيقونات التطبيقات: فاتحة في الوضعين، فألوان الأيقونة كما صممها أصحابها */
   --glass: rgb(255 255 255 / .72);
 
@@ -69,7 +70,7 @@ html[dir="ltr"] { --start: left; --end: right; --fwd: 1; }
     --ink: #F5F5F7; --ink-2: #D2D2D7; --muted: #A1A1A6; --line: #424245; --line-soft: #2C2C2E;
     --accent: #6E8BFF; --accent-2: #B49BFF; --accent-hover: #8FA5FF; --accent-ink: #8FA5FF; --accent-soft: rgb(110 139 255 / .16); --on-accent: #FFFFFF; --btn: #3355E8; --btn-hover: #4466F0;
     --orange: #FF9F0A; --orange-soft: rgb(255 159 10 / .16); --green: #30D158; --green-soft: rgb(48 209 88 / .16);
-    --red: #FF6961; --red-soft: rgb(255 69 58 / .18); --star: #FFC94D; --icon-tile: #F5F5F7;
+    --red: #FF6961; --red-soft: rgb(255 69 58 / .18); --star: #FFC94D; --icon-tile: #F5F5F7; --ring: #2446D6;
     --glass: rgb(22 22 23 / .72);
     --focus: rgb(110 139 255 / .7);
     color-scheme: dark;
@@ -80,7 +81,7 @@ html[dir="ltr"] { --start: left; --end: right; --fwd: 1; }
   --ink: #F5F5F7; --ink-2: #D2D2D7; --muted: #A1A1A6; --line: #424245; --line-soft: #2C2C2E;
   --accent: #6E8BFF; --accent-2: #B49BFF; --accent-hover: #8FA5FF; --accent-ink: #8FA5FF; --accent-soft: rgb(110 139 255 / .16); --on-accent: #FFFFFF; --btn: #3355E8; --btn-hover: #4466F0;
   --orange: #FF9F0A; --orange-soft: rgb(255 159 10 / .16); --green: #30D158; --green-soft: rgb(48 209 88 / .16);
-  --red: #FF6961; --red-soft: rgb(255 69 58 / .18); --star: #FFC94D; --icon-tile: #F5F5F7;
+  --red: #FF6961; --red-soft: rgb(255 69 58 / .18); --star: #FFC94D; --icon-tile: #F5F5F7; --ring: #2446D6;
   --glass: rgb(22 22 23 / .72);
   --focus: rgb(110 139 255 / .7);
   color-scheme: dark;
@@ -1304,7 +1305,7 @@ a.tr-v:hover { color: var(--accent); text-decoration: underline; text-underline-
 .totop-ring { position: absolute; inset: 0; width: 100%; height: 100%; rotate: -90deg; }
 .totop-ring circle { fill: none; stroke-width: 2.5; }
 .totop-ring .trk { stroke: var(--bg); opacity: .22; }
-.totop-ring .bar { stroke: var(--star); stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: calc(100 - var(--p, 0)); }
+.totop-ring .bar { stroke: var(--ring); stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: calc(100 - var(--p, 0)); }
 /* أثناء الصعود: يخفت الزر ويدور السهم قليلًا ليدل على أن الحركة جارية */
 .totop.going { opacity: .55; pointer-events: none; }
 /* طبقة تمويه الحركة: بحجم الشاشة وحدها (لا الصفحة كلها)، تُنشأ وقت الصعود وتظهر في منتصفه فقط */
