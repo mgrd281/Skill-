@@ -33,7 +33,7 @@
   },
   "blender": {
     "file": "app-icons/blender.png",
-    "src": "https://raw.githubusercontent.com/blender/blender/main/doc/python_api/static/blender_logo.svg"
+    "src": "https://raw.githubusercontent.com/blender/blender/main/release/darwin/blender_liquid_glass.icon/Assets/Blender%20Logo.svg"
   },
   "boring-notch": {
     "file": "app-icons/boring-notch.png",
@@ -59,10 +59,6 @@
     "file": "app-icons/droid-ify.png",
     "src": "https://raw.githubusercontent.com/Droid-ify/client/main/app/src/main/ic_launcher-playstore.png"
   },
-  "duckduckgo": {
-    "file": "app-icons/duckduckgo.png",
-    "src": "https://raw.githubusercontent.com/duckduckgo/apple-browsers/main/iOS/DuckDuckGo/UserInterfaceResources/Assets.xcassets/DDG-AppIcon-Alpha.appiconset/Icon-Tinted-Alpha-1024x1024.png"
-  },
   "eartrumpet": {
     "file": "app-icons/eartrumpet.png",
     "src": "https://raw.githubusercontent.com/File-New-Project/EarTrumpet/master/.chocolatey/logo.png"
@@ -78,10 +74,6 @@
   "files": {
     "file": "app-icons/files.png",
     "src": "https://raw.githubusercontent.com/files-community/Files/main/src/Files.App/Assets/AppTiles/Release/Large310x310Logo.scale-400.png"
-  },
-  "firefox": {
-    "file": "app-icons/firefox.png",
-    "src": "https://raw.githubusercontent.com/mozilla-mobile/firefox-ios/main/SampleComponentLibraryApp/SampleComponentLibraryApp/Assets.xcassets/AppIcon.appiconset/1024.png"
   },
   "flameshot": {
     "file": "app-icons/flameshot.png",
@@ -114,10 +106,6 @@
   "ice-cubes": {
     "file": "app-icons/ice-cubes.png",
     "src": "https://raw.githubusercontent.com/Dimillian/IceCubesApp/main/IceCubesApp/Assets.xcassets/AppIconAlternate4.appiconset/1024.png"
-  },
-  "iina": {
-    "file": "app-icons/iina.png",
-    "src": "https://raw.githubusercontent.com/iina/iina/develop/iina/Assets.xcassets/DocIcons/doc_3gp.iconset/icon_512x512.png"
   },
   "ish": {
     "file": "app-icons/ish.png",
@@ -183,13 +171,13 @@
     "file": "app-icons/newpipe.png",
     "src": "https://raw.githubusercontent.com/TeamNewPipe/NewPipe/dev/fastlane/metadata/android/en-US/images/icon.png"
   },
-  "notepad": {
-    "file": "app-icons/notepad.png",
-    "src": "https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/master/lexilla/doc/LexillaLogo.png"
-  },
   "obs-studio": {
     "file": "app-icons/obs-studio.png",
     "src": "https://raw.githubusercontent.com/obsproject/obs-studio/master/frontend/cmake/macos/Assets.xcassets/AppIcon.appiconset/icon_512x512.png"
+  },
+  "obtainium": {
+    "file": "app-icons/obtainium.png",
+    "src": "https://raw.githubusercontent.com/ImranR98/Obtainium/main/assets/graphics/icon-512x512.png"
   },
   "organic-maps": {
     "file": "app-icons/organic-maps.png",
@@ -197,7 +185,7 @@
   },
   "pearcleaner": {
     "file": "app-icons/pearcleaner.png",
-    "src": "https://raw.githubusercontent.com/alienator88/Pearcleaner/main/Pear%20Resources/Icons-newGray/icon_512x512.png"
+    "src": "https://raw.githubusercontent.com/alienator88/Pearcleaner/main/Pear%20Resources/Icons/icon_512x512.png"
   },
   "planify": {
     "file": "app-icons/planify.png",
@@ -231,10 +219,6 @@
     "file": "app-icons/sharex.png",
     "src": "https://raw.githubusercontent.com/ShareX/ShareX/develop/ShareX.HelpersLib/Resources/ShareX_Logo.png"
   },
-  "signal": {
-    "file": "app-icons/signal.png",
-    "src": "https://raw.githubusercontent.com/signalapp/Signal-Desktop/main/images/app-icon-with-error.png"
-  },
   "tendedero": {
     "file": "app-icons/tendedero.png",
     "src": "https://raw.githubusercontent.com/alejandrobujan/tendedero/main/docs/images/icon.png"
@@ -245,7 +229,7 @@
   },
   "thunderbird-for-android": {
     "file": "app-icons/thunderbird-for-android.png",
-    "src": "https://raw.githubusercontent.com/thunderbird/thunderbird-android/main/app-thunderbird/src/daily/res/mipmap-xxxhdpi/ic_launcher.png"
+    "src": "https://raw.githubusercontent.com/thunderbird/thunderbird-android/main/app-thunderbird/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
   },
   "twinkle-tray": {
     "file": "app-icons/twinkle-tray.png",
@@ -269,7 +253,7 @@
   },
   "wikipedia": {
     "file": "app-icons/wikipedia.png",
-    "src": "https://raw.githubusercontent.com/wikimedia/wikipedia-ios/main/Wikipedia/Images.xcassets/tempAccountIcon.imageset/tempAccountIcon.svg"
+    "src": "https://raw.githubusercontent.com/wikimedia/wikipedia-ios/main/WMFComponents/Sources/WMFComponents/Assets.xcassets/W-share-logo.imageset/wikipedia-logo.svg"
   },
   "windhawk": {
     "file": "app-icons/windhawk.png",
@@ -277,6 +261,6 @@
   },
   "windows-terminal": {
     "file": "app-icons/windows-terminal.png",
-    "src": "https://raw.githubusercontent.com/microsoft/terminal/main/res/terminal/images-Can/LockScreenLogo.scale-400.png"
+    "src": "https://raw.githubusercontent.com/microsoft/terminal/main/res/terminal/images/Square150x150Logo.scale-400.png"
   }
 }
