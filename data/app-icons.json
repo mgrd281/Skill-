@@ -41,7 +41,7 @@
   },
   "bottles": {
     "file": "app-icons/bottles.png",
-    "src": "https://raw.githubusercontent.com/bottlesdevs/Bottles/main/data/icons/hicolor/scalable/apps/com.usebottles.bottles-program.svg"
+    "src": "https://raw.githubusercontent.com/bottlesdevs/Bottles/main/data/icons/hicolor/scalable/apps/com.usebottles.bottles.svg"
   },
   "breezy-weather": {
     "file": "app-icons/breezy-weather.png",
@@ -49,7 +49,7 @@
   },
   "czkawka": {
     "file": "app-icons/czkawka.png",
-    "src": "https://raw.githubusercontent.com/qarmin/czkawka/master/cedinia/res/mipmap-xxxhdpi/ic_launcher.png"
+    "src": "https://raw.githubusercontent.com/qarmin/czkawka/master/data/icons/com.github.qarmin.czkawka.svg"
   },
   "ditto": {
     "file": "app-icons/ditto.png",
@@ -67,9 +67,17 @@
     "file": "app-icons/eartrumpet.png",
     "src": "https://raw.githubusercontent.com/File-New-Project/EarTrumpet/master/.chocolatey/logo.png"
   },
+  "easy-effects": {
+    "file": "app-icons/easy-effects.png",
+    "src": "https://raw.githubusercontent.com/wwmm/easyeffects/master/src/contents/icons/com.github.wwmm.easyeffects.svg"
+  },
+  "extension-manager": {
+    "file": "app-icons/extension-manager.png",
+    "src": "https://raw.githubusercontent.com/mjakeman/extension-manager/master/data/icons/com.mattjakeman.ExtensionManager.svg"
+  },
   "files": {
     "file": "app-icons/files.png",
-    "src": "https://raw.githubusercontent.com/files-community/Files/main/src/Files.App/Assets/AppTiles/Dev/Large310x310Logo.scale-400.png"
+    "src": "https://raw.githubusercontent.com/files-community/Files/main/src/Files.App/Assets/AppTiles/Release/Large310x310Logo.scale-400.png"
   },
   "firefox": {
     "file": "app-icons/firefox.png",
@@ -78,6 +86,10 @@
   "flameshot": {
     "file": "app-icons/flameshot.png",
     "src": "https://raw.githubusercontent.com/flameshot-org/flameshot/master/data/img/hicolor/scalable/apps/flameshot.svg"
+  },
+  "flatseal": {
+    "file": "app-icons/flatseal.png",
+    "src": "https://raw.githubusercontent.com/tchx84/Flatseal/master/data/icons/com.github.tchx84.Flatseal.svg"
   },
   "flow-launcher": {
     "file": "app-icons/flow-launcher.png",
@@ -123,6 +135,10 @@
     "file": "app-icons/keycastr.png",
     "src": "https://raw.githubusercontent.com/keycastr/keycastr/main/keycastr/KeyCastrLogo.png"
   },
+  "kooha": {
+    "file": "app-icons/kooha.png",
+    "src": "https://raw.githubusercontent.com/SeaDve/Kooha/main/data/icons/io.github.seadve.Kooha.svg"
+  },
   "libreoffice": {
     "file": "app-icons/libreoffice.png",
     "src": "https://raw.githubusercontent.com/LibreOffice/core/master/android/app/ic_launcher-web.png"
@@ -145,7 +161,7 @@
   },
   "mastodon": {
     "file": "app-icons/mastodon.png",
-    "src": "https://raw.githubusercontent.com/mastodon/mastodon-ios/develop/WidgetExtension/Assets.xcassets/BrandIcon.imageset/Logo%201.svg"
+    "src": "https://raw.githubusercontent.com/mastodon/mastodon-ios/develop/OpenInActionExtension/Media.xcassets/Icon.appiconset/MastodonActionExtensionIcon%403x.png"
   },
   "material-files": {
     "file": "app-icons/material-files.png",
@@ -185,7 +201,7 @@
   },
   "planify": {
     "file": "app-icons/planify.png",
-    "src": "https://raw.githubusercontent.com/alainm23/planify/main/data/icons/hicolor/scalable/apps/io.github.alainm23.planify.Devel.svg"
+    "src": "https://raw.githubusercontent.com/alainm23/planify/main/data/io.github.alainm23.planify.png"
   },
   "pocket-casts": {
     "file": "app-icons/pocket-casts.png",
@@ -198,6 +214,10 @@
   "rectangle": {
     "file": "app-icons/rectangle.png",
     "src": "https://raw.githubusercontent.com/rxhanson/Rectangle/main/Rectangle/Assets.xcassets/AppIcon.appiconset/mac512pts1x.png"
+  },
+  "resources": {
+    "file": "app-icons/resources.png",
+    "src": "https://raw.githubusercontent.com/nokyan/resources/main/data/icons/net.nokyan.Resources.svg"
   },
   "rufus": {
     "file": "app-icons/rufus.png",
@@ -225,7 +245,7 @@
   },
   "thunderbird-for-android": {
     "file": "app-icons/thunderbird-for-android.png",
-    "src": "https://raw.githubusercontent.com/thunderbird/thunderbird-android/main/app-thunderbird/src/beta/res/mipmap-xxxhdpi/ic_launcher.png"
+    "src": "https://raw.githubusercontent.com/thunderbird/thunderbird-android/main/app-thunderbird/src/daily/res/mipmap-xxxhdpi/ic_launcher.png"
   },
   "twinkle-tray": {
     "file": "app-icons/twinkle-tray.png",
