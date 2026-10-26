@@ -24,7 +24,7 @@ export function compareIndex(lang: Lang) {
       const tr = trust(x, lang);
       const row = (id: string) => tr.rows.find((r) => r.id === id);
       const cell = (id: string) => { const r = row(id); return r ? [r.value, r.tone] : null; };
-      const lic = x.license ? (x.license === "none" ? t.noLicense : x.license === "other" ? t.otherLicense : x.license) : null;
+      const lic = x.license ? (x.license === "none" ? t.noLicense : x.license === "other" ? (x.kind === "تطبيق" ? t.otherLicenseApp : t.otherLicense) : x.license) : null;
       const licWarn = licenseTone(x);
       const old = !!x.pushed && (now - new Date(x.pushed).getTime()) / 864e5 > 365;
       return {

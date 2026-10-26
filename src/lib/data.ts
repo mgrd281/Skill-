@@ -200,13 +200,14 @@ const BADGE = {
 
 // درجة تحذير الرخصة لشارة الحالة ولصفحة المقارنة (src/lib/compare-index.ts): bad بلا رخصة، وwarn لرخصة خاصة أو بشروط.
 // تطبيق جاهز: استخدامه لا تقيّده رخصة GPL أو AGPL (شروطهما عند نسخ الشيفرة أو توزيعها)، فالتحذير لرخص غير تجارية فقط،
-// و«بدون رخصة» تحذير لا خطأ: الشيفرة غير مفتوحة لإعادة الاستخدام، لا أن التطبيق ممنوع
+// و«بدون رخصة» تحذير لا خطأ: الشيفرة غير مفتوحة لإعادة الاستخدام، لا أن التطبيق ممنوع. و«other» رخصة لم يعرّفها GitHub
+// (كثيرًا لمشاريع معروفة بملف رخصة مركّب مثل Blender)، فلا تحذير للتطبيق بل إحالة إلى ملف الرخصة
 export function licenseTone(t: Tool): "bad" | "warn" | "" {
   const l = t.license;
   if (!l) return "";
   const app = t.kind === "تطبيق";
   if (l === "none") return app ? "warn" : "bad";
-  if (l === "other") return "warn";
+  if (l === "other") return app ? "" : "warn";
   return (app ? /-NC\b|NonCommercial/i.test(l) : RESTRICTIVE.test(l)) ? "warn" : "";
 }
 
@@ -224,7 +225,7 @@ export function statusBadges(t: Tool, lang: Lang = "ar", now = Date.now()): Badg
   }
   const l = t.license, tone = licenseTone(t);
   if (l === "none") out.push({ kind: tone || "bad", text: b.none, title: t.kind === "تطبيق" ? b.noneAppT : b.noneT });
-  else if (l === "other") out.push({ kind: "warn", text: b.other, title: b.otherT });
+  else if (l === "other") { if (tone) out.push({ kind: "warn", text: b.other, title: b.otherT }); }
   else if (l) out.push({ kind: tone ? "warn" : "ok", text: "", latin: l, title: tone ? b.restrictT(l) : b.licT(l) });
   return out;
 }

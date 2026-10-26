@@ -23,7 +23,8 @@ const badges = statusBadges(x, lang);
 const warns = badges.filter((b) => b.kind !== "ok");
 const plain = desc.length > 155 ? desc.slice(0, 152) + "..." : desc;
 const date = formatDate(x.added.slice(0, 10), lang);
-const license = x.license === "none" ? t.noLicense : x.license === "other" ? t.otherLicense : x.license;
+// رخصة لم يعرّفها GitHub: «رخصة خاصة» للأدوات، وللتطبيق الجاهز إحالة إلى ملف الرخصة (licenseTone في src/lib/data.ts)
+const license = x.license === "none" ? t.noLicense : x.license === "other" ? (x.kind === "تطبيق" ? t.otherLicenseApp : t.otherLicense) : x.license;
 const kindHtml = isLatin(kind) ? `<bdi>${kind}</bdi>` : kind;
 // بيانات منظمة: مسار الصفحة (يظهر في نتائج Google) ووصف المشروع البرمجي
 const abs = (p: string) => new URL(href(lang, p), Astro.site).href;
