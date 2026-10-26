@@ -73,6 +73,9 @@ if (x.gh) jsonLd.push({
         <button type="button" class="sharebtn" data-share data-title={x.name} aria-label={t.shareAria(x.name)}>
           <Icon name="export" /><span>{t.share}</span>
         </button>
+        <a class="sharebtn" href={href(lang, "compare/?t=" + [x.slug, ...related.slice(0, 1).map((r) => r.slug)].join(","))} aria-label={t.compareAria(x.name)}>
+          <Icon name="scales" /><span>{t.compare}</span>
+        </a>
       </div>
       {warns.length > 0 && (
         <ul class="notice">
@@ -114,6 +117,7 @@ if (x.gh) jsonLd.push({
     <section class="band related">
       <h2 class="sec-title" set:html={t.relatedTitle_h} />
       <div class="grid">{related.map((r) => <Card tool={r} lang={lang} />)}</div>
+      <a class="link-more rel-cmp" href={href(lang, "compare/?t=" + [x.slug, ...related.slice(0, 2).map((r) => r.slug)].join(","))}>{t.compareRelated}<Icon name={fwd} /></a>
     </section>
   )}
 

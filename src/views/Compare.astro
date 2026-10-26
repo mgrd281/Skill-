@@ -1,0 +1,71 @@
+---
+// صفحة المقارنة بلغة معينة (/compare/?t=a,b,c): حتى ثلاث أدوات جنبًا إلى جنب. القالب هنا ثابت، والجدول
+// يبنيه src/scripts/compare.js من /compare.json. عناوين الصفوف في <template> حتى تبقى النصوص في ui.ts.
+import Base from "../layouts/Base.astro";
+import Icon from "../components/Icon.astro";
+import { compareSuggestions } from "../lib/compare-index";
+import { txt } from "../lib/data";
+import { type Lang, href, fwdIcon, t as dict } from "../i18n";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict(lang);
+const sugs = compareSuggestions(lang);
+const ROWS: Array<[string, string]> = [
+  ["cat", t.specCat], ["stars", t.specStars_h], ["desc", t.cmpRowDesc], ["pub", t.cmpRowPub], ["run", t.cmpRowRun],
+  ["src", t.cmpRowSrc], ["lic", t.specLicense], ["up", t.specPushed], ["ad", t.specAdded], ["way", t.cmpRowWay],
+  ["cmd", t.installTitle], ["use", t.usefulForProjects],
+];
+---
+<Base title={t.cmpTitle} description={t.cmpLead} path="/compare" lang={lang} noindex>
+  <header class="top page-hero">
+    <span class="cat-mark" aria-hidden="true"><Icon name="scales" weight="duotone" /></span>
+    <h1>{t.cmpH1}</h1>
+    <p class="lead">{t.cmpLead}</p>
+  </header>
+
+  <section class="band alt cmp" aria-labelledby="cmp-h">
+    <h2 class="sr" id="cmp-h">{t.cmpH1}</h2>
+    <div class="cmp-bar">
+      <ul class="cmp-chips" id="cmp-chips" aria-label={t.cmpChosen}></ul>
+      <div class="cmp-add" id="cmp-add">
+        <Icon name="magnifying-glass" />
+        <input id="cmp-q" type="search" role="combobox" aria-expanded="false" aria-controls="cmp-list" aria-autocomplete="list"
+          aria-label={t.cmpAddAria} placeholder={t.cmpAddPh} autocomplete="off" spellcheck="false" />
+        <ul class="cmp-list" id="cmp-list" role="listbox" aria-label={t.qsResults} hidden></ul>
+      </div>
+      <button type="button" class="linkbtn share-view" id="cmp-share" data-share data-title={t.cmpTitle} hidden><Icon name="export" />{t.shareView}</button>
+    </div>
+    <p class="sr" id="cmp-status" aria-live="polite"></p>
+
+    <div class="cmp-wrap" id="cmp-wrap" hidden>
+      <table class="cmp-table" id="cmp-table">
+        <caption class="sr">{t.cmpCaption}</caption>
+        <thead><tr id="cmp-head"><td class="cmp-corner"></td></tr></thead>
+        <tbody id="cmp-body"></tbody>
+      </table>
+    </div>
+
+    <div class="cmp-empty" id="cmp-empty">
+      <p class="cmp-empty-t">{t.cmpEmpty}</p>
+      <h2 class="cmp-sug-h" set:html={t.cmpSuggest_h} />
+      <ul class="cmp-sugs">
+        {sugs.map((s) => (
+          <li><a href={href(lang, "compare/?t=" + s.slugs.join(","))}><span class="cs-n"><bdi>{s.names.join(" · ")}</bdi></span><small set:html={txt(s.cat, lang)} /><Icon name={fwdIcon(lang)} /></a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- عناوين الصفوف، وأيقونات الخلايا: يستنسخها السكربت -->
+  <template id="cmp-rows">
+    {ROWS.map(([id, label]) => <tr data-row={id}><th scope="row" set:html={label} /></tr>)}
+  </template>
+  <template id="cmp-icons"><Icon name="copy" class="ic-copy" /><Icon name="check" weight="bold" class="ic-check" /><Icon name="x" weight="bold" /><Icon name="warning" /></template>
+  <script type="application/json" id="cmp-i18n" set:html={JSON.stringify({ copy: t.copy, copyAria: t.copyAria, cmdAria: t.cmdAria, open: t.cmpOpen })} />
+</Base>
+
+<script>
+  import { initCopy } from "../scripts/copy.js";
+  import "../scripts/compare.js";
+  initCopy(document);
+</script>

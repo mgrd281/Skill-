@@ -30,7 +30,7 @@ const OFFICIAL: Record<string, string> = {
 };
 
 export type Tone = "ok" | "info" | "warn";
-export interface TrustRow { icon: IconName; label: string; value: string; note: string; tone: Tone; href?: string }
+export interface TrustRow { id: "pub" | "run" | "src"; icon: IconName; label: string; value: string; note: string; tone: Tone; href?: string }
 export interface Trust { rows: TrustRow[]; tip: string }
 
 type Words = {
@@ -172,9 +172,9 @@ export function trust(t: Tool, lang: Lang): Trust {
 
   // ١) الناشر
   const owner = ghOwner(t.gh);
-  if (owner && OFFICIAL[owner]) rows.push({ icon: "seal-check", label: w.publisher, value: w.official(OFFICIAL[owner]), note: w.officialNote, tone: "ok", href: "https://github.com/" + owner });
-  else if (owner) rows.push({ icon: "user", label: w.publisher, value: "@" + owner, note: w.accountNote, tone: "info", href: "https://github.com/" + owner });
-  else if (t.site) rows.push({ icon: "globe", label: w.publisher, value: host(t.site), note: w.siteNote, tone: "info", href: t.site });
+  if (owner && OFFICIAL[owner]) rows.push({ id: "pub", icon: "seal-check", label: w.publisher, value: w.official(OFFICIAL[owner]), note: w.officialNote, tone: "ok", href: "https://github.com/" + owner });
+  else if (owner) rows.push({ id: "pub", icon: "user", label: w.publisher, value: "@" + owner, note: w.accountNote, tone: "info", href: "https://github.com/" + owner });
+  else if (t.site) rows.push({ id: "pub", icon: "globe", label: w.publisher, value: host(t.site), note: w.siteNote, tone: "info", href: t.site });
 
   // ٢) أين تعمل
   const server = mcpServer(t);
@@ -182,31 +182,31 @@ export function trust(t: Tool, lang: Lang): Trust {
   const localHttp = !!remoteHost && /^(localhost|127\.0\.0\.1|\[::1\])$/.test(new URL(server!.url).hostname);
   const isPlugin = /(^|\n)(\/plugin|claude plugins?) install /.test(cmd);
   let tip: string;
-  if (server && !remoteHost) { rows.push({ icon: "laptop", label: w.runs, value: w.local, note: w.localNote, tone: "info" }); tip = w.tipLocal; }
-  else if (remoteHost && localHttp) { rows.push({ icon: "laptop", label: w.runs, value: w.localApp, note: w.localAppNote, tone: "info" }); tip = w.tipLocal; }
-  else if (remoteHost) { rows.push({ icon: "cloud", label: w.runs, value: w.remote(remoteHost), note: w.remoteNote(remoteHost), tone: "info" }); tip = w.tipRemote(remoteHost); }
-  else if (isPlugin) { rows.push({ icon: "puzzle-piece", label: w.runs, value: w.plugin, note: w.pluginNote, tone: "info" }); tip = w.tipPlugin; }
-  else if (t.kind === "MCP") { rows.push({ icon: "plug", label: w.runs, value: w.mcp, note: w.mcpNote, tone: "info" }); tip = w.tipLocal; }
-  else if (t.kind === "Skill") { rows.push({ icon: "sparkle", label: w.runs, value: w.skill, note: w.skillNote, tone: "info" }); tip = w.tipSkill; }
-  else if (t.kind === "مكتبة") { rows.push({ icon: "code", label: w.runs, value: w.library, note: w.libraryNote, tone: "info" }); tip = w.tipLibrary; }
-  else if (t.kind === "أداة" || t.kind === "تطبيق") { rows.push({ icon: "terminal-window", label: w.runs, value: w.cli, note: w.cliNote, tone: "info" }); tip = w.tipLocal; }
-  else if (t.kind === "منصة") { rows.push({ icon: "cloud", label: w.runs, value: w.platform, note: w.platformNote, tone: "info" }); tip = w.tipWeb; }
-  else if (t.kind === "صيغة") { rows.push({ icon: "file-text", label: w.runs, value: w.format, note: w.formatNote, tone: "info" }); tip = w.tipLibrary; }
-  else { rows.push({ icon: "globe", label: w.runs, value: w.web, note: w.webNote, tone: "info" }); tip = w.tipWeb; }
+  if (server && !remoteHost) { rows.push({ id: "run", icon: "laptop", label: w.runs, value: w.local, note: w.localNote, tone: "info" }); tip = w.tipLocal; }
+  else if (remoteHost && localHttp) { rows.push({ id: "run", icon: "laptop", label: w.runs, value: w.localApp, note: w.localAppNote, tone: "info" }); tip = w.tipLocal; }
+  else if (remoteHost) { rows.push({ id: "run", icon: "cloud", label: w.runs, value: w.remote(remoteHost), note: w.remoteNote(remoteHost), tone: "info" }); tip = w.tipRemote(remoteHost); }
+  else if (isPlugin) { rows.push({ id: "run", icon: "puzzle-piece", label: w.runs, value: w.plugin, note: w.pluginNote, tone: "info" }); tip = w.tipPlugin; }
+  else if (t.kind === "MCP") { rows.push({ id: "run", icon: "plug", label: w.runs, value: w.mcp, note: w.mcpNote, tone: "info" }); tip = w.tipLocal; }
+  else if (t.kind === "Skill") { rows.push({ id: "run", icon: "sparkle", label: w.runs, value: w.skill, note: w.skillNote, tone: "info" }); tip = w.tipSkill; }
+  else if (t.kind === "مكتبة") { rows.push({ id: "run", icon: "code", label: w.runs, value: w.library, note: w.libraryNote, tone: "info" }); tip = w.tipLibrary; }
+  else if (t.kind === "أداة" || t.kind === "تطبيق") { rows.push({ id: "run", icon: "terminal-window", label: w.runs, value: w.cli, note: w.cliNote, tone: "info" }); tip = w.tipLocal; }
+  else if (t.kind === "منصة") { rows.push({ id: "run", icon: "cloud", label: w.runs, value: w.platform, note: w.platformNote, tone: "info" }); tip = w.tipWeb; }
+  else if (t.kind === "صيغة") { rows.push({ id: "run", icon: "file-text", label: w.runs, value: w.format, note: w.formatNote, tone: "info" }); tip = w.tipLibrary; }
+  else { rows.push({ id: "run", icon: "globe", label: w.runs, value: w.web, note: w.webNote, tone: "info" }); tip = w.tipWeb; }
 
   // ٣) من أين تُثبَّت
-  if (cmd && RUNS_REMOTE_SCRIPT.test(cmd)) { rows.push({ icon: "warning", label: w.source, value: w.script, note: w.scriptNote, tone: "warn" }); tip = w.tipScript; }
-  else if (/@claude-plugins-official\b/.test(cmd)) rows.push({ icon: "storefront", label: w.source, value: w.market, note: w.marketNote, tone: "ok" });
+  if (cmd && RUNS_REMOTE_SCRIPT.test(cmd)) { rows.push({ id: "src", icon: "warning", label: w.source, value: w.script, note: w.scriptNote, tone: "warn" }); tip = w.tipScript; }
+  else if (/@claude-plugins-official\b/.test(cmd)) rows.push({ id: "src", icon: "storefront", label: w.source, value: w.market, note: w.marketNote, tone: "ok" });
   else if (/(^|\n)(?:\/plugin|claude plugins?) marketplace add (\S+)/.test(cmd)) {
     const r = shortRepo(/(?:\/plugin|claude plugins?) marketplace add (\S+)/.exec(cmd)![1]);
-    rows.push({ icon: "storefront", label: w.source, value: w.marketRepo(r), note: w.marketRepoNote, tone: "info", href: "https://github.com/" + r });
-  } else if (remoteHost && !localHttp) rows.push({ icon: "cloud", label: w.source, value: w.noInstall(remoteHost), note: w.noInstallNote, tone: "info" });
+    rows.push({ id: "src", icon: "storefront", label: w.source, value: w.marketRepo(r), note: w.marketRepoNote, tone: "info", href: "https://github.com/" + r });
+  } else if (remoteHost && !localHttp) rows.push({ id: "src", icon: "cloud", label: w.source, value: w.noInstall(remoteHost), note: w.noInstallNote, tone: "info" });
   else if (/^npx (?:-y )?(?:skills(?:@[\w.-]+)?|plugins) add (\S+)/.test(cmd)) {
     const r = shortRepo(/^npx (?:-y )?(?:skills(?:@[\w.-]+)?|plugins) add (\S+)/.exec(cmd)![1]);
-    rows.push({ icon: "github-logo", label: w.source, value: w.repo(r), note: w.repoNote, tone: "info", href: "https://github.com/" + r });
+    rows.push({ id: "src", icon: "github-logo", label: w.source, value: w.repo(r), note: w.repoNote, tone: "info", href: "https://github.com/" + r });
   } else {
     const p = cmd ? packageOf(cmd) : null;
-    if (p) rows.push({ icon: "package", label: w.source, value: w.pkg(p.reg, p.name), note: p.tap ? w.tapNote : w.pkgNote, tone: "info", href: p.href });
+    if (p) rows.push({ id: "src", icon: "package", label: w.source, value: w.pkg(p.reg, p.name), note: p.tap ? w.tapNote : w.pkgNote, tone: "info", href: p.href });
   }
   return { rows, tip };
 }

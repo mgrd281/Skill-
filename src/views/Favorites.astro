@@ -20,6 +20,7 @@ const t = dict(lang);
     <p class="status" id="fav-status" aria-live="polite"></p>
     <div class="favacts">
       <button type="button" class="kit-btn" id="fav-kit" data-kit="" data-kit-title={t.kitFavs}><Icon name="terminal-window" />{t.kitBtn}</button>
+      <a class="kit-btn" id="fav-cmp" href={href(lang, "compare/")} hidden><Icon name="scales" />{t.compare}</a>
       <button type="button" class="linkbtn" id="fav-clear">{t.favClear}</button>
     </div>
   </div>
@@ -74,6 +75,10 @@ const t = dict(lang);
     status.textContent = fmt(L.favCount, { n });
     // حزمة التثبيت للمفضلة بترتيبها (src/scripts/kit.js)
     document.getElementById("fav-kit").dataset.kit = favs.join(" ");
+    // المقارنة: أحدث ثلاث في المفضلة
+    const cmp = document.getElementById("fav-cmp");
+    cmp.hidden = favs.length < 2;
+    cmp.href = cmp.href.split("?")[0] + "?t=" + favs.slice(0, 3).join(",");
   }
 
   initCopy(document);
