@@ -4,8 +4,11 @@ import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
 import Icon from "../components/Icon.astro";
 import Odometer from "../components/Odometer.astro";
+import Mascot from "../components/Mascot.astro";
+import KitDialog from "../components/KitDialog.astro";
 import { tools, categories, projects, starsUpdatedAt, formatDate, recentTools, initials, kindIcon, kindLabel, categoryIcon, projectIcon, txt, catName, projName, projAdvice } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
+import { kitPlan } from "../lib/install.js";
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = dict(lang);
@@ -38,12 +41,14 @@ const jsonLd = [
     itemListElement: byStars.slice(0, 10).map((x, i) => ({ "@type": "ListItem", position: i + 1, name: x.name, url: abs("tools/" + x.slug) })),
   },
 ];
+// زر «حزمة التثبيت» لمشروع فقط إن دخلت الحزمةَ أداتان من أدوات «ابدأ بهذه» على الأقل (src/lib/install.js)
+const kitCount = (slugs: string[]) => slugs.filter((s) => { const x = tools.find((t) => t.slug === s); return x && kitPlan(x).lines; }).length;
 const kinds: Array<[string, any, string]> = [
   ["Skill", "sparkle", t.legendSkill_h],
   ["MCP", "plug", t.legendMcp_h],
 ];
 ---
-<Base title={t.siteTitle} description={t.homeDesc(total)} lang={lang} jsonLd={jsonLd}>
+<Base title={t.siteTitle} description={t.homeDesc(total)} lang={lang} jsonLd={jsonLd} quickSearch={false}>
   <div class="notif-wrap" slot="nav-extra">
     <button type="button" id="bell" class="bell" aria-haspopup="dialog" aria-expanded="false" aria-controls="notif" aria-label={t.bellAria}>
       <Icon name="bell" />
@@ -65,11 +70,14 @@ const kinds: Array<[string, any, string]> = [
 
   <header class="hero">
     <div class="hero-text">
+      <Mascot />
       <p class="eyebrow" style="--i:0">{t.siteName}</p>
       <h1 style="--i:1" set:html={t.heroH1_h} />
       <p class="lead" style="--i:2" set:html={t.heroLead_h} />
       <div class="cta" style="--i:3">
-        <button type="button" class="btn-primary" data-focus-search>{t.ctaSearch}</button>
+        <button type="button" class="hero-search" data-focus-search>
+          <Icon name="magnifying-glass" /><span class="hs-t" set:html={t.heroSearch_h} /><kbd aria-hidden="true">/</kbd>
+        </button>
         <a class="link-more" href="#build-h">{t.navBuild}<Icon name={fwd} /></a>
       </div>
       <ul class="promise" style="--i:4">
@@ -170,7 +178,10 @@ const kinds: Array<[string, any, string]> = [
             <button type="button" class="pickbtn" data-go={p.pickSlugs[i]}><bdi>{name}</bdi></button>
           ))}
         </div>
-        <button type="button" class="clear" data-clear="1">{t.showAll}</button>
+        <div class="advice-acts">
+          {kitCount(p.pickSlugs) >= 2 && <button type="button" class="kit-btn" data-kit={p.pickSlugs.join(" ")} data-kit-title={t.kitFor(projName(p, lang))}><Icon name="terminal-window" />{t.kitPicksBtn}</button>}
+          <button type="button" class="clear" data-clear="1">{t.showAll}</button>
+        </div>
       </div>
     ))}
   </section>
@@ -215,6 +226,7 @@ const kinds: Array<[string, any, string]> = [
       <span class="l"><Icon name="funnel" />{t.activeFilters}</span>
       <span class="afs" id="active-chips"></span>
       <button type="button" class="linkbtn" id="clear-all">{t.clearAll}</button>
+      <button type="button" class="linkbtn share-view" data-share data-title={t.siteTitle}><Icon name="export" />{t.shareView}</button>
     </div>
     <div class="listinfo">
       <p class="status" id="status" aria-live="polite"></p>
@@ -244,8 +256,12 @@ const kinds: Array<[string, any, string]> = [
     <div class="empty" id="empty" hidden>
       <span class="empty-ic"><Icon name="magnifying-glass" weight="duotone" /></span>
       <p>{t.emptyTitle}</p>
+      <p class="sug" id="empty-sug" hidden>{t.didYouMean} <button type="button" class="linkbtn" id="sug-btn" dir="auto"></button></p>
       <p class="sub">{t.emptySub}</p>
-      <button type="button" class="btn-primary" id="empty-reset">{t.clearAll}</button>
+      <div class="empty-acts">
+        <button type="button" class="btn-more" id="empty-wide" hidden></button>
+        <button type="button" class="btn-primary" id="empty-reset">{t.clearAll}</button>
+      </div>
     </div>
   </main>
 
@@ -253,6 +269,7 @@ const kinds: Array<[string, any, string]> = [
     {t.homeFoot_h(formatDate(starsUpdatedAt, lang)).map((p) => <p set:html={p} />)}
   </Fragment>
 
+  <KitDialog lang={lang} />
   <script type="application/json" id="app-data" set:html={JSON.stringify(appData)} />
 </Base>
 
@@ -262,6 +279,7 @@ const kinds: Array<[string, any, string]> = [
   import { initDates } from "../scripts/dates.js";
   import "../scripts/filter.js";
   import "../scripts/hero.js";
+  import "../scripts/mascot.js";
   initCopy(document);
   initFav();
   initDates();

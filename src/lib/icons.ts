@@ -1,6 +1,10 @@
 // مولَّد تلقائيًا بـ `npm run icons` من @phosphor-icons/core 2.1.1 (رخصة MIT). لا تعدّله يدويًا: عدّل scripts/build-icons.mjs.
 // كل مسار مرسوم على شبكة 256×256.
 export const ICONS: Record<string, Partial<Record<IconWeight, string>>> = {
+ "arrow-square-out": {
+  "regular": "<path d=\"M224,104a8,8,0,0,1-16,0V59.32l-66.33,66.34a8,8,0,0,1-11.32-11.32L196.68,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v72H48V80h72a8,8,0,0,0,0-16H48A16,16,0,0,0,32,80V208a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z\"/>",
+  "duotone": "<path d=\"M184,80V208a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8H176A8,8,0,0,1,184,80Z\" opacity=\"0.2\"/><path d=\"M224,104a8,8,0,0,1-16,0V59.32l-66.33,66.34a8,8,0,0,1-11.32-11.32L196.68,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v72H48V80h72a8,8,0,0,0,0-16H48A16,16,0,0,0,32,80V208a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z\"/>"
+ },
  "arrow-up": {
   "regular": "<path d=\"M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z\"/>",
   "duotone": "<path d=\"M200,112H56l72-72Z\" opacity=\"0.2\"/><path d=\"M205.66,106.34l-72-72a8,8,0,0,0-11.32,0l-72,72A8,8,0,0,0,56,120h64v96a8,8,0,0,0,16,0V120h64a8,8,0,0,0,5.66-13.66ZM75.31,104,128,51.31,180.69,104Z\"/>"
@@ -231,4 +235,4 @@ export const ICONS: Record<string, Partial<Record<IconWeight, string>>> = {
  }
 };
 export type IconWeight = "regular" | "duotone" | "fill" | "bold";
-export type IconName = "arrow-up" | "bag" | "bell" | "briefcase" | "browser" | "calendar-check" | "caret-left" | "caret-right" | "chart-bar" | "chart-line-up" | "chat-circle-text" | "check" | "clock" | "code" | "compass" | "copy" | "database" | "device-mobile" | "devices" | "export" | "eye-slash" | "file-text" | "folder" | "funnel" | "gauge" | "github-logo" | "globe" | "hard-drives" | "heart" | "info" | "laptop" | "layout" | "magic-wand" | "magnifying-glass" | "megaphone" | "moon" | "package" | "palette" | "pen-nib" | "pencil-simple-line" | "plug" | "receipt" | "rocket-launch" | "rss-simple" | "shapes" | "sparkle" | "squares-four" | "stack" | "star" | "sun" | "terminal-window" | "translate" | "video-camera" | "warning" | "wrench" | "x";
+export type IconName = "arrow-square-out" | "arrow-up" | "bag" | "bell" | "briefcase" | "browser" | "calendar-check" | "caret-left" | "caret-right" | "chart-bar" | "chart-line-up" | "chat-circle-text" | "check" | "clock" | "code" | "compass" | "copy" | "database" | "device-mobile" | "devices" | "export" | "eye-slash" | "file-text" | "folder" | "funnel" | "gauge" | "github-logo" | "globe" | "hard-drives" | "heart" | "info" | "laptop" | "layout" | "magic-wand" | "magnifying-glass" | "megaphone" | "moon" | "package" | "palette" | "pen-nib" | "pencil-simple-line" | "plug" | "receipt" | "rocket-launch" | "rss-simple" | "shapes" | "sparkle" | "squares-four" | "stack" | "star" | "sun" | "terminal-window" | "translate" | "video-camera" | "warning" | "wrench" | "x";

@@ -3,6 +3,7 @@
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
 import Icon from "../components/Icon.astro";
+import KitDialog from "../components/KitDialog.astro";
 import { tools } from "../lib/data";
 import { type Lang, href, t as dict } from "../i18n";
 interface Props { lang: Lang }
@@ -17,7 +18,10 @@ const t = dict(lang);
 
   <div class="favtools" hidden>
     <p class="status" id="fav-status" aria-live="polite"></p>
-    <button type="button" class="linkbtn" id="fav-clear">{t.favClear}</button>
+    <div class="favacts">
+      <button type="button" class="kit-btn" id="fav-kit" data-kit="" data-kit-title={t.kitFavs}><Icon name="terminal-window" />{t.kitBtn}</button>
+      <button type="button" class="linkbtn" id="fav-clear">{t.favClear}</button>
+    </div>
   </div>
 
   <main class="band alt" id="fav-main">
@@ -34,6 +38,8 @@ const t = dict(lang);
   <div id="pool" hidden>
     {tools.map((x) => <Card tool={x} lang={lang} />)}
   </div>
+
+  <KitDialog lang={lang} />
 
   <Fragment slot="footer">
     <p>{t.favFoot}</p>
@@ -66,6 +72,8 @@ const t = dict(lang);
     empty.hidden = n !== 0;
     bar.hidden = n === 0;
     status.textContent = fmt(L.favCount, { n });
+    // حزمة التثبيت للمفضلة بترتيبها (src/scripts/kit.js)
+    document.getElementById("fav-kit").dataset.kit = favs.join(" ");
   }
 
   initCopy(document);

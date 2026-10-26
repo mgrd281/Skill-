@@ -1,0 +1,39 @@
+---
+// «حزمة التثبيت»: أوامر عدة أدوات معًا في نص واحد للطرفية (المفضلة، و«ابدأ بهذه» في كل مشروع).
+// يفتحها أي زر فيه data-kit="<slug> <slug> …" وdata-kit-title. ما يدخل الحزمة وما لا يدخلها يحدده src/lib/install.js
+// وقت البناء، والنافذة تعرضه كما سيُنسخ تمامًا، مع ما يُثبَّت بطريقته وسبب ذلك. السلوك في src/scripts/kit.js.
+import Icon from "./Icon.astro";
+import { type Lang, t as dict } from "../i18n";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict(lang);
+---
+<dialog class="kit" id="kit" aria-labelledby="kit-h" aria-describedby="kit-lead">
+  <div class="kit-in">
+    <div class="kit-head">
+      <span class="kit-ic" aria-hidden="true"><Icon name="terminal-window" weight="duotone" /></span>
+      <h2 id="kit-h">{t.kitTitle}</h2>
+      <button type="button" class="qs-x" id="kit-x" aria-label={t.fbClose} title={t.fbClose}><Icon name="x" weight="bold" /></button>
+    </div>
+    <p class="kit-lead" id="kit-lead"></p>
+    <div class="cmd kit-cmd" id="kit-cmd">
+      <pre tabindex="0" aria-label={t.kitCmdAria}><code id="kit-code"></code></pre>
+      <button type="button" class="copy" aria-label={t.kitCopyAria} data-toast={t.kitCopied}>
+        <Icon name="copy" class="ic-copy" /><Icon name="check" weight="bold" class="ic-check" /><span class="copy-t">{t.copy}</span>
+      </button>
+    </div>
+    <p class="kit-note" id="kit-note" set:html={t.kitNote_h} />
+    <section class="kit-sec" id="kit-after" hidden>
+      <h3 set:html={t.kitAfterH_h} />
+      <ul class="kit-list" id="kit-after-list"></ul>
+    </section>
+    <section class="kit-sec" id="kit-skip" hidden>
+      <h3>{t.kitSkipH}</h3>
+      <ul class="kit-list" id="kit-skip-list"></ul>
+    </section>
+  </div>
+</dialog>
+
+<script>
+  import "../scripts/kit.js";
+</script>

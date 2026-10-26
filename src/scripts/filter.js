@@ -1,7 +1,10 @@
 // الفلترة والبحث والترتيب في الصفحة الرئيسية. الصفحة كاملة تُرسم وقت البناء،
 // وهذا السكربت يخفي ويُظهر ويعيد ترتيب البطاقات فقط.
+// حالة العرض (البحث والقسم والمشروع والترتيب) في رابط الصفحة أيضًا (?q=&cat=&p=&sort=&new=1&skills=1)، فيُشارَك كما هو.
 import { relative } from "./dates.js";
 import { L, fmt } from "../i18n/client.js";
+import { norm, words, terms, score, makeDoc, suggest } from "../lib/search.js";
+import { loadIndex, docOf, vocabOf } from "./search-data.js";
 const KEY = "toolkit-filter-v3";
 const data = JSON.parse(document.getElementById("app-data").textContent);
 const projectById = (id) => data.projects.find((p) => p.id === id) || null;
@@ -16,7 +19,19 @@ function initials(name) {
 // القائمة لا تعرض كل الأدوات دفعة واحدة: 12 أولًا ثم "عرض المزيد"، و6 لكل قسم في عرض الأقسام
 const PAGE = 12, SECTION_CAP = 6;
 const state = { project: null, cat: "all", q: "", onlyNew: false, onlySkills: false, sort: "stars", limit: PAGE };
-try {
+// الرابط أولًا: من فتح رابطًا مشاركًا يرى ما رآه صاحبه، لا آخر ما اختاره هو في هذا المتصفح
+const URL_KEYS = ["q", "p", "cat", "sort", "new", "skills"];
+const params = new URLSearchParams(location.search);
+const fromUrl = URL_KEYS.some((k) => params.has(k));
+if (fromUrl) {
+  state.q = (params.get("q") || "").trim().slice(0, 100);
+  if (projectById(params.get("p"))) state.project = params.get("p");
+  if (data.cats.includes(params.get("cat"))) state.cat = params.get("cat");
+  state.onlyNew = params.get("new") === "1";
+  state.onlySkills = params.get("skills") === "1";
+  const so = params.get("sort");
+  state.sort = ["stars", "cat", "new"].includes(so) ? so : state.q ? "match" : "stars";
+} else try {
   const saved = JSON.parse(localStorage.getItem(KEY) || "{}");
   if (saved && typeof saved === "object") {
     if (projectById(saved.project)) state.project = saved.project;
@@ -37,15 +52,44 @@ function saveHidden() {
   try { localStorage.setItem(HKEY, JSON.stringify([...hidden])); } catch (e) {}
 }
 
-const hashId = (location.hash || "").replace("#", "");
+// رابط قديم بالمشروع في # (من شرائح المشاريع في صفحات الأدوات): /#shop
+const hashId = decodeURIComponent((location.hash || "").replace("#", ""));
 if (projectById(hashId)) state.project = hashId;
 
 function save() {
   try {
     localStorage.setItem(KEY, JSON.stringify({
-      project: state.project, cat: state.cat, onlyNew: state.onlyNew, onlySkills: state.onlySkills, sort: state.sort,
+      project: state.project, cat: state.cat, onlyNew: state.onlyNew, onlySkills: state.onlySkills, sort: state.sort === "match" ? "stars" : state.sort,
     }));
   } catch (e) {}
+  syncUrl();
+}
+
+// يكتب الحالة في الرابط دون إضافة خطوة في سجل التصفح. أثناء الكتابة في البحث ينتظر توقفها قليلًا
+// (Safari يرفض أكثر من 100 تغيير في 30 ثانية)
+let urlTimer = 0;
+function urlNow() {
+  const u = new URLSearchParams();
+  if (state.q) u.set("q", state.q);
+  if (state.project) u.set("p", state.project);
+  if (state.cat !== "all") u.set("cat", state.cat);
+  if (state.onlyNew) u.set("new", "1");
+  if (state.onlySkills) u.set("skills", "1");
+  if (state.sort !== (state.q ? "match" : "stars")) u.set("sort", state.sort === "match" ? "stars" : state.sort);
+  const qs = u.toString().replace(/\+/g, "%20");
+  const hash = location.hash && !projectById(decodeURIComponent(location.hash.slice(1))) ? location.hash : "";
+  return location.pathname + (qs ? "?" + qs : "") + hash;
+}
+function syncUrl(later) {
+  clearTimeout(urlTimer);
+  const go = () => {
+    const next = urlNow();
+    if (next !== location.pathname + location.search + location.hash) {
+      try { history.replaceState(history.state, "", next); } catch (e) {}
+    }
+  };
+  if (later) urlTimer = setTimeout(go, 400);
+  else go();
 }
 
 const $ = (id) => document.getElementById(id);
@@ -62,7 +106,7 @@ const cards = [...document.querySelectorAll(".card")].map((el) => ({
   isNew: el.dataset.new === "1",
   isSkill: el.dataset.kind === "Skill",
   use: el.dataset.use.split(" "),
-  search: el.dataset.search,
+  doc: null,
   starsN: Number(el.dataset.stars),
   order: Number(el.dataset.order),
   added: el.dataset.added || "",
@@ -75,6 +119,47 @@ const sections = [...document.querySelectorAll("[data-cat-section]")].map((s) =>
 }));
 const moreBtn = $("more"), moreN = $("more-n");
 
+// ---- البحث ----
+// كل بطاقة لها وثيقة بحث (src/lib/search.js). قبل وصول الفهرس تُبنى من نص البطاقة نفسها (بلغة الصفحة)،
+// وبعد وصوله تشمل اللغات الثلاث والقسم وكتابة الأسماء التقنية بالعربية.
+const textOf = (el, sel) => [...el.querySelectorAll(sel)].map((e) => e.textContent).join(" ");
+let indexed = false, vocab = null, qTerms = [];
+const scoreOf = new Map();
+function ensureDocs() {
+  cards.forEach((c) => {
+    if (!c.doc) c.doc = makeDoc({ n: textOf(c.el, ".name"), t: words(textOf(c.el, ".kind")), u: words(textOf(c.el, ".usechip")), d: words(textOf(c.el, ".desc")), c: norm(textOf(c.el, "code")) });
+  });
+}
+function computeScores() {
+  scoreOf.clear();
+  if (!state.q) return;
+  ensureDocs();
+  qTerms = terms(state.q);
+  cards.forEach((c) => scoreOf.set(c, score(c.doc, qTerms)));
+}
+function wantIndex() {
+  if (indexed) return;
+  loadIndex().then((ix) => {
+    if (indexed) return;
+    indexed = true;
+    const by = new Map(ix.tools.map((x) => [x.s, x]));
+    cards.forEach((c) => { const x = by.get(c.slug); if (x) c.doc = docOf(x); });
+    vocab = vocabOf(cards.map((c) => c.doc));
+    if (state.q) { computeScores(); syncChips(); renderList(); }
+  }, () => {});
+}
+// وضع الترتيب "الأقرب لبحثك" لا يظهر في القائمة إلا أثناء البحث
+const matchOpt = document.createElement("option");
+matchOpt.value = "match";
+matchOpt.textContent = L.sortMatch;
+function setQuery(v) {
+  const had = !!state.q;
+  state.q = v.trim().slice(0, 100);
+  if (state.q && !had && state.sort === "stars") state.sort = "match";
+  if (!state.q && state.sort === "match") state.sort = "stars";
+  computeScores();
+}
+
 function inProject(c, pid) {
   const p = projectById(pid);
   return c.use.includes(pid) || !!(p && p.cats.includes(c.cat));
@@ -85,8 +170,7 @@ function matches(c, ignoreCat) {
   if (!ignoreCat && state.cat !== "all" && c.cat !== state.cat) return false;
   if (state.onlyNew && !c.isNew) return false;
   if (state.onlySkills && !c.isSkill) return false;
-  if (!state.q) return true;
-  return state.q.split(/\s+/).every((w) => c.search.includes(w));
+  return !state.q || scoreOf.get(c) > 0;
 }
 function countWith(flag) {
   const keep = state[flag];
@@ -137,18 +221,20 @@ function renderList() {
   cards.forEach((c) => { c.el.hidden = !visible.has(c); });
   const p = projectById(state.project);
 
-  if (state.sort === "stars" || state.sort === "new") {
-    const byNew = state.sort === "new";
+  if (state.sort !== "cat") {
+    const byNew = state.sort === "new", byMatch = state.sort === "match";
     const sorted = [...visible].sort(byNew
       ? (a, b) => b.added.localeCompare(a.added) || b.order - a.order
-      : (a, b) => b.starsN - a.starsN || a.order - b.order);
-    $("flat-title").textContent = byNew ? L.byNew : L.byStars;
+      : byMatch
+        ? (a, b) => scoreOf.get(b) - scoreOf.get(a) || b.starsN - a.starsN || a.order - b.order
+        : (a, b) => b.starsN - a.starsN || a.order - b.order);
+    $("flat-title").textContent = byNew ? L.byNew : byMatch ? L.byMatch : L.byStars;
     let rank = 0;
     sorted.forEach((c, i) => {
       starsGrid.appendChild(c.el);
       c.el.hidden = i >= state.limit;
-      // رقم التصنيف للأدوات التي لها نجوم فقط، والباقي في النهاية بلا رقم
-      if (!byNew && c.starsN >= 0) { rank++; c.rankEl.textContent = "#" + rank; c.rankEl.dataset.top = rank <= 3 ? String(rank) : ""; c.rankEl.hidden = false; }
+      // رقم التصنيف للأدوات التي لها نجوم فقط (في ترتيب النجوم)، والباقي في النهاية بلا رقم
+      if (state.sort === "stars" && c.starsN >= 0) { rank++; c.rankEl.textContent = "#" + rank; c.rankEl.dataset.top = rank <= 3 ? String(rank) : ""; c.rankEl.hidden = false; }
       else c.rankEl.hidden = true;
     });
     starsSection.hidden = sorted.length === 0;
@@ -185,10 +271,45 @@ function renderList() {
   }
   $("flat-n").textContent = visible.size;
   emptyEl.hidden = visible.size !== 0;
+  if (visible.size === 0) syncEmpty();
   statusEl.textContent = fmt(L.status, { n: visible.size, total: data.total }) + (p ? " · " + p.name : "");
   $("hiddenbar").hidden = hidden.size === 0;
   $("hidden-n").textContent = fmt(L.hiddenN, { n: hidden.size });
 }
+
+// لا نتيجة: «هل تقصد» بكلمة قريبة من مفردات الدليل، وزر يعرض نتائج البحث نفسه بلا الفلاتر الأخرى
+const sugEl = $("empty-sug"), sugBtn = $("sug-btn"), wideBtn = $("empty-wide");
+function syncEmpty() {
+  sugEl.hidden = true;
+  wideBtn.hidden = true;
+  if (!state.q) return;
+  ensureDocs();
+  const sug = suggest(state.q, vocab || (vocab = vocabOf(cards.map((c) => c.doc))));
+  if (sug) {
+    const ts = terms(sug);
+    if (cards.some((c) => !hidden.has(c.slug) && score(c.doc, ts) > 0)) {
+      sugBtn.textContent = sug;
+      sugEl.hidden = false;
+    }
+  }
+  const filtered = state.project || state.cat !== "all" || state.onlyNew || state.onlySkills;
+  const n = filtered ? cards.filter((c) => !hidden.has(c.slug) && scoreOf.get(c) > 0).length : 0;
+  if (n) {
+    wideBtn.textContent = fmt(L.searchAll, { n });
+    wideBtn.hidden = false;
+  }
+}
+sugBtn.addEventListener("click", () => {
+  qEl.value = sugBtn.textContent;
+  qEl.dispatchEvent(new Event("input", { bubbles: true }));
+  qEl.focus({ preventScroll: true });
+});
+wideBtn.addEventListener("click", () => {
+  state.project = null; state.cat = "all"; state.onlyNew = false; state.onlySkills = false;
+  state.limit = PAGE;
+  save();
+  smooth(render);
+});
 
 const activeBar = $("activebar"), activeChips = $("active-chips");
 function catLabel(id) {
@@ -221,25 +342,32 @@ function clearFilter(key) {
   else if (key === "cat") state.cat = "all";
   else if (key === "onlyNew") state.onlyNew = false;
   else if (key === "onlySkills") state.onlySkills = false;
-  else if (key === "q") { state.q = ""; qEl.value = ""; }
-  else if (key === "all") { state.project = null; state.cat = "all"; state.onlyNew = false; state.onlySkills = false; state.q = ""; qEl.value = ""; }
+  else if (key === "q") { setQuery(""); qEl.value = ""; }
+  else if (key === "all") { state.project = null; state.cat = "all"; state.onlyNew = false; state.onlySkills = false; setQuery(""); qEl.value = ""; }
   state.limit = PAGE;
   save();
   smooth(render);
 }
 activeBar.addEventListener("click", (e) => {
+  // زر المشاركة (ui.js) يشارك رابط الصفحة: نكتب الحالة فيه أولًا إن كانت كتابة البحث لم تستقر بعد
+  if (e.target.closest("[data-share]")) { syncUrl(); return; }
   const b = e.target.closest(".afchip");
   if (b) clearFilter(b.dataset.key);
 });
 $("clear-all").addEventListener("click", () => clearFilter("all"));
 $("empty-reset").addEventListener("click", () => clearFilter("all"));
 
+function syncSort() {
+  if (state.q && !matchOpt.parentNode) sortEl.prepend(matchOpt);
+  if (!state.q && matchOpt.parentNode) matchOpt.remove();
+  sortEl.value = state.sort;
+}
 function render() {
   syncProject();
   syncActive();
   syncChips();
+  syncSort();
   renderList();
-  sortEl.value = state.sort;
 }
 
 // انتقال ناعم بين حالات الفلترة إن دعمه المتصفح (ويُتجاوز مع تقليل الحركة)
@@ -260,7 +388,7 @@ function goTo(slug) {
   if (!c) return;
   if (hidden.delete(slug)) { saveHidden(); render(); }
   if (!matches(c, false)) {
-    state.cat = "all"; state.onlyNew = false; state.onlySkills = false; state.q = ""; qEl.value = "";
+    state.cat = "all"; state.onlyNew = false; state.onlySkills = false; setQuery(""); qEl.value = "";
     if (state.project && !inProject(c, state.project)) state.project = null;
     save(); render();
   }
@@ -300,14 +428,20 @@ chipsEl.addEventListener("click", (e) => {
   smooth(render);
 });
 qEl.addEventListener("input", () => {
-  state.q = qEl.value.trim().toLowerCase();
+  wantIndex();
+  setQuery(qEl.value);
   state.limit = PAGE;
   syncChips();
   syncActive();
+  syncSort();
   renderList();
+  syncUrl(true);
 });
+// الفهرس يُطلب حين يقترب الزائر من البحث، فيصل غالبًا قبل أول حرف
+qEl.addEventListener("focus", wantIndex);
+document.querySelector(".search").addEventListener("pointerenter", wantIndex, { once: true });
 sortEl.addEventListener("change", () => {
-  state.sort = ["cat", "new"].includes(sortEl.value) ? sortEl.value : "stars";
+  state.sort = ["cat", "new"].includes(sortEl.value) || (sortEl.value === "match" && state.q) ? sortEl.value : "stars";
   state.limit = PAGE;
   save();
   smooth(renderList);
@@ -454,4 +588,12 @@ $("notif-read").addEventListener("click", () => {
 refreshBell();
 if (unreadList().length && !reduceMotion) bell.classList.add("ring");
 
+// بحث من الرابط: يظهر في الحقل مع زر المسح
+if (state.q) {
+  qEl.value = state.q;
+  $("q-clear").hidden = false;
+  computeScores();
+  wantIndex();
+}
 render();
+syncUrl();

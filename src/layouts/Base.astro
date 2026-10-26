@@ -17,6 +17,7 @@ import ThemeToggle from "../components/ThemeToggle.astro";
 import HeartLink from "../components/HeartLink.astro";
 import IconSprite from "../components/IconSprite.astro";
 import Feedback from "../components/Feedback.astro";
+import QuickSearch from "../components/QuickSearch.astro";
 import { useIcon } from "../lib/icon-sprite";
 import sansAr400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-400-normal.woff2?url";
 import sansAr700 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-700-normal.woff2?url";
@@ -28,8 +29,9 @@ import { type Lang, LANGS, DEFAULT_LANG, dirOf, LANG_NAME, OG_LOCALE, href, t as
 // switchPath: وجهة زر اللغة إن اختلفت عن path (صفحة 404 تفتح الرئيسية باللغة الأخرى)
 // image: صورة المشاركة (مسار داخل الموقع)، والافتراضي صورة الرئيسية بلغة الصفحة. jsonLd: بيانات منظمة لمحركات البحث
 // expect: معرّف عنصر يُنتظر قبل أول رسم للصفحة، حتى يجده الانتقال بين الصفحات (أيقونة صفحة الأداة)
-interface Props { title: string; description: string; path?: string; switchPath?: string; noindex?: boolean; lang?: Lang; image?: string; imageAlt?: string; jsonLd?: object[]; expect?: string }
-const { title, description, path = "/", switchPath = path, noindex = false, lang = DEFAULT_LANG, image = `og/home-${lang}.png`, imageAlt = title, jsonLd = [], expect } = Astro.props;
+// quickSearch: زر البحث السريع في الشريط العلوي ونافذته (الصفحة الرئيسية لها بحثها فلا تحتاجه)
+interface Props { title: string; description: string; path?: string; switchPath?: string; noindex?: boolean; lang?: Lang; image?: string; imageAlt?: string; jsonLd?: object[]; expect?: string; quickSearch?: boolean }
+const { title, description, path = "/", switchPath = path, noindex = false, lang = DEFAULT_LANG, image = `og/home-${lang}.png`, imageAlt = title, jsonLd = [], expect, quickSearch = true } = Astro.props;
 const t = dict(lang);
 const others = LANGS.filter((l) => l !== lang);
 const abs = (l: Lang) => new URL(href(l, path), Astro.site).href;
@@ -57,7 +59,7 @@ useIcon(Astro.locals, "check", "bold");
     <!-- الانتقال بين الصفحات (تفاصيله في global.css، قسم "الانتقال بين الصفحات"). التفعيل هنا لا في ملف CSS:
          Chromium يقرأه لحظة ظهور الصفحة الجديدة، وقد يسبق ذلك تطبيق ملف CSS الخارجي فيُلغى الانتقال. -->
     <style is:inline>@media (prefers-reduced-motion: no-preference) { @view-transition { navigation: auto; } }</style>
-    <script is:inline>try{var t=localStorage.getItem("toolkit-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}addEventListener("pagereveal",function(e){var v=e.viewTransition;if(v){document.documentElement.classList.add("vt-in");v.ready.catch(function(){})}})</script>
+    <script is:inline>document.documentElement.classList.add("js");try{var t=localStorage.getItem("toolkit-theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}addEventListener("pagereveal",function(e){var v=e.viewTransition;if(v){document.documentElement.classList.add("vt-in");v.ready.catch(function(){})}})</script>
     {expect && <link rel="expect" href={"#" + expect} blocking="render" />}
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -108,6 +110,11 @@ useIcon(Astro.locals, "check", "bold");
           <a href={href(lang, "favorites")}>{t.navFavs}</a>
         </nav>
         <div class="actions">
+          {quickSearch && (
+            <button type="button" class="bell" id="qs-open" aria-haspopup="dialog" aria-expanded="false" aria-controls="qs" aria-keyshortcuts="Control+K Meta+K /" aria-label={t.qsOpen} title={t.qsOpen}>
+              <Icon name="magnifying-glass" />
+            </button>
+          )}
           <!-- قائمة اللغة (تعمل بلا JavaScript؛ ui.js يضيف الإغلاق بالنقر خارجها وبـ Escape). روابط اللغات أيضًا في التذييل -->
           <details class="langmenu" id="langmenu">
             <summary class="bell langsw" title={t.langMenuAria}>
@@ -163,6 +170,7 @@ useIcon(Astro.locals, "check", "bold");
     <button type="button" class="totop" id="totop" aria-label={t.toTop} title={t.toTop}><Icon name="arrow-up" /></button>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <Feedback lang={lang} />
+    {quickSearch && <QuickSearch lang={lang} />}
     <IconSprite />
   </body>
 </html>

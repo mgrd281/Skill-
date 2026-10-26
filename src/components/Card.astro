@@ -8,7 +8,6 @@ const s = dict(lang);
 const desc = toolDesc(t, lang);
 const kind = kindLabel(t.kind, lang);
 const useName = (u: string) => projName(projectById(u)!, lang);
-const search = [t.name, desc, kind, t.cmd || "", ...t.use.map(useName)].join(" ").toLowerCase();
 // أول ثلاثة مشاريع ظاهرة، والباقي خلف زر "+N"
 const SHOW = 3;
 const extra = t.use.slice(SHOW).map(useName).join(s.listSep);
@@ -26,7 +25,6 @@ const site = t.site && (isAppStore(t.site) ? "App Store" : s.officialSite);
   data-stars={t.starsN}
   data-order={t.order}
   data-added={t.added}
-  data-search={search}
 >
   <div class="c-head">
     <span class="mono" aria-hidden="true">{initials(t.name)}</span>

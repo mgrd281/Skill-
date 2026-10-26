@@ -4,6 +4,7 @@ import projectsJson from "../../data/projects.json";
 import meta from "../../data/meta.json";
 import type { IconName } from "./icons";
 import type { Lang } from "../i18n";
+import { RUNS_REMOTE_SCRIPT } from "./install.js";
 
 export interface Tool {
   slug: string;
@@ -144,7 +145,6 @@ export const recentTools: Tool[] = [...tools]
 
 // ---- شارات الحالة: أرشفة، قِدم، رخصة (تُحسب وقت البناء من بيانات GitHub) ----
 export interface Badge { kind: "ok" | "warn" | "bad"; text: string; latin?: string; title: string }
-const RUNS_REMOTE_SCRIPT = /(curl|wget)[^\n]*\|\s*(ba|z)?sh|(ba|z)?sh\s+-c\s+"\$\((curl|wget)/i;
 const RESTRICTIVE = /AGPL|GPL|SSPL|BUSL|CC-BY-NC|Elastic|Commons|Sustainable/i;
 
 const BADGE = {

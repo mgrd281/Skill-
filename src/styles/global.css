@@ -194,6 +194,8 @@ a.lang-item:hover, a.lang-item:focus-visible { background: var(--fill-2); }
   .actions .bell { width: 38px; height: 38px; }
   .bell.langsw { min-width: 38px; padding-inline: 9px; }
 }
+/* أضيق من 360px: الشعار وحده يكفي (الرابط له اسم لقارئات الشاشة)، وإلا خرج آخر زر عن الشاشة في الألمانية والإنجليزية */
+@media (max-width: 359px) { .gnav .brand span { display: none; } }
 @media (min-width: 860px) { .actions { margin-inline-start: 0; } }
 .bell {
   position: relative; width: 40px; height: 40px; flex: none; display: grid; place-items: center;
@@ -256,12 +258,91 @@ a.lang-item:hover, a.lang-item:focus-visible { background: var(--fill-2); }
 .nf-foot:hover { background: var(--fill-2); }
 .nf-foot .i { width: 17px; height: 17px; }
 .nf-foot .chev { margin-inline-start: auto; width: 15px; height: 15px; color: var(--muted); }
+/* ---------- البحث السريع (src/components/QuickSearch.astro) ---------- */
+/* نافذة <dialog> في أعلى الشاشة: حقل البحث، ثم النتائج، ثم رابط كل النتائج في الصفحة الرئيسية */
+.qs, .kit {
+  width: min(620px, calc(100vw - 24px)); max-height: min(580px, calc(100dvh - 96px)); margin: max(64px, 11vh) auto auto; padding: 0;
+  border: 1px solid var(--line); border-radius: var(--r-xl); background: var(--card); color: var(--ink); overflow: hidden;
+}
+.qs[open], .kit[open] { display: flex; animation: drop-in var(--dur) var(--ease-out); }
+.qs::backdrop, .kit::backdrop { background: rgb(0 0 0 / .32); }
+.qs-in { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.qs-field { display: flex; align-items: center; gap: 10px; padding: 8px 12px; padding-inline-start: 18px; border-bottom: 1px solid var(--line-soft); }
+.qs-field:focus-within { border-bottom-color: var(--accent); }
+.qs-field > .i { width: 20px; height: 20px; color: var(--muted); }
+#qs-q {
+  flex: 1; min-width: 0; min-height: 48px; border: 0; background: transparent; color: var(--ink);
+  font: inherit; font-size: 1.1rem; outline: none; -webkit-appearance: none; appearance: none;
+}
+#qs-q::-webkit-search-cancel-button { -webkit-appearance: none; }
+#qs-q::placeholder { color: var(--muted); }
+.qs-x { width: 32px; height: 32px; flex: none; display: grid; place-items: center; border: 0; border-radius: var(--r-full); background: var(--fill-2); color: var(--muted); cursor: pointer; }
+.qs-x:hover { background: var(--fill); color: var(--ink); }
+.qs-x .i { width: 14px; height: 14px; }
+.qs-list { list-style: none; margin: 0; padding: 8px; display: grid; gap: 2px; overflow: auto; overscroll-behavior: contain; flex: 1; min-height: 0; }
+.qs-list:empty { display: none; }
+.qs-g { padding: 10px 10px 4px; font-size: .78rem; font-weight: 600; color: var(--muted); }
+.qs-o { display: flex; align-items: center; gap: 12px; padding: 9px 10px; border-radius: 14px; cursor: pointer; transition: background-color var(--dur-fast) var(--ease); }
+.qs-o[aria-selected="true"] { background: var(--fill-2); }
+.qs-o .mono { background: var(--bg-alt); }
+.qs-t { display: grid; min-width: 0; flex: 1; line-height: 1.4; }
+.qs-t b { font-weight: 600; text-align: var(--start); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.qs-t small { color: var(--muted); font-size: .8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.qs-o .stars { font-size: .82rem; }
+.qs-ic { width: 38px; height: 38px; flex: none; display: grid; place-items: center; border-radius: 10px; background: var(--bg-alt); color: var(--ink); border: 1px solid var(--line-soft); }
+.qs-ic .i { width: 19px; height: 19px; }
+.qs-empty { display: grid; justify-items: center; gap: 6px; padding: 28px 20px 32px; text-align: center; }
+.qs-empty .empty-ic { width: 56px; height: 56px; border-radius: 18px; margin: 0; }
+.qs-empty .empty-ic .i { width: 26px; height: 26px; }
+.qs-empty p { margin: 0; font-weight: 600; color: var(--ink-2); }
+.qs-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 18px; border-top: 1px solid var(--line-soft); font-size: .86rem; }
+.qs-all { display: inline-flex; align-items: center; gap: 4px; min-height: 36px; color: var(--accent); text-decoration: none; font-weight: 500; }
+.qs-all:hover { text-decoration: underline; text-underline-offset: 4px; }
+.qs-all .i { width: 14px; height: 14px; }
+.qs-keys { color: var(--muted); white-space: nowrap; }
+.qs-keys kbd { font-size: .68rem; padding: 2px 6px; }
+@media (hover: none), (max-width: 520px) { .qs-keys { display: none; } }
+@media (max-width: 520px) {
+  .qs, .kit { width: calc(100vw - 16px); margin-top: 8px; max-height: calc(100dvh - 16px); border-radius: var(--r-lg); }
+}
+
+/* ---------- حزمة التثبيت (src/components/KitDialog.astro) ---------- */
+.kit { width: min(680px, calc(100vw - 24px)); max-height: min(720px, calc(100dvh - 96px)); }
+.kit-in { flex: 1; min-width: 0; overflow: auto; overscroll-behavior: contain; padding: 20px 22px 24px; display: grid; gap: 14px; align-content: start; }
+.kit-head { display: flex; align-items: center; gap: 12px; }
+.kit-head h2 { margin: 0; flex: 1; min-width: 0; font-size: 1.25rem; font-weight: 700; line-height: 1.3; }
+.kit-ic { width: 40px; height: 40px; flex: none; display: grid; place-items: center; border-radius: 12px; background: var(--bg-alt); color: var(--ink); }
+.kit-ic .i { width: 22px; height: 22px; }
+.kit-lead { margin: 0; color: var(--ink-2); font-size: .95rem; }
+.kit-cmd { align-items: stretch; }
+.kit-cmd pre { max-height: 260px; overflow: auto; font-size: .78rem; scrollbar-width: thin; }
+.kit-note { margin: 0; color: var(--muted); font-size: .85rem; }
+.kit-sec { display: grid; gap: 8px; padding-top: 14px; border-top: 1px solid var(--line-soft); }
+.kit-sec h3 { margin: 0; font-size: .92rem; font-weight: 600; }
+.kit-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: .88rem; }
+.kit-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.kit-list a { color: var(--accent); font-weight: 500; text-decoration: none; }
+.kit-list a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.kit-list span { color: var(--muted); }
+.kit-list code { font: 500 .8rem var(--font-mono); direction: ltr; unicode-bidi: isolate; padding: 2px 8px; border-radius: 6px; background: var(--fill-2); color: var(--ink); }
+/* زر الحزمة: في «ابدأ بهذه» لكل مشروع وفي المفضلة */
+.kit-btn {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 16px; cursor: pointer;
+  border: 1px solid var(--line); border-radius: var(--r-full); background: var(--card); color: var(--ink); font: 500 .9rem var(--font);
+  transition: border-color var(--dur) var(--ease), scale var(--dur-fast) var(--ease);
+}
+.kit-btn .i { width: 18px; height: 18px; }
+.kit-btn:hover { border-color: var(--ink); }
+.kit-btn:active { scale: .97; }
+.advice-acts { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; }
+.favacts { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; }
 .sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* ---------- Hero ---------- */
 .hero { text-align: center; padding-block: clamp(40px, 7vw, 88px) clamp(32px, 4.5vw, 56px); }
-.hero-text { display: grid; justify-items: center; gap: 18px; }
+/* minmax(0, 1fr): حقل البحث (نصه في سطر واحد) لا يوسّع العمود أكثر من الشاشة */
+.hero-text { display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 18px; }
 .hero-text > * { animation: rise-in 900ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 90ms + 100ms); }
 .eyebrow { margin: 0; font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; color: var(--ink-2); }
 .hero h1 { margin: 0; max-width: 15ch; font-weight: 700; line-height: 1.1; font-size: clamp(2.5rem, 7.4vw, 5rem); }
@@ -273,7 +354,20 @@ a.lang-item:hover, a.lang-item:focus-visible { background: var(--fill-2); }
   }
 }
 .lead { margin: 0; max-width: 44ch; color: var(--muted); font-size: clamp(1.1rem, 2.4vw, 1.4rem); line-height: 1.6; }
-.cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 28px; margin-top: 6px; }
+.cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 28px; margin-top: 6px; width: 100%; }
+/* حقل البحث في الواجهة: زر بشكل حقل ينقل التركيز إلى البحث الحقيقي في الشريط اللاصق (ui.js) */
+.hero-search {
+  display: flex; align-items: center; gap: 12px; width: min(100%, 520px); min-height: 56px; padding-inline: 20px 14px;
+  border: 1px solid var(--line); border-radius: var(--r-full); background: var(--card); color: var(--muted);
+  font: inherit; font-size: 1.05rem; text-align: start; cursor: text;
+  transition: border-color var(--dur) var(--ease), background-color var(--dur) var(--ease), scale var(--dur-fast) var(--ease);
+}
+.hero-search:hover { border-color: var(--ink); }
+.hero-search:active { scale: .985; }
+.hero-search > .i { width: 22px; height: 22px; color: var(--ink); }
+.hs-t { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hero-search kbd { display: none; }
+@media (hover: hover) and (pointer: fine) { .hero-search kbd { display: inline-block; } }
 .promise {
   list-style: none; margin: 14px 0 0; padding: 0; width: 100%; max-width: 540px;
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px;
@@ -547,11 +641,13 @@ a.lang-item:hover, a.lang-item:focus-visible { background: var(--fill-2); }
 .activebar .l .i { color: var(--accent); width: 17px; height: 17px; }
 .afs { display: contents; }
 .afchip {
-  border: 0; background: var(--accent-soft); color: var(--accent); border-radius: var(--r-full);
+  border: 0; background: var(--accent-soft); color: var(--accent-ink); border-radius: var(--r-full);
   padding: 4px 14px; font-size: .86rem; cursor: pointer; min-height: 34px; animation: pop-in var(--dur) var(--spring);
   transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
 }
 .afchip:hover { background: var(--btn); color: #fff; }
+.activebar .share-view { display: inline-flex; align-items: center; gap: 6px; margin-inline-start: auto; min-height: 34px; }
+.activebar .share-view .i { width: 16px; height: 16px; }
 .listinfo { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px; margin: 20px 0 16px; }
 .sortbox { display: inline-flex; align-items: center; gap: 4px; margin-inline-start: auto; font-size: .9rem; color: var(--muted); }
 .sortbox .sl { white-space: nowrap; }
@@ -681,7 +777,7 @@ a.name:hover { color: var(--accent); }
   transition: color var(--dur) var(--ease), background-color var(--dur) var(--ease);
 }
 .usechip::after, .usemore::after { content: ""; position: absolute; inset: -6px -3px; }
-.usechip:hover { background: var(--accent-soft); color: var(--accent); }
+.usechip:hover { background: var(--accent-soft); color: var(--accent-ink); }
 .usechip.on { background: var(--btn); color: #fff; }
 .usechip.more { display: none; }
 .uses.open .usechip.more, .usechip.more.on { display: inline-block; animation: pop-in var(--dur) var(--spring); }
@@ -726,6 +822,10 @@ a.name:hover { color: var(--accent); }
 .empty-ic { width: 72px; height: 72px; display: grid; place-items: center; border-radius: 22px; margin-bottom: 8px; background: var(--fill-2); color: var(--muted); }
 .empty-ic .i { width: 36px; height: 36px; }
 .empty-ic.heart { color: var(--accent); }
+/* «هل تقصد» والأزرار تحت رسالة لا نتيجة */
+.empty .sug { font-size: 1rem; font-weight: 400; color: var(--ink-2); }
+.empty .sug .linkbtn { font-size: 1rem; font-weight: 600; padding: 6px 2px; }
+.empty-acts { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 14px; }
 
 /* ---------- صفحة الأداة ---------- */
 .p-hero { text-align: center; display: grid; justify-items: center; gap: 18px; padding-block: clamp(32px, 5vw, 72px) clamp(40px, 5vw, 64px); }
@@ -768,6 +868,25 @@ a.name:hover { color: var(--accent); }
 .p-tile { background: var(--card); border-radius: var(--r-xl); padding: clamp(24px, 4vw, 40px); display: grid; gap: 14px; align-content: start; }
 .p-tile h2 { margin: 0; font-size: 1.4rem; font-weight: 700; }
 .p-note { margin: 0; color: var(--muted); font-size: .95rem; }
+/* تبويبات التثبيت لخوادم MCP (src/components/InstallTile.astro): مفتاح مقسّم بأسلوب Apple، والمختار بخلفية البطاقة.
+   بلا JavaScript تظهر الأقسام كلها بعناوينها، وقبل تشغيل tabs.js يظهر الأول فقط (.js من Base.astro) فلا يقفز التخطيط. */
+.ctab-list { display: flex; gap: 2px; padding: 3px; margin-bottom: 14px; border-radius: 12px; background: var(--fill-2); overflow-x: auto; scrollbar-width: none; }
+.ctab-list::-webkit-scrollbar { display: none; }
+.ctab {
+  flex: 1 0 auto; min-height: 38px; padding: 0 12px; border: 1px solid transparent; border-radius: 9px; background: transparent; color: var(--ink-2);
+  font: 500 .84rem var(--font); white-space: nowrap; cursor: pointer;
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.ctab:hover { color: var(--ink); }
+.ctab[aria-selected="true"] { background: var(--card); color: var(--ink); font-weight: 600; border-color: var(--line-soft); }
+.ctab-pan { display: grid; gap: 12px; min-width: 0; }
+.ctab-h { margin: 0; font-size: 1rem; }
+.ctab-go { justify-self: start; min-height: 42px; padding-inline: 18px; font-size: .92rem; }
+.p-note code { font: 500 .86em var(--font-mono); direction: ltr; unicode-bidi: isolate; padding: 1px 6px; border-radius: 6px; background: var(--fill-2); color: var(--ink); }
+html:not(.js) .ctab-list { display: none; }
+html:not(.js) .ctab-pan + .ctab-pan { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line-soft); }
+.js .ctab-h { display: none; }
+.js .ctabs:not(.on) .ctab-pan ~ .ctab-pan { display: none; }
 .p-tile .cmd pre { font-size: .88rem; padding-block: 16px; }
 .p-tile .uses { gap: 8px; }
 .p-tile .usechip { font-size: .92rem; line-height: 2.3; padding: 0 16px; }
@@ -933,6 +1052,35 @@ a.name:hover { color: var(--accent); }
 .nf-empty .empty-ic .i { transform-origin: 50% 10%; animation: ring 1.1s ease 200ms; }
 @keyframes seek { 0%, 100% { translate: 0 0; } 25% { translate: 5px -4px; } 50% { translate: 0 -7px; } 75% { translate: -5px -4px; } }
 @keyframes beat { 0%, 45%, 100% { scale: 1; } 15% { scale: 1.18; } 30% { scale: .94; } }
+
+/* ---------- الشخصية (src/components/Mascot.astro وsrc/scripts/mascot.js) ---------- */
+/* تمشي إلى مكانها بجهة القراءة (ثلاث خطوات والجسم يهتز معها)، ثم تقف وترمش وتلمع نجمتها. لا حركة متكررة:
+   بعد ذلك تتحرك فقط استجابةً للزائر (العينان تتابعان المؤشر، والنجمة تدور واليد تلوّح عند المرور، وتقفز عند اللمس). */
+.mascot { width: clamp(136px, 34vw, 184px); margin-bottom: -4px; --px: 1.5px; --py: 0px; -webkit-tap-highlight-color: transparent; }
+.m-svg { display: block; width: 100%; height: auto; overflow: visible; }
+html[dir="rtl"] .m-svg { scale: -1 1; }
+.m-leg { transform-box: fill-box; transform-origin: 50% 6%; }
+.m-eyes { transform-box: fill-box; transform-origin: 50% 50%; }
+.m-pupils { translate: var(--px) var(--py); transition: translate 200ms var(--ease-out); }
+.m-arm { transform-box: fill-box; transform-origin: 12% 80%; }
+.m-spark { transform-box: fill-box; transform-origin: center; transition: transform var(--dur-slow) var(--spring); }
+.mascot:hover .m-spark { transform: rotate(90deg) scale(1.15); }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-text > .mascot { animation: m-walk 1500ms cubic-bezier(.3, .55, .45, 1) 150ms both; }
+  .mascot .m-leg { animation: m-step 500ms ease-in-out 150ms 3; }
+  .mascot .m-leg-b { animation-direction: reverse; }
+  .mascot .m-bob { animation: m-bob 250ms ease-in-out 150ms 6; }
+  .mascot .m-eyes { animation: m-blink 260ms ease-in-out 1750ms; }
+  .mascot .m-spark { animation: twinkle 1s var(--ease-out) 1250ms backwards; }
+  .mascot:hover .m-arm { animation: m-wave 900ms ease-in-out; }
+  .mascot.hop .m-bob { animation: m-hop 560ms var(--ease-out); }
+}
+@keyframes m-walk { from { translate: calc(var(--fwd) * -96px) 0; opacity: 0; } 25% { opacity: 1; } }
+@keyframes m-step { 25% { rotate: 16deg; } 75% { rotate: -16deg; } }
+@keyframes m-bob { 50% { translate: 0 -2.5px; } }
+@keyframes m-blink { 50% { scale: 1 .08; } }
+@keyframes m-wave { 25%, 65% { rotate: -38deg; } 45%, 85% { rotate: -14deg; } }
+@keyframes m-hop { 35% { translate: 0 -14px; } 70% { translate: 0 0; } 85% { translate: 0 -3px; } }
 
 /* ---------- الانتقال بين الصفحات (View Transitions) ---------- */
 /* التفعيل (@view-transition) في <head> داخل Base.astro، وهنا شكل الانتقال.

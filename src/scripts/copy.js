@@ -1,4 +1,4 @@
-// نسخ أمر التثبيت عند الضغط على زر "نسخ" داخل أي .cmd
+// نسخ أمر التثبيت عند الضغط على زر "نسخ" داخل أي .cmd (data-toast: نص الإشعار إن اختلف عن "تم نسخ أمر التثبيت")
 import { toast } from "./ui.js";
 import { L } from "../i18n/client.js";
 
@@ -29,7 +29,7 @@ export function initCopy(root = document) {
       done(L.copyManual, false);
     };
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(() => done(L.copiedToast, true), fallback);
+      navigator.clipboard.writeText(text).then(() => done(c.dataset.toast || L.copiedToast, true), fallback);
     } else {
       fallback();
     }

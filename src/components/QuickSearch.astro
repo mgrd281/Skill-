@@ -1,0 +1,38 @@
+---
+// البحث السريع في الصفحات التي ليس فيها بحث (صفحة الأداة والمفضلة و404): نافذة تُفتح من زر البحث في الشريط العلوي
+// أو بـ Ctrl/⌘+K أو "/". النتائج من فهرس البحث (src/lib/search-index.ts)، والتنقل بالأسهم وEnter، و"كل النتائج" يفتح
+// الصفحة الرئيسية مفلترة بالبحث نفسه. السلوك في src/scripts/quick-search.js.
+import Icon from "./Icon.astro";
+import { type Lang, href, fwdIcon, t as dict } from "../i18n";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict(lang);
+---
+<dialog class="qs" id="qs" aria-labelledby="qs-h">
+  <div class="qs-in">
+    <h2 class="sr" id="qs-h">{t.qsTitle}</h2>
+    <div class="qs-field">
+      <Icon name="magnifying-glass" />
+      <input id="qs-q" type="search" role="combobox" aria-expanded="true" aria-controls="qs-list" aria-autocomplete="list"
+        aria-label={t.searchAria} placeholder={t.qsPh} autocomplete="off" spellcheck="false" enterkeyhint="go" />
+      <button type="button" class="qs-x" id="qs-x" aria-label={t.fbClose} title={t.fbClose}><Icon name="x" weight="bold" /></button>
+    </div>
+    <p class="sr" id="qs-status" aria-live="polite"></p>
+    <ul class="qs-list" id="qs-list" role="listbox" aria-label={t.qsResults}></ul>
+    <div class="qs-empty" id="qs-empty" hidden>
+      <span class="empty-ic"><Icon name="magnifying-glass" weight="duotone" /></span>
+      <p id="qs-empty-t"></p>
+      <button type="button" class="linkbtn" id="qs-sug" hidden></button>
+    </div>
+    <div class="qs-foot">
+      <a class="qs-all" id="qs-all" href={href(lang, "#list")}><span id="qs-all-t">{t.qsBrowse}</span><Icon name={fwdIcon(lang)} /></a>
+      <span class="qs-keys" aria-hidden="true" set:html={t.qsKeys_h} />
+    </div>
+  </div>
+  <!-- أيقونات صفوف الأقسام والمشاريع: يستنسخها السكربت، ووجودها هنا يرسمها في الصفحة -->
+  <template id="qs-icons"><Icon name="squares-four" /><Icon name="compass" /></template>
+</dialog>
+
+<script>
+  import "../scripts/quick-search.js";
+</script>

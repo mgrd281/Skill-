@@ -2,6 +2,7 @@
 // صفحة أداة واحدة بلغة معينة. تُبنى من src/pages/tools/[slug].astro ونظيريه في src/pages/de/ وsrc/pages/en/.
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
+import InstallTile from "../components/InstallTile.astro";
 import Icon from "../components/Icon.astro";
 import { type Tool, tools, projectById, txt, isLatin, formatDate, host, isAppStore, repoLabel, statusBadges, initials, kindIcon, kindLabel, categoryIcon, toolDesc, catName, projName } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
@@ -81,18 +82,7 @@ if (x.gh) jsonLd.push({
 
     <section class="band alt p-body">
       <div class="p-grid">
-        {x.cmd && (
-          <div class="p-tile p-install">
-            <h2>{t.installTitle}</h2>
-            <p class="p-note" set:html={t.installNote_h} />
-            <div class="cmd">
-              <pre tabindex="0" aria-label={t.cmdAria}><code>{x.cmd}</code></pre>
-              <button type="button" class="copy" aria-label={t.copyAria}>
-                <Icon name="copy" class="ic-copy" /><Icon name="check" weight="bold" class="ic-check" /><span class="copy-t">{t.copy}</span>
-              </button>
-            </div>
-          </div>
-        )}
+        <InstallTile tool={x} lang={lang} />
         <div class="p-tile">
           <h2>{t.usefulForProjects}</h2>
           <div class="uses">

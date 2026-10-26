@@ -1,0 +1,106 @@
+---
+// بلاطة «التثبيت» في صفحة الأداة. أمر Claude Code كما هو، وإن كان الأمر يضيف خادم MCP (src/lib/install.js)
+// فتبويبات لبرامج أخرى: Cursor وVS Code (رابط تثبيت بنقرة وملف الإعداد)، وClaude Desktop (ملف الإعداد أو موصل مخصص).
+// بلا JavaScript تظهر كل الأقسام بعناوينها تحت بعضها. السلوك في src/scripts/tabs.js.
+import Icon from "./Icon.astro";
+import { type Tool } from "../lib/data";
+import { mcpServer, mcpClients } from "../lib/install.js";
+import { type Lang, t as dict } from "../i18n";
+interface Props { tool: Tool; lang: Lang }
+const { tool: x, lang } = Astro.props;
+const t = dict(lang);
+const server = mcpServer(x);
+const c = server && mcpClients(server);
+// الخادم على هذا الجهاز (localhost) لا يصل إليه موصل claude.ai، فيبقى الجسر mcp-remote فقط
+const local = !!c?.url && /^https?:\/\/(localhost|127\.0\.0\.1|\[::1\])[:/]/.test(c.url);
+const tabs = c ? [["cc", "Claude Code"], ["cursor", "Cursor"], ["vscode", "VS Code"], ["desktop", "Claude Desktop"]] : [];
+---
+{x.cmd && (
+  <div class="p-tile p-install">
+    <h2>{t.installTitle}</h2>
+    {!c ? (
+      <>
+        <p class="p-note" set:html={t.installNote_h} />
+        <div class="cmd">
+          <pre tabindex="0" aria-label={t.cmdAria}><code>{x.cmd}</code></pre>
+          <button type="button" class="copy" aria-label={t.copyAria}>
+            <Icon name="copy" class="ic-copy" /><Icon name="check" weight="bold" class="ic-check" /><span class="copy-t">{t.copy}</span>
+          </button>
+        </div>
+      </>
+    ) : (
+      <div class="ctabs" data-tabs>
+        <div class="ctab-list" role="tablist" aria-label={t.installIn}>
+          {tabs.map(([id, label], i) => (
+            <button type="button" role="tab" class="ctab" id={`tab-${id}`} aria-controls={`pan-${id}`} aria-selected={i === 0 ? "true" : "false"} tabindex={i === 0 ? 0 : -1}><bdi>{label}</bdi></button>
+          ))}
+        </div>
+
+        <div class="ctab-pan" role="tabpanel" id="pan-cc" aria-labelledby="tab-cc">
+          <h3 class="ctab-h"><bdi>Claude Code</bdi></h3>
+          <p class="p-note" set:html={t.installNote_h} />
+          <div class="cmd">
+            <pre tabindex="0" aria-label={t.cmdAria}><code>{x.cmd}</code></pre>
+            <button type="button" class="copy" aria-label={t.copyAria}>
+              <Icon name="copy" class="ic-copy" /><Icon name="check" weight="bold" class="ic-check" /><span class="copy-t">{t.copy}</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="ctab-pan" role="tabpanel" id="pan-cursor" aria-labelledby="tab-cursor">
+          <h3 class="ctab-h"><bdi>Cursor</bdi></h3>
+          {!server.needsEdit && <a class="btn-primary ctab-go" href={c.cursorLink}><Icon name="arrow-square-out" /><span set:html={t.addToCursor_h} /></a>}
+          <p class="p-note" set:html={(server.needsEdit ? t.mcpEditNote_h + " " : "") + t.cursorFile_h(!server.needsEdit)} />
+          <div class="cmd">
+            <pre tabindex="0" aria-label={t.mcpJsonAria}><code>{c.cursorJson}</code></pre>
+            <button type="button" class="copy" aria-label={t.mcpCopyAria} data-toast={t.mcpCopied}>
+              <Icon name="copy" class="ic-copy" /><Icon name="check" weight="bold" class="ic-check" /><span class="copy-t">{t.copy}</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="ctab-pan" role="tabpanel" id="pan-vscode" aria-labelledby="tab-vscode">
+          <h3 class="ctab-h"><bdi>VS Code</bdi></h3>
+          {!server.needsEdit && <a class="btn-primary ctab-go" href={c.vscodeLink}><Icon name="arrow-square-out" /><span set:html={t.addToVscode_h} /></a>}
+          <p class="p-note" set:html={(server.needsEdit ? t.mcpEditNote_h + " " : "") + t.vscodeFile_h(!server.needsEdit)} />
+          <div class="cmd">
+            <pre tabindex="0" aria-label={t.mcpJsonAria}><code>{c.vscodeJson}</code></pre>
+            <button type="button" class="copy" aria-label={t.mcpCopyAria} data-toast={t.mcpCopied}>
+              <Icon name="copy" class="ic-copy" /><Icon name="check" weight="bold" class="ic-check" /><span class="copy-t">{t.copy}</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="ctab-pan" role="tabpanel" id="pan-desktop" aria-labelledby="tab-desktop">
+          <h3 class="ctab-h"><bdi>Claude Desktop</bdi></h3>
+          {c.remote && !local && (
+            <>
+              <p class="p-note" set:html={t.desktopConnector_h} />
+              <div class="cmd">
+                <pre tabindex="0" aria-label={t.mcpUrlAria}><code>{c.url}</code></pre>
+                <button type="button" class="copy" aria-label={t.mcpUrlCopyAria} data-toast={t.mcpUrlCopied}>
+                  <Icon name="copy" class="ic-copy" /><Icon name="check" weight="bold" class="ic-check" /><span class="copy-t">{t.copy}</span>
+                </button>
+              </div>
+            </>
+          )}
+          {c.desktopJson && (
+            <>
+              <p class="p-note" set:html={(server.needsEdit ? t.mcpEditNote_h + " " : "") + (c.remote ? (local ? t.desktopBridgeOnly_h : t.desktopBridge_h) : t.desktopFile_h)} />
+              <div class="cmd">
+                <pre tabindex="0" aria-label={t.mcpJsonAria}><code>{c.desktopJson}</code></pre>
+                <button type="button" class="copy" aria-label={t.mcpCopyAria} data-toast={t.mcpCopied}>
+                  <Icon name="copy" class="ic-copy" /><Icon name="check" weight="bold" class="ic-check" /><span class="copy-t">{t.copy}</span>
+                </button>
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+    )}
+  </div>
+)}
+
+<script>
+  import "../scripts/tabs.js";
+</script>
