@@ -1,4 +1,17 @@
 {
-  "seen": [],
+  "seen": [
+    "DietrichGebert/ponytail",
+    "Graphify-Labs/graphify",
+    "JuliusBrussee/caveman",
+    "NousResearch/hermes-agent",
+    "Panniantong/Agent-Reach",
+    "affaan-m/ECC",
+    "farion1231/cc-switch",
+    "google-gemini/gemini-cli",
+    "n8n-io/n8n",
+    "nexu-io/open-design",
+    "paperclipai/paperclip",
+    "stablyai/orca"
+  ],
   "ignored": []
 }
