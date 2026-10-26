@@ -1154,16 +1154,14 @@ a.tr-v:hover { color: var(--accent); text-decoration: underline; text-underline-
 .foot-lang :is(a, [aria-current]) { display: inline-flex; align-items: center; min-height: 30px; padding: 0 12px; border-radius: var(--r-full); color: var(--ink-2); text-decoration: none; transition: background-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease); }
 .foot-lang a:hover { color: var(--ink); background: var(--fill-2); }
 .foot-lang [aria-current] { background: var(--card); color: var(--ink); font-weight: 600; }
-/* اسم الدليل كبيرًا: نصه من data-mark عبر CSS، وحجمه يملأ عرض المحتوى. --chars عدد حروفه (Base.astro)،
-   و--fit حروف كل em في خط النظام بهامش 7% (مقيس: العربية 2.41، اللاتينية 2.09)، فلا يخرج عن العرض بأي لغة */
-.foot-mark { --fit: 1.96; container-type: inline-size; padding: 0 var(--pad) clamp(10px, 2vw, 24px); overflow-x: clip; pointer-events: none; user-select: none; }
-html[lang="ar"] .foot-mark { --fit: 2.25; }
+/* اسم الموقع كبيرًا (Skillpro، لاتيني في اللغات الثلاث): نصه من data-mark عبر CSS، وحجمه يملأ عرض المحتوى حتى 15rem.
+   --chars عدد حروفه (Base.astro)، و--fit حروف كل em بالخط العريض وتتبع -0.04em بهامش 7% (مقيس: 2.39)، فلا يخرج عن العرض.
+   إن تغيّر الاسم فقِس من جديد */
+.foot-mark { --fit: 2.22; container-type: inline-size; padding: 0 var(--pad) clamp(10px, 2vw, 24px); overflow-x: clip; pointer-events: none; user-select: none; }
 .foot-mark::before {
-  content: attr(data-mark); display: block; text-align: center; white-space: nowrap;
-  font-size: min(10.5rem, 100cqi / var(--chars) * var(--fit)); font-weight: 700; line-height: 1.1; color: color-mix(in srgb, var(--ink) 7%, var(--bg-alt));
+  content: attr(data-mark); display: block; text-align: center; white-space: nowrap; letter-spacing: -0.04em;
+  font-size: min(15rem, 100cqi / var(--chars) * var(--fit)); font-weight: 700; line-height: 1.1; color: color-mix(in srgb, var(--ink) 7%, var(--bg-alt));
 }
-html[lang="ar"] .foot-mark::before { line-height: 1.5; }
-html:is([lang="de"], [lang="en"]) .foot-mark::before { letter-spacing: -0.04em; }
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     .foot-mark::before { animation: foot-rise linear both; animation-timeline: view(); animation-range: entry 0% entry 100%; }

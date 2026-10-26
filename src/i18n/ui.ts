@@ -1,11 +1,11 @@
 // نصوص الواجهة لكل لغة (وقت البناء). المفاتيح المنتهية بـ _h فيها HTML وتُعرض بـ set:html.
 // نصوص السكربتات في المتصفح موجودة في src/i18n/client.js.
 const ar = {
-  siteName: "دليل الأدوات",
-  siteTitle: "دليل أدوات التصميم والتطوير",
+  siteName: "Skillpro",
+  siteTitle: "Skillpro – دليل أدوات التصميم والتطوير",
   skip: "تخطَّ إلى المحتوى",
   home: "الرئيسية",
-  homeAria: "دليل الأدوات: الصفحة الرئيسية",
+  homeAria: "Skillpro: الصفحة الرئيسية",
   navAria: "التنقل الرئيسي",
   navTools: "الأدوات",
   navBuild: "ماذا تبني؟",
@@ -25,7 +25,7 @@ const ar = {
   footColJoin: "شارك في الدليل",
   footAll: "كل الأدوات",
   footRss: "خلاصة RSS",
-  footRights: (y: number) => `© ${y} دليل الأدوات`,
+  footRights: (y: number) => `© ${y} Skillpro`,
   rssTitle: "أحدث الأدوات المضافة",
   toTop: "العودة إلى الأعلى",
   themeAria: "تبديل الوضع الداكن",
@@ -141,7 +141,7 @@ const ar = {
   officialSite: "الموقع الرسمي",
 
   // صفحة الأداة
-  toolTitle: (name: string) => `${name} | دليل أدوات التصميم والتطوير`,
+  toolTitle: (name: string) => `${name} | Skillpro`,
   crumbAria: "مسار الصفحة",
   openGitHub_h: "افتح على <bdi>GitHub</bdi>",
   openAppStore: "افتح في App Store",
@@ -186,10 +186,10 @@ const ar = {
   otherLicense: "رخصة خاصة",
   relatedTitle_h: "قد يعجبك أيضًا. <span>أدوات من القسم نفسه.</span>",
   trustTitle_h: "الأمان والثقة. <span>ما تعرفه قبل التثبيت.</span>",
-  catTitle: (name: string) => `${name} | دليل أدوات التصميم والتطوير`,
+  catTitle: (name: string) => `${name} | Skillpro`,
   catDesc: (n: number, name: string) => `${n} أداة مختارة في قسم «${name}»، مرتبة حسب نجوم GitHub، مع أمر التثبيت لكل أداة.`,
   otherCats_h: "أقسام أخرى. <span>تصفّح بقية الدليل.</span>",
-  cmpTitle: "مقارنة الأدوات | دليل أدوات التصميم والتطوير",
+  cmpTitle: "مقارنة الأدوات | Skillpro",
   cmpH1: "قارن بين الأدوات",
   cmpLead: "اختر حتى ثلاث أدوات لترى الفروق بينها جنبًا إلى جنب: من ينشرها، وأين تعمل، والرخصة، وطريقة التثبيت.",
   cmpChosen: "الأدوات المختارة للمقارنة",
@@ -226,7 +226,7 @@ const ar = {
   toolFoot: "المعلومات مأخوذة من صفحة المشروع الرسمية، وقد تتغير. تحقق من الرخصة وشروط الاستخدام قبل الاعتماد على أي أداة في عمل تجاري.",
 
   // المفضلة
-  favTitle: "المفضلة | دليل أدوات التصميم والتطوير",
+  favTitle: "المفضلة | Skillpro",
   favDesc: "الأدوات التي حفظتها في المفضلة.",
   favH1: "المفضلة",
   favLead: "الأدوات التي ضغطت عليها بالقلب تظهر هنا. تُحفظ في متصفحك فقط على هذا الجهاز.",
@@ -251,7 +251,7 @@ const ar = {
   favFoot: "المفضلة محفوظة في هذا المتصفح فقط. إن مسحت بيانات الموقع أو غيّرت الجهاز فلن تجدها.",
 
   // خلاصة RSS
-  feedTitle: "دليل أدوات التصميم والتطوير: أحدث الإضافات",
+  feedTitle: "Skillpro: أحدث الإضافات",
   feedDesc: "أحدث الأدوات المضافة إلى الدليل",
 
   // نافذة الرأي
@@ -326,11 +326,11 @@ const ar = {
 type Dict = typeof ar;
 
 const de: Dict = {
-  siteName: "Tool-Verzeichnis",
-  siteTitle: "Tool-Verzeichnis für Design und Entwicklung",
+  siteName: "Skillpro",
+  siteTitle: "Skillpro – Tool-Verzeichnis für Design und Entwicklung",
   skip: "Zum Inhalt springen",
   home: "Startseite",
-  homeAria: "Tool-Verzeichnis: Startseite",
+  homeAria: "Skillpro: Startseite",
   navAria: "Hauptnavigation",
   navTools: "Tools",
   navBuild: "Was baust du?",
@@ -349,7 +349,7 @@ const de: Dict = {
   footColJoin: "Mitmachen",
   footAll: "Alle Tools",
   footRss: "RSS-Feed",
-  footRights: (y: number) => `© ${y} Tool-Verzeichnis`,
+  footRights: (y: number) => `© ${y} Skillpro`,
   rssTitle: "Zuletzt hinzugefügte Tools",
   toTop: "Nach oben",
   themeAria: "Dunkelmodus umschalten",
@@ -462,7 +462,7 @@ const de: Dict = {
   copy: "Kopieren",
   officialSite: "Website",
 
-  toolTitle: (name: string) => `${name} | Tool-Verzeichnis`,
+  toolTitle: (name: string) => `${name} | Skillpro`,
   crumbAria: "Seitenpfad",
   openGitHub_h: "Auf GitHub öffnen",
   openAppStore: "Im App Store öffnen",
@@ -507,10 +507,10 @@ const de: Dict = {
   otherLicense: "Eigene Lizenz",
   relatedTitle_h: "Das könnte dir auch gefallen. <span>Tools aus derselben Kategorie.</span>",
   trustTitle_h: "Sicherheit und Vertrauen. <span>Was du vor der Installation wissen solltest.</span>",
-  catTitle: (name: string) => `${name} | Tool-Verzeichnis`,
+  catTitle: (name: string) => `${name} | Skillpro`,
   catDesc: (n: number, name: string) => `${n} ausgewählte Tools in der Kategorie „${name}“, nach GitHub-Sternen sortiert, mit dem Installationsbefehl für jedes Tool.`,
   otherCats_h: "Weitere Kategorien. <span>Stöbere im restlichen Verzeichnis.</span>",
-  cmpTitle: "Tools vergleichen | Tool-Verzeichnis",
+  cmpTitle: "Tools vergleichen | Skillpro",
   cmpH1: "Tools vergleichen",
   cmpLead: "Wähle bis zu drei Tools und sieh die Unterschiede nebeneinander: wer sie herausgibt, wo sie laufen, die Lizenz und die Installation.",
   cmpChosen: "Ausgewählte Tools",
@@ -546,7 +546,7 @@ const de: Dict = {
   rpThanks: "Danke! Wir prüfen das Tool und beheben, was nötig ist.",
   toolFoot: "Die Angaben stammen von der offiziellen Projektseite und können sich ändern. Prüfe Lizenz und Nutzungsbedingungen, bevor du ein Tool kommerziell einsetzt.",
 
-  favTitle: "Favoriten | Tool-Verzeichnis",
+  favTitle: "Favoriten | Skillpro",
   favDesc: "Die Tools, die du als Favoriten gespeichert hast.",
   favH1: "Favoriten",
   favLead: "Tools, die du mit dem Herz markierst, erscheinen hier. Sie werden nur in deinem Browser auf diesem Gerät gespeichert.",
@@ -570,7 +570,7 @@ const de: Dict = {
   browse: "Tools entdecken",
   favFoot: "Favoriten werden nur in diesem Browser gespeichert. Wenn du die Website-Daten löschst oder das Gerät wechselst, sind sie weg.",
 
-  feedTitle: "Tool-Verzeichnis: zuletzt hinzugefügt",
+  feedTitle: "Skillpro: zuletzt hinzugefügt",
   feedDesc: "Die zuletzt ins Verzeichnis aufgenommenen Tools",
 
   fbTitle: "Wie gefällt dir das Verzeichnis?",
@@ -640,11 +640,11 @@ const de: Dict = {
 };
 
 const en: Dict = {
-  siteName: "Tool Directory",
-  siteTitle: "Tool Directory for Design and Development",
+  siteName: "Skillpro",
+  siteTitle: "Skillpro – Tool Directory for Design and Development",
   skip: "Skip to content",
   home: "Home",
-  homeAria: "Tool Directory: home page",
+  homeAria: "Skillpro: home page",
   navAria: "Main navigation",
   navTools: "Tools",
   navBuild: "What are you building?",
@@ -663,7 +663,7 @@ const en: Dict = {
   footColJoin: "Contribute",
   footAll: "All tools",
   footRss: "RSS feed",
-  footRights: (y: number) => `© ${y} Tool Directory`,
+  footRights: (y: number) => `© ${y} Skillpro`,
   rssTitle: "Recently added tools",
   toTop: "Back to top",
   themeAria: "Toggle dark mode",
@@ -776,7 +776,7 @@ const en: Dict = {
   copy: "Copy",
   officialSite: "Website",
 
-  toolTitle: (name: string) => `${name} | Tool Directory`,
+  toolTitle: (name: string) => `${name} | Skillpro`,
   crumbAria: "Page path",
   openGitHub_h: "Open on GitHub",
   openAppStore: "Open in the App Store",
@@ -821,10 +821,10 @@ const en: Dict = {
   otherLicense: "Custom license",
   relatedTitle_h: "You might also like. <span>More tools from the same category.</span>",
   trustTitle_h: "Safety and trust. <span>What to know before you install.</span>",
-  catTitle: (name: string) => `${name} | Tool Directory`,
+  catTitle: (name: string) => `${name} | Skillpro`,
   catDesc: (n: number, name: string) => `${n} hand-picked tools in “${name}”, ranked by GitHub stars, with the install command for every tool.`,
   otherCats_h: "Other categories. <span>Browse the rest of the directory.</span>",
-  cmpTitle: "Compare tools | Tool Directory",
+  cmpTitle: "Compare tools | Skillpro",
   cmpH1: "Compare tools",
   cmpLead: "Pick up to three tools to see the differences side by side: who publishes them, where they run, the license and how to install them.",
   cmpChosen: "Tools being compared",
@@ -860,7 +860,7 @@ const en: Dict = {
   rpThanks: "Thank you! We'll review the tool and fix what's needed.",
   toolFoot: "The information comes from the official project page and may change. Check the license and terms of use before relying on any tool commercially.",
 
-  favTitle: "Favorites | Tool Directory",
+  favTitle: "Favorites | Skillpro",
   favDesc: "The tools you saved as favorites.",
   favH1: "Favorites",
   favLead: "Tools you mark with the heart appear here. They are saved only in your browser, on this device.",
@@ -884,7 +884,7 @@ const en: Dict = {
   browse: "Browse tools",
   favFoot: "Favorites are saved only in this browser. If you clear site data or switch devices, they will be gone.",
 
-  feedTitle: "Tool Directory: recent additions",
+  feedTitle: "Skillpro: recent additions",
   feedDesc: "The tools most recently added to the directory",
 
   fbTitle: "How do you like the directory?",
