@@ -1,0 +1,131 @@
+---
+// «ساعدني أختار» بلا صفحة حولها (/finder/ و/de/finder/ و/en/finder/): تجلبها الصفحة عند الحاجة فقط (src/scripts/finder.js)،
+// فلا تثقل كل صفحة برسومها. فيها:
+//   - النافذة الصغيرة #fn: تظهر مرة واحدة بعد تصفح فعلي، وتسأل أول سؤال مباشرة (مثل نافذة الرأي).
+//   - النافذة الكاملة #finder: ثلاثة أسئلة ثم النتائج. الترتيب والعرض في src/scripts/finder-app.js، والبيانات في /finder.json.
+//   - نصوص السكربت (#fd-l)، ورسم أيقوناتها (IconSprite)، وقالب بأيقونات النتائج (#fd-icons) حتى تدخل الرسم.
+// كل خيار زر بـ aria-pressed للإجابة الحالية، وdata-v قيمتها (any = لا تفضيل)، وdata-c اسمها القصير لشرائح «إجاباتك».
+import Icon from "../components/Icon.astro";
+import IconSprite from "../components/IconSprite.astro";
+import { NEEDS, KINDS } from "../lib/finder";
+import { tools, projects, projName, projectIcon, kindIcon, txt } from "../lib/data";
+import { type Lang, href, fwdIcon, t as dict } from "../i18n";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict(lang);
+const fwd = fwdIcon(lang);
+const back = fwd === "caret-left" ? "caret-right" : "caret-left";
+
+const needs = [...NEEDS, { id: "any", icon: "squares-four" as const }];
+const kinds = [...KINDS, { id: "any", icon: "squares-four" as const }];
+const steps = [
+  { id: "need", h: t.fdNeedH, sub: t.fdNeedSub },
+  { id: "project", h: t.fdProjH, sub: t.fdProjSub },
+  { id: "kind", h: t.fdKindH, sub: t.fdKindSub },
+];
+// أيقونات أنواع الأدوات في صفوف النتائج
+const kindIcons = [...new Set(tools.map((x) => kindIcon(x.kind)))];
+// نصوص السكربت
+const L = {
+  edit: t.fdEdit, sumAll: t.fdSumAll, sumSome: t.fdSumSome, sumNone: t.fdSumNone, top: t.fdTop, official: t.fdOfficial,
+  pick: t.fdPick, more: t.fdMore, saved: t.fdSaved, shareCopied: t.fdShareCopied, none: t.fdNoneFound,
+  needs: Object.fromEntries(needs.map((n) => [n.id, t.fdNeeds[n.id][2]])),
+  kinds: Object.fromEntries(kinds.map((k) => [k.id, t.fdKinds[k.id][2]])),
+};
+---
+<div class="fb fn" id="fn" role="dialog" aria-labelledby="fn-h" aria-describedby="fn-sub" hidden>
+  <button type="button" class="fb-x" id="fn-x" aria-label={t.fbClose} title={t.fbClose}><Icon name="x" weight="bold" /></button>
+  <div class="fb-top">
+    <span class="fn-ic" aria-hidden="true"><Icon name="compass" weight="duotone" /></span>
+    <div class="fb-tt">
+      <h2 class="fb-h" id="fn-h">{t.fdNeedH}</h2>
+      <p class="fb-sub" id="fn-sub">{t.fnSub}</p>
+    </div>
+  </div>
+  <div class="fn-chips" role="group" aria-labelledby="fn-h">
+    {needs.map((n, i) => <button type="button" class="fn-c" data-v={n.id} style={`--i:${i}`}><Icon name={n.icon} /><span set:html={txt(t.fdNeeds[n.id][2], lang)} /></button>)}
+  </div>
+  <div class="fn-foot">
+    <span class="fn-meta"><span class="fn-dots" aria-hidden="true"><i></i><i></i><i></i></span>{t.fnMeta}</span>
+    <button type="button" class="linkbtn" id="fn-later">{t.fnLater}</button>
+  </div>
+</div>
+
+<dialog class="fd" id="finder" aria-labelledby="fd-need-h">
+  <div class="fd-top">
+    <button type="button" class="fd-back" id="fd-back" aria-label={t.fdBack} title={t.fdBack}><Icon name={back} /></button>
+    <ol class="fd-prog" id="fd-prog" aria-hidden="true">{steps.map(() => <li></li>)}</ol>
+    <span class="fd-n" id="fd-n" aria-hidden="true">1/{steps.length}</span>
+    <button type="button" class="qs-x" id="fd-x" aria-label={t.fbClose} title={t.fbClose}><Icon name="x" weight="bold" /></button>
+  </div>
+  <div class="fd-body" id="fd-body">
+    {steps.map((s, si) => (
+      <section class="fd-q" data-step={s.id} aria-labelledby={`fd-${s.id}-h`} hidden={si > 0}>
+        <h2 class="fd-h" id={`fd-${s.id}-h`} tabindex="-1"><span class="sr">{t.fdStep(si + 1, steps.length)}: </span>{s.h}</h2>
+        <p class="fd-sub" id={`fd-${s.id}-sub`}>{s.sub}</p>
+        {s.id === "need" && (
+          <div class="fd-opts rows" role="group" aria-labelledby={`fd-${s.id}-h`} aria-describedby={`fd-${s.id}-sub`}>
+            {needs.map((n, i) => (
+              <button type="button" class="fd-o" data-v={n.id} data-c={t.fdNeeds[n.id][2]} aria-pressed="false" style={`--i:${i}`}>
+                <span class="fd-oi"><Icon name={n.icon} weight="duotone" /></span>
+                <span class="fd-ot"><b set:html={txt(t.fdNeeds[n.id][0], lang)} /><small set:html={txt(t.fdNeeds[n.id][1], lang)} /></span>
+                <span class="fd-ck"><Icon name="check" weight="bold" /></span>
+              </button>
+            ))}
+          </div>
+        )}
+        {s.id === "project" && (
+          <div class="fd-opts tiles" role="group" aria-labelledby={`fd-${s.id}-h`} aria-describedby={`fd-${s.id}-sub`}>
+            {projects.map((p, i) => (
+              <button type="button" class="fd-o" data-v={p.id} data-c={projName(p, lang)} aria-pressed="false" style={`--i:${i}`}>
+                <span class="fd-oi"><Icon name={projectIcon(p.id)} weight="duotone" /></span>
+                <span class="fd-ot"><b set:html={txt(projName(p, lang), lang)} /></span>
+                <span class="fd-ck"><Icon name="check" weight="bold" /></span>
+              </button>
+            ))}
+            <button type="button" class="fd-o wide" data-v="any" data-c={t.fdExplore[0]} aria-pressed="false" style={`--i:${projects.length}`}>
+              <span class="fd-oi"><Icon name="compass" weight="duotone" /></span>
+              <span class="fd-ot"><b>{t.fdExplore[0]}</b><small>{t.fdExplore[1]}</small></span>
+              <span class="fd-ck"><Icon name="check" weight="bold" /></span>
+            </button>
+          </div>
+        )}
+        {s.id === "kind" && (
+          <div class="fd-opts rows" role="group" aria-labelledby={`fd-${s.id}-h`} aria-describedby={`fd-${s.id}-sub`}>
+            {kinds.map((k, i) => (
+              <button type="button" class="fd-o" data-v={k.id} data-c={t.fdKinds[k.id][2]} aria-pressed="false" style={`--i:${i}`}>
+                <span class="fd-oi"><Icon name={k.icon} weight="duotone" /></span>
+                <span class="fd-ot"><b set:html={txt(t.fdKinds[k.id][0], lang)} /><small set:html={txt(t.fdKinds[k.id][1], lang)} /></span>
+                <span class="fd-ck"><Icon name="check" weight="bold" /></span>
+              </button>
+            ))}
+          </div>
+        )}
+      </section>
+    ))}
+    <section class="fd-q fd-res" data-step="res" aria-labelledby="fd-res-h" hidden>
+      <h2 class="fd-h" id="fd-res-h" tabindex="-1">{t.fdResH}</h2>
+      <p class="fd-sub" id="fd-sum" role="status"></p>
+      <div class="fd-ans" role="group" aria-label={t.fdAnswers}>
+        <span class="fd-ans-in" id="fd-ans"></span>
+        <button type="button" class="fd-a fd-restart" id="fd-restart"><Icon name="arrow-counter-clockwise" />{t.fdRestart}</button>
+      </div>
+      <ol class="fd-list" id="fd-list"></ol>
+      <div class="fd-more"><button type="button" class="btn-more" id="fd-more" hidden></button></div>
+    </section>
+  </div>
+  <div class="fd-foot" id="fd-foot" hidden>
+    <button type="button" class="btn-primary" id="fd-save"><Icon name="heart" />{t.fdSave}</button>
+    <a class="btn-primary" id="fd-favs" href={href(lang, "favorites")} hidden><Icon name="heart" weight="fill" />{t.fdOpenFavs}</a>
+    <button type="button" class="kit-btn" id="fd-kit" data-kit="" data-kit-title={t.kitFor(t.fdResH)} hidden><Icon name="terminal-window" />{t.kitBtn}</button>
+    <button type="button" class="kit-btn" id="fd-share" title={t.fdShare}><Icon name="export" /><span class="fd-st">{t.fdShare}</span></button>
+  </div>
+  <p class="sr" id="fd-live" role="status"></p>
+</dialog>
+
+<template id="fd-icons">
+  {kindIcons.map((k) => <Icon name={k} />)}
+  <Icon name="seal-check" /><Icon name="star" weight="fill" /><Icon name={fwd} />
+</template>
+<script type="application/json" id="fd-l" set:html={JSON.stringify(L)} />
+<IconSprite />

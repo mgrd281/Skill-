@@ -18,6 +18,7 @@ import HeartLink from "../components/HeartLink.astro";
 import IconSprite from "../components/IconSprite.astro";
 import Feedback from "../components/Feedback.astro";
 import SuggestDialog from "../components/SuggestDialog.astro";
+import KitDialog from "../components/KitDialog.astro";
 import QuickSearch from "../components/QuickSearch.astro";
 import { useIcon } from "../lib/icon-sprite";
 import sansAr400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-400-normal.woff2?url";
@@ -157,6 +158,7 @@ useIcon(Astro.locals, "check", "bold");
             <a href={href(lang)}>{t.home}</a>
             <a href={href(lang, "favorites")}>{t.navFavs}</a>
             <a href={href(lang, "compare/")}>{t.navCompare}</a>
+            <button type="button" data-finder>{t.fdOpen}</button>
             <a href={href(lang, "feed.xml")}><bdi>RSS</bdi></a>
             <button type="button" data-feedback>{t.fbOpen}</button>
             <button type="button" data-suggest>{t.sgOpen}</button>
@@ -176,6 +178,8 @@ useIcon(Astro.locals, "check", "bold");
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <Feedback lang={lang} />
     <SuggestDialog lang={lang} />
+    <!-- حزمة التثبيت في كل صفحة: تفتحها أزرار [data-kit] في الرئيسية والمفضلة والمقارنة ونتائج «ساعدني أختار» -->
+    <KitDialog lang={lang} />
     {quickSearch && <QuickSearch lang={lang} />}
     <IconSprite />
   </body>
@@ -185,6 +189,7 @@ useIcon(Astro.locals, "check", "bold");
   import "../scripts/ui.js";
   import "../scripts/feedback.js";
   import "../scripts/suggest.js";
+  import "../scripts/finder.js";
   import "../scripts/analytics.js";
   import "../scripts/page-transition.js";
 </script>

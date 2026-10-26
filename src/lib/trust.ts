@@ -146,6 +146,11 @@ const W: Record<Lang, Words> = {
 };
 
 const ghOwner = (url: string | null) => (url && /^https:\/\/github\.com\/([^/]+)/.exec(url)?.[1]) || null;
+// اسم الجهة إن كانت الأداة من حسابها الرسمي على GitHub (لمساعد الاختيار: src/lib/finder.ts)
+export function officialOf(t: Tool): string | null {
+  const o = ghOwner(t.gh);
+  return o && Object.hasOwn(OFFICIAL, o) ? OFFICIAL[o] : null;
+}
 const shortRepo = (s: string) => s.replace(/^https:\/\/github\.com\//, "").replace(/\.git$/, "").split("/").slice(0, 2).join("/");
 
 // اسم الحزمة من أمر التثبيت ورابط صفحتها في سجلها الرسمي

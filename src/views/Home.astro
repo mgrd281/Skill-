@@ -5,7 +5,6 @@ import Card from "../components/Card.astro";
 import Icon from "../components/Icon.astro";
 import Odometer from "../components/Odometer.astro";
 import Mascot from "../components/Mascot.astro";
-import KitDialog from "../components/KitDialog.astro";
 import CardIcons from "../components/CardIcons.astro";
 import Newsletter from "../components/Newsletter.astro";
 import { tools, byStars, rankOf, categories, projects, starsUpdatedAt, formatDate, recentTools, initials, kindIcon, kindLabel, categoryIcon, projectIcon, txt, catName, projName, projAdvice } from "../lib/data";
@@ -85,6 +84,7 @@ const kinds: Array<[string, any, string]> = [
           <Icon name="magnifying-glass" /><span class="hs-t" set:html={t.heroSearch_h} /><kbd aria-hidden="true">/</kbd>
         </button>
         <a class="link-more" href="#build-h">{t.navBuild}<Icon name={fwd} /></a>
+        <button type="button" class="link-more" data-finder aria-haspopup="dialog">{t.fdOpen}<Icon name={fwd} /></button>
       </div>
       <p class="tries" style="--i:3">
         <span class="l">{t.heroTry}</span>
@@ -194,6 +194,12 @@ const kinds: Array<[string, any, string]> = [
         </div>
       </div>
     ))}
+    <!-- «ساعدني أختار»: ثلاثة أسئلة ثم أنسب الأدوات (src/views/FinderFragment.astro) -->
+    <div class="fd-cta">
+      <span class="fd-cta-ic" aria-hidden="true"><Icon name="compass" weight="duotone" /></span>
+      <p class="fd-cta-t"><b>{t.fdCtaTitle}</b><span>{t.fdCtaSub}</span></p>
+      <button type="button" class="btn-primary" data-finder aria-haspopup="dialog">{t.fdOpen}</button>
+    </div>
   </section>
 
   <section class="band latest" aria-labelledby="latest-h">
@@ -291,7 +297,6 @@ const kinds: Array<[string, any, string]> = [
     {t.homeFoot_h(formatDate(starsUpdatedAt, lang)).map((p) => <p set:html={p} />)}
   </Fragment>
 
-  <KitDialog lang={lang} />
   <CardIcons lang={lang} />
   <script type="application/json" id="app-data" set:html={JSON.stringify(appData)} />
 </Base>

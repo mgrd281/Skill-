@@ -9,7 +9,7 @@ const NAMES = [
   "arrow-up", "bell", "caret-left", "caret-right", "check", "clock", "copy", "eye-slash", "funnel", "github-logo", "globe",
   "export", "heart", "info", "magnifying-glass", "moon", "rss-simple", "squares-four", "star", "sun", "translate", "warning", "x",
   "arrow-square-out", "shield-check", "seal-check", "user", "cloud", "puzzle-piece", "storefront", "scales", "flag",
-  "lightbulb", "envelope-simple",
+  "lightbulb", "envelope-simple", "arrow-counter-clockwise",
   // أنواع الأدوات
   "sparkle", "plug", "package", "wrench", "stack", "device-mobile",
   // الأقسام ومشاريع "ماذا تبني؟"

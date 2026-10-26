@@ -71,6 +71,8 @@ const ar = {
   loading: "جارٍ التحميل…",
   loadError: "تعذّر التحميل الآن. تحقق من اتصالك ثم أعد تحميل الصفحة.",
   qsError: "تعذّر تحميل البحث الآن. افتح الصفحة الرئيسية وابحث فيها.",
+  finder: "مساعد الاختيار",
+  close: "إغلاق",
 };
 
 const de = {
@@ -145,6 +147,8 @@ const de = {
   loading: "Wird geladen …",
   loadError: "Das hat gerade nicht geklappt. Prüfe deine Verbindung und lade die Seite neu.",
   qsError: "Die Suche lässt sich gerade nicht laden. Öffne die Startseite und suche dort.",
+  finder: "Tool-Finder",
+  close: "Schließen",
 };
 
 const en = {
@@ -219,6 +223,8 @@ const en = {
   loading: "Loading…",
   loadError: "Couldn't load right now. Check your connection and reload the page.",
   qsError: "Search couldn't load right now. Open the home page and search there.",
+  finder: "Tool finder",
+  close: "Close",
 };
 
 const DICT = { ar, de, en };

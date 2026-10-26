@@ -57,8 +57,9 @@ for (const m of ["manifest.webmanifest", "de/manifest.webmanifest", "en/manifest
 }
 
 // 3) وسوم <head> في كل صفحة تشير إلى ملفات موجودة
-// cards/index.html بكل لغة ليست صفحة: بطاقات تجلبها الرئيسية والمفضلة (src/views/CardsFragment.astro)
-const pages = fs.readdirSync(dist, { recursive: true }).filter((f) => f.endsWith(".html") && !/(^|\/)cards\/index\.html$/.test(f));
+// cards/index.html وfinder/index.html بكل لغة ليست صفحات: بطاقات تجلبها الرئيسية والمفضلة (src/views/CardsFragment.astro)،
+// ونافذة «ساعدني أختار» تجلبها أي صفحة (src/views/FinderFragment.astro)
+const pages = fs.readdirSync(dist, { recursive: true }).filter((f) => f.endsWith(".html") && !/(^|\/)(cards|finder)\/index\.html$/.test(f));
 let tags = 0;
 for (const p of pages) {
   const head = fs.readFileSync(path.join(dist, p), "utf8").split("</head>")[0];

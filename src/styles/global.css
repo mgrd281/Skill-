@@ -1371,6 +1371,187 @@ body.fb-open .totop { opacity: 0; pointer-events: none; }
   .fb-check circle, .fb-check path { stroke-dashoffset: 0; animation: none; }
 }
 
+/* ---------- «ساعدني أختار» (src/views/FinderFragment.astro وsrc/scripts/finder-app.js) ---------- */
+/* المداخل: رابط في الواجهة، وبطاقة تحت «ماذا تبني؟»، وزر في التذييل */
+button.link-more { border: 0; background: none; padding: 0; font: inherit; font-size: 1rem; font-weight: 500; cursor: pointer; }
+.fd-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 24px; padding: 18px 20px; border-radius: var(--r-xl); background: var(--card); }
+.fd-cta-ic, .fn-ic { flex: none; display: grid; place-items: center; background: var(--btn); color: var(--on-accent); }
+.fd-cta-ic { width: 48px; height: 48px; border-radius: 14px; }
+.fd-cta-ic .i { width: 28px; height: 28px; }
+.fd-cta-t { flex: 1; min-width: min(100%, 220px); display: grid; gap: 2px; line-height: 1.4; }
+.fd-cta-t b { font-size: 1.05rem; font-weight: 700; }
+.fd-cta-t span { color: var(--muted); font-size: .92rem; }
+
+/* النافذة الصغيرة: مثل نافذة الرأي (.fb) في مكانها وحركتها، وتسأل أول سؤال بشرائح */
+body.fn-open .totop { opacity: 0; pointer-events: none; }
+.fn-ic { width: 40px; height: 40px; border-radius: 12px; }
+.fn-ic .i { width: 24px; height: 24px; }
+.fn-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.fn-c {
+  display: inline-flex; align-items: center; gap: 7px; min-height: 40px; padding: 0 14px; border: 0; border-radius: var(--r-full);
+  background: var(--fill-2); color: var(--ink); font: 500 .9rem var(--font); cursor: pointer;
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease), scale var(--dur-fast) var(--ease);
+  animation: fd-pop 420ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 30ms + 240ms);
+}
+.fn-c .i { width: 17px; height: 17px; }
+.fn-c:hover { background: var(--btn); color: #fff; }
+.fn-c:active { scale: .96; }
+.fn-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; }
+.fn-meta { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: .78rem; }
+.fn-dots { display: inline-flex; gap: 3px; }
+.fn-dots i { width: 14px; height: 4px; border-radius: 2px; background: var(--fill); }
+.fn-dots i:first-child { background: var(--ink); }
+#fn-later { min-height: 36px; padding: 0 2px; font-size: .86rem; }
+
+/* النافذة: شريط علوي (رجوع، تقدم من ثلاث خطوات، إغلاق)، ثم سؤال واحد كل مرة، ثم النتائج وأزرارها.
+   ارتفاعها ثابت فلا تقفز بين الأسئلة، والمحتوى يتمرر داخلها */
+.fd {
+  /* لون الخيارات والصفوف: --fill-2 فوق البطاقة لكن معتمًا، فلا يتأثر بما خلف النافذة (ولا يخطئ فحص التباين) */
+  --fd-fill: color-mix(in srgb, var(--card) 92%, var(--muted));
+  width: min(700px, calc(100vw - 24px)); height: min(660px, calc(100dvh - 96px)); margin: max(48px, 7vh) auto auto; padding: 0;
+  border: 1px solid var(--line); border-radius: var(--r-xl); background: var(--card); color: var(--ink); overflow: hidden;
+}
+.fd[open] { display: flex; flex-direction: column; animation: fd-open 420ms var(--ease-out); }
+.fd::backdrop { background: rgb(0 0 0 / .32); }
+@keyframes fd-open { from { opacity: 0; transform: translateY(14px) scale(.98); } }
+@keyframes fd-pop { from { opacity: 0; transform: translateY(10px) scale(.98); } }
+@keyframes fd-in { from { opacity: 0; transform: translateX(calc(var(--fwd) * 28px)); } }
+@keyframes fd-in-back { from { opacity: 0; transform: translateX(calc(var(--fwd) * -28px)); } }
+.fd-wait { place-items: center; }
+.fd-wait[open] { display: grid; }
+.fd-wait .qs-x { position: absolute; top: 14px; inset-inline-end: 16px; }
+.fd-wait-t { margin: 0; padding: 24px; color: var(--muted); text-align: center; }
+.fd-top { display: flex; align-items: center; gap: 14px; padding: 14px 16px 6px; }
+.fd-back {
+  width: 36px; height: 36px; flex: none; display: grid; place-items: center; border: 0; border-radius: var(--r-full);
+  background: var(--fill-2); color: var(--ink); cursor: pointer; transition: background-color var(--dur) var(--ease), opacity var(--dur) var(--ease);
+}
+.fd-back:hover { background: var(--fill); }
+.fd-back .i { width: 18px; height: 18px; }
+.fd-back.off { visibility: hidden; opacity: 0; }
+.fd-prog { flex: 1; display: flex; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.fd-prog li { flex: 1; height: 4px; border-radius: 2px; background: var(--fill); overflow: hidden; }
+.fd-prog li::after {
+  content: ""; display: block; height: 100%; background: var(--ink);
+  transform: scaleX(0); transform-origin: var(--start); transition: transform 560ms var(--ease-out);
+}
+.fd-prog li.on::after { transform: none; }
+.fd-n { min-width: 2.4em; text-align: center; color: var(--muted); font-size: .8rem; font-weight: 600; font-variant-numeric: tabular-nums; direction: ltr; }
+.fd-body { flex: 1; min-height: 0; display: flex; flex-direction: column; overflow: auto; overscroll-behavior: contain; padding: 10px 28px 28px; scrollbar-width: thin; }
+.fd-q { display: grid; align-content: start; }
+/* على الشاشات الواسعة يتوسط السؤال ارتفاع النافذة (margin auto لا يقص المحتوى الطويل كما يفعل justify-content) */
+@media (min-width: 561px) { .fd-q:not(.fd-res) { margin-block: auto; } }
+.fd-q.enter { animation: fd-in 380ms var(--ease-out) both; }
+.fd-q.enter.back { animation-name: fd-in-back; }
+.fd-h { margin: 6px 0; font-size: clamp(1.45rem, 3.4vw, 1.85rem); font-weight: 700; line-height: 1.25; outline: none; }
+.fd-sub { margin: 0 0 22px; color: var(--muted); font-size: .98rem; line-height: 1.5; }
+
+/* الخيارات: صفوف بأيقونة وسطر شرح، أو بلاطات للمشاريع. المختار بخلفية --ink وعلامة ✓ */
+.fd-opts { display: grid; gap: 10px; }
+.fd-opts.rows { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.fd-opts.rows .fd-o:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.fd-opts.tiles { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.fd-o {
+  position: relative; display: flex; align-items: center; gap: 14px; min-width: 0; min-height: 76px; padding: 14px 16px;
+  border: 1px solid transparent; border-radius: 18px; background: var(--fd-fill); color: var(--ink);
+  font: inherit; text-align: start; cursor: pointer;
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease), translate var(--dur) var(--ease), scale var(--dur-fast) var(--ease);
+}
+.fd-q.enter .fd-o { animation: fd-pop 360ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 18ms + 60ms); }
+.fd-oi { width: 44px; height: 44px; flex: none; display: grid; place-items: center; border-radius: 13px; background: var(--card); color: var(--ink); transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease); }
+.fd-oi .i { width: 26px; height: 26px; }
+.fd-ot { flex: 1; min-width: 0; display: grid; gap: 2px; line-height: 1.35; }
+.fd-ot b { font-weight: 600; font-size: .98rem; }
+.fd-ot small { color: var(--muted); font-size: .82rem; transition: color var(--dur) var(--ease); }
+.fd-ck {
+  width: 24px; height: 24px; flex: none; display: grid; place-items: center; border-radius: 50%; background: var(--bg); color: var(--ink);
+  opacity: 0; scale: .4; transition: opacity 160ms var(--ease), scale 420ms var(--spring);
+}
+.fd-ck .i { width: 13px; height: 13px; }
+@media (hover: hover) { .fd-o:hover { border-color: var(--line); translate: 0 -2px; } }
+.fd-o:active { scale: .98; }
+.fd-o[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.fd-o[aria-pressed="true"] .fd-oi { background: color-mix(in srgb, var(--bg) 14%, transparent); color: var(--bg); }
+.fd-o[aria-pressed="true"] small { color: color-mix(in srgb, var(--bg) 72%, transparent); }
+.fd-o[aria-pressed="true"] .fd-ck { opacity: 1; scale: 1; }
+.fd-opts.tiles .fd-o { flex-direction: column; justify-content: center; gap: 10px; min-height: 112px; padding: 18px 10px 14px; text-align: center; }
+.fd-opts.tiles .fd-o:not(.wide) .fd-oi { width: auto; height: auto; background: none; }
+.fd-opts.tiles .fd-o:not(.wide) .fd-oi .i { width: 34px; height: 34px; }
+.fd-opts.tiles .fd-ot b { font-size: .9rem; overflow-wrap: break-word; }
+.fd-opts.tiles .fd-o:not(.wide) .fd-ck { position: absolute; top: 10px; inset-inline-end: 10px; }
+.fd-opts.tiles .wide { grid-column: 1 / -1; flex-direction: row; justify-content: flex-start; min-height: 64px; padding: 12px 16px; text-align: start; }
+
+/* النتائج: إجاباتك (تُغيَّر بالضغط)، ثم قائمة الأدوات، الأولى «الأنسب لك» بحد وشارة */
+.fd-ans { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: -8px 0 18px; }
+.fd-ans-in { display: contents; }
+.fd-a {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 14px; border: 1px solid var(--line); border-radius: var(--r-full);
+  background: var(--card); color: var(--ink); font: 500 .86rem var(--font); cursor: pointer;
+  transition: border-color var(--dur) var(--ease), scale var(--dur-fast) var(--ease);
+}
+.fd-a .i { width: 17px; height: 17px; }
+.fd-a:hover { border-color: var(--ink); }
+.fd-a:active { scale: .97; }
+.fd-restart { border-color: transparent; background: none; color: var(--accent); padding-inline: 8px; }
+.fd-restart:hover { border-color: transparent; text-decoration: underline; text-underline-offset: 4px; }
+.fd-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.fd-list li { animation: fd-pop 460ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 45ms + 80ms); }
+.fd-r {
+  display: flex; align-items: flex-start; gap: 14px; padding: 14px 16px; border: 1px solid transparent; border-radius: 18px;
+  background: var(--fd-fill); color: var(--ink); text-decoration: none;
+  transition: border-color var(--dur) var(--ease), translate var(--dur) var(--ease);
+}
+.fd-r .mono { width: 44px; height: 44px; border-radius: 12px; background: var(--card); font-size: .92rem; }
+.fd-rt { flex: 1; min-width: 0; display: grid; gap: 4px; }
+.fd-rn { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; }
+.fd-rn b { font-weight: 700; font-size: 1rem; }
+.fd-rd { color: var(--ink-2); font-size: .86rem; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.fd-why { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.fd-why:empty { display: none; }
+.fd-w { display: inline-flex; align-items: center; gap: 4px; padding: 1px 9px; border-radius: var(--r-full); background: var(--card); color: var(--ink-2); font-size: .74rem; font-weight: 500; line-height: 1.8; white-space: nowrap; }
+.fd-w .i { width: 12px; height: 12px; color: var(--ink); }
+@media (min-width: 561px) { .fd-rn .stars { margin-inline-start: auto; } }
+.fd-r > .chev { width: 16px; height: 16px; flex: none; align-self: center; color: var(--muted); transition: translate var(--dur) var(--ease); }
+@media (hover: hover) {
+  .fd-r:hover { border-color: var(--line); translate: 0 -2px; }
+  .fd-r:hover .chev { translate: calc(var(--fwd) * 3px) 0; }
+}
+.fd-list li:first-child .fd-r { background: var(--card); border-color: var(--line); }
+.fd-list li:first-child .fd-r .mono { background: var(--bg-alt); }
+.fd-list li:first-child .fd-w { background: var(--fd-fill); }
+.fd-list li:first-child .fd-rd { -webkit-line-clamp: 3; }
+.fd-more { display: flex; justify-content: center; margin-top: 16px; }
+.fd-more:not(:has(> :not([hidden]))) { display: none; }
+.fd-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 14px 20px; border-top: 1px solid var(--line-soft); }
+.fd-foot .btn-primary { min-height: 44px; padding: 0 20px; font-size: .95rem; }
+.fd-foot .kit-btn { min-height: 44px; }
+#fd-favs { animation: pop-in var(--dur-slow) var(--spring); }
+@media (max-width: 560px) {
+  .fd { width: calc(100vw - 16px); height: calc(100dvh - 16px); margin-top: 8px; border-radius: var(--r-lg); }
+  .fd-top { padding: 12px 12px 4px; }
+  .fd-body { padding: 6px 18px 22px; }
+  .fd-sub { margin-bottom: 18px; }
+  .fd-opts.rows { grid-template-columns: minmax(0, 1fr); }
+  /* المشاريع على الجوال: عمودان بأيقونة بجانب الاسم، فتتسع الأسماء الطويلة (الألمانية) بلا تقسيم للكلمات */
+  .fd-opts.tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .fd-opts.tiles .fd-o { flex-direction: row; justify-content: flex-start; gap: 10px; min-height: 60px; padding: 10px 12px; text-align: start; }
+  .fd-opts.tiles .fd-o:not(.wide) .fd-oi .i { width: 26px; height: 26px; }
+  .fd-opts.tiles .fd-o:not(.wide) .fd-ck { display: none; }
+  .fd-opts.tiles .fd-ot b { font-size: .86rem; }
+  .fd-o { min-height: 68px; padding: 12px 14px; }
+  /* صفوف النتائج على الجوال: حرفان أصغر وبلا سهم (الصف كله رابط)، فيتسع النص والشرائح */
+  .fd-r { gap: 12px; padding: 12px; }
+  .fd-r .mono { width: 36px; height: 36px; border-radius: 10px; font-size: .82rem; }
+  .fd-r > .chev { display: none; }
+  .fd-w { padding: 1px 8px; font-size: .72rem; }
+  .fd-foot { padding: 12px 14px calc(12px + env(safe-area-inset-bottom, 0px)); }
+  .fd-foot .btn-primary { flex: 1 1 100%; }
+  .fd-foot .kit-btn { flex: 1 1 0; justify-content: center; }
+  /* المشاركة أيقونة فقط على الجوال (اسمها في title ولقارئات الشاشة) */
+  #fd-share { flex: none; width: 44px; padding: 0; }
+  .fd-st { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+
 /* ---------- الألمانية والإنجليزية ---------- */
 /* كلمات ألمانية طويلة: تقسيم المقاطع للنصوص في الأعمدة الضيقة على الجوال فقط، وليس للعناوين أو الفقرات الوسطية */
 @media (max-width: 600px) {

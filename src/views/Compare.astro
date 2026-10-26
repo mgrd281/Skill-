@@ -3,7 +3,6 @@
 // يبنيه src/scripts/compare.js من /compare.json. عناوين الصفوف في <template> حتى تبقى النصوص في ui.ts.
 import Base from "../layouts/Base.astro";
 import Icon from "../components/Icon.astro";
-import KitDialog from "../components/KitDialog.astro";
 import { compareSuggestions } from "../lib/compare-index";
 import { txt } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
@@ -63,7 +62,6 @@ const ROWS: Array<[string, string]> = [
     {ROWS.map(([id, label]) => <tr data-row={id}><th scope="row" set:html={label} /></tr>)}
   </template>
   <template id="cmp-icons"><Icon name="copy" class="ic-copy" /><Icon name="check" weight="bold" class="ic-check" /><Icon name="x" weight="bold" /><Icon name="warning" /></template>
-  <KitDialog lang={lang} />
   <script type="application/json" id="cmp-i18n" set:html={JSON.stringify({ copy: t.copy, copyAria: t.copyAria, cmdAria: t.cmdAria, open: t.cmpOpen })} />
 </Base>
 

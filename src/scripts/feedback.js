@@ -1,8 +1,9 @@
 // نافذة "رأيك": تظهر مرة واحدة بعد دقيقة من التصفح الفعلي (تُحسب عبر الصفحات في الجلسة نفسها).
 // إن أغلقها الزائر لا تعود قبل 30 يومًا، وإن أرسل رأيه لا تعود أبدًا. رابط التذييل يفتحها في أي وقت.
+// ولا تظهر في جلسة ظهرت فيها نافذة «ساعدني أختار» الصغيرة (src/scripts/finder.js): نافذة تلقائية واحدة في الجلسة.
 import { L } from "../i18n/client.js";
 
-const KEY = "toolkit-feedback-v1", TKEY = "toolkit-fb-time";
+const KEY = "toolkit-feedback-v1", TKEY = "toolkit-fb-time", POP = "toolkit-auto-popup";
 const SHOW_AFTER = 60, TICK = 5, SNOOZE_DAYS = 30;
 const BASE = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 const box = document.getElementById("fb");
@@ -102,11 +103,15 @@ if (box) {
       const t = (read(TKEY, sessionStorage) || 0) + TICK;
       write(TKEY, t, sessionStorage);
       if (t < SHOW_AFTER) return;
-      // لا نقاطع الزائر وهو يكتب في البحث أو داخل لوحة مفتوحة
+      // نافذة تلقائية واحدة في الجلسة: إن ظهر «ساعدني أختار» (src/scripts/finder.js) ينتظر الرأي جلسة أخرى
+      const pop = read(POP, sessionStorage);
+      if (pop && pop !== "feedback") { clearInterval(timer); return; }
+      // لا نقاطع الزائر وهو يكتب في البحث أو داخل لوحة أو نافذة مفتوحة
       const a = document.activeElement;
       if (a && /^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)) return;
-      if (document.querySelector(".catpanel:not([hidden]), .notif:not([hidden])")) return;
+      if (document.querySelector(".catpanel:not([hidden]), .notif:not([hidden]), .fn:not([hidden]), dialog[open]")) return;
       clearInterval(timer);
+      write(POP, "feedback", sessionStorage);
       open(false);
     }, TICK * 1000);
   }

@@ -2,7 +2,6 @@
 // صفحة المفضلة بلغة معينة. تُبنى من src/pages/favorites.astro ونظيريها في src/pages/de/ وsrc/pages/en/.
 import Base from "../layouts/Base.astro";
 import Icon from "../components/Icon.astro";
-import KitDialog from "../components/KitDialog.astro";
 import CardIcons from "../components/CardIcons.astro";
 import { tools } from "../lib/data";
 import { type Lang, href, t as dict } from "../i18n";
@@ -47,7 +46,6 @@ const t = dict(lang);
     </div>
   </main>
 
-  <KitDialog lang={lang} />
   <CardIcons lang={lang} />
   <!-- أسماء الأدوات المختصرة فقط: البطاقات تُجلب من /cards/ ويُعرض منها ما في المفضلة (src/scripts/cards.js) -->
   <script type="application/json" id="fav-slugs" set:html={JSON.stringify(tools.map((x) => x.slug))} />
