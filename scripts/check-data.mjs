@@ -36,6 +36,7 @@ for (const t of tools) {
   for (const k of ["gh", "site"]) if (t[k] && !/^https:\/\//.test(t[k])) problems.push(`${k} ليس https في ${t.name}`);
   if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/.test(t.added || "")) problems.push(`added غير صالح في ${t.name} (الصيغة: 2026-10-24T09:30:00Z)`);
   if (!t.gh && !t.site) problems.push(`لا رابط لـ ${t.name}`);
+  if ("icon" in t && !(t.icon === false || (typeof t.icon === "string" && t.icon.trim() && t.kind === "تطبيق"))) problems.push(`icon في ${t.name}: مسار الأيقونة في المستودع أو false، للتطبيقات فقط (scripts/fetch-app-icons.mjs)`);
 }
 // أمثلة الطلب (data/examples.json): لأدوات موجودة، وبثلاث لغات
 const examples = read("examples.json");
@@ -87,6 +88,18 @@ if ("sponsor" in meta) {
     for (const lang of Object.keys(TR)) need(sp.text[lang], lang, `sponsor.text.${lang} في meta.json`);
     for (const [k, v] of Object.entries(sp.text)) if (typeof v === "string" && v.length > 140) problems.push(`sponsor.text.${k} أطول من 140 حرفًا`);
   }
+}
+// قوائم «الأفضل» (data/lists.json، src/lib/lists.ts): أقسام وأنواع معروفة، وترجمات، وخمس أدوات على الأقل
+const bestLists = read("lists.json"), listIds = new Set();
+for (const l of bestLists) {
+  if (!/^[a-z0-9-]+$/.test(l.id || "") || listIds.has(l.id)) problems.push(`قائمة بمعرّف غير صالح أو مكرر: ${l.id}`);
+  listIds.add(l.id);
+  for (const c of l.cats || []) if (!catIds.has(c)) problems.push(`قسم غير معروف في القائمة ${l.id}: ${c}`);
+  for (const k of l.kinds || []) if (!KINDS.includes(k)) problems.push(`نوع غير معروف في القائمة ${l.id}: ${k}`);
+  if (!AR.test(l.title || "") || !AR.test(l.lead || "")) problems.push(`عنوان أو وصف عربي ناقص في القائمة ${l.id}`);
+  for (const lang of Object.keys(TR)) { need(l[`title_${lang}`], lang, `title_${lang} للقائمة ${l.id}`); need(l[`lead_${lang}`], lang, `lead_${lang} للقائمة ${l.id}`); }
+  const n = tools.filter((t) => (!l.cats || l.cats.includes(t.cat)) && (!l.kinds || l.kinds.includes(t.kind)) && !t.archived).length;
+  if (n < 5) problems.push(`القائمة ${l.id} فيها ${n} أدوات فقط (5 على الأقل)`);
 }
 // تحذير لا يفشل الفحص: بيانات GitHub (التاريخ والرخصة) تملؤها update-stars.mjs
 const noMeta = tools.filter((t) => t.gh && (!t.pushed || t.license === undefined));

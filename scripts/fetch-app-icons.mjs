@@ -1,7 +1,8 @@
 // أيقونات «التطبيقات الجاهزة»: يجد أيقونة كل تطبيق في مستودعه على GitHub، ويحوّلها إلى PNG مربع 128 بكسل في
 // public/app-icons/<slug>.png، ويسجّل مصدرها في data/app-icons.json. الموقع يعرض الملف المحلي فقط (لا صور من مواقع أخرى).
 // يعمل في GitHub Actions (.github/workflows/app-icons.yml) لأنه يحتاج GitHub API: node scripts/fetch-app-icons.mjs [--force] [slug…]
-// بلا --force يتخطى التطبيقات التي لها أيقونة. إن اختار ملفًا خاطئًا فضع في tools.json حقل "icon": مسار الملف داخل المستودع.
+// بلا --force يتخطى التطبيقات التي لها أيقونة. إن اختار ملفًا خاطئًا فضع في tools.json حقل "icon": مسار الملف داخل المستودع،
+// أو false إن لم يكن فيه أيقونة صحيحة (تبقى الحروف الأولى). المرشحون لكل تطبيق في سجل التشغيل.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -56,6 +57,11 @@ let done = 0, missed = [];
 for (const t of tools) {
   if (t.kind !== "تطبيق" || !t.gh) continue;
   if (only.length && !only.includes(t.slug)) continue;
+  // "icon": false: لا أيقونة صحيحة في المستودع، فتبقى الحروف الأولى بدل صورة خاطئة
+  if (t.icon === false) {
+    if (map[t.slug]) { fs.rmSync(path.join(root, "public", map[t.slug].file), { force: true }); delete map[t.slug]; }
+    continue;
+  }
   if (!force && map[t.slug] && fs.existsSync(path.join(root, "public", map[t.slug].file))) continue;
   const m = /^https:\/\/github\.com\/([^/]+)\/([^/#?]+)/.exec(t.gh);
   if (!m) continue;

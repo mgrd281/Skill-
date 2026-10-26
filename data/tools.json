@@ -6402,7 +6402,8 @@
     "pushed": "2026-10-25",
     "added": "2026-10-26T13:30:00Z",
     "license": "GPL-3.0",
-    "archived": false
+    "archived": false,
+    "icon": false
   },
   {
     "slug": "boring-notch",
@@ -6478,7 +6479,8 @@
     "pushed": "2026-06-22",
     "added": "2026-10-26T13:30:00Z",
     "license": "other",
-    "archived": false
+    "archived": false,
+    "icon": "Pear Resources/Icons/icon_512x512.png"
   },
   {
     "slug": "loop",
@@ -6746,7 +6748,8 @@
     "pushed": "2026-10-23",
     "added": "2026-10-26T13:30:00Z",
     "license": "other",
-    "archived": false
+    "archived": false,
+    "icon": false
   },
   {
     "slug": "ditto",
@@ -6784,7 +6787,8 @@
     "pushed": "2026-10-26",
     "added": "2026-10-26T13:30:00Z",
     "license": "MIT",
-    "archived": false
+    "archived": false,
+    "icon": "res/terminal/images/Square150x150Logo.scale-400.png"
   },
   {
     "slug": "rufus",
@@ -6936,7 +6940,8 @@
     "pushed": "2026-10-26",
     "added": "2026-10-26T13:30:00Z",
     "license": "MIT",
-    "archived": false
+    "archived": false,
+    "icon": "WMFComponents/Sources/WMFComponents/Assets.xcassets/W-share-logo.imageset/wikipedia-logo.svg"
   },
   {
     "slug": "mastodon",
@@ -6974,7 +6979,8 @@
     "pushed": "2026-10-26",
     "added": "2026-10-26T13:30:00Z",
     "license": "Apache-2.0",
-    "archived": false
+    "archived": false,
+    "icon": false
   },
   {
     "slug": "firefox",
@@ -6993,7 +6999,8 @@
     "pushed": "2026-10-26",
     "added": "2026-10-26T13:30:00Z",
     "license": "MPL-2.0",
-    "archived": false
+    "archived": false,
+    "icon": false
   },
   {
     "slug": "localsend",
@@ -7074,7 +7081,8 @@
     "pushed": "2026-10-26",
     "added": "2026-10-26T13:30:00Z",
     "license": "other",
-    "archived": false
+    "archived": false,
+    "icon": "release/darwin/blender_liquid_glass.icon/Assets/Blender Logo.svg"
   },
   {
     "slug": "libreoffice",
@@ -7173,7 +7181,8 @@
     "pushed": "2026-10-26",
     "added": "2026-10-26T13:30:00Z",
     "license": "AGPL-3.0",
-    "archived": false
+    "archived": false,
+    "icon": false
   },
   {
     "slug": "joplin",
@@ -8200,7 +8209,8 @@
     "added": "2026-10-26T17:00:00Z",
     "pushed": "2026-10-26",
     "license": "Apache-2.0",
-    "archived": false
+    "archived": false,
+    "icon": "app-thunderbird/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
   },
   {
     "slug": "termux",
@@ -8295,7 +8305,8 @@
     "added": "2026-10-26T17:00:00Z",
     "pushed": "2026-10-25",
     "license": "GPL-3.0",
-    "archived": false
+    "archived": false,
+    "icon": "assets/graphics/icon-512x512.png"
   },
   {
     "slug": "seal",
