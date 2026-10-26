@@ -149,9 +149,8 @@ kbd {
 .gnav-in { height: 56px; display: flex; align-items: center; gap: 24px; padding-inline: max(var(--gutter), calc((100% - var(--content)) / 2)); }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 1rem; border-radius: 8px; }
 .brand .logo { flex: none; }
-.brand.sm { font-size: .86rem; gap: 8px; }
 .logo .spark { transform-box: fill-box; transform-origin: center; transition: transform var(--dur-slow) var(--spring); }
-.brand:hover .spark { transform: rotate(90deg) scale(1.15); }
+:is(.brand, .foot-logo):hover .spark { transform: rotate(90deg) scale(1.15); }
 /* backwards لا both: بعد انتهاء الدخول تعود الأنماط العادية فيعمل :hover (both يثبّت الحالة النهائية فيتجاهله) */
 .gnav .brand .spark { animation: twinkle 1s var(--ease-out) .3s backwards; }
 @keyframes twinkle { from { transform: rotate(-120deg) scale(.2); opacity: 0; } to { transform: none; opacity: 1; } }
@@ -1100,26 +1099,92 @@ a.tr-v:hover { color: var(--accent); text-decoration: underline; text-underline-
 .favtools, .shared-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding-block: 0 16px; }
 
 /* ---------- Footer ---------- */
-.foot { background: var(--bg-alt); border-top: 1px solid var(--line-soft); color: var(--muted); font-size: .8rem; line-height: 1.75; }
+/* بأسلوب Apple وVercel: ملاحظات الصفحة بخط صغير، ثم الشعار ووصف الدليل وثلاثة أعمدة روابط (أكورديون على الجوال)،
+   ثم شريط الحقوق والخصوصية واللغات (مفتاح مقسّم مثل .ctabs)، ثم اسم الدليل كبيرًا بعرض المحتوى بلون قريب من الخلفية */
+.foot { background: var(--bg-alt); border-top: 1px solid var(--line-soft); color: var(--muted); font-size: .84rem; line-height: 1.6; overflow: hidden; }
 .band.alt + .foot, .wrap:has(> .band.alt:last-of-type) + .foot { border-top-color: var(--line); }
-.foot-in { padding: 28px max(var(--gutter), calc((100% - var(--content)) / 2)) calc(28px + env(safe-area-inset-bottom, 0px)); display: grid; gap: 20px; }
-.foot-notes { display: grid; gap: 10px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.foot-in { padding: clamp(36px, 5vw, 56px) var(--pad) 0; display: grid; gap: clamp(32px, 4vw, 44px); }
+.foot-notes { display: grid; gap: 8px; padding-bottom: clamp(24px, 3vw, 32px); border-bottom: 1px solid var(--line-soft); font-size: .78rem; line-height: 1.7; }
 .foot-notes:empty { display: none; }
-.foot-notes p { margin: 0; max-width: 90ch; }
-.foot-bottom { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; }
-.foot-nav { display: flex; flex-wrap: wrap; }
-/* أهداف لمس 28px على الأقل (WCAG 2.5.8)، فالروابط تلتف في سطرين على الجوال */
-.foot-nav a { display: inline-flex; align-items: center; min-height: 28px; color: var(--ink-2); text-decoration: none; padding: 4px 12px; border-inline-start: 1px solid var(--line); line-height: 1; }
-.foot-nav a:first-child { border: 0; padding-inline-start: 0; }
-.foot-nav a:hover { text-decoration: underline; }
-.foot-nav button { display: inline-flex; align-items: center; min-height: 28px; font: inherit; color: var(--ink-2); background: none; border: 0; cursor: pointer; padding: 4px 12px; border-inline-start: 1px solid var(--line); line-height: 1; }
-.foot-nav button:hover { text-decoration: underline; }
-.foot-copy { margin: 0; margin-inline-start: auto; }
-.foot-lang { display: flex; gap: 14px; }
-.foot-lang a, .foot-lang [aria-current] { display: inline-flex; align-items: center; min-height: 28px; }
-.foot-lang a { color: var(--ink-2); text-decoration: none; }
-.foot-lang a:hover { text-decoration: underline; }
-.foot-lang [aria-current] { color: var(--ink); font-weight: 600; }
+.foot-notes p { margin: 0; max-width: 92ch; }
+.foot-main { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 2fr); gap: 40px 56px; }
+.foot-brand { display: grid; align-content: start; justify-items: start; gap: 12px; }
+.foot-logo { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 1.12rem; border-radius: 10px; }
+.foot-logo .logo { flex: none; border-radius: 10px; }
+.foot-tag { margin: 0; max-width: 38ch; color: var(--ink-2); font-size: .92rem; line-height: 1.6; }
+.foot-stats { margin: 0; font-size: .8rem; font-variant-numeric: tabular-nums; }
+.foot-cta {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 40px; margin-top: 6px; padding: 0 16px; cursor: pointer;
+  border: 1px solid var(--line); border-radius: var(--r-full); background: var(--card); color: var(--ink); font: 500 .88rem var(--font);
+  transition: border-color var(--dur) var(--ease), scale var(--dur-fast) var(--ease);
+}
+.foot-cta .i { width: 15px; height: 15px; transition: translate var(--dur) var(--ease); }
+.foot-cta:hover { border-color: var(--ink); }
+.foot-cta:hover .i { translate: calc(var(--fwd) * 3px) 0; }
+.foot-cta:active { scale: .97; }
+.foot-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 24px; }
+.foot-h { margin: 0 0 10px; color: var(--ink); font-size: .84rem; font-weight: 600; }
+/* عنوان العمود <summary>: ثابت على الشاشات الواسعة (ui.js يمنع طيّه)، وزر طيّ على الجوال */
+.foot-col > summary { display: flex; align-items: center; justify-content: space-between; gap: 8px; list-style: none; cursor: default; }
+.foot-col > summary::-webkit-details-marker { display: none; }
+.foot-chev { display: none; }
+.foot-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+/* أهداف لمس 32px على الأقل (WCAG 2.5.8 يطلب 24px) */
+.foot-col :is(a, button) {
+  display: inline-flex; align-items: center; min-height: 32px; padding: 0; border: 0; background: none; cursor: pointer;
+  color: var(--ink-2); font: inherit; font-size: .88rem; text-align: start; text-decoration: none;
+  transition: color var(--dur-fast) var(--ease);
+}
+.foot-col :is(a, button):hover { color: var(--accent); }
+.foot-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding: 18px 0 calc(18px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line-soft); font-size: .78rem; }
+.foot-copy { margin: 0; flex: 1; min-width: min(100%, 280px); }
+.foot-copy span:first-child { color: var(--ink-2); font-weight: 500; }
+.foot-legal { display: inline-flex; align-items: center; min-height: 32px; color: var(--ink-2); text-decoration: none; }
+.foot-legal:hover { color: var(--accent); }
+/* اللغات: مفتاح مقسّم، والحالية بخلفية البطاقة */
+.foot-lang { display: inline-flex; gap: 2px; padding: 3px; border-radius: var(--r-full); background: var(--fill-2); }
+.foot-lang :is(a, [aria-current]) { display: inline-flex; align-items: center; min-height: 30px; padding: 0 12px; border-radius: var(--r-full); color: var(--ink-2); text-decoration: none; transition: background-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease); }
+.foot-lang a:hover { color: var(--ink); background: var(--fill-2); }
+.foot-lang [aria-current] { background: var(--card); color: var(--ink); font-weight: 600; }
+/* اسم الدليل كبيرًا: نصه من data-mark عبر CSS، وحجمه يملأ عرض المحتوى. --chars عدد حروفه (Base.astro)،
+   و--fit حروف كل em في خط النظام بهامش 7% (مقيس: العربية 2.41، اللاتينية 2.09)، فلا يخرج عن العرض بأي لغة */
+.foot-mark { --fit: 1.96; container-type: inline-size; padding: 0 var(--pad) clamp(10px, 2vw, 24px); overflow-x: clip; pointer-events: none; user-select: none; }
+html[lang="ar"] .foot-mark { --fit: 2.25; }
+.foot-mark::before {
+  content: attr(data-mark); display: block; text-align: center; white-space: nowrap;
+  font-size: min(10.5rem, 100cqi / var(--chars) * var(--fit)); font-weight: 700; line-height: 1.1; color: color-mix(in srgb, var(--ink) 7%, var(--bg-alt));
+}
+html[lang="ar"] .foot-mark::before { line-height: 1.5; }
+html:is([lang="de"], [lang="en"]) .foot-mark::before { letter-spacing: -0.04em; }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .foot-mark::before { animation: foot-rise linear both; animation-timeline: view(); animation-range: entry 0% entry 100%; }
+  }
+}
+@keyframes foot-rise { from { opacity: 0; transform: translateY(40%); } }
+@media (max-width: 899px) {
+  .foot-main { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  /* أكورديون: كل عمود سطر بعنوانه وسهم، يُفتح عند اللمس (مغلق افتراضيًا بـ ui.js، ومفتوح بلا JavaScript) */
+  .foot-cols { grid-template-columns: minmax(0, 1fr); gap: 0; border-top: 1px solid var(--line-soft); }
+  .foot-col { border-bottom: 1px solid var(--line-soft); }
+  .foot-col > summary.foot-h { margin: 0; min-height: 52px; cursor: pointer; font-size: .95rem; }
+  .foot-chev { display: block; flex: none; width: 16px; height: 16px; color: var(--muted); transition: rotate var(--dur) var(--ease); }
+  .foot-col[open] .foot-chev { rotate: 180deg; }
+  .foot-col ul { padding-bottom: 14px; }
+  .foot-col :is(a, button) { min-height: 40px; font-size: .95rem; }
+  .foot-bar { flex-direction: column; align-items: flex-start; }
+  .foot-copy { min-width: 0; }
+}
+/* فتح العمود وطيّه بانسياب حيث يدعم المتصفح ::details-content */
+@supports selector(::details-content) {
+  @media (max-width: 560px) and (prefers-reduced-motion: no-preference) {
+    .foot-col { interpolate-size: allow-keywords; }
+    .foot-col::details-content { block-size: 0; overflow: clip; transition: block-size var(--dur) var(--ease), content-visibility var(--dur) allow-discrete; }
+    .foot-col[open]::details-content { block-size: auto; }
+  }
+}
 
 /* ---------- العودة للأعلى والإشعار القصير ---------- */
 .totop {

@@ -25,7 +25,8 @@ import sansAr400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arab
 import sansAr700 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-700-normal.woff2?url";
 import sansLat400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-latin-400-normal.woff2?url";
 import sansLat700 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-latin-700-normal.woff2?url";
-import { type Lang, LANGS, DEFAULT_LANG, dirOf, LANG_NAME, OG_LOCALE, href, t as dict } from "../i18n";
+import { type Lang, LANGS, DEFAULT_LANG, dirOf, LANG_NAME, OG_LOCALE, href, fwdIcon, t as dict } from "../i18n";
+import { tools, categories, catName, txt } from "../lib/data";
 
 // path: مسار الصفحة بدون بادئة اللغة ("/" أو "/tools/x"). كل صفحة موجودة بالعربية والألمانية.
 // switchPath: وجهة زر اللغة إن اختلفت عن path (صفحة 404 تفتح الرئيسية باللغة الأخرى)
@@ -35,6 +36,9 @@ import { type Lang, LANGS, DEFAULT_LANG, dirOf, LANG_NAME, OG_LOCALE, href, t as
 interface Props { title: string; description: string; path?: string; switchPath?: string; noindex?: boolean; lang?: Lang; image?: string; imageAlt?: string; jsonLd?: object[]; expect?: string; quickSearch?: boolean }
 const { title, description, path = "/", switchPath = path, noindex = false, lang = DEFAULT_LANG, image = `og/home-${lang}.png`, imageAlt = title, jsonLd = [], expect, quickSearch = true } = Astro.props;
 const t = dict(lang);
+// التذييل: أكثر ستة أقسام أدواتٍ، وسنة البناء للحقوق
+const topCats = categories.map((c) => c.id).sort((a, b) => tools.filter((x) => x.cat === b).length - tools.filter((x) => x.cat === a).length).slice(0, 6);
+const year = new Date().getFullYear();
 const others = LANGS.filter((l) => l !== lang);
 const abs = (l: Lang) => new URL(href(l, path), Astro.site).href;
 const canonical = abs(lang);
@@ -147,31 +151,58 @@ useIcon(Astro.locals, "check", "bold");
       <Fragment set:html={main} />
     </div>
 
+    <!-- التذييل: ملاحظات الصفحة (إن وُجدت)، ثم الشعار ووصف الدليل وأعمدة الروابط (أكورديون على الجوال: ui.js)،
+         ثم شريط الحقوق واللغات، ثم اسم الدليل كبيرًا خافتًا (زينة: aria-hidden، ونصه من CSS فلا تقرؤه قارئات الشاشة) -->
     <footer class="foot">
       <div class="foot-in">
         <div class="foot-notes">
           <Fragment set:html={footer} />
         </div>
-        <div class="foot-bottom">
-          <a class="brand sm" href={href(lang)}><Logo size={22} /><span>{t.siteName}</span></a>
-          <nav class="foot-nav" aria-label={t.footNavAria}>
-            <a href={href(lang)}>{t.home}</a>
-            <a href={href(lang, "favorites")}>{t.navFavs}</a>
-            <a href={href(lang, "compare/")}>{t.navCompare}</a>
-            <button type="button" data-finder>{t.fdOpen}</button>
-            <a href={href(lang, "feed.xml")}><bdi>RSS</bdi></a>
-            <button type="button" data-feedback>{t.fbOpen}</button>
-            <button type="button" data-suggest>{t.sgOpen}</button>
-            <a href={href(lang, "privacy/")}>{t.privacyLink}</a>
+        <div class="foot-main">
+          <div class="foot-brand">
+            <a class="foot-logo" href={href(lang)}><Logo size={34} /><span>{t.siteName}</span></a>
+            <p class="foot-tag" set:html={txt(t.footTag, lang)} />
+            <p class="foot-stats">{t.footStats(tools.length, categories.length)}</p>
+            <button type="button" class="foot-cta" data-finder aria-haspopup="dialog">{t.fdOpen}<Icon name={fwdIcon(lang)} /></button>
+          </div>
+          <nav class="foot-cols" aria-label={t.footNavAria}>
+            <details class="foot-col" open>
+              <summary class="foot-h">{t.footColDir}<Icon name="caret-down" class="foot-chev" /></summary>
+              <ul>
+                <li><a href={href(lang, "#list")}>{t.footAll}</a></li>
+                <li><a href={href(lang, "#latest-h")}>{t.navLatest}</a></li>
+                <li><a href={href(lang, "#build-h")}>{t.navBuild}</a></li>
+                <li><a href={href(lang, "compare/")}>{t.navCompare}</a></li>
+                <li><a href={href(lang, "favorites")}>{t.navFavs}</a></li>
+              </ul>
+            </details>
+            <details class="foot-col" open>
+              <summary class="foot-h">{t.footColCats}<Icon name="caret-down" class="foot-chev" /></summary>
+              <ul>
+                {topCats.map((c) => <li><a href={href(lang, "category/" + c)} set:html={txt(catName(c, lang), lang)} /></li>)}
+              </ul>
+            </details>
+            <details class="foot-col" open>
+              <summary class="foot-h">{t.footColJoin}<Icon name="caret-down" class="foot-chev" /></summary>
+              <ul>
+                <li><button type="button" data-feedback>{t.fbOpen}</button></li>
+                <li><button type="button" data-suggest>{t.sgOpen}</button></li>
+                <li><a href={href(lang, "feed.xml")}>{t.footRss}</a></li>
+              </ul>
+            </details>
           </nav>
+        </div>
+        <div class="foot-bar">
+          <p class="foot-copy"><span>{t.footRights(year)}</span> <span set:html={t.footCopy_h} /></p>
+          <a class="foot-legal" href={href(lang, "privacy/")}>{t.privacyLink}</a>
           <nav class="foot-lang" aria-label={t.footLangAria}>
             {LANGS.map((l) => l === lang
               ? <span aria-current="true" lang={l}>{LANG_NAME[l]}</span>
               : <a href={href(l, switchPath)} hreflang={l} lang={l}>{LANG_NAME[l]}</a>)}
           </nav>
-          <p class="foot-copy" set:html={t.footCopy_h} />
         </div>
       </div>
+      <div class="foot-mark" aria-hidden="true" data-mark={t.siteName} style={`--chars:${[...t.siteName].length}`}></div>
     </footer>
 
     <button type="button" class="totop" id="totop" aria-label={t.toTop} title={t.toTop}><Icon name="arrow-up" /></button>

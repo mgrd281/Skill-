@@ -1,5 +1,5 @@
 // تفاصيل الواجهة المشتركة بين كل الصفحات: إشعار قصير، زر العودة للأعلى، اختصار البحث،
-// توسيع مشاريع البطاقة، وظل الشريط اللاصق عند التمرير.
+// توسيع مشاريع البطاقة، وظل الشريط اللاصق عند التمرير، وأكورديون أعمدة التذييل على الجوال.
 import { L, homePath } from "../i18n/client.js";
 const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const BASE = import.meta.env.BASE_URL.replace(/\/?$/, "/");
@@ -94,4 +94,16 @@ if (bar && "IntersectionObserver" in window) {
   sentinel.style.height = "1px";
   bar.before(sentinel);
   new IntersectionObserver(([en]) => bar.classList.toggle("stuck", !en.isIntersecting)).observe(sentinel);
+}
+
+// أعمدة التذييل (<details>): مفتوحة دائمًا على الشاشات الواسعة، وأكورديون مغلق على الجوال (الحد نفسه في global.css)
+const footCols = document.querySelectorAll(".foot-col");
+if (footCols.length) {
+  const narrow = window.matchMedia("(max-width: 560px)");
+  const sync = () => footCols.forEach((d) => (d.open = !narrow.matches));
+  narrow.addEventListener("change", sync);
+  sync();
+  footCols[0].parentElement.addEventListener("click", (e) => {
+    if (!narrow.matches && e.target.closest(".foot-col > summary")) e.preventDefault();
+  });
 }
