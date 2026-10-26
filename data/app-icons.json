@@ -1,1 +1,262 @@
-{}
+{
+  "a-shell": {
+    "file": "app-icons/a-shell.png",
+    "src": "https://raw.githubusercontent.com/holzschu/a-shell/master/Assets.xcassets/AppIcon-mini.appiconset/mini1024.png"
+  },
+  "aegis-authenticator": {
+    "file": "app-icons/aegis-authenticator.png",
+    "src": "https://raw.githubusercontent.com/beemdevelopment/Aegis/master/app/src/main/ic_launcher-web.png"
+  },
+  "aerospace": {
+    "file": "app-icons/aerospace.png",
+    "src": "https://raw.githubusercontent.com/nikitabobko/AeroSpace/main/resources/Assets.xcassets/AppIcon.appiconset/icon.png"
+  },
+  "alttab": {
+    "file": "app-icons/alttab.png",
+    "src": "https://raw.githubusercontent.com/lwouis/alt-tab-macos/master/resources/svg-illustrations/settings-app-icons-show-running-applications-windows.svg"
+  },
+  "antennapod": {
+    "file": "app-icons/antennapod.png",
+    "src": "https://raw.githubusercontent.com/AntennaPod/AntennaPod/develop/ui/common/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+  },
+  "appflowy": {
+    "file": "app-icons/appflowy.png",
+    "src": "https://raw.githubusercontent.com/AppFlowy-IO/AppFlowy/main/frontend/appflowy_flutter/ios/Runner/Assets.xcassets/AppIcon.appiconset/1024.png"
+  },
+  "audacity": {
+    "file": "app-icons/audacity.png",
+    "src": "https://raw.githubusercontent.com/audacity/audacity/master/images/AudacityLogo.png"
+  },
+  "autohotkey": {
+    "file": "app-icons/autohotkey.png",
+    "src": "https://raw.githubusercontent.com/AutoHotkey/AutoHotkey/alpha/source/resources/icons.svg"
+  },
+  "blender": {
+    "file": "app-icons/blender.png",
+    "src": "https://raw.githubusercontent.com/blender/blender/main/doc/python_api/static/blender_logo.svg"
+  },
+  "boring-notch": {
+    "file": "app-icons/boring-notch.png",
+    "src": "https://raw.githubusercontent.com/TheBoredTeam/boring.notch/main/boringNotch/Assets.xcassets/AppIcon.appiconset/notch-stage-icon2%2010.png"
+  },
+  "bottles": {
+    "file": "app-icons/bottles.png",
+    "src": "https://raw.githubusercontent.com/bottlesdevs/Bottles/main/data/icons/hicolor/scalable/apps/com.usebottles.bottles-program.svg"
+  },
+  "breezy-weather": {
+    "file": "app-icons/breezy-weather.png",
+    "src": "https://raw.githubusercontent.com/breezy-weather/breezy-weather/main/fastlane/metadata/android/en-US/images/icon.png"
+  },
+  "czkawka": {
+    "file": "app-icons/czkawka.png",
+    "src": "https://raw.githubusercontent.com/qarmin/czkawka/master/cedinia/res/mipmap-xxxhdpi/ic_launcher.png"
+  },
+  "ditto": {
+    "file": "app-icons/ditto.png",
+    "src": "https://raw.githubusercontent.com/sabrogden/Ditto/master/res/Martin_Icon.png"
+  },
+  "droid-ify": {
+    "file": "app-icons/droid-ify.png",
+    "src": "https://raw.githubusercontent.com/Droid-ify/client/main/app/src/main/ic_launcher-playstore.png"
+  },
+  "duckduckgo": {
+    "file": "app-icons/duckduckgo.png",
+    "src": "https://raw.githubusercontent.com/duckduckgo/apple-browsers/main/iOS/DuckDuckGo/UserInterfaceResources/Assets.xcassets/DDG-AppIcon-Alpha.appiconset/Icon-Tinted-Alpha-1024x1024.png"
+  },
+  "eartrumpet": {
+    "file": "app-icons/eartrumpet.png",
+    "src": "https://raw.githubusercontent.com/File-New-Project/EarTrumpet/master/.chocolatey/logo.png"
+  },
+  "files": {
+    "file": "app-icons/files.png",
+    "src": "https://raw.githubusercontent.com/files-community/Files/main/src/Files.App/Assets/AppTiles/Dev/Large310x310Logo.scale-400.png"
+  },
+  "firefox": {
+    "file": "app-icons/firefox.png",
+    "src": "https://raw.githubusercontent.com/mozilla-mobile/firefox-ios/main/SampleComponentLibraryApp/SampleComponentLibraryApp/Assets.xcassets/AppIcon.appiconset/1024.png"
+  },
+  "flameshot": {
+    "file": "app-icons/flameshot.png",
+    "src": "https://raw.githubusercontent.com/flameshot-org/flameshot/master/data/img/hicolor/scalable/apps/flameshot.svg"
+  },
+  "flow-launcher": {
+    "file": "app-icons/flow-launcher.png",
+    "src": "https://raw.githubusercontent.com/Flow-Launcher/Flow.Launcher/dev/Artworks/Logo/logo512.png"
+  },
+  "fossify-gallery": {
+    "file": "app-icons/fossify-gallery.png",
+    "src": "https://raw.githubusercontent.com/FossifyOrg/Gallery/main/fastlane/metadata/android/en-US/images/icon.png"
+  },
+  "gear-lever": {
+    "file": "app-icons/gear-lever.png",
+    "src": "https://raw.githubusercontent.com/mijorus/gearlever/master/data/icons/hicolor/scalable/apps/it.mijorus.gearlever.svg"
+  },
+  "handbrake": {
+    "file": "app-icons/handbrake.png",
+    "src": "https://raw.githubusercontent.com/HandBrake/HandBrake/master/win/CS/HandBrakeWPF/Views/Images/logo128.png"
+  },
+  "ice": {
+    "file": "app-icons/ice.png",
+    "src": "https://raw.githubusercontent.com/jordanbaird/Ice/main/Ice/Assets.xcassets/AppIcon.appiconset/icon_512x512.png"
+  },
+  "ice-cubes": {
+    "file": "app-icons/ice-cubes.png",
+    "src": "https://raw.githubusercontent.com/Dimillian/IceCubesApp/main/IceCubesApp/Assets.xcassets/AppIconAlternate4.appiconset/1024.png"
+  },
+  "iina": {
+    "file": "app-icons/iina.png",
+    "src": "https://raw.githubusercontent.com/iina/iina/develop/iina/Assets.xcassets/DocIcons/doc_3gp.iconset/icon_512x512.png"
+  },
+  "ish": {
+    "file": "app-icons/ish.png",
+    "src": "https://raw.githubusercontent.com/ish-app/ish/master/app/Assets.xcassets/AppIcon.appiconset/App%20Store.png"
+  },
+  "joplin": {
+    "file": "app-icons/joplin.png",
+    "src": "https://raw.githubusercontent.com/laurent22/joplin/dev/fastlane/metadata/android/en-US/images/icon.png"
+  },
+  "keepassxc": {
+    "file": "app-icons/keepassxc.png",
+    "src": "https://raw.githubusercontent.com/keepassxreboot/keepassxc/develop/share/macosx/keepassxc.iconset/icon_512x512.png"
+  },
+  "keycastr": {
+    "file": "app-icons/keycastr.png",
+    "src": "https://raw.githubusercontent.com/keycastr/keycastr/main/keycastr/KeyCastrLogo.png"
+  },
+  "libreoffice": {
+    "file": "app-icons/libreoffice.png",
+    "src": "https://raw.githubusercontent.com/LibreOffice/core/master/android/app/ic_launcher-web.png"
+  },
+  "localsend": {
+    "file": "app-icons/localsend.png",
+    "src": "https://raw.githubusercontent.com/localsend/localsend/main/fastlane/metadata/android/en-US/images/icon.png"
+  },
+  "loop": {
+    "file": "app-icons/loop.png",
+    "src": "https://raw.githubusercontent.com/MrKai77/Loop/develop/Loop/Assets.xcassets/App%20Icons/AppIcon-Black%20Hole.appiconset/appicon_1024.png"
+  },
+  "lulu": {
+    "file": "app-icons/lulu.png",
+    "src": "https://raw.githubusercontent.com/objective-see/LuLu/master/LuLu/App/Assets.xcassets/AppIcon.appiconset/icon_512x512.png"
+  },
+  "maccy": {
+    "file": "app-icons/maccy.png",
+    "src": "https://raw.githubusercontent.com/p0deje/Maccy/master/Maccy/Assets.xcassets/AppIcon.appiconset/AppIcon%20(Big%20Sur)-1024w.png"
+  },
+  "mastodon": {
+    "file": "app-icons/mastodon.png",
+    "src": "https://raw.githubusercontent.com/mastodon/mastodon-ios/develop/WidgetExtension/Assets.xcassets/BrandIcon.imageset/Logo%201.svg"
+  },
+  "material-files": {
+    "file": "app-icons/material-files.png",
+    "src": "https://raw.githubusercontent.com/zhanghai/MaterialFiles/master/fastlane/metadata/android/en-US/images/icon.png"
+  },
+  "monitorcontrol": {
+    "file": "app-icons/monitorcontrol.png",
+    "src": "https://raw.githubusercontent.com/MonitorControl/MonitorControl/main/MonitorControl/Assets.xcassets/AppIcon.appiconset/Icon-1024.png"
+  },
+  "nanazip": {
+    "file": "app-icons/nanazip.png",
+    "src": "https://raw.githubusercontent.com/M2Team/NanaZip/main/Assets/PackageAssets/Square44x44Logo.targetsize-1024.png"
+  },
+  "netnewswire": {
+    "file": "app-icons/netnewswire.png",
+    "src": "https://raw.githubusercontent.com/Ranchero-Software/NetNewsWire/main/Widget/Assets.xcassets/AppIcon.appiconset/Icon_1024x1024.png"
+  },
+  "newpipe": {
+    "file": "app-icons/newpipe.png",
+    "src": "https://raw.githubusercontent.com/TeamNewPipe/NewPipe/dev/fastlane/metadata/android/en-US/images/icon.png"
+  },
+  "notepad": {
+    "file": "app-icons/notepad.png",
+    "src": "https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/master/lexilla/doc/LexillaLogo.png"
+  },
+  "obs-studio": {
+    "file": "app-icons/obs-studio.png",
+    "src": "https://raw.githubusercontent.com/obsproject/obs-studio/master/frontend/cmake/macos/Assets.xcassets/AppIcon.appiconset/icon_512x512.png"
+  },
+  "organic-maps": {
+    "file": "app-icons/organic-maps.png",
+    "src": "https://raw.githubusercontent.com/organicmaps/organicmaps/master/iphone/Maps/Resources/Images.xcassets/AppIcon.appiconset/1024.png"
+  },
+  "pearcleaner": {
+    "file": "app-icons/pearcleaner.png",
+    "src": "https://raw.githubusercontent.com/alienator88/Pearcleaner/main/Pear%20Resources/Icons-newGray/icon_512x512.png"
+  },
+  "planify": {
+    "file": "app-icons/planify.png",
+    "src": "https://raw.githubusercontent.com/alainm23/planify/main/data/icons/hicolor/scalable/apps/io.github.alainm23.planify.Devel.svg"
+  },
+  "pocket-casts": {
+    "file": "app-icons/pocket-casts.png",
+    "src": "https://raw.githubusercontent.com/Automattic/pocket-casts-ios/trunk/Pocket%20Casts%20Watch%20App/Assets.xcassets/AppIcon.appiconset/pocketcasts-1024.png"
+  },
+  "powertoys": {
+    "file": "app-icons/powertoys.png",
+    "src": "https://raw.githubusercontent.com/microsoft/PowerToys/main/installer/PowerToysSetupVNext/Images/logo150.png"
+  },
+  "rectangle": {
+    "file": "app-icons/rectangle.png",
+    "src": "https://raw.githubusercontent.com/rxhanson/Rectangle/main/Rectangle/Assets.xcassets/AppIcon.appiconset/mac512pts1x.png"
+  },
+  "rufus": {
+    "file": "app-icons/rufus.png",
+    "src": "https://raw.githubusercontent.com/pbatard/rufus/master/res/appstore/Images/Square150x150Logo.scale-400.png"
+  },
+  "seal": {
+    "file": "app-icons/seal.png",
+    "src": "https://raw.githubusercontent.com/JunkFood02/Seal/main/fastlane/metadata/android/en-US/images/icon.png"
+  },
+  "sharex": {
+    "file": "app-icons/sharex.png",
+    "src": "https://raw.githubusercontent.com/ShareX/ShareX/develop/ShareX.HelpersLib/Resources/ShareX_Logo.png"
+  },
+  "signal": {
+    "file": "app-icons/signal.png",
+    "src": "https://raw.githubusercontent.com/signalapp/Signal-Desktop/main/images/app-icon-with-error.png"
+  },
+  "tendedero": {
+    "file": "app-icons/tendedero.png",
+    "src": "https://raw.githubusercontent.com/alejandrobujan/tendedero/main/docs/images/icon.png"
+  },
+  "termux": {
+    "file": "app-icons/termux.png",
+    "src": "https://raw.githubusercontent.com/termux/termux-app/master/fastlane/metadata/android/en-US/images/icon.png"
+  },
+  "thunderbird-for-android": {
+    "file": "app-icons/thunderbird-for-android.png",
+    "src": "https://raw.githubusercontent.com/thunderbird/thunderbird-android/main/app-thunderbird/src/beta/res/mipmap-xxxhdpi/ic_launcher.png"
+  },
+  "twinkle-tray": {
+    "file": "app-icons/twinkle-tray.png",
+    "src": "https://raw.githubusercontent.com/xanderfrangos/twinkle-tray/master/src/assets/logo-512.png"
+  },
+  "upscayl": {
+    "file": "app-icons/upscayl.png",
+    "src": "https://raw.githubusercontent.com/upscayl/upscayl/main/build/icon.png"
+  },
+  "utm": {
+    "file": "app-icons/utm.png",
+    "src": "https://raw.githubusercontent.com/utmapp/UTM/main/Platform/Assets.xcassets/AppIcon.appiconset/icon_512pt.png"
+  },
+  "vlc": {
+    "file": "app-icons/vlc.png",
+    "src": "https://raw.githubusercontent.com/videolan/vlc/master/extras/package/macosx/asset_sources/vlc_app_icon.svg"
+  },
+  "warehouse": {
+    "file": "app-icons/warehouse.png",
+    "src": "https://raw.githubusercontent.com/flattool/warehouse/main/data/icons/hicolor/scalable/apps/io.github.flattool.Warehouse.svg"
+  },
+  "wikipedia": {
+    "file": "app-icons/wikipedia.png",
+    "src": "https://raw.githubusercontent.com/wikimedia/wikipedia-ios/main/Wikipedia/Images.xcassets/tempAccountIcon.imageset/tempAccountIcon.svg"
+  },
+  "windhawk": {
+    "file": "app-icons/windhawk.png",
+    "src": "https://raw.githubusercontent.com/ramensoftware/windhawk/main/src/windhawk-vscode/assets/main-icon.png"
+  },
+  "windows-terminal": {
+    "file": "app-icons/windows-terminal.png",
+    "src": "https://raw.githubusercontent.com/microsoft/terminal/main/res/terminal/images-Can/LockScreenLogo.scale-400.png"
+  }
+}
