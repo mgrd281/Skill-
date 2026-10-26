@@ -69,11 +69,14 @@ function mascotSvg() {
 
 // ---------- الصفحة ----------
 // كل المشاهد على لوحة عرضها 1080 وارتفاعها H، ومحتواها يتوسط عموديًا، فنفس المشاهد تصلح للفيديو 1080×1920 والصور 1080×1080 و1080×1350
-const SCENES = [["hero", 0, 4.4], ["count", 4.4, 8.8], ["install", 8.8, 13.2], ["apps", 13.2, 17.6], ["cta", 17.6, 21.2]];
-const DURATION = SCENES[SCENES.length - 1][2];
+// توقيت المشاهد لكل لغة: بداية كل مشهد مع جملته في التعليق الصوتي (قيست من الصوت)، والفيديو أطول من الصوت قليلًا
+const TIMING = {
+  ar: [["hero", 0, 3.0], ["count", 3.0, 9.8], ["install", 9.8, 13.1], ["apps", 13.1, 17.4], ["cta", 17.4, 21.6]],
+  de: [["hero", 0, 4.0], ["count", 4.0, 9.6], ["install", 9.6, 13.1], ["apps", 13.1, 16.6], ["cta", 16.6, 20.8]],
+};
 
 function html(lang, mascot, logo) {
-  const T = TXT[lang];
+  const T = TXT[lang], SCENES = TIMING[lang];
   const sysTiles = Object.entries(D.sys).map(([id, ic], i) => {
     const top = inCat(id).slice(0, 3).map((x) => x.name).join(" · ");
     return `<div class="tile" data-d="${0.5 + i * 0.22}"><span class="ti">${icon(ic)}</span><b>${T.sysNames[id]}</b><small>${T.n(inCat(id).length)}</small><span class="tn">${top}</span></div>`;
@@ -123,7 +126,7 @@ body.banner #stage{width:1500px;height:500px}body.banner,html.banner{width:1500p
 .bn h1{font-size:66px;max-width:780px}.bn .sub{font-size:30px;max-width:780px}.bn .url{font-size:30px;padding:14px 34px;margin-top:6px}
 </style><body>
 <div id="stage">
-  <section class="scene" id="s-hero"><div class="mascot rv" id="m1" data-d="0">${mascot}</div><div class="brand rv" data-d="1.3">${logo}<span>Skillpro</span></div><h1 class="rv" data-d="1.9">${T.t1} <span>${T.t2}</span></h1><p class="sub rv" data-d="2.5">${T.sub}</p></section>
+  <section class="scene" id="s-hero"><div class="mascot rv" id="m1" data-d="0">${mascot}</div><div class="brand rv" data-d="0.9">${logo}<span>Skillpro</span></div><h1 class="rv" data-d="1.3">${T.t1} <span>${T.t2}</span></h1><p class="sub rv" data-d="1.9">${T.sub}</p></section>
   <section class="scene" id="s-count"><div class="big rv" data-d="0.1"><span data-count="${D.total}">0</span></div><div class="lab rv" data-d="0.4">${T.count}</div><p class="sub rv" data-d="0.8">${T.sub2}</p><div class="chips">${chips}</div></section>
   <section class="scene" id="s-install"><h2 class="rv" data-d="0">${T.inst}</h2><p class="sub rv" data-d="0.3">${T.inst2}</p>
     <div class="term rv" data-d="0.6"><div class="hd"><b>${D.demo.name}</b><span>★ ${D.demo.stars}</span><span class="st" id="cp" style="opacity:0">✓ ${T.copied}</span></div><div class="cmd"><span class="p">$ </span><span id="ty"></span><span class="cur" id="cur"></span></div></div></section>
@@ -141,8 +144,8 @@ function mascot(root,u,walk){
   const sw=stepping?Math.sin(u*14)*17:0;
   set(".m-leg-f",e=>e.style.rotate=sw+"deg");set(".m-leg-b",e=>e.style.rotate=-sw+"deg");
   set(".m-bob",e=>e.style.translate="0 "+(stepping?-Math.abs(Math.sin(u*14))*5:0)+"px");
-  const w=u-1.7;set(".m-arm",e=>e.style.rotate=(w>0&&w<1.3?Math.sin(w*Math.PI*3)*-34*Math.sin(Math.min(1,w/1.3)*Math.PI):0)+"deg");
-  const b=u-2.3;set(".m-eyes",e=>e.style.scale="1 "+(b>0&&b<0.22?1-Math.sin(b/0.22*Math.PI)*0.92:1));
+  const w=u-1.5;set(".m-arm",e=>e.style.rotate=(w>0&&w<1.3?Math.sin(w*Math.PI*3)*-34*Math.sin(Math.min(1,w/1.3)*Math.PI):0)+"deg");
+  const b=u-2.2;set(".m-eyes",e=>e.style.scale="1 "+(b>0&&b<0.22?1-Math.sin(b/0.22*Math.PI)*0.92:1));
   set(".m-spark",e=>{const s=clamp((u-1.1)/0.9);e.style.opacity=s;e.style.transform="rotate("+(1-ease(s))*-160+"deg) scale("+(0.2+0.8*ease(s))+")"});
 }
 window.seek=function(t,still){
@@ -157,10 +160,10 @@ window.seek=function(t,still){
       reveal(r,u-d)});
     el.querySelectorAll("[data-count]").forEach(c=>{const d=+(c.dataset.d||c.closest("[data-d]")?.dataset.d||0), n=+c.dataset.count;c.textContent=Math.round(n*ease((u-d-0.1)/1.4))});
     if(id==="install"){
-      const k=clamp((u-1.2)/2.0), n=Math.round(CMD.length*k);
+      const k=clamp((u-0.9)/1.6), n=Math.round(CMD.length*k);
       document.getElementById("ty").innerHTML=CMD.slice(0,n).split(" ").map(w=>"<span class='nw'>"+w+"</span>").join(" ");
       document.getElementById("cur").style.opacity=(k<1||Math.floor(u*2)%2===0)?1:0;
-      document.getElementById("cp").style.opacity=ease((u-3.4)/0.3);
+      document.getElementById("cp").style.opacity=ease((u-2.7)/0.3);
     }
   }
 };
@@ -193,7 +196,7 @@ async function main() {
       for (const [ratio, H] of [["1x1", 1080], ["4x5", 1350]]) {
         const p = await open(html(lang, mascot, logo), 1080, H);
         let i = 0;
-        for (const [id, , t1] of SCENES.slice(0, 4)) {
+        for (const [id, , t1] of TIMING[lang].slice(0, 4)) {
           // لقطة مشهد في آخر لحظاته: كل عناصره ظاهرة ولا يبدأ تلاشيه
           await p.evaluate(([t, s]) => window.seek(t, s), [t1 - 0.05, id]);
           await p.screenshot({ path: path.join(dir, `post-${ratio}-${++i}-${id}.png`) });
@@ -213,13 +216,16 @@ async function main() {
       const frames = path.join(OUT, ".frames-" + lang);
       fs.rmSync(frames, { recursive: true, force: true });
       fs.mkdirSync(frames, { recursive: true });
-      const n = Math.round(DURATION * FPS);
+      const SC = TIMING[lang], DURATION = SC[SC.length - 1][2], n = Math.round(DURATION * FPS);
       for (let i = 0; i < n; i++) {
         await p.evaluate((t) => window.seek(t), i / FPS);
         await p.screenshot({ path: path.join(frames, `f${String(i).padStart(4, "0")}.jpg`), type: "jpeg", quality: 95 });
       }
       await p.close();
-      execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-framerate", String(FPS), "-i", path.join(frames, "f%04d.jpg"), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "17", "-movflags", "+faststart", path.join(dir, "video-9x16.mp4")]);
+      // التعليق الصوتي (إن وُجد marketing/audio/<لغة>.mp3) يبدأ بعد 0.2 ثانية ويُمدَّد بصمت إلى آخر الفيديو
+      const voice = path.join(OUT, "audio", lang + ".mp3");
+      const audio = fs.existsSync(voice) ? ["-i", voice, "-af", `adelay=200|200,apad=whole_dur=${DURATION}`, "-c:a", "aac", "-b:a", "160k", "-t", String(DURATION)] : [];
+      execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-framerate", String(FPS), "-i", path.join(frames, "f%04d.jpg"), ...audio, "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "17", "-movflags", "+faststart", path.join(dir, "video-9x16.mp4")]);
       fs.rmSync(frames, { recursive: true, force: true });
       console.log(lang, "video ✓", n, "frames");
     }
