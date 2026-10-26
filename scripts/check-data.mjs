@@ -63,6 +63,8 @@ if ("newsletter" in meta) {
   if (!str(n.provider)) problems.push("newsletter.provider ناقص في meta.json (اسم المزوّد، يظهر في الخصوصية)");
   if (!/^https:\/\/\S+$/.test(n.action || "")) problems.push("newsletter.action في meta.json: رابط https لنموذج الاشتراك عند المزوّد");
   if ("field" in n && !str(n.field)) problems.push("newsletter.field فارغ في meta.json");
+  if ("hidden" in n && !(n.hidden && typeof n.hidden === "object" && !Array.isArray(n.hidden) && Object.values(n.hidden).every((v) => typeof v === "string")))
+    problems.push("newsletter.hidden في meta.json: كائن قيمه نصوص، مثل { \"locale\": \"{lang}\" }");
 }
 // تحذير لا يفشل الفحص: بيانات GitHub (التاريخ والرخصة) تملؤها update-stars.mjs
 const noMeta = tools.filter((t) => t.gh && (!t.pushed || t.license === undefined));

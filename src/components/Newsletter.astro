@@ -2,6 +2,7 @@
 // النشرة البريدية بالجديد: النموذج يرسل البريد إلى مزوّد النشرة مباشرة (لا يمر بالموقع)، والمزوّد يتكفل بالتأكيد المزدوج
 // وإلغاء الاشتراك وحفظ القائمة. يظهر حين يُضبط في data/meta.json حقل newsletter (provider وaction وfield)، وإلا فلا شيء.
 // المحتوى الأسبوعي: موجز RSS الموجود (feed.xml) يغذّي ميزة «من RSS إلى بريد» عند أغلب المزوّدين.
+// مع JavaScript يُرسل النموذج في الخلفية وتظهر رسالة الشكر مكانه (src/scripts/newsletter.js)، وبدونه يفتح رد المزوّد في نافذة جديدة.
 import Icon from "./Icon.astro";
 import { newsletter } from "../lib/data";
 import { type Lang, href, t as dict } from "../i18n";
@@ -17,12 +18,19 @@ const t = dict(lang);
         <h2 id="nl-h">{t.nlTitle}</h2>
         <p>{t.nlLead}</p>
       </div>
-      <form class="nl-form" method="post" action={newsletter.action} target="_blank">
+      <form class="nl-form" method="post" action={newsletter.action} target="_blank" data-nl>
         <label class="sr" for="nl-email">{t.nlEmail}</label>
         <input id="nl-email" type="email" name={newsletter.field || "email"} required autocomplete="email" dir="ltr" placeholder="name@example.com" />
+        {Object.entries(newsletter.hidden ?? {}).map(([k, v]) => <input type="hidden" name={k} value={v.replaceAll("{lang}", lang)} />)}
         <button type="submit" class="btn-primary">{t.nlBtn}</button>
       </form>
+      <p class="nl-done" id="nl-done" tabindex="-1" hidden><Icon name="check" />{t.nlDone}</p>
+      <p class="nl-fail" id="nl-fail" role="alert" hidden>{t.nlFail}</p>
       <p class="nl-note" set:html={t.nlNote_h(newsletter.provider, href(lang, "privacy/"))} />
     </div>
   </section>
 )}
+
+<script>
+  import "../scripts/newsletter.js";
+</script>

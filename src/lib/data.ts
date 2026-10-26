@@ -54,8 +54,9 @@ export interface Operator {
 }
 export const operator: Operator | null = (meta as any).operator ?? null;
 // النشرة البريدية (src/components/Newsletter.astro): مزوّد يدير القائمة والتأكيد المزدوج، والنموذج يرسل إليه مباشرة.
-// في data/meta.json: "newsletter": { "provider": "Buttondown", "action": "رابط نموذج الاشتراك عند المزوّد", "field": "email" }
-export const newsletter: { provider: string; action: string; field?: string } | null = (meta as any).newsletter?.action ? (meta as any).newsletter : null;
+// في data/meta.json: "newsletter": { "provider": "Brevo", "action": "رابط نموذج الاشتراك عند المزوّد", "field": "EMAIL",
+// "hidden": { "locale": "{lang}" } }. hidden حقول مخفية يطلبها المزوّد، و{lang} فيها تصير لغة الصفحة (ar أو de أو en).
+export const newsletter: { provider: string; action: string; field?: string; hidden?: Record<string, string> } | null = (meta as any).newsletter?.action ? (meta as any).newsletter : null;
 
 export function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
