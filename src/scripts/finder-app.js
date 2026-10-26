@@ -222,7 +222,7 @@ async function go(next, dir = 1, first = false) {
   const i = ORDER.indexOf(next);
   const done = i < 0 ? ORDER.length : i + 1;
   $("fd-prog").querySelectorAll("li").forEach((li, k) => li.classList.toggle("on", k < done));
-  // البوصلة في السؤال الأول، وزر الرجوع مكانها في غيره
+  // شعار الدليل في السؤال الأول، وزر الرجوع مكانه في غيره
   $("fd-back").hidden = i === 0;
   $("fd-mark").hidden = i !== 0;
   dlg.setAttribute("aria-labelledby", `fd-${next}-h`);

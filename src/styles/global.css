@@ -1375,9 +1375,8 @@ body.fb-open .totop { opacity: 0; pointer-events: none; }
 /* المداخل: رابط في الواجهة، وبطاقة تحت «ماذا تبني؟»، وزر في التذييل */
 button.link-more { border: 0; background: none; padding: 0; font: inherit; font-size: 1rem; font-weight: 500; cursor: pointer; }
 .fd-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 24px; padding: 18px 20px; border-radius: var(--r-xl); background: var(--card); }
-.fd-cta-ic, .fn-ic { flex: none; display: grid; place-items: center; background: var(--btn); color: var(--on-accent); }
-.fd-cta-ic { width: 48px; height: 48px; border-radius: 14px; }
-.fd-cta-ic .i { width: 28px; height: 28px; }
+/* شعار الدليل في البطاقة وفي رأس النافذتين (src/components/Logo.astro)، ونجمته تلمع عند الظهور مثل الشريط العلوي */
+.fd-cta .logo { flex: none; border-radius: 13px; }
 .fd-cta-t { flex: 1; min-width: min(100%, 220px); display: grid; gap: 2px; line-height: 1.4; }
 .fd-cta-t b { font-size: 1.05rem; font-weight: 700; }
 .fd-cta-t span { color: var(--muted); font-size: .92rem; }
@@ -1402,9 +1401,8 @@ body.fn-open .totop { opacity: 0; pointer-events: none; }
 @keyframes fn-out { to { opacity: 0; transform: translateY(16px) scale(.98); } }
 .fn :focus-visible { outline-color: var(--fn-soft); }
 .fn-top { display: flex; align-items: center; gap: 10px; }
-.fn-ic { width: 30px; height: 30px; border-radius: 9px; }
-.fn-ic .i { width: 19px; height: 19px; animation: fn-spin 900ms var(--spring) 240ms both; }
-@keyframes fn-spin { from { opacity: 0; transform: rotate(-120deg) scale(.6); } }
+.fn-top .logo { flex: none; border-radius: 8px; }
+.fn-top .spark { animation: twinkle 1s var(--ease-out) 300ms backwards; }
 .fn-name { flex: 1; min-width: 0; color: var(--fn-soft); font-size: .8rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 /* ثلاث خطوات، والأولى تمتلئ بجهة القراءة */
 .fn-steps { display: flex; gap: 4px; }
@@ -1469,8 +1467,7 @@ body.fn-open .totop { opacity: 0; pointer-events: none; }
 .fd-wait-t { margin: 0; padding: 24px; color: var(--muted); text-align: center; }
 .fd-top { display: flex; align-items: center; gap: 10px; padding: 16px 16px 4px; padding-inline-start: 18px; }
 .fd-mark, .fd-back { width: 32px; height: 32px; flex: none; display: grid; place-items: center; }
-.fd-mark { border-radius: 10px; background: var(--btn); color: var(--on-accent); }
-.fd-mark .i { width: 20px; height: 20px; }
+.fd-mark .logo { border-radius: 9px; }
 .fd-back {
   border: 0; border-radius: var(--r-full); background: var(--fill-2); color: var(--ink); cursor: pointer;
   transition: background-color var(--dur) var(--ease), translate var(--dur) var(--ease);

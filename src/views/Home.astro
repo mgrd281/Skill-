@@ -3,6 +3,7 @@
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
 import Icon from "../components/Icon.astro";
+import Logo from "../components/Logo.astro";
 import Odometer from "../components/Odometer.astro";
 import Mascot from "../components/Mascot.astro";
 import CardIcons from "../components/CardIcons.astro";
@@ -196,7 +197,7 @@ const kinds: Array<[string, any, string]> = [
     ))}
     <!-- «ساعدني أختار»: ثلاثة أسئلة ثم أنسب الأدوات (src/views/FinderFragment.astro) -->
     <div class="fd-cta">
-      <span class="fd-cta-ic" aria-hidden="true"><Icon name="compass" weight="duotone" /></span>
+      <Logo size={44} />
       <p class="fd-cta-t"><b>{t.fdCtaTitle}</b><span>{t.fdCtaSub}</span></p>
       <button type="button" class="btn-primary" data-finder aria-haspopup="dialog">{t.fdOpen}</button>
     </div>

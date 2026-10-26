@@ -7,6 +7,7 @@
 // كل خيار زر بـ aria-pressed للإجابة الحالية، وdata-v قيمتها (any = لا تفضيل)، وdata-c اسمها القصير لشرائح «إجاباتك».
 import Icon from "../components/Icon.astro";
 import IconSprite from "../components/IconSprite.astro";
+import Logo from "../components/Logo.astro";
 import { NEEDS, KINDS } from "../lib/finder";
 import { tools, projects, projName, projectIcon, kindIcon, txt } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
@@ -35,7 +36,7 @@ const L = {
 ---
 <div class="fn" id="fn" role="dialog" aria-labelledby="fn-h" aria-describedby="fn-sub" hidden>
   <div class="fn-top">
-    <span class="fn-ic" aria-hidden="true"><Icon name="compass" weight="duotone" /></span>
+    <Logo size={28} />
     <span class="fn-name">{t.fdName}</span>
     <span class="fn-steps" aria-hidden="true"><i></i><i></i><i></i></span>
     <button type="button" class="fn-x" id="fn-x" aria-label={t.fnLater} title={t.fnLater}><Icon name="x" weight="bold" /></button>
@@ -51,9 +52,9 @@ const L = {
 </div>
 
 <dialog class="fd" id="finder" aria-labelledby="fd-need-h">
-  <!-- الرأس مثل النافذة الصغيرة: البوصلة في السؤال الأول، وزر الرجوع مكانها بعده -->
+  <!-- الرأس مثل النافذة الصغيرة: شعار الدليل في السؤال الأول، وزر الرجوع مكانه بعده -->
   <div class="fd-top">
-    <span class="fd-mark" id="fd-mark" aria-hidden="true"><Icon name="compass" weight="duotone" /></span>
+    <span class="fd-mark" id="fd-mark" aria-hidden="true"><Logo size={32} /></span>
     <button type="button" class="fd-back" id="fd-back" aria-label={t.fdBack} title={t.fdBack} hidden><Icon name={back} /></button>
     <span class="fd-name">{t.fdName}</span>
     <ol class="fd-prog" id="fd-prog" aria-hidden="true">{steps.map(() => <li></li>)}</ol>
