@@ -1030,7 +1030,7 @@ a.tr-v:hover { color: var(--accent); text-decoration: underline; text-underline-
 }
 
 /* ---------- المفضلة ---------- */
-.favtools { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 0 16px; }
+.favtools, .shared-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding-block: 0 16px; }
 
 /* ---------- Footer ---------- */
 .foot { background: var(--bg-alt); border-top: 1px solid var(--line-soft); color: var(--muted); font-size: .8rem; line-height: 1.75; }
@@ -1041,13 +1041,15 @@ a.tr-v:hover { color: var(--accent); text-decoration: underline; text-underline-
 .foot-notes p { margin: 0; max-width: 90ch; }
 .foot-bottom { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; }
 .foot-nav { display: flex; flex-wrap: wrap; }
-.foot-nav a { color: var(--ink-2); text-decoration: none; padding: 4px 12px; border-inline-start: 1px solid var(--line); line-height: 1; }
+/* أهداف لمس 28px على الأقل (WCAG 2.5.8)، فالروابط تلتف في سطرين على الجوال */
+.foot-nav a { display: inline-flex; align-items: center; min-height: 28px; color: var(--ink-2); text-decoration: none; padding: 4px 12px; border-inline-start: 1px solid var(--line); line-height: 1; }
 .foot-nav a:first-child { border: 0; padding-inline-start: 0; }
 .foot-nav a:hover { text-decoration: underline; }
-.foot-nav button { font: inherit; color: var(--ink-2); background: none; border: 0; cursor: pointer; padding: 4px 12px; border-inline-start: 1px solid var(--line); line-height: 1; }
+.foot-nav button { display: inline-flex; align-items: center; min-height: 28px; font: inherit; color: var(--ink-2); background: none; border: 0; cursor: pointer; padding: 4px 12px; border-inline-start: 1px solid var(--line); line-height: 1; }
 .foot-nav button:hover { text-decoration: underline; }
 .foot-copy { margin: 0; margin-inline-start: auto; }
 .foot-lang { display: flex; gap: 14px; }
+.foot-lang a, .foot-lang [aria-current] { display: inline-flex; align-items: center; min-height: 28px; }
 .foot-lang a { color: var(--ink-2); text-decoration: none; }
 .foot-lang a:hover { text-decoration: underline; }
 .foot-lang [aria-current] { color: var(--ink); font-weight: 600; }

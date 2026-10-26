@@ -29,6 +29,15 @@ export function toggleFav(slug) {
   persist();
   notify(slug);
 }
+// إضافة عدة أدوات معًا (قائمة مشاركة): ما ليس في المفضلة يُضاف في أولها بترتيبه
+export function addFavs(slugs) {
+  const add = slugs.filter((s) => typeof s === "string" && !favs.includes(s));
+  if (!add.length) return 0;
+  favs = [...add, ...favs];
+  persist();
+  notify(null);
+  return add.length;
+}
 export function clearFavs() {
   favs = [];
   persist();

@@ -12,15 +12,26 @@ const t = dict(lang);
 ---
 <Base title={t.favTitle} description={t.favDesc} path="/favorites" noindex lang={lang}>
   <header class="top page-hero">
-    <h1>{t.favH1}</h1>
+    <h1 id="fav-h">{t.favH1}</h1>
     <p class="lead" id="fav-lead">{t.favLead}</p>
   </header>
+
+  <!-- قائمة مشاركة (?list=a,b,c): يراها من فتح الرابط، ويضيفها إلى مفضلته إن شاء -->
+  <div class="shared-bar" id="shared-bar" hidden>
+    <p class="status" id="shared-status"></p>
+    <div class="favacts">
+      <button type="button" class="btn-primary" id="shared-add">{t.sharedAdd}</button>
+      <button type="button" class="kit-btn" id="shared-kit" data-kit="" data-kit-title={t.kitTitle}><Icon name="terminal-window" />{t.kitBtn}</button>
+      <a class="linkbtn" id="shared-mine" href={href(lang, "favorites/")}>{t.sharedMine}</a>
+    </div>
+  </div>
 
   <div class="favtools" hidden>
     <p class="status" id="fav-status" aria-live="polite"></p>
     <div class="favacts">
       <button type="button" class="kit-btn" id="fav-kit" data-kit="" data-kit-title={t.kitFavs}><Icon name="terminal-window" />{t.kitBtn}</button>
       <a class="kit-btn" id="fav-cmp" href={href(lang, "compare/")} hidden><Icon name="scales" />{t.compare}</a>
+      <button type="button" class="kit-btn" id="fav-share"><Icon name="export" />{t.favShare}</button>
       <button type="button" class="linkbtn" id="fav-clear">{t.favClear}</button>
     </div>
   </div>
@@ -49,8 +60,9 @@ const t = dict(lang);
 
 <script>
   import { initCopy } from "../scripts/copy.js";
-  import { initFav, getFavs, onFavChange, clearFavs } from "../scripts/fav.js";
+  import { initFav, getFavs, onFavChange, clearFavs, addFavs } from "../scripts/fav.js";
   import { initDates } from "../scripts/dates.js";
+  import { toast } from "../scripts/ui.js";
   import { L, fmt } from "../i18n/client.js";
 
   const grid = document.getElementById("fav-grid");
@@ -59,8 +71,14 @@ const t = dict(lang);
   const bar = document.querySelector(".favtools");
   const status = document.getElementById("fav-status");
 
+  // قائمة مشاركة في الرابط: الأدوات الموجودة فقط، بلا تكرار، 60 بحد أقصى
+  const known = (s) => !!pool.querySelector('[data-slug="' + s + '"]') || !!document.getElementById("t-" + s);
+  const shared = [...new Set((new URLSearchParams(location.search).get("list") || "").split(",").map((s) => s.trim()).filter(Boolean))].filter(known).slice(0, 60);
+  const sharedMode = shared.length > 0;
+  const list = () => (sharedMode ? shared : getFavs());
+
   function render() {
-    const favs = getFavs();
+    const favs = list();
     const want = new Set(favs);
     // أعد البطاقات التي لم تعد مفضلة إلى المخزن
     [...grid.children].forEach((c) => { if (!want.has(c.dataset.slug)) pool.appendChild(c); });
@@ -71,8 +89,15 @@ const t = dict(lang);
     });
     const n = grid.children.length;
     empty.hidden = n !== 0;
-    bar.hidden = n === 0;
+    bar.hidden = n === 0 || sharedMode;
     status.textContent = fmt(L.favCount, { n });
+    if (sharedMode) {
+      document.getElementById("shared-kit").dataset.kit = shared.join(" ");
+      const mine = new Set(getFavs());
+      const left = shared.filter((s) => !mine.has(s)).length;
+      document.getElementById("shared-status").textContent = fmt(L.sharedN, { n });
+      document.getElementById("shared-add").hidden = left === 0;
+    }
     // حزمة التثبيت للمفضلة بترتيبها (src/scripts/kit.js)
     document.getElementById("fav-kit").dataset.kit = favs.join(" ");
     // المقارنة: أحدث ثلاث في المفضلة
@@ -84,8 +109,23 @@ const t = dict(lang);
   initCopy(document);
   initFav();
   initDates();
+  if (sharedMode) {
+    document.getElementById("fav-h").textContent = L.sharedTitle;
+    document.getElementById("fav-lead").textContent = L.sharedLead;
+    document.getElementById("shared-bar").hidden = false;
+    document.getElementById("shared-add").addEventListener("click", () => {
+      const n = addFavs(shared);
+      toast(fmt(L.sharedAdded, { n }));
+    });
+  }
   render();
   onFavChange(render);
+  // مشاركة المفضلة رابطًا: قائمة المشاركة في الجوال، ونسخ الرابط على الحاسوب
+  document.getElementById("fav-share").addEventListener("click", () => {
+    const url = location.origin + location.pathname + "?list=" + getFavs().slice(0, 60).join(",");
+    if (navigator.share) navigator.share({ title: document.title, url }).catch(() => {});
+    else navigator.clipboard?.writeText(url).then(() => toast(L.favShareCopied), () => {});
+  });
   document.getElementById("fav-clear").addEventListener("click", () => {
     if (confirm(L.favConfirm)) clearFavs();
   });
