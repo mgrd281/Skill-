@@ -101,12 +101,14 @@ if (x.gh) jsonLd.push({
             </div>
           </div>
         )}
-        <div class="p-tile">
-          <h2>{t.usefulForProjects}</h2>
-          <div class="uses">
-            {x.use.map((u) => <a class="usechip" href={href(lang, "#" + u)} set:html={txt(projName(projectById(u)!, lang), lang)} />)}
+        {x.use.length > 0 && (
+          <div class="p-tile">
+            <h2>{t.usefulForProjects}</h2>
+            <div class="uses">
+              {x.use.map((u) => <a class="usechip" href={href(lang, "#" + u)} set:html={txt(projName(projectById(u)!, lang), lang)} />)}
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       <Inside tool={x} lang={lang} />

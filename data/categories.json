@@ -136,5 +136,33 @@
     "name": "مواقع البرومبت",
     "name_de": "Prompt-Websites",
     "name_en": "Prompt Sites"
+  },
+  {
+    "id": "macapps",
+    "group": "apps",
+    "name": "تطبيقات Mac",
+    "name_de": "Mac-Apps",
+    "name_en": "Mac Apps"
+  },
+  {
+    "id": "winapps",
+    "group": "apps",
+    "name": "تطبيقات Windows",
+    "name_de": "Windows-Apps",
+    "name_en": "Windows Apps"
+  },
+  {
+    "id": "iosapps",
+    "group": "apps",
+    "name": "تطبيقات iPhone وiPad",
+    "name_de": "iPhone- & iPad-Apps",
+    "name_en": "iPhone & iPad Apps"
+  },
+  {
+    "id": "crossapps",
+    "group": "apps",
+    "name": "تطبيقات لكل الأنظمة",
+    "name_de": "Apps für alle Systeme",
+    "name_en": "Cross-Platform Apps"
   }
 ]

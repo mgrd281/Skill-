@@ -67,15 +67,17 @@ const site = t.site && (isAppStore(t.site) ? "App Store" : s.officialSite);
 
   <p class="desc" set:html={txt(desc, lang)} />
 
-  <div class="uses">
-    <span class="l">{s.usefulFor}</span>
-    {t.use.map((u, i) => (
-      <button type="button" class={i < SHOW ? "usechip" : "usechip more"} data-p={u} set:html={txt(useName(u), lang)} />
-    ))}
-    {t.use.length > SHOW && (
-      <button type="button" class="usemore" aria-expanded="false" title={extra}>+{t.use.length - SHOW}</button>
-    )}
-  </div>
+  {t.use.length > 0 && (
+    <div class="uses">
+      <span class="l">{s.usefulFor}</span>
+      {t.use.map((u, i) => (
+        <button type="button" class={i < SHOW ? "usechip" : "usechip more"} data-p={u} set:html={txt(useName(u), lang)} />
+      ))}
+      {t.use.length > SHOW && (
+        <button type="button" class="usemore" aria-expanded="false" title={extra}>+{t.use.length - SHOW}</button>
+      )}
+    </div>
+  )}
 
   <div class="bottom">
     {t.cmd && (

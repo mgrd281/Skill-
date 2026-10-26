@@ -8,9 +8,9 @@ const font = (w, sub) => "data:font/woff2;base64," + fs.readFileSync(path.join(_
 const RANGE = { arabic: "U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F", latin: "U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC" };
 let LOGO; // الشعار من src/lib/brand.js (وحدة ESM فتُحمَّل داخل الدالة غير المتزامنة)
 const T = {
-  ar: { dir: "rtl", name: "Skillpro", h: 'أدوات تساعدك في&nbsp;عملك، <span>كل يوم.</span>', sub: "مهارات Claude وخوادم MCP ومكتبات ومواقع مختارة بعناية، مع أمر التثبيت لكل أداة." },
-  de: { dir: "ltr", name: "Skillpro", h: 'Tools, die dir bei der Arbeit helfen. <span>Jeden&nbsp;Tag.</span>', sub: "Claude-Skills, MCP-Server, Bibliotheken und Websites – sorgfältig ausgewählt, mit Installationsbefehl." },
-  en: { dir: "ltr", name: "Skillpro", h: 'Tools that help you work. <span>Every&nbsp;day.</span>', sub: "Claude Skills, MCP servers, libraries and websites – carefully selected, with the install command for every tool." },
+  ar: { dir: "rtl", name: "Skillpro", h: 'أدوات تساعدك في&nbsp;عملك، <span>كل يوم.</span>', sub: "مهارات Claude وخوادم MCP ومكتبات ومواقع وتطبيقات مختارة بعناية، مع أمر التثبيت لكل أداة." },
+  de: { dir: "ltr", name: "Skillpro", h: 'Tools, die dir bei der Arbeit helfen. <span>Jeden&nbsp;Tag.</span>', sub: "Claude-Skills, MCP-Server, Bibliotheken, Websites und Apps – sorgfältig ausgewählt, mit Installationsbefehl." },
+  en: { dir: "ltr", name: "Skillpro", h: 'Tools that help you work. <span>Every&nbsp;day.</span>', sub: "Claude Skills, MCP servers, libraries, websites and apps – carefully selected, with the install command for every tool." },
 };
 (async () => {
   LOGO = (await import("../src/lib/brand.js")).markSvg({ size: 64 });

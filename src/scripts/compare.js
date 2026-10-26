@@ -61,6 +61,7 @@ function cell(row, x) {
     box.append(pre, b);
     td.append(box);
   } else if (row === "use") {
+    if (!x.use.length) { dash(); return td; }
     const u = el("span", "cmp-uses");
     x.use.forEach((name) => u.append(el("span", "usechip", name)));
     td.append(u);

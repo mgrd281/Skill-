@@ -4,13 +4,14 @@
 //   1) ماذا تبني: شرط. لا تظهر إلا أدوات المشروع (inProject)، إلا إن اختار الزائر «أستكشف فقط».
 //   2) ما يهمك والشكل: درجة. ما يطابقهما معًا أولًا، ثم ما يطابق الاهتمام وحده، ثم الشكل وحده، فلا تفرغ النتيجة أبدًا.
 //   3) داخل كل درجة: الجودة q (النجوم والتحديث والرخصة والناشر الرسمي)، و«ابدأ بهذه» للمشروع المختار.
-import { tools, byStars, categories, projects, inProject, kindLabel, kindIcon, toolDesc, initials, txt, type Tool } from "./data";
+import { tools, byStars, categories, projects, inProject, isAppCat, kindLabel, kindIcon, toolDesc, initials, txt, type Tool } from "./data";
 import type { IconName } from "./icons";
 import type { Lang } from "../i18n";
 import { kitPlan, RUNS_REMOTE_SCRIPT } from "./install.js";
 import { officialOf } from "./trust";
 
-// السؤال الأول: الاهتمام. كل قسم في data/categories.json في اهتمام واحد بالضبط (يُتحقق منه أدناه وقت البناء)
+// السؤال الأول: الاهتمام. كل قسم في data/categories.json في اهتمام واحد بالضبط (يُتحقق منه أدناه وقت البناء)،
+// إلا أقسام «تطبيقات جاهزة» (group: "apps"): تطبيقات لجهاز الزائر لا أدوات لما يبنيه، فلا يرشّح منها المساعد
 export const NEEDS: Array<{ id: string; icon: IconName; cats: string[] }> = [
   { id: "design", icon: "pen-nib", cats: ["design", "brandskills", "ui", "icons"] },
   { id: "motion", icon: "magic-wand", cats: ["animation", "motiongfx"] },
@@ -29,6 +30,10 @@ export const KINDS: Array<{ id: string; icon: IconName; kinds: string[] }> = [
 
 const needOf = new Map<string, string>();
 for (const c of categories) {
+  if (isAppCat(c.id)) {
+    if (NEEDS.some((n) => n.cats.includes(c.id))) throw new Error(`مساعد الاختيار: القسم "${c.id}" من «تطبيقات جاهزة» فلا يدخل NEEDS في src/lib/finder.ts.`);
+    continue;
+  }
   const in_ = NEEDS.filter((n) => n.cats.includes(c.id));
   if (in_.length !== 1) throw new Error(`مساعد الاختيار: القسم "${c.id}" يجب أن يكون في اهتمام واحد بالضبط في NEEDS داخل src/lib/finder.ts (هو الآن في ${in_.length}).`);
   needOf.set(c.id, in_[0].id);
@@ -71,12 +76,12 @@ export function lead(s: string, max = 200): string {
   return s.slice(0, cut > max * 0.6 ? cut : max - 1).replace(/[\s,،:;؛]+$/, "") + "…";
 }
 
-// بيانات الترشيح بلغة الصفحة. المؤرشف لا يُرشَّح. الحقول: s الاسم المختصر، n الاسم، m الحرفان، e الاهتمام، k الشكل،
+// بيانات الترشيح بلغة الصفحة. المؤرشف و«تطبيقات جاهزة» لا يُرشَّحان. الحقول: s الاسم المختصر، n الاسم، m الحرفان، e الاهتمام، k الشكل،
 // kl اسم النوع وki أيقونته، p المشاريع، st وsn النجوم، d أول جملة من الوصف (HTML بلغة الصفحة)، o الجهة الرسمية، q الجودة،
 // i تدخل «حزمة التثبيت». وpicks: «ابدأ بهذه» لكل مشروع
 export function finderData(lang: Lang) {
   return {
-    tools: byStars.filter((t) => !t.archived).map((t) => {
+    tools: byStars.filter((t) => !t.archived && !isAppCat(t.cat)).map((t) => {
       const o = officialOf(t);
       return {
         s: t.slug, n: t.name, m: initials(t.name), e: needOf.get(t.cat)!, k: kindOf.get(t.kind)!,

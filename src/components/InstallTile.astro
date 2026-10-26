@@ -2,8 +2,9 @@
 // بلاطة «التثبيت» في صفحة الأداة. أمر Claude Code كما هو، وإن كان الأمر يضيف خادم MCP (src/lib/install.js)
 // فتبويبات لبرامج أخرى: Cursor وVS Code (رابط تثبيت بنقرة وملف الإعداد)، وClaude Desktop (ملف الإعداد أو موصل مخصص).
 // بلا JavaScript تظهر كل الأقسام بعناوينها تحت بعضها. السلوك في src/scripts/tabs.js.
+// التطبيقات الجاهزة: أمر Homebrew (Mac) أو winget (Windows) بشرحه، وبلا أمر بلاطة «التنزيل» إلى App Store أو الموقع أو صفحة الإصدارات.
 import Icon from "./Icon.astro";
-import { type Tool } from "../lib/data";
+import { type Tool, isAppStore } from "../lib/data";
 import { mcpServer, mcpClients } from "../lib/install.js";
 import { type Lang, t as dict } from "../i18n";
 interface Props { tool: Tool; lang: Lang }
@@ -14,13 +15,28 @@ const c = server && mcpClients(server);
 // الخادم على هذا الجهاز (localhost) لا يصل إليه موصل claude.ai، فيبقى الجسر mcp-remote فقط
 const local = !!c?.url && /^https?:\/\/(localhost|127\.0\.0\.1|\[::1\])[:/]/.test(c.url);
 const tabs = c ? [["cc", "Claude Code"], ["cursor", "Cursor"], ["vscode", "VS Code"], ["desktop", "Claude Desktop"]] : [];
+const app = x.kind === "تطبيق";
+const note = app && /^brew install /.test(x.cmd || "") ? t.installNoteMac_h : app && /^winget install /.test(x.cmd || "") ? t.installNoteWin_h : t.installNote_h;
+// «التنزيل» لتطبيق بلا أمر: App Store، ثم الموقع الرسمي، ثم صفحة الإصدارات على GitHub
+const dl = app && !x.cmd
+  ? x.site && isAppStore(x.site) ? { href: x.site, label: t.openAppStore, note: t.dlStoreNote }
+  : x.site ? { href: x.site, label: t.officialSite, note: t.dlSiteNote }
+  : x.gh ? { href: x.gh.replace(/\/$/, "") + "/releases", label: t.dlReleases, note: t.dlReleasesNote } : null
+  : null;
 ---
+{dl && (
+  <div class="p-tile p-install">
+    <h2>{t.dlTitle}</h2>
+    <p class="p-note">{dl.note}</p>
+    <a class="btn-primary dl-go" href={dl.href} target="_blank" rel="noopener noreferrer"><Icon name="arrow-square-out" /><span>{dl.label}</span></a>
+  </div>
+)}
 {x.cmd && (
   <div class="p-tile p-install">
     <h2>{t.installTitle}</h2>
     {!c ? (
       <>
-        <p class="p-note" set:html={t.installNote_h} />
+        <p class="p-note" set:html={note} />
         <div class="cmd">
           <pre tabindex="0" aria-label={t.cmdAria}><code>{x.cmd}</code></pre>
           <button type="button" class="copy" aria-label={t.copyAria}>

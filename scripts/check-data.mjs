@@ -19,8 +19,12 @@ for (const lang of Object.keys(TR)) {
   for (const c of cats) need(c[`name_${lang}`], lang, `name_${lang} للقسم ${c.id}`);
   for (const p of projects) { need(p[`name_${lang}`], lang, `name_${lang} للمشروع ${p.id}`); need(p[`advice_${lang}`], lang, `advice_${lang} للمشروع ${p.id}`); }
 }
+// مجموعة الأقسام: "apps" لأقسام «تطبيقات جاهزة» فقط، وكل أداة فيها نوعها «تطبيق» (src/lib/data.ts وsrc/lib/finder.ts)
+const appCatIds = new Set(cats.filter((c) => c.group === "apps").map((c) => c.id));
+for (const c of cats) if ("group" in c && c.group !== "apps") problems.push(`مجموعة غير معروفة للقسم ${c.id}: ${c.group} (المعروف: apps)`);
 for (const t of tools) {
   if (!t.name || !t.desc) problems.push(`ناقص: ${t.name || "(بدون اسم)"}`);
+  if (appCatIds.has(t.cat) && t.kind !== "تطبيق") problems.push(`${t.name} في قسم «تطبيقات جاهزة» ونوعه ليس «تطبيق»`);
   for (const lang of Object.keys(TR)) need(t[`desc_${lang}`], lang, `desc_${lang} لـ ${t.name}`);
   if ("inside" in t && t.inside !== false && !(typeof t.inside === "string" && t.inside.trim())) problems.push(`inside في ${t.name}: false أو كلمة (scripts/update-inside.mjs)`);
   if (!KINDS.includes(t.kind)) problems.push(`نوع غير معروف في ${t.name}: ${t.kind} (أضفه مع ترجمته في src/lib/data.ts وهنا)`);

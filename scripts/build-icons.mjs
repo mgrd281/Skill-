@@ -11,12 +11,14 @@ const NAMES = [
   "arrow-square-out", "shield-check", "seal-check", "user", "cloud", "puzzle-piece", "storefront", "scales", "flag",
   "lightbulb", "envelope-simple", "arrow-counter-clockwise", "caret-down",
   // أنواع الأدوات
-  "sparkle", "plug", "package", "wrench", "stack", "device-mobile",
+  "sparkle", "plug", "package", "wrench", "stack", "device-mobile", "app-window",
   // الأقسام ومشاريع "ماذا تبني؟"
   "pen-nib", "palette", "magic-wand", "video-camera", "bag", "code", "devices", "rocket-launch", "file-text",
   "briefcase", "database", "gauge", "layout", "shapes", "receipt", "hard-drives", "chart-line-up", "chart-bar",
   "calendar-check", "pencil-simple-line", "chat-circle-text", "browser", "laptop", "megaphone", "terminal-window",
   "folder", "compass",
+  // أقسام «تطبيقات جاهزة» (والتفاحة لقسم تطوير Apple)
+  "windows-logo", "device-mobile-camera", "apple-logo",
 ];
 // أوزان إضافية لحالات محددة: الممتلئ للحالة المفعّلة، والعريض لعلامات التأكيد الصغيرة.
 const EXTRA = { fill: ["star", "heart"], bold: ["check", "x"] };

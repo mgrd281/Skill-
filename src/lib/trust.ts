@@ -1,9 +1,10 @@
 // «الأمان والثقة» في صفحة الأداة: ما يحتاج الزائر أن يعرفه قبل التثبيت، من البيانات نفسها بلا درجات مخترعة.
 // ثلاث إشارات: من ينشرها (الحساب الرسمي للجهة أم حساب آخر)، وأين تعمل (جهازك، خادم بعيد ومن يستقبل البيانات،
-// داخل Claude، داخل مشروعك)، ومن أين تُثبَّت (السوق الرسمي، npm، GitHub، سكربت من الإنترنت). ثم نصيحة واحدة تناسب نوعها.
+// داخل Claude، داخل مشروعك)، ومن أين تُثبَّت (السوق الرسمي، npm، Homebrew، winget، App Store، GitHub، سكربت من الإنترنت).
+// ثم نصيحة واحدة تناسب نوعها.
 import type { IconName } from "./icons";
 import type { Lang } from "../i18n";
-import { type Tool, host } from "./data";
+import { type Tool, host, isAppStore } from "./data";
 import { mcpServer, RUNS_REMOTE_SCRIPT } from "./install.js";
 
 // حسابات GitHub الرسمية للجهات (الشركة أو المشروع نفسه). غيرها يظهر باسم الحساب فقط.
@@ -27,6 +28,9 @@ const OFFICIAL: Record<string, string> = {
   clerk: "Clerk", semgrep: "Semgrep", elevenlabs: "ElevenLabs", "21st-dev": "21st.dev", magicuidesign: "Magic UI",
   "uiverse-io": "Uiverse", gitroomhq: "Postiz", ComposioHQ: "Composio", VoltAgent: "VoltAgent", "capawesome-team": "Capawesome",
   rorkai: "Rork", squirrelscan: "squirrelscan",
+  // «تطبيقات جاهزة»: حسابات الجهات التي تنشر تطبيقاتها بنفسها (blender وvideolan وLibreOffice نسخ رسمية من مستودعاتها)
+  "mozilla-mobile": "Mozilla", wikimedia: "Wikimedia", duckduckgo: "DuckDuckGo", signalapp: "Signal", mastodon: "Mastodon",
+  Automattic: "Automattic", obsproject: "OBS Project", videolan: "VideoLAN", blender: "Blender", LibreOffice: "LibreOffice",
 };
 
 export type Tone = "ok" | "info" | "warn";
@@ -39,11 +43,11 @@ type Words = {
   local: string; localNote: string; remote: (h: string) => string; remoteNote: (h: string) => string; bridgeNote: (h: string) => string;
   localApp: string; localAppNote: string; mcp: string; mcpNote: string;
   skill: string; skillNote: string; plugin: string; pluginNote: string; library: string; libraryNote: string;
-  cli: string; cliNote: string; web: string; webNote: string; platform: string; platformNote: string; format: string; formatNote: string;
+  cli: string; cliNote: string; app: string; appNote: string; store: string; storeNote: string; web: string; webNote: string; platform: string; platformNote: string; format: string; formatNote: string;
   market: string; marketNote: string; marketRepo: (r: string) => string; marketRepoNote: string;
   repo: (r: string) => string; repoNote: string; pkg: (reg: string, p: string) => string; pkgNote: string; tapNote: string;
   script: string; scriptNote: string; noInstall: (h: string) => string; noInstallNote: string;
-  tipScript: string; tipLocal: string; tipRemote: (h: string) => string; tipSkill: string; tipPlugin: string; tipLibrary: string; tipWeb: string;
+  tipScript: string; tipLocal: string; tipRemote: (h: string) => string; tipSkill: string; tipPlugin: string; tipLibrary: string; tipWeb: string; tipApp: string;
 };
 
 const W: Record<Lang, Words> = {
@@ -61,6 +65,8 @@ const W: Record<Lang, Words> = {
     plugin: "إضافة لـ Claude Code", pluginNote: "قد تضم مهارات وأوامر وخوادم MCP، وأوامر تعمل تلقائيًا (hooks).",
     library: "داخل كود مشروعك", libraryNote: "مكتبة تُضاف إلى مشروعك وتُبنى معه.",
     cli: "برنامج على جهازك", cliNote: "أداة تشغّلها بنفسك من الطرفية أو تطبيق على جهازك.",
+    app: "تطبيق على جهازك", appNote: "تثبّته وتفتحه مثل أي برنامج على الكمبيوتر أو الهاتف، وشيفرته مفتوحة على GitHub.",
+    store: "App Store", storeNote: "من متجر Apple، وتراجع Apple التطبيقات قبل نشرها.",
     web: "في المتصفح", webNote: "خدمة على الإنترنت تستخدمها من موقعها، بلا تثبيت.",
     platform: "خدمة على الإنترنت", platformNote: "تستضيفها الجهة، وتربطها بمشروعك بمكتبتها أو من لوحة التحكم.",
     format: "ملف في مشروعك", formatNote: "صيغة ملف تضعه في مشروعك فيقرؤه Claude وأدواتك.",
@@ -78,6 +84,7 @@ const W: Record<Lang, Words> = {
     tipPlugin: "الإضافات قد تشغّل أوامر تلقائيًا: ثبّت ما تثق بناشره، وراجع محتواها من المستودع.",
     tipLibrary: "تحقق من الرخصة وآخر تحديث قبل الاعتماد عليها في عمل تجاري.",
     tipWeb: "اقرأ سياسة الخصوصية قبل أن ترفع ملفاتك أو بياناتك.",
+    tipApp: "نزّله من صفحته الرسمية أو من متجر التطبيقات فقط، لا من مواقع تنزيل أخرى قد تضيف إليه برامج غير مرغوبة.",
   },
   de: {
     publisher: "Herausgeber", runs: "Wo es läuft", source: "Woher es kommt",
@@ -93,6 +100,8 @@ const W: Record<Lang, Words> = {
     plugin: "Plugin für Claude Code", pluginNote: "Kann Skills, Befehle, MCP-Server und automatisch laufende Befehle (Hooks) enthalten.",
     library: "Im Code deines Projekts", libraryNote: "Eine Bibliothek, die in dein Projekt eingebunden und mitgebaut wird.",
     cli: "Programm auf deinem Rechner", cliNote: "Ein Tool, das du selbst im Terminal startest, oder eine App auf deinem Rechner.",
+    app: "App auf deinem Gerät", appNote: "Du installierst und öffnest sie wie jedes Programm auf Computer oder Handy, und ihr Code ist offen auf GitHub.",
+    store: "App Store", storeNote: "Aus dem App Store von Apple, wo Apple Apps vor der Veröffentlichung prüft.",
     web: "Im Browser", webNote: "Ein Onlinedienst, den du auf seiner Website nutzt, ohne Installation.",
     platform: "Onlinedienst", platformNote: "Vom Anbieter gehostet. Du verbindest ihn über seine Bibliothek oder das Dashboard mit deinem Projekt.",
     format: "Datei in deinem Projekt", formatNote: "Ein Dateiformat, das du in dein Projekt legst, damit Claude und deine Tools es lesen.",
@@ -110,6 +119,7 @@ const W: Record<Lang, Words> = {
     tipPlugin: "Plugins können Befehle automatisch ausführen: Installiere nur, wem du vertraust, und prüfe den Inhalt im Repository.",
     tipLibrary: "Prüfe Lizenz und letzte Aktualisierung, bevor du dich kommerziell darauf verlässt.",
     tipWeb: "Lies die Datenschutzerklärung, bevor du Dateien oder Daten hochlädst.",
+    tipApp: "Lade sie nur von der offiziellen Seite oder aus einem App Store, nicht von Download-Portalen, die unerwünschte Software beipacken können.",
   },
   en: {
     publisher: "Publisher", runs: "Where it runs", source: "Where it comes from",
@@ -125,6 +135,8 @@ const W: Record<Lang, Words> = {
     plugin: "Claude Code plugin", pluginNote: "Can bundle skills, commands, MCP servers and commands that run automatically (hooks).",
     library: "In your project's code", libraryNote: "A library added to your project and built with it.",
     cli: "A program on your computer", cliNote: "A tool you run yourself in the terminal, or an app on your computer.",
+    app: "An app on your device", appNote: "You install and open it like any program on your computer or phone, and its code is open on GitHub.",
+    store: "App Store", storeNote: "From Apple's App Store, where Apple reviews apps before they're published.",
     web: "In the browser", webNote: "An online service you use on its website, with nothing to install.",
     platform: "Online service", platformNote: "Hosted by the provider. You connect it to your project with its library or from its dashboard.",
     format: "A file in your project", formatNote: "A file format you add to your project so Claude and your tools can read it.",
@@ -142,6 +154,7 @@ const W: Record<Lang, Words> = {
     tipPlugin: "Plugins can run commands automatically: install only what you trust, and review its contents in the repository.",
     tipLibrary: "Check the license and last update before relying on it for commercial work.",
     tipWeb: "Read the privacy policy before uploading your files or data.",
+    tipApp: "Download it only from its official page or an app store, not from download sites that may bundle unwanted software.",
   },
 };
 
@@ -167,6 +180,8 @@ function packageOf(cmd: string): { reg: string; name: string; href: string; tap?
     return m[2].includes("/") ? { reg: "Homebrew", name: m[2], href: "https://github.com/" + m[2].split("/").slice(0, 2).join("/").replace(/\/(.+)$/, "/homebrew-$1"), tap: true }
       : { reg: "Homebrew", name, href: `https://formulae.brew.sh/${m[1] ? "cask" : "formula"}/${name}` };
   }
+  if ((m = /^winget install (?:(?:-e|--exact) )?--id ([\w.+-]+)/.exec(line)))
+    return { reg: "winget", name: m[1], href: `https://github.com/microsoft/winget-pkgs/tree/master/manifests/${m[1][0].toLowerCase()}/${m[1].replace(/\./g, "/")}` };
   if ((m = /^(?:python -m )?pip install '?([\w.-]+)/.exec(line))) return { reg: "PyPI", name: m[1], href: "https://pypi.org/project/" + m[1] + "/" };
   if ((m = /uvx (?:--from ([\w.-]+)|([\w.-]+))/.exec(line))) { const n = m[1] || m[2]; return { reg: "PyPI", name: n, href: "https://pypi.org/project/" + n + "/" }; }
   if ((m = /^flutter pub add ([\w]+)/.exec(line))) return { reg: "pub.dev", name: m[1], href: "https://pub.dev/packages/" + m[1] };
@@ -200,7 +215,8 @@ export function trust(t: Tool, lang: Lang): Trust {
   else if (t.kind === "MCP") { rows.push({ id: "run", icon: "plug", label: w.runs, value: w.mcp, note: w.mcpNote, tone: "info" }); tip = w.tipLocal; }
   else if (t.kind === "Skill") { rows.push({ id: "run", icon: "sparkle", label: w.runs, value: w.skill, note: w.skillNote, tone: "info" }); tip = w.tipSkill; }
   else if (t.kind === "مكتبة") { rows.push({ id: "run", icon: "code", label: w.runs, value: w.library, note: w.libraryNote, tone: "info" }); tip = w.tipLibrary; }
-  else if (t.kind === "أداة" || t.kind === "تطبيق") { rows.push({ id: "run", icon: "terminal-window", label: w.runs, value: w.cli, note: w.cliNote, tone: "info" }); tip = w.tipLocal; }
+  else if (t.kind === "تطبيق") { rows.push({ id: "run", icon: "app-window", label: w.runs, value: w.app, note: t.gh ? w.appNote : w.cliNote, tone: "info" }); tip = w.tipApp; }
+  else if (t.kind === "أداة") { rows.push({ id: "run", icon: "terminal-window", label: w.runs, value: w.cli, note: w.cliNote, tone: "info" }); tip = w.tipLocal; }
   else if (t.kind === "منصة") { rows.push({ id: "run", icon: "cloud", label: w.runs, value: w.platform, note: w.platformNote, tone: "info" }); tip = w.tipWeb; }
   else if (t.kind === "صيغة") { rows.push({ id: "run", icon: "file-text", label: w.runs, value: w.format, note: w.formatNote, tone: "info" }); tip = w.tipLibrary; }
   else { rows.push({ id: "run", icon: "globe", label: w.runs, value: w.web, note: w.webNote, tone: "info" }); tip = w.tipWeb; }
@@ -218,6 +234,7 @@ export function trust(t: Tool, lang: Lang): Trust {
   } else {
     const p = cmd ? packageOf(cmd) : null;
     if (p) rows.push({ id: "src", icon: "package", label: w.source, value: w.pkg(p.reg, p.name), note: p.tap ? w.tapNote : w.pkgNote, tone: "info", href: p.href });
+    else if (t.site && isAppStore(t.site)) rows.push({ id: "src", icon: "storefront", label: w.source, value: w.store, note: w.storeNote, tone: "ok", href: t.site });
   }
   return { rows, tip };
 }

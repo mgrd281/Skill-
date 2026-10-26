@@ -30,7 +30,8 @@ export interface Tool {
   added: string;
   order: number;
 }
-export interface Category { id: string; name: string; name_de: string; name_en: string }
+// group: "apps" لأقسام «تطبيقات جاهزة» (تطبيقات تُستخدم على جهاز الزائر، لا أدوات لما يبنيه): قسم خاص في الرئيسية، ولا يرشّح منها «ساعدني أختار»
+export interface Category { id: string; name: string; name_de: string; name_en: string; group?: "apps" }
 export interface Project {
   id: string; name: string; name_de: string; name_en: string; icon: string; advice: string; advice_de: string; advice_en: string; picks: string[];
   pickSlugs: string[]; cats?: string[]; count: number;
@@ -54,7 +55,9 @@ export function parseStars(s: string | null): number {
   return m ? Math.round(parseFloat(m[1]) * 1000) : parseInt(s, 10) || 0;
 }
 
-export const categories: Category[] = categoriesJson;
+export const categories: Category[] = categoriesJson as Category[];
+export const appCats: Category[] = categories.filter((c) => c.group === "apps");
+export const isAppCat = (id: string) => appCats.some((c) => c.id === id);
 
 const rawProjects = projectsJson as Array<Omit<Project, "pickSlugs" | "count">>;
 
@@ -171,6 +174,7 @@ const BADGE = {
     old: "آخر تحديث", oldT: "لم يُحدَّث المستودع منذ أكثر من سنة",
     script: "ينفّذ سكربتًا من الإنترنت", scriptT: "أمر التثبيت يحمّل سكربتًا من الإنترنت وينفّذه مباشرة. افتح مصدره واقرأه قبل تشغيله",
     none: "بدون رخصة", noneT: "لا رخصة معلنة في المستودع: غالبًا لا يُسمح باستخدامه. اقرأ صفحته قبل الاعتماد عليه",
+    noneAppT: "لا رخصة معلنة في المستودع: الشيفرة غير مفتوحة لإعادة الاستخدام، والتطبيق نفسه تنزّله من صاحبه",
     other: "رخصة خاصة", otherT: "رخصة غير قياسية: اقرأ ملف الرخصة قبل الاستخدام التجاري",
     restrictT: (l: string) => `رخصة ${l} لها شروط على الاستخدام التجاري: اقرأها`, licT: (l: string) => `الرخصة: ${l}`,
   },
@@ -179,6 +183,7 @@ const BADGE = {
     old: "Letztes Update", oldT: "Das Repository wurde seit über einem Jahr nicht aktualisiert",
     script: "Skript aus dem Internet", scriptT: "Der Installationsbefehl lädt ein Skript aus dem Internet und führt es direkt aus. Öffne und lies die Quelle, bevor du es startest",
     none: "Keine Lizenz", noneT: "Im Repository ist keine Lizenz angegeben – die Nutzung ist dann meist nicht erlaubt. Lies die Projektseite, bevor du dich darauf verlässt",
+    noneAppT: "Im Repository ist keine Lizenz angegeben: Der Code ist nicht zur Weiterverwendung freigegeben, die App selbst lädst du vom Entwickler",
     other: "Eigene Lizenz", otherT: "Keine Standardlizenz: Lies die Lizenzdatei vor einer kommerziellen Nutzung",
     restrictT: (l: string) => `Die Lizenz ${l} hat Bedingungen für die kommerzielle Nutzung: Lies sie`, licT: (l: string) => `Lizenz: ${l}`,
   },
@@ -187,10 +192,23 @@ const BADGE = {
     old: "Last update", oldT: "The repository hasn't been updated in over a year",
     script: "Script from the internet", scriptT: "The install command downloads a script from the internet and runs it right away. Open and read its source before you run it",
     none: "No license", noneT: "No license is declared in the repository, so using it is usually not permitted. Read its page before relying on it",
+    noneAppT: "No license is declared in the repository: the code isn't open for reuse, and you download the app itself from its developer",
     other: "Custom license", otherT: "Not a standard license: read the license file before any commercial use",
     restrictT: (l: string) => `The ${l} license has conditions for commercial use: read it`, licT: (l: string) => `License: ${l}`,
   },
 };
+
+// درجة تحذير الرخصة لشارة الحالة ولصفحة المقارنة (src/lib/compare-index.ts): bad بلا رخصة، وwarn لرخصة خاصة أو بشروط.
+// تطبيق جاهز: استخدامه لا تقيّده رخصة GPL أو AGPL (شروطهما عند نسخ الشيفرة أو توزيعها)، فالتحذير لرخص غير تجارية فقط،
+// و«بدون رخصة» تحذير لا خطأ: الشيفرة غير مفتوحة لإعادة الاستخدام، لا أن التطبيق ممنوع
+export function licenseTone(t: Tool): "bad" | "warn" | "" {
+  const l = t.license;
+  if (!l) return "";
+  const app = t.kind === "تطبيق";
+  if (l === "none") return app ? "warn" : "bad";
+  if (l === "other") return "warn";
+  return (app ? /-NC\b|NonCommercial/i.test(l) : RESTRICTIVE.test(l)) ? "warn" : "";
+}
 
 export function statusBadges(t: Tool, lang: Lang = "ar", now = Date.now()): Badge[] {
   const b = BADGE[lang];
@@ -204,13 +222,10 @@ export function statusBadges(t: Tool, lang: Lang = "ar", now = Date.now()): Badg
   if (t.cmd && RUNS_REMOTE_SCRIPT.test(t.cmd)) {
     out.push({ kind: "warn", text: b.script, title: b.scriptT });
   }
-  const l = t.license;
-  if (l === "none") out.push({ kind: "bad", text: b.none, title: b.noneT });
+  const l = t.license, tone = licenseTone(t);
+  if (l === "none") out.push({ kind: tone || "bad", text: b.none, title: t.kind === "تطبيق" ? b.noneAppT : b.noneT });
   else if (l === "other") out.push({ kind: "warn", text: b.other, title: b.otherT });
-  else if (l) {
-    const warn = RESTRICTIVE.test(l);
-    out.push({ kind: warn ? "warn" : "ok", text: "", latin: l, title: warn ? b.restrictT(l) : b.licT(l) });
-  }
+  else if (l) out.push({ kind: tone ? "warn" : "ok", text: "", latin: l, title: tone ? b.restrictT(l) : b.licT(l) });
   return out;
 }
 
@@ -224,17 +239,18 @@ export function initials(name: string): string {
 
 // ---- أيقونة لكل نوع وقسم ونوع مشروع (أسماء Phosphor من src/lib/icons.ts) ----
 const KIND_ICON: Record<string, IconName> = {
-  Skill: "sparkle", MCP: "plug", "مكتبة": "package", "أداة": "wrench", "موقع": "globe", "منصة": "stack", "تطبيق": "device-mobile",
+  Skill: "sparkle", MCP: "plug", "مكتبة": "package", "أداة": "wrench", "موقع": "globe", "منصة": "stack", "تطبيق": "app-window",
   "صيغة": "file-text", "دليل": "compass",
 };
 export const kindIcon = (kind: string): IconName => KIND_ICON[kind] ?? "package";
 
 const CAT_ICON: Record<string, IconName> = {
   design: "pen-nib", brandskills: "palette", animation: "magic-wand", motiongfx: "video-camera", shopmkt: "bag",
-  devskills: "code", mobskills: "device-mobile", apple: "devices", vercel: "rocket-launch", general: "sparkle",
+  devskills: "code", mobskills: "device-mobile", apple: "apple-logo", vercel: "rocket-launch", general: "sparkle",
   docs: "file-text", business: "briefcase", data: "database", mcp: "plug", quality: "gauge",
   ui: "layout", icons: "shapes", finance: "receipt", infra: "hard-drives", analytics: "chart-line-up",
   booking: "calendar-check", writing: "pencil-simple-line", prompts: "chat-circle-text",
+  macapps: "laptop", winapps: "windows-logo", iosapps: "device-mobile-camera", crossapps: "devices",
 };
 export const categoryIcon = (id: string): IconName => CAT_ICON[id] ?? "folder";
 

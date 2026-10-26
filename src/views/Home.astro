@@ -7,7 +7,7 @@ import Odometer from "../components/Odometer.astro";
 import Mascot from "../components/Mascot.astro";
 import CardIcons from "../components/CardIcons.astro";
 import Newsletter from "../components/Newsletter.astro";
-import { tools, byStars, rankOf, categories, projects, starsUpdatedAt, formatDate, recentTools, initials, kindIcon, kindLabel, categoryIcon, projectIcon, txt, catName, projName, projAdvice } from "../lib/data";
+import { tools, byStars, rankOf, categories, appCats, projects, starsUpdatedAt, formatDate, recentTools, initials, kindIcon, kindLabel, categoryIcon, projectIcon, txt, catName, projName, projAdvice } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
 import { kitPlan } from "../lib/install.js";
 interface Props { lang: Lang }
@@ -20,6 +20,11 @@ const total = tools.length;
 // (src/views/CardsFragment.astro): 268 بطاقة دفعة واحدة كانت تجمّد الصفحة ثوانيَ على الجوال
 const FIRST = 12;
 const latest = recentTools.slice(0, 6);
+// «تطبيقات جاهزة»: بلاطة لكل قسم من المجموعة apps، فيها عدد تطبيقاته وأشهر ثلاثة منها بالنجوم
+const appTiles = appCats.map((c) => {
+  const list = byStars.filter((x) => x.cat === c.id);
+  return { id: c.id, count: list.length, top: list.slice(0, 3).map((x) => x.name) };
+});
 // المعرض المتحرك: أعلى ثلاث أدوات، ومع كل منها أول سطر من أمر تثبيتها (--n عدد خطوات الكتابة)
 const showcase = byStars.slice(0, 3).map((x) => ({ ...x, line: x.cmd ? x.cmd.split("\n")[0] : "" }));
 const skillCount = tools.filter((x) => x.kind === "Skill").length;
@@ -208,6 +213,22 @@ const kinds: Array<[string, any, string]> = [
             <span class="mono sm" aria-hidden="true">{initials(x.name)}</span>
             {x.stars && <span class="stars"><Icon name="star" weight="fill" />{x.stars}</span>}
           </span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- «تطبيقات جاهزة»: كل بلاطة رابط إلى صفحة قسمها (Mac وWindows وiPhone ولكل الأنظمة) -->
+  <section class="band alt apps" aria-labelledby="apps-h">
+    <h2 class="sec-title" id="apps-h" set:html={t.appsTitle_h} />
+    <div class="aplats">
+      {appTiles.map((c, i) => (
+        <a class="aplat" href={href(lang, "category/" + c.id)} style={`--pi:${i}`}>
+          <span class="aplat-ic"><Icon name={categoryIcon(c.id)} weight="duotone" /></span>
+          <b set:html={txt(catName(c.id, lang), lang)} />
+          <small>{t.nApps(c.count)}</small>
+          <span class="aplat-names"><bdi>{c.top.map((n, i) => <>{i > 0 && " · "}<span class="an">{n}</span></>)}</bdi></span>
+          <Icon name={fwd} class="aplat-go" />
         </a>
       ))}
     </div>

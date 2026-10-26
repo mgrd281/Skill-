@@ -4,7 +4,7 @@
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
 import Icon from "../components/Icon.astro";
-import { type Category, tools, categories, catName, categoryIcon, txt } from "../lib/data";
+import { type Category, tools, categories, catName, categoryIcon, isAppCat, txt } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
 interface Props { cat: Category; lang: Lang }
 const { cat: c, lang } = Astro.props;
@@ -13,7 +13,8 @@ const name = catName(c.id, lang);
 const list = tools.filter((x) => x.cat === c.id).sort((a, b) => b.starsN - a.starsN || a.order - b.order);
 const others = categories.filter((o) => o.id !== c.id);
 const count = (id: string) => tools.filter((x) => x.cat === id).length;
-const desc = t.catDesc(list.length, name);
+// أقسام «تطبيقات جاهزة» وصفها عن التطبيقات (رابط التنزيل أو أمر التثبيت)
+const desc = isAppCat(c.id) ? t.catDescApps(list.length, name) : t.catDesc(list.length, name);
 const abs = (p: string) => new URL(href(lang, p), Astro.site).href;
 const jsonLd = [
   {

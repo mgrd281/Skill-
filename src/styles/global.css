@@ -162,9 +162,12 @@ kbd {
 @keyframes blink { 50% { scale: 1 .1; } }
 @keyframes blink-h { 50% { scale: 1 .1; } }
 .gnav-links { display: none; gap: 28px; margin-inline: auto; }
-.gnav-links a { color: var(--ink-2); text-decoration: none; font-size: .88rem; transition: color var(--dur) var(--ease); }
+.gnav-links a { color: var(--ink-2); text-decoration: none; font-size: .88rem; white-space: nowrap; transition: color var(--dur) var(--ease); }
 .gnav-links a:hover { color: var(--ink); }
-@media (min-width: 860px) { .gnav-links { display: flex; } }
+/* روابط الشريط في سطر واحد حين يتسع لها مع الشعار والأزرار (مقيس: العربية 800px، والألمانية 909، والإنجليزية 941،
+   وأكثر قليلًا مع زر البحث في صفحات الأدوات)، وإلا تختفي كما على الجوال */
+@media (min-width: 1000px) { .gnav-links { display: flex; } }
+@media (min-width: 860px) { html[lang="ar"] .gnav-links { display: flex; } }
 .actions { display: flex; align-items: center; gap: 2px; margin-inline-start: auto; }
 /* زر اللغة: أيقونة على الجوال، وأيقونة مع اسم اللغة على الشاشات الأوسع */
 .bell.langsw { width: auto; min-width: 40px; padding-inline: 10px; gap: 6px; display: inline-flex; align-items: center; justify-content: center; font-size: .86rem; font-weight: 500; white-space: nowrap; }
@@ -203,7 +206,8 @@ a.lang-item:hover, a.lang-item:focus-visible { background: var(--fill-2); }
 }
 /* أضيق من 360px: الشعار وحده يكفي (الرابط له اسم لقارئات الشاشة)، وإلا خرج آخر زر عن الشاشة في الألمانية والإنجليزية */
 @media (max-width: 359px) { .gnav .brand span { display: none; } }
-@media (min-width: 860px) { .actions { margin-inline-start: 0; } }
+@media (min-width: 1000px) { .actions { margin-inline-start: 0; } }
+@media (min-width: 860px) { html[lang="ar"] .actions { margin-inline-start: 0; } }
 .bell {
   position: relative; width: 40px; height: 40px; flex: none; display: grid; place-items: center;
   border: 0; border-radius: var(--r-full); background: transparent; color: var(--ink-2); cursor: pointer; text-decoration: none;
@@ -632,6 +636,38 @@ a.lang-item:hover, a.lang-item:focus-visible { background: var(--fill-2); }
 .li-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 16px; }
 .latest-item .mono { background: var(--bg); }
 
+/* ---------- تطبيقات جاهزة ---------- */
+/* بلاطة لكل قسم من المجموعة apps: أيقونة النظام في مربع بحواف تطبيق، والاسم والعدد، وأشهر ثلاثة تطبيقات، وسهم إلى صفحة القسم.
+   عمودان على الجوال وأربعة على الشاشات الواسعة */
+.aplats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (min-width: 900px) { .aplats { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; } }
+.aplat {
+  position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; min-width: 0; min-height: 192px;
+  padding: 22px 20px 20px; border: 1px solid transparent; border-radius: var(--r-xl);
+  background: var(--card); color: var(--ink); text-decoration: none;
+  transition: border-color var(--dur) var(--ease), translate var(--dur) var(--ease), scale var(--dur-fast) var(--ease);
+}
+.aplat-ic {
+  width: 52px; height: 52px; display: grid; place-items: center; margin-bottom: 14px;
+  border-radius: 14px; background: var(--fill); color: var(--ink); transition: transform var(--dur-slow) var(--spring);
+}
+.aplat-ic .i { width: 30px; height: 30px; }
+.aplat b { font-weight: 600; font-size: 1.02rem; line-height: 1.3; }
+.aplat small { font-size: .82rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+/* أشهر ثلاثة تطبيقات: سطران على الأكثر */
+.aplat-names {
+  margin-top: auto; padding-top: 14px; max-width: 100%; color: var(--ink-2); font-size: .82rem; line-height: 1.45;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden;
+}
+.aplat-names .an { white-space: nowrap; }
+.aplat-go { position: absolute; inset-block-start: 24px; inset-inline-end: 20px; width: 18px; height: 18px; color: var(--muted); transition: translate var(--dur) var(--ease), color var(--dur) var(--ease); }
+@media (hover: hover) {
+  .aplat:hover { border-color: var(--line); translate: 0 -3px; }
+  .aplat:hover .aplat-ic { transform: scale(1.06); }
+  .aplat:hover .aplat-go { color: var(--ink); translate: calc(var(--fwd) * 3px) 0; }
+}
+.aplat:active { scale: .98; }
+
 /* ---------- الأكثر نسخًا هذا الأسبوع (يظهر حين يصل عدّاد النسخ: src/scripts/popular.js) ---------- */
 .pop-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
 .pop-item {
@@ -921,6 +957,9 @@ a.name:hover { color: var(--accent); }
 /* minmax(0, 1fr): محتوى عريض داخل البلاطة (تبويبات أو أمر طويل) يتمرر داخلها ولا يوسّعها خارج الشاشة */
 .p-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
 @media (min-width: 900px) { .p-grid { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); } }
+/* أداة بلا مثال ولا مشاريع (مثل التطبيقات الجاهزة): بلاطة التثبيت أو التنزيل وحدها بعرض الشبكة */
+.p-grid > .p-tile:only-child { grid-column: 1 / -1; }
+.dl-go { justify-self: start; }
 .p-tile { background: var(--card); border-radius: var(--r-xl); padding: clamp(24px, 4vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; align-content: start; min-width: 0; }
 .p-tile h2 { margin: 0; font-size: 1.4rem; font-weight: 700; }
 .p-note { margin: 0; color: var(--muted); font-size: .95rem; }
@@ -1240,7 +1279,7 @@ a.tr-v:hover { color: var(--accent); text-decoration: underline; text-underline-
 /* ظهور تدريجي أثناء التمرير، بلا JavaScript (المتصفحات التي لا تدعمه تعرض العناصر مباشرة) */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .card, .ptile, .latest-item, .p-tile, .specs dl, .tr {
+    .card, .ptile, .aplat, .latest-item, .p-tile, .specs dl, .tr {
       animation: reveal linear both;
       animation-timeline: view();
       animation-range: entry 0% entry 45%;
@@ -1248,14 +1287,18 @@ a.tr-v:hover { color: var(--accent); text-decoration: underline; text-underline-
     /* عناوين الأقسام: الجملة الداكنة أولًا ثم تكملتها الرمادية. المدى بنسبة من ارتفاع الشاشة (cover)
        لا من ارتفاع العنوان، وإلا انتهت الحركة في بضع بكسلات من التمرير ولم تُرَ.
        فقط للأقسام التي يليها محتوى طويل: في صفحة قصيرة (مثل 404) لا يصعد العنوان بما يكفي فيبقى باهتًا. */
-    :is(.build, .latest, .list-head, .specs, .related, .trust) .sec-title { animation: reveal linear both; animation-timeline: view(); animation-range: cover 0% cover 20%; }
-    :is(.build, .latest, .list-head, .specs, .related, .trust) .sec-title > span { animation: fade-in linear both; animation-timeline: view(); animation-range: cover 4% cover 28%; }
+    :is(.build, .latest, .apps, .list-head, .specs, .related, .trust) .sec-title { animation: reveal linear both; animation-timeline: view(); animation-range: cover 0% cover 20%; }
+    :is(.build, .latest, .apps, .list-head, .specs, .related, .trust) .sec-title > span { animation: fade-in linear both; animation-timeline: view(); animation-range: cover 4% cover 28%; }
     /* بلاطات "ماذا تبني؟" تتتابع في الصف الواحد كموجة بجهة القراءة (--pi ترتيب البلاطة) */
     @media (min-width: 760px) {
       .ptile { animation-range: cover calc(mod(var(--pi, 0), 4) * 2.5%) cover calc(18% + mod(var(--pi, 0), 4) * 2.5%); }
     }
     @media (min-width: 1040px) {
       .ptile { animation-range: cover calc(mod(var(--pi, 0), 6) * 2%) cover calc(18% + mod(var(--pi, 0), 6) * 2%); }
+    }
+    /* بلاطات «تطبيقات جاهزة»: أربع في صف واحد على الشاشات الواسعة، تتتابع بالطريقة نفسها */
+    @media (min-width: 900px) {
+      .aplat { animation-range: cover calc(var(--pi, 0) * 2.5%) cover calc(18% + var(--pi, 0) * 2.5%); }
     }
   }
 }
