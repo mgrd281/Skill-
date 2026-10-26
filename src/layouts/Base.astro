@@ -213,7 +213,10 @@ useIcon(Astro.locals, "check", "bold");
       <div class="foot-mark" aria-hidden="true" data-mark={t.siteName} style={`--chars:${[...t.siteName].length}`}></div>
     </footer>
 
-    <button type="button" class="totop" id="totop" aria-label={t.toTop} title={t.toTop}><Icon name="arrow-up" /></button>
+    <button type="button" class="totop" id="totop" aria-label={t.toTop} title={t.toTop}>
+      <svg class="totop-ring" viewBox="0 0 48 48" aria-hidden="true"><circle class="trk" cx="24" cy="24" r="22" /><circle class="bar" cx="24" cy="24" r="22" pathLength="100" /></svg>
+      <Icon name="arrow-up" />
+    </button>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <Feedback lang={lang} />
     <SuggestDialog lang={lang} />
