@@ -39,7 +39,7 @@ else {
 }
 
 // 2) manifest في اللغتين: أيقونات موجودة بأحجامها المعلنة
-for (const m of ["manifest.webmanifest", "de/manifest.webmanifest"]) {
+for (const m of ["manifest.webmanifest", "de/manifest.webmanifest", "en/manifest.webmanifest"]) {
   const f = path.join(dist, m);
   if (!fs.existsSync(f)) { problems.push(`ملف ناقص: ${m}`); continue; }
   let json;
@@ -73,4 +73,4 @@ for (const p of pages) {
 }
 
 if (problems.length) { console.error(problems.join("\n")); process.exit(1); }
-console.log(`OK: أيقونات الموقع سليمة (${pages.length} صفحة، ${tags} وسمًا، manifest باللغتين).`);
+console.log(`OK: أيقونات الموقع سليمة (${pages.length} صفحة، ${tags} وسمًا، manifest بكل اللغات).`);

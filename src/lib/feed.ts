@@ -1,4 +1,4 @@
-// خلاصة RSS لأحدث الأدوات بلغة معينة: /feed.xml للعربية و/de/feed.xml للألمانية.
+// خلاصة RSS لأحدث الأدوات بلغة معينة: /feed.xml للعربية و/de/feed.xml للألمانية و/en/feed.xml للإنجليزية.
 import { recentTools, toolDesc, catName } from "./data";
 import { type Lang, href, t as dict } from "../i18n";
 

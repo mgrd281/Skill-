@@ -1,4 +1,4 @@
-// manifest الموقع بلغة معينة: /manifest.webmanifest للعربية و/de/manifest.webmanifest للألمانية.
+// manifest الموقع بلغة معينة: /manifest.webmanifest للعربية و/de/manifest.webmanifest للألمانية و/en/manifest.webmanifest للإنجليزية.
 // هو ما يقرؤه أندرويد وChrome عند "إضافة إلى الشاشة الرئيسية": الاسم والأيقونات (تُولَّد بـ npm run brand).
 import { type Lang, DEFAULT_LANG, dirOf, href, t as dict } from "../i18n";
 

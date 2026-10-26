@@ -1,4 +1,4 @@
-// يرسم صورتي المشاركة للصفحة الرئيسية (public/og/home-ar.png وhome-de.png) بمتصفح حقيقي،
+// يرسم صور المشاركة للصفحة الرئيسية (public/og/home-ar.png وhome-de.png وhome-en.png) بمتصفح حقيقي،
 // لأن العربية تحتاج تشكيل الحروف الذي لا يدعمه مولّد صور الأدوات. الاستخدام: node scripts/og-home.cjs
 const { chromium } = require("playwright");
 const path = require("path");
@@ -10,6 +10,7 @@ let LOGO; // الشعار من src/lib/brand.js (وحدة ESM فتُحمَّل �
 const T = {
   ar: { dir: "rtl", name: "دليل الأدوات", h: 'أدوات تساعدك في&nbsp;عملك، <span>كل يوم.</span>', sub: "مهارات Claude وخوادم MCP ومكتبات ومواقع مختارة بعناية، مع أمر التثبيت لكل أداة." },
   de: { dir: "ltr", name: "Tool-Verzeichnis", h: 'Tools, die dir bei der Arbeit helfen. <span>Jeden&nbsp;Tag.</span>', sub: "Claude-Skills, MCP-Server, Bibliotheken und Websites – sorgfältig ausgewählt, mit Installationsbefehl." },
+  en: { dir: "ltr", name: "Tool Directory", h: 'Tools that help you work. <span>Every&nbsp;day.</span>', sub: "Claude Skills, MCP servers, libraries and websites – carefully selected, with the install command for every tool." },
 };
 (async () => {
   LOGO = (await import("../src/lib/brand.js")).markSvg({ size: 64 });

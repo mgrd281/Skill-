@@ -19,15 +19,16 @@ export interface Tool {
   use: string[];
   desc: string;
   desc_de: string;
+  desc_en: string;
   pushed: string | null;
   license?: string | null;
   archived?: boolean;
   added: string;
   order: number;
 }
-export interface Category { id: string; name: string; name_de: string }
+export interface Category { id: string; name: string; name_de: string; name_en: string }
 export interface Project {
-  id: string; name: string; name_de: string; icon: string; advice: string; advice_de: string; picks: string[];
+  id: string; name: string; name_de: string; name_en: string; icon: string; advice: string; advice_de: string; advice_en: string; picks: string[];
   pickSlugs: string[]; cats?: string[]; count: number;
 }
 
@@ -79,27 +80,34 @@ const LATIN = /[A-Za-z][\w+\-\/@.]*[A-Za-z0-9](?:\s+[A-Za-z0-9][\w+\-\/@.]*[A-Za
 export function rich(s: string): string {
   return esc(s).replace(LATIN, (m) => "<bdi>" + m + "</bdi>");
 }
-// نص بلغة الصفحة: العربية تعزل الكلمات اللاتينية بـ <bdi>، والألمانية نص عادي
+// نص بلغة الصفحة: العربية تعزل الكلمات اللاتينية بـ <bdi>، واللغتان اللاتينيتان نص عادي
 export const txt = (s: string, lang: Lang) => (lang === "ar" ? rich(s) : esc(s));
 
-// ---- الحقول المترجمة: الحقل العربي اسمه الأصلي، والألماني بلاحقة _de ----
-function de(value: string | undefined, what: string): string {
-  if (!value) throw new Error(`ترجمة ألمانية ناقصة: ${what}. أضفها في data/ ثم شغّل npm run check.`);
+// ---- الحقول المترجمة: الحقل العربي اسمه الأصلي، وغيره بلاحقة اللغة (desc_de وdesc_en ...) ----
+type Translated = Exclude<Lang, "ar">;
+const LANG_AR: Record<Translated, string> = { de: "الألمانية", en: "الإنجليزية" };
+function need(value: string | undefined, lang: Lang, what: string): string {
+  if (!value) throw new Error(`ترجمة ${LANG_AR[lang as Translated]} ناقصة: ${what}. أضفها في data/ ثم شغّل npm run check.`);
   return value;
 }
-export const toolDesc = (t: Tool, lang: Lang) => (lang === "de" ? de(t.desc_de, `desc_de لـ ${t.name}`) : t.desc);
-export const catName = (id: string, lang: Lang) => {
-  const c = categoryById(id);
-  return lang === "de" ? de(c.name_de, `name_de للقسم ${id}`) : c.name;
-};
-export const projName = (p: Project, lang: Lang) => (lang === "de" ? de(p.name_de, `name_de للمشروع ${p.id}`) : p.name);
-export const projAdvice = (p: Project, lang: Lang) => (lang === "de" ? de(p.advice_de, `advice_de للمشروع ${p.id}`) : p.advice);
+const field = (o: Record<string, any>, name: string, lang: Lang, what: string): string =>
+  lang === "ar" ? o[name] : need(o[`${name}_${lang}`], lang, what);
+export const toolDesc = (t: Tool, lang: Lang) => field(t, "desc", lang, `desc_${lang} لـ ${t.name}`);
+export const catName = (id: string, lang: Lang) => field(categoryById(id), "name", lang, `name_${lang} للقسم ${id}`);
+export const projName = (p: Project, lang: Lang) => field(p, "name", lang, `name_${lang} للمشروع ${p.id}`);
+export const projAdvice = (p: Project, lang: Lang) => field(p, "advice", lang, `advice_${lang} للمشروع ${p.id}`);
 // أنواع الأدوات وترجمتها (القائمة نفسها في scripts/check-data.mjs)
-const KIND_DE: Record<string, string> = {
-  Skill: "Skill", MCP: "MCP", "مكتبة": "Bibliothek", "أداة": "Tool", "موقع": "Website", "منصة": "Plattform", "تطبيق": "App",
-  "صيغة": "Format", "دليل": "Verzeichnis",
+const KIND_L: Record<Translated, Record<string, string>> = {
+  de: {
+    Skill: "Skill", MCP: "MCP", "مكتبة": "Bibliothek", "أداة": "Tool", "موقع": "Website", "منصة": "Plattform", "تطبيق": "App",
+    "صيغة": "Format", "دليل": "Verzeichnis",
+  },
+  en: {
+    Skill: "Skill", MCP: "MCP", "مكتبة": "Library", "أداة": "Tool", "موقع": "Website", "منصة": "Platform", "تطبيق": "App",
+    "صيغة": "Format", "دليل": "Directory",
+  },
 };
-export const kindLabel = (kind: string, lang: Lang) => (lang === "de" ? de(KIND_DE[kind], `اسم النوع ${kind}`) : kind);
+export const kindLabel = (kind: string, lang: Lang) => (lang === "ar" ? kind : need(KIND_L[lang][kind], lang, `اسم النوع ${kind}`));
 
 export function host(url: string): string {
   try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return url; }
@@ -112,10 +120,12 @@ export function repoLabel(url: string): string {
 export const isLatin = (s: string) => /^[\x00-\x7F]+$/.test(s);
 export const isAppStore = (u: string) => /apps\.apple\.com/.test(u);
 
+// لغة Intl لكل لغة لاتينية: الألمانية بترتيبها، والإنجليزية البريطانية (اليوم أولًا مثل العربية والألمانية)
+const INTL: Record<Translated, string> = { de: "de-DE", en: "en-GB" };
 export function formatDate(iso: string, lang: Lang = "ar"): string {
   const [y, m, d] = iso.slice(0, 10).split("-").map(Number);
-  if (lang === "de") {
-    return new Intl.DateTimeFormat("de-DE", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(Date.UTC(y, m - 1, d));
+  if (lang !== "ar") {
+    return new Intl.DateTimeFormat(INTL[lang], { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(Date.UTC(y, m - 1, d));
   }
   const months = ["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"];
   return `${d} ${months[m - 1]} ${y}`;
@@ -153,6 +163,14 @@ const BADGE = {
     none: "Keine Lizenz", noneT: "Im Repository ist keine Lizenz angegeben – die Nutzung ist dann meist nicht erlaubt. Lies die Projektseite, bevor du dich darauf verlässt",
     other: "Eigene Lizenz", otherT: "Keine Standardlizenz: Lies die Lizenzdatei vor einer kommerziellen Nutzung",
     restrictT: (l: string) => `Die Lizenz ${l} hat Bedingungen für die kommerzielle Nutzung: Lies sie`, licT: (l: string) => `Lizenz: ${l}`,
+  },
+  en: {
+    archived: "Archived", archivedT: "The repository is archived and is no longer being developed",
+    old: "Last update", oldT: "The repository hasn't been updated in over a year",
+    script: "Script from the internet", scriptT: "The install command downloads a script from the internet and runs it right away. Open and read its source before you run it",
+    none: "No license", noneT: "No license is declared in the repository, so using it is usually not permitted. Read its page before relying on it",
+    other: "Custom license", otherT: "Not a standard license: read the license file before any commercial use",
+    restrictT: (l: string) => `The ${l} license has conditions for commercial use: read it`, licT: (l: string) => `License: ${l}`,
   },
 };
 

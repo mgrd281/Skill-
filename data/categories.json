@@ -2,116 +2,139 @@
   {
     "id": "design",
     "name": "مهارات التصميم",
-    "name_de": "Design-Skills"
+    "name_de": "Design-Skills",
+    "name_en": "Design Skills"
   },
   {
     "id": "brandskills",
     "name": "الهوية والعلامة التجارية",
-    "name_de": "Branding & Markenidentität"
+    "name_de": "Branding & Markenidentität",
+    "name_en": "Branding & Brand Identity"
   },
   {
     "id": "animation",
     "name": "أنيميشن للمواقع والتطبيقات",
-    "name_de": "Animation für Websites & Apps"
+    "name_de": "Animation für Websites & Apps",
+    "name_en": "Animation for Websites & Apps"
   },
   {
     "id": "motiongfx",
     "name": "موشن غرافيك وفيديو",
-    "name_de": "Motion Graphics & Video"
+    "name_de": "Motion Graphics & Video",
+    "name_en": "Motion Graphics & Video"
   },
   {
     "id": "shopmkt",
     "name": "مهارات المتجر والتسويق",
-    "name_de": "Shop- & Marketing-Skills"
+    "name_de": "Shop- & Marketing-Skills",
+    "name_en": "Shop & Marketing Skills"
   },
   {
     "id": "devskills",
     "name": "مهارات البرمجة والأمان",
-    "name_de": "Entwicklungs- & Sicherheits-Skills"
+    "name_de": "Entwicklungs- & Sicherheits-Skills",
+    "name_en": "Development & Security Skills"
   },
   {
     "id": "mobskills",
     "name": "مهارات الجوال",
-    "name_de": "Mobile-Skills"
+    "name_de": "Mobile-Skills",
+    "name_en": "Mobile Skills"
   },
   {
     "id": "apple",
     "name": "iPhone وMac",
-    "name_de": "iPhone & Mac"
+    "name_de": "iPhone & Mac",
+    "name_en": "iPhone & Mac"
   },
   {
     "id": "vercel",
     "name": "Vercel والنشر",
-    "name_de": "Vercel & Deployment"
+    "name_de": "Vercel & Deployment",
+    "name_en": "Vercel & Deployment"
   },
   {
     "id": "general",
     "name": "مهارات عامة",
-    "name_de": "Allgemeine Skills"
+    "name_de": "Allgemeine Skills",
+    "name_en": "General Skills"
   },
   {
     "id": "docs",
     "name": "مهارات المستندات والإنتاجية",
-    "name_de": "Dokumente & Produktivität"
+    "name_de": "Dokumente & Produktivität",
+    "name_en": "Documents & Productivity"
   },
   {
     "id": "business",
     "name": "مهارات الأعمال والإدارة",
-    "name_de": "Business & Management"
+    "name_de": "Business & Management",
+    "name_en": "Business & Management"
   },
   {
     "id": "data",
     "name": "مهارات البيانات والبحث",
-    "name_de": "Daten & Recherche"
+    "name_de": "Daten & Recherche",
+    "name_en": "Data & Research"
   },
   {
     "id": "mcp",
     "name": "خوادم MCP",
-    "name_de": "MCP-Server"
+    "name_de": "MCP-Server",
+    "name_en": "MCP Servers"
   },
   {
     "id": "quality",
     "name": "فحص المواقع والجودة",
-    "name_de": "Website-Prüfung & Qualität"
+    "name_de": "Website-Prüfung & Qualität",
+    "name_en": "Website Checks & Quality"
   },
   {
     "id": "ui",
     "name": "مكونات الواجهات والأزرار",
-    "name_de": "UI-Komponenten & Buttons"
+    "name_de": "UI-Komponenten & Buttons",
+    "name_en": "UI Components & Buttons"
   },
   {
     "id": "icons",
     "name": "أيقونات",
-    "name_de": "Icons"
+    "name_de": "Icons",
+    "name_en": "Icons"
   },
   {
     "id": "finance",
     "name": "فواتير وضرائب ومحاسبة",
-    "name_de": "Rechnungen, Steuern & Buchhaltung"
+    "name_de": "Rechnungen, Steuern & Buchhaltung",
+    "name_en": "Invoices, Taxes & Accounting"
   },
   {
     "id": "infra",
     "name": "بنية وتشغيل",
-    "name_de": "Infrastruktur & Betrieb"
+    "name_de": "Infrastruktur & Betrieb",
+    "name_en": "Infrastructure & Operations"
   },
   {
     "id": "analytics",
     "name": "تحليلات الزوار",
-    "name_de": "Besucher-Analytics"
+    "name_de": "Besucher-Analytics",
+    "name_en": "Visitor Analytics"
   },
   {
     "id": "booking",
     "name": "مواعيد وأنظمة طبية",
-    "name_de": "Termine & Medizinsysteme"
+    "name_de": "Termine & Medizinsysteme",
+    "name_en": "Appointments & Medical Systems"
   },
   {
     "id": "writing",
     "name": "مواقع الكتابة والتدقيق",
-    "name_de": "Schreib- & Korrektur-Websites"
+    "name_de": "Schreib- & Korrektur-Websites",
+    "name_en": "Writing & Proofreading Sites"
   },
   {
     "id": "prompts",
     "name": "مواقع البرومبت",
-    "name_de": "Prompt-Websites"
+    "name_de": "Prompt-Websites",
+    "name_en": "Prompt Sites"
   }
 ]

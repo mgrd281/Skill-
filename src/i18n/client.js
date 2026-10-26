@@ -75,9 +75,49 @@ const de = {
   shareCopied: "Link kopiert",
 };
 
-export const LANG = document.documentElement.lang === "de" ? "de" : "ar";
-export const L = LANG === "de" ? de : ar;
+const en = {
+  catBtnAll: "Categories",
+  byNew: "Recently added first.",
+  byStars: "Ranked by GitHub stars.",
+  byCat: "Grouped by category.",
+  more: "({n} more)",
+  status: "Showing {n} of {total}",
+  hiddenN: "Hidden: {n}",
+  fProject: "Project: ",
+  fCat: "Category: ",
+  fNew: "New only",
+  fSkills: "Skills only",
+  fSearch: "Search: ",
+  fRemove: "Remove filter: ",
+  bellN: "Recently added tools: {n} new",
+  bell: "Recently added tools",
+  unread: "Unread",
+  favRemove: "Remove {name} from favorites",
+  favAdd: "Add {name} to favorites",
+  favRemoveTitle: "Remove from favorites",
+  favAddTitle: "Add to favorites",
+  favOn: "In favorites",
+  favOff: "Add to favorites",
+  favsN: "Favorites: {n}",
+  favs: "Favorites",
+  favCount: "Saved tools: {n}",
+  favConfirm: "Clear all favorites?",
+  copied: "Copied",
+  copy: "Copy",
+  copiedToast: "Install command copied",
+  copyManual: "Select the command and copy it manually",
+  less: "Less",
+  addedOn: "Added to the directory: ",
+  locale: "en-GB",
+  fbError: "Couldn't send right now. Please try again in a moment.",
+  shareCopied: "Link copied",
+};
+
+const DICT = { ar, de, en };
+// لغة الصفحة من <html lang>، والعربية إن لم تُعرف
+export const LANG = document.documentElement.lang in DICT ? document.documentElement.lang : "ar";
+export const L = DICT[LANG];
 // "{n} من {total}" => القيم من vars
 export const fmt = (s, vars = {}) => s.replace(/\{(\w+)\}/g, (_, k) => (k in vars ? String(vars[k]) : ""));
-// رابط الصفحة الرئيسية بلغة الصفحة الحالية
-export const homePath = (base) => base + (LANG === "de" ? "de/" : "");
+// رابط الصفحة الرئيسية بلغة الصفحة الحالية: العربية في الجذر وغيرها تحت /<اللغة>/
+export const homePath = (base) => base + (LANG === "ar" ? "" : LANG + "/");

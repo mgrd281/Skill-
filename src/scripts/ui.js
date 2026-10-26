@@ -75,6 +75,17 @@ document.addEventListener("click", (e) => {
   if (chip && !document.getElementById("list")) window.location.href = homePath(BASE) + "#" + chip.dataset.p;
 });
 
+// قائمة اللغة (<details> في الشريط العلوي): تُغلق بالنقر خارجها وبـ Escape، ويعود التركيز إلى زرها
+const langMenu = document.getElementById("langmenu");
+if (langMenu) {
+  document.addEventListener("click", (e) => {
+    if (langMenu.open && e.target instanceof Node && !langMenu.contains(e.target)) langMenu.open = false;
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && langMenu.open) { langMenu.open = false; langMenu.querySelector("summary").focus(); }
+  });
+}
+
 // ظل خفيف للشريط اللاصق حين يلتصق بأعلى الشاشة
 const bar = document.querySelector(".bar");
 if (bar && "IntersectionObserver" in window) {

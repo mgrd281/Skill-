@@ -56,7 +56,7 @@
   --font-mono: ui-monospace, "SF Mono", "IBM Plex Mono", SFMono-Regular, Menlo, Consolas, monospace;
   color-scheme: light;
 
-  /* اتجاه الصفحة: العربية من اليمين، والألمانية من اليسار (html[dir="ltr"]) */
+  /* اتجاه الصفحة: العربية من اليمين، والألمانية والإنجليزية من اليسار (html[dir="ltr"]) */
   --start: right;
   --end: left;
   --fwd: -1; /* اتجاه "التالي": سالب = لليسار */
@@ -163,8 +163,30 @@ kbd {
 /* زر اللغة: أيقونة على الجوال، وأيقونة مع اسم اللغة على الشاشات الأوسع */
 .bell.langsw { width: auto; min-width: 40px; padding-inline: 10px; gap: 6px; display: inline-flex; align-items: center; justify-content: center; font-size: .86rem; font-weight: 500; white-space: nowrap; }
 .bell.langsw .i { width: 19px; height: 19px; }
-.langsw .ls-t { display: none; }
-@media (min-width: 700px) { .langsw .ls-t { display: inline; } .bell.langsw { padding-inline: 12px 14px; } }
+.langsw .ls-t, .langsw .ls-chev { display: none; }
+@media (min-width: 700px) { .langsw .ls-t { display: inline; } .langsw .ls-chev { display: block; } .bell.langsw { padding-inline: 12px 10px; } }
+/* قائمة اللغات: <details> بلوحة صغيرة تحت الزر. الزر الحالي يعرض لغة الصفحة، والقائمة كل اللغات بأسمائها */
+.langmenu { position: relative; }
+.langmenu > summary { list-style: none; }
+.langmenu > summary::-webkit-details-marker { display: none; }
+/* الخصوصية أعلى من .bell .i (الذي يجعل مركز الدوران أعلى الأيقونة للجرس) */
+.bell.langsw .ls-chev { width: 12px; height: 12px; rotate: -90deg; transform-origin: 50% 50%; transition: rotate var(--dur) var(--ease); }
+.langmenu[open] > .bell.langsw .ls-chev { rotate: 90deg; }
+.langmenu[open] > .langsw { background: var(--fill); color: var(--ink); }
+.lang-list {
+  position: absolute; top: 50px; inset-inline-start: 0; z-index: 60; margin: 0; padding: 6px; list-style: none;
+  min-width: 168px; max-width: calc(100vw - 24px); display: grid; gap: 2px;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--r-md);
+  transform-origin: top var(--start); animation: drop-in var(--dur) var(--ease-out);
+}
+.lang-item {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 42px; padding: 8px 12px;
+  border-radius: 10px; color: var(--ink); text-decoration: none; font-size: .95rem; white-space: nowrap;
+  transition: background-color var(--dur) var(--ease);
+}
+a.lang-item:hover, a.lang-item:focus-visible { background: var(--fill-2); }
+.lang-item[aria-current] { font-weight: 600; cursor: default; }
+.lang-item .i { width: 16px; height: 16px; color: var(--accent); }
 .brand span { white-space: nowrap; }
 /* على الشاشات الضيقة جدًا: أزرار الشريط أصغر قليلًا حتى يتسع اسم الدليل */
 @media (max-width: 420px) {
@@ -265,7 +287,7 @@ kbd {
 .showcase {
   position: relative; height: clamp(250px, 22vw, 270px); margin: clamp(16px, 2.5vw, 28px) auto 0; max-width: 860px;
   animation: rise-in 1100ms var(--ease-out) 420ms both;
-  /* المواضع الثلاثة: الواجهة، والتالية في جهة القراءة (يسار العربية ويمين الألمانية)، والسابقة في الجهة الأخرى */
+  /* المواضع الثلاثة: الواجهة، والتالية في جهة القراءة (يسار العربية ويمين اللغتين اللاتينيتين)، والسابقة في الجهة الأخرى */
   --pos0: translate(-50%, -50%);
   --pos1: translate(-50%, -50%) translate(calc(var(--fwd) * 44%), -30%) rotate(calc(var(--fwd) * 4deg)) scale(.9);
   --pos2: translate(-50%, -50%) translate(calc(var(--fwd) * -44%), 28%) rotate(calc(var(--fwd) * -4deg)) scale(.88);
@@ -400,6 +422,11 @@ kbd {
 .chip.zero { opacity: .4; }
 .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
 .chip[aria-pressed="true"] .n { color: var(--bg); opacity: .7; }
+/* صفحة 404: رسالتا الألمانية والإنجليزية متجاورتان على الشاشات الواسعة */
+.nf-other { display: grid; gap: 40px; }
+@media (min-width: 900px) { .nf-other { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; } }
+.nf-lang { display: grid; gap: 20px; justify-items: start; align-content: start; }
+.nf-lang .sec-title { margin: 0; }
 .wrapchips { display: flex; flex-wrap: wrap; gap: 8px; }
 .wrapchips .chip { background: var(--card); border-radius: var(--r-full); }
 @media (max-width: 700px) {
@@ -996,13 +1023,13 @@ body.fb-open .totop { opacity: 0; pointer-events: none; }
   .fb-check circle, .fb-check path { stroke-dashoffset: 0; animation: none; }
 }
 
-/* ---------- الألمانية ---------- */
+/* ---------- الألمانية والإنجليزية ---------- */
 /* كلمات ألمانية طويلة: تقسيم المقاطع للنصوص في الأعمدة الضيقة على الجوال فقط، وليس للعناوين أو الفقرات الوسطية */
 @media (max-width: 600px) {
   html[lang="de"] :is(.desc, .advice p, .p-note, .specs dd, .foot-notes p) { hyphens: auto; -webkit-hyphens: auto; }
 }
-/* تتبع أحرف خفيف للعناوين اللاتينية الكبيرة كما في عناوين Apple (ممنوع على العربية) */
-html[lang="de"] :is(.hero h1, .page-hero h1, .p-hero h1, .sec-title, .stats dd) { letter-spacing: -0.015em; }
+/* تتبع أحرف خفيف للعناوين اللاتينية الكبيرة كما في عناوين Apple (ممنوع على العربية). الإنجليزية لا تحتاج تقسيم مقاطع كالألمانية */
+html:is([lang="de"], [lang="en"]) :is(.hero h1, .page-hero h1, .p-hero h1, .sec-title, .stats dd) { letter-spacing: -0.015em; }
 html[lang="de"] .hero h1 { max-width: 17ch; }
 
 @media (prefers-reduced-motion: reduce) {

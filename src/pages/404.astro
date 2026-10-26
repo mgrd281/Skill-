@@ -1,19 +1,25 @@
 ---
-// صفحة واحدة لكل رابط غير موجود في اللغتين، لذلك تعرض الرسالة بالعربية ثم بالألمانية.
+// صفحة واحدة لكل رابط غير موجود في اللغات الثلاث، لذلك تعرض الرسالة بالعربية ثم بالألمانية والإنجليزية.
 import Base from "../layouts/Base.astro";
 import { categories, rich } from "../lib/data";
 import { href } from "../i18n";
 ---
-<Base title="الصفحة غير موجودة · Seite nicht gefunden" description="الصفحة التي طلبتها غير موجودة. Die angeforderte Seite existiert nicht." path="/404" switchPath="/" noindex>
+<Base title="الصفحة غير موجودة · Seite nicht gefunden · Page not found" description="الصفحة التي طلبتها غير موجودة. Die angeforderte Seite existiert nicht. The page you requested doesn't exist." path="/404" switchPath="/" noindex>
   <header class="top page-hero">
     <h1>الصفحة غير موجودة</h1>
     <p class="lead">قد يكون الرابط قديمًا أو أُزيلت الأداة من الدليل. ابحث من الصفحة الرئيسية أو افتح أحد الأقسام.</p>
     <div class="cta"><a class="btn-primary" href={href("ar")}>العودة إلى كل الأدوات</a></div>
   </header>
-  <section class="band nf-other" lang="de" dir="ltr" aria-labelledby="nf-de">
-    <h2 class="sec-title" id="nf-de">Seite nicht gefunden. <span>Der Link ist veraltet oder das Tool wurde aus dem Verzeichnis entfernt.</span></h2>
-    <a class="btn-primary" href={href("de")}>Zu allen Tools</a>
-  </section>
+  <div class="band nf-other">
+    <section class="nf-lang" lang="de" dir="ltr" aria-labelledby="nf-de">
+      <h2 class="sec-title" id="nf-de">Seite nicht gefunden. <span>Der Link ist veraltet oder das Tool wurde aus dem Verzeichnis entfernt.</span></h2>
+      <a class="btn-primary" href={href("de")}>Zu allen Tools</a>
+    </section>
+    <section class="nf-lang" lang="en" dir="ltr" aria-labelledby="nf-en">
+      <h2 class="sec-title" id="nf-en">Page not found. <span>The link may be outdated, or the tool was removed from the directory.</span></h2>
+      <a class="btn-primary" href={href("en")}>Back to all tools</a>
+    </section>
+  </div>
   <section class="band alt" aria-labelledby="nf-h">
     <h2 class="sec-title" id="nf-h">الأقسام. <span>ابدأ من أحدها.</span></h2>
     <div class="chips wrapchips">

@@ -1,5 +1,5 @@
 // التحقق من رسالة التقييم قبل حفظها. منفصل عن الدالة حتى يُختبر محليًا (الملفات التي تبدأ بـ _ لا تصبح دوال على Vercel).
-const LANGS = ["ar", "de"];
+const LANGS = ["ar", "de", "en"];
 const MAX_MESSAGE = 1000;
 
 export function parseFeedback(body) {

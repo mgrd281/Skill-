@@ -31,7 +31,7 @@ import { type Lang, LANGS, DEFAULT_LANG, dirOf, LANG_NAME, OG_LOCALE, href, t as
 interface Props { title: string; description: string; path?: string; switchPath?: string; noindex?: boolean; lang?: Lang; image?: string; imageAlt?: string; jsonLd?: object[]; expect?: string }
 const { title, description, path = "/", switchPath = path, noindex = false, lang = DEFAULT_LANG, image = `og/home-${lang}.png`, imageAlt = title, jsonLd = [], expect } = Astro.props;
 const t = dict(lang);
-const other: Lang = lang === "ar" ? "de" : "ar";
+const others = LANGS.filter((l) => l !== lang);
 const abs = (l: Lang) => new URL(href(l, path), Astro.site).href;
 const canonical = abs(lang);
 const ogImage = new URL(href(DEFAULT_LANG, image), Astro.site).href;
@@ -42,10 +42,12 @@ const preloads = lang === "ar" ? [sansAr400, sansAr700, sansLat400] : [sansLat40
 const navExtra = await Astro.slots.render("nav-extra");
 const main = await Astro.slots.render("default");
 const footer = await Astro.slots.render("footer");
-for (const n of ["moon", "sun", "heart", "arrow-up", "translate", "star"] as const) useIcon(Astro.locals, n);
+for (const n of ["moon", "sun", "heart", "arrow-up", "translate", "star", "caret-left"] as const) useIcon(Astro.locals, n);
 // أيقونات نافذة الرأي (Feedback.astro) بأوزانها الخاصة
 useIcon(Astro.locals, "star", "fill");
 useIcon(Astro.locals, "x", "bold");
+// علامة اللغة الحالية في قائمة اللغات
+useIcon(Astro.locals, "check", "bold");
 ---
 <!doctype html>
 <html lang={lang} dir={dirOf(lang)}>
@@ -76,7 +78,7 @@ useIcon(Astro.locals, "x", "bold");
     {preloads.map((f) => <link rel="preload" href={f} as="font" type="font/woff2" crossorigin />)}
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={OG_LOCALE[lang]} />
-    <meta property="og:locale:alternate" content={OG_LOCALE[other]} />
+    {others.map((l) => <meta property="og:locale:alternate" content={OG_LOCALE[l]} />)}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
@@ -106,9 +108,24 @@ useIcon(Astro.locals, "x", "bold");
           <a href={href(lang, "favorites")}>{t.navFavs}</a>
         </nav>
         <div class="actions">
-          <a class="bell langsw" href={href(other, switchPath)} hreflang={other} aria-label={t.langSwitchAria} title={LANG_NAME[other]}>
-            <Icon name="translate" /><span class="ls-t" lang={other}>{LANG_NAME[other]}</span>
-          </a>
+          <!-- قائمة اللغة (تعمل بلا JavaScript؛ ui.js يضيف الإغلاق بالنقر خارجها وبـ Escape). روابط اللغات أيضًا في التذييل -->
+          <details class="langmenu" id="langmenu">
+            <summary class="bell langsw" title={t.langMenuAria}>
+              <Icon name="translate" />
+              <span class="sr">{t.langMenuAria}: <span lang={lang}>{LANG_NAME[lang]}</span></span>
+              <span class="ls-t" lang={lang} aria-hidden="true">{LANG_NAME[lang]}</span>
+              <Icon name="caret-left" class="ls-chev" />
+            </summary>
+            <ul class="lang-list">
+              {LANGS.map((l) => (
+                <li>
+                  {l === lang
+                    ? <span class="lang-item" aria-current="true" lang={l}>{LANG_NAME[l]}<Icon name="check" weight="bold" /></span>
+                    : <a class="lang-item" href={href(l, switchPath)} hreflang={l} lang={l}>{LANG_NAME[l]}</a>}
+                </li>
+              ))}
+            </ul>
+          </details>
           <Fragment set:html={navExtra} />
           <ThemeToggle lang={lang} />
           <HeartLink lang={lang} />
