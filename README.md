@@ -232,6 +232,13 @@ npm run build      # بناء الموقع في مجلد dist
 - **manifest** لكل لغة من `src/lib/manifest.ts` (`/manifest.webmanifest` و`/de/manifest.webmanifest` و`/en/manifest.webmanifest`): يقرؤه أندرويد وChrome عند "إضافة إلى الشاشة الرئيسية".
 - **لماذا ملفات حقيقية وليس رابط data-URI؟** Safari على iPhone وزاحف أيقونات Google لا يقرآن أيقونة مضمّنة في الصفحة، ويطلبان `/favicon.ico` و`apple-touch-icon`.
 
+## مواد التسويق والإطلاق
+
+- `npm run build` ثم `npm run marketing`: فيديو 9:16 وصور منشورات 1:1 و4:5 وغلاف 3:1 بالعربية والألمانية والإنجليزية في `marketing/` (خارج git)، من بيانات الدليل وهويته (`scripts/make-marketing.cjs`). لغة أو جزء واحد: `node scripts/make-marketing.cjs en video`.
+- فيديو قصير وصورة لأداة («أداة اليوم»): `node scripts/make-marketing.cjs tool context7 maccy [--lang ar]`، أو `tool --latest 5` لأحدث خمس أدوات. الناتج في `marketing/tools/`.
+- التعليق الصوتي: `marketing/audio/<اللغة>.mp3` ومعه `<اللغة>.json` بالعدد المنطوق (`{"count": 331}`). إن صار الدليل أكبر من العدد المسجّل يظهر العدد المنطوق مع «+» حتى تسجّل تعليقًا جديدًا، فلا يخالف الصوت الصورة.
+- نصوص Product Hunt وقوائم awesome والمنشورات في `docs/launch.md`.
+
 ## النشر على Vercel
 
 1. افتح `vercel.com/new` واستورد المستودع.
