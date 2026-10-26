@@ -1,0 +1,9 @@
+---
+import Category from "../../../views/Category.astro";
+import { categories } from "../../../lib/data";
+
+export function getStaticPaths() {
+  return categories.map((c) => ({ params: { id: c.id }, props: { cat: c } }));
+}
+---
+<Category cat={Astro.props.cat} lang="en" />

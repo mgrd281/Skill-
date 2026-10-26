@@ -1,11 +1,13 @@
 ---
 // صفحة واحدة لكل رابط غير موجود في اللغات الثلاث، لذلك تعرض الرسالة بالعربية ثم بالألمانية والإنجليزية.
 import Base from "../layouts/Base.astro";
+import Mascot from "../components/Mascot.astro";
 import { categories, rich } from "../lib/data";
 import { href } from "../i18n";
 ---
 <Base title="الصفحة غير موجودة · Seite nicht gefunden · Page not found" description="الصفحة التي طلبتها غير موجودة. Die angeforderte Seite existiert nicht. The page you requested doesn't exist." path="/404" switchPath="/" noindex>
   <header class="top page-hero">
+    <Mascot pose="lost" />
     <h1>الصفحة غير موجودة</h1>
     <p class="lead">قد يكون الرابط قديمًا أو أُزيلت الأداة من الدليل. ابحث من الصفحة الرئيسية أو افتح أحد الأقسام.</p>
     <div class="cta"><a class="btn-primary" href={href("ar")}>العودة إلى كل الأدوات</a></div>
@@ -23,7 +25,11 @@ import { href } from "../i18n";
   <section class="band alt" aria-labelledby="nf-h">
     <h2 class="sec-title" id="nf-h">الأقسام. <span>ابدأ من أحدها.</span></h2>
     <div class="chips wrapchips">
-      {categories.map((c) => <a class="chip" href={href("ar", "#cat-" + c.id)}><span set:html={rich(c.name)} /></a>)}
+      {categories.map((c) => <a class="chip" href={href("ar", "category/" + c.id)}><span set:html={rich(c.name)} /></a>)}
     </div>
   </section>
 </Base>
+
+<script>
+  import "../scripts/mascot.js";
+</script>

@@ -1,0 +1,71 @@
+---
+// صفحة قسم بلغة معينة (/category/<id>/): كل أدوات القسم مرتبة بالنجوم، وروابط الأقسام الأخرى.
+// تُبنى من src/pages/category/[id].astro ونظيريها في src/pages/de/ وsrc/pages/en/. فيها بيانات منظمة لمحركات البحث.
+import Base from "../layouts/Base.astro";
+import Card from "../components/Card.astro";
+import Icon from "../components/Icon.astro";
+import { type Category, tools, categories, catName, categoryIcon, txt } from "../lib/data";
+import { type Lang, href, fwdIcon, t as dict } from "../i18n";
+interface Props { cat: Category; lang: Lang }
+const { cat: c, lang } = Astro.props;
+const t = dict(lang);
+const name = catName(c.id, lang);
+const list = tools.filter((x) => x.cat === c.id).sort((a, b) => b.starsN - a.starsN || a.order - b.order);
+const others = categories.filter((o) => o.id !== c.id);
+const count = (id: string) => tools.filter((x) => x.cat === id).length;
+const desc = t.catDesc(list.length, name);
+const abs = (p: string) => new URL(href(lang, p), Astro.site).href;
+const jsonLd = [
+  {
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: t.navTools, item: abs("") },
+      { "@type": "ListItem", position: 2, name, item: abs("category/" + c.id) },
+    ],
+  },
+  {
+    "@context": "https://schema.org", "@type": "ItemList", name, numberOfItems: list.length,
+    itemListElement: list.map((x, i) => ({ "@type": "ListItem", position: i + 1, name: x.name, url: abs("tools/" + x.slug) })),
+  },
+];
+---
+<Base title={t.catTitle(name)} description={desc} path={`/category/${c.id}`} lang={lang} jsonLd={jsonLd}>
+  <header class="top page-hero cat-hero">
+    <nav class="p-crumb" aria-label={t.crumbAria}>
+      <a href={href(lang, "#list")}>{t.navTools}</a>
+      <Icon name={fwdIcon(lang)} />
+      <span set:html={txt(name, lang)} />
+    </nav>
+    <span class="cat-mark" aria-hidden="true"><Icon name={categoryIcon(c.id)} weight="duotone" /></span>
+    <h1 set:html={txt(name, lang)} />
+    <p class="lead" set:html={txt(desc, lang)} />
+  </header>
+
+  <main class="band alt">
+    <div class="grid">
+      {list.map((x, i) => <Card tool={x} lang={lang} rank={x.starsN >= 0 ? i + 1 : undefined} />)}
+    </div>
+  </main>
+
+  <section class="band" aria-labelledby="oc-h">
+    <h2 class="sec-title" id="oc-h" set:html={t.otherCats_h} />
+    <div class="wrapchips">
+      {others.map((o) => (
+        <a class="chip" href={href(lang, "category/" + o.id)}><Icon name={categoryIcon(o.id)} /><span class="cl" set:html={txt(catName(o.id, lang), lang)} /><span class="n">{count(o.id)}</span></a>
+      ))}
+    </div>
+  </section>
+
+  <Fragment slot="footer">
+    <p>{t.toolFoot}</p>
+  </Fragment>
+</Base>
+
+<script>
+  import { initCopy } from "../scripts/copy.js";
+  import { initFav } from "../scripts/fav.js";
+  import { initDates } from "../scripts/dates.js";
+  initCopy(document);
+  initFav();
+  initDates();
+</script>

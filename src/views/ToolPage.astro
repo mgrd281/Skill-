@@ -3,6 +3,7 @@
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
 import InstallTile from "../components/InstallTile.astro";
+import TrustPanel from "../components/TrustPanel.astro";
 import Icon from "../components/Icon.astro";
 import { type Tool, tools, projectById, txt, isLatin, formatDate, host, isAppStore, repoLabel, statusBadges, initials, kindIcon, kindLabel, categoryIcon, toolDesc, catName, projName } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
@@ -28,7 +29,7 @@ const jsonLd: object[] = [
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: t.navTools, item: abs("") },
-      { "@type": "ListItem", position: 2, name: cat, item: abs("#cat-" + x.cat) },
+      { "@type": "ListItem", position: 2, name: cat, item: abs("category/" + x.cat) },
       { "@type": "ListItem", position: 3, name: x.name, item: abs("tools/" + x.slug) },
     ],
   },
@@ -45,7 +46,7 @@ if (x.gh) jsonLd.push({
       <nav class="p-crumb" aria-label={t.crumbAria}>
         <a href={href(lang, "#list")}>{t.navTools}</a>
         <Icon name={fwd} />
-        <a href={href(lang, "#cat-" + x.cat)}><Icon name={categoryIcon(x.cat)} /><span set:html={txt(cat, lang)} /></a>
+        <a href={href(lang, "category/" + x.cat)}><Icon name={categoryIcon(x.cat)} /><span set:html={txt(cat, lang)} /></a>
       </nav>
       <span class="mono xl" id="tool-icon" aria-hidden="true">{initials(x.name)}</span>
       <h1>{x.name}</h1>
@@ -91,11 +92,13 @@ if (x.gh) jsonLd.push({
         </div>
       </div>
 
+      <TrustPanel tool={x} lang={lang} />
+
       <div class="specs">
         <h2 class="sec-title">{t.specsTitle}</h2>
         <dl>
           <div><dt>{t.specKind}</dt><dd class="ic"><Icon name={kindIcon(x.kind)} /><Fragment set:html={kindHtml} /></dd></div>
-          <div><dt>{t.specCat}</dt><dd class="ic"><Icon name={categoryIcon(x.cat)} /><span set:html={txt(cat, lang)} /></dd></div>
+          <div><dt>{t.specCat}</dt><dd class="ic"><Icon name={categoryIcon(x.cat)} /><a href={href(lang, "category/" + x.cat)} set:html={txt(cat, lang)} /></dd></div>
           {x.stars && <div><dt set:html={t.specStars_h} /><dd class="num">{x.stars}</dd></div>}
           {license && <div><dt>{t.specLicense}</dt><dd>{isLatin(license) ? <bdi>{license}</bdi> : license}</dd></div>}
           {x.gh && <div><dt>{t.specRepo}</dt><dd><a href={x.gh} target="_blank" rel="noopener noreferrer"><bdi>{repoLabel(x.gh)}</bdi></a></dd></div>}

@@ -1,0 +1,30 @@
+---
+// «الأمان والثقة» في صفحة الأداة: الناشر، وأين تعمل، ومن أين تُثبَّت، ونصيحة قبل التثبيت (src/lib/trust.ts).
+// التحذير وحده بلون (برتقالي)، والباقي بلون النص مثل بقية الصفحة.
+import Icon from "./Icon.astro";
+import { type Tool, txt, isLatin } from "../lib/data";
+import { trust } from "../lib/trust";
+import { type Lang, t as dict } from "../i18n";
+interface Props { tool: Tool; lang: Lang }
+const { tool, lang } = Astro.props;
+const t = dict(lang);
+const { rows, tip } = trust(tool, lang);
+// قيمة لاتينية كلها (اسم حزمة أو حساب) تُعزل من اليسار، وإلا انقلبت في العربية («@upstash/x» تصير «upstash/x@»)
+const value = (v: string) => (isLatin(v) ? `<bdi dir="ltr">${txt(v, "en")}</bdi>` : txt(v, lang));
+---
+<section class="trust" aria-labelledby="trust-h">
+  <h2 class="sec-title" id="trust-h" set:html={t.trustTitle_h} />
+  <ul class="trust-grid">
+    {rows.map((r) => (
+      <li class={`tr tr-${r.tone}`}>
+        <span class="tr-ic" aria-hidden="true"><Icon name={r.icon} weight="duotone" /></span>
+        <span class="tr-l">{r.label}</span>
+        {r.href
+          ? <a class="tr-v" href={r.href} target="_blank" rel="noopener noreferrer" set:html={value(r.value)} />
+          : <b class="tr-v" set:html={value(r.value)} />}
+        <span class="tr-n" set:html={txt(r.note, lang)} />
+      </li>
+    ))}
+  </ul>
+  <p class="trust-tip"><Icon name="shield-check" /><span set:html={txt(tip, lang)} /></p>
+</section>

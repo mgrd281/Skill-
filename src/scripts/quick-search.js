@@ -102,7 +102,7 @@ if (dlg && opener) {
     hits.slice(0, 7).forEach(([x]) => list.append(toolOption(x)));
     if (cats.length) {
       list.append(group(L.qsCats));
-      cats.forEach(([c]) => list.append(iconOption(HOME + "?cat=" + c.id + "#list", 0, c.n, fmt(L.qsCatSub, { n: ix.tools.filter((x) => x.c === c.id).length }))));
+      cats.forEach(([c]) => list.append(iconOption(HOME + "category/" + c.id, 0, c.n, fmt(L.qsCatSub, { n: ix.tools.filter((x) => x.c === c.id).length }))));
     }
     if (projs.length) {
       list.append(group(L.qsProjects));

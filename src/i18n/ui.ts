@@ -148,6 +148,10 @@ const ar = {
   noLicense: "بدون رخصة",
   otherLicense: "رخصة خاصة",
   relatedTitle_h: "قد يعجبك أيضًا. <span>أدوات من القسم نفسه.</span>",
+  trustTitle_h: "الأمان والثقة. <span>ما تعرفه قبل التثبيت.</span>",
+  catTitle: (name: string) => `${name} | دليل أدوات التصميم والتطوير`,
+  catDesc: (n: number, name: string) => `${n} أداة مختارة في قسم «${name}»، مرتبة حسب نجوم GitHub، مع أمر التثبيت لكل أداة.`,
+  otherCats_h: "أقسام أخرى. <span>تصفّح بقية الدليل.</span>",
   toolFoot: "المعلومات مأخوذة من صفحة المشروع الرسمية، وقد تتغير. تحقق من الرخصة وشروط الاستخدام قبل الاعتماد على أي أداة في عمل تجاري.",
 
   // المفضلة
@@ -344,6 +348,10 @@ const de: Dict = {
   noLicense: "Keine Lizenz",
   otherLicense: "Eigene Lizenz",
   relatedTitle_h: "Das könnte dir auch gefallen. <span>Tools aus derselben Kategorie.</span>",
+  trustTitle_h: "Sicherheit und Vertrauen. <span>Was du vor der Installation wissen solltest.</span>",
+  catTitle: (name: string) => `${name} | Tool-Verzeichnis`,
+  catDesc: (n: number, name: string) => `${n} ausgewählte Tools in der Kategorie „${name}“, nach GitHub-Sternen sortiert, mit dem Installationsbefehl für jedes Tool.`,
+  otherCats_h: "Weitere Kategorien. <span>Stöbere im restlichen Verzeichnis.</span>",
   toolFoot: "Die Angaben stammen von der offiziellen Projektseite und können sich ändern. Prüfe Lizenz und Nutzungsbedingungen, bevor du ein Tool kommerziell einsetzt.",
 
   favTitle: "Favoriten | Tool-Verzeichnis",
@@ -535,6 +543,10 @@ const en: Dict = {
   noLicense: "No license",
   otherLicense: "Custom license",
   relatedTitle_h: "You might also like. <span>More tools from the same category.</span>",
+  trustTitle_h: "Safety and trust. <span>What to know before you install.</span>",
+  catTitle: (name: string) => `${name} | Tool Directory`,
+  catDesc: (n: number, name: string) => `${n} hand-picked tools in “${name}”, ranked by GitHub stars, with the install command for every tool.`,
+  otherCats_h: "Other categories. <span>Browse the rest of the directory.</span>",
   toolFoot: "The information comes from the official project page and may change. Check the license and terms of use before relying on any tool commercially.",
 
   favTitle: "Favorites | Tool Directory",

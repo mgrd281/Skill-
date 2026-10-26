@@ -903,6 +903,29 @@ html:not(.js) .ctab-pan + .ctab-pan { margin-top: 20px; padding-top: 20px; borde
 .specs dd.num { direction: ltr; text-align: var(--start); }
 .specs .addedchip { color: inherit; }
 
+/* ---------- الأمان والثقة في صفحة الأداة (src/components/TrustPanel.astro) ---------- */
+.trust { margin-top: clamp(36px, 5vw, 56px); }
+.trust-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); }
+.tr {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto 1fr; column-gap: 14px; row-gap: 2px;
+  align-content: start; padding: 18px; border-radius: var(--r-lg); background: var(--card);
+}
+.tr-ic { grid-row: 1 / span 3; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; background: var(--bg-alt); color: var(--ink); }
+.tr-ic .i { width: 23px; height: 23px; }
+.tr-warn .tr-ic { background: var(--orange-soft); color: var(--orange); }
+.tr-l { font-size: .8rem; color: var(--muted); }
+.tr-v { font-weight: 700; color: var(--ink); text-decoration: none; overflow-wrap: anywhere; line-height: 1.45; }
+a.tr-v:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+.tr-warn .tr-v { color: var(--orange); }
+.tr-n { margin-top: 4px; font-size: .86rem; color: var(--ink-2); line-height: 1.6; }
+.trust-tip { display: flex; align-items: flex-start; gap: 10px; margin: 12px 0 0; padding: 14px 18px; border-radius: var(--r-lg); background: var(--card); color: var(--ink-2); font-size: .94rem; line-height: 1.7; }
+.trust-tip .i { flex: none; width: 20px; height: 20px; margin-top: 4px; color: var(--ink); }
+
+/* ---------- صفحة القسم (src/views/Category.astro) ---------- */
+.cat-hero .p-crumb { justify-content: center; }
+.cat-mark { width: 72px; height: 72px; display: grid; place-items: center; border-radius: 22px; background: var(--bg-alt); color: var(--ink); }
+.cat-mark .i { width: 38px; height: 38px; }
+
 /* ---------- المفضلة ---------- */
 .favtools { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 0 16px; }
 
@@ -974,7 +997,7 @@ html:not(.js) .ctab-pan + .ctab-pan { margin-top: 20px; padding-top: 20px; borde
 /* ظهور تدريجي أثناء التمرير، بلا JavaScript (المتصفحات التي لا تدعمه تعرض العناصر مباشرة) */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .card, .ptile, .latest-item, .p-tile, .specs dl {
+    .card, .ptile, .latest-item, .p-tile, .specs dl, .tr {
       animation: reveal linear both;
       animation-timeline: view();
       animation-range: entry 0% entry 45%;
@@ -982,8 +1005,8 @@ html:not(.js) .ctab-pan + .ctab-pan { margin-top: 20px; padding-top: 20px; borde
     /* عناوين الأقسام: الجملة الداكنة أولًا ثم تكملتها الرمادية. المدى بنسبة من ارتفاع الشاشة (cover)
        لا من ارتفاع العنوان، وإلا انتهت الحركة في بضع بكسلات من التمرير ولم تُرَ.
        فقط للأقسام التي يليها محتوى طويل: في صفحة قصيرة (مثل 404) لا يصعد العنوان بما يكفي فيبقى باهتًا. */
-    :is(.build, .latest, .list-head, .specs, .related) .sec-title { animation: reveal linear both; animation-timeline: view(); animation-range: cover 0% cover 20%; }
-    :is(.build, .latest, .list-head, .specs, .related) .sec-title > span { animation: fade-in linear both; animation-timeline: view(); animation-range: cover 4% cover 28%; }
+    :is(.build, .latest, .list-head, .specs, .related, .trust) .sec-title { animation: reveal linear both; animation-timeline: view(); animation-range: cover 0% cover 20%; }
+    :is(.build, .latest, .list-head, .specs, .related, .trust) .sec-title > span { animation: fade-in linear both; animation-timeline: view(); animation-range: cover 4% cover 28%; }
     /* بلاطات "ماذا تبني؟" تتتابع في الصف الواحد كموجة بجهة القراءة (--pi ترتيب البلاطة) */
     @media (min-width: 760px) {
       .ptile { animation-range: cover calc(mod(var(--pi, 0), 4) * 2.5%) cover calc(18% + mod(var(--pi, 0), 4) * 2.5%); }
@@ -1074,7 +1097,12 @@ html[dir="rtl"] .m-svg { scale: -1 1; }
   .mascot .m-spark { animation: twinkle 1s var(--ease-out) 1250ms backwards; }
   .mascot:hover .m-arm { animation: m-wave 900ms ease-in-out; }
   .mascot.hop .m-bob { animation: m-hop 560ms var(--ease-out); }
+  /* صفحة 404: لا مشي، بل تتلفت يمينًا ويسارًا مرة واحدة */
+  .mascot.lost .m-leg, .mascot.lost .m-bob { animation: none; }
+  .mascot.lost .m-pupils { animation: m-look 2.2s ease-in-out .5s; }
+  .mascot.lost.hop .m-bob { animation: m-hop 560ms var(--ease-out); }
 }
+@keyframes m-look { 20%, 38% { translate: -3.4px -1px; } 58%, 76% { translate: 3.4px -1px; } }
 @keyframes m-walk { from { translate: calc(var(--fwd) * -96px) 0; opacity: 0; } 25% { opacity: 1; } }
 @keyframes m-step { 25% { rotate: 16deg; } 75% { rotate: -16deg; } }
 @keyframes m-bob { 50% { translate: 0 -2.5px; } }
