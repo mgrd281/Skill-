@@ -1,0 +1,40 @@
+---
+// فهرس قوائم «الأفضل» (/best/): بلاطة لكل قائمة بعدد أدواتها وأعلى ثلاث فيها.
+import Base from "../layouts/Base.astro";
+import Icon from "../components/Icon.astro";
+import { txt } from "../lib/data";
+import { lists, listTitle, listTools } from "../lib/lists";
+import { type Lang, href, fwdIcon, t as dict } from "../i18n";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict(lang);
+const fwd = fwdIcon(lang);
+const abs = (p: string) => new URL(href(lang, p), Astro.site).href;
+const jsonLd = [{
+  "@context": "https://schema.org", "@type": "ItemList", name: t.bestIndexTitle, numberOfItems: lists.length,
+  itemListElement: lists.map((l, i) => ({ "@type": "ListItem", position: i + 1, name: listTitle(l, lang), url: abs("best/" + l.id) })),
+}];
+---
+<Base title={t.catTitle(t.bestIndexTitle)} description={t.bestIndexLead} path="/best" lang={lang} jsonLd={jsonLd}>
+  <header class="top page-hero">
+    <span class="cat-mark" aria-hidden="true"><Icon name="star" weight="duotone" /></span>
+    <h1>{t.bestIndexTitle}</h1>
+    <p class="lead" set:html={txt(t.bestIndexLead, lang)} />
+  </header>
+  <main class="band alt">
+    <div class="aplats">
+      {lists.map((l, i) => {
+        const items = listTools(l);
+        return (
+          <a class="aplat" href={href(lang, "best/" + l.id)} style={`--pi:${i}`}>
+            <span class="aplat-ic"><Icon name={l.icon as any} weight="duotone" /></span>
+            <b set:html={txt(listTitle(l, lang), lang)} />
+            <small>{t.nTools(items.length)}</small>
+            <span class="aplat-names"><bdi>{items.slice(0, 3).map((x, j) => <>{j > 0 && " · "}<span class="an">{x.name}</span></>)}</bdi></span>
+            <Icon name={fwd} class="aplat-go" />
+          </a>
+        );
+      })}
+    </div>
+  </main>
+</Base>

@@ -1,0 +1,10 @@
+---
+// قائمة «الأفضل» (src/views/BestList.astro)
+import BestList from "../../views/BestList.astro";
+import { lists } from "../../lib/lists";
+
+export function getStaticPaths() {
+  return lists.map((l) => ({ params: { id: l.id }, props: { list: l } }));
+}
+---
+<BestList list={Astro.props.list} lang="ar" />

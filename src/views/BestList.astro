@@ -1,0 +1,74 @@
+---
+// قائمة «الأفضل» بلغة معينة (/best/<id>/): أدوات من الدليل مرشّحة ومرتبة بالنجوم (src/lib/lists.ts)، مع شرح طريقة الترتيب
+// وبيانات منظمة (ItemList). تُبنى من src/pages/best/[id].astro ونظيريها في src/pages/de/ وsrc/pages/en/.
+import Base from "../layouts/Base.astro";
+import Card from "../components/Card.astro";
+import Icon from "../components/Icon.astro";
+import { starsUpdatedAt, formatDate, txt } from "../lib/data";
+import { type BestList, lists, listTitle, listLead, listTools } from "../lib/lists";
+import { type Lang, href, fwdIcon, t as dict } from "../i18n";
+interface Props { list: BestList; lang: Lang }
+const { list: l, lang } = Astro.props;
+const t = dict(lang);
+const year = starsUpdatedAt.slice(0, 4);
+const title = t.bestYear(listTitle(l, lang), year);
+const lead = listLead(l, lang);
+const items = listTools(l);
+const others = lists.filter((o) => o.id !== l.id);
+const abs = (p: string) => new URL(href(lang, p), Astro.site).href;
+const jsonLd = [
+  {
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: t.navTools, item: abs("") },
+      { "@type": "ListItem", position: 2, name: t.bestIndexTitle, item: abs("best/") },
+      { "@type": "ListItem", position: 3, name: listTitle(l, lang), item: abs("best/" + l.id) },
+    ],
+  },
+  {
+    "@context": "https://schema.org", "@type": "ItemList", name: title, numberOfItems: items.length, itemListOrder: "https://schema.org/ItemListOrderDescending",
+    itemListElement: items.map((x, i) => ({ "@type": "ListItem", position: i + 1, name: x.name, url: abs("tools/" + x.slug) })),
+  },
+];
+---
+<Base title={t.catTitle(title)} description={lead} path={`/best/${l.id}`} lang={lang} jsonLd={jsonLd}>
+  <header class="top page-hero cat-hero">
+    <nav class="p-crumb" aria-label={t.crumbAria}>
+      <a href={href(lang, "#list")}>{t.navTools}</a>
+      <Icon name={fwdIcon(lang)} />
+      <a href={href(lang, "best/")}>{t.bestIndexTitle}</a>
+    </nav>
+    <span class="cat-mark" aria-hidden="true"><Icon name={l.icon as any} weight="duotone" /></span>
+    <h1 set:html={txt(title, lang)} />
+    <p class="lead" set:html={txt(lead, lang)} />
+    <p class="best-how">{t.bestHow(formatDate(starsUpdatedAt, lang))}</p>
+  </header>
+
+  <main class="band alt">
+    <div class="grid">
+      {items.map((x, i) => <Card tool={x} lang={lang} rank={i + 1} />)}
+    </div>
+  </main>
+
+  <section class="band" aria-labelledby="ol-h">
+    <h2 class="sec-title" id="ol-h" set:html={t.bestOther_h} />
+    <div class="wrapchips">
+      {others.map((o) => (
+        <a class="chip" href={href(lang, "best/" + o.id)}><Icon name={o.icon as any} /><span class="cl" set:html={txt(listTitle(o, lang), lang)} /><span class="n">{listTools(o).length}</span></a>
+      ))}
+    </div>
+  </section>
+
+  <Fragment slot="footer">
+    <p>{t.toolFoot}</p>
+  </Fragment>
+</Base>
+
+<script>
+  import { initCopy } from "../scripts/copy.js";
+  import { initFav } from "../scripts/fav.js";
+  import { initDatesLater } from "../scripts/dates.js";
+  initCopy(document);
+  initFav();
+  initDatesLater();
+</script>

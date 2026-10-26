@@ -8,7 +8,7 @@ import Mascot from "../components/Mascot.astro";
 import CardIcons from "../components/CardIcons.astro";
 import Newsletter from "../components/Newsletter.astro";
 import Sponsor from "../components/Sponsor.astro";
-import { tools, byStars, rankOf, categories, appCats, projects, starsUpdatedAt, formatDate, recentTools, initials, kindIcon, kindLabel, categoryIcon, projectIcon, txt, catName, projName, projAdvice } from "../lib/data";
+import { tools, byStars, rankOf, categories, appCats, projects, starsUpdatedAt, formatDate, recentTools, initials, appIcon, kindIcon, kindLabel, categoryIcon, projectIcon, txt, catName, projName, projAdvice } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
 import { kitPlan } from "../lib/install.js";
 interface Props { lang: Lang }
@@ -211,7 +211,7 @@ const kinds: Array<[string, any, string]> = [
           <b class="li-name">{x.name}</b>
           <small class="li-cat" set:html={txt(catName(x.cat, lang), lang)} />
           <span class="li-foot">
-            <span class="mono sm" aria-hidden="true">{initials(x.name)}</span>
+            {appIcon(x.slug) ? <span class="mono sm has-img" aria-hidden="true"><img src={appIcon(x.slug)} alt="" width="38" height="38" loading="lazy" decoding="async" /></span> : <span class="mono sm" aria-hidden="true">{initials(x.name)}</span>}
             {x.stars && <span class="stars"><Icon name="star" weight="fill" />{x.stars}</span>}
           </span>
         </a>

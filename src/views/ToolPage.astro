@@ -7,7 +7,7 @@ import TrustPanel from "../components/TrustPanel.astro";
 import Inside from "../components/Inside.astro";
 import ReportDialog from "../components/ReportDialog.astro";
 import Icon from "../components/Icon.astro";
-import { type Tool, tools, projectById, txt, isLatin, formatDate, host, isAppStore, repoLabel, statusBadges, initials, kindIcon, kindLabel, categoryIcon, toolDesc, toolExample, catName, projName } from "../lib/data";
+import { type Tool, tools, projectById, txt, isLatin, formatDate, host, isAppStore, repoLabel, statusBadges, initials, appIcon, kindIcon, kindLabel, categoryIcon, toolDesc, toolExample, catName, projName } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
 interface Props { tool: Tool; lang: Lang }
 const { tool: x, lang } = Astro.props;
@@ -52,7 +52,7 @@ if (x.gh) jsonLd.push({
         <Icon name={fwd} />
         <a href={href(lang, "category/" + x.cat)}><Icon name={categoryIcon(x.cat)} /><span set:html={txt(cat, lang)} /></a>
       </nav>
-      <span class="mono xl" id="tool-icon" aria-hidden="true">{initials(x.name)}</span>
+      {appIcon(x.slug) ? <span class="mono xl has-img" id="tool-icon" aria-hidden="true"><img src={appIcon(x.slug)} alt="" width="96" height="96" /></span> : <span class="mono xl" id="tool-icon" aria-hidden="true">{initials(x.name)}</span>}
       <h1>{x.name}</h1>
       <div class="p-badges">
         <span class="kind"><Icon name={kindIcon(x.kind)} /><Fragment set:html={kindHtml} /></span>

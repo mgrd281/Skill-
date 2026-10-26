@@ -6364,7 +6364,8 @@
     "pushed": "2026-10-23",
     "added": "2026-10-26T13:30:00Z",
     "license": "GPL-3.0",
-    "archived": false
+    "archived": false,
+    "icon": false
   },
   {
     "slug": "ice",

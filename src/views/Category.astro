@@ -6,6 +6,7 @@ import Card from "../components/Card.astro";
 import Icon from "../components/Icon.astro";
 import { type Category, tools, categories, catName, categoryIcon, isAppCat, txt } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
+import { listsForCat, listTitle } from "../lib/lists";
 interface Props { cat: Category; lang: Lang }
 const { cat: c, lang } = Astro.props;
 const t = dict(lang);
@@ -40,6 +41,9 @@ const jsonLd = [
     <span class="cat-mark" aria-hidden="true"><Icon name={categoryIcon(c.id)} weight="duotone" /></span>
     <h1 set:html={txt(name, lang)} />
     <p class="lead" set:html={txt(desc, lang)} />
+    {listsForCat(c.id).map((l) => (
+      <a class="best-link" href={href(lang, "best/" + l.id)}><Icon name="star" weight="fill" /><span set:html={txt(listTitle(l, lang), lang)} /><Icon name={fwdIcon(lang)} /></a>
+    ))}
   </header>
 
   <main class="band alt">

@@ -11,10 +11,6 @@
     "file": "app-icons/aerospace.png",
     "src": "https://raw.githubusercontent.com/nikitabobko/AeroSpace/main/resources/Assets.xcassets/AppIcon.appiconset/icon.png"
   },
-  "alttab": {
-    "file": "app-icons/alttab.png",
-    "src": "https://raw.githubusercontent.com/lwouis/alt-tab-macos/master/resources/svg-illustrations/settings-app-icons-show-running-applications-windows.svg"
-  },
   "antennapod": {
     "file": "app-icons/antennapod.png",
     "src": "https://raw.githubusercontent.com/AntennaPod/AntennaPod/develop/ui/common/src/main/res/mipmap-xxxhdpi/ic_launcher.png"

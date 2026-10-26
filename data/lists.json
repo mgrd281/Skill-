@@ -1,0 +1,164 @@
+[
+  {
+    "id": "mcp-servers",
+    "icon": "plug",
+    "kinds": [
+      "MCP"
+    ],
+    "limit": 30,
+    "title": "أفضل خوادم MCP",
+    "title_de": "Die besten MCP-Server",
+    "title_en": "Best MCP servers",
+    "lead": "خوادم MCP تمنح Claude وغيره من المساعدات أدوات حقيقية: GitHub وقواعد البيانات والبحث والتصميم وغيرها. مرتبة بنجوم GitHub، ولكل خادم أمر التثبيت وزر إضافته إلى Cursor وVS Code.",
+    "lead_de": "MCP-Server geben Claude und anderen Assistenten echte Werkzeuge: GitHub, Datenbanken, Suche, Design und mehr. Sortiert nach GitHub-Sternen, jeweils mit Installationsbefehl und Ein-Klick-Einrichtung für Cursor und VS Code.",
+    "lead_en": "MCP servers give Claude and other assistants real tools: GitHub, databases, search, design and more. Sorted by GitHub stars, each with its install command and one-click setup for Cursor and VS Code."
+  },
+  {
+    "id": "claude-skills",
+    "icon": "sparkle",
+    "kinds": [
+      "Skill"
+    ],
+    "limit": 30,
+    "title": "أفضل مهارات Claude",
+    "title_de": "Die besten Claude Skills",
+    "title_en": "Best Claude Skills",
+    "lead": "مهارات (Skills) تعلّم Claude طريقة عمل محددة: التصميم والبرمجة والتسويق والمستندات. مرتبة بنجوم GitHub، وتثبّت كل مهارة بأمر واحد.",
+    "lead_de": "Skills bringen Claude eine bestimmte Arbeitsweise bei: Design, Entwicklung, Marketing und Dokumente. Sortiert nach GitHub-Sternen, jeder Skill mit einem Befehl installiert.",
+    "lead_en": "Skills teach Claude a specific way of working: design, development, marketing and documents. Sorted by GitHub stars, each installed with one command."
+  },
+  {
+    "id": "design-skills",
+    "icon": "pen-nib",
+    "cats": [
+      "design",
+      "brandskills"
+    ],
+    "kinds": [
+      "Skill",
+      "MCP"
+    ],
+    "limit": 20,
+    "title": "أفضل مهارات Claude للتصميم",
+    "title_de": "Die besten Claude Skills für Design",
+    "title_en": "Best Claude skills for design",
+    "lead": "مهارات وخوادم تجعل Claude يصمم واجهات أجمل ويحافظ على هويتك البصرية: من مراجعة التصميم إلى قراءة ملفات Figma. مرتبة بنجوم GitHub.",
+    "lead_de": "Skills und Server, mit denen Claude schönere Oberflächen gestaltet und deine Markenidentität einhält: von Design-Reviews bis zum Lesen von Figma-Dateien. Sortiert nach GitHub-Sternen.",
+    "lead_en": "Skills and servers that help Claude design better interfaces and stick to your brand: from design reviews to reading Figma files. Sorted by GitHub stars."
+  },
+  {
+    "id": "animation-libraries",
+    "icon": "magic-wand",
+    "cats": [
+      "animation"
+    ],
+    "kinds": [
+      "مكتبة"
+    ],
+    "limit": 20,
+    "title": "أفضل مكتبات الأنيميشن للمواقع والتطبيقات",
+    "title_de": "Die besten Animationsbibliotheken für Websites und Apps",
+    "title_en": "Best animation libraries for websites and apps",
+    "lead": "مكتبات تضيف حركة سلسة إلى موقعك أو تطبيقك: انتقالات، وتمرير ناعم، ورسوم ثلاثية الأبعاد. مرتبة بنجوم GitHub مع أمر التثبيت.",
+    "lead_de": "Bibliotheken für flüssige Bewegung auf deiner Website oder in deiner App: Übergänge, sanftes Scrollen und 3D-Grafik. Sortiert nach GitHub-Sternen, mit Installationsbefehl.",
+    "lead_en": "Libraries that add smooth motion to your website or app: transitions, smooth scrolling and 3D graphics. Sorted by GitHub stars, with install commands."
+  },
+  {
+    "id": "ui-libraries",
+    "icon": "layout",
+    "cats": [
+      "ui"
+    ],
+    "limit": 20,
+    "title": "أفضل مكتبات مكونات الواجهات",
+    "title_de": "Die besten UI-Komponentenbibliotheken",
+    "title_en": "Best UI component libraries",
+    "lead": "مكونات جاهزة للأزرار والنوافذ والقوائم والإشعارات، تبني بها واجهة كاملة بسرعة. مرتبة بنجوم GitHub.",
+    "lead_de": "Fertige Komponenten für Buttons, Dialoge, Menüs und Benachrichtigungen, mit denen du schnell eine ganze Oberfläche baust. Sortiert nach GitHub-Sternen.",
+    "lead_en": "Ready-made components for buttons, dialogs, menus and notifications to build a whole interface fast. Sorted by GitHub stars."
+  },
+  {
+    "id": "video-tools",
+    "icon": "video-camera",
+    "cats": [
+      "motiongfx"
+    ],
+    "limit": 20,
+    "title": "أفضل أدوات الفيديو والموشن غرافيك مع Claude",
+    "title_de": "Die besten Video- und Motion-Graphics-Tools mit Claude",
+    "title_en": "Best video and motion graphics tools with Claude",
+    "lead": "أدوات ومهارات تصنع بها الفيديو والرسوم المتحركة بالكود أو بمساعدة Claude: Remotion وBlender وAfter Effects وغيرها. مرتبة بنجوم GitHub.",
+    "lead_de": "Tools und Skills, mit denen du Videos und Animationen per Code oder mit Claude erstellst: Remotion, Blender, After Effects und mehr. Sortiert nach GitHub-Sternen.",
+    "lead_en": "Tools and skills for making videos and animations with code or with Claude: Remotion, Blender, After Effects and more. Sorted by GitHub stars."
+  },
+  {
+    "id": "mac-apps",
+    "icon": "laptop",
+    "cats": [
+      "macapps"
+    ],
+    "limit": 20,
+    "title": "أفضل تطبيقات Mac من GitHub",
+    "title_de": "Die besten Mac-Apps von GitHub",
+    "title_en": "Best Mac apps on GitHub",
+    "lead": "تطبيقات مصدرها على GitHub تحسّن استخدامك اليومي لـ Mac: الحافظة، وترتيب النوافذ، وشريط القوائم، والأمان. مرتبة بنجوم GitHub مع أمر Homebrew، ورخصة كل تطبيق في صفحته.",
+    "lead_de": "Apps mit Quellcode auf GitHub, die deinen Mac-Alltag verbessern: Zwischenablage, Fensterverwaltung, Menüleiste und Sicherheit. Sortiert nach GitHub-Sternen, mit Homebrew-Befehl; die Lizenz steht auf der Seite jeder App.",
+    "lead_en": "Apps with their source on GitHub that improve everyday Mac use: clipboard, window management, the menu bar and security. Sorted by GitHub stars, with Homebrew commands; each app's license is on its page."
+  },
+  {
+    "id": "windows-apps",
+    "icon": "windows-logo",
+    "cats": [
+      "winapps"
+    ],
+    "limit": 20,
+    "title": "أفضل تطبيقات Windows من GitHub",
+    "title_de": "Die besten Windows-Apps von GitHub",
+    "title_en": "Best Windows apps on GitHub",
+    "lead": "تطبيقات مصدرها على GitHub لـ Windows: أدوات Microsoft الإضافية، والتقاط الشاشة، والملفات، والطرفية. مرتبة بنجوم GitHub مع أمر winget، ورخصة كل تطبيق في صفحته.",
+    "lead_de": "Windows-Apps mit Quellcode auf GitHub: Microsofts Zusatztools, Bildschirmfotos, Dateien und Terminal. Sortiert nach GitHub-Sternen, mit winget-Befehl; die Lizenz steht auf der Seite jeder App.",
+    "lead_en": "Windows apps with their source on GitHub: Microsoft's extra tools, screenshots, files and the terminal. Sorted by GitHub stars, with winget commands; each app's license is on its page."
+  },
+  {
+    "id": "iphone-apps",
+    "icon": "device-mobile-camera",
+    "cats": [
+      "iosapps"
+    ],
+    "limit": 20,
+    "title": "أفضل تطبيقات iPhone مفتوحة المصدر",
+    "title_de": "Die besten Open-Source-Apps fürs iPhone",
+    "title_en": "Best open-source iPhone apps",
+    "lead": "تطبيقات iPhone وiPad مفتوحة المصدر تجدها في App Store: الأخبار والبودكاست والتصفح والطرفية. مرتبة بنجوم GitHub.",
+    "lead_de": "Open-Source-Apps für iPhone und iPad aus dem App Store: News, Podcasts, Browser und Terminal. Sortiert nach GitHub-Sternen.",
+    "lead_en": "Open-source iPhone and iPad apps from the App Store: news, podcasts, browsing and a terminal. Sorted by GitHub stars."
+  },
+  {
+    "id": "android-apps",
+    "icon": "android-logo",
+    "cats": [
+      "androidapps"
+    ],
+    "limit": 20,
+    "title": "أفضل تطبيقات Android مفتوحة المصدر",
+    "title_de": "Die besten Open-Source-Apps für Android",
+    "title_en": "Best open-source Android apps",
+    "lead": "تطبيقات Android مفتوحة المصدر تحترم خصوصيتك: الفيديو والبريد والبودكاست وكلمات المرور والطرفية. مرتبة بنجوم GitHub.",
+    "lead_de": "Open-Source-Apps für Android, die deine Privatsphäre respektieren: Video, E-Mail, Podcasts, Passwörter und Terminal. Sortiert nach GitHub-Sternen.",
+    "lead_en": "Open-source Android apps that respect your privacy: video, email, podcasts, passwords and a terminal. Sorted by GitHub stars."
+  },
+  {
+    "id": "linux-apps",
+    "icon": "linux-logo",
+    "cats": [
+      "linuxapps"
+    ],
+    "limit": 20,
+    "title": "أفضل تطبيقات Linux من Flathub",
+    "title_de": "Die besten Linux-Apps von Flathub",
+    "title_en": "Best Linux apps from Flathub",
+    "lead": "تطبيقات Linux مفتوحة المصدر تثبّتها بأمر Flatpak واحد: الصلاحيات، والنظام، والصوت، والمهام. مرتبة بنجوم GitHub.",
+    "lead_de": "Open-Source-Apps für Linux, mit einem Flatpak-Befehl installiert: Berechtigungen, System, Audio und Aufgaben. Sortiert nach GitHub-Sternen.",
+    "lead_en": "Open-source Linux apps you install with one Flatpak command: permissions, system, audio and tasks. Sorted by GitHub stars."
+  }
+]

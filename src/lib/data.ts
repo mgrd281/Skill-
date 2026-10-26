@@ -2,6 +2,7 @@ import toolsJson from "../../data/tools.json";
 import categoriesJson from "../../data/categories.json";
 import projectsJson from "../../data/projects.json";
 import meta from "../../data/meta.json";
+import appIconsJson from "../../data/app-icons.json";
 import examplesJson from "../../data/examples.json";
 import type { IconName } from "./icons";
 import type { Lang } from "../i18n";
@@ -64,6 +65,10 @@ export const sponsor: Sponsor | null = (meta as any).sponsor ?? null;
 // في data/meta.json: "newsletter": { "provider": "Brevo", "action": "رابط نموذج الاشتراك عند المزوّد", "field": "EMAIL",
 // "hidden": { "locale": "{lang}" } }. hidden حقول مخفية يطلبها المزوّد، و{lang} فيها تصير لغة الصفحة (ar أو de أو en).
 export const newsletter: { provider: string; action: string; field?: string; hidden?: Record<string, string> } | null = (meta as any).newsletter?.action ? (meta as any).newsletter : null;
+
+// أيقونة التطبيق الحقيقية (scripts/fetch-app-icons.mjs، ملف محلي في public/app-icons/)، أو null فتظهر الحروف الأولى
+const appIcons = appIconsJson as Record<string, { file: string; src: string }>;
+export const appIcon = (slug: string): string | null => (appIcons[slug] ? "/" + appIcons[slug].file : null);
 
 export function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");

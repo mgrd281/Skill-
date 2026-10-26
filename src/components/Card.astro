@@ -1,6 +1,6 @@
 ---
 import Icon from "./Icon.astro";
-import { type Tool, projectById, txt, isLatin, repoLabel, host, isAppStore, statusBadges, formatDate, initials, kindIcon, kindLabel, toolDesc, projName } from "../lib/data";
+import { type Tool, projectById, txt, isLatin, repoLabel, host, isAppStore, statusBadges, formatDate, initials, appIcon, kindIcon, kindLabel, toolDesc, projName } from "../lib/data";
 import { type Lang, DEFAULT_LANG, href, fwdIcon, t as dict } from "../i18n";
 interface Props { tool: Tool; linkName?: boolean; hideBtn?: boolean; favBtn?: boolean; rank?: number; lang?: Lang }
 const { tool: t, linkName = true, hideBtn = false, favBtn = true, rank, lang = DEFAULT_LANG } = Astro.props;
@@ -27,7 +27,7 @@ const site = t.site && (isAppStore(t.site) ? "App Store" : s.officialSite);
   data-added={t.added}
 >
   <div class="c-head">
-    <span class="mono" aria-hidden="true">{initials(t.name)}</span>
+    {appIcon(t.slug) ? <span class="mono has-img" aria-hidden="true"><img src={appIcon(t.slug)} alt="" width="48" height="48" loading="lazy" decoding="async" /></span> : <span class="mono" aria-hidden="true">{initials(t.name)}</span>}
     <div class="c-id">
       <div class="c-title">
         <span class="rank" hidden={!rank} data-top={rank && rank <= 3 ? String(rank) : ""}>{rank ? "#" + rank : ""}</span>
