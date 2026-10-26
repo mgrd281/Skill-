@@ -1323,40 +1323,37 @@ html:is([lang="de"], [lang="en"]) .foot-mark::before { letter-spacing: -0.04em; 
 @keyframes beat { 0%, 45%, 100% { scale: 1; } 15% { scale: 1.18; } 30% { scale: .94; } }
 
 /* ---------- الشخصية (src/components/Mascot.astro وsrc/scripts/mascot.js) ---------- */
-/* عند فتح الصفحة: تظهر الدائرة بقفزة صغيرة، وتلمع نجمة الهوائي، ويلوّح الروبوت مرتين، وتنزلق أدوات البطاقة واحدة بعد أخرى،
-   ثم يرمش. لا حركة متكررة: بعد ذلك تتحرك فقط استجابةً للزائر (العينان تتابعان المؤشر، والنجمة تدور واليد تلوّح عند المرور،
-   ويقفز عند اللمس). */
-.mascot { width: clamp(144px, 36vw, 196px); margin-bottom: -6px; --px: 0px; --py: 0px; -webkit-tap-highlight-color: transparent; }
+/* تمشي إلى مكانها بجهة القراءة (ثلاث خطوات والجسم يهتز معها)، ثم تقف وترمش وتلمع نجمتها. لا حركة متكررة:
+   بعد ذلك تتحرك فقط استجابةً للزائر (العينان تتابعان المؤشر، والنجمة تدور واليد تلوّح عند المرور، وتقفز عند اللمس). */
+.mascot { width: clamp(136px, 34vw, 184px); margin-bottom: -4px; --px: 1.5px; --py: 0px; -webkit-tap-highlight-color: transparent; }
 .m-svg { display: block; width: 100%; height: auto; overflow: visible; }
 html[dir="rtl"] .m-svg { scale: -1 1; }
-/* محاور الدوران بإحداثيات الرسم (viewBox 160): الكتف لليد الملوّحة، ومنتصف الشاشة للرمش */
-.m-arm { transform-box: view-box; transform-origin: 56px 112px; }
-.m-eyes { transform-box: view-box; transform-origin: 80px 65px; }
+.m-leg { transform-box: fill-box; transform-origin: 50% 6%; }
+.m-eyes { transform-box: fill-box; transform-origin: 50% 50%; }
 .m-pupils { translate: var(--px) var(--py); transition: translate 200ms var(--ease-out); }
+.m-arm { transform-box: fill-box; transform-origin: 12% 80%; }
 .m-spark { transform-box: fill-box; transform-origin: center; transition: transform var(--dur-slow) var(--spring); }
 .mascot:hover .m-spark { transform: rotate(90deg) scale(1.15); }
 @media (prefers-reduced-motion: no-preference) {
-  .hero-text > .mascot { animation: m-in 700ms var(--spring) 100ms both; transform-origin: 50% 85%; }
-  .mascot .m-spark { animation: twinkle 1s var(--ease-out) 450ms backwards; }
-  .mascot .m-arm { animation: m-wave 1100ms ease-in-out 650ms; }
-  .mascot .m-row { animation: m-row 420ms var(--ease-out) backwards; }
-  .mascot .m-row:nth-child(1) { animation-delay: 700ms; }
-  .mascot .m-row:nth-child(2) { animation-delay: 820ms; }
-  .mascot .m-row:nth-child(3) { animation-delay: 940ms; }
-  .mascot .m-eyes { animation: m-blink 260ms ease-in-out 1900ms; }
-  .mascot:hover .m-arm { animation: m-wave-h 1100ms ease-in-out; }
+  .hero-text > .mascot { animation: m-walk 1500ms cubic-bezier(.3, .55, .45, 1) 150ms both; }
+  .mascot .m-leg { animation: m-step 500ms ease-in-out 150ms 3; }
+  .mascot .m-leg-b { animation-direction: reverse; }
+  .mascot .m-bob { animation: m-bob 250ms ease-in-out 150ms 6; }
+  .mascot .m-eyes { animation: m-blink 260ms ease-in-out 1750ms; }
+  .mascot .m-spark { animation: twinkle 1s var(--ease-out) 1250ms backwards; }
+  .mascot:hover .m-arm { animation: m-wave 900ms ease-in-out; }
   .mascot.hop .m-bob { animation: m-hop 560ms var(--ease-out); }
-  /* صفحة 404: لا تلويح، بل يتلفت يمينًا ويسارًا مرة واحدة */
-  .mascot.lost .m-arm, .mascot.lost:hover .m-arm, .mascot.lost .m-row { animation: none; }
-  .mascot.lost .m-pupils { animation: m-look 2.2s ease-in-out .6s; }
+  /* صفحة 404: لا مشي، بل تتلفت يمينًا ويسارًا مرة واحدة */
+  .mascot.lost .m-leg, .mascot.lost .m-bob { animation: none; }
+  .mascot.lost .m-pupils { animation: m-look 2.2s ease-in-out .5s; }
+  .mascot.lost.hop .m-bob { animation: m-hop 560ms var(--ease-out); }
 }
-@keyframes m-in { from { opacity: 0; scale: .7; translate: 0 14px; } 60% { opacity: 1; } }
-@keyframes m-look { 20%, 38% { translate: -5px -1px; } 58%, 76% { translate: 5px -1px; } }
-@keyframes m-row { from { opacity: 0; translate: -10px 0; } }
+@keyframes m-look { 20%, 38% { translate: -3.4px -1px; } 58%, 76% { translate: 3.4px -1px; } }
+@keyframes m-walk { from { translate: calc(var(--fwd) * -96px) 0; opacity: 0; } 25% { opacity: 1; } }
+@keyframes m-step { 25% { rotate: 16deg; } 75% { rotate: -16deg; } }
+@keyframes m-bob { 50% { translate: 0 -2.5px; } }
 @keyframes m-blink { 50% { scale: 1 .08; } }
-/* التلويح: مرتان من الكتف. نسخة المرور باسم آخر حتى تبدأ من جديد بعد حركة الدخول */
-@keyframes m-wave { 20%, 60% { rotate: -13deg; } 40%, 80% { rotate: 9deg; } }
-@keyframes m-wave-h { 20%, 60% { rotate: -13deg; } 40%, 80% { rotate: 9deg; } }
+@keyframes m-wave { 25%, 65% { rotate: -38deg; } 45%, 85% { rotate: -14deg; } }
 @keyframes m-hop { 35% { translate: 0 -14px; } 70% { translate: 0 0; } 85% { translate: 0 -3px; } }
 
 /* ---------- الانتقال بين الصفحات (View Transitions) ---------- */
