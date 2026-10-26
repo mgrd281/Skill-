@@ -446,6 +446,84 @@
    }
   ]
  },
+ "anthropic-finance-plugin": {
+  "n": 8,
+  "skills": [
+   {
+    "name": "audit-support",
+    "desc": "Support SOX 404 compliance with control testing methodology, sample selection, and documentation standards. Use when generating testing workpapers, selecting audit samples, classifying control deficiencies, or preparing…"
+   },
+   {
+    "name": "close-management",
+    "desc": "Manage the month-end close process with task sequencing, dependencies, and status tracking. Use when planning the close calendar, tracking close progress, identifying blockers, or sequencing close activities by day."
+   },
+   {
+    "name": "financial-statements",
+    "desc": "Generate financial statements (income statement, balance sheet, cash flow) with period-over-period comparison and variance analysis. Use when preparing a monthly or quarterly P&L, closing the books and need to flag…"
+   },
+   {
+    "name": "journal-entry",
+    "desc": "Prepare journal entries with proper debits, credits, and supporting detail. Use when booking month-end accruals (AP, payroll, prepaid), recording depreciation or amortization, posting revenue recognition or deferred…"
+   },
+   {
+    "name": "journal-entry-prep",
+    "desc": "Prepare journal entries with proper debits, credits, and supporting documentation for month-end close. Use when booking accruals, prepaid amortization, fixed asset depreciation, payroll entries, revenue recognition, or…"
+   },
+   {
+    "name": "reconciliation",
+    "desc": "Reconcile accounts by comparing GL balances to subledgers, bank statements, or third-party data. Use when performing bank reconciliations, GL-to-subledger recs, intercompany reconciliations, or identifying and…"
+   },
+   {
+    "name": "sox-testing",
+    "desc": "Generate SOX sample selections, testing workpapers, and control assessments. Use when planning quarterly or annual SOX 404 testing, pulling a sample for a control (revenue, P2P, ITGC, close), building a testing…"
+   },
+   {
+    "name": "variance-analysis",
+    "desc": "Decompose financial variances into drivers with narrative explanations and waterfall analysis. Use when analyzing budget vs. actual, period-over-period changes, revenue or expense variances, or preparing variance…"
+   }
+  ]
+ },
+ "anthropic-human-resources-plugin": {
+  "n": 9,
+  "skills": [
+   {
+    "name": "comp-analysis",
+    "desc": "Analyze compensation — benchmarking, band placement, and equity modeling. Trigger with \"what should we pay a [role]\", \"is this offer competitive\", \"model this equity grant\", or when uploading comp data to find outliers…"
+   },
+   {
+    "name": "draft-offer",
+    "desc": "Draft an offer letter with comp details and terms. Use when a candidate is ready for an offer, assembling a total comp package (base, equity, signing bonus), writing the offer letter text itself, or prepping negotiation…"
+   },
+   {
+    "name": "interview-prep",
+    "desc": "Create structured interview plans with competency-based questions and scorecards. Trigger with \"interview plan for\", \"interview questions for\", \"how should we interview\", \"scorecard for\", or when the user is preparing…"
+   },
+   {
+    "name": "onboarding",
+    "desc": "Generate an onboarding checklist and first-week plan for a new hire. Use when someone has a start date coming up, building the pre-start task list (accounts, equipment, buddy), scheduling Day 1 and Week 1, or setting…"
+   },
+   {
+    "name": "org-planning",
+    "desc": "Headcount planning, org design, and team structure optimization. Trigger with \"org planning\", \"headcount plan\", \"team structure\", \"reorg\", \"who should we hire next\", or when the user is thinking about team size,…"
+   },
+   {
+    "name": "people-report",
+    "desc": "Generate headcount, attrition, diversity, or org health reports. Use when pulling a headcount snapshot for leadership, analyzing turnover trends by team, preparing diversity representation metrics, or assessing span of…"
+   },
+   {
+    "name": "performance-review",
+    "desc": "Structure a performance review with self-assessment, manager template, and calibration prep. Use when review season kicks off and you need a self-assessment template, writing a manager review for a direct report,…"
+   },
+   {
+    "name": "policy-lookup",
+    "desc": "Find and explain company policies in plain language. Trigger with \"what's our PTO policy\", \"can I work remotely from another country\", \"how do expenses work\", or any plain-language question about benefits, travel,…"
+   },
+   {
+    "name": "recruiting-pipeline",
+    "desc": "Track and manage recruiting pipeline stages. Trigger with \"recruiting update\", \"candidate pipeline\", \"how many candidates\", \"hiring status\", or when the user discusses sourcing, screening, interviewing, or extending…"
+   }
+  ]
+ },
  "anthropic-legal-plugin": {
   "n": 9,
   "skills": [
@@ -562,6 +640,213 @@
    {
     "name": "vendor-review",
     "desc": "Evaluate a vendor — cost analysis, risk assessment, and recommendation. Use when reviewing a new vendor proposal, deciding whether to renew or replace a contract, comparing two vendors side-by-side, or building a TCO…"
+   }
+  ]
+ },
+ "anthropic-product-management-plugin": {
+  "n": 8,
+  "skills": [
+   {
+    "name": "competitive-brief",
+    "desc": "Create a competitive analysis brief for one or more competitors or a feature area. Use when informing product strategy or feature prioritization, building sales battle cards, prepping board or investor materials, or…"
+   },
+   {
+    "name": "metrics-review",
+    "desc": "Review and analyze product metrics with trend analysis and actionable insights. Use when running a weekly, monthly, or quarterly metrics review, investigating a sudden spike or drop, comparing performance against…"
+   },
+   {
+    "name": "product-brainstorming",
+    "desc": "Brainstorm product ideas, explore problem spaces, and challenge assumptions as a thinking partner. Use when exploring a new opportunity, generating solutions to a product problem, stress-testing an idea, or when a PM…"
+   },
+   {
+    "name": "roadmap-update",
+    "desc": "Update, create, or reprioritize your product roadmap. Use when adding a new initiative and deciding what moves to make room, shifting priorities after new information comes in, moving timelines due to a dependency slip,…"
+   },
+   {
+    "name": "sprint-planning",
+    "desc": "Plan a sprint — scope work, estimate capacity, set goals, and draft a sprint plan. Use when kicking off a new sprint, sizing a backlog against team availability (accounting for PTO and meetings), deciding what's P0 vs.…"
+   },
+   {
+    "name": "stakeholder-update",
+    "desc": "Generate a stakeholder update tailored to audience and cadence. Use when writing a weekly or monthly status for leadership, announcing a launch, escalating a risk or blocker, or translating the same progress into…"
+   },
+   {
+    "name": "synthesize-research",
+    "desc": "Synthesize user research from interviews, surveys, and feedback into structured insights. Use when you have a pile of interview notes, survey responses, or support tickets to make sense of, need to extract themes and…"
+   },
+   {
+    "name": "write-spec",
+    "desc": "Write a feature spec or PRD from a problem statement or feature idea. Use when turning a vague idea or user request into a structured document, scoping a feature with goals and non-goals, defining success metrics and…"
+   }
+  ]
+ },
+ "anthropic-productivity-plugin": {
+  "n": 4,
+  "skills": [
+   {
+    "name": "memory-management",
+    "desc": "Two-tier memory system that makes Claude a true workplace collaborator. Decodes shorthand, acronyms, nicknames, and internal language so Claude understands requests like a colleague would. CLAUDE.md for working memory,…"
+   },
+   {
+    "name": "start",
+    "desc": "Initialize the productivity system and open the dashboard. Use when setting up the plugin for the first time, bootstrapping working memory from your existing task list, or decoding the shorthand (nicknames, acronyms,…"
+   },
+   {
+    "name": "task-management",
+    "desc": "Simple task management using a shared TASKS.md file. Reference this when the user asks about their tasks, wants to add/complete tasks, or needs help tracking commitments."
+   },
+   {
+    "name": "update",
+    "desc": "Sync tasks and refresh memory from your current activity. Use when pulling new assignments from your project tracker into TASKS.md, triaging stale or overdue tasks, filling memory gaps for unknown people or projects, or…"
+   }
+  ]
+ },
+ "anthropic-sales-plugin": {
+  "n": 36,
+  "skills": [
+   {
+    "name": "account-context",
+    "desc": "360-degree view of an account - CRM data, recent email threads, docs, transcripts, and internal chat chatter, synthesized into one brief. Use when the user asks \"tell me about [account]\" (an existing customer; for a…"
+   },
+   {
+    "name": "account-plan",
+    "desc": "Build or refresh a strategic account plan - current state, goals, stakeholder coverage, opportunity map, risks, and the action plan - written to a doc and key fields synced to the CRM. Use when the user says \"build an…"
+   },
+   {
+    "name": "account-research",
+    "desc": "Research a target company and optionally a specific contact - company overview, recent news, likely priorities, and fit against your ICP. Cross-references existing CRM records. Use when the user asks to \"research…"
+   },
+   {
+    "name": "account-tiering",
+    "desc": "Score and tier a list of accounts (or your full book) against ICP fit and engagement signals to prioritize where to spend time. Use when the user asks to \"tier my accounts\", \"prioritize my book\", \"which accounts should…"
+   },
+   {
+    "name": "call-prep",
+    "desc": "Pre-call brief for an upcoming meeting - attendees, account history, prior call context from transcripts, open opportunity status, and suggested discovery questions. Use when the user asks \"prep me for…"
+   },
+   {
+    "name": "call-summary",
+    "desc": "Turn a call transcript or call notes into a customer follow-up email draft, an internal chat summary, and proposed CRM updates. Use when the user says \"call summary\", \"follow up on my [company] call\", \"summarize my call…"
+   },
+   {
+    "name": "close-plan",
+    "desc": "Build the business case and mutual action plan for a deal - the why-buy/why-now story, the ROI framing, and the dated step-by-step path to signature shared with the customer. Use when the user says \"build a close plan…"
+   },
+   {
+    "name": "competitive-intelligence",
+    "desc": "Competitive analysis two ways - the in-deal play against a named competitor, and win/loss patterns, competitor mentions, and battlecards across the book. Use when the user asks \"competitive intel\", \"research…"
+   },
+   {
+    "name": "create-an-asset",
+    "desc": "Build a customer deck, one-pager or leave-behind from your account data, call notes and approved materials, with no made-up numbers. Use when the user asks for a sales asset, one-pager, deck, leave-behind, \"create an…"
+   },
+   {
+    "name": "crm-hygiene-check",
+    "desc": "Read-only audit of your CRM opportunities for missing fields, stale dates, and stage mismatches - outputs a fix checklist to apply by hand or through update-opportunity. Use when the user asks \"check my CRM hygiene\",…"
+   },
+   {
+    "name": "customer-health",
+    "desc": "Health check on a customer account and QBR-ready prep - relationship strength, engagement trend, risk signals, value delivered, and the agenda that makes the review worth their time. Use when the user asks \"how healthy…"
+   },
+   {
+    "name": "customer-voice",
+    "desc": "Surface what customers are actually saying - direct attributed quotes on a topic across call transcripts and email, across your accounts. Use when the user asks \"what are customers saying about [topic]\", \"pull quotes on…"
+   },
+   {
+    "name": "daily-briefing",
+    "desc": "Morning rundown - today's meetings with account context, opps closing soon with stale flags, waiting customer emails, and the day's top actions. Use when the user says \"daily briefing\", \"daily brief\", \"morning…"
+   },
+   {
+    "name": "deal-advance-gap",
+    "desc": "Forward-looking gap check on one opportunity - exactly what is missing to advance it to the next stage and to close, with who does what by when. Use when the user asks \"what's missing to advance [deal]\", \"what do I need…"
+   },
+   {
+    "name": "deal-review",
+    "desc": "Deep-dive on a single opportunity - signal-adjusted health score, risks, gaps in qualification, and recommended next actions. Use when the user asks \"review the [account] deal\", \"deal review on [opp]\", \"is [opp] going…"
+   },
+   {
+    "name": "deal-signals",
+    "desc": "Proactive watch over your book - deals gone quiet, close dates slipping into view, champion changes, renewal windows opening, competitor mentions - surfaced as a short alert digest you can act on. Use when the user asks…"
+   },
+   {
+    "name": "deal-slip-scenario",
+    "desc": "Model what happens to your number if a deal slips, shrinks, or dies - quota impact, coverage ratio change, and the substitute pipeline needed to stay on plan. Use when the user asks \"what if [deal] slips\", \"what happens…"
+   },
+   {
+    "name": "draft-outreach",
+    "desc": "Draft a personalized outreach email or multi-touch sequence to a prospect, create it as an email draft for review, and add the contact to a sequence in your sales engagement tool when asked. Use when the user asks to…"
+   },
+   {
+    "name": "end-of-day",
+    "desc": "The closing beat of the day - every call processed or explicitly skipped, the CRM brought current, commitments captured, and tomorrow's top three teed up. Use when the user says \"end of day\", \"close out my day\",…"
+   },
+   {
+    "name": "expansion-whitespace",
+    "desc": "Find the expansion whitespace in an account or a book - what they own vs. what they could own, the evidence for each play, and the open opps to create. Use when the user asks \"what's the whitespace at [account]\", \"where…"
+   },
+   {
+    "name": "forecast",
+    "desc": "Generate the commit / best-case / pipeline narrative for a forecast call or a 1:1 with your manager - what's closing, what's at risk, what changed since last time. Use when the user asks \"write my forecast\", \"forecast…"
+   },
+   {
+    "name": "handle-objection",
+    "desc": "Work through a live objection or competitive threat - what's really being said, the response that has worked before, and the proof points to use, grounded in your own win/loss history and customer quotes. Use when the…"
+   },
+   {
+    "name": "inbox-sweep",
+    "desc": "Batch-process unread customer emails - classify, prioritize, and draft replies. Use when the user asks \"sweep my inbox\", \"what customer emails need a reply\", \"draft replies to my customer emails\", or \"what needs a…"
+   },
+   {
+    "name": "lead-triage",
+    "desc": "Score and route an inbound lead, or rank a backlog of leads, against your ICP and qualification framework, then recommend a priority and next action. Use when the user asks \"triage this lead\", \"triage my leads\", \"rank…"
+   },
+   {
+    "name": "log-activity",
+    "desc": "Log a call, meeting, or email exchange to the CRM after the fact as a completed activity on the right account, opportunity, and contact - drafted from your description or a transcript, shown with its sources and saved…"
+   },
+   {
+    "name": "pipeline-review",
+    "desc": "Stage-by-stage pipeline health check - coverage, aging, conversion, and at-risk deals - from CRM opportunity data. Use when the user asks \"review my pipeline\", \"pipeline health\", \"where's my pipeline stuck\", \"weekly…"
+   },
+   {
+    "name": "renewal-radar",
+    "desc": "Upcoming renewals with timing, risk, and uplift potential - and the renewal opportunity records to keep them honest. Use when the user asks \"what renewals are coming up\", \"renewal radar\", \"is [account] going to renew\",…"
+   },
+   {
+    "name": "rep-context",
+    "desc": "Leader's prep on a single rep before a 1:1 - their pipeline, recent activity, what they've been working on per chat and calendar, and where they might need help. Use when the user asks \"prep for my 1:1 with [rep]\" (a…"
+   },
+   {
+    "name": "route-lead",
+    "desc": "Decide who owns an unrouted lead or opportunity and manage the handoff - deterministic routing by the org's own rules, a routing card the human router accepts or overrides, and drafted handoff notes. Use when the user…"
+   },
+   {
+    "name": "schedule-meeting",
+    "desc": "Find a time, draft the invite, and book the meeting on Google Calendar or Outlook - then log it to the CRM as an event on the right account and opportunity. Use when the user says \"schedule a follow-up with [contact]\",…"
+   },
+   {
+    "name": "setup",
+    "desc": "First-run setup - checks which tools are connected, shows what's connected and what each one unlocks, learns how you write from your sent email, and renders a starter dashboard right away with no upfront interview. When…"
+   },
+   {
+    "name": "stakeholder-map",
+    "desc": "Map the people in a deal or account - roles, influence, sentiment, who's missing, and your best access path to the people you haven't reached. Use when the user asks \"who are the players at [account]\", \"who's my way…"
+   },
+   {
+    "name": "team-pipeline",
+    "desc": "Leader view - roll up a team's pipeline by rep and stage, flag at-risk deals, and surface coaching moments. Use when the user asks \"show my team's pipeline\", \"team forecast\", \"prep for my team's pipeline review\", or…"
+   },
+   {
+    "name": "update-opportunity",
+    "desc": "Guided updates to an opportunity - push the stage, move the close date, set next steps, fix amount or forecast category. Shows the before/after, writes what you ask for or accept, and verifies with a record link. Use…"
+   },
+   {
+    "name": "weekly-wrap",
+    "desc": "End-of-week summary for a rep or leader - what closed, what moved, what slipped, and what's on deck Monday. Optionally drafts a chat post to the team channel. Use when the user says \"weekly wrap\", \"week in review\",…"
+   },
+   {
+    "name": "win-loss-review",
+    "desc": "Analyze recently closed opportunities to find patterns in what wins and what loses - stage of loss, common objections from transcripts, deal characteristics. Leader-focused. Use when the user asks \"win loss review\",…"
    }
   ]
  },
@@ -4488,6 +4773,39 @@
    {
     "name": "product-shots-social-post",
     "desc": "Designs social-platform-native visuals (Feed, Story, Reel, Carousel formats) for Instagram, TikTok, Facebook, Pinterest, RedNote, LinkedIn, X/Twitter and other social platforms — with platform-correct dimensions, safe…"
+   }
+  ]
+ },
+ "product-tracking-skills": {
+  "n": 7,
+  "skills": [
+   {
+    "name": "product-tracking-audit-current-tracking",
+    "desc": "Reverse-engineer the current state of analytics tracking from a codebase. Scans for SDK calls, identity management, and instrumentation patterns to produce a factual inventory — not recommendations. Outputs…"
+   },
+   {
+    "name": "product-tracking-business-case",
+    "desc": "Write a business case for adding product telemetry and analytics to a product. Produces a concise, stakeholder-ready document explaining what telemetry enables, what you're currently blind to, what's involved in…"
+   },
+   {
+    "name": "product-tracking-design-tracking-plan",
+    "desc": "Design an opinionated target tracking plan and produce an explicit delta from current state to target. Combines the product model, current-state audit, and telemetry best practices to decide what events, properties,…"
+   },
+   {
+    "name": "product-tracking-generate-implementation-guide",
+    "desc": "Translate a tracking plan into an SDK-specific instrumentation guide. Shows how to make identify, group, and track calls using the target analytics SDK with real template code, architecture guidance, and constraint…"
+   },
+   {
+    "name": "product-tracking-implement-tracking",
+    "desc": "Generate real instrumentation code from the tracking plan and instrumentation guide. Produces typed SDK wrapper functions, identity management, and integration guidance. Outputs files in a tracking/ directory. Use when…"
+   },
+   {
+    "name": "product-tracking-instrument-new-feature",
+    "desc": "Update the tracking plan when a feature ships, changes, or is removed. Assesses whether new events are needed, extends existing events with properties where possible, and produces a versioned mini-delta with changelog…"
+   },
+   {
+    "name": "product-tracking-model-product",
+    "desc": "Build a structured product model by scanning the codebase and talking to the user. Produces .telemetry/product.md — a description of what the product does, who uses it, how value flows, and what entities exist. Use when…"
    }
   ]
  },

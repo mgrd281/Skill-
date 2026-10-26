@@ -5727,5 +5727,257 @@
     "license": "MIT",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
+  },
+  {
+    "slug": "google-analytics-mcp",
+    "cat": "analytics",
+    "name": "Google Analytics MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/googleanalytics/google-analytics-mcp",
+    "site": null,
+    "stars": null,
+    "cmd": "claude mcp add analytics-mcp -- pipx run analytics-mcp",
+    "use": [
+      "shop",
+      "landing",
+      "web",
+      "dashboard"
+    ],
+    "desc": "خادم Google الرسمي لـ Google Analytics: يقرأ Claude تقارير موقعك ويجيب عن أسئلة مثل «من أين جاء زوار هذا الأسبوع؟» و«أي صفحة تحوّل أكثر؟». للقراءة فقط افتراضيًا، ويحتاج إعداد صلاحيات Google Cloud وأداة pipx أولًا.",
+    "desc_de": "Offizieller MCP-Server von Google für Google Analytics: Claude liest die Berichte deiner Website und beantwortet Fragen wie „Woher kamen die Besucher diese Woche?“ oder „Welche Seite konvertiert am besten?“. Standardmäßig nur lesend; vorher brauchst du Google-Cloud-Zugangsdaten und pipx.",
+    "desc_en": "Google's official server for Google Analytics: Claude reads your site's reports and answers questions like “Where did this week's visitors come from?” or “Which page converts best?”. Read-only by default, and it needs Google Cloud credentials and pipx set up first.",
+    "pushed": null,
+    "added": "2026-10-26T05:30:00Z"
+  },
+  {
+    "slug": "microsoft-clarity-mcp",
+    "cat": "analytics",
+    "name": "Microsoft Clarity MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/microsoft/clarity-mcp-server",
+    "site": "https://clarity.microsoft.com",
+    "stars": null,
+    "cmd": "claude mcp add clarity -- npx -y @microsoft/clarity-mcp-server --clarity_api_token=<your-token>",
+    "use": [
+      "shop",
+      "landing",
+      "web"
+    ],
+    "desc": "خادم Microsoft الرسمي لـ Clarity: يسأل Claude عن الزيارات وسلوك الزوار وتسجيلات الجلسات في موقعك، ويصفّي حسب المتصفح والجهاز والدولة. يحتاج رمز API من إعدادات مشروعك في Clarity.",
+    "desc_de": "Offizieller MCP-Server von Microsoft für Clarity: Claude fragt Besuche, Besucherverhalten und Session-Aufzeichnungen deiner Website ab und filtert nach Browser, Gerät und Land. Braucht ein API-Token aus den Einstellungen deines Clarity-Projekts.",
+    "desc_en": "Microsoft's official server for Clarity: Claude queries your site's traffic, visitor behavior and session recordings, filtered by browser, device and country. Needs an API token from your Clarity project settings.",
+    "pushed": null,
+    "added": "2026-10-26T05:30:00Z"
+  },
+  {
+    "slug": "plausible-analytics",
+    "cat": "analytics",
+    "name": "Plausible Analytics",
+    "kind": "منصة",
+    "isNew": true,
+    "gh": "https://github.com/plausible/analytics",
+    "site": "https://plausible.io",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "shop",
+      "landing",
+      "web"
+    ],
+    "desc": "إحصاءات زوار مفتوحة المصدر تحترم الخصوصية: بلا ملفات تعريف ارتباط، بسكربت خفيف ولوحة واحدة واضحة. سحابة مدفوعة، أو نسخة مجتمعية تستضيفها بنفسك مجانًا.",
+    "desc_de": "Datenschutzfreundliche Open-Source-Besucherstatistik: ohne Cookies, mit schlankem Skript und einem übersichtlichen Dashboard. Als bezahlte Cloud oder als kostenlose Community Edition zum Selbsthosten.",
+    "desc_en": "Privacy-friendly open-source visitor analytics: no cookies, a lightweight script and one clear dashboard. Available as a paid cloud or a free community edition you host yourself.",
+    "pushed": null,
+    "added": "2026-10-26T05:30:00Z"
+  },
+  {
+    "slug": "product-tracking-skills",
+    "cat": "analytics",
+    "name": "Product Tracking Skills",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/Accoil/product-tracking-skills",
+    "site": null,
+    "stars": null,
+    "cmd": "npx skills add accoil/product-tracking-skills",
+    "use": [
+      "web",
+      "dashboard"
+    ],
+    "desc": "مهارات تفحص كود تطبيقك وتراجع أحداث التتبع الموجودة فيه، ثم تكتب خطة تتبع والكود اللازم لها، لتجيب أدوات مثل PostHog وMixpanel وAmplitude عن أسئلتك فعلًا. تدعم أكثر من 25 منصة تحليلات.",
+    "desc_de": "Skills, die den Code deiner App scannen, vorhandene Tracking-Events prüfen und dann einen Tracking-Plan samt Code schreiben, damit Tools wie PostHog, Mixpanel oder Amplitude deine Fragen wirklich beantworten. Unterstützt über 25 Analytics-Plattformen.",
+    "desc_en": "Skills that scan your app's code, audit the tracking events already there, then write a tracking plan and the code for it, so tools like PostHog, Mixpanel or Amplitude can actually answer your questions. Supports 25+ analytics platforms.",
+    "pushed": null,
+    "added": "2026-10-26T05:30:00Z"
+  },
+  {
+    "slug": "easy-appointments",
+    "cat": "booking",
+    "name": "Easy!Appointments",
+    "kind": "منصة",
+    "isNew": true,
+    "gh": "https://github.com/alextselegidis/easyappointments",
+    "site": "https://easyappointments.org",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "booking",
+      "web"
+    ],
+    "desc": "نظام حجز مواعيد مفتوح المصدر تستضيفه بنفسك: إدارة العملاء والمواعيد، وخدمات ومقدّمو خدمة بخطط عمل وقواعد حجز، ومزامنة مع Google Calendar وإشعارات بالبريد. مجاني حتى للاستخدام التجاري.",
+    "desc_de": "Open-Source-Terminbuchung zum Selbsthosten: Kunden und Termine verwalten, Leistungen und Mitarbeitende mit Arbeitszeiten und Buchungsregeln, Synchronisierung mit Google Calendar und E-Mail-Benachrichtigungen. Auch kommerziell kostenlos.",
+    "desc_en": "Open-source appointment booking you host yourself: customer and appointment management, services and providers with working plans and booking rules, Google Calendar sync and email notifications. Free even for commercial use.",
+    "pushed": null,
+    "added": "2026-10-26T05:30:00Z"
+  },
+  {
+    "slug": "openemr",
+    "cat": "booking",
+    "name": "OpenEMR",
+    "kind": "منصة",
+    "isNew": true,
+    "gh": "https://github.com/openemr/openemr",
+    "site": "https://www.open-emr.org",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "booking"
+    ],
+    "desc": "نظام سجلات صحية إلكترونية وإدارة عيادات مفتوح المصدر: ملفات المرضى، والمواعيد، والفوترة الإلكترونية، بعدة لغات. مجاني وتستضيفه بنفسك، فراجع قواعد حماية البيانات الصحية في بلدك قبل استخدامه.",
+    "desc_de": "Open-Source-Software für elektronische Patientenakten und Praxisverwaltung: Patientenakten, Termine und elektronische Abrechnung, mehrsprachig. Kostenlos zum Selbsthosten – prüfe vor dem Einsatz die Datenschutzregeln für Gesundheitsdaten in deinem Land.",
+    "desc_en": "Open-source electronic health records and practice management: patient records, scheduling and electronic billing, in many languages. Free and self-hosted, so check your country's health-data protection rules before using it.",
+    "pushed": null,
+    "added": "2026-10-26T05:30:00Z"
+  },
+  {
+    "slug": "schedule-x",
+    "cat": "booking",
+    "name": "Schedule-X",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/schedule-x/schedule-x",
+    "site": "https://schedule-x.dev",
+    "stars": null,
+    "cmd": "npm install @schedule-x/calendar @schedule-x/theme-default",
+    "use": [
+      "booking",
+      "web",
+      "dashboard"
+    ],
+    "desc": "تقويم أحداث حديث لتطبيقات الويب: متجاوب ومتعدد اللغات وقابل للتوسعة، مع مكونات جاهزة لـ React وVue وAngular وSvelte وPreact.",
+    "desc_de": "Moderner Eventkalender für Web-Apps: responsiv, mehrsprachig und erweiterbar, mit fertigen Komponenten für React, Vue, Angular, Svelte und Preact.",
+    "desc_en": "A modern event calendar for web apps: responsive, multilingual and extensible, with ready components for React, Vue, Angular, Svelte and Preact.",
+    "pushed": null,
+    "added": "2026-10-26T05:30:00Z"
+  },
+  {
+    "slug": "anthropic-sales-plugin",
+    "cat": "business",
+    "name": "Anthropic Sales Plugin",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/sales",
+    "site": null,
+    "stars": "32.9k",
+    "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install sales@knowledge-work-plugins",
+    "use": [
+      "brand",
+      "shop"
+    ],
+    "desc": "إضافة Anthropic الرسمية للمبيعات: تحضير المكالمات وتلخيصها ومتابعتها، والبحث عن الحسابات، ومراجعة الصفقات وخط المبيعات، وكتابة التوقعات، من أدوات CRM والبريد والتقويم التي تستخدمها أو من ملفات ترفعها. تحدّث السجلات وترسل البريد حين تطلب ذلك فقط.",
+    "desc_de": "Offizielles Anthropic-Plugin für den Vertrieb: Gespräche vorbereiten, zusammenfassen und nachfassen, Accounts recherchieren, Deals und Pipeline prüfen und die Prognose schreiben – mit deinem CRM, E-Mail und Kalender oder hochgeladenen Dateien. Datensätze und E-Mails nur auf deine Anweisung.",
+    "desc_en": "Anthropic's official sales plugin: prep calls, summarize and follow up, research accounts, review deals and pipeline, and write the forecast, from the CRM, email and calendar tools you use or uploaded files. It updates records and sends email only when you ask.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-26T05:30:00Z"
+  },
+  {
+    "slug": "anthropic-finance-plugin",
+    "cat": "finance",
+    "name": "Anthropic Finance Plugin",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/finance",
+    "site": null,
+    "stars": "32.9k",
+    "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install finance@knowledge-work-plugins",
+    "use": [
+      "finance"
+    ],
+    "desc": "إضافة Anthropic الرسمية للمالية والمحاسبة: قيود اليومية والتسويات، والقوائم المالية وتحليل الفروقات، وتسريع التحضير للتدقيق وإقفال نهاية الشهر. لا تغني عن مراجعة محاسبك.",
+    "desc_de": "Offizielles Anthropic-Plugin für Finanzen und Buchhaltung: Buchungssätze und Abstimmungen, Abschlüsse und Abweichungsanalysen, schnellere Vorbereitung auf Prüfung und Monatsabschluss. Ersetzt nicht die Prüfung durch deine Steuerberatung.",
+    "desc_en": "Anthropic's official finance and accounting plugin: journal entries and reconciliation, financial statements and variance analysis, faster audit prep and month-end close. No substitute for your accountant's review.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-26T05:30:00Z"
+  },
+  {
+    "slug": "anthropic-product-management-plugin",
+    "cat": "business",
+    "name": "Anthropic Product Management Plugin",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management",
+    "site": null,
+    "stars": "32.9k",
+    "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install product-management@knowledge-work-plugins",
+    "use": [
+      "web",
+      "mobile",
+      "dashboard"
+    ],
+    "desc": "إضافة Anthropic الرسمية لإدارة المنتجات: كتابة مواصفات الميزات، وتخطيط خارطة الطريق، وتلخيص أبحاث المستخدمين، وإطلاع أصحاب المصلحة على التقدم، ومتابعة المنافسين.",
+    "desc_de": "Offizielles Anthropic-Plugin für Produktmanagement: Feature-Spezifikationen schreiben, Roadmaps planen, Nutzerforschung zusammenfassen, Stakeholder auf dem Laufenden halten und den Wettbewerb im Blick behalten.",
+    "desc_en": "Anthropic's official product management plugin: write feature specs, plan roadmaps, synthesize user research, keep stakeholders updated and keep an eye on competitors.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-26T05:30:00Z"
+  },
+  {
+    "slug": "anthropic-human-resources-plugin",
+    "cat": "business",
+    "name": "Anthropic Human Resources Plugin",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/human-resources",
+    "site": null,
+    "stars": "32.9k",
+    "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install human-resources@knowledge-work-plugins",
+    "use": [
+      "claude"
+    ],
+    "desc": "إضافة Anthropic الرسمية لشؤون الموظفين: التوظيف، والتأهيل، وتقييمات الأداء، وتحليل الرواتب، وإرشادات السياسات. قواعد العمل تختلف بين البلدان فراجعها لبلدك.",
+    "desc_de": "Offizielles Anthropic-Plugin für Personalarbeit: Recruiting, Onboarding, Leistungsbeurteilungen, Vergütungsanalysen und Hinweise zu Richtlinien. Arbeitsrecht unterscheidet sich je nach Land – prüfe es für deines.",
+    "desc_en": "Anthropic's official HR plugin: recruiting, onboarding, performance reviews, compensation analysis and policy guidance. Employment rules differ by country, so check them for yours.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-26T05:30:00Z"
+  },
+  {
+    "slug": "anthropic-productivity-plugin",
+    "cat": "business",
+    "name": "Anthropic Productivity Plugin",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/productivity",
+    "site": null,
+    "stars": "32.9k",
+    "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install productivity@knowledge-work-plugins",
+    "use": [
+      "claude"
+    ],
+    "desc": "إضافة Anthropic الرسمية للإنتاجية: إدارة المهام وتخطيط يومك، وذاكرة لما يهمّ من سياق عملك، مع مزامنة التقويم والبريد والدردشة.",
+    "desc_de": "Offizielles Anthropic-Plugin für Produktivität: Aufgaben verwalten, den Tag planen und ein Gedächtnis für wichtigen Arbeitskontext aufbauen, abgestimmt mit Kalender, E-Mail und Chat.",
+    "desc_en": "Anthropic's official productivity plugin: manage tasks, plan your day and build up memory of important work context, synced with your calendar, email and chat.",
+    "pushed": null,
+    "license": "Apache-2.0",
+    "archived": false,
+    "added": "2026-10-26T05:30:00Z"
   }
 ]

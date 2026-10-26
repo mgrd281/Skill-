@@ -922,8 +922,10 @@ html:not(.js) .ctab-pan + .ctab-pan { margin-top: 20px; padding-top: 20px; borde
 
 /* ---------- الأمان والثقة في صفحة الأداة (src/components/TrustPanel.astro) ---------- */
 /* «جرّب أن تطلب من Claude» في صفحة الأداة: نص طلب بخط النص، يلتف ويتبع اتجاه لغته (لا أمر طرفية) */
-.cmd.prompt pre { font-family: inherit; font-size: .95rem; line-height: 1.7; color: var(--ink); white-space: pre-wrap; direction: inherit; text-align: start; }
-.cmd.prompt code { unicode-bidi: plaintext; }
+.cmd.prompt { flex-direction: column; }
+.cmd.prompt pre { font-family: inherit; font-size: .95rem; line-height: 1.7; color: var(--ink); white-space: pre-wrap; direction: inherit; text-align: start; padding: 14px 16px; }
+.cmd.prompt code { font-family: inherit; unicode-bidi: plaintext; }
+.cmd.prompt .copy { min-height: 44px; justify-content: flex-end; border-inline-start: 0; border-top: 1px solid var(--line-soft); }
 /* «ماذا تحوي»: المهارات التي تثبّتها الأداة كما في ملفات SKILL.md (src/components/Inside.astro) */
 .inside { margin-top: clamp(36px, 5vw, 56px); }
 .inside-one { margin: 0; padding: 18px 20px; border-radius: var(--r-lg); background: var(--card); }

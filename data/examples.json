@@ -1,1 +1,1192 @@
-{}
+{
+ "frontend-design": {
+  "ar": "أنشئ صفحة هبوط لمحمصة القهوة الخاصة بي بتصميم مميز لا يشبه القوالب المعتادة.",
+  "de": "Baue eine Landingpage für meine Kaffeerösterei, die nicht wie jedes andere Template aussieht.",
+  "en": "Build a landing page for my specialty coffee roastery that doesn't look like every other template."
+ },
+ "impeccable": {
+  "ar": "راجع شاشات الترحيب التي بنيتها للتو، وحسّن كل ما يبدو كتصميم نمطي من إنتاج الذكاء الاصطناعي.",
+  "de": "Prüfe meine neuen Onboarding-Screens und poliere alles, was nach typischem KI-Design aussieht.",
+  "en": "Review the onboarding screens I just built and polish anything that looks like typical AI-generated design."
+ },
+ "ui-ux-pro-max": {
+  "ar": "أنشئ نظام تصميم متكاملًا بالألوان والخطوط والتخطيط لتطبيق تتبّع العادات الذي أبنيه بـ Flutter.",
+  "de": "Erstelle ein komplettes Designsystem mit Farben, Schriften und Layout für meine Habit-Tracker-App in Flutter.",
+  "en": "Create a complete design system with colors, fonts and layout for my Flutter habit-tracker app."
+ },
+ "vercel-agent-skills": {
+  "ar": "راجع صفحة الإعدادات في تطبيق Next.js الخاص بي بحثًا عن حالات تركيز وتحميل ناقصة، وعالج بطء إعادة العرض.",
+  "de": "Prüfe die Einstellungsseite meiner Next.js-App auf fehlende Fokus- und Ladezustände und behebe langsame Re-Renders.",
+  "en": "Review the settings page of my Next.js app for missing focus and loading states, and fix slow re-renders."
+ },
+ "ui-animation-skill": {
+  "ar": "أضف حركة لفتح سلة التسوق الجانبية وإغلاقها بمنحنى ومدة طبيعيين، دون أي حركة لا داعي لها.",
+  "de": "Animiere das Öffnen und Schließen meines Warenkorb-Drawers mit natürlicher Kurve und Dauer, ohne unnötige Effekte.",
+  "en": "Animate my cart drawer opening and closing with a natural curve and duration, and skip any motion without a purpose."
+ },
+ "brand-building-skills": {
+  "ar": "حدّد الهوية ونبرة الخطاب لعلامتي الجديدة من منتجات العناية بالبشرة العضوية، ثم اقترح خمسة أسماء لها.",
+  "de": "Definiere Markenidentität und Tonalität für meine neue Bio-Hautpflegelinie und schlag fünf Namen vor.",
+  "en": "Define the brand identity and tone of voice for my new organic skincare line, then suggest five names."
+ },
+ "canvas-design": {
+  "ar": "صمّم ملصقًا بحجم A3 بصيغة PDF لأمسية الجاز التي نقيمها يوم الجمعة في قاعة الحي.",
+  "de": "Gestalte ein A3-Plakat als PDF für unseren Jazzabend am Freitag im Gemeindesaal.",
+  "en": "Design an A3 poster as a PDF for our jazz night at the community hall this Friday."
+ },
+ "taste-skill": {
+  "ar": "أعد تصميم الموقع الحالي لمكتبي المعماري بتخطيط وخطوط أكثر جرأة وأبعد عن الطابع المكرر.",
+  "de": "Gestalte die bestehende Website meines Architekturbüros neu, mit markanterem Layout und eigenständiger Typografie.",
+  "en": "Redesign my architecture studio's existing website with a bolder, less generic layout and typography."
+ },
+ "shadcn-ui-skill": {
+  "ar": "أضف مكوّن اختيار التاريخ من shadcn إلى نموذج الحجز، ونسّقه ليتماشى مع بقية التطبيق.",
+  "de": "Füge meinem Buchungsformular einen shadcn-Datepicker hinzu und pass ihn an den Stil der restlichen App an.",
+  "en": "Add a shadcn date picker to my booking form and style it to match the rest of the app."
+ },
+ "anthropic-design-plugin": {
+  "ar": "افحص خطوات التسجيل في تطبيقي وفق معايير WCAG، وأعد صياغة رسائل الخطأ لتكون أوضح وألطف.",
+  "de": "Prüfe meinen Registrierungsablauf nach WCAG und formuliere die Fehlermeldungen klarer und freundlicher.",
+  "en": "Check my signup flow against WCAG and rewrite its error messages to be clearer and friendlier."
+ },
+ "interface-design": {
+  "ar": "صمّم لوحة تحليلات لتطبيقي السحابي، واحفظ قرارات المسافات والألوان لتبقى الشاشات القادمة متناسقة.",
+  "de": "Gestalte ein Analytics-Dashboard für meine SaaS-App und halte Abstände und Farben fest, damit spätere Screens passen.",
+  "en": "Design an analytics dashboard for my SaaS app and save the spacing and color decisions so future screens match."
+ },
+ "google-stitch-skills": {
+  "ar": "أنشئ في Stitch شاشة تسجيل دخول لتطبيق اللياقة الخاص بي، ثم حوّلها إلى كود React بمكوّنات shadcn.",
+  "de": "Erzeuge in Stitch einen Login-Screen für meine Fitness-App und setz ihn in React mit shadcn-Komponenten um.",
+  "en": "Generate a sign-in screen for my fitness app in Stitch, then turn it into React code with shadcn components."
+ },
+ "frontend-slides": {
+  "ar": "حوّل عرض PowerPoint للنتائج الربعية إلى عرض أنيق في صفحة HTML واحدة، ثم صدّره بصيغة PDF.",
+  "de": "Mach aus meiner PowerPoint zu den Quartalszahlen eine elegante HTML-Präsentation und exportiere sie als PDF.",
+  "en": "Turn my quarterly results PowerPoint into an elegant single-page HTML presentation and export it as a PDF."
+ },
+ "shopify-ai-toolkit": {
+  "ar": "اكتب استعلام GraphQL يعرض منتجات متجري على Shopify التي يقل مخزونها عن خمس قطع، وتحقّق من صحته.",
+  "de": "Schreib und prüfe eine GraphQL-Abfrage, die alle Produkte meines Shopify-Shops mit weniger als fünf Stück auf Lager auflistet.",
+  "en": "Write and validate a GraphQL query that lists every product in my Shopify store with fewer than five in stock."
+ },
+ "shopify-liquid-skills": {
+  "ar": "اكتب قسم Liquid يراعي إمكانية الوصول في قالب متجري على Shopify، يعرض الأسئلة الشائعة عن المنتج كقائمة قابلة للطي.",
+  "de": "Schreib einen barrierefreien Liquid-Abschnitt für mein Shopify-Theme, der Produkt-FAQs als Akkordeon zeigt.",
+  "en": "Write an accessible Liquid section for my Shopify theme that shows product FAQs as an accordion."
+ },
+ "marketing-skills": {
+  "ar": "أعد كتابة نصوص الصفحة الرئيسية لدورة اليوغا التي أقدّمها عبر الإنترنت لزيادة عدد المسجلين.",
+  "de": "Überarbeite die Texte auf der Startseite meines Online-Yogakurses, damit sich mehr Besucher anmelden.",
+  "en": "Rewrite the homepage copy for my online yoga course so more visitors sign up."
+ },
+ "claude-seo": {
+  "ar": "أجرِ تدقيق SEO شاملًا لمتجري الإلكتروني ثنائي اللغة، بما في ذلك وسوم hreflang والبيانات المنظمة.",
+  "de": "Mach ein vollständiges SEO-Audit meines zweisprachigen Onlineshops, inklusive hreflang-Tags und strukturierter Daten.",
+  "en": "Run a full SEO audit of my bilingual online shop, including its hreflang tags and structured data."
+ },
+ "humanizer": {
+  "ar": "أعد صياغة خطاب التقديم الذي كتبته بالإنجليزية لوظيفة تسويق، حتى لا يبدو كأنه من كتابة الذكاء الاصطناعي.",
+  "de": "Überarbeite mein englisches Anschreiben für eine Marketingstelle, damit es nicht nach KI klingt.",
+  "en": "Rewrite my English cover letter for a marketing job so it doesn't sound AI-written."
+ },
+ "avoid-ai-writing": {
+  "ar": "افحص مسودة نشرتي البريدية بحثًا عن العبارات التي تبدو آلية، واكتفِ بسردها دون إعادة كتابة شيء.",
+  "de": "Prüfe meinen Newsletter-Entwurf auf maschinell klingende Formulierungen und liste sie nur auf, ohne etwas umzuschreiben.",
+  "en": "Check my newsletter draft for phrases that sound machine-written and just list them without rewriting."
+ },
+ "anthropic-marketing-plugin": {
+  "ar": "اكتب سلسلة ترحيب من خمس رسائل بريدية للمشتركين الجدد في متجر النباتات الخاص بي، بنبرة علامتنا التجارية.",
+  "de": "Schreib eine Willkommensserie aus fünf E-Mails für neue Abonnenten meines Pflanzenladens, ganz im Ton unserer Marke.",
+  "en": "Write a five-email welcome sequence for new subscribers to my plant shop, in our brand voice."
+ },
+ "nexscope-ecommerce-skills": {
+  "ar": "اكتب أوصافًا للوح تقطيع من الخيزران أبيعه، بحيث تلتزم بالحدود المسموح بها في Amazon وShopify.",
+  "de": "Schreib Produktbeschreibungen für mein Bambus-Schneidebrett, die die Limits von Amazon und Shopify einhalten.",
+  "en": "Write product descriptions for my bamboo cutting board that stay within Amazon's and Shopify's limits."
+ },
+ "claude-ads": {
+  "ar": "دقّق الحملات الإعلانية لعيادة الأسنان الخاصة بي على Google وMeta، وجهّز تعديلات الميزانية كمسودات تنتظر موافقتي.",
+  "de": "Prüfe die Google- und Meta-Kampagnen meiner Zahnarztpraxis und entwirf Budgetänderungen zur Freigabe.",
+  "en": "Audit my dental clinic's Google and Meta ad campaigns and draft budget changes for me to approve."
+ },
+ "matt-pocock-skills": {
+  "ar": "اكتشف سبب اختلاف إجماليات فواتيرنا أحيانًا بسنت واحد، وابدأ بكتابة اختبار يعيد إنتاج المشكلة.",
+  "de": "Finde heraus, warum unsere Rechnungssummen manchmal um einen Cent abweichen, und schreib zuerst einen Test, der das zeigt.",
+  "en": "Find out why our invoice totals are sometimes off by one cent, starting with a test that reproduces it."
+ },
+ "karpathy-guidelines": {
+  "ar": "أصلح خطأ تنسيق التاريخ في سكربت تصدير ملفات CSV، وغيّر فقط ما يلزم مع إبقاء الحل بسيطًا.",
+  "de": "Behebe den Fehler bei der Datumsformatierung in meinem CSV-Exportskript und ändere nur, was wirklich nötig ist.",
+  "en": "Fix the date formatting bug in my CSV export script, changing only what's needed and keeping it simple."
+ },
+ "addy-osmani-agent-skills": {
+  "ar": "راجع تطبيقي على الويب بقائمة فحص ما قبل الإطلاق، تشمل الاختبارات ومؤشرات Core Web Vitals ومخاطر OWASP.",
+  "de": "Geh vor dem Launch meiner Web-App eine Checkliste mit Tests, Core Web Vitals und OWASP-Sicherheitsrisiken durch.",
+  "en": "Run a pre-launch checklist on my web app, covering tests, Core Web Vitals and OWASP security risks."
+ },
+ "supabase-agent-skills": {
+  "ar": "حدّد سبب بطء استعلام الطلبات في قاعدة بيانات Supabase، واقترح فهارس Postgres المناسبة.",
+  "de": "Untersuche, warum die Bestellabfrage in meiner Supabase-Datenbank langsam ist, und schlag passende Postgres-Indizes vor.",
+  "en": "Investigate why the orders query in my Supabase database is slow and suggest the right Postgres indexes."
+ },
+ "next-js-agent-skills": {
+  "ar": "اكشف ما يضخّم حجم الصفحة الرئيسية لمدونتي المبنية بـ Next.js، وقلّصه دون أن يتعطل شيء.",
+  "de": "Zeig mir, was die Startseite meines Next.js-Blogs so aufbläht, und speck sie ab, ohne etwas kaputtzumachen.",
+  "en": "Figure out what's bloating my Next.js blog's homepage and slim it down without breaking anything."
+ },
+ "agent-browser": {
+  "ar": "افتح صفحة الدفع في متجري، وأجرِ طلبًا تجريبيًا، وأخبرني بأي أخطاء تصادفها.",
+  "de": "Öffne den Checkout meines Shops, gib eine Testbestellung auf und sag mir, auf welche Fehler du stößt.",
+  "en": "Open my store's checkout, place a test order and tell me about any errors you run into."
+ },
+ "trail-of-bits-skills": {
+  "ar": "افحص حزم npm التي تعتمد عليها خدمة الدفع لدينا بحثًا عن مخاطر أمنية قبل نشرها.",
+  "de": "Prüfe die npm-Pakete, von denen unser Zahlungsdienst abhängt, vor dem Deployment auf Sicherheitsrisiken.",
+  "en": "Check the npm packages my payment service depends on for security risks before we deploy it."
+ },
+ "claude-code-workflows": {
+  "ar": "اكتب سجل قرار معماري يوضّح سبب نقل واجهة API لدينا من REST إلى GraphQL.",
+  "de": "Schreib einen Architecture Decision Record, der begründet, warum wir unsere API von REST auf GraphQL umstellen.",
+  "en": "Write an architecture decision record explaining why we're moving our API from REST to GraphQL."
+ },
+ "flutter-agent-skills": {
+  "ar": "أصلح خطأ overflow في شاشة المنتج بتطبيق Flutter، واجعل التخطيط يعمل على الأجهزة اللوحية أيضًا.",
+  "de": "Behebe den Overflow-Fehler auf dem Produktscreen meiner Flutter-App und sorg dafür, dass das Layout auch auf Tablets passt.",
+  "en": "Fix the overflow error on my Flutter app's product screen and make the layout work on tablets too."
+ },
+ "swiftui-pro": {
+  "ar": "راجع كود SwiftUI لأداة الشاشة الرئيسية في تطبيق الطقس الخاص بي، وأصلح الأخطاء الشائعة فيه.",
+  "de": "Prüfe den SwiftUI-Code des Homescreen-Widgets meiner Wetter-App und behebe typische Fehler.",
+  "en": "Review the SwiftUI code for my weather app's Home Screen widget and fix any common mistakes."
+ },
+ "capacitor-skills": {
+  "ar": "حدّث تطبيقي المبني بـ Capacitor إلى أحدث إصدار، وأضف خيار شراء داخل التطبيق للاشتراك المميز.",
+  "de": "Aktualisiere meine Capacitor-App auf die neueste Version und füge einen In-App-Kauf für das Premium-Abo hinzu.",
+  "en": "Upgrade my Capacitor app to the latest version and add an in-app purchase for the premium plan."
+ },
+ "app-store-connect-skills": {
+  "ar": "ارفع أحدث إصدار من تطبيقي على iOS إلى TestFlight، وحدّث نصوص المتجر بالعربية والألمانية.",
+  "de": "Lade den neuesten Build meiner iOS-App zu TestFlight hoch und aktualisiere die Store-Texte auf Deutsch und Arabisch.",
+  "en": "Upload the latest build of my iOS app to TestFlight and update its store text in German and Arabic."
+ },
+ "aso-skills": {
+  "ar": "اقترح عنوانًا وكلمات مفتاحية أفضل لصفحة تطبيق إدارة الميزانية في App Store ليظهر أعلى في نتائج البحث.",
+  "de": "Schlag einen besseren Titel und passende Keywords für die App-Store-Seite meiner Budget-App vor, damit sie besser rankt.",
+  "en": "Suggest a better title and keywords for my budgeting app's App Store page so it ranks higher in search."
+ },
+ "app-store-screenshots": {
+  "ar": "حوّل لقطات الشاشة من تطبيق الوصفات إلى صور تسويقية لـ App Store بإطارات الأجهزة، بالعربية والإنجليزية.",
+  "de": "Mach aus den Screenshots meiner Rezept-App Marketingbilder für den App Store mit Geräterahmen, auf Englisch und Arabisch.",
+  "en": "Turn my recipe app's screenshots into App Store marketing images with device frames, in English and Arabic."
+ },
+ "superpowers": {
+  "ar": "ناقش معي أفكارًا لإضافة نظام نقاط ولاء إلى تطبيق الطلبات في مقهاي، ثم اكتب خطة تنفيذ خطوة بخطوة.",
+  "de": "Sammle mit mir Ideen für Treuepunkte in der Bestell-App meines Cafés und schreib dann einen Schritt-für-Schritt-Plan.",
+  "en": "Brainstorm with me how to add loyalty points to my café's ordering app, then write a step-by-step plan."
+ },
+ "webapp-testing": {
+  "ar": "اختبر خطوات استعادة كلمة المرور في تطبيقي المحلي عبر المتصفح، والتقط صورًا لأي أخطاء تظهر.",
+  "de": "Teste den Passwort-Reset meiner lokalen Web-App im Browser und mach Screenshots von allen Fehlern.",
+  "en": "Test the password reset flow of my local web app in the browser and take screenshots of any errors."
+ },
+ "skill-creator": {
+  "ar": "أنشئ مهارة تكتب ردود الدعم الفني بأسلوب شركتنا، ثم اختبرها على ثلاث رسائل عملاء نموذجية.",
+  "de": "Bau einen Skill, der Support-Mails im Ton unserer Firma beantwortet, und teste ihn an drei Beispiel-Mails.",
+  "en": "Build a skill that answers support emails in our company's tone, then test it on three sample emails."
+ },
+ "find-skills": {
+  "ar": "ابحث عن مهارة تساعد في إنشاء تقارير Excel، وثبّت الأنسب منها إن وُجدت.",
+  "de": "Schau nach, ob es einen Skill zum Erstellen von Excel-Berichten gibt, und installiere den passenden.",
+  "en": "Check whether there's a skill for creating Excel reports, and install the right one if there is."
+ },
+ "context7": {
+  "ar": "استخدم Context7 لجلب أحدث توثيق لـ Tailwind CSS، ثم فعّل الوضع الداكن في مشروعي وفق الطريقة الحالية.",
+  "de": "Hol dir mit Context7 die aktuelle Tailwind-CSS-Doku und richte danach den Dark Mode in meinem Projekt ein.",
+  "en": "Use Context7 to pull the latest Tailwind CSS docs, then set up dark mode in my project the current way."
+ },
+ "playwright-mcp": {
+  "ar": "استخدم Playwright لملء نموذج التواصل في موقعي، وتأكد من ظهور رسالة نجاح الإرسال.",
+  "de": "Füll mit Playwright das Kontaktformular auf meiner Website aus und prüf, ob die Erfolgsmeldung erscheint.",
+  "en": "Use Playwright to fill in the contact form on my website and check that the success message appears."
+ },
+ "chrome-devtools-mcp": {
+  "ar": "قِس سرعة تحميل صفحتي الرئيسية بـ Chrome DevTools، واشرح لي الأخطاء الظاهرة في وحدة التحكم.",
+  "de": "Miss mit Chrome DevTools die Ladezeit meiner Startseite und erklär mir die Fehler in der Konsole.",
+  "en": "Use Chrome DevTools to measure how fast my homepage loads and explain the errors in the console."
+ },
+ "shopify-dev-mcp": {
+  "ar": "تحقّق عبر Shopify Dev MCP من كود Liquid في قالب صفحة المنتج، وأصلح أي أخطاء يكشفها.",
+  "de": "Prüf mit dem Shopify Dev MCP das Liquid in meinem Produkt-Template und behebe alle gefundenen Fehler.",
+  "en": "Use the Shopify Dev MCP to validate the Liquid in my product template and fix any errors it finds."
+ },
+ "21st-dev-magic-mcp": {
+  "ar": "استخدم 21st.dev Magic لإنشاء جدول أسعار بـ React يضم ثلاث باقات ومفتاحًا للتبديل بين الدفع الشهري والسنوي.",
+  "de": "Erzeuge mit 21st.dev Magic eine React-Preistabelle mit drei Tarifen und Umschalter für monatliche oder jährliche Zahlung.",
+  "en": "Use 21st.dev Magic to generate a React pricing table with three plans and a monthly or yearly toggle."
+ },
+ "sentry-mcp": {
+  "ar": "استخدم Sentry لتحديد الخطأ الأكثر تكرارًا هذا الأسبوع في موقعي المنشور، ثم أصلحه في الكود.",
+  "de": "Such in Sentry den häufigsten Fehler dieser Woche auf meiner Live-Website und behebe ihn im Code.",
+  "en": "Use Sentry to find the most frequent error on my live site this week and fix it in the code."
+ },
+ "playwright": {
+  "ar": "استخدم Playwright لاختبار عملية الدفع في متجري الإلكتروني على Chrome وFirefox وSafari وعلى شاشات الجوال.",
+  "de": "Teste mit Playwright den Checkout meines Onlineshops in Chrome, Firefox und Safari sowie auf Smartphone-Bildschirmen.",
+  "en": "Use Playwright to test my online shop's checkout in Chrome, Firefox and Safari and on mobile screen sizes."
+ },
+ "axe-core": {
+  "ar": "افحص صفحة التواصل في موقعي بـ axe-core، وأصلح كل مشاكل تباين الألوان والنصوص البديلة الناقصة التي يكتشفها.",
+  "de": "Prüfe meine Kontaktseite mit axe-core und behebe alle gemeldeten Probleme bei Farbkontrast und fehlenden Alternativtexten.",
+  "en": "Run axe-core on my contact page and fix every color contrast issue and missing alt text it reports."
+ },
+ "lighthouse-ci": {
+  "ar": "اضبط Lighthouse CI ليقيس الأداء وSEO في موقع معرض أعمالي مع كل تحديث، وينبّهني إذا تراجعت النتيجة.",
+  "de": "Richte Lighthouse CI für meine Portfolio-Seite ein, damit ich gewarnt werde, wenn ein Update Performance oder SEO verschlechtert.",
+  "en": "Set up Lighthouse CI to check my portfolio site on every update and warn me if the performance or SEO score drops."
+ },
+ "motion": {
+  "ar": "استخدم Motion لإضافة انتقالات سلسة بين خطوات نموذج التسجيل في تطبيق React الخاص بي.",
+  "de": "Nutze Motion, damit die Schritte des Anmeldeformulars in meiner React-App mit sanften Übergängen wechseln.",
+  "en": "Use Motion to add smooth transitions between the steps of the signup form in my React app."
+ },
+ "gsap": {
+  "ar": "استخدم GSAP لإضافة تأثير تمرير في ثيم Shopify يثبّت صورة المنتج بينما تنساب قائمة المزايا بجانبها.",
+  "de": "Baue mit GSAP einen Scroll-Effekt in mein Shopify-Theme ein, der das Produktfoto fixiert, während die Vorteile vorbeiziehen.",
+  "en": "Use GSAP to add a scroll effect to my Shopify theme that pins the product photo while the feature list scrolls past."
+ },
+ "lenis": {
+  "ar": "أضف تمريرًا ناعمًا بـ Lenis إلى موقع مكتبي المعماري ذي الصفحة الواحدة، دون أن تتعطل حركات GSAP الحالية.",
+  "de": "Füge der One-Page-Website meines Architekturbüros sanftes Scrollen mit Lenis hinzu, ohne die GSAP-Animationen zu stören.",
+  "en": "Add Lenis smooth scrolling to my architecture studio's one-page site without breaking the existing GSAP animations."
+ },
+ "autoanimate": {
+  "ar": "استخدم AutoAnimate لتتحرك المنتجات بسلاسة في قائمة السلة عندما يضيفها العملاء أو يحذفونها.",
+  "de": "Animiere mit AutoAnimate die Artikel in der Warenkorbliste, sobald Kunden sie hinzufügen oder entfernen.",
+  "en": "Use AutoAnimate so products slide smoothly in and out of the cart list when customers add or remove them."
+ },
+ "dotlottie": {
+  "ar": "اعرض بـ dotLottie رسمًا متحركًا يحتفي بإتمام الشراء في صفحة تأكيد الطلب، دون أن يُثقل الصفحة.",
+  "de": "Zeige mit dotLottie eine kleine Erfolgsanimation auf meiner Bestellbestätigungsseite, ohne die Seite aufzublähen.",
+  "en": "Use dotLottie to play a celebration animation on my order confirmation page without bloating the page size."
+ },
+ "remotion-skills": {
+  "ar": "أنشئ بـ Remotion فيديو دعائيًا مدته 15 ثانية لتخفيضات الربيع، مع ترجمة نصية ومشاهد مضبوطة التوقيت.",
+  "de": "Erstelle in Remotion ein 15-sekündiges Werbevideo für unseren Frühlings-Sale mit Untertiteln und sauber getimten Szenen.",
+  "en": "Create a 15-second promo video for our spring sale in Remotion, with captions and correctly timed scenes."
+ },
+ "flutter-animate": {
+  "ar": "استخدم flutter_animate لتظهر بطاقات الشاشة الرئيسية في تطبيق اللياقة الخاص بي واحدة تلو الأخرى بانزلاق ناعم.",
+  "de": "Blende mit flutter_animate die Karten auf dem Startbildschirm meiner Fitness-App nacheinander sanft ein.",
+  "en": "Use flutter_animate to make the cards on my fitness app's home screen fade and slide in one after another."
+ },
+ "shadcn-ui": {
+  "ar": "ابنِ صفحة الإعدادات في لوحة تحكم منصتي بمكونات shadcn/ui، وعدّلها لتطابق ألوان علامتنا التجارية.",
+  "de": "Baue die Einstellungsseite meines SaaS-Dashboards mit shadcn/ui-Komponenten und passe sie an unsere Markenfarben an.",
+  "en": "Build the settings page of my SaaS dashboard with shadcn/ui components and restyle them in our brand colors."
+ },
+ "radix-ui": {
+  "ar": "استخدم حزمة Dialog من Radix UI لبناء نافذة تأكيد تظهر قبل أن يحذف المستخدم حسابه في تطبيقي.",
+  "de": "Baue mit dem Dialog-Paket von Radix UI ein Bestätigungsfenster, das erscheint, bevor jemand in meiner App sein Konto löscht.",
+  "en": "Use the Radix UI Dialog package to build a confirmation popup that appears before users delete their account."
+ },
+ "magic-ui": {
+  "ar": "أضف مكونات Magic UI المتحركة إلى القسم الافتتاحي وقسم آراء العملاء في صفحة الهبوط الخاصة بتطبيقي.",
+  "de": "Füge animierte Magic-UI-Komponenten in den Hero-Bereich und die Kundenstimmen der Landingpage meiner App ein.",
+  "en": "Add animated Magic UI components to the hero section and testimonials of my app's landing page."
+ },
+ "aceternity-ui": {
+  "ar": "امنح القسم الافتتاحي في موقع أعمالي الفوتوغرافية تأثير خلفية لافتًا بأحد مكونات Aceternity UI.",
+  "de": "Gib dem Hero-Bereich meines Fotografie-Portfolios mit einer Aceternity-UI-Komponente einen auffälligen Hintergrundeffekt.",
+  "en": "Give the hero section of my photography portfolio an eye-catching background effect with an Aceternity UI component."
+ },
+ "daisyui": {
+  "ar": "أعد بناء شريط التنقل والأزرار وقسم الأسئلة الشائعة في موقع Tailwind الخاص بي باستخدام كلاسات daisyUI البسيطة.",
+  "de": "Baue Navigationsleiste, Buttons und FAQ-Akkordeon meiner Tailwind-Website mit den einfachen Klassennamen von daisyUI neu.",
+  "en": "Rebuild the navbar, buttons and FAQ accordion on my Tailwind site using daisyUI's simple class names."
+ },
+ "floating-ui": {
+  "ar": "استخدم Floating UI لتبقى تلميحات جدول الأسعار ظاهرة بالكامل حتى عند حافة الشاشة على الجوال.",
+  "de": "Sorge mit Floating UI dafür, dass die Info-Tooltips meiner Preistabelle auch am Bildschirmrand auf dem Handy sichtbar bleiben.",
+  "en": "Use Floating UI to keep the info tooltips in my pricing table fully visible, even at the screen edge on phones."
+ },
+ "sonner": {
+  "ar": "استخدم Sonner لإظهار إشعار منبثق في متجري المبني بـ React عند إضافة منتج إلى السلة أو إدخال كود خصم غير صالح.",
+  "de": "Zeige mit Sonner in meinem React-Shop Toast-Meldungen, wenn ein Produkt im Warenkorb landet oder ein Rabattcode ungültig ist.",
+  "en": "Use Sonner to show a toast in my React shop when a product is added to the cart or a discount code is invalid."
+ },
+ "vaul": {
+  "ar": "حوّل بـ Vaul فلاتر المنتجات في نسخة الجوال من متجري إلى قائمة سحب سفلية بأسلوب iOS.",
+  "de": "Verwandle mit Vaul die Produktfilter in der mobilen Ansicht meines Shops in ein von unten ausziehbares Menü im iOS-Stil.",
+  "en": "Use Vaul to turn the product filters in my shop's mobile view into an iOS-style drawer that slides up from the bottom."
+ },
+ "tremor": {
+  "ar": "ابنِ بـ Tremor لوحة تحكم لمبيعات متجري الشهرية، تعرض الإيرادات والطلبات والمنتجات الأكثر مبيعًا.",
+  "de": "Baue mit Tremor ein Dashboard für meinen Shop, das Monatsumsatz, Bestellungen und Bestseller als Diagramme zeigt.",
+  "en": "Build a monthly sales dashboard for my store with Tremor, showing revenue, orders and best-selling products."
+ },
+ "lucide": {
+  "ar": "استبدل الأيقونات غير المتناسقة في القائمة الجانبية لتطبيقي بأيقونات Lucide الخطية المتناسقة.",
+  "de": "Ersetze die uneinheitlichen Icons in der Seitenleiste meiner App durch einheitliche Linien-Icons von Lucide.",
+  "en": "Replace the mismatched icons in my app's sidebar menu with consistent Lucide line icons."
+ },
+ "phosphor": {
+  "ar": "أضف أيقونات Phosphor إلى قسم المزايا في موقعي، بوزن رفيع في الوضع العادي وممتلئ عند مرور المؤشر عليها.",
+  "de": "Füge Phosphor-Icons in meinen Features-Bereich ein: normal in dünner Strichstärke, beim Hovern gefüllt.",
+  "en": "Add Phosphor icons to my features section, in the thin weight by default and the filled weight on hover."
+ },
+ "tabler-icons": {
+  "ar": "اختر من Tabler Icons أيقونة مناسبة لكل خدمة من الخدمات الاثنتي عشرة في موقع شركة التنظيف الخاصة بي.",
+  "de": "Wähle für jede der zwölf Leistungen auf der Website meiner Reinigungsfirma ein passendes Icon von Tabler Icons.",
+  "en": "Pick a fitting icon from Tabler Icons for each of the twelve services on my cleaning company's website."
+ },
+ "shopify-cli": {
+  "ar": "شغّل معاينة حية لثيم متجري عبر Shopify CLI، وأعد تصميم صفحة المنتج، ثم ارفع التغييرات إلى المتجر.",
+  "de": "Starte mit Shopify CLI eine Live-Vorschau meines Themes, überarbeite die Produktseite und lade alles in den Shop hoch.",
+  "en": "Use Shopify CLI to preview my theme live while you redesign the product page, then push the changes to my store."
+ },
+ "next-intl": {
+  "ar": "استخدم next-intl لإضافة نسختين بالإنجليزية والألمانية إلى موقع الحجز المبني بـ Next.js، مع تواريخ وأسعار وروابط تناسب كل لغة.",
+  "de": "Ergänze meine Next.js-Buchungsseite mit next-intl um Englisch und Arabisch, mit passenden Datumsformaten, Preisen und Links.",
+  "en": "Use next-intl to add German and Arabic versions of my Next.js booking site, with localized dates, prices and links."
+ },
+ "react-email": {
+  "ar": "صمّم بـ React Email رسالة تأكيد الطلب لمتجر الشاي الخاص بي، بحيث تظهر بشكل صحيح في Gmail وOutlook.",
+  "de": "Gestalte mit React Email eine Bestellbestätigung für meinen Teeshop, die in Gmail und Outlook richtig angezeigt wird.",
+  "en": "Design an order confirmation email for my tea shop with React Email that displays correctly in Gmail and Outlook."
+ },
+ "cookieconsent": {
+  "ar": "أضف بـ CookieConsent نافذة موافقة على الكوكيز لموقع عيادة الأسنان الخاصة بي، تطلب إذن الزائر قبل كوكيز التحليلات وفق GDPR.",
+  "de": "Baue mit CookieConsent ein DSGVO-taugliches Cookie-Banner für die Website meiner Zahnarztpraxis, mit Opt-in für Analyse-Cookies.",
+  "en": "Add a GDPR-friendly CookieConsent banner to my dental practice's website with an opt-in for analytics cookies."
+ },
+ "uptime-kuma": {
+  "ar": "اضبط Uptime Kuma ليراقب متجري الإلكتروني على مدار الساعة ويرسل لي تنبيهًا على Telegram فور توقفه.",
+  "de": "Richte Uptime Kuma so ein, dass es meinen Onlineshop rund um die Uhr überwacht und mich bei einem Ausfall per Telegram warnt.",
+  "en": "Set up Uptime Kuma to watch my online store around the clock and message me on Telegram the moment it goes down."
+ },
+ "fullcalendar": {
+  "ar": "ابنِ بـ FullCalendar تقويم مواعيد لصالون تصفيف الشعر الخاص بي، بعرض أسبوعي وشهري ونقل المواعيد بالسحب والإفلات.",
+  "de": "Baue mit FullCalendar einen Terminkalender für meinen Friseursalon, in dem ich Termine per Drag-and-drop verschieben kann.",
+  "en": "Build an appointment calendar for my hair salon with FullCalendar, with week and month views and drag-and-drop rescheduling."
+ },
+ "vercel-plugin": {
+  "ar": "انشر مدونة السفر الخاصة بي المبنية بـ Next.js على Vercel، واربطها بنطاقي الخاص، ثم تحقق من نجاح النشر.",
+  "de": "Veröffentliche meinen Next.js-Reiseblog auf Vercel, verbinde meine eigene Domain und prüfe, ob das Deployment geklappt hat.",
+  "en": "Deploy my Next.js travel blog to Vercel, connect my own domain and check that the deployment succeeded."
+ },
+ "vercel-mcp": {
+  "ar": "اقرأ عبر Vercel MCP سجلات الأخطاء لآخر نشر في مشروعي، واشرح لماذا تعرض صفحة الدفع الخطأ 500.",
+  "de": "Lies über Vercel MCP die Fehlerprotokolle meines letzten Deployments und erkläre, warum der Checkout einen 500-Fehler liefert.",
+  "en": "Use Vercel MCP to read the error logs of my latest deployment and explain why the checkout page returns a 500 error."
+ },
+ "ai-sdk-skill": {
+  "ar": "أضف إلى متجري المبني بـ Next.js محادثة ذكاء اصطناعي بأحدث إصدار من AI SDK، تجيب عن أسئلة العملاء حول الشحن والإرجاع.",
+  "de": "Baue mit dem aktuellen AI SDK einen KI-Chat in meinen Next.js-Shop ein, der Kundenfragen zu Versand und Rückgabe beantwortet.",
+  "en": "Add an AI chat to my Next.js shop with the latest AI SDK that answers customer questions about shipping and returns."
+ },
+ "v0-mcp": {
+  "ar": "اطلب من v0 صفحة هبوط لدروس اليوغا الجديدة عبر الإنترنت في الاستوديو الخاص بي، ثم انقل الكود إلى مشروعي.",
+  "de": "Lass v0 eine Landingpage für die neuen Onlinekurse meines Yogastudios erstellen und hol den Code in mein Projekt.",
+  "en": "Ask v0 to generate a landing page for my yoga studio's new online classes and bring the code into my project."
+ },
+ "squirrelscan": {
+  "ar": "افحص موقع مطعمي كاملًا بـ squirrelscan، ورتّب مشاكل SEO والروابط المعطلة وترويسات الأمان حسب الأولوية.",
+  "de": "Prüfe meine komplette Restaurant-Website mit squirrelscan und priorisiere die Probleme bei SEO, Links und Sicherheits-Headern.",
+  "en": "Audit my whole restaurant website with squirrelscan and tell me which SEO, link and security header issues to fix first."
+ },
+ "web-quality-skills": {
+  "ar": "قِس Core Web Vitals للصفحة الرئيسية وصفحات الوصفات في مدونة الطبخ الخاصة بي، ثم أصلح ما يبطئها صفحة بعد صفحة.",
+  "de": "Miss die Core Web Vitals der Start- und Rezeptseiten meines Foodblogs und behebe dann Seite für Seite, was sie ausbremst.",
+  "en": "Measure the Core Web Vitals of my food blog's homepage and recipe pages, then fix whatever slows them down, page by page."
+ },
+ "unlighthouse": {
+  "ar": "شغّل Unlighthouse على كل صفحات متجري، وأخبرني بأبطأ عشر صفحات وبالصفحات الأضعف في SEO.",
+  "de": "Lass Unlighthouse über meinen ganzen Shop laufen und nenne mir die zehn langsamsten Seiten und die mit dem schwächsten SEO.",
+  "en": "Run Unlighthouse across my entire shop and tell me which ten pages are the slowest and which have the weakest SEO."
+ },
+ "lychee": {
+  "ar": "افحص بـ lychee كل الروابط في خريطة موقعي، واعرض لي المعطّل منها لأصلحه قبل إعادة إطلاق الموقع.",
+  "de": "Prüfe mit lychee alle Links aus meiner Sitemap und liste die defekten auf, damit ich sie vor dem Relaunch reparieren kann.",
+  "en": "Check every link in my sitemap with lychee and list the broken ones so I can fix them before the relaunch."
+ },
+ "mdn-http-observatory": {
+  "ar": "افحص نطاق وكالتي الرقمية بـ MDN HTTP Observatory، واشرح أي ترويسات أمان يجب أن أضيفها لرفع درجته.",
+  "de": "Prüfe die Domain meiner Webagentur mit MDN HTTP Observatory und erkläre, welche Sicherheits-Header die Note verbessern.",
+  "en": "Scan my web agency's domain with MDN HTTP Observatory and explain which security headers to add to raise the grade."
+ },
+ "hyperframes": {
+  "ar": "حوّل بـ HyperFrames صفحة HTML المتحركة التي تعرض منتجي إلى إعلان MP4 مدته 10 ثوانٍ لنشره على Instagram.",
+  "de": "Verwandle mit HyperFrames meinen animierten HTML-Produktteaser in eine zehnsekündige MP4-Anzeige für Instagram.",
+  "en": "Use HyperFrames to turn my animated HTML product teaser into a 10-second MP4 ad for Instagram."
+ },
+ "gsap-skills": {
+  "ar": "ابنِ في تطبيق React الخاص بي خطًا زمنيًا بـ GSAP يُظهر بطاقات الأسعار واحدة تلو الأخرى أثناء التمرير.",
+  "de": "Baue in meiner React-App eine GSAP-Timeline, die die Preiskarten beim Scrollen nacheinander einblendet.",
+  "en": "Build a GSAP timeline in my React app that reveals the pricing cards one by one as the visitor scrolls."
+ },
+ "motion-design-skill": {
+  "ar": "خطّط توقيتًا وانسيابية موحّدين لكل حركات الأزرار والقوائم وسلة التسوق في متجري قبل كتابة أي كود.",
+  "de": "Plane einheitliches Timing und Easing für alle Button-, Menü- und Warenkorb-Animationen meines Shops, bevor du Code schreibst.",
+  "en": "Plan consistent timing and easing for every button, menu and cart animation in my store before writing any code."
+ },
+ "motion-ai-kit": {
+  "ar": "ابحث في أحدث وثائق Motion، ثم أضف حركة فتح وإغلاق سلسة لمعرض الصور في تطبيق React الخاص بي.",
+  "de": "Schau in die aktuelle Motion-Doku und animiere dann das Öffnen und Schließen der Bildergalerie in meiner React-App.",
+  "en": "Check the latest Motion docs, then add a smooth open and close animation to the photo gallery in my React app."
+ },
+ "rampstack-brand-build-skills": {
+  "ar": "رافقني في بناء هوية علامتي الجديدة لمنتجات العناية بالبشرة الطبيعية، من الاسم والألوان إلى نبرة الكلام ودليل الهوية.",
+  "de": "Begleite mich beim Markenaufbau für meine neue Bio-Hautpflegelinie, von Name und Farben bis zu Tonalität und Markenhandbuch.",
+  "en": "Walk me through building a brand for my organic skincare line, from name and colors to tone of voice and a brand guide."
+ },
+ "dembrandt": {
+  "ar": "استخرج بـ Dembrandt الشعار والألوان والخطوط والمسافات من موقع شركتي، واحفظها في DESIGN.md قبل بناء المتجر الجديد.",
+  "de": "Lies mit Dembrandt Logo, Farben, Schriften und Abstände meiner Firmenwebsite aus und speichere alles als DESIGN.md.",
+  "en": "Run Dembrandt on my company website and save its logo, colors, fonts and spacing as DESIGN.md before we build the new shop."
+ },
+ "canva-skills": {
+  "ar": "افحص تصميم عروض الجمعة السوداء في Canva مقابل هوية علامتنا، ثم غيّر مقاسه ليناسب Instagram وFacebook وLinkedIn.",
+  "de": "Gleiche mein Black-Friday-Design in Canva mit unserer Marke ab und passe die Größe für Instagram, Facebook und LinkedIn an.",
+  "en": "Check my Black Friday design in Canva against our brand identity, then resize it for Instagram, Facebook and LinkedIn."
+ },
+ "brand-guidelines-template": {
+  "ar": "استبدل ألوان Anthropic في دليل الهوية بألوان مقهاي وخطوطه، ثم صمّم بها قائمة طعام هذا الأسبوع.",
+  "de": "Ersetze die Anthropic-Farben in den Brand Guidelines durch Farben und Schriften meines Cafés und gestalte die Wochenkarte.",
+  "en": "Replace the Anthropic colors in the brand guidelines with my café's colors and fonts, then design this week's menu."
+ },
+ "recraft-mcp": {
+  "ar": "حوّل بـ Recraft شعار مخبزي من صورة PNG غير واضحة إلى ملف متجه نظيف، وولّد أيقونات متجهة تناسبه.",
+  "de": "Wandle mit Recraft das unscharfe PNG-Logo meiner Bäckerei in eine Vektorgrafik um und erstelle passende Vektor-Icons dazu.",
+  "en": "Use Recraft to turn my bakery's blurry PNG logo into a clean vector and create a few matching vector icons."
+ },
+ "xcode-mcp": {
+  "ar": "ابنِ تطبيق تتبّع العادات في Xcode وشغّل اختباراته، ثم اعرض لي معاينة SwiftUI لشاشة الإعدادات الجديدة.",
+  "de": "Baue meinen Habit-Tracker in Xcode, führe die Tests aus und zeig mir die SwiftUI-Vorschau des neuen Einstellungsbildschirms.",
+  "en": "Build my habit tracker in Xcode, run the tests and show me the SwiftUI preview of the new settings screen."
+ },
+ "xcode-27-agent-skills": {
+  "ar": "دقّق إعدادات الأمان في تطبيق اليوميات، وحدّث اختبارات الوحدة التي تعطّلت بعد إعادة هيكلة واجهة SwiftUI.",
+  "de": "Prüfe die Sicherheitseinstellungen meiner Tagebuch-App und aktualisiere die Unit-Tests, die nach dem SwiftUI-Umbau fehlschlagen.",
+  "en": "Audit the security settings of my journaling app and update the unit tests that broke after the SwiftUI refactor."
+ },
+ "mobilebuildmcp": {
+  "ar": "استخدم MobileBuildMCP لبناء تطبيق الحجوزات المكتوب بـ Capacitor وتشغيله على جهاز iPhone المتصل ثم اختباره.",
+  "de": "Bau mit MobileBuildMCP meine Capacitor-Buchungs-App, starte sie auf meinem angeschlossenen iPhone und führe die Tests aus.",
+  "en": "Use MobileBuildMCP to build my Capacitor booking app, launch it on my connected iPhone and run its tests."
+ },
+ "claude-code-ios-simulator": {
+  "ar": "ابنِ تطبيق قائمة المهام وافتحه في محاكي iPhone، ثم جرّب بنفسك إضافة مهمة وحذفها.",
+  "de": "Baue meine To-do-App, starte sie im iPhone-Simulator und teste selbst, ob sich Aufgaben anlegen und löschen lassen.",
+  "en": "Build my to-do app, open it in the iPhone simulator and try adding and deleting a task yourself."
+ },
+ "peekaboo": {
+  "ar": "تنقّل بـ Peekaboo بين شاشات الترحيب في تطبيقي على Mac، والتقط صورة لكل خطوة، وأخبرني أين يختل التصميم.",
+  "de": "Klick dich mit Peekaboo durchs Onboarding meiner Mac-App, mach Screenshots jedes Schritts und sag mir, wo das Layout bricht.",
+  "en": "Use Peekaboo to click through my Mac app's onboarding, screenshot each step and tell me where the layout breaks."
+ },
+ "imcp": {
+  "ar": "ابحث بـ iMCP عن وقت فارغ في تقويمي يوم الثلاثاء القادم، وأضف فيه تذكيرًا بالاتصال بالمستشار الضريبي.",
+  "de": "Finde mit iMCP am Dienstag ein freies Zeitfenster im Kalender und erstelle dafür eine Erinnerung, den Steuerberater anzurufen.",
+  "en": "Use iMCP to find a free slot in my calendar next Tuesday and add a reminder to call my tax advisor then."
+ },
+ "macos-automator-mcp": {
+  "ar": "انقل بـ macOS Automator MCP كل ملفات PDF من مجلد التنزيلات إلى مجلد الفواتير، واعرض عليّ سكربت AppleScript قبل تشغيله.",
+  "de": "Verschiebe mit macOS Automator MCP alle PDFs aus Downloads in meinen Ordner Rechnungen, aber zeig mir vorher das AppleScript.",
+  "en": "Use macOS Automator MCP to move every PDF in Downloads to my Invoices folder, but show me the AppleScript first."
+ },
+ "dimillian-skills": {
+  "ar": "اكتب ملاحظات الإصدار 2.3 لتطبيق التأمل على App Store، اعتمادًا على التغييرات المسجّلة في Git منذ الإصدار السابق.",
+  "de": "Schreib die App-Store-Versionshinweise für Version 2.3 meiner Meditations-App anhand der Commits seit dem letzten Release.",
+  "en": "Write App Store release notes for version 2.3 of my meditation app based on the commits since the last release."
+ },
+ "maestro-mcp": {
+  "ar": "جرّب بـ Maestro خطوات الدفع في تطبيق Flutter على محاكي Android، واحفظها كاختبار قابل للتكرار.",
+  "de": "Geh mit Maestro den Checkout meiner Flutter-App im Android-Emulator durch und speichere die Schritte als wiederholbaren Test.",
+  "en": "Use Maestro to walk through the checkout of my Flutter app on the Android emulator and save it as a repeatable test."
+ },
+ "lexware-office-mcp": {
+  "ar": "اعرض لي من Lexware Office كل فواتير سبتمبر التي لم تُدفع بعد، مرتبةً حسب تاريخ الاستحقاق.",
+  "de": "Zeig mir aus Lexware Office alle Rechnungen vom September, die noch offen sind, sortiert nach Fälligkeit.",
+  "en": "List all September invoices in Lexware Office that are still unpaid, sorted by due date."
+ },
+ "norman-finance-mcp": {
+  "ar": "جهّز بـ Norman إقرار ضريبة القيمة المضافة للربع الثالث، واعرض لي كل معاملة ليس لها إيصال مطابق بعد.",
+  "de": "Bereite mit Norman meine Umsatzsteuer-Voranmeldung für Q3 vor und zeig mir alle Umsätze, denen noch ein Beleg fehlt.",
+  "en": "Use Norman to prepare my Q3 VAT return and list every transaction that still has no matching receipt."
+ },
+ "qonto-mcp": {
+  "ar": "أنشئ في Qonto عرض سعر لعميلي Müller GmbH مقابل 20 ساعة تصميم مواقع بسعر 85 يورو للساعة.",
+  "de": "Erstelle in Qonto ein Angebot über 20 Stunden Webdesign zu 85 € pro Stunde für meinen Kunden Müller GmbH.",
+  "en": "Create a quote in Qonto for my client Müller GmbH covering 20 hours of web design at €85 per hour."
+ },
+ "openaccountants-germany": {
+  "ar": "احسب من ملف CSV هذا للإيرادات والمصروفات أرقام إقرار UStVA لشهر أكتوبر، لأراجعها مع مستشاري الضريبي.",
+  "de": "Ermittle aus dieser CSV mit Einnahmen und Ausgaben die Zahlen für meine Oktober-UStVA, damit ich sie mit dem Steuerberater prüfe.",
+  "en": "Work out my October UStVA figures from this CSV of income and expenses so I can review them with my accountant."
+ },
+ "e-invoice-eu": {
+  "ar": "اكتب سكربت Node.js باستخدام E-Invoice-EU يحوّل بيانات الفاتورة من JSON إلى فاتورة إلكترونية بصيغة ZUGFeRD.",
+  "de": "Schreib mit E-Invoice-EU ein Node.js-Skript, das meine Rechnungsdaten aus JSON in eine ZUGFeRD-E-Rechnung umwandelt.",
+  "en": "Write a Node.js script with E-Invoice-EU that turns my invoice data from JSON into a ZUGFeRD e-invoice."
+ },
+ "kosit-validator": {
+  "ar": "افحص الملف invoice-2026-114.xml بأداة KoSIT Validator، واشرح لي كل خطأ لأصلحه قبل إرسال الفاتورة.",
+  "de": "Prüfe rechnung-2026-114.xml mit dem KoSIT Validator und erklär mir jeden Fehler, damit ich ihn vor dem Versand beheben kann.",
+  "en": "Run the KoSIT Validator on invoice-2026-114.xml and explain each error so I can fix it before sending the invoice."
+ },
+ "paperless-ngx": {
+  "ar": "ثبّت paperless-ngx على خادمي المنزلي بنظام Ubuntu، لتصبح إيصالاتي وفواتيري الممسوحة ضوئيًا قابلة للبحث.",
+  "de": "Installiere paperless-ngx auf meinem Ubuntu-Homeserver, damit meine eingescannten Belege und Rechnungen durchsuchbar werden.",
+  "en": "Install paperless-ngx on my Ubuntu home server so my scanned receipts and invoices become searchable."
+ },
+ "paperless-mcp": {
+  "ar": "ابحث في أرشيف Paperless عن كل فواتير الهاتف لعام 2025، وأضف إليها الوسم tax-2025.",
+  "de": "Such in meinem Paperless-Archiv alle Handyrechnungen von 2025 heraus und versieh sie mit dem Tag steuer-2025.",
+  "en": "Find every 2025 phone bill in my Paperless archive and add the tag tax-2025 to each one."
+ },
+ "better-icons": {
+  "ar": "ابحث عن أيقونات متناسقة للشحن والإرجاع والدفع الآمن، والصقها كـ SVG مباشرة في تذييل موقعي.",
+  "de": "Such passende Icons für Versand, Rückgabe und sichere Zahlung und füge sie als Inline-SVG in meinen Footer ein.",
+  "en": "Find a matching set of icons for shipping, returns and secure payment and paste them as inline SVG into my footer."
+ },
+ "hugeicons": {
+  "ar": "أضف أيقونات من مجموعة Hugeicons المجانية إلى شريط التنقل السفلي في تطبيق الوصفات المبني بـ Flutter.",
+  "de": "Füge der unteren Navigationsleiste meiner Flutter-Rezept-App passende Icons aus dem kostenlosen Hugeicons-Set hinzu.",
+  "en": "Add icons from the free Hugeicons set to the bottom navigation bar of my Flutter recipe app."
+ },
+ "thesvg": {
+  "ar": "أضف بـ theSVG شعارات PayPal وKlarna وDHL إلى شريط الدفع والشحن في تذييل متجري.",
+  "de": "Füge mit theSVG die Logos von PayPal, Klarna und DHL in die Zahlungs- und Versandleiste im Footer meines Shops ein.",
+  "en": "Use theSVG to add the PayPal, Klarna and DHL logos to the payment and shipping row in my shop footer."
+ },
+ "lucide-animated": {
+  "ar": "أضف أيقونات متحركة من lucide-animated إلى القائمة الرئيسية في موقعي المبني بـ Next.js، لتتحرك عند مرور الماوس.",
+  "de": "Füge dem Hauptmenü meiner Next.js-Seite animierte Icons von lucide-animated hinzu, die sich beim Hovern bewegen.",
+  "en": "Add animated icons from lucide-animated to the main menu of my Next.js site so they move on hover."
+ },
+ "make-interfaces-feel-better": {
+  "ar": "حسّن أزرار صفحة الدفع لتنكمش قليلًا عند الضغط، وتكون مساحة لمسها كافية على الجوال.",
+  "de": "Verfeinere die Buttons im Checkout, damit sie beim Drücken leicht schrumpfen und auf dem Handy groß genug zum Tippen sind.",
+  "en": "Polish the buttons in my checkout so they shrink slightly on press and have big enough touch areas on mobile."
+ },
+ "react-bits": {
+  "ar": "أضف زر HoldButton من React Bits إلى نافذة حذف الحساب في تطبيق React، ليؤكد المستخدم بالضغط المطوّل.",
+  "de": "Baue den HoldButton von React Bits in den Löschdialog meiner React-App ein, sodass man zum Bestätigen gedrückt halten muss.",
+  "en": "Add the React Bits HoldButton to the delete-account dialog in my React app so users must press and hold to confirm."
+ },
+ "uiverse": {
+  "ar": "اختر مؤشر تحميل من Uiverse يناسب ألوان علامتي التجارية، وأضفه إلى ثيم Shopify، ثم افحص تباينه وحالة التركيز.",
+  "de": "Such einen Uiverse-Loader in meinen Markenfarben aus, bau ihn in mein Shopify-Theme ein und prüfe Kontrast und Fokuszustand.",
+  "en": "Pick a Uiverse loader that fits my brand colors, add it to my Shopify theme and check its contrast and focus state."
+ },
+ "anime-js": {
+  "ar": "استخدم Anime.js لرسم شعاري بصيغة SVG خطًّا بخط أثناء التمرير، مع حفظ ملف المكتبة داخل ثيم Shopify.",
+  "de": "Lass mit Anime.js mein SVG-Logo beim Scrollen Linie für Linie erscheinen und speichere die Bibliothek direkt im Shopify-Theme.",
+  "en": "Use Anime.js to draw my SVG logo line by line as visitors scroll, with the script saved inside my Shopify theme."
+ },
+ "swup": {
+  "ar": "أضف بـ Swup انتقالات ناعمة بين صفحات ثيم Shopify، وأعد تشغيل سكربتات الثيم والتتبع بعد كل انتقال.",
+  "de": "Füge meinem Shopify-Theme mit Swup sanfte Seitenübergänge hinzu und führe Theme- und Tracking-Skripte danach jeweils neu aus.",
+  "en": "Add Swup page transitions to my Shopify theme and re-run the theme and tracking scripts after each one."
+ },
+ "number-flow": {
+  "ar": "استخدم Number Flow لتحريك مجموع السلة باليورو بنعومة كلما غيّر العميل الكمية.",
+  "de": "Animiere mit Number Flow die Warenkorbsumme in Euro, sobald ein Kunde die Menge ändert.",
+  "en": "Use Number Flow to animate the cart total in euros whenever a customer changes the quantity."
+ },
+ "three-js": {
+  "ar": "ابنِ بـ Three.js عارضًا ثلاثي الأبعاد للحذاء في صفحة المنتج، ولا تحمّل المكتبة إلا عند الوصول إليه بالتمرير.",
+  "de": "Baue mit Three.js einen 3D-Viewer für den Sneaker auf meiner Produktseite und lade die Bibliothek erst, wenn er ins Bild scrollt.",
+  "en": "Build a Three.js 3D viewer for the sneaker on my product page and load the library only when it scrolls into view."
+ },
+ "react-three-fiber": {
+  "ar": "استخدم React Three Fiber لإضافة كوب قهوة ثلاثي الأبعاد يدور ببطء أعلى صفحة الهبوط في موقع Next.js.",
+  "de": "Setze mit React Three Fiber eine langsam rotierende 3D-Kaffeetasse in den Hero-Bereich meiner Next.js-Landingpage.",
+  "en": "Use React Three Fiber to add a slowly rotating 3D coffee cup to the hero section of my Next.js landing page."
+ },
+ "three-js-skills": {
+  "ar": "امنح الخاتم في عارض المجوهرات المبني بـ Three.js خامة ذهبية واقعية وظلالًا ناعمة، واجعله يدور بالسحب.",
+  "de": "Gib dem Ring in meinem Three.js-Schmuckviewer ein realistisches Goldmaterial und weiche Schatten und mach ihn per Ziehen drehbar.",
+  "en": "Give the ring in my Three.js jewelry viewer a realistic gold material and soft shadows, and let visitors drag to rotate it."
+ },
+ "view-transitions-skill": {
+  "ar": "اجعل صورة المنتج تنتقل بسلاسة من شبكة المنتجات إلى صفحة التفاصيل في متجري المبني بـ Next.js كانتقال عنصر مشترك.",
+  "de": "Lass in meinem Next.js-Shop das Produktbild per Shared-Element-Übergang aus dem Raster in die Detailseite gleiten.",
+  "en": "Animate the product image from the grid into the detail page of my Next.js shop as a shared-element transition."
+ },
+ "fixing-motion-performance": {
+  "ar": "اكتشف سبب تقطّع حركات التمرير في موقع أعمالي على الجوال، وأصلحها.",
+  "de": "Finde heraus, warum die Scroll-Animationen in meinem Portfolio auf dem Handy ruckeln, und behebe es.",
+  "en": "Find out why the scroll animations on my portfolio stutter on mobile and fix them."
+ },
+ "interaction-design-skill": {
+  "ar": "صمّم حالتي التحميل والنجاح لنموذج الاشتراك في النشرة البريدية، بمدد حركة وانسيابية مناسبة.",
+  "de": "Gestalte Lade- und Erfolgszustände für mein Newsletter-Formular mit passenden Animationsdauern und Easing.",
+  "en": "Design the loading and success states for my newsletter signup form, with sensible durations and easing."
+ },
+ "lottie-creator-mcp": {
+  "ar": "ارسم في Lottie Creator طائرة ورقية تحلّق عبر الشاشة لصفحة الشكر بعد الاشتراك، ثم صدّر الملف.",
+  "de": "Animiere in Lottie Creator einen über den Bildschirm fliegenden Papierflieger für meine Danke-Seite und exportiere die Datei.",
+  "en": "Use Lottie Creator to animate a paper plane flying across the screen for my newsletter thank-you page and export it."
+ },
+ "rive-editor-mcp": {
+  "ar": "ابنِ في Rive دبًّا لطيفًا لنموذج تسجيل الدخول يغطي عينيه بينما يكتب المستخدم كلمة المرور.",
+  "de": "Baue in Rive ein Bären-Maskottchen für mein Login-Formular, das sich die Augen zuhält, während man das Passwort tippt.",
+  "en": "Build a Rive bear mascot for my login form that covers its eyes while the user types the password."
+ },
+ "text-to-lottie": {
+  "ar": "أنشئ رسمًا متحركًا صغيرًا بصيغة Lottie لحقيبة تسوّق تتأرجح بلطف، لحالة السلة الفارغة في ثيم Shopify.",
+  "de": "Erstelle eine kleine Lottie-Animation einer sanft schaukelnden Einkaufstasche für den leeren Warenkorb in meinem Shopify-Theme.",
+  "en": "Create a small Lottie animation of a gently swaying shopping bag for the empty-cart state in my Shopify theme."
+ },
+ "flutter-animations": {
+  "ar": "استخدم حزمة animations في Flutter لتتحول بطاقة كل عقار في تطبيقي إلى صفحة تفاصيله عند الضغط عليها.",
+  "de": "Lass mit dem Flutter-Paket animations jede Objektkarte meiner Immobilien-App beim Antippen in ihre Detailseite übergehen.",
+  "en": "Use the Flutter animations package so each listing card in my real-estate app expands into its detail page when tapped."
+ },
+ "lottie-for-flutter": {
+  "ar": "شغّل رسم Lottie المتحرك confetti.json في تطبيق Flutter فور إتمام الطلب بنجاح.",
+  "de": "Spiel in meiner Flutter-App die Lottie-Animation confetti.json ab, sobald eine Bestellung erfolgreich abgeschlossen ist.",
+  "en": "Play my confetti.json Lottie animation in my Flutter app right after an order is placed successfully."
+ },
+ "lottie-for-ios": {
+  "ar": "أضف Lottie for iOS إلى تطبيق SwiftUI، وشغّل loading.json في شاشة البداية أثناء تحميل البيانات.",
+  "de": "Binde Lottie for iOS in meine SwiftUI-App ein und spiel loading.json auf dem Startbildschirm ab, solange die Daten laden.",
+  "en": "Add Lottie for iOS to my SwiftUI app and play loading.json on the splash screen while data loads."
+ },
+ "pow": {
+  "ar": "استخدم Pow ليهتز زر تسجيل الدخول في تطبيق SwiftUI مع ردّ فعل لمسي عند إدخال كلمة مرور خاطئة.",
+  "de": "Lass mit Pow den Login-Button meiner SwiftUI-App bei falschem Passwort wackeln, mit passendem haptischem Feedback.",
+  "en": "Use Pow to make the login button in my SwiftUI app shake with haptic feedback when the password is wrong."
+ },
+ "swiftui-animation-skill": {
+  "ar": "راجع الحركات في تطبيق الطقس المبني بـ SwiftUI، وتأكد أن كلًّا منها يحترم إعداد تقليل الحركة.",
+  "de": "Prüfe die Animationen meiner SwiftUI-Wetter-App und sorg dafür, dass sie die Systemeinstellung für reduzierte Bewegung beachten.",
+  "en": "Review the animations in my SwiftUI weather app and make sure each one respects the Reduce Motion setting."
+ },
+ "very-good-flutter-animations": {
+  "ar": "أضف في تطبيق Flutter انتقال Hero للصورة الشخصية من قائمة جهات الاتصال إلى الملف الشخصي، وأظهر تفاصيله بالتتابع.",
+  "de": "Bau in meiner Flutter-App einen Hero-Übergang vom Avatar in der Kontaktliste zum Profil und blende die Details gestaffelt ein.",
+  "en": "In my Flutter app, add a Hero transition for the avatar from the contacts list to the profile and stagger in the details."
+ },
+ "capacitor-haptics": {
+  "ar": "استخدم Capacitor Haptics لإضافة اهتزاز خفيف عند إنهاء كل مجموعة في تطبيق التمارين، واهتزاز نجاح في نهاية الحصة.",
+  "de": "Lass meine Trainings-App mit Capacitor Haptics beim Abhaken eines Satzes leicht vibrieren und am Ende ein Erfolgssignal geben.",
+  "en": "Use Capacitor Haptics to add a light haptic tap when a set is checked off in my workout app and a success buzz at the end."
+ },
+ "remotion": {
+  "ar": "استخدم Remotion لتحويل مقطع مدته 30 ثانية من البودكاست إلى فيديو MP4 تشويقي مع ترجمة متزامنة.",
+  "de": "Mach mit Remotion aus einem 30-Sekunden-Ausschnitt meines Podcasts ein MP4-Teaservideo mit synchronen Untertiteln.",
+  "en": "Use Remotion to turn a 30-second clip of my podcast into an MP4 teaser with synced subtitles."
+ },
+ "video-shotcraft": {
+  "ar": "خطّط وابنِ في Remotion فيديو ترويجيًا مدته 20 ثانية لتطبيق الميزانية، من القصة واللقطات إلى الحركة والصوت.",
+  "de": "Plane und baue in Remotion ein 20-sekündiges Werbevideo für meine Budget-App, von Story und Shots bis zu Animation und Sound.",
+  "en": "Plan and build a 20-second promo video for my budgeting app in Remotion, from story and shots to motion and sound."
+ },
+ "openmontage": {
+  "ar": "أنتج بـ OpenMontage فيديو تعريفيًا مدته دقيقتان عن ميزة الحجز الإلكتروني الجديدة، من كتابة النص حتى التصدير النهائي.",
+  "de": "Erstelle mit OpenMontage ein zweiminütiges Erklärvideo zu unserer neuen Online-Buchung, vom Skript bis zum fertigen Export.",
+  "en": "Use OpenMontage to produce a two-minute explainer video about our new online booking feature, from script to final export."
+ },
+ "revideo": {
+  "ar": "أنشئ مشروع Revideo واكتب بالكود فيديو تشويقيًا مدته 10 ثوانٍ من شعارنا وثلاث صور لمنتجاتنا.",
+  "de": "Richte ein Revideo-Projekt ein und programmiere aus unserem Logo und drei Produktfotos einen 10-sekündigen Teaser.",
+  "en": "Set up a Revideo project and code a 10-second teaser video from our logo and three product photos."
+ },
+ "iart-motion-skills": {
+  "ar": "اصنع فيديو تخفيضات مدته 15 ثانية لتشكيلة الشتاء يعرض خصم 30% والأسعار باليورو بالصيغة الألمانية.",
+  "de": "Erstelle ein 15-sekündiges Sale-Video für unsere Winterkollektion mit 30 % Rabatt und Preisen im Format 49,90 €.",
+  "en": "Make a 15-second sale video for our winter collection with 30% off and prices in German euro format, like 49,90 €."
+ },
+ "video-use": {
+  "ar": "حرّر لقطاتي الخام لفتح علبة المنتج: احذف فترات الصمت واضبط الألوان وأضف الترجمة.",
+  "de": "Bearbeite mein Unboxing-Rohmaterial: Schneide die Pausen heraus, korrigiere die Farben und füge Untertitel hinzu.",
+  "en": "Edit my raw unboxing footage: cut out the silences, fix the colors and add subtitles."
+ },
+ "claude-motion": {
+  "ar": "حوّل نص تخفيضات الخريف وأسعارها وثلاث صور للمنتجات إلى رسم متحرك قصير، وصدّره بصيغة MP4.",
+  "de": "Mach aus unserem Herbst-Sale-Text, den Preisen und drei Produktfotos eine kurze Animation und exportiere sie als MP4.",
+  "en": "Turn our autumn sale text, prices and three product photos into a short animation and export it as MP4."
+ },
+ "figma-motion-skill": {
+  "ar": "أضف الحركة والتوقيت إلى شاشات التعريف بالتطبيق في ملف Figma لديّ كي أصدّرها فيديو.",
+  "de": "Füge den Onboarding-Screens in meiner Figma-Datei Animationen und Timing hinzu, damit ich sie als Video exportieren kann.",
+  "en": "Add motion and timing to the onboarding screens in my Figma file so I can export them as a video."
+ },
+ "creatomate-mcp": {
+  "ar": "استخدم Creatomate لصنع فيديو إعلاني قصير من قالب واحد لكل منتج من منتجاتنا العشرين الأكثر مبيعًا.",
+  "de": "Erstelle mit Creatomate aus einer Vorlage für jeden unserer 20 Bestseller ein kurzes Werbevideo.",
+  "en": "Use Creatomate to make a short ad video from one template for each of our 20 bestsellers."
+ },
+ "shotstack-mcp": {
+  "ar": "استخدم Shotstack لإنتاج فيديو العروض الأسبوعية من قالب في السحابة، مع صورة خلفية وتعليق صوتي بالذكاء الاصطناعي.",
+  "de": "Rendere mit Shotstack aus einer Vorlage das Video zu unseren Wochenangeboten, mit KI-generiertem Hintergrundbild und Voice-over.",
+  "en": "Use Shotstack to render our weekly deals video from a template with an AI-generated background image and voice-over."
+ },
+ "runway-mcp": {
+  "ar": "استخدم Runway لتحويل صورة كوب السيراميك هذه إلى مقطع مدته 5 ثوانٍ يتصاعد منه البخار.",
+  "de": "Mach mit Runway aus diesem Foto unserer Keramiktasse einen 5-Sekunden-Clip, in dem Dampf aufsteigt.",
+  "en": "Use Runway to turn this photo of our ceramic mug into a 5-second clip with steam rising from it."
+ },
+ "adobe-for-creativity": {
+  "ar": "استخدم Adobe لتغيير مقاس فيديو إطلاق منتجنا ليناسب Instagram Reels مع الإبقاء على أفضل اللقطات فقط.",
+  "de": "Bring mit Adobe unser Launch-Video ins Format für Instagram Reels und kürze es auf die besten Szenen.",
+  "en": "Use Adobe to resize our product launch video for Instagram Reels and keep only the best shots."
+ },
+ "davinci-resolve-mcp": {
+  "ar": "أضف في DaVinci Resolve عنوانًا متحركًا بـ Fusion إلى بداية الخط الزمني، ثم صدّر الفيديو لنشره على YouTube.",
+  "de": "Füge in DaVinci Resolve am Anfang meiner Timeline einen animierten Fusion-Titel ein und exportiere das Video für YouTube.",
+  "en": "In DaVinci Resolve, add an animated Fusion title to the start of my timeline and export the video for YouTube."
+ },
+ "mcp-for-blender": {
+  "ar": "ابنِ في Blender مشهدًا تدور فيه زجاجة عطرنا ببطء على قاعدة دوّارة تحت إضاءة استوديو ناعمة.",
+  "de": "Baue in Blender eine Szene, in der sich unser Parfümflakon unter weichem Studiolicht langsam auf einem Drehteller dreht.",
+  "en": "Build a Blender scene where our perfume bottle slowly rotates on a turntable under soft studio lighting."
+ },
+ "after-effects-mcp": {
+  "ar": "في مشروع After Effects لديّ، أضف إلى طبقة الشعار في تركيبة المقدمة حركة تكبّرها وتُظهرها تدريجيًا.",
+  "de": "Animiere in meinem After-Effects-Projekt die Logo-Ebene der Intro-Komposition, sodass sie größer wird und sanft einblendet.",
+  "en": "In my After Effects project, animate the logo layer in the intro composition so it scales up and fades in."
+ },
+ "manim": {
+  "ar": "استخدم Manim لإنشاء فيديو شرح قصير يُظهر بالرسوم المتحركة كيف تنمو المدخرات بالفائدة المركّبة خلال 10 سنوات.",
+  "de": "Erstelle mit Manim ein kurzes Erklärvideo, das animiert zeigt, wie Ersparnisse mit Zinseszins über 10 Jahre wachsen.",
+  "en": "Use Manim to make a short explainer that animates how savings grow with compound interest over 10 years."
+ },
+ "manim-skill": {
+  "ar": "اكتب مشهد Manim يبرهن نظرية فيثاغورس بصريًا بتحريك المربعات حول مثلث قائم الزاوية.",
+  "de": "Schreibe eine Manim-Szene, die den Satz des Pythagoras mit Quadraten an einem rechtwinkligen Dreieck visuell beweist.",
+  "en": "Write a Manim scene that proves the Pythagorean theorem visually by moving squares around a right triangle."
+ },
+ "motion-canvas": {
+  "ar": "استخدم Motion Canvas لصنع فيديو شرح متحرك مدته 30 ثانية يوضّح كيف يعمل صندوق الاشتراك لدينا في ثلاث خطوات.",
+  "de": "Animiere mit Motion Canvas ein 30-sekündiges Erklärvideo, wie unsere Abo-Box in drei Schritten funktioniert.",
+  "en": "Use Motion Canvas to animate a 30-second explainer of how our subscription box works in three steps."
+ },
+ "theatre-js": {
+  "ar": "أضف Theatre.js إلى صفحة الهبوط لديّ لأضبط الرسوم المتحركة في أعلاها بمفاتيح حركة على خط زمني.",
+  "de": "Richte Theatre.js auf meiner Landingpage ein, damit ich die Hero-Animation mit Keyframes auf einer Timeline feinjustieren kann.",
+  "en": "Set up Theatre.js on my landing page so I can fine-tune the hero animation with keyframes on a timeline."
+ },
+ "editly": {
+  "ar": "اكتب ملف editly يجمع مقاطع منتجاتي الخمسة بانتقالات سلسة مع نص عنوان وموسيقى خلفية.",
+  "de": "Schreibe eine editly-Datei, die meine fünf Produktclips mit Überblendungen, Titeltext und Hintergrundmusik verbindet.",
+  "en": "Write an editly file that joins my five product clips with crossfades, title text and background music."
+ },
+ "kinocut-ffmpeg-mcp": {
+  "ar": "استخدم Kinocut لقص أول 8 ثوانٍ من مقاطع MOV الثلاثة هذه ودمجها ثم تحويل الناتج إلى MP4.",
+  "de": "Schneide mit Kinocut die ersten 8 Sekunden dieser drei MOV-Clips ab, füge sie zusammen und wandle das Ergebnis in MP4 um.",
+  "en": "Use Kinocut to trim the first 8 seconds off these three MOV clips, merge them and convert the result to MP4."
+ },
+ "rive-for-ios": {
+  "ar": "أضف إلى تطبيقي المبني بـ SwiftUI زر إعجاب متحركًا من Rive تتغير حالته عندما يحفظ المستخدم منتجًا.",
+  "de": "Baue in meine SwiftUI-App einen animierten Rive-Like-Button ein, der seinen Zustand wechselt, wenn jemand ein Produkt speichert.",
+  "en": "Add an animated Rive like button to my SwiftUI app that changes state when the user saves a product."
+ },
+ "understand-anything": {
+  "ar": "ابنِ رسمًا معرفيًا لهذا المشروع الذي استلمته للتو، وأرني كل ما يعتمد على وحدة تسجيل الدخول.",
+  "de": "Erstelle einen Wissensgraphen dieser übernommenen Codebasis und zeig mir alles, was vom Login-Modul abhängt.",
+  "en": "Build a knowledge graph of this codebase I just inherited and show me everything that depends on the login module."
+ },
+ "rea": {
+  "ar": "استخدم REA لتحليل ملف APK الخاص بتطبيقنا على Android، واذكر عناوين API التي يستدعيها.",
+  "de": "Analysiere mit REA die APK unserer eigenen Android-App und liste die API-Endpunkte auf, die sie aufruft.",
+  "en": "Use REA to analyze the APK of our own Android app and list the API endpoints it calls."
+ },
+ "moneyprinterturbo": {
+  "ar": "استخدم MoneyPrinterTurbo لصنع فيديو YouTube Shorts مدته 30 ثانية عن خمس طرق لتنسيق قميص الكتان.",
+  "de": "Erstelle mit MoneyPrinterTurbo ein 30-sekündiges YouTube-Short mit fünf Styling-Ideen für ein Leinenhemd.",
+  "en": "Use MoneyPrinterTurbo to make a 30-second YouTube Short on five ways to style a linen shirt."
+ },
+ "shopify-magic-and-sidekick": {
+  "ar": "حوّل ملاحظاتي عن لوح التقطيع الجديد من خشب الزيتون إلى كلمات مفتاحية قليلة ونبرة أعطيها لـ Shopify Magic.",
+  "de": "Mach aus meinen Notizen zum neuen Schneidebrett aus Olivenholz ein paar Stichworte und einen Ton für Shopify Magic.",
+  "en": "Turn my notes on our new olive-wood cutting board into a few keywords and a tone to give Shopify Magic."
+ },
+ "claude-metaprompt": {
+  "ar": "اكتب قالب أمر بمتغيراته يحوّل ورقة بيانات المنتج من المورّد إلى وصف قصير للمنتج.",
+  "de": "Erstelle eine Prompt-Vorlage mit Variablen, die aus dem Datenblatt eines Lieferanten eine kurze Produktbeschreibung macht.",
+  "en": "Write a prompt template with variables that turns a supplier's product data sheet into a short product description."
+ },
+ "promptfoo": {
+  "ar": "اضبط promptfoo لمقارنة إجابات Claude وGPT وGemini عن أكثر 20 سؤالًا يطرحها عملاؤنا.",
+  "de": "Richte promptfoo ein, um zu vergleichen, wie Claude, GPT und Gemini unsere 20 häufigsten Kundenfragen beantworten.",
+  "en": "Set up promptfoo to compare how Claude, GPT and Gemini answer our 20 most common customer support questions."
+ },
+ "langfuse": {
+  "ar": "ثبّت Langfuse باستضافة ذاتية عبر Docker Compose، وتتبّع كل استدعاء للنموذج في مولّد أوصاف منتجاتنا.",
+  "de": "Hoste Langfuse selbst mit Docker Compose und tracke jeden Modellaufruf unseres Generators für Produktbeschreibungen.",
+  "en": "Self-host Langfuse with Docker Compose and trace every model call made by our product-description generator."
+ },
+ "obsidian-skills": {
+  "ar": "احفظ مقال الويب هذا ملاحظةً نظيفة في Obsidian مع روابط wikilinks لملاحظات الموردين وملخص في Callout.",
+  "de": "Speichere diesen Webartikel als saubere Obsidian-Notiz mit Wikilinks zu meinen Lieferantennotizen und einem Callout als Fazit.",
+  "en": "Save this web article as a clean Obsidian note with wikilinks to my supplier notes and a summary callout."
+ },
+ "notion-plugin": {
+  "ar": "حوّل مواصفات برنامج الولاء في Notion لدينا إلى قائمة مهام للتنفيذ.",
+  "de": "Mach aus der Spezifikation für unser Treueprogramm in Notion eine Liste mit Umsetzungsaufgaben.",
+  "en": "Turn the loyalty program spec in our Notion into a list of implementation tasks."
+ },
+ "markitdown": {
+  "ar": "حوّل كتالوج المورّد هذا من PDF إلى Markdown عبر MarkItDown، ثم اسرد كل منتج مع سعره.",
+  "de": "Wandle den PDF-Katalog dieses Lieferanten mit MarkItDown in Markdown um und liste danach alle Produkte mit Preis auf.",
+  "en": "Convert this supplier's PDF catalog to Markdown with MarkItDown, then list every product with its price."
+ },
+ "visual-explainer": {
+  "ar": "اشرح مسار الطلب لدينا من الدفع حتى الشحن في صفحة HTML بمخطط انسيابي أشاركها مع فريقي.",
+  "de": "Erkläre unseren Bestellablauf von der Zahlung bis zum Versand als HTML-Seite mit Flussdiagramm für mein Team.",
+  "en": "Explain our order flow from payment to shipping as an HTML page with a flowchart I can share with my team."
+ },
+ "draw-io-mcp": {
+  "ar": "ارسم عملية الإرجاع لدينا مخططًا انسيابيًا قابلًا للتحرير في draw.io، وصدّره بصيغة PNG لصفحة المساعدة.",
+  "de": "Zeichne unseren Retourenprozess als bearbeitbares draw.io-Flussdiagramm und exportiere es als PNG für unsere Hilfeseite.",
+  "en": "Draw our returns process as an editable draw.io flowchart and export it as a PNG for our help page."
+ },
+ "arabic-writing-skill": {
+  "ar": "ترجم أوصاف منتجاتنا العشرة الأكثر مبيعًا من الألمانية إلى عربية طبيعية لا تبدو مترجمة آليًا.",
+  "de": "Übersetze die Beschreibungen unserer zehn Bestseller aus dem Deutschen in natürliches Arabisch, das nicht maschinell klingt.",
+  "en": "Translate our ten bestseller descriptions from German into natural Arabic that doesn't sound machine-translated."
+ },
+ "arabic-ready": {
+  "ar": "أنشئ قائمة أسعار عربية بصيغة PDF تظهر فيها الأسعار ورموز المنتجات وأسماء العلامات الإنجليزية بترتيب صحيح.",
+  "de": "Erstelle eine arabische PDF-Preisliste, in der Preise, Artikelnummern und englische Markennamen richtig angeordnet sind.",
+  "en": "Make an Arabic PDF price list where prices, product codes and English brand names appear in the right order."
+ },
+ "career-ops": {
+  "ar": "قيّم مدى ملاءمة سيرتي الذاتية لإعلان وظيفة مدير التجارة الإلكترونية هذا، وجهّز سيرة متوافقة مع ATS ورسالة تغطية.",
+  "de": "Gleiche meinen Lebenslauf mit dieser E-Commerce-Stelle ab und erstelle einen ATS-tauglichen Lebenslauf samt Anschreiben.",
+  "en": "Check how well my CV fits this e-commerce manager posting and prepare an ATS-friendly CV and cover letter for it."
+ },
+ "duckdb-skills": {
+  "ar": "حلّل ملف تصدير الطلبات بصيغة CSV وحجمه 2 جيجابايت، وأظهر لي المنتجات العشرة الأعلى إيرادًا هذا العام.",
+  "de": "Werte unseren 2 GB großen CSV-Export der Bestellungen aus und zeig mir die zehn umsatzstärksten Produkte dieses Jahres.",
+  "en": "Query our 2 GB orders export CSV and show me the ten products with the highest revenue this year."
+ },
+ "last30days": {
+  "ar": "لخّص ما قاله الناس عن مكاتب العمل وقوفًا على Reddit وHacker News خلال آخر 30 يومًا قبل أن نطلق مكتبنا.",
+  "de": "Fasse vor unserem Launch zusammen, was in den letzten 30 Tagen auf Reddit und Hacker News über Stehschreibtische gesagt wurde.",
+  "en": "Summarize what people said about standing desks on Reddit and Hacker News over the last 30 days before we launch ours."
+ },
+ "scientific-agent-skills": {
+  "ar": "راجع الدراسات المنشورة بين 2024 و2026 عن الجسيمات البلاستيكية الدقيقة في مياه الشرب ولخّص أبرز نتائجها مع مصادرها.",
+  "de": "Fasse die Studien von 2024 bis 2026 zu Mikroplastik im Trinkwasser in einer Literaturübersicht mit Quellen zusammen.",
+  "en": "Do a literature review of 2024–2026 studies on microplastics in drinking water and summarize the key findings with sources."
+ },
+ "planning-with-files": {
+  "ar": "خطّط لإعادة بناء موقع متجرنا بالكامل، واحفظ الخطة والنتائج والتقدم في ملفات لنستأنف العمل غدًا.",
+  "de": "Plane den Neuaufbau unserer Shop-Website und speichere Plan, Erkenntnisse und Fortschritt in Dateien, um morgen weiterzumachen.",
+  "en": "Plan the full rebuild of our shop website and keep the plan, findings and progress in files so we can resume tomorrow."
+ },
+ "claude-mem": {
+  "ar": "ابحث في ذاكرة جلساتنا السابقة وذكّرني بما قررناه بشأن قواعد احتساب تكاليف الشحن.",
+  "de": "Schau in deinem Gedächtnis unserer früheren Sessions nach, was wir zu den Versandkostenregeln beschlossen haben.",
+  "en": "Search your memory of our past sessions and remind me what we decided about the shipping-cost rules."
+ },
+ "context-engineering-skills": {
+  "ar": "راجع وكيل خدمة العملاء الذي بنيته واقترح كيف أضغط سياقه ليبقى دقيقًا في المحادثات الطويلة.",
+  "de": "Prüfe meinen Kundensupport-Agenten und schlag vor, wie ich seinen Kontext komprimiere, damit er in langen Chats präzise bleibt.",
+  "en": "Review my customer-support agent and suggest how to compress its context so it stays accurate in long chats."
+ },
+ "translate-book": {
+  "ar": "ترجم دليلي الإنجليزي بصيغة EPUB المؤلف من 200 صفحة إلى الألمانية، وأخرجه بصيغتي EPUB وPDF.",
+  "de": "Übersetze meinen 200-seitigen englischen EPUB-Ratgeber ins Deutsche und erstelle daraus eine EPUB- und eine PDF-Datei.",
+  "en": "Translate my 200-page English EPUB guide into German and build it as both an EPUB and a PDF."
+ },
+ "stripe-agent-skills": {
+  "ar": "أضف عبر Stripe اشتراكًا شهريًا في القهوة إلى موقعي المبني بـ Next.js، مع التحقق الصحيح من توقيعات webhook.",
+  "de": "Baue mit Stripe ein monatliches Kaffee-Abo in meine Next.js-Website ein und sichere die Webhooks mit Signaturprüfung ab.",
+  "en": "Add a monthly coffee subscription to my Next.js site with Stripe and verify the webhook signatures properly."
+ },
+ "paypal-ai-toolkit": {
+  "ar": "أضف PayPal Checkout مع خيار Pay Later إلى صفحة السلة في موقعي، واختبره بحساب sandbox تجريبي.",
+  "de": "Baue PayPal Checkout mit Pay Later in die Warenkorbseite meiner Website ein und teste es mit einem Sandbox-Konto.",
+  "en": "Add PayPal Checkout with Pay Later to my website's cart page and test it with a sandbox account."
+ },
+ "cloudflare-skills": {
+  "ar": "أضف Cloudflare Turnstile إلى نموذج التواصل لصد روبوتات الرسائل المزعجة، ثم انشر الموقع على Workers عبر Wrangler.",
+  "de": "Schütze mein Kontaktformular mit Cloudflare Turnstile vor Spam-Bots und stelle die Seite dann mit Wrangler auf Workers bereit.",
+  "en": "Add Cloudflare Turnstile to my contact form to block spam bots, then deploy the site to Workers with Wrangler."
+ },
+ "aws-agent-toolkit": {
+  "ar": "اكتب بـ AWS CDK البنية التحتية لواجهة API الخاصة بصور منتجاتنا، وبيّن أين يمكننا خفض التكلفة الشهرية.",
+  "de": "Schreibe einen AWS-CDK-Stack für unsere Produktbild-API und zeig mir, wo wir monatliche Kosten sparen können.",
+  "en": "Write an AWS CDK stack for our product image API and point out where we could cut monthly costs."
+ },
+ "expo-skills": {
+  "ar": "أنشئ في تطبيق التسوق المبني بـ React Native تنقلًا بعلامات تبويب للرئيسية والمتجر والسلة عبر Expo Router.",
+  "de": "Richte in meiner React-Native-Shopping-App mit Expo Router eine Tab-Navigation für Start, Shop und Warenkorb ein.",
+  "en": "Set up Expo Router tab navigation for Home, Shop and Cart in my React Native shopping app."
+ },
+ "android-skills": {
+  "ar": "حدّد سبب أخطاء ANR التي تجمّد شاشة الطلبات في تطبيق التوصيل الخاص بي على Android، ثم أصلحه.",
+  "de": "Finde heraus, warum meine Liefer-App für Android auf dem Bestellbildschirm mit ANR-Fehlern hängt, und behebe die Ursache.",
+  "en": "Find out why my Android delivery app freezes with ANR errors on the order screen and fix the cause."
+ },
+ "callstack-agent-skills": {
+  "ar": "اضبط GitHub Actions لبناء نسخ تجريبية من تطبيقي المبني بـ React Native لـ iOS وAndroid عند كل طلب دمج.",
+  "de": "Richte GitHub Actions so ein, dass bei jedem Pull Request Test-Builds meiner React-Native-App für iOS und Android entstehen.",
+  "en": "Set up GitHub Actions to build test versions of my React Native app for iOS and Android on every pull request."
+ },
+ "firebase-agent-skills": {
+  "ar": "راجع قواعد أمان Firestore في تطبيق الحجوزات لديّ كي لا يقرأ أي مستخدم أو يعدّل سوى حجوزاته.",
+  "de": "Prüfe die Firestore-Regeln meiner Buchungs-App und sorg dafür, dass jeder Nutzer nur seine eigenen Buchungen sieht und ändert.",
+  "en": "Review the Firestore security rules of my booking app so each user can only read and edit their own bookings."
+ },
+ "revenuecat-ai-toolkit": {
+  "ar": "أضف اشتراكًا شهريًا وآخر سنويًا إلى تطبيقي للياقة المبني بـ Flutter عبر RevenueCat، مع العرض والصلاحية اللازمين.",
+  "de": "Füge meiner Flutter-Fitness-App mit RevenueCat ein Monats- und ein Jahresabo hinzu, inklusive Offering und Entitlement.",
+  "en": "Add monthly and yearly Pro subscriptions to my Flutter fitness app with RevenueCat, including the offering and entitlement."
+ },
+ "sentry-for-ai": {
+  "ar": "اجلب من Sentry الخطأ الأكثر تكرارًا في بيئة الإنتاج لمتجري المبني بـ Next.js، واشرح سببه واقترح حلًا له.",
+  "de": "Hol den häufigsten Produktionsfehler meines Next.js-Shops aus Sentry, erklär die Ursache und schlag eine Lösung vor.",
+  "en": "Pull the most frequent production error for my Next.js shop from Sentry, explain its cause and suggest a fix."
+ },
+ "neon-agent-skills": {
+  "ar": "أنشئ فرعًا في Neon من قاعدة بيانات الإنتاج لأختبر ترحيل Drizzle الجديد بأمان قبل تطبيقه.",
+  "de": "Erstelle einen Neon-Branch meiner Produktionsdatenbank, damit ich die neue Drizzle-Migration vorher gefahrlos testen kann.",
+  "en": "Create a Neon branch of my production database so I can safely test the new Drizzle migration before applying it."
+ },
+ "clerk-skills": {
+  "ar": "أضف Clerk إلى تطبيقي المبني بـ Next.js مع نموذج تسجيل دخول مخصص، ثم اختبر خطوات الدخول كاملة بـ Playwright.",
+  "de": "Binde Clerk mit einem eigenen Anmeldeformular in meine Next.js-App ein und teste den Login-Ablauf mit Playwright.",
+  "en": "Add Clerk to my Next.js app with a custom sign-in form, then test the whole sign-in flow with Playwright."
+ },
+ "resend-skills": {
+  "ar": "صمّم رسالة تأكيد الطلب بمكونات React Email، وأرسلها عبر Resend فور إتمام العميل عملية الشراء.",
+  "de": "Bau mit React Email eine Bestellbestätigung und verschick sie über Resend, sobald ein Kunde den Checkout abschließt.",
+  "en": "Build an order confirmation email with React Email and send it through Resend as soon as a customer completes checkout."
+ },
+ "semgrep-skills": {
+  "ar": "اكتب قاعدة Semgrep مخصصة ترصد استعلامات SQL المبنية بدمج النصوص في واجهة API لديّ المكتوبة بـ Python، ثم افحص المستودع.",
+  "de": "Schreib eine Semgrep-Regel, die per String-Verkettung gebaute SQL-Abfragen in meiner Python-API findet, und scanne das Repo.",
+  "en": "Write a custom Semgrep rule that flags SQL queries built by string concatenation in my Python API, then scan the repo."
+ },
+ "playwright-cli": {
+  "ar": "اختبر نموذج التسجيل في موقع الحجوزات لديّ بإدخالات صحيحة وأخرى خاطئة، والتقط صورة شاشة لكل نتيجة.",
+  "de": "Teste das Registrierungsformular meiner Buchungsseite mit gültigen und falschen Eingaben und mach Screenshots der Ergebnisse.",
+  "en": "Test the sign-up form on my booking site with valid and invalid entries and take a screenshot of each result."
+ },
+ "dev-browser": {
+  "ar": "تحكّم في متصفح Chrome المفتوح عندي، وجرّب الشراء كزائر في متجري، وأخبرني أين يحدث أي خلل.",
+  "de": "Verbinde dich mit meinem offenen Chrome, geh den Gast-Checkout meines Shops durch und sag mir, wo etwas hakt.",
+  "en": "Connect to my already-open Chrome, go through my store's guest checkout and tell me where anything breaks."
+ },
+ "excel-xlsx-skill": {
+  "ar": "نظّف ملف CSV الفوضوي هذا من المورّد، وحوّله إلى قائمة أسعار في Excel بمعادلات لضريبة القيمة المضافة 19% والأسعار الإجمالية.",
+  "de": "Bereinige diese chaotische Lieferanten-CSV und mach daraus eine Excel-Preisliste mit Formeln für 19 % MwSt. und Bruttopreise.",
+  "en": "Clean up this messy supplier CSV and turn it into an Excel price list with formulas for 19% VAT and gross prices."
+ },
+ "word-docx-skill": {
+  "ar": "عدّل مدة السداد في عقد المورّد بصيغة Word إلى 30 يومًا مع تتبّع التغييرات، وأضف تعليقًا يوضح السبب.",
+  "de": "Ändere im Lieferantenvertrag (Word) das Zahlungsziel mit Änderungsverfolgung auf 30 Tage und begründe es in einem Kommentar.",
+  "en": "Change the payment term in my supplier contract to 30 days using tracked changes in Word, and add a comment explaining why."
+ },
+ "pdf-skill": {
+  "ar": "استخرج رقم الفاتورة والتاريخ والبنود من فواتير الموردين الممسوحة ضوئيًا هذه، واجمعها في جدول واحد.",
+  "de": "Übertrage Rechnungsnummer, Datum und Positionen aus diesen gescannten Lieferantenrechnungen in eine gemeinsame Tabelle.",
+  "en": "Extract the invoice number, date and line items from these scanned supplier invoices into a single table."
+ },
+ "powerpoint-pptx-skill": {
+  "ar": "أنشئ عرض PowerPoint من 10 شرائح يقدّم تشكيلة الربيع الجديدة لتجار التجزئة، مع مخطط للمبيعات وملاحظات للمتحدث.",
+  "de": "Erstelle für Händler eine PowerPoint mit 10 Folien zur Frühjahrskollektion, inklusive Umsatzdiagramm und Sprechernotizen.",
+  "en": "Build a 10-slide PowerPoint introducing our spring collection to retailers, with a sales chart and speaker notes."
+ },
+ "anthropic-small-business-plugin": {
+  "ar": "راجع مبيعات متجري على Shopify في آخر 60 يومًا، وأخبرني بالمنتجات التي يجب أن أعيد طلبها قبل نفادها.",
+  "de": "Werte meine Shopify-Verkäufe der letzten 60 Tage aus und sag mir, was ich nachbestellen muss, bevor es ausverkauft ist.",
+  "en": "Check my Shopify sales from the last 60 days and tell me which products I need to reorder before they sell out."
+ },
+ "anthropic-customer-support-plugin": {
+  "ar": "رتّب رسائل العملاء الواردة اليوم حسب الأولوية، واكتب ردًا مهذبًا للعميل الذي وصله طرده تالفًا.",
+  "de": "Sortier die heutigen Kundenmails nach Dringlichkeit und entwirf eine höfliche Antwort an den Kunden mit dem beschädigten Paket.",
+  "en": "Sort today's customer emails by urgency and draft a polite reply to the customer whose parcel arrived damaged."
+ },
+ "anthropic-legal-plugin": {
+  "ar": "اكتب مسودة رد على عميلة طلبت بموجب GDPR نسخة من جميع البيانات التي يحتفظ بها متجري عنها.",
+  "de": "Formuliere eine Antwort an eine Kundin, die nach DSGVO Auskunft über alle Daten verlangt, die mein Shop über sie speichert.",
+  "en": "Write a reply to a customer who requested, under GDPR, a copy of all the data my shop holds about her."
+ },
+ "anthropic-operations-plugin": {
+  "ar": "وثّق عملية المرتجعات لدينا في إجراء تشغيل قياسي (SOP) مع جدول RACI، ليعرف موظفا المستودع الجديدان دور كل منهما.",
+  "de": "Dokumentiere unseren Retourenprozess als SOP mit RACI-Tabelle, damit meine zwei neuen Lagerkräfte wissen, wer was macht.",
+  "en": "Document our returns process as an SOP with a RACI table so my two new warehouse staff know who does what."
+ },
+ "anthropic-data-plugin": {
+  "ar": "حوّل ملف الطلبات orders.csv إلى لوحة معلومات HTML تفاعلية تعرض الإيرادات الشهرية وأكثر عشرة منتجات مبيعًا.",
+  "de": "Erstelle aus meinem Bestellexport orders.csv ein interaktives HTML-Dashboard mit Monatsumsatz und den zehn Bestsellern.",
+  "en": "Create an interactive HTML dashboard from my orders.csv export with monthly revenue and the ten best-selling products."
+ },
+ "mcp-builder": {
+  "ar": "ابنِ خادم MCP بلغة Python عبر FastMCP يتيح لـ Claude الاستعلام عن المخزون والأسعار من واجهة REST لدى مورّدي.",
+  "de": "Bau einen FastMCP-Server in Python, mit dem Claude Lagerbestände und Preise über die REST-API meines Lieferanten abfragen kann.",
+  "en": "Build a FastMCP server in Python that lets Claude check stock levels and prices through my supplier's REST API."
+ },
+ "claude-api-skill": {
+  "ar": "أضف إلى متجري المبني بـ PHP مساعد محادثة ينصح العملاء بالمنتجات عبر Claude API، مع بث الردود وتخزين مؤقت يخفض التكلفة.",
+  "de": "Integriere mit der Claude API einen Beratungschat mit Streaming in meinen PHP-Shop und senk die Kosten per Prompt-Caching.",
+  "en": "Add a streaming product-advice chat to my PHP shop with the Claude API, using prompt caching to keep costs down."
+ },
+ "anthropic-security-guidance-plugin": {
+  "ar": "أضف ميزة البحث عن المنتجات إلى تطبيق Express لديّ، وعالج كل ما تنبّه إليه مراجعة الأمان قبل الـ commit.",
+  "de": "Ergänze meine Express-API um eine Produktsuche und behebe vor dem Commit alles, was die Sicherheitsprüfung meldet.",
+  "en": "Add a product search endpoint to my Express API and fix anything the security review flags before you commit."
+ },
+ "anthropic-code-review-plugin": {
+  "ar": "شغّل /code-review على طلب الدمج رقم 42 لكشف الأخطاء في منطق كوبونات الخصم الجديد والتحقق من التزامه بقواعد CLAUDE.md.",
+  "de": "Lass /code-review über Pull Request #42 laufen und prüf die neue Gutscheinlogik auf Bugs und Verstöße gegen unsere CLAUDE.md.",
+  "en": "Run /code-review on pull request #42 to catch bugs in the new coupon logic and check it against our CLAUDE.md."
+ },
+ "claude-academy-guide": {
+  "ar": "اشرح لي كيف أستخدم المشاريع (Projects) في Claude لحفظ إرشادات علامتي التجارية، واقترح دورة مناسبة من Claude Academy.",
+  "de": "Erklär mir, wie ich in Claude Projekte für meine Markenrichtlinien nutze, und empfiehl mir einen Kurs der Claude Academy dazu.",
+  "en": "Explain how I can use Projects in Claude to store my shop's brand guidelines, and suggest a Claude Academy course on it."
+ },
+ "awesome-ecom-skills": {
+  "ar": "افحص كتالوج متجري على Shopify بحثًا عن منتجات بلا عناوين SEO أو نص بديل للصور، واعرض عليّ معاينة قبل أي تعديل.",
+  "de": "Prüf meinen Shopify-Katalog auf Produkte ohne SEO-Titel oder Alt-Text und zeig mir eine Vorschau, bevor du etwas änderst.",
+  "en": "Audit my Shopify catalog for products missing SEO titles or image alt text, and show me a preview before changing anything."
+ },
+ "email-marketing-bible": {
+  "ar": "اكتب سلسلة من ثلاث رسائل بريدية لاستعادة السلات المتروكة في متجري للشموع اليدوية، بأسلوب لا يبدو آليًا.",
+  "de": "Schreib für meinen Shop mit handgemachten Kerzen drei Warenkorbabbrecher-Mails, die nicht nach KI klingen.",
+  "en": "Write a three-email abandoned cart sequence for my handmade candle shop that doesn't sound machine-written."
+ },
+ "product-shots": {
+  "ar": "استخدم هذه الصورة الوحيدة لمحفظتي الجلدية لإنشاء صورة رئيسية تطابق شروط Amazon وثلاثة نماذج إعلانية لـ Meta.",
+  "de": "Mach aus diesem einen Foto meiner Ledergeldbörse ein Amazon-konformes Hauptbild und drei Varianten für Meta-Anzeigen.",
+  "en": "Turn this single photo of my leather wallet into an Amazon-compliant main image and three Meta ad variants."
+ },
+ "supercmo-skills": {
+  "ar": "أنشئ من صورة المنتج هذه والملخص القصير إعلان فيديو بأسلوب UGC يعرض فيه ممثل رقمي حلوى الفيتامينات التي أبيعها.",
+  "de": "Erstelle aus diesem Produktfoto und dem kurzen Briefing eine UGC-Videoanzeige mit digitalem Darsteller für meine Vitamin-Gummis.",
+  "en": "Create a UGC-style video ad with a digital actor for my vitamin gummies from this product photo and short brief."
+ },
+ "banana-claude": {
+  "ar": "أنشئ بـ Nano Banana صورة لكوب السيراميك من متجري على مائدة إفطار مشمسة، وقارن بين صياغتين مختلفتين للطلب.",
+  "de": "Erzeuge mit Nano Banana ein Bild meiner Keramiktasse auf einem sonnigen Frühstückstisch und vergleiche zwei Prompt-Varianten.",
+  "en": "Generate an image of my ceramic mug on a sunny breakfast table with Nano Banana, comparing two prompt phrasings."
+ },
+ "elevenlabs-skills": {
+  "ar": "اصنع عبر ElevenLabs تعليقًا صوتيًا بالألمانية وآخر بالعربية من هذا النص لفيديو المنتج الذي مدته 30 ثانية.",
+  "de": "Lass ElevenLabs dieses Skript als deutsches und arabisches Voice-over für mein 30-Sekunden-Produktvideo einsprechen.",
+  "en": "Create German and Arabic voice-overs of this script for my 30-second product video with ElevenLabs."
+ },
+ "heygen-skills": {
+  "ar": "ترجم فيديو التعريف بمتجري من الألمانية إلى الإنجليزية والعربية عبر HeyGen، بصوتي المستنسخ مع مزامنة حركة الشفاه.",
+  "de": "Übersetze mit HeyGen mein deutsches Shop-Video ins Englische und Arabische, mit geklonter Stimme und Lippensynchronisation.",
+  "en": "Translate my German store intro video into English and Arabic with HeyGen, using my cloned voice and lip sync."
+ },
+ "fal-ai-skills": {
+  "ar": "ولّد عبر fal.ai مجموعة متناسقة من صور المتجر الاحترافية انطلاقًا من صور قلاداتي الاثنتي عشرة الجديدة.",
+  "de": "Erstelle mit fal.ai aus den Fotos meiner 12 neuen Halsketten eine einheitliche Serie sauberer Shop-Bilder.",
+  "en": "Use fal.ai to create a matching batch of clean store images from these photos of my 12 new necklaces."
+ },
+ "geo-seo-claude": {
+  "ar": "تحقّق مما إذا كان ملف robots.txt في متجري يسمح لزواحف الذكاء الاصطناعي، وقيّم قابلية صفحاتي للاقتباس، وأنشئ ملف llms.txt.",
+  "de": "Prüf, ob meine robots.txt KI-Crawler zulässt, bewerte die Zitierfähigkeit meiner wichtigsten Seiten und erstelle eine llms.txt.",
+  "en": "Check whether my shop's robots.txt lets AI crawlers in, score my top pages for citability and create an llms.txt."
+ },
+ "social-media-skills": {
+  "ar": "خطّط لمحتوى Instagram لمتجر النباتات لديّ لأربعة أسابيع، مع نصوص المنشورات وسيناريوهين لمقاطع Reels كل أسبوع.",
+  "de": "Plane für meinen Pflanzenshop vier Wochen Instagram-Content mit Captions und zwei Reels-Skripten pro Woche.",
+  "en": "Plan four weeks of Instagram content for my plant shop, with captions and two Reels scripts per week."
+ },
+ "postiz-agent": {
+  "ar": "استخدم Postiz لجدولة نشر صورة المنتج هذه مع نصها على Instagram وFacebook وPinterest يوم الجمعة الساعة 6 مساءً.",
+  "de": "Terminiere über Postiz dieses Produktfoto samt Caption für Freitag um 18 Uhr auf Instagram, Facebook und Pinterest.",
+  "en": "Schedule this product photo with its caption on Instagram, Facebook and Pinterest via Postiz for Friday at 6 pm."
+ },
+ "growth-marketing-os": {
+  "ar": "احسب العائد الحقيقي لإعلاناتي في مصر بناءً على طلبات الدفع عند الاستلام التي سُلّمت فعلًا، لا على كل الطلبات.",
+  "de": "Berechne den echten ROAS meiner Anzeigen in Ägypten anhand zugestellter Nachnahme-Bestellungen statt aller Bestellungen.",
+  "en": "Calculate my real ROAS in Egypt based on delivered cash-on-delivery orders rather than all placed orders."
+ },
+ "claude-blog": {
+  "ar": "اكتب لمدونة متجري مقالًا عن العناية بأغطية الأسرّة الكتانية، محسّنًا لـ Google ومحركات البحث بالذكاء الاصطناعي، وقيّم المسودة.",
+  "de": "Schreib einen für Google und KI-Suche optimierten Blogartikel zur Pflege von Leinenbettwäsche und bewerte den Entwurf.",
+  "en": "Write a blog post on caring for linen bedding for my shop, optimized for Google and AI search, and score the draft."
+ },
+ "claude-repurpose": {
+  "ar": "حوّل أحدث فيديو لي على YouTube عن اختيار أحذية الجري إلى سلسلة منشورات على X ومنشور LinkedIn ومنشور متعدد الصور على Instagram.",
+  "de": "Mach aus meinem neuen YouTube-Video über Laufschuhe einen X-Thread, einen LinkedIn-Post und ein Instagram-Karussell.",
+  "en": "Turn my latest YouTube video on choosing running shoes into an X thread, a LinkedIn post and an Instagram carousel."
+ },
+ "baoyu-skills": {
+  "ar": "صمّم إنفوجرافيك لمقالي عن تحضير القهوة الباردة، مع صورة غلاف متناسقة معه.",
+  "de": "Gestalte eine Infografik und ein passendes Titelbild für meinen Artikel über Cold-Brew-Kaffee.",
+  "en": "Design an infographic and a matching cover image for my article on brewing cold brew coffee."
+ },
+ "vidiq-mcp": {
+  "ar": "استخدم vidIQ لإيجاد كلمات مفتاحية قليلة المنافسة لفيديو عن آلات الإسبريسو الاقتصادية، وقيّم عناويني الثلاثة المقترحة.",
+  "de": "Finde mit vidIQ Keywords mit wenig Konkurrenz für ein Video über günstige Espressomaschinen und bewerte meine drei Titelideen.",
+  "en": "Use vidIQ to find low-competition keywords for a video on budget espresso machines and score my three title ideas."
+ },
+ "search-console-mcp": {
+  "ar": "قارن نقرات موقعي في Search Console خلال آخر 28 يومًا بالفترة التي سبقتها، وبيّن أكثر الاستعلامات تراجعًا.",
+  "de": "Vergleiche meine Search-Console-Klicks der letzten 28 Tage mit dem Vorzeitraum und zeig, welche Suchanfragen am meisten verloren.",
+  "en": "Compare my Search Console clicks for the last 28 days with the previous period and show which queries dropped most."
+ },
+ "google-analytics-mcp": {
+  "ar": "اعرض لي من Google Analytics الصفحات الخمس الأكثر زيارة من البحث هذا الشهر وأين يغادرها الزوار.",
+  "de": "Zeig mir mit Google Analytics die fünf Seiten mit den meisten Suchbesuchern diesen Monat und wo sie abspringen.",
+  "en": "Use Google Analytics to show me this month's five pages with the most search visitors and where they drop off."
+ },
+ "microsoft-clarity-mcp": {
+  "ar": "اسأل Clarity لماذا يغادر زوار الجوال صفحة الدفع، ولخّص ما تُظهره تسجيلات الجلسات.",
+  "de": "Frag Clarity, warum mobile Besucher den Checkout verlassen, und fass zusammen, was die Session-Aufzeichnungen zeigen.",
+  "en": "Ask Clarity why mobile visitors leave the checkout page and summarize what the session recordings show."
+ },
+ "plausible-analytics": {
+  "ar": "أضف سكربت Plausible إلى موقعي، وسجّل النقر على زر «اشترِ الآن» كهدف.",
+  "de": "Binde das Plausible-Skript in meine Website ein und erfasse Klicks auf „Jetzt kaufen“ als Ziel.",
+  "en": "Add the Plausible script to my site and track clicks on the Buy now button as a goal."
+ },
+ "product-tracking-skills": {
+  "ar": "افحص تتبّع الأحداث في كود تطبيقي، ثم اكتب خطة تتبع لمسار التسجيل.",
+  "de": "Prüf das Event-Tracking im Code meiner App und schreib danach einen Tracking-Plan für den Signup-Flow.",
+  "en": "Audit the event tracking in my app's code, then write a tracking plan for the signup flow."
+ },
+ "easy-appointments": {
+  "ar": "ساعدني في إعداد Easy!Appointments لعيادتي: ثلاث خدمات وطبيبان ومواعيد عمل من 9 إلى 5.",
+  "de": "Hilf mir, Easy!Appointments für meine Praxis einzurichten: drei Leistungen, zwei Ärzte, Sprechzeiten von 9 bis 17 Uhr.",
+  "en": "Help me set up Easy!Appointments for my clinic: three services, two doctors and opening hours from 9 to 5."
+ },
+ "openemr": {
+  "ar": "اشرح لي خطوات تثبيت OpenEMR بـ Docker على خادمي، وما يجب ضبطه لحماية بيانات المرضى.",
+  "de": "Erklär mir, wie ich OpenEMR mit Docker auf meinem Server installiere und was ich für die Patientendaten absichern muss.",
+  "en": "Walk me through installing OpenEMR with Docker on my server and what to configure to protect patient data."
+ },
+ "schedule-x": {
+  "ar": "أضف تقويم Schedule-X بعرض أسبوعي وباللغة الألمانية إلى صفحة الحجوزات في تطبيقي بـ React.",
+  "de": "Bau einen Schedule-X-Kalender mit Wochenansicht auf Deutsch in die Buchungsseite meiner React-App ein.",
+  "en": "Add a Schedule-X calendar with a week view in German to the bookings page of my React app."
+ },
+ "anthropic-sales-plugin": {
+  "ar": "حضّر لي مكالمة الغد مع عميل محتمل: لخّص ما نعرفه عن شركته واقترح ثلاثة أسئلة.",
+  "de": "Bereite mein morgiges Gespräch mit einem Interessenten vor und schlag drei gute Fragen vor.",
+  "en": "Prep tomorrow's call with a prospect: summarize what we know about their company and suggest three questions."
+ },
+ "anthropic-finance-plugin": {
+  "ar": "طابق كشف حساب البنك لشهر أكتوبر مع دفتر اليومية، واعرض لي الفروقات.",
+  "de": "Gleiche den Kontoauszug für Oktober mit dem Journal ab und zeig mir die Abweichungen.",
+  "en": "Reconcile October's bank statement against the journal and show me the differences."
+ },
+ "anthropic-product-management-plugin": {
+  "ar": "اكتب مواصفات ميزة تصدير الفواتير بصيغة PDF، مع معايير القبول.",
+  "de": "Schreib eine Spezifikation für den PDF-Export von Rechnungen, mit Akzeptanzkriterien.",
+  "en": "Write a spec for exporting invoices as PDF, with acceptance criteria."
+ },
+ "anthropic-human-resources-plugin": {
+  "ar": "اكتب خطة تأهيل لأول أسبوعين لمصمم جديد ينضم إلى فريقنا.",
+  "de": "Erstell einen Onboarding-Plan für die ersten zwei Wochen einer neuen Designerin in unserem Team.",
+  "en": "Write an onboarding plan for the first two weeks of a new designer joining our team."
+ },
+ "anthropic-productivity-plugin": {
+  "ar": "رتّب مهامي لهذا الأسبوع حسب الأولوية، وخطّط ليوم الغد حول اجتماعاتي.",
+  "de": "Sortier meine Aufgaben für diese Woche nach Priorität und plan den morgigen Tag rund um meine Termine.",
+  "en": "Prioritize my tasks for this week and plan tomorrow around my meetings."
+ }
+}
