@@ -1,30 +1,51 @@
 // الهوية البصرية للدليل: مصدر واحد لرسم الشعار. تستخدمه الواجهة (Logo.astro) وصور المشاركة (og.ts وscripts/og-home.cjs)
 // ومجموعة الأيقونات (scripts/build-brand.mjs). لا ترسم الشعار بيدك في مكان آخر: عدّل هنا ثم شغّل `npm run brand`.
 //
-// الشعار: بلاطة زرقاء بثلاث بطاقات أدوات بيضاء (الثانية أخفت) ونجمة ذهبية لامعة هي رمز المهارات.
-// لا تدرّج ولا ظل (DESIGN.md).
+// الشعار: رأس روبوت صديق داخل دائرة زرقاء: خوذة بيضاء بسماعتين، وشاشة كحلية بعينين مبتسمتين،
+// وهوائي في طرفه النجمة الذهبية اللامعة (رمز المهارات). الهوائي يخرج من الدائرة فوقها.
+// لا تدرّج ولا ظل (DESIGN.md): العمق بدرجات مصمتة فقط.
 
-// ألوان الشعار ثابتة في الوضعين الفاتح والداكن، فلا تُقرأ من متغيرات الواجهة
-export const COLORS = { blue: "#2446D6", white: "#FFFFFF", gold: "#FFC94D" };
+// ألوان الشعار ثابتة في الوضعين الفاتح والداكن، فلا تُقرأ من متغيرات الواجهة.
+// blue لون --btn، وnavy الشاشة (الأزرق نفسه داكنًا)، وeye عينا الشاشة، وear السماعتان، وgold النجمة
+export const COLORS = { blue: "#2446D6", navy: "#0F1B4D", eye: "#6FD3FF", ear: "#C9D5FF", white: "#FFFFFF", gold: "#FFC94D" };
 
-// الشبكة 32×32: نصف قطر الحاوية، والبلاطات (س، ص، الشفافية)، والنجمة اللامعة
-const PLATE_R = 9;
-const TILE = 8, TILE_R = 2.4;
-const TILES = [[7, 7, 1], [7, 17, 0.6], [17, 17, 1]];
-const SPARK = "M21 6.2Q21.6 10.4 25.8 11Q21.6 11.6 21 15.8Q20.4 11.6 16.2 11Q20.4 10.4 21 6.2Z";
+// نجمة بأربعة أذرع من منحنيات تربيعية، مركزها (cx, cy) ونصف قطرها r
+export const sparkPath = (cx, cy, r, k = r * 0.125) =>
+  `M${cx} ${cy - r}Q${cx + k} ${cy - k} ${cx + r} ${cy}Q${cx + k} ${cy + k} ${cx} ${cy + r}Q${cx - k} ${cy + k} ${cx - r} ${cy}Q${cx - k} ${cy - k} ${cx} ${cy - r}Z`;
 
-const tile = ([x, y, o], fill) =>
-  `<rect x="${x}" y="${y}" width="${TILE}" height="${TILE}" rx="${TILE_R}" fill="${fill}"${o < 1 ? ` fill-opacity="${String(o).replace(/^0/, "")}"` : ""}/>`;
+// الشبكة 32×32: الدائرة، والسماعتان، والهوائي، والرأس، والشاشة، والعينان (قوسان مبتسمان)، والنجمة
+const DISC = { cx: 16, cy: 18.5, r: 13.5 };
+const EARS = [[4.4, 13], [24, 13]]; // 3.6×8
+const HEAD = { x: 6.5, y: 8, w: 19, h: 16.6, r: 7 };
+const SCREEN = { x: 9, y: 11, w: 14, h: 10.6, r: 4.6 };
+const EYES = ["M11.3 17.5Q12.9 14.7 14.5 17.5", "M17.5 17.5Q19.1 14.7 20.7 17.5"];
+const SPARK = sparkPath(16, 3.6, 3.4);
+// مركز الرسم عموديًا دون الدائرة (من طرف النجمة إلى أسفل الرأس)، لأيقونات التطبيق التي لا دائرة فيها
+const GLYPH_MID = 12.4;
 
-// محتوى الشعار (بلا وسم svg). class="spark" للنجمة: تتحرك في global.css.
-// bleed: مربع كامل بلا حواف مدورة (أيقونة iOS وAndroid تقصّها بنفسها)
-// scale: تصغير الرسم داخل الحاوية (المنطقة الآمنة للأيقونة القابلة للقص)
-// mono: لون واحد (currentColor) بلا حاوية، للأختام والطباعة
+const rect = ({ x, y, w, h, r }, attrs) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}"${attrs}/>`;
+// مستطيل بحواف مدورة كمسار (لثقب الشاشة في نسخة اللون الواحد)
+const rrPath = ({ x, y, w, h, r }) =>
+  `M${x + r} ${y}H${x + w - r}Q${x + w} ${y} ${x + w} ${y + r}V${y + h - r}Q${x + w} ${y + h} ${x + w - r} ${y + h}H${x + r}Q${x} ${y + h} ${x} ${y + h - r}V${y + r}Q${x} ${y} ${x + r} ${y}Z`;
+
+// محتوى الشعار (بلا وسم svg). class="spark" للنجمة وclass="eyes" للعينين: تتحركان في global.css.
+// bleed: مربع أزرق كامل بلا دائرة، والرأس في وسطه (أيقونة iOS وAndroid تقصّها بنفسها)
+// scale: تصغير الرسم (المنطقة الآمنة للأيقونة القابلة للقص)
+// mono: لون واحد (currentColor) بلا دائرة، والشاشة ثقب فيه، للأختام والطباعة
 export function markInner({ bleed = false, scale = 1, mono = false } = {}) {
-  if (mono) return `<g fill="currentColor">${TILES.map((t) => tile(t, "currentColor").replace(' fill="currentColor"', "")).join("")}<path class="spark" d="${SPARK}"/></g>`;
-  const plate = `<rect width="32" height="32"${bleed ? "" : ` rx="${PLATE_R}"`} fill="${COLORS.blue}"/>`;
-  const glyph = `${TILES.map((t) => tile(t, "#fff")).join("")}<path class="spark" d="${SPARK}" fill="${COLORS.gold}"/>`;
-  return plate + (scale === 1 ? glyph : `<g transform="translate(16 16) scale(${scale}) translate(-16 -16)">${glyph}</g>`);
+  const ears = (fill) => EARS.map(([x, y]) => `<rect x="${x}" y="${y}" width="3.6" height="8" rx="1.8"${fill}/>`).join("");
+  const stem = (fill) => `<rect x="15.25" y="4.5" width="1.5" height="4" rx=".75"${fill}/>`;
+  const eyes = (color) => `<g class="eyes" fill="none" stroke="${color}" stroke-width="1.6" stroke-linecap="round">${EYES.map((d) => `<path d="${d}"/>`).join("")}</g>`;
+  if (mono) {
+    return `<g fill="currentColor">${ears("")}${stem("")}<path fill-rule="evenodd" d="${rrPath(HEAD)}${rrPath(SCREEN)}"/><path class="spark" d="${SPARK}"/></g>${eyes("currentColor")}`;
+  }
+  const plate = bleed ? `<rect width="32" height="32" fill="${COLORS.blue}"/>` : `<circle cx="${DISC.cx}" cy="${DISC.cy}" r="${DISC.r}" fill="${COLORS.blue}"/>`;
+  const glyph = ears(` fill="${COLORS.ear}"`) + stem(` fill="${COLORS.navy}"`) + rect(HEAD, ` fill="${COLORS.white}"`) +
+    rect(SCREEN, ` fill="${COLORS.navy}"`) + eyes(COLORS.eye) + `<path class="spark" d="${SPARK}" fill="${COLORS.gold}"/>`;
+  if (!bleed && scale === 1) return plate + glyph;
+  // بلا دائرة يتوسط الرأس المربع؛ ومع الدائرة يبقى في مكانه منها
+  const mid = bleed ? GLYPH_MID : 16;
+  return plate + `<g transform="translate(16 16) scale(${scale}) translate(-16 -${mid})">${glyph}</g>`;
 }
 
 // الشعار كاملًا كنص SVG. title: عنوان لقراءات الشاشة عند استخدام الملف مستقلًا
@@ -36,12 +57,13 @@ export function markSvg({ title = "", size, ...opts } = {}) {
 // الشعار كرابط بيانات (لصور المشاركة التي تقبل صورة لا SVG مضمّنًا)
 export const markDataUrl = (opts) => "data:image/svg+xml;base64," + Buffer.from(markSvg(opts)).toString("base64");
 
-// نسخة 16 بكسل (أيقونة التبويب) بالتركيب نفسه لكن على شبكة 16×16 بأعداد صحيحة، حتى لا تقع حواف البلاطات على أنصاف البكسل
-// فتبهت. البلاطة 4px (الربع كما في الأصل) والفراغ 2px، والنجمة محورها على منتصف بكسل فيبقى ذراعاها بسُمك بكسل واحد حادًّا.
+// نسخة 16 بكسل (أيقونة التبويب) بالتركيب نفسه على شبكة 16×16 بأعداد صحيحة، حتى لا تقع الحواف على أنصاف البكسل فتبهت:
+// الدائرة والرأس والشاشة، والعينان خطّان بعرض بكسلين (القوس لا يظهر بهذا الحجم)، والنجمة معيّن صغير فوق الرأس
 export function markInner16() {
-  const r = (x, y, o) => `<rect x="${x}" y="${y}" width="4" height="4" rx="1.2" fill="#fff"${o ? ` fill-opacity="${o}"` : ""}/>`;
-  const spark = "M10.5 1.5Q11.1 3.9 13.5 4.5Q11.1 5.1 10.5 7.5Q9.9 5.1 7.5 4.5Q9.9 3.9 10.5 1.5Z";
-  return `<rect width="16" height="16" rx="4.5" fill="${COLORS.blue}"/>${r(3, 3)}${r(3, 9, ".6")}${r(9, 9)}<path d="${spark}" fill="${COLORS.gold}"/>`;
+  return `<circle cx="8" cy="9" r="7" fill="${COLORS.blue}"/><rect x="2" y="4" width="12" height="9" rx="3.5" fill="#fff"/>` +
+    `<rect x="4" y="6" width="8" height="5" rx="1.8" fill="${COLORS.navy}"/>` +
+    `<rect x="5" y="8" width="2" height="1" fill="${COLORS.eye}"/><rect x="9" y="8" width="2" height="1" fill="${COLORS.eye}"/>` +
+    `<path d="M8 .2L9.3 2L8 3.8L6.7 2Z" fill="${COLORS.gold}"/>`;
 }
 
 export const markSvg16 = () => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">${markInner16()}</svg>`;

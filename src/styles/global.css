@@ -149,11 +149,19 @@ kbd {
 .gnav-in { height: 56px; display: flex; align-items: center; gap: 24px; padding-inline: max(var(--gutter), calc((100% - var(--content)) / 2)); }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 1rem; border-radius: 8px; }
 .brand .logo { flex: none; }
+/* الشعار (src/lib/brand.js): نجمة الهوائي تلمع عند فتح الصفحة وتدور عند المرور، والعينان ترمشان بعدها مرة وعند المرور.
+   محور الرمش منتصف الشاشة بإحداثيات الرسم (viewBox 32) */
 .logo .spark { transform-box: fill-box; transform-origin: center; transition: transform var(--dur-slow) var(--spring); }
+.logo .eyes { transform-box: view-box; transform-origin: 16px 16.3px; }
 :is(.brand, .foot-logo):hover .spark { transform: rotate(90deg) scale(1.15); }
 /* backwards لا both: بعد انتهاء الدخول تعود الأنماط العادية فيعمل :hover (both يثبّت الحالة النهائية فيتجاهله) */
 .gnav .brand .spark { animation: twinkle 1s var(--ease-out) .3s backwards; }
+.gnav .brand .eyes { animation: blink 280ms ease-in-out 1.4s; }
+/* اسم آخر للمرور حتى ترمش من جديد بعد رمشة الدخول */
+:is(.brand, .foot-logo):hover .eyes { animation: blink-h 280ms ease-in-out 120ms; }
 @keyframes twinkle { from { transform: rotate(-120deg) scale(.2); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes blink { 50% { scale: 1 .1; } }
+@keyframes blink-h { 50% { scale: 1 .1; } }
 .gnav-links { display: none; gap: 28px; margin-inline: auto; }
 .gnav-links a { color: var(--ink-2); text-decoration: none; font-size: .88rem; transition: color var(--dur) var(--ease); }
 .gnav-links a:hover { color: var(--ink); }
@@ -187,9 +195,10 @@ a.lang-item:hover, a.lang-item:focus-visible { background: var(--fill-2); }
 .lang-item[aria-current] { font-weight: 600; cursor: default; }
 .lang-item .i { width: 16px; height: 16px; color: var(--accent); }
 .brand span { white-space: nowrap; }
-/* على الشاشات الضيقة جدًا: أزرار الشريط أصغر قليلًا حتى يتسع اسم الدليل */
+/* على الشاشات الضيقة جدًا: أزرار الشريط والشعار أصغر قليلًا حتى يتسع اسم الدليل */
 @media (max-width: 420px) {
   .gnav-in { gap: 12px; }
+  .gnav .brand .logo { width: 28px; height: 28px; }
   .actions .bell { width: 38px; height: 38px; }
   .bell.langsw { min-width: 38px; padding-inline: 9px; }
 }
@@ -1110,7 +1119,7 @@ a.tr-v:hover { color: var(--accent); text-decoration: underline; text-underline-
 .foot-main { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 2fr); gap: 40px 56px; }
 .foot-brand { display: grid; align-content: start; justify-items: start; gap: 12px; }
 .foot-logo { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 1.12rem; border-radius: 10px; }
-.foot-logo .logo { flex: none; border-radius: 10px; }
+.foot-logo .logo { flex: none; }
 .foot-tag { margin: 0; max-width: 38ch; color: var(--ink-2); font-size: .92rem; line-height: 1.6; }
 .foot-stats { margin: 0; font-size: .8rem; font-variant-numeric: tabular-nums; }
 .foot-cta {
@@ -1314,37 +1323,40 @@ html:is([lang="de"], [lang="en"]) .foot-mark::before { letter-spacing: -0.04em; 
 @keyframes beat { 0%, 45%, 100% { scale: 1; } 15% { scale: 1.18; } 30% { scale: .94; } }
 
 /* ---------- الشخصية (src/components/Mascot.astro وsrc/scripts/mascot.js) ---------- */
-/* تمشي إلى مكانها بجهة القراءة (ثلاث خطوات والجسم يهتز معها)، ثم تقف وترمش وتلمع نجمتها. لا حركة متكررة:
-   بعد ذلك تتحرك فقط استجابةً للزائر (العينان تتابعان المؤشر، والنجمة تدور واليد تلوّح عند المرور، وتقفز عند اللمس). */
-.mascot { width: clamp(136px, 34vw, 184px); margin-bottom: -4px; --px: 1.5px; --py: 0px; -webkit-tap-highlight-color: transparent; }
+/* عند فتح الصفحة: تظهر الدائرة بقفزة صغيرة، وتلمع نجمة الهوائي، ويلوّح الروبوت مرتين، وتنزلق أدوات البطاقة واحدة بعد أخرى،
+   ثم يرمش. لا حركة متكررة: بعد ذلك تتحرك فقط استجابةً للزائر (العينان تتابعان المؤشر، والنجمة تدور واليد تلوّح عند المرور،
+   ويقفز عند اللمس). */
+.mascot { width: clamp(144px, 36vw, 196px); margin-bottom: -6px; --px: 0px; --py: 0px; -webkit-tap-highlight-color: transparent; }
 .m-svg { display: block; width: 100%; height: auto; overflow: visible; }
 html[dir="rtl"] .m-svg { scale: -1 1; }
-.m-leg { transform-box: fill-box; transform-origin: 50% 6%; }
-.m-eyes { transform-box: fill-box; transform-origin: 50% 50%; }
+/* محاور الدوران بإحداثيات الرسم (viewBox 160): الكتف لليد الملوّحة، ومنتصف الشاشة للرمش */
+.m-arm { transform-box: view-box; transform-origin: 56px 112px; }
+.m-eyes { transform-box: view-box; transform-origin: 80px 65px; }
 .m-pupils { translate: var(--px) var(--py); transition: translate 200ms var(--ease-out); }
-.m-arm { transform-box: fill-box; transform-origin: 12% 80%; }
 .m-spark { transform-box: fill-box; transform-origin: center; transition: transform var(--dur-slow) var(--spring); }
 .mascot:hover .m-spark { transform: rotate(90deg) scale(1.15); }
 @media (prefers-reduced-motion: no-preference) {
-  .hero-text > .mascot { animation: m-walk 1500ms cubic-bezier(.3, .55, .45, 1) 150ms both; }
-  .mascot .m-leg { animation: m-step 500ms ease-in-out 150ms 3; }
-  .mascot .m-leg-b { animation-direction: reverse; }
-  .mascot .m-bob { animation: m-bob 250ms ease-in-out 150ms 6; }
-  .mascot .m-eyes { animation: m-blink 260ms ease-in-out 1750ms; }
-  .mascot .m-spark { animation: twinkle 1s var(--ease-out) 1250ms backwards; }
-  .mascot:hover .m-arm { animation: m-wave 900ms ease-in-out; }
+  .hero-text > .mascot { animation: m-in 700ms var(--spring) 100ms both; transform-origin: 50% 85%; }
+  .mascot .m-spark { animation: twinkle 1s var(--ease-out) 450ms backwards; }
+  .mascot .m-arm { animation: m-wave 1100ms ease-in-out 650ms; }
+  .mascot .m-row { animation: m-row 420ms var(--ease-out) backwards; }
+  .mascot .m-row:nth-child(1) { animation-delay: 700ms; }
+  .mascot .m-row:nth-child(2) { animation-delay: 820ms; }
+  .mascot .m-row:nth-child(3) { animation-delay: 940ms; }
+  .mascot .m-eyes { animation: m-blink 260ms ease-in-out 1900ms; }
+  .mascot:hover .m-arm { animation: m-wave-h 1100ms ease-in-out; }
   .mascot.hop .m-bob { animation: m-hop 560ms var(--ease-out); }
-  /* صفحة 404: لا مشي، بل تتلفت يمينًا ويسارًا مرة واحدة */
-  .mascot.lost .m-leg, .mascot.lost .m-bob { animation: none; }
-  .mascot.lost .m-pupils { animation: m-look 2.2s ease-in-out .5s; }
-  .mascot.lost.hop .m-bob { animation: m-hop 560ms var(--ease-out); }
+  /* صفحة 404: لا تلويح، بل يتلفت يمينًا ويسارًا مرة واحدة */
+  .mascot.lost .m-arm, .mascot.lost:hover .m-arm, .mascot.lost .m-row { animation: none; }
+  .mascot.lost .m-pupils { animation: m-look 2.2s ease-in-out .6s; }
 }
-@keyframes m-look { 20%, 38% { translate: -3.4px -1px; } 58%, 76% { translate: 3.4px -1px; } }
-@keyframes m-walk { from { translate: calc(var(--fwd) * -96px) 0; opacity: 0; } 25% { opacity: 1; } }
-@keyframes m-step { 25% { rotate: 16deg; } 75% { rotate: -16deg; } }
-@keyframes m-bob { 50% { translate: 0 -2.5px; } }
+@keyframes m-in { from { opacity: 0; scale: .7; translate: 0 14px; } 60% { opacity: 1; } }
+@keyframes m-look { 20%, 38% { translate: -5px -1px; } 58%, 76% { translate: 5px -1px; } }
+@keyframes m-row { from { opacity: 0; translate: -10px 0; } }
 @keyframes m-blink { 50% { scale: 1 .08; } }
-@keyframes m-wave { 25%, 65% { rotate: -38deg; } 45%, 85% { rotate: -14deg; } }
+/* التلويح: مرتان من الكتف. نسخة المرور باسم آخر حتى تبدأ من جديد بعد حركة الدخول */
+@keyframes m-wave { 20%, 60% { rotate: -13deg; } 40%, 80% { rotate: 9deg; } }
+@keyframes m-wave-h { 20%, 60% { rotate: -13deg; } 40%, 80% { rotate: 9deg; } }
 @keyframes m-hop { 35% { translate: 0 -14px; } 70% { translate: 0 0; } 85% { translate: 0 -3px; } }
 
 /* ---------- الانتقال بين الصفحات (View Transitions) ---------- */
@@ -1375,7 +1387,7 @@ body.fb-open .totop { opacity: 0; pointer-events: none; }
 .fb-x .i { width: 12px; height: 12px; }
 .fb-form { display: grid; }
 .fb-top { display: flex; align-items: center; gap: 12px; padding-inline-end: 34px; }
-.fb-top .logo { flex: none; border-radius: 10px; }
+.fb-top .logo { flex: none; }
 .fb-tt { display: grid; gap: 1px; min-width: 0; }
 .fb-h { margin: 0; font-size: 1.02rem; font-weight: 700; line-height: 1.3; }
 .fb-sub { margin: 0; color: var(--muted); font-size: .84rem; line-height: 1.4; }
@@ -1460,7 +1472,7 @@ body.fn-open .totop { opacity: 0; pointer-events: none; }
 @keyframes fn-out { to { opacity: 0; transform: translateY(16px) scale(.98); } }
 .fn :focus-visible { outline-color: var(--fn-soft); }
 .fn-top { display: flex; align-items: center; gap: 10px; }
-.fn-top .logo { flex: none; border-radius: 8px; }
+.fn-top .logo { flex: none; }
 .fn-top .spark { animation: twinkle 1s var(--ease-out) 300ms backwards; }
 .fn-name { flex: 1; min-width: 0; color: var(--fn-soft); font-size: .8rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 /* ثلاث خطوات، والأولى تمتلئ بجهة القراءة */
@@ -1526,7 +1538,6 @@ body.fn-open .totop { opacity: 0; pointer-events: none; }
 .fd-wait-t { margin: 0; padding: 24px; color: var(--muted); text-align: center; }
 .fd-top { display: flex; align-items: center; gap: 10px; padding: 16px 16px 4px; padding-inline-start: 18px; }
 .fd-mark, .fd-back { width: 32px; height: 32px; flex: none; display: grid; place-items: center; }
-.fd-mark .logo { border-radius: 9px; }
 .fd-back {
   border: 0; border-radius: var(--r-full); background: var(--fill-2); color: var(--ink); cursor: pointer;
   transition: background-color var(--dur) var(--ease), translate var(--dur) var(--ease);

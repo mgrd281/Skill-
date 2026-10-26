@@ -37,10 +37,10 @@ function ico(images) {
 }
 
 const title = "دليل الأدوات";
-const plate = markSvg(); // الحاوية بحوافها المدورة (خلفية شفافة عند الزوايا)
-const bleed = markSvg({ bleed: true }); // مربع كامل: iOS وAndroid يقصّانه بشكلهما الخاص
+const plate = markSvg(); // الدائرة والرأس (خلفية شفافة حولها)
+const bleed = markSvg({ bleed: true }); // مربع أزرق كامل والرأس في وسطه: iOS وAndroid يقصّانه بشكلهما الخاص
 // القابلة للقص (maskable): الأقنعة تقصّ حتى 20% من كل جانب، فيُصغَّر الرسم ليبقى داخل المنطقة الآمنة (دائرة بنصف قطر 40%)
-const safe = markSvg({ bleed: true, scale: 0.92 });
+const safe = markSvg({ bleed: true, scale: 0.8 });
 
 // الملف المستقل للشعار، وأيقونة التبويب (SVG للمتصفحات الحديثة، وICO لغيرها ولمحركات البحث)
 write("logo.svg", markSvg({ title }));

@@ -1,47 +1,66 @@
 ---
-// شخصية الدليل: بلاطة الشعار الزرقاء بعينين وحاجبين وخد ذهبي، والنجمة الذهبية فوق رأسها كفكرة لامعة.
-// ألوانها ثابتة في الوضعين مثل الشعار، بلا تدرج ولا ظل. زينة فقط (aria-hidden).
-// الحركة (global.css، قسم "الشخصية"): تمشي إلى مكانها عند فتح الصفحة ثم تقف وترمش، والنجمة تلمع.
-// src/scripts/mascot.js يجعل عينيها تتابعان المؤشر وتقفز عند لمسها. مع تقليل الحركة تظهر واقفة بلا حركة.
-// في العربية تُعكس أفقيًا فتمشي من اليمين إلى اليسار مثل اتجاه القراءة.
-// pose="lost" لصفحة 404: حاجبان قلقان وفم مفتوح، وتتلفت مرة واحدة بدل المشي.
-import { COLORS } from "../lib/brand.js";
+// شخصية الدليل: روبوت الشعار كاملًا داخل دائرته الزرقاء، يلوّح بيد ويحمل بالأخرى بطاقة فيها ثلاث أدوات
+// (النجمة الذهبية للمهارات ثم بلاطتان)، والنجمة نفسها في طرف الهوائي. الرأس والهوائي واليدان والبطاقة تخرج من الدائرة،
+// والجسم داخلها تحت حافتها الفاتحة (لذلك الروبوت مجموعتان m-bob تتحركان معًا، والحافة بينهما).
+// ألوانها ثابتة في الوضعين مثل الشعار، بلا تدرج ولا ظل: العمق بدرجات مصمتة.
+// زينة فقط (aria-hidden). الحركة في global.css (قسم "الشخصية")، وsrc/scripts/mascot.js يجعل عينيها تتابعان المؤشر
+// وتقفز عند لمسها. في العربية تُعكس أفقيًا فتلوّح باليد الأخرى وتظهر أيقونات البطاقة يمينها مثل اتجاه القراءة.
+// pose="lost" لصفحة 404: عينان مستديرتان تتلفتان، وبطاقة باهتة.
+import { COLORS, sparkPath } from "../lib/brand.js";
 interface Props { pose?: "happy" | "lost" }
 const { pose = "happy" } = Astro.props;
 const lost = pose === "lost";
-const INK = "#1D1D1F";
-const S = 2.6; // سُمك الخطوط
-// الساقان: فخذ مستدير وحذاء مقدمته إلى الأمام. hx مركز الورك
-const leg = (hx: number, cls: string) => `<g class="m-leg ${cls}">
-  <rect x="${hx - 5.5}" y="96" width="11" height="24" rx="5.5" fill="#fff" stroke="${INK}" stroke-width="${S}"/>
-  <path d="M${hx - 7} 128.5V124Q${hx - 7} 119.5 ${hx - 2.5} 119.5H${hx + 4}Q${hx + 12.5} 119.5 ${hx + 12.5} 126V128.5Z" fill="#fff" stroke="${INK}" stroke-width="${S}" stroke-linejoin="round"/>
-</g>`;
-// نجمة الشعار بنسبها (منحنيات تربيعية بأربعة أذرع)
-const spark = (cx: number, cy: number, r: number, k = r * 0.125) =>
-  `M${cx} ${cy - r}Q${cx + k} ${cy - k} ${cx + r} ${cy}Q${cx + k} ${cy + k} ${cx} ${cy + r}Q${cx - k} ${cy + k} ${cx - r} ${cy}Q${cx - k} ${cy - k} ${cx} ${cy - r}Z`;
+// درجات مصمتة للعمق: حافة الدائرة أفتح، وظل الأبيض أزرق خفيف، ولمعة الشاشة كحلي أفتح، وخطوط البطاقة الخافتة
+const RIM = "#4A6CF0", SHADE = "#DCE4FB", GLINT = "#24357F", LINE = "#5B6BA6";
+const { blue, navy, eye, gold } = COLORS;
+// الدائرة: مركزها ونصف قطرها، والجسم يتبع حافتها من الأسفل
+const cx = 80, cy = 90, R = 62;
+const f = (n: number) => +n.toFixed(2);
+function torso(x0: number, x1: number, top: number, rx: number) {
+  const y = f(cy + Math.sqrt(R * R - (cx - x0) ** 2));
+  return `M${x0} ${y}V${top + rx}Q${x0} ${top} ${x0 + rx} ${top}H${x1 - rx}Q${x1} ${top} ${x1} ${top + rx}V${y}A${R} ${R} 0 0 1 ${x0} ${y}Z`;
+}
+const arm = (d: string, d2: string) =>
+  `<path d="${d}" fill="none" stroke="${SHADE}" stroke-width="16" stroke-linecap="round"/><path d="${d2}" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round"/>`;
+const eyes = lost
+  ? `<circle cx="66" cy="65" r="5.5" fill="${eye}"/><circle cx="94" cy="65" r="5.5" fill="${eye}"/>`
+  : `<g fill="none" stroke="${eye}" stroke-width="6" stroke-linecap="round"><path d="M57.5 69.5Q66 57 74.5 69.5"/><path d="M85.5 69.5Q94 57 102.5 69.5"/></g>`;
 const svg = `
+<circle class="m-disc" cx="${cx}" cy="${cy}" r="${R}" fill="${blue}"/>
 <g class="m-bob">
-  ${leg(50, "m-leg-b")}${leg(80, "m-leg-f")}
-  <g transform="rotate(-4 66 63)">
-    <rect x="7" y="59" width="20" height="11" rx="5.5" fill="${COLORS.blue}" transform="rotate(28 17 64.5)"/>
-    <g class="m-arm"><rect x="105" y="57" width="20" height="11" rx="5.5" fill="${COLORS.blue}" transform="rotate(-28 115 62.5)"/></g>
-    <rect x="20" y="20" width="92" height="86" rx="27" fill="${COLORS.blue}"/>
-    <g fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" class="m-brows">
-      ${lost ? `<path d="M40 41Q50 40 57 34"/><path d="M73 34Q80 40 90 41"/>` : `<path d="M40 40Q49 35 58 39"/><path d="M72 39Q81 35 90 40"/>`}
-    </g>
-    <g class="m-eyes">
-      <ellipse cx="50" cy="58" rx="11" ry="13" fill="#fff"/><ellipse cx="80" cy="58" rx="11" ry="13" fill="#fff"/>
-      <g class="m-pupils">
-        <circle cx="50" cy="59.5" r="5.6" fill="${INK}"/><circle cx="80" cy="59.5" r="5.6" fill="${INK}"/>
-        <circle cx="52" cy="57" r="1.7" fill="#fff"/><circle cx="82" cy="57" r="1.7" fill="#fff"/>
-      </g>
-    </g>
-    <circle cx="35" cy="81" r="6.5" fill="${COLORS.gold}"/>
-    ${lost ? `<ellipse cx="66" cy="86" rx="4.5" ry="5.5" fill="#fff"/>` : `<path d="M58 83Q66 90 74 82" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>`}
+  <path d="${torso(50, 110, 100, 18)}" fill="${SHADE}"/>
+  <path d="${torso(53, 107, 100, 16)}" fill="#fff"/>
+</g>
+<circle cx="${cx}" cy="${cy}" r="${R - 2.5}" fill="none" stroke="${RIM}" stroke-width="5"/>
+<g class="m-bob">
+  <g class="m-arm">
+    ${arm("M56 113Q38 110 28 96", "M56 111Q38 108 28 94")}
+    <rect x="16" y="75" width="19" height="23" rx="9.5" fill="${navy}" transform="rotate(-14 25.5 86.5)"/>
+    <rect x="12" y="71" width="6.5" height="11" rx="3.25" fill="${navy}" transform="rotate(-25 15 77)"/>
   </g>
-  <path class="m-spark" d="${spark(104, 19, 13)}" fill="${COLORS.gold}"/>
+  <rect x="71" y="93" width="18" height="10" rx="4" fill="${navy}"/>
+  <rect x="26" y="47" width="16" height="36" rx="8" fill="${SHADE}"/><rect x="118" y="47" width="16" height="36" rx="8" fill="${SHADE}"/>
+  <rect x="30" y="54" width="7" height="22" rx="3.5" fill="${navy}"/><rect x="123" y="54" width="7" height="22" rx="3.5" fill="${navy}"/>
+  <rect x="77.5" y="14" width="5" height="20" rx="2.5" fill="${navy}"/>
+  <ellipse cx="80" cy="31.5" rx="9" ry="4" fill="${navy}"/>
+  <rect x="38" y="30" width="84" height="68" rx="31" fill="${SHADE}"/>
+  <rect x="38" y="30" width="84" height="64" rx="30" fill="#fff"/>
+  <rect x="47" y="41" width="66" height="46" rx="19" fill="${navy}"/>
+  <path d="M56 51Q60 46 70 45.5" fill="none" stroke="${GLINT}" stroke-width="3.5" stroke-linecap="round"/>
+  <g class="m-eyes"><g class="m-pupils">${eyes}</g></g>
+  ${arm("M104 111Q122 113 128 124", "M104 109Q121 111 127 122")}
+  <g transform="rotate(-5 98 128)">
+    <rect x="62" y="104" width="72" height="48" rx="11" fill="${navy}" stroke="${eye}" stroke-width="2.5"/>
+    <g class="m-rows"${lost ? ' opacity=".35"' : ""}>
+      <g class="m-row"><path d="${sparkPath(76, 116, 5.5)}" fill="${gold}"/><path d="M86 116H120" stroke="#fff" stroke-width="4" stroke-linecap="round"/></g>
+      <g class="m-row"><rect x="70.5" y="123.5" width="11" height="9" rx="3" fill="${RIM}"/><path d="M86 128H112" stroke="${LINE}" stroke-width="4" stroke-linecap="round"/></g>
+      <g class="m-row"><rect x="70.5" y="135.5" width="11" height="9" rx="3" fill="${eye}"/><path d="M86 140H116" stroke="${LINE}" stroke-width="4" stroke-linecap="round"/></g>
+    </g>
+  </g>
+  <rect x="124" y="114" width="15" height="22" rx="7.5" fill="${navy}" transform="rotate(-5 131 125)"/>
+  <path class="m-spark" d="${sparkPath(80, 12, 11)}" fill="${gold}"/>
 </g>`;
 ---
 <div class={lost ? "mascot lost" : "mascot"} data-mascot aria-hidden="true">
-  <svg class="m-svg" viewBox="0 0 132 132" set:html={svg} />
+  <svg class="m-svg" viewBox="0 0 160 160" set:html={svg} />
 </div>
