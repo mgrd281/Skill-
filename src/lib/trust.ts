@@ -28,6 +28,10 @@ const OFFICIAL: Record<string, string> = {
   clerk: "Clerk", semgrep: "Semgrep", elevenlabs: "ElevenLabs", "21st-dev": "21st.dev", magicuidesign: "Magic UI",
   "uiverse-io": "Uiverse", gitroomhq: "Postiz", ComposioHQ: "Composio", VoltAgent: "VoltAgent", "capawesome-team": "Capawesome",
   rorkai: "Rork", squirrelscan: "squirrelscan",
+  // خوادم MCP من حسابات الجهات نفسها (supabase-community وmongodb-js حسابا Supabase وMongoDB لمشاريعهما مفتوحة المصدر)
+  github: "GitHub", modelcontextprotocol: "Model Context Protocol", MicrosoftDocs: "Microsoft", atlassian: "Atlassian",
+  "supabase-community": "Supabase", "mongodb-js": "MongoDB", grafana: "Grafana Labs", huggingface: "Hugging Face", brave: "Brave",
+  perplexityai: "Perplexity", firecrawl: "Firecrawl", "exa-labs": "Exa", apify: "Apify", motherduckdb: "MotherDuck",
   // «تطبيقات جاهزة»: حسابات الجهات التي تنشر تطبيقاتها بنفسها (blender وvideolan وLibreOffice نسخ رسمية من مستودعاتها)
   "mozilla-mobile": "Mozilla", wikimedia: "Wikimedia", duckduckgo: "DuckDuckGo", signalapp: "Signal", mastodon: "Mastodon",
   Automattic: "Automattic", obsproject: "OBS Project", videolan: "VideoLAN", blender: "Blender", LibreOffice: "LibreOffice",

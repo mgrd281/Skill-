@@ -7269,5 +7269,597 @@
     "added": "2026-10-26T13:30:00Z",
     "license": "other",
     "archived": false
+  },
+  {
+    "slug": "github-mcp-server",
+    "cat": "mcp",
+    "name": "GitHub MCP Server",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/github/github-mcp-server",
+    "site": null,
+    "stars": null,
+    "cmd": "claude mcp add --transport http github https://api.githubcopilot.com/mcp -H \"Authorization: Bearer YOUR_GITHUB_PAT\"",
+    "use": [
+      "claude",
+      "web",
+      "mobile"
+    ],
+    "desc": "خادم GitHub الرسمي: يقرأ Claude المستودعات والكود، ويدير المشكلات وطلبات الدمج، ويؤتمت سير العمل.",
+    "desc_de": "Offizieller GitHub-Server: Claude liest Repositories und Code, verwaltet Issues und Pull Requests und automatisiert Workflows.",
+    "desc_en": "GitHub's official server: Claude reads repositories and code, manages issues and pull requests, and automates workflows.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "filesystem-mcp",
+    "cat": "mcp",
+    "name": "Filesystem MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+    "site": "https://www.npmjs.com/package/@modelcontextprotocol/server-filesystem",
+    "stars": null,
+    "cmd": "claude mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem /full/path/to/folder",
+    "use": [
+      "claude"
+    ],
+    "desc": "يتيح لـ Claude قراءة الملفات وكتابتها والبحث فيها، داخل المجلدات التي تسمح بها فقط.",
+    "desc_de": "Lässt Claude Dateien lesen, schreiben und durchsuchen, nur in den Ordnern, die du freigibst.",
+    "desc_en": "Lets Claude read, write and search files, only inside the folders you allow.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "fetch-mcp",
+    "cat": "mcp",
+    "name": "Fetch MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+    "site": "https://pypi.org/project/mcp-server-fetch/",
+    "stars": null,
+    "cmd": "claude mcp add fetch -- uvx mcp-server-fetch",
+    "use": [
+      "claude",
+      "web"
+    ],
+    "desc": "يجلب صفحات الويب ويحوّلها إلى Markdown ليقرأها Claude بسهولة.",
+    "desc_de": "Ruft Webseiten ab und wandelt sie in Markdown um, damit Claude sie leicht lesen kann.",
+    "desc_en": "Fetches web pages and converts them to Markdown so Claude can read them easily.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "memory-mcp",
+    "cat": "mcp",
+    "name": "Memory MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+    "site": "https://www.npmjs.com/package/@modelcontextprotocol/server-memory",
+    "stars": null,
+    "cmd": "claude mcp add memory -- npx -y @modelcontextprotocol/server-memory",
+    "use": [
+      "claude"
+    ],
+    "desc": "ذاكرة دائمة في رسم معرفي محلي: يتذكر Claude معلوماتك بين المحادثات.",
+    "desc_de": "Dauerhaftes Gedächtnis als lokaler Wissensgraph: Claude merkt sich Informationen über dich über Chats hinweg.",
+    "desc_en": "Persistent memory in a local knowledge graph, so Claude remembers information about you across chats.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "sequential-thinking-mcp",
+    "cat": "mcp",
+    "name": "Sequential Thinking MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+    "site": "https://www.npmjs.com/package/@modelcontextprotocol/server-sequential-thinking",
+    "stars": null,
+    "cmd": "claude mcp add sequential-thinking -- npx -y @modelcontextprotocol/server-sequential-thinking",
+    "use": [
+      "claude"
+    ],
+    "desc": "أداة تفكير منظّم خطوة بخطوة: يقسّم Claude المشكلة ويراجع خطواته ويعدّلها.",
+    "desc_de": "Werkzeug für strukturiertes Denken Schritt für Schritt: Claude zerlegt ein Problem, prüft seine Schritte und passt sie an.",
+    "desc_en": "A tool for structured step-by-step thinking: Claude breaks a problem down, reviews its steps and revises them.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "git-mcp",
+    "cat": "mcp",
+    "name": "Git MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
+    "site": "https://pypi.org/project/mcp-server-git/",
+    "stars": null,
+    "cmd": "claude mcp add git -- uvx mcp-server-git",
+    "use": [
+      "claude",
+      "web"
+    ],
+    "desc": "يقرأ Claude مستودعات Git المحلية ويبحث فيها ويعدّلها: الحالة والفروق والسجل والالتزامات.",
+    "desc_de": "Claude liest, durchsucht und bearbeitet lokale Git-Repositories: Status, Diffs, Verlauf und Commits.",
+    "desc_en": "Claude reads, searches and works with local Git repositories: status, diffs, history and commits.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "desktop-commander",
+    "cat": "mcp",
+    "name": "Desktop Commander",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+    "site": null,
+    "stars": null,
+    "cmd": "claude mcp add --scope user desktop-commander -- npx -y @wonderwhy-er/desktop-commander@latest",
+    "use": [
+      "claude",
+      "mac"
+    ],
+    "desc": "يعمل Claude على جهازك مباشرة: يعدّل الملفات والكود، ويشغّل أوامر الطرفية والعمليات.",
+    "desc_de": "Claude arbeitet direkt auf deinem Rechner: bearbeitet Dateien und Code und führt Terminalbefehle und Prozesse aus.",
+    "desc_en": "Claude works directly on your computer: edits files and code and runs terminal commands and processes.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "task-master",
+    "cat": "mcp",
+    "name": "Task Master",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/eyaltoledano/claude-task-master",
+    "site": null,
+    "stars": null,
+    "cmd": "claude mcp add taskmaster-ai -- npx -y task-master-ai",
+    "use": [
+      "claude",
+      "web"
+    ],
+    "desc": "يحوّل وصف مشروعك إلى قائمة مهام مرتبة، ويتابع Claude تنفيذها مهمة بعد مهمة.",
+    "desc_de": "Macht aus deiner Projektbeschreibung eine geordnete Aufgabenliste, die Claude Schritt für Schritt abarbeitet.",
+    "desc_en": "Turns your project description into an ordered task list that Claude works through one task at a time.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "serena",
+    "cat": "mcp",
+    "name": "Serena",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/oraios/serena",
+    "site": null,
+    "stars": null,
+    "cmd": "uv tool install -p 3.13 serena-agent\nclaude mcp add --scope user serena -- serena start-mcp-server --context claude-code --project-from-cwd",
+    "use": [
+      "claude",
+      "web"
+    ],
+    "desc": "يفهم Claude الكود على مستوى الدوال والأصناف لا كنص فقط، فيبحث ويعدّل بدقة في المشاريع الكبيرة.",
+    "desc_de": "Claude versteht Code auf Ebene von Funktionen und Klassen statt nur als Text und sucht und bearbeitet so gezielt in großen Projekten.",
+    "desc_en": "Claude understands code at the level of functions and classes, not just text, so it searches and edits precisely in large projects.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "exa-mcp",
+    "cat": "mcp",
+    "name": "Exa MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/exa-labs/exa-mcp-server",
+    "site": "https://exa.ai",
+    "stars": null,
+    "cmd": "claude mcp add --transport http exa https://mcp.exa.ai/mcp",
+    "use": [
+      "claude",
+      "web"
+    ],
+    "desc": "بحث في الويب وجلب الصفحات عبر Exa، محرك بحث مصمم للذكاء الاصطناعي.",
+    "desc_de": "Websuche und Seitenabruf über Exa, eine Suchmaschine für KI.",
+    "desc_en": "Web search and page fetching through Exa, a search engine built for AI.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "firecrawl-mcp",
+    "cat": "mcp",
+    "name": "Firecrawl MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/firecrawl/firecrawl-mcp-server",
+    "site": "https://docs.firecrawl.dev/mcp-server",
+    "stars": null,
+    "cmd": "claude mcp add firecrawl -e FIRECRAWL_API_KEY=fc-YOUR_API_KEY -- npx -y firecrawl-mcp",
+    "use": [
+      "claude",
+      "web",
+      "shop"
+    ],
+    "desc": "يجمع محتوى المواقع ويحوّله إلى بيانات نظيفة: صفحة واحدة أو موقع كامل أو بحث.",
+    "desc_de": "Holt Inhalte von Websites als saubere Daten: eine Seite, eine ganze Website oder eine Suche.",
+    "desc_en": "Turns website content into clean data: one page, a whole site or a search.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "brave-search-mcp",
+    "cat": "mcp",
+    "name": "Brave Search MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/brave/brave-search-mcp-server",
+    "site": null,
+    "stars": null,
+    "cmd": "claude mcp add brave-search -e BRAVE_API_KEY=YOUR_API_KEY -- npx -y @brave/brave-search-mcp-server",
+    "use": [
+      "claude"
+    ],
+    "desc": "بحث Brave داخل Claude: الويب والأخبار والصور والفيديو والأماكن.",
+    "desc_de": "Brave-Suche in Claude: Web, News, Bilder, Videos und Orte.",
+    "desc_en": "Brave Search inside Claude: web, news, images, videos and places.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "perplexity-mcp",
+    "cat": "mcp",
+    "name": "Perplexity MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/perplexityai/modelcontextprotocol",
+    "site": "https://docs.perplexity.ai",
+    "stars": null,
+    "cmd": "claude mcp add perplexity --env PERPLEXITY_API_KEY=\"your_key_here\" -- npx -y @perplexity-ai/mcp-server",
+    "use": [
+      "claude"
+    ],
+    "desc": "بحث فوري في الويب وأبحاث معمّقة من Perplexity داخل Claude، بمفتاح API.",
+    "desc_de": "Echtzeit-Websuche und gründliche Recherche von Perplexity in Claude, mit API-Schlüssel.",
+    "desc_en": "Real-time web search and in-depth research from Perplexity inside Claude, with an API key.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "hugging-face-mcp",
+    "cat": "mcp",
+    "name": "Hugging Face MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/huggingface/hf-mcp-server",
+    "site": "https://huggingface.co/mcp",
+    "stars": null,
+    "cmd": "claude mcp add hf-mcp-server -t http \"https://huggingface.co/mcp?login\"",
+    "use": [
+      "claude",
+      "web"
+    ],
+    "desc": "يربط Claude بمنصة Hugging Face: يبحث في النماذج وقواعد البيانات والأوراق، ويستخدم آلاف تطبيقات Gradio.",
+    "desc_de": "Verbindet Claude mit dem Hugging Face Hub: Modelle, Datensätze und Papers durchsuchen und tausende Gradio-Apps nutzen.",
+    "desc_en": "Connects Claude to the Hugging Face Hub: search models, datasets and papers, and use thousands of Gradio apps.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "microsoft-learn-mcp",
+    "cat": "mcp",
+    "name": "Microsoft Learn MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/MicrosoftDocs/mcp",
+    "site": "https://learn.microsoft.com",
+    "stars": null,
+    "cmd": "claude mcp add --transport http microsoft-learn https://learn.microsoft.com/api/mcp",
+    "use": [
+      "claude",
+      "web"
+    ],
+    "desc": "وثائق Microsoft الرسمية المحدّثة مباشرة لـ Claude، بدل بيانات تدريب قديمة.",
+    "desc_de": "Aktuelle offizielle Microsoft-Dokumentation direkt für Claude statt veralteter Trainingsdaten.",
+    "desc_en": "Current official Microsoft documentation straight to Claude instead of outdated training data.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "atlassian-mcp",
+    "cat": "mcp",
+    "name": "Atlassian MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/atlassian/atlassian-mcp-server",
+    "site": null,
+    "stars": null,
+    "cmd": "claude mcp add --transport http atlassian https://mcp.atlassian.com/v2/mcp",
+    "use": [
+      "claude",
+      "dashboard"
+    ],
+    "desc": "خادم Atlassian الرسمي: يقرأ Claude ويعدّل Jira وConfluence في حسابك السحابي.",
+    "desc_de": "Offizieller Atlassian-Server: Claude liest und bearbeitet Jira und Confluence in deiner Cloud-Instanz.",
+    "desc_en": "Atlassian's official server: Claude reads and updates Jira and Confluence in your cloud site.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "cloudflare-mcp",
+    "cat": "mcp",
+    "name": "Cloudflare MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "site": null,
+    "stars": null,
+    "cmd": "claude mcp add --transport http cloudflare-docs https://docs.mcp.cloudflare.com/mcp",
+    "use": [
+      "web",
+      "claude"
+    ],
+    "desc": "خوادم Cloudflare الرسمية: وثائق Cloudflare، وإدارة Workers والسجلات والحساب بلغة طبيعية.",
+    "desc_de": "Offizielle Cloudflare-Server: Cloudflare-Dokumentation sowie Workers, Logs und Konto per natürlicher Sprache verwalten.",
+    "desc_en": "Cloudflare's official servers: Cloudflare docs, plus managing Workers, logs and your account in plain language.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "apify-mcp",
+    "cat": "mcp",
+    "name": "Apify MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/apify/apify-mcp-server",
+    "site": "https://mcp.apify.com",
+    "stars": null,
+    "cmd": "claude mcp add --transport http apify https://mcp.apify.com",
+    "use": [
+      "shop",
+      "brand",
+      "claude"
+    ],
+    "desc": "آلاف أدوات الجمع الجاهزة من Apify: بيانات من مواقع التواصل والخرائط والمتاجر وأي موقع.",
+    "desc_de": "Tausende fertige Scraper von Apify: Daten aus Social Media, Karten, Shops und jeder Website.",
+    "desc_en": "Thousands of ready-made Apify scrapers: data from social media, maps, online shops and any website.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "figma-mcp",
+    "cat": "design",
+    "name": "Figma MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/figma/mcp-server-guide",
+    "site": null,
+    "stars": null,
+    "cmd": "claude mcp add --transport http figma https://mcp.figma.com/mcp",
+    "use": [
+      "web",
+      "landing",
+      "mobile"
+    ],
+    "desc": "خادم Figma الرسمي: يقرأ Claude بيانات تصاميمك ومكوناتها ومتغيراتها ليحوّلها إلى كود مطابق.",
+    "desc_de": "Offizieller Figma-Server: Claude liest deine Designs mit Komponenten und Variablen und setzt sie passgenau in Code um.",
+    "desc_en": "Figma's official server: Claude reads your designs with their components and variables and turns them into matching code.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "supabase-mcp",
+    "cat": "data",
+    "name": "Supabase MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/supabase-community/supabase-mcp",
+    "site": "https://supabase.com/mcp",
+    "stars": null,
+    "cmd": "claude mcp add --transport http supabase https://mcp.supabase.com/mcp",
+    "use": [
+      "web",
+      "mobile",
+      "dashboard"
+    ],
+    "desc": "يربط Claude بمشروع Supabase: الجداول والاستعلامات والإعدادات.",
+    "desc_de": "Verbindet Claude mit deinem Supabase-Projekt: Tabellen, Abfragen und Einstellungen.",
+    "desc_en": "Connects Claude to your Supabase project: tables, queries and settings.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "neon-mcp",
+    "cat": "data",
+    "name": "Neon MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/neondatabase/mcp-server-neon",
+    "site": null,
+    "stars": null,
+    "cmd": "claude mcp add --transport http neon https://mcp.neon.tech/mcp",
+    "use": [
+      "web",
+      "dashboard"
+    ],
+    "desc": "يدير Claude قواعد Postgres على Neon: المشاريع والفروع والاستعلامات وتغييرات الجداول.",
+    "desc_de": "Claude verwaltet Postgres-Datenbanken auf Neon: Projekte, Branches, Abfragen und Schemaänderungen.",
+    "desc_en": "Claude manages Postgres databases on Neon: projects, branches, queries and schema changes.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "mongodb-mcp",
+    "cat": "data",
+    "name": "MongoDB MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/mongodb-js/mongodb-mcp-server",
+    "site": null,
+    "stars": null,
+    "cmd": "claude mcp add mongodb -e MDB_MCP_CONNECTION_STRING=YOUR_CONNECTION_STRING -- npx -y mongodb-mcp-server@latest --readOnly",
+    "use": [
+      "web",
+      "dashboard"
+    ],
+    "desc": "يستعلم Claude في قواعد MongoDB ويديرها، ومعها MongoDB Atlas.",
+    "desc_de": "Claude fragt MongoDB-Datenbanken ab und verwaltet sie, auch in MongoDB Atlas.",
+    "desc_en": "Claude queries and manages MongoDB databases, including MongoDB Atlas.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "motherduck-duckdb-mcp",
+    "cat": "data",
+    "name": "MotherDuck DuckDB MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/motherduckdb/mcp-server-motherduck",
+    "site": null,
+    "stars": null,
+    "cmd": "claude mcp add --scope user duckdb --transport stdio -- uvx mcp-server-motherduck --db-path :memory: --read-write --allow-switch-databases",
+    "use": [
+      "dashboard",
+      "claude"
+    ],
+    "desc": "تحليل بيانات بـ SQL عبر DuckDB محليًا أو MotherDuck في السحابة.",
+    "desc_de": "SQL-Analysen mit DuckDB lokal oder mit MotherDuck in der Cloud.",
+    "desc_en": "SQL analytics with DuckDB locally or MotherDuck in the cloud.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "grafana-mcp",
+    "cat": "analytics",
+    "name": "Grafana MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/grafana/mcp-grafana",
+    "site": null,
+    "stars": null,
+    "cmd": "claude mcp add grafana -e GRAFANA_URL=http://localhost:3000 -e GRAFANA_SERVICE_ACCOUNT_TOKEN=YOUR_TOKEN -- uvx mcp-grafana",
+    "use": [
+      "dashboard",
+      "web"
+    ],
+    "desc": "يقرأ Claude لوحات Grafana ومصادر البيانات والتنبيهات، ويبحث في المقاييس والسجلات.",
+    "desc_de": "Claude liest Grafana-Dashboards, Datenquellen und Alerts und durchsucht Metriken und Logs.",
+    "desc_en": "Claude reads Grafana dashboards, data sources and alerts, and searches metrics and logs.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "posthog-mcp",
+    "cat": "analytics",
+    "name": "PostHog MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/PostHog/posthog/tree/master/services/mcp",
+    "site": null,
+    "stars": null,
+    "cmd": "claude mcp add --transport http posthog https://mcp.posthog.com/mcp",
+    "use": [
+      "web",
+      "mobile",
+      "shop",
+      "landing"
+    ],
+    "desc": "يقرأ Claude بيانات PostHog: اللوحات والتحليلات وأعلام الميزات، ويشغّل استعلامات SQL.",
+    "desc_de": "Claude nutzt deine PostHog-Daten: Dashboards, Analysen und Feature Flags, auch per SQL-Abfrage.",
+    "desc_en": "Claude works with your PostHog data: dashboards, insights and feature flags, including SQL queries.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "google-calendar-mcp",
+    "cat": "booking",
+    "name": "Google Calendar MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/nspady/google-calendar-mcp",
+    "site": null,
+    "stars": null,
+    "cmd": "claude mcp add google-calendar -e GOOGLE_OAUTH_CREDENTIALS=/full/path/to/gcp-oauth.keys.json -- npx -y @cocal/google-calendar-mcp",
+    "use": [
+      "booking",
+      "claude"
+    ],
+    "desc": "يدير Claude تقويم Google: يعرض المواعيد ويبحث فيها ويضيفها ويعدّلها، ويجد الأوقات الفارغة.",
+    "desc_de": "Claude verwaltet deinen Google Kalender: Termine anzeigen, suchen, anlegen und ändern und freie Zeiten finden.",
+    "desc_en": "Claude manages your Google Calendar: lists, searches, creates and updates events, and finds free time.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "eventcalendar",
+    "cat": "booking",
+    "name": "EventCalendar",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/vkurko/calendar",
+    "site": "https://vkurko.github.io/calendar/",
+    "stars": null,
+    "cmd": "npm install @event-calendar/core",
+    "use": [
+      "booking",
+      "web",
+      "dashboard"
+    ],
+    "desc": "تقويم مواعيد كامل بالسحب والإفلات، بعروض الموارد والخط الزمني، خفيف وبلا اعتماديات.",
+    "desc_de": "Vollwertiger Terminkalender mit Drag & Drop, Ressourcen- und Timeline-Ansichten, leicht und ohne Abhängigkeiten.",
+    "desc_en": "A full drag-and-drop event calendar with resource and timeline views, lightweight and dependency-free.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "react-big-calendar",
+    "cat": "booking",
+    "name": "React Big Calendar",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/bigcalendar/react-big-calendar",
+    "site": "https://bigcalendar.github.io/react-big-calendar/",
+    "stars": null,
+    "cmd": "npm install react-big-calendar",
+    "use": [
+      "booking",
+      "web",
+      "dashboard"
+    ],
+    "desc": "مكوّن تقويم مواعيد لـ React بعروض الشهر والأسبوع واليوم وجدول الأعمال.",
+    "desc_de": "Kalenderkomponente für React mit Monats-, Wochen-, Tages- und Agenda-Ansicht.",
+    "desc_en": "An events calendar component for React with month, week, day and agenda views.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "next-js-devtools-mcp",
+    "cat": "vercel",
+    "name": "Next.js DevTools MCP",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/vercel/next-devtools-mcp",
+    "site": null,
+    "stars": null,
+    "cmd": "claude mcp add next-devtools npx next-devtools-mcp@latest",
+    "use": [
+      "web",
+      "claude"
+    ],
+    "desc": "يوصل Claude بخادم تطوير Next.js 16 وما بعده: الأخطاء والمسارات والسجلات مباشرة أثناء العمل.",
+    "desc_de": "Verbindet Claude mit dem laufenden Dev-Server ab Next.js 16: Laufzeitfehler, Routen und Logs live.",
+    "desc_en": "Connects Claude to your running Next.js 16+ dev server: live runtime errors, routes and logs.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "ai-elements",
+    "cat": "vercel",
+    "name": "AI Elements",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/vercel/ai-elements",
+    "site": "https://ai-sdk.dev/elements",
+    "stars": null,
+    "cmd": "npx ai-elements@latest",
+    "use": [
+      "web",
+      "dashboard"
+    ],
+    "desc": "مكونات React جاهزة لتطبيقات الذكاء الاصطناعي: المحادثات والرسائل وكتل الكود وعرض التفكير، تُضاف بأمر واحد.",
+    "desc_de": "Fertige React-Komponenten für KI-Apps: Chats, Nachrichten, Codeblöcke und Denkschritte, per Befehl hinzugefügt.",
+    "desc_en": "Ready-made React components for AI apps: conversations, messages, code blocks and reasoning displays, added with one command.",
+    "added": "2026-10-26T16:00:00Z"
+  },
+  {
+    "slug": "streamdown",
+    "cat": "vercel",
+    "name": "Streamdown",
+    "kind": "مكتبة",
+    "isNew": true,
+    "gh": "https://github.com/vercel/streamdown",
+    "site": "https://www.npmjs.com/package/streamdown",
+    "stars": null,
+    "cmd": "npm install streamdown",
+    "use": [
+      "web"
+    ],
+    "desc": "بديل مباشر لـ react-markdown مصمم لعرض ردود الذكاء الاصطناعي أثناء وصولها، حتى لو كان Markdown ناقصًا.",
+    "desc_de": "Direkter Ersatz für react-markdown, gebaut für gestreamte KI-Antworten, auch bei unvollständigem Markdown.",
+    "desc_en": "A drop-in replacement for react-markdown built for streamed AI responses, even when the Markdown is incomplete.",
+    "added": "2026-10-26T16:00:00Z"
   }
 ]
