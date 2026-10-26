@@ -18,6 +18,7 @@
     "check-icons": "node scripts/check-icons.mjs",
     "brand": "node scripts/build-brand.mjs",
     "check-brand": "node scripts/check-brand.mjs",
+    "marketing": "node scripts/make-marketing.cjs",
     "inbox": "node --env-file=.env.local scripts/inbox.mjs"
   },
   "dependencies": {

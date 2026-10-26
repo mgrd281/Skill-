@@ -9,3 +9,6 @@ links-report.md
 # متغيرات البيئة المحلية (فيها مفاتيح مثل BLOB_READ_WRITE_TOKEN من vercel env pull): لا تُرفع أبدًا
 .env
 .env.*
+
+# مواد التسويق المولّدة (npm run marketing): تُصنع عند الحاجة ولا تُرفع
+marketing/
