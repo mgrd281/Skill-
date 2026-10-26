@@ -1372,14 +1372,8 @@ body.fb-open .totop { opacity: 0; pointer-events: none; }
 }
 
 /* ---------- «ساعدني أختار» (src/views/FinderFragment.astro وsrc/scripts/finder-app.js) ---------- */
-/* المداخل: رابط في الواجهة، وبطاقة تحت «ماذا تبني؟»، وزر في التذييل */
+/* المداخل: رابط في الواجهة، وزر في التذييل. شعار الدليل في رأس النافذتين (src/components/Logo.astro) */
 button.link-more { border: 0; background: none; padding: 0; font: inherit; font-size: 1rem; font-weight: 500; cursor: pointer; }
-.fd-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 24px; padding: 18px 20px; border-radius: var(--r-xl); background: var(--card); }
-/* شعار الدليل في البطاقة وفي رأس النافذتين (src/components/Logo.astro)، ونجمته تلمع عند الظهور مثل الشريط العلوي */
-.fd-cta .logo { flex: none; border-radius: 13px; }
-.fd-cta-t { flex: 1; min-width: min(100%, 220px); display: grid; gap: 2px; line-height: 1.4; }
-.fd-cta-t b { font-size: 1.05rem; font-weight: 700; }
-.fd-cta-t span { color: var(--muted); font-size: .92rem; }
 
 /* النافذة الصغيرة: بطاقة عائمة داكنة (سطح معكوس مثل الإشعار القصير .toast: --ink خلفية و--bg نص)، وفي الوضع الداكن
    بلون البطاقة بحد رفيع. مكانها مكان نافذة الرأي، وتسأل أول سؤال ببلاطات. ألوانها كلها من --fn-fg بشفافيات مختلفة */
