@@ -23,13 +23,14 @@ const api = async (p) => {
 };
 
 // ترتيب المرشحين: أيقونة المتجر ثم أيقونة النظام ثم أي ملف اسمه icon أو logo، وتُستبعد النسخ الأحادية اللون والصغيرة
-function score(p, size, repo) {
+function score(p, size, repo, appId) {
   const lp = p.toLowerCase(), name = lp.split("/").pop();
   if (!/\.(png|svg)$/.test(name)) return -1;
   if (/(^|\/)(node_modules|vendor|third[_-]?party|external|tests?|examples?|samples?|screenshots?|fixtures?)\//.test(lp)) return -1;
   if (/screenshot|badge|banner|social|preview|feature[_-]?graphic|splash|promo|header|readme/.test(lp)) return -1;
   let s = 0;
-  if (/fastlane\/metadata\/android\/[^/]+\/images\/icon\.png$/.test(lp)) s = 100;
+  if (appId && (name === appId + ".svg" || name === appId + ".png")) s = 96;
+  else if (/fastlane\/metadata\/android\/[^/]+\/images\/icon\.png$/.test(lp)) s = 100;
   else if (/hicolor\/scalable\/apps\/[^/]+\.svg$/.test(lp)) s = 92;
   else if (/appicon[^/]*\.appiconset\/[^/]+\.png$/.test(lp)) s = 85;
   else if (/ic_launcher-(web|playstore)\.png$/.test(name)) s = 82;
@@ -39,6 +40,8 @@ function score(p, size, repo) {
   else if (/(icon|logo)/.test(name)) s = 30;
   else return -1;
   if (/symbolic|mono|monochrome|template|tray|menubar|status|white|black|dark|light|foreground|background|small|favicon/.test(name)) s -= 40;
+  if (/canary|preview|nightly|beta|insider|devel|(^|[^a-z])dev([^a-z]|$)|debug|test/.test(lp)) s -= 40;
+  if (/onboarding|illustration|empty[-_]?state|placeholder|wordmark|lockup|text/.test(lp)) s -= 30;
   if (/(^|[^0-9])(16|20|22|24|29|32|40|48)(x\d+)?(@[123]x)?\.png$/.test(name)) s -= 30;
   const px = Math.max(0, ...[...name.matchAll(/(\d{3,4})/g)].map((m) => +m[1]).filter((n) => n <= 2048));
   s += Math.min(px, 1024) / 128;
@@ -63,8 +66,12 @@ for (const t of tools) {
     let file = t.icon;
     if (!file) {
       const tree = await api(`/repos/${owner}/${repo}/git/trees/${encodeURIComponent(branch)}?recursive=1`);
-      const best = tree.tree.filter((e) => e.type === "blob").map((e) => ({ p: e.path, s: score(e.path, e.size || 0, repo) }))
-        .filter((e) => e.s >= 0).sort((a, b) => b.s - a.s)[0];
+      const appId = /^flatpak install (?:--user )?flathub ([\w.-]+)$/.exec(t.cmd || "")?.[1].toLowerCase();
+      const ranked = tree.tree.filter((e) => e.type === "blob").map((e) => ({ p: e.path, s: score(e.path, e.size || 0, repo, appId) }))
+        .filter((e) => e.s >= 0).sort((a, b) => b.s - a.s);
+      // المرشحون الخمسة الأوائل في السجل، لتصحيح اختيار خاطئ بحقل icon
+      console.log(`  ${t.slug} candidates: ${ranked.slice(0, 5).map((e) => `${e.p} (${e.s.toFixed(1)})`).join(" | ") || "none"}`);
+      const best = ranked[0];
       if (!best) { missed.push(t.slug); continue; }
       file = best.p;
     }
@@ -72,9 +79,13 @@ for (const t of tools) {
     const r = await fetch(src);
     if (!r.ok) throw new Error(`${src}: ${r.status}`);
     const buf = Buffer.from(await r.arrayBuffer());
-    const img = sharp(buf, { density: 300 });
+    let img = sharp(buf, { density: 300 });
     const meta = await img.metadata();
     if (!/\.svg$/i.test(file) && Math.min(meta.width || 0, meta.height || 0) < 64) { missed.push(`${t.slug} (${file}: صغيرة)`); continue; }
+    // هامش شفاف حول الرسم (شائع في أيقونات Windows وLinux) يُقص حتى تتساوى أحجام الأيقونات؛ الخلفية الملونة تبقى كما هي
+    const corner = await sharp(await img.png().toBuffer()).ensureAlpha().extract({ left: 0, top: 0, width: 1, height: 1 }).raw().toBuffer();
+    img = sharp(await img.png().toBuffer());
+    if (corner[3] === 0) img = sharp(await img.trim({ threshold: 1 }).png().toBuffer());
     const out = `app-icons/${t.slug}.png`;
     await img.resize(128, 128, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } }).png({ compressionLevel: 9, palette: true }).toFile(path.join(root, "public", out));
     map[t.slug] = { file: out, src };
