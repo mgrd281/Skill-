@@ -3,7 +3,7 @@
 // تُبنى من src/pages/privacy.astro ونظيريها في src/pages/de/ وsrc/pages/en/. النص في src/i18n/privacy.ts.
 import Base from "../layouts/Base.astro";
 import Icon from "../components/Icon.astro";
-import { operator, txt, formatDate } from "../lib/data";
+import { operator, newsletter, txt, formatDate } from "../lib/data";
 import { type Lang } from "../i18n";
 import { privacy, PRIVACY_UPDATED } from "../i18n/privacy";
 interface Props { lang: Lang }
@@ -25,6 +25,12 @@ if (!operator && lang === "ar") console.warn("تنبيه: لا مشغّل في d
           <p set:html={txt(body, lang)} />
         </>
       ))}
+      {newsletter && (
+        <>
+          <h2>{p.newsletterH}</h2>
+          <p set:html={txt(p.newsletter(newsletter.provider), lang)} />
+        </>
+      )}
       <h2 id="imprint">{operator ? p.imprint : p.controller}</h2>
       {operator ? (
         <address>

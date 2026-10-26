@@ -7,6 +7,7 @@ import Odometer from "../components/Odometer.astro";
 import Mascot from "../components/Mascot.astro";
 import KitDialog from "../components/KitDialog.astro";
 import CardIcons from "../components/CardIcons.astro";
+import Newsletter from "../components/Newsletter.astro";
 import { tools, byStars, rankOf, categories, projects, starsUpdatedAt, formatDate, recentTools, initials, kindIcon, kindLabel, categoryIcon, projectIcon, txt, catName, projName, projAdvice } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
 import { kitPlan } from "../lib/install.js";
@@ -31,9 +32,11 @@ const appData = {
   base: href(lang, "tools/"),
   feed: href(lang, "feed.xml"),
   recent: recentTools.map((r) => ({ slug: r.slug, name: r.name, added: r.added, cat: catName(r.cat, lang) })),
-  // ما تحتاجه الفلترة والترتيب والعدّ لكل أداة، بترتيب النجوم: s الاسم المختصر، c القسم، k مهارة، n جديدة،
+  // ما تحتاجه الفلترة والترتيب والعدّ لكل أداة، بترتيب النجوم: s الاسم المختصر، nm الاسم، c القسم، k مهارة، n جديدة،
   // st النجوم، o ترتيب الإضافة، a تاريخها، u المشاريع
-  tools: byStars.map((x) => ({ s: x.slug, c: x.cat, k: x.kind === "Skill" ? 1 : 0, n: x.isNew ? 1 : 0, st: x.starsN, o: x.order, a: x.added, u: x.use.join(" ") })),
+  tools: byStars.map((x) => ({ s: x.slug, nm: x.name, c: x.cat, k: x.kind === "Skill" ? 1 : 0, n: x.isNew ? 1 : 0, st: x.starsN, o: x.order, a: x.added, u: x.use.join(" ") })),
+  // أسماء الأقسام لقسم «الأكثر نسخًا» (src/scripts/popular.js)
+  catNames: Object.fromEntries(categories.map((c) => [c.id, catName(c.id, lang)])),
 };
 // بيانات منظمة: اسم الموقع وأعلى الأدوات نجومًا
 const abs = (p: string) => new URL(href(lang, p), Astro.site).href;
@@ -210,6 +213,14 @@ const kinds: Array<[string, any, string]> = [
     </div>
   </section>
 
+  <!-- «الأكثر نسخًا هذا الأسبوع»: مخفي حتى يصل عدّاد النسخ (api/popular.js وsrc/scripts/popular.js) -->
+  <section class="band popular" id="popular" aria-labelledby="popular-h" hidden>
+    <h2 class="sec-title" id="popular-h" set:html={t.popularTitle_h} />
+    <ol class="pop-list" id="pop-list"></ol>
+  </section>
+
+  <Newsletter lang={lang} />
+
   <main class="band alt" id="list">
     <div class="list-head">
       <h2 class="sec-title"><b class="ttl">{t.allTools}</b> <span id="flat-title" set:html={t.byStars_h} /><span class="n" id="flat-n">{total}</span></h2>
@@ -292,6 +303,7 @@ const kinds: Array<[string, any, string]> = [
   import "../scripts/filter.js";
   import "../scripts/hero.js";
   import "../scripts/mascot.js";
+  import "../scripts/popular.js";
   initCopy(document);
   initFav();
   initDatesLater();

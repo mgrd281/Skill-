@@ -44,7 +44,7 @@ if (x.gh) jsonLd.push({
 });
 ---
 <Base title={t.toolTitle(x.name)} description={plain} path={`/tools/${x.slug}`} lang={lang} image={`og/${x.slug}.png`} imageAlt={x.name} jsonLd={jsonLd} expect="tool-icon">
-  <article class="product">
+  <article class="product" data-slug={x.slug}>
     <header class="p-hero">
       <nav class="p-crumb" aria-label={t.crumbAria}>
         <a href={href(lang, "#list")}>{t.navTools}</a>

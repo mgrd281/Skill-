@@ -1,0 +1,28 @@
+---
+// النشرة البريدية بالجديد: النموذج يرسل البريد إلى مزوّد النشرة مباشرة (لا يمر بالموقع)، والمزوّد يتكفل بالتأكيد المزدوج
+// وإلغاء الاشتراك وحفظ القائمة. يظهر حين يُضبط في data/meta.json حقل newsletter (provider وaction وfield)، وإلا فلا شيء.
+// المحتوى الأسبوعي: موجز RSS الموجود (feed.xml) يغذّي ميزة «من RSS إلى بريد» عند أغلب المزوّدين.
+import Icon from "./Icon.astro";
+import { newsletter } from "../lib/data";
+import { type Lang, href, t as dict } from "../i18n";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict(lang);
+---
+{newsletter && (
+  <section class="band newsletter" aria-labelledby="nl-h">
+    <div class="nl">
+      <span class="nl-ic" aria-hidden="true"><Icon name="envelope-simple" weight="duotone" /></span>
+      <div class="nl-t">
+        <h2 id="nl-h">{t.nlTitle}</h2>
+        <p>{t.nlLead}</p>
+      </div>
+      <form class="nl-form" method="post" action={newsletter.action} target="_blank">
+        <label class="sr" for="nl-email">{t.nlEmail}</label>
+        <input id="nl-email" type="email" name={newsletter.field || "email"} required autocomplete="email" dir="ltr" placeholder="name@example.com" />
+        <button type="submit" class="btn-primary">{t.nlBtn}</button>
+      </form>
+      <p class="nl-note" set:html={t.nlNote_h(newsletter.provider, href(lang, "privacy/"))} />
+    </div>
+  </section>
+)}

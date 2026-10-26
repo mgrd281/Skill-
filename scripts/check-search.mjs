@@ -7,6 +7,7 @@ import fs from "node:fs";
 import { norm, words, rawWords, terms, score, makeDoc, suggest, makeVocab, translitWords } from "../src/lib/search.js";
 import { shellWords, mcpServer, mcpClients, kitPlan } from "../src/lib/install.js";
 import { sameSite, parseSuggest, parseMiss, KINDS } from "../api/_feedback.js";
+import { weekKey, topOf, redis } from "../api/_counter.js";
 
 const tools = JSON.parse(fs.readFileSync(new URL("../data/tools.json", import.meta.url), "utf8"));
 let n = 0;
@@ -116,6 +117,16 @@ check("اقتراح أداة والبحث بلا نتيجة", () => {
   assert.equal(parseMiss({ queries: [] }).error, "no queries");
   assert.equal(parseMiss({ queries: Array.from({ length: 9 }, (_, i) => "q" + i) }).value.queries.length, 5);
   assert.deepEqual(Object.values(KINDS).map(([, folder]) => folder), ["feedback", "reports", "suggestions", "misses"]);
+});
+
+check("عدّاد «الأكثر نسخًا»", () => {
+  // أسبوع ISO: الاثنين بدايته، والأسبوع الأول فيه أول خميس من السنة
+  assert.equal(weekKey(new Date("2026-10-26T05:00:00Z")), "copies:2026-W44");
+  assert.equal(weekKey(new Date("2026-01-01T12:00:00Z")), "copies:2026-W01");
+  assert.equal(weekKey(new Date("2027-01-01T12:00:00Z")), "copies:2026-W53");
+  assert.deepEqual(topOf([["gsap", "5", "lucide", "2"], ["lucide", "4", "Bad Slug", "9", "motion", "x"]], 2), [{ s: "lucide", n: 6 }, { s: "gsap", n: 5 }]);
+  assert.equal(redis({}), null);
+  assert.equal(typeof redis({ KV_REST_API_URL: "https://x.upstash.io", KV_REST_API_TOKEN: "t" }), "function");
 });
 
 if (process.exitCode) process.exit(1);

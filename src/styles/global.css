@@ -625,6 +625,38 @@ a.lang-item:hover, a.lang-item:focus-visible { background: var(--fill-2); }
 .li-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 16px; }
 .latest-item .mono { background: var(--bg); }
 
+/* ---------- الأكثر نسخًا هذا الأسبوع (يظهر حين يصل عدّاد النسخ: src/scripts/popular.js) ---------- */
+.pop-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
+.pop-item {
+  display: grid; grid-template-columns: auto auto minmax(0, 1fr); align-items: center; gap: 12px; min-height: 64px; padding: 12px 16px;
+  border-radius: var(--r-lg); background: var(--bg-alt); color: var(--ink); text-decoration: none; border: 1px solid transparent;
+  transition: border-color var(--dur) var(--ease);
+}
+.pop-item:hover { border-color: var(--line); }
+.pop-item .mono { background: var(--bg); }
+.pop-n { min-width: 1.5em; text-align: center; font-weight: 700; color: var(--muted); font-variant-numeric: tabular-nums; }
+.pop-t { display: grid; min-width: 0; }
+.pop-t b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pop-t small { color: var(--muted); font-size: .85rem; }
+
+/* ---------- النشرة البريدية (src/components/Newsletter.astro، حين تُضبط) ---------- */
+.nl {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 16px 20px; max-width: 920px; margin-inline: auto;
+  padding: clamp(20px, 4vw, 32px); border-radius: var(--r-xl); background: var(--bg-alt);
+}
+.nl-ic { width: 56px; height: 56px; display: grid; place-items: center; border-radius: 16px; background: var(--accent-soft); color: var(--accent); }
+.nl-ic .i { width: 28px; height: 28px; }
+.nl-t h2 { margin: 0 0 4px; font-size: 1.3rem; }
+.nl-t p { margin: 0; color: var(--ink-2); }
+.nl-form { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px; }
+.nl-form input {
+  flex: 1 1 220px; min-width: 0; min-height: 44px; padding: 10px 16px; border: 1px solid var(--line); border-radius: var(--r-full);
+  background: var(--card); color: var(--ink); font: inherit; font-size: 16px;
+}
+.nl-form input:focus { outline: none; border-color: var(--accent); }
+.nl-note { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: .85rem; }
+.nl-note a { color: var(--accent-ink); }
+
 /* ---------- القائمة ---------- */
 .list-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 8px 24px; margin-bottom: 8px; }
 .list-head .sec-title { margin-bottom: 0; }

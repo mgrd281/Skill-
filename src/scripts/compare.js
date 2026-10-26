@@ -49,6 +49,7 @@ function cell(row, x) {
   else if (row === "cmd") {
     if (!x.m) { dash(); return td; }
     const box = el("div", "cmd");
+    box.dataset.slug = x.s; // يُعدّ نسخه (src/scripts/copy.js)
     const pre = el("pre");
     pre.tabIndex = 0;
     pre.setAttribute("aria-label", S.cmdAria + ": " + x.n);

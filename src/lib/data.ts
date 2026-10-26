@@ -41,6 +41,9 @@ export const starsUpdatedAt: string = meta.starsUpdatedAt;
 // مشغّل الموقع لصفحة الخصوصية والناشر (Impressum): يُضاف في data/meta.json حقلًا operator فيه name وaddress (أسطر)
 // وemail اختياري. بلا هذا الحقل تذكر الصفحة نافذة «رأيك» للتواصل، وتنبّه البناء (src/views/Privacy.astro).
 export const operator: { name: string; address: string[]; email?: string } | null = (meta as any).operator ?? null;
+// النشرة البريدية (src/components/Newsletter.astro): مزوّد يدير القائمة والتأكيد المزدوج، والنموذج يرسل إليه مباشرة.
+// في data/meta.json: "newsletter": { "provider": "Buttondown", "action": "رابط نموذج الاشتراك عند المزوّد", "field": "email" }
+export const newsletter: { provider: string; action: string; field?: string } | null = (meta as any).newsletter?.action ? (meta as any).newsletter : null;
 
 export function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
