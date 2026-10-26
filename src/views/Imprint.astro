@@ -1,0 +1,47 @@
+---
+// صفحة الناشر (/imprint/، Impressum) بلغة معينة: الاسم والعنوان ووسائل التواصل من data/meta.json (operator).
+// تُبنى من src/pages/imprint.astro ونظيريها في src/pages/de/ وsrc/pages/en/. النص في src/i18n/imprint.ts.
+// بلا operator تبقى الصفحة مخفية عن محركات البحث وبلا رابط في التذييل، وتذكر نافذة «رأيك» للتواصل.
+import Base from "../layouts/Base.astro";
+import Icon from "../components/Icon.astro";
+import { operator } from "../lib/data";
+import { type Lang, href } from "../i18n";
+import { imprint } from "../i18n/imprint";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const p = imprint[lang];
+const o = operator;
+---
+<Base title={p.title} description={p.lead} path="/imprint" lang={lang} noindex={!o}>
+  <header class="top page-hero">
+    <span class="cat-mark" aria-hidden="true"><Icon name="identification-card" weight="duotone" /></span>
+    <h1>{p.title}</h1>
+    <p class="lead">{p.lead}</p>
+  </header>
+  <main class="band alt" aria-label={p.title}>
+    <div class="prose">
+      {o ? (
+        <>
+          <address>
+            <bdi>{o.name}</bdi>
+            {o.represented && <><br />{p.represented}: <bdi>{o.represented}</bdi></>}
+            {o.address.map((line) => <><br /><bdi>{line}</bdi></>)}
+          </address>
+          <h2>{p.contact}</h2>
+          <dl class="imprint-dl">
+            <dt>{p.email}</dt>
+            <dd><a href={"mailto:" + o.email}><bdi>{o.email}</bdi></a></dd>
+            {o.phone && <><dt>{p.phone}</dt><dd><a href={"tel:" + o.phone.replace(/[^\d+]/g, "")}><bdi>{o.phone}</bdi></a></dd></>}
+          </dl>
+          {o.register && <><h2>{p.register}</h2><p><bdi>{o.register}</bdi></p></>}
+          {o.vatId && <><h2>{p.vatId}</h2><p><bdi>{o.vatId}</bdi></p></>}
+          <h2>{p.responsible}</h2>
+          <p><bdi>{o.responsible || o.represented || o.name}</bdi><br />{p.sameAddress}</p>
+        </>
+      ) : (
+        <p>{p.fallback}</p>
+      )}
+      <p class="updated"><a href={href(lang, "privacy/")}>{p.privacy}</a></p>
+    </div>
+  </main>
+</Base>

@@ -1,10 +1,10 @@
 ---
-// صفحة الخصوصية (/privacy/) بلغة معينة: ما يجمعه الموقع وما لا يجمعه، والناشر إن وُجد في data/meta.json.
+// صفحة الخصوصية (/privacy/) بلغة معينة: ما يجمعه الموقع وما لا يجمعه، والمسؤول (operator في data/meta.json) مع رابط صفحة الناشر.
 // تُبنى من src/pages/privacy.astro ونظيريها في src/pages/de/ وsrc/pages/en/. النص في src/i18n/privacy.ts.
 import Base from "../layouts/Base.astro";
 import Icon from "../components/Icon.astro";
 import { operator, newsletter, txt, formatDate } from "../lib/data";
-import { type Lang } from "../i18n";
+import { type Lang, href } from "../i18n";
 import { privacy, PRIVACY_UPDATED } from "../i18n/privacy";
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -17,7 +17,7 @@ if (!operator && lang === "ar") console.warn("تنبيه: لا مشغّل في d
     <h1>{p.title}</h1>
     <p class="lead">{p.lead}</p>
   </header>
-  <section class="band alt" aria-label={p.title}>
+  <main class="band alt" aria-label={p.title}>
     <div class="prose">
       {p.sections.map(([h, body]) => (
         <>
@@ -31,17 +31,20 @@ if (!operator && lang === "ar") console.warn("تنبيه: لا مشغّل في d
           <p set:html={txt(p.newsletter(newsletter.provider), lang)} />
         </>
       )}
-      <h2 id="imprint">{operator ? p.imprint : p.controller}</h2>
+      <h2 id="controller">{p.controller}</h2>
       {operator ? (
-        <address>
-          <bdi>{operator.name}</bdi>
-          {operator.address.map((line) => <><br /><bdi>{line}</bdi></>)}
-          {operator.email && <><br /><a href={"mailto:" + operator.email}><bdi>{operator.email}</bdi></a></>}
-        </address>
+        <>
+          <address>
+            <bdi>{operator.name}</bdi>
+            {operator.address.map((line) => <><br /><bdi>{line}</bdi></>)}
+            <br /><a href={"mailto:" + operator.email}><bdi>{operator.email}</bdi></a>
+          </address>
+          <p><a href={href(lang, "imprint/")}>{p.imprint}</a></p>
+        </>
       ) : (
         <p>{p.contactFallback}</p>
       )}
       <p class="updated">{p.updated(formatDate(PRIVACY_UPDATED, lang))}</p>
     </div>
-  </section>
+  </main>
 </Base>

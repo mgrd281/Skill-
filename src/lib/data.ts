@@ -39,9 +39,20 @@ export interface Project {
 
 export const GH = "https://github.com/";
 export const starsUpdatedAt: string = meta.starsUpdatedAt;
-// مشغّل الموقع لصفحة الخصوصية والناشر (Impressum): يُضاف في data/meta.json حقلًا operator فيه name وaddress (أسطر)
-// وemail اختياري. بلا هذا الحقل تذكر الصفحة نافذة «رأيك» للتواصل، وتنبّه البناء (src/views/Privacy.astro).
-export const operator: { name: string; address: string[]; email?: string } | null = (meta as any).operator ?? null;
+// مشغّل الموقع لصفحة الناشر (Impressum، src/views/Imprint.astro) وقسم المسؤول في صفحة الخصوصية: يُضاف في data/meta.json
+// حقلًا operator (الحقول وشرحها في README، ويفحصها scripts/check-data.mjs). بلا هذا الحقل لا رابط Impressum في التذييل،
+// وتذكر الصفحتان نافذة «رأيك» للتواصل، وينبّه البناء.
+export interface Operator {
+  name: string; // الاسم الكامل، أو اسم الشركة مع شكلها القانوني
+  address: string[]; // أسطر العنوان الذي تصل إليه الرسائل (لا صندوق بريد)
+  email: string;
+  phone?: string;
+  represented?: string; // من يمثّل الشركة قانونًا (للشركات فقط)
+  register?: string; // السجل التجاري، مثل "Amtsgericht Berlin, HRB 12345"
+  vatId?: string; // رقم ضريبة القيمة المضافة (USt-IdNr.) إن وُجد
+  responsible?: string; // المسؤول عن المحتوى (§ 18 Abs. 2 MStV): شخص، وبدونه الممثل ثم الاسم
+}
+export const operator: Operator | null = (meta as any).operator ?? null;
 // النشرة البريدية (src/components/Newsletter.astro): مزوّد يدير القائمة والتأكيد المزدوج، والنموذج يرسل إليه مباشرة.
 // في data/meta.json: "newsletter": { "provider": "Buttondown", "action": "رابط نموذج الاشتراك عند المزوّد", "field": "email" }
 export const newsletter: { provider: string; action: string; field?: string } | null = (meta as any).newsletter?.action ? (meta as any).newsletter : null;

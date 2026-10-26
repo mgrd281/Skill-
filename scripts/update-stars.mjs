@@ -77,7 +77,9 @@ for (const t of tools) {
 
 if (changed > 0) {
   fs.writeFileSync(toolsFile, JSON.stringify(tools, null, 2) + "\n");
-  fs.writeFileSync(metaFile, JSON.stringify({ starsUpdatedAt: new Date().toISOString().slice(0, 10) }, null, 2) + "\n");
+  // meta.json فيه إعدادات أخرى (operator وnewsletter): نغيّر التاريخ وحده ونبقي الباقي
+  const meta = fs.existsSync(metaFile) ? JSON.parse(fs.readFileSync(metaFile, "utf8")) : {};
+  fs.writeFileSync(metaFile, JSON.stringify({ ...meta, starsUpdatedAt: new Date().toISOString().slice(0, 10) }, null, 2) + "\n");
 }
 
 console.log(`تم تحديث ${changed} أداة`);

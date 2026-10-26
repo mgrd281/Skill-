@@ -45,6 +45,25 @@ for (const [slug, ex] of Object.entries(examples)) {
   for (const lang of Object.keys(TR)) need(ex[lang], lang, `مثال ${lang} لـ ${slug}`);
 }
 for (const p of projects) for (const k of p.picks) if (!slugs.has(slugify(k))) problems.push(`اقتراح غير موجود في ${p.id}: ${k}`);
+// إعدادات الموقع في data/meta.json: الناشر (Impressum) والنشرة البريدية، إن وُجدا (README، قسم «النشر»)
+const meta = read("meta.json");
+const str = (v) => typeof v === "string" && v.trim() !== "" && !/…|\.\.\.|الاسم|رابط /.test(v);
+if ("operator" in meta) {
+  const o = meta.operator ?? {};
+  if (!str(o.name)) problems.push("operator.name ناقص في meta.json (الاسم الكامل أو اسم الشركة)");
+  if (!Array.isArray(o.address) || o.address.length < 2 || !o.address.every(str)) problems.push("operator.address في meta.json: سطران على الأقل (الشارع والرقم، الرمز البريدي والمدينة)");
+  if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(o.email || "")) problems.push("operator.email في meta.json: بريد صالح (مطلوب في Impressum)");
+  if ("phone" in o && !/^\+?[\d\s()/-]{6,}$/.test(o.phone)) problems.push("operator.phone في meta.json: أرقام فقط، مثل +49 30 1234567");
+  for (const k of ["represented", "register", "vatId", "responsible"]) if (k in o && !str(o[k])) problems.push(`operator.${k} فارغ في meta.json: احذفه أو املأه`);
+  const known = ["name", "address", "email", "phone", "represented", "register", "vatId", "responsible"];
+  for (const k of Object.keys(o)) if (!known.includes(k)) problems.push(`حقل غير معروف operator.${k} في meta.json (المعروف: ${known.join("، ")})`);
+}
+if ("newsletter" in meta) {
+  const n = meta.newsletter ?? {};
+  if (!str(n.provider)) problems.push("newsletter.provider ناقص في meta.json (اسم المزوّد، يظهر في الخصوصية)");
+  if (!/^https:\/\/\S+$/.test(n.action || "")) problems.push("newsletter.action في meta.json: رابط https لنموذج الاشتراك عند المزوّد");
+  if ("field" in n && !str(n.field)) problems.push("newsletter.field فارغ في meta.json");
+}
 // تحذير لا يفشل الفحص: بيانات GitHub (التاريخ والرخصة) تملؤها update-stars.mjs
 const noMeta = tools.filter((t) => t.gh && (!t.pushed || t.license === undefined));
 if (noMeta.length) console.warn(`تحذير: ${noMeta.length} أداة بلا تاريخ تحديث أو رخصة (شارات الحالة لن تظهر لها). شغّل update-stars.`);

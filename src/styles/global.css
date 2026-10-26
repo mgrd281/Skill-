@@ -1065,6 +1065,10 @@ a.tr-v:hover { color: var(--accent); text-decoration: underline; text-underline-
 .prose h2:first-child { margin-top: 0; }
 .prose p, .prose address { margin: 0; line-height: 1.8; font-style: normal; }
 .prose .updated { margin-top: 32px; color: var(--muted); font-size: .9rem; }
+/* صفحة الناشر: البريد والهاتف بعنوان صغير وقيمة بجانبه */
+.imprint-dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; margin: 0; line-height: 1.8; }
+.imprint-dl dt { color: var(--ink-2); }
+.imprint-dl dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
 .rp-acts { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
 .rp-acts small { color: var(--muted); font-size: .8rem; }
 .rp-acts .btn-primary:disabled { opacity: .45; cursor: default; }
@@ -1186,6 +1190,7 @@ a.tr-v:hover { color: var(--accent); text-decoration: underline; text-underline-
 .foot-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding: 18px 0 calc(18px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line-soft); font-size: .78rem; }
 .foot-copy { margin: 0; flex: 1; min-width: min(100%, 280px); }
 .foot-copy span:first-child { color: var(--ink-2); font-weight: 500; }
+.foot-legals { display: inline-flex; flex-wrap: wrap; gap: 0 20px; }
 .foot-legal { display: inline-flex; align-items: center; min-height: 32px; color: var(--ink-2); text-decoration: none; }
 .foot-legal:hover { color: var(--accent); }
 /* اللغات: مفتاح مقسّم، والحالية بخلفية البطاقة */
