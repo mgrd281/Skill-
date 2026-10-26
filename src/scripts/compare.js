@@ -68,6 +68,7 @@ function cell(row, x) {
 }
 
 function render() {
+  if (!by) return;
   syncUrl();
   const tools = picked.map((s) => by.get(s));
   // الأدوات المختارة كشرائح بزر إزالة
@@ -83,15 +84,16 @@ function render() {
     li.append(n, b);
     chips.append(li);
   });
+  // عند الحد يصير الحقل للقراءة فقط (لا معطّلًا): يبقى التركيز فيه بعد إضافة الأداة الثالثة، ويقول النص المؤقت السبب
   const full = picked.length >= MAX;
-  input.disabled = full;
+  input.readOnly = full;
   input.placeholder = full ? L.cmpMax : picked.length ? L.cmpAddMore : input.dataset.ph || input.placeholder;
   share.hidden = picked.length < 2;
   // حزمة التثبيت للأدوات المقارنة (src/scripts/kit.js)
   const kit = $("cmp-kit");
   kit.hidden = picked.length === 0;
   kit.dataset.kit = picked.join(" ");
-  status.textContent = fmt(L.cmpN, { n: picked.length });
+  status.textContent = fmt(L.cmpN, { n: picked.length }) + (full ? " · " + L.cmpMax : "");
   empty.hidden = picked.length > 0;
   wrap.hidden = picked.length === 0;
   wrap.style.setProperty("--n", picked.length);
@@ -137,7 +139,7 @@ function results() {
   const q = input.value.trim();
   list.textContent = "";
   opts = [];
-  if (!q || !ix) { showList(false); return; }
+  if (!q || !ix || !by || input.readOnly) { showList(false); return; }
   const ts = terms(q);
   const hits = ix.tools.map((x, i) => [x, score(docs[i], ts)]).filter(([x, s]) => s > 0 && !picked.includes(x.s) && by.has(x.s))
     .sort((a, b) => b[1] - a[1] || b[0].sn - a[0].sn).slice(0, 6);
@@ -163,12 +165,12 @@ function results() {
   setActive(0);
 }
 function add(slug) {
-  if (!slug || picked.includes(slug) || picked.length >= MAX) return;
+  if (!by || !slug || picked.includes(slug) || picked.length >= MAX) return;
   picked.push(slug);
   input.value = "";
   showList(false);
   render();
-  if (!input.disabled) input.focus();
+  input.focus();
 }
 function needIndex() {
   if (ix) return;
@@ -200,4 +202,6 @@ fetch(HOME + "compare.json").then((r) => r.json()).then((data) => {
   by = new Map(data.tools.map((x) => [x.s, x]));
   picked = picked.filter((s) => by.has(s));
   render();
+  // ما كُتب في الحقل قبل وصول الجدول
+  if (document.activeElement === input && input.value.trim()) results();
 }, () => { status.textContent = L.cmpError; });

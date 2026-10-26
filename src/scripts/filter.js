@@ -4,7 +4,7 @@
 import { relative } from "./dates.js";
 import { L, fmt } from "../i18n/client.js";
 import { norm, words, terms, score, makeDoc, suggest } from "../lib/search.js";
-import { loadIndex, docOf, vocabOf } from "./search-data.js";
+import { loadIndex, docOf, rawText, vocabOf } from "./search-data.js";
 const KEY = "toolkit-filter-v3";
 const data = JSON.parse(document.getElementById("app-data").textContent);
 const projectById = (id) => data.projects.find((p) => p.id === id) || null;
@@ -52,8 +52,9 @@ function saveHidden() {
   try { localStorage.setItem(HKEY, JSON.stringify([...hidden])); } catch (e) {}
 }
 
-// رابط قديم بالمشروع في # (من شرائح المشاريع في صفحات الأدوات): /#shop
-const hashId = decodeURIComponent((location.hash || "").replace("#", ""));
+// رابط قديم بالمشروع في # (من شرائح المشاريع في صفحات الأدوات): /#shop. ترميز خاطئ (/#%) يُعامل كأن لا شيء
+const fromHash = (h) => { try { return decodeURIComponent(h.replace("#", "")); } catch (e) { return ""; } };
+const hashId = fromHash(location.hash || "");
 if (projectById(hashId)) state.project = hashId;
 
 function save() {
@@ -77,7 +78,7 @@ function urlNow() {
   if (state.onlySkills) u.set("skills", "1");
   if (state.sort !== (state.q ? "match" : "stars")) u.set("sort", state.sort === "match" ? "stars" : state.sort);
   const qs = u.toString().replace(/\+/g, "%20");
-  const hash = location.hash && !projectById(decodeURIComponent(location.hash.slice(1))) ? location.hash : "";
+  const hash = location.hash && !projectById(fromHash(location.hash)) ? location.hash : "";
   return location.pathname + (qs ? "?" + qs : "") + hash;
 }
 function syncUrl(later) {
@@ -120,14 +121,17 @@ const sections = [...document.querySelectorAll("[data-cat-section]")].map((s) =>
 const moreBtn = $("more"), moreN = $("more-n");
 
 // ---- البحث ----
-// كل بطاقة لها وثيقة بحث (src/lib/search.js). قبل وصول الفهرس تُبنى من نص البطاقة نفسها (بلغة الصفحة)،
-// وبعد وصوله تشمل اللغات الثلاث والقسم وكتابة الأسماء التقنية بالعربية.
+// كل بطاقة لها وثيقة بحث (src/lib/search.js) ونص بشكله المكتوب لمفردات «هل تقصد». قبل وصول الفهرس يُبنيان من نص
+// البطاقة نفسها (بلغة الصفحة)، وبعد وصوله يشملان اللغات الثلاث والقسم، وتشمل الوثيقة كتابة الأسماء التقنية بالعربية.
 const textOf = (el, sel) => [...el.querySelectorAll(sel)].map((e) => e.textContent).join(" ");
 let indexed = false, vocab = null, qTerms = [];
 const scoreOf = new Map();
 function ensureDocs() {
   cards.forEach((c) => {
-    if (!c.doc) c.doc = makeDoc({ n: textOf(c.el, ".name"), t: words(textOf(c.el, ".kind")), u: words(textOf(c.el, ".usechip")), d: words(textOf(c.el, ".desc")), c: norm(textOf(c.el, "code")) });
+    if (c.doc) return;
+    const f = { n: textOf(c.el, ".name"), t: textOf(c.el, ".kind"), u: textOf(c.el, ".usechip"), d: textOf(c.el, ".desc") };
+    c.doc = makeDoc({ n: f.n, t: words(f.t), u: words(f.u), d: words(f.d), c: norm(textOf(c.el, "code")) });
+    c.text = [f.n, f.t, f.u, f.d].join(" ");
   });
 }
 function computeScores() {
@@ -143,9 +147,14 @@ function wantIndex() {
     if (indexed) return;
     indexed = true;
     const by = new Map(ix.tools.map((x) => [x.s, x]));
-    cards.forEach((c) => { const x = by.get(c.slug); if (x) c.doc = docOf(x); });
-    vocab = vocabOf(cards.map((c) => c.doc));
-    if (state.q) { computeScores(); syncChips(); renderList(); }
+    cards.forEach((c) => { const x = by.get(c.slug); if (x) { c.doc = docOf(x); c.text = rawText(x); } });
+    vocab = null;
+    if (state.q) {
+      // إعادة الترتيب تنقل البطاقات في الصفحة، فيضيع التركيز إن كان على زر داخل إحداها: يعود إليه بعدها
+      const f = document.activeElement;
+      computeScores(); syncChips(); renderList();
+      if (f && f !== document.activeElement && f.isConnected) f.focus({ preventScroll: true });
+    }
   }, () => {});
 }
 // وضع الترتيب "الأقرب لبحثك" لا يظهر في القائمة إلا أثناء البحث
@@ -284,7 +293,7 @@ function syncEmpty() {
   wideBtn.hidden = true;
   if (!state.q) return;
   ensureDocs();
-  const sug = suggest(state.q, vocab || (vocab = vocabOf(cards.map((c) => c.doc))));
+  const sug = suggest(state.q, vocab || (vocab = vocabOf(cards.map((c) => c.text))));
   if (sug) {
     const ts = terms(sug);
     if (cards.some((c) => !hidden.has(c.slug) && score(c.doc, ts) > 0)) {

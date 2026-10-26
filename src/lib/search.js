@@ -25,6 +25,12 @@ export function words(s) {
   return [...new Set(norm(s).split(" ").filter((w) => w.length > 1))].join(" ");
 }
 
+// كلمات النص بشكلها المكتوب (حروف صغيرة) بلا تكرار. الفهرس يحفظها هكذا ويطبّعها المتصفح عند التحميل،
+// فيعرض «هل تقصد» الكلمة كما تُكتب («أدوات» لا «ادوات»، و«übersetzung» لا «ubersetzung»)، والحجم نفسه تقريبًا
+export function rawWords(s) {
+  return [...new Set(String(s || "").toLowerCase().split(/[^\p{L}\p{N}\p{M}]+/u).filter((w) => w.length > 1))].join(" ");
+}
+
 const AR = /[؀-ۿ]/;
 // "ال" وأخواتها في أول الكلمة، وعلامات الجمع والتاء المربوطة (بعد التطبيع هاء) في آخرها
 const AR_PRE = /^(?:وال|بال|كال|فال|لل|ال)/;
@@ -69,6 +75,12 @@ export function terms(q) {
       for (const x of [...v]) {
         const s2 = x.replace(AR_SUF, "");
         if (s2 !== x && s2.length >= 3 && !v.includes(s2)) v.push(s2);
+      }
+      // حرف واحد ملتصق بأول الكلمة (و ب ل ف ك): «لفيجما» ← «فيجما»، «لمتجر» ← «متجر»، «لكتابة» ← «كتابة» و«كتاب».
+      // قد يكون الحرف من أصل الكلمة («كتابة»)، فلا يُقبل ما يقل عن 4 أحرف: لا «تاب» تطابق «متابعة» ولا «ريد» تطابق «يريد»
+      if (p === w && /^[وبلفك]/.test(w)) {
+        const one = w.slice(1);
+        for (const x of [one, one.replace(AR_SUF, "")]) if (x.length >= 4 && !v.includes(x)) v.push(x);
       }
       // الكتابة العربية لاسم تقني، كاملة أو أثناء كتابتها («شوبي» ← shopify)
       const add = (en) => { if (!v.includes(en)) v.push(en); };
@@ -148,31 +160,56 @@ function distance(a, b, max) {
   return prev[b.length];
 }
 
-// vocab: Map من الكلمة إلى عدد الأدوات التي تحويها. الكلمة التي توجد في المفردات (بإحدى صيغها) تبقى كما هي،
-// وغيرها تُستبدل بأقرب كلمة (حرف واحد للكلمات القصيرة وحرفان للطويلة، والأكثر انتشارًا عند التساوي).
-// يرجع البحث المصحَّح، أو null إن لم يتغير شيء.
+// vocab من makeVocab: count (الكلمة المطبَّعة ← عدد الأدوات التي تحويها) وshown (الكلمة المطبَّعة ← شكلها المكتوب).
+// الكلمة التي توجد في المفردات (بإحدى صيغها) تبقى كما كتبها الزائر، وغيرها تُستبدل بأقرب كلمة بشكلها المكتوب
+// (حرف واحد للكلمات القصيرة وحرفان للطويلة، والأكثر انتشارًا عند التساوي). يرجع البحث المصحَّح، أو null إن لم يتغير شيء.
 export function suggest(q, vocab) {
-  const ws = norm(q).split(" ").filter(Boolean);
-  if (!ws.length) return null;
-  const keys = [...vocab.keys()];
-  let changed = false;
-  const out = ws.map((w) => {
-    const vs = terms(w)[0];
-    if (w.length < 3 || vs.some((v) => keys.some((k) => k.includes(v)))) return w;
+  const keys = [...vocab.count.keys()];
+  // أقرب كلمة بشكلها المكتوب، أو null إن كانت الكلمة موجودة أو لا قريب لها
+  const fix = (w) => {
+    if (w.length < 3 || terms(w)[0].some((v) => keys.some((k) => k.includes(v)))) return null;
     // العربية أقصر كلمات وأكثر تشابهًا، فحرف واحد فقط حتى 8 أحرف. وأول حرف يبقى كما هو (الخطأ نادرًا ما يكون فيه)
     const max = w.length <= 5 || (AR.test(w) && w.length <= 8) ? 1 : 2;
     let best = null, bd = max + 1, bn = 0;
-    for (const [k, n] of vocab) {
+    for (const [k, n] of vocab.count) {
       if (k[0] !== w[0]) continue;
       const d = distance(w, k, max);
       if (d < bd || (d === bd && n > bn)) { best = k; bd = d; bn = n; }
     }
-    if (best && bd <= max) { changed = true; return best; }
-    return w;
+    return best && bd <= max ? vocab.shown.get(best) || best : null;
+  };
+  // ما كتبه الزائر يبقى كما كتبه («Next.js»، «أدوات») إلا الكلمة المصحَّحة
+  let changed = false;
+  const out = String(q).trim().split(/\s+/).map((tok) => {
+    const ws = norm(tok).split(" ").filter(Boolean);
+    const fixed = ws.map(fix);
+    if (!fixed.some(Boolean)) return tok;
+    changed = true;
+    return ws.map((w, i) => fixed[i] || w).join(" ");
   });
   return changed ? out.join(" ") : null;
 }
 
-export function addVocab(vocab, text) {
-  for (const w of new Set(String(text).split(" "))) if (w.length >= 3) vocab.set(w, (vocab.get(w) || 0) + 1);
+// مفردات «هل تقصد» من نصوص بشكلها المكتوب: كل نص لأداة واحدة، فيُعدّ ظهور الكلمة مرة لكل أداة.
+// الشكل المعروض بلا تشكيل ولا تطويل، ويُفضَّل ما فيه همزة أو علامة («أدوات» على «ادوات»، و«für» على «fur»)
+export function makeVocab(texts, extra = []) {
+  const count = new Map(), shown = new Map(), normOf = new Map();
+  for (const text of texts) {
+    const seen = new Set();
+    for (const raw of String(text).toLowerCase().split(/[^\p{L}\p{N}\p{M}]+/u)) {
+      if (raw.length < 3) continue;
+      let k = normOf.get(raw);
+      if (k === undefined) {
+        normOf.set(raw, (k = norm(raw)));
+        // كلمة جديدة بهذا الشكل: هل تصلح للعرض؟
+        const nice = raw.replace(/[\u064B-\u065F\u0670\u0640]/g, "");
+        if (k.length >= 3 && (!shown.has(k) || (shown.get(k) === k && nice !== k))) shown.set(k, nice);
+      }
+      if (k.length < 3 || k.includes(" ") || seen.has(k)) continue;
+      seen.add(k);
+      count.set(k, (count.get(k) || 0) + 1);
+    }
+  }
+  for (const w of extra) if (!count.has(w)) count.set(w, 1);
+  return { count, shown };
 }

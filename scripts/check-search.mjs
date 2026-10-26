@@ -1,10 +1,12 @@
 // يتحقق من منطق البحث والتثبيت قبل البناء: تطبيع العربية واللاتينية، والترتيب، و«هل تقصد»،
 // وقراءة أوامر claude mcp add، وما يدخل «حزمة التثبيت». على كل أدوات data/tools.json وأمثلة ثابتة.
+// ومعها قبول طلبات «رأيك» و«أبلغ عن مشكلة» من صفحات الموقع نفسه فقط (api/_feedback.js).
 // الاستخدام: npm run check-search
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { norm, words, terms, score, makeDoc, suggest, addVocab, translitWords } from "../src/lib/search.js";
+import { norm, words, rawWords, terms, score, makeDoc, suggest, makeVocab, translitWords } from "../src/lib/search.js";
 import { shellWords, mcpServer, mcpClients, kitPlan } from "../src/lib/install.js";
+import { sameSite } from "../api/_feedback.js";
 
 const tools = JSON.parse(fs.readFileSync(new URL("../data/tools.json", import.meta.url), "utf8"));
 let n = 0;
@@ -26,6 +28,18 @@ check("صيغ الكلمة العربية والكتابة العربية للأ
   assert.ok(terms("فيجما")[0].includes("figma"));
   assert.ok(terms("شوبي")[0].includes("shopify"));
   assert.deepEqual(terms("بي دي اف"), [["pdf"]]);
+  // حرف واحد ملتصق بأول الكلمة، وما يبقى بعده 4 أحرف على الأقل
+  assert.ok(terms("لفيجما")[0].includes("figma"));
+  assert.ok(terms("بشوبيفاي")[0].includes("shopify"));
+  assert.ok(terms("لمتجر")[0].includes("متجر"));
+  assert.ok(terms("لكتابة")[0].includes("كتابه"));
+  assert.ok(!terms("كتابة")[0].includes("تاب"));
+  assert.deepEqual(terms("بريد"), [["بريد"]]);
+});
+check("الفهرس يحفظ الكلمات بشكلها المكتوب، وتطبيعها في المتصفح يعطي الكلمات نفسها", () => {
+  const set = (s) => [...new Set(s.split(" "))].sort().join(" ");
+  for (const t of tools) for (const f of [t.name, t.desc, t.desc_en, t.desc_de]) assert.equal(set(words(rawWords(f))), set(words(f)), t.slug);
+  assert.equal(rawWords("Größe der Übersetzung, Größe"), "größe der übersetzung");
 });
 check("الترتيب: الاسم قبل الوصف، والكلمة القصيرة في أول الكلمة فقط", () => {
   const named = makeDoc({ n: "Figma MCP" }), mentioned = makeDoc({ n: "Other", d: words("works with figma") });
@@ -35,11 +49,14 @@ check("الترتيب: الاسم قبل الوصف، والكلمة القصي�
   assert.ok(score(makeDoc({ n: "X", t: words("مهارات التصميم") }), terms("تصميم")) >= 6);
 });
 check("«هل تقصد»", () => {
-  const vocab = new Map();
-  for (const t of tools) addVocab(vocab, words([t.name, t.desc, t.desc_en, t.desc_de].join(" ")));
-  for (const w of translitWords()) if (!vocab.has(w)) vocab.set(w, 1);
+  const vocab = makeVocab(tools.map((t) => [t.name, t.desc, t.desc_en, t.desc_de].join(" ")), translitWords());
   assert.equal(suggest("shopfy", vocab), "shopify");
   assert.equal(suggest("pdf", vocab), null);
+  // الكلمة المقترحة بشكلها المكتوب، وما كتبه الزائر صحيحًا يبقى كما كتبه
+  assert.equal(suggest("أدوت", vocab), "أدوات");
+  assert.equal(suggest("Übersetzng", vocab), "übersetzung");
+  assert.equal(suggest("Next.js shopfy", vocab), "Next.js shopify");
+  assert.equal(suggest("أدوات shopfy", vocab), "أدوات shopify");
 });
 check("تقسيم سطر الأوامر", () => {
   assert.deepEqual(shellWords(`a "b c" 'd e' f\\ g`), ["a", "b c", "d e", "f g"]);
@@ -50,6 +67,11 @@ check("قراءة claude mcp add", () => {
     { name: "context7", transport: "stdio", command: "npx", args: ["-y", "@upstash/context7-mcp"], env: {}, headers: {}, needsEdit: false });
   assert.equal(mcpServer({ slug: "x", cmd: "claude mcp add creatomate --transport http https://api.creatomate.com/mcp" }).url, "https://api.creatomate.com/mcp");
   assert.equal(mcpServer({ slug: "x", cmd: "npm install gsap" }), null);
+  // جسر mcp-remote لخادم بعيد يُضاف كخادم محلي، والإعداد في البرامج الأخرى هو الجسر نفسه
+  assert.deepEqual(mcpServer({ slug: "x", cmd: "claude mcp add v0 -- npx -y mcp-remote https://v0.app/api/mcp" }),
+    { name: "v0", transport: "stdio", command: "npx", args: ["-y", "mcp-remote", "https://v0.app/api/mcp"], env: {}, headers: {}, needsEdit: false });
+  // أمر لا يضيف شيئًا إلى Claude Code لا يُقرأ
+  assert.equal(mcpServer({ slug: "x", cmd: "npx mcp-remote https://example.com/mcp" }), null);
   // كل الخوادم في البيانات: الروابط بنقرة تحمل الإعداد نفسه
   for (const t of tools) {
     const s = mcpServer(t);
@@ -71,6 +93,17 @@ check("حزمة التثبيت", () => {
   assert.equal(kitPlan({ cmd: null }).why, "none");
   // لا سطر يبدأ بشرطة مائلة في الحزمة: لا يعمل خارج جلسة Claude Code
   for (const t of tools) { const k = kitPlan(t); if (k.lines) assert.ok(k.lines.every((l) => !l.startsWith("/")), t.slug); }
+});
+
+check("«رأيك» و«أبلغ عن مشكلة» من الموقع نفسه فقط", () => {
+  const h = (o) => new Headers(o);
+  assert.equal(sameSite(h({ host: "xskills.dev", origin: "https://xskills.dev" })), true);
+  assert.equal(sameSite(h({ host: "a.vercel.app", "x-forwarded-host": "xskills.dev", origin: "https://xskills.dev" })), true);
+  assert.equal(sameSite(h({ host: "xskills.dev", origin: "https://evil.example" })), false);
+  assert.equal(sameSite(h({ host: "xskills.dev", origin: "null" })), false);
+  assert.equal(sameSite(h({ host: "xskills.dev", "sec-fetch-site": "cross-site" })), false);
+  assert.equal(sameSite(h({ host: "xskills.dev", "sec-fetch-site": "same-origin" })), true);
+  assert.equal(sameSite(h({ host: "xskills.dev" })), true);
 });
 
 if (process.exitCode) process.exit(1);

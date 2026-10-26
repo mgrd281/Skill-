@@ -2,12 +2,13 @@
 // (مخزن خاص، لا يُقرأ إلا من لوحة Vercel): التقييمات في feedback/ والبلاغات في reports/.
 // يحتاج متغير البيئة BLOB_READ_WRITE_TOKEN، ويضيفه Vercel تلقائيًا عند ربط مخزن Blob بالمشروع.
 import { put } from "@vercel/blob";
-import { parseFeedback, parseReport } from "./_feedback.js";
+import { parseFeedback, parseReport, sameSite } from "./_feedback.js";
 
 const json = (status, data) =>
   new Response(JSON.stringify(data), { status, headers: { "Content-Type": "application/json", "Cache-Control": "no-store" } });
 
 export async function POST(request) {
+  if (!sameSite(request.headers)) return json(403, { ok: false });
   if (!process.env.BLOB_READ_WRITE_TOKEN) return json(503, { ok: false, error: "storage not configured" });
   const len = Number(request.headers.get("content-length") || 0);
   if (len > 4000) return json(413, { ok: false });

@@ -1,7 +1,7 @@
 // فهرس البحث (src/lib/search-index.ts): يُحمَّل مرة واحدة عند أول حاجة إليه، ويشترك فيه بحث الصفحة الرئيسية
 // والبحث السريع وحزمة التثبيت.
 import { homePath } from "../i18n/client.js";
-import { makeDoc, addVocab, translitWords } from "../lib/search.js";
+import { words, makeDoc, makeVocab, translitWords } from "../lib/search.js";
 
 export const BASE = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 export const HOME = homePath(BASE);
@@ -16,13 +16,11 @@ export function loadIndex() {
   return pending;
 }
 
-// وثيقة البحث لأداة من الفهرس (الحقول في src/lib/search.js)
-export const docOf = (x) => makeDoc({ n: x.n, t: x.t, u: x.u, d: x.d, o: x.o, c: x.m });
+// وثيقة البحث لأداة من الفهرس (الحقول في src/lib/search.js). كلمات الفهرس بشكلها المكتوب، فتُطبَّع هنا
+export const docOf = (x) => makeDoc({ n: x.n, t: words(x.t), u: words(x.u), d: words(x.d), o: words(x.o), c: x.m });
+// نص الأداة كما يُكتب، لمفردات «هل تقصد»
+export const rawText = (x) => [x.n, x.t, x.u, x.d, x.o].join(" ");
 
-// مفردات «هل تقصد»: كل كلمات الفهرس مع عدد الأدوات التي تحويها، وكتابات الأسماء التقنية بالعربية
-export function vocabOf(docs) {
-  const v = new Map();
-  for (const d of docs) addVocab(v, [d.n, d.t, d.u, d.d, d.o].join(" "));
-  for (const w of translitWords()) if (!v.has(w)) v.set(w, 1);
-  return v;
-}
+// مفردات «هل تقصد» من نص كل أداة: كل كلمة مع عدد الأدوات التي تحويها وشكلها المكتوب، وكتابات الأسماء التقنية بالعربية.
+// تُبنى عند أول بحث بلا نتيجة فقط
+export const vocabOf = (texts) => makeVocab(texts, translitWords());

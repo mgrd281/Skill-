@@ -1,8 +1,8 @@
 // البحث السريع (src/components/QuickSearch.astro): نافذة <dialog> بحقل بحث وقائمة نتائج (combobox + listbox).
 // التركيز يبقى في الحقل، والأسهم تنقل الاختيار، وEnter يفتح المختار، وEscape يغلق ويعيد التركيز إلى الزر.
 import { L, fmt } from "../i18n/client.js";
-import { terms, score, makeDoc, suggest } from "../lib/search.js";
-import { loadIndex, docOf, vocabOf, HOME } from "./search-data.js";
+import { words, terms, score, makeDoc, suggest } from "../lib/search.js";
+import { loadIndex, docOf, rawText, vocabOf, HOME } from "./search-data.js";
 
 const dlg = document.getElementById("qs");
 const opener = document.getElementById("qs-open");
@@ -16,6 +16,8 @@ if (dlg && opener) {
   let opts = [], active = -1, back = null, timer = 0, shown = null;
 
   const toolUrl = (s) => HOME + "tools/" + s;
+  // «كل النتائج»: البحث نفسه في الصفحة الرئيسية
+  const allUrl = (q) => HOME + (q ? "?q=" + encodeURIComponent(q).replace(/%20/g, "+") : "") + "#list";
   const initials = (name) => {
     const words = name.split(/[\s\-_/.]+/).filter((w) => /[A-Za-z0-9]/.test(w));
     if (words.length >= 2) return (words[0][0] + words[1][0]).toUpperCase();
@@ -82,7 +84,7 @@ if (dlg && opener) {
     list.textContent = "";
     opts = [];
     empty.hidden = true;
-    all.href = q ? HOME + "?q=" + encodeURIComponent(q).replace(/%20/g, "+") + "#list" : HOME + "#list";
+    all.href = allUrl(q);
     if (!ix) { allT.textContent = L.qsBrowse; return; }
     shown = q;
     if (!q) {
@@ -113,7 +115,7 @@ if (dlg && opener) {
     if (!opts.length) {
       empty.hidden = false;
       emptyT.textContent = fmt(L.qsNone, { q });
-      const sug = suggest(q, vocab || (vocab = vocabOf(docs)));
+      const sug = suggest(q, vocab || (vocab = vocabOf(ix.tools.map(rawText))));
       sugBtn.hidden = !sug;
       if (sug) sugBtn.textContent = fmt(L.qsSug, { q: sug });
       sugBtn.dataset.q = sug || "";
@@ -127,8 +129,8 @@ if (dlg && opener) {
     loadIndex().then((data) => {
       ix = data;
       docs = ix.tools.map(docOf);
-      catDocs = ix.cats.map((c) => makeDoc({ n: c.n, t: c.t }));
-      projDocs = ix.projects.map((p) => makeDoc({ n: p.n, t: p.t }));
+      catDocs = ix.cats.map((c) => makeDoc({ n: c.n, t: words(c.t) }));
+      projDocs = ix.projects.map((p) => makeDoc({ n: p.n, t: words(p.t) }));
       ix.cats.forEach((c) => { catName[c.id] = c.n; });
       if (dlg.open) render();
     }, () => {
@@ -174,7 +176,8 @@ if (dlg && opener) {
       clearTimeout(timer);
       if (ix && input.value.trim() !== shown) render();
       if (opts[active]) go(opts[active], e.metaKey || e.ctrlKey);
-      else if (input.value.trim()) { close(); location.href = all.href; }
+      // الرابط من الحقل الآن: قد لا يكون العرض لحق بآخر ما كُتب (قبل وصول الفهرس أو خلال مهلة الكتابة)
+      else if (input.value.trim()) { close(); location.href = allUrl(input.value.trim()); }
     }
   });
   list.addEventListener("pointermove", (e) => {

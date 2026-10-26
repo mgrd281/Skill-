@@ -1746,9 +1746,9 @@
     "kind": "MCP",
     "isNew": true,
     "gh": null,
-    "site": "https://v0.app/docs/api/v1/adapters/mcp-server",
+    "site": "https://v0.app/docs/api/platform/adapters/mcp-server",
     "stars": null,
-    "cmd": "npx mcp-remote https://v0.app/api/mcp",
+    "cmd": "claude mcp add v0 -- npx -y mcp-remote https://v0.app/api/mcp",
     "use": [
       "landing",
       "web",

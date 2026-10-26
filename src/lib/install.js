@@ -30,7 +30,7 @@ export function shellWords(line) {
 
 // ---- خادم MCP من أمر Claude Code ----
 // يفهم: claude mcp add [--transport http|sse|stdio] [--env K=V] [--header "K: V"] [--scope s] <name> [--] <command|url> [args…]
-// ومعه: npx mcp-remote <url> (جسر لخادم بعيد). الأوامر متعددة الأسطر لا تُفهم: قبلها خطوة تثبيت لا تنقلها الإعدادات.
+// الأوامر متعددة الأسطر لا تُفهم: قبلها خطوة تثبيت لا تنقلها الإعدادات.
 // يرجع { name, transport, command, args, env, url, headers, needsEdit } أو null.
 export function mcpServer(tool) {
   const ls = lines(tool.cmd);
@@ -38,9 +38,6 @@ export function mcpServer(tool) {
   const w = shellWords(ls[0]);
   if (!w) return null;
   const needsEdit = PLACEHOLDER.test(ls[0]);
-  if (w[0] === "npx" && w[1] === "mcp-remote" && w.length === 3 && /^https?:\/\//.test(w[2])) {
-    return { name: tool.slug.replace(/-mcp$/, ""), transport: "http", url: w[2], env: {}, headers: {}, needsEdit };
-  }
   if (w[0] !== "claude" || w[1] !== "mcp" || w[2] !== "add") return null;
   let transport = "stdio";
   const env = {}, headers = {}, pos = [];

@@ -19,6 +19,19 @@ export function parseFeedback(body) {
   return { value: { rating, ...common(body) } };
 }
 
+// يقبل الطلب من صفحات الموقع نفسه فقط، فلا تستطيع صفحة في موقع آخر أن ترسل باسم زوارها: المتصفحات ترسل Origin مع كل POST،
+// ويجب أن يطابق عنوان الطلب. إن غاب (نادر) فيكفي ألا يقول Sec-Fetch-Site إنه من موقع آخر
+export function sameSite(headers) {
+  const origin = headers.get("origin");
+  if (origin) {
+    let h;
+    try { h = new URL(origin).host; } catch { return false; }
+    return h === headers.get("host") || h === headers.get("x-forwarded-host");
+  }
+  const site = headers.get("sec-fetch-site");
+  return !site || site === "same-origin";
+}
+
 // الإبلاغ عن مشكلة في أداة (زر «أبلغ عن مشكلة» في صفحة الأداة): اسم الأداة وسبب من قائمة ثابتة، والرسالة اختيارية
 export const REPORT_REASONS = ["link", "command", "outdated", "security", "other"];
 export function parseReport(body) {

@@ -36,7 +36,7 @@ export interface Trust { rows: TrustRow[]; tip: string }
 type Words = {
   publisher: string; runs: string; source: string;
   official: (org: string) => string; officialNote: string; account: string; accountNote: string; siteNote: string;
-  local: string; localNote: string; remote: (h: string) => string; remoteNote: (h: string) => string;
+  local: string; localNote: string; remote: (h: string) => string; remoteNote: (h: string) => string; bridgeNote: (h: string) => string;
   localApp: string; localAppNote: string; mcp: string; mcpNote: string;
   skill: string; skillNote: string; plugin: string; pluginNote: string; library: string; libraryNote: string;
   cli: string; cliNote: string; web: string; webNote: string; platform: string; platformNote: string; format: string; formatNote: string;
@@ -54,6 +54,7 @@ const W: Record<Lang, Words> = {
     siteNote: "الموقع الرسمي للأداة.",
     local: "على جهازك", localNote: "يشغّل برنامجًا محليًا بصلاحياتك، فيصل إلى ما تسمح له به من ملفات وأدوات.",
     remote: (h) => `خادم بعيد: ${h}`, remoteNote: (h) => `لا شيء يُثبَّت على جهازك، لكن ما يرسله Claude إلى الخادم يصل إلى ${h}.`,
+    bridgeNote: (h) => `على جهازك وسيط صغير فقط (mcp-remote) يوصل Claude بالخادم، وما يرسله Claude يصل إلى ${h}.`,
     localApp: "على جهازك، عبر البرنامج", localAppNote: "يتصل Claude ببرنامج يعمل على جهازك، فتبقى البيانات عندك.",
     mcp: "خادم MCP", mcpNote: "يربط Claude بأداة خارجية، على جهازك أو على خادم الجهة حسب طريقة التثبيت.",
     skill: "داخل Claude", skillNote: "ملفات تعليمات يقرؤها Claude، وقد تضم سكربتات يشغّلها حين يحتاجها.",
@@ -85,6 +86,7 @@ const W: Record<Lang, Words> = {
     siteNote: "Die offizielle Website des Tools.",
     local: "Auf deinem Rechner", localNote: "Startet ein lokales Programm mit deinen Rechten und erreicht, was du ihm erlaubst.",
     remote: (h) => `Remote-Server: ${h}`, remoteNote: (h) => `Auf deinem Rechner wird nichts installiert, aber was Claude an den Server schickt, landet bei ${h}.`,
+    bridgeNote: (h) => `Auf deinem Rechner läuft nur eine kleine Brücke (mcp-remote) zum Server. Was Claude dorthin schickt, landet bei ${h}.`,
     localApp: "Auf deinem Rechner, über die App", localAppNote: "Claude verbindet sich mit einem Programm auf deinem Rechner, die Daten bleiben bei dir.",
     mcp: "MCP-Server", mcpNote: "Verbindet Claude mit einem externen Tool, lokal oder beim Anbieter, je nach Installation.",
     skill: "In Claude", skillNote: "Anleitungsdateien, die Claude liest. Sie können Skripte enthalten, die Claude bei Bedarf ausführt.",
@@ -116,6 +118,7 @@ const W: Record<Lang, Words> = {
     siteNote: "The tool's official website.",
     local: "On your computer", localNote: "Runs a local program with your permissions, so it can reach what you allow it to.",
     remote: (h) => `Remote server: ${h}`, remoteNote: (h) => `Nothing is installed on your computer, but what Claude sends to the server reaches ${h}.`,
+    bridgeNote: (h) => `Only a small bridge (mcp-remote) runs on your computer. What Claude sends to the server reaches ${h}.`,
     localApp: "On your computer, through the app", localAppNote: "Claude connects to a program running on your computer, so your data stays with you.",
     mcp: "MCP server", mcpNote: "Connects Claude to an external tool, on your computer or the provider's server depending on how you install it.",
     skill: "Inside Claude", skillNote: "Instruction files Claude reads. They can include scripts Claude runs when it needs them.",
@@ -178,13 +181,16 @@ export function trust(t: Tool, lang: Lang): Trust {
 
   // ٢) أين تعمل
   const server = mcpServer(t);
-  const remoteHost = server && server.transport !== "stdio" ? host(server.url) : null;
-  const localHttp = !!remoteHost && /^(localhost|127\.0\.0\.1|\[::1\])$/.test(new URL(server!.url).hostname);
+  // خادم بعيد: مباشرة (http أو sse)، أو عبر الجسر mcp-remote الذي يعمل على الجهاز ويُثبَّت من npm
+  const bridge = server?.transport === "stdio" && server.args.includes("mcp-remote") ? server.args.find((a: string) => /^https?:\/\//.test(a)) : undefined;
+  const url = server && server.transport !== "stdio" ? server.url : bridge;
+  const remoteHost = url ? host(url) : null;
+  const localHttp = !!url && /^(localhost|127\.0\.0\.1|\[::1\])$/.test(new URL(url).hostname);
   const isPlugin = /(^|\n)(\/plugin|claude plugins?) install /.test(cmd);
   let tip: string;
   if (server && !remoteHost) { rows.push({ id: "run", icon: "laptop", label: w.runs, value: w.local, note: w.localNote, tone: "info" }); tip = w.tipLocal; }
   else if (remoteHost && localHttp) { rows.push({ id: "run", icon: "laptop", label: w.runs, value: w.localApp, note: w.localAppNote, tone: "info" }); tip = w.tipLocal; }
-  else if (remoteHost) { rows.push({ id: "run", icon: "cloud", label: w.runs, value: w.remote(remoteHost), note: w.remoteNote(remoteHost), tone: "info" }); tip = w.tipRemote(remoteHost); }
+  else if (remoteHost) { rows.push({ id: "run", icon: "cloud", label: w.runs, value: w.remote(remoteHost), note: bridge ? w.bridgeNote(remoteHost) : w.remoteNote(remoteHost), tone: "info" }); tip = w.tipRemote(remoteHost); }
   else if (isPlugin) { rows.push({ id: "run", icon: "puzzle-piece", label: w.runs, value: w.plugin, note: w.pluginNote, tone: "info" }); tip = w.tipPlugin; }
   else if (t.kind === "MCP") { rows.push({ id: "run", icon: "plug", label: w.runs, value: w.mcp, note: w.mcpNote, tone: "info" }); tip = w.tipLocal; }
   else if (t.kind === "Skill") { rows.push({ id: "run", icon: "sparkle", label: w.runs, value: w.skill, note: w.skillNote, tone: "info" }); tip = w.tipSkill; }
@@ -200,7 +206,7 @@ export function trust(t: Tool, lang: Lang): Trust {
   else if (/(^|\n)(?:\/plugin|claude plugins?) marketplace add (\S+)/.test(cmd)) {
     const r = shortRepo(/(?:\/plugin|claude plugins?) marketplace add (\S+)/.exec(cmd)![1]);
     rows.push({ id: "src", icon: "storefront", label: w.source, value: w.marketRepo(r), note: w.marketRepoNote, tone: "info", href: "https://github.com/" + r });
-  } else if (remoteHost && !localHttp) rows.push({ id: "src", icon: "cloud", label: w.source, value: w.noInstall(remoteHost), note: w.noInstallNote, tone: "info" });
+  } else if (remoteHost && !localHttp && !bridge) rows.push({ id: "src", icon: "cloud", label: w.source, value: w.noInstall(remoteHost), note: w.noInstallNote, tone: "info" });
   else if (/^npx (?:-y )?(?:skills(?:@[\w.-]+)?|plugins) add (\S+)/.test(cmd)) {
     const r = shortRepo(/^npx (?:-y )?(?:skills(?:@[\w.-]+)?|plugins) add (\S+)/.exec(cmd)![1]);
     rows.push({ id: "src", icon: "github-logo", label: w.source, value: w.repo(r), note: w.repoNote, tone: "info", href: "https://github.com/" + r });
