@@ -30,7 +30,7 @@
     "isNew": true,
     "gh": "https://github.com/pbakaus/impeccable",
     "site": "https://impeccable.style",
-    "stars": "88.6k",
+    "stars": "88.7k",
     "cmd": "npx skills add pbakaus/impeccable",
     "use": [
       "landing",
@@ -53,7 +53,7 @@
     "isNew": false,
     "gh": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
     "site": "https://www.uupm.cc/",
-    "stars": "140.7k",
+    "stars": "140.8k",
     "cmd": "/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill\n/plugin install ui-ux-pro-max@ui-ux-pro-max-skill",
     "use": [
       "web",
@@ -142,7 +142,7 @@
     "isNew": false,
     "gh": "https://github.com/VoltAgent/awesome-design-md",
     "site": "https://getdesign.md/",
-    "stars": "123.6k",
+    "stars": "123.7k",
     "cmd": null,
     "use": [
       "brand",
@@ -234,7 +234,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/design",
     "site": null,
-    "stars": "33.1k",
+    "stars": "33.2k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install design@knowledge-work-plugins",
     "use": [
       "web",
@@ -326,7 +326,7 @@
     "isNew": true,
     "gh": "https://github.com/Shopify/shopify-ai-toolkit",
     "site": "https://shopify.dev/docs/apps/build/ai-toolkit",
-    "stars": "614",
+    "stars": "615",
     "cmd": "claude plugin install shopify-ai-toolkit@claude-plugins-official",
     "use": [
       "shop"
@@ -393,7 +393,7 @@
     "isNew": true,
     "gh": "https://github.com/AgriciDaniel/claude-seo",
     "site": "https://claude-seo.md",
-    "stars": "21.8k",
+    "stars": "21.9k",
     "cmd": "/plugin marketplace add AgriciDaniel/claude-seo\n/plugin install claude-seo@agricidaniel-claude-seo\n/seo setup",
     "use": [
       "shop",
@@ -464,7 +464,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/marketing",
     "site": null,
-    "stars": "33.1k",
+    "stars": "33.2k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install marketing@knowledge-work-plugins",
     "use": [
       "brand",
@@ -852,7 +852,7 @@
     "isNew": true,
     "gh": "https://github.com/obra/superpowers",
     "site": null,
-    "stars": "305.4k",
+    "stars": "305.5k",
     "cmd": "/plugin install superpowers@claude-plugins-official",
     "use": [
       "claude"
@@ -937,7 +937,7 @@
     "isNew": true,
     "gh": "https://github.com/vercel-labs/skills",
     "site": "https://skills.sh",
-    "stars": "36.6k",
+    "stars": "36.7k",
     "cmd": "npx skills add https://github.com/vercel-labs/skills --skill find-skills",
     "use": [
       "claude"
@@ -1124,7 +1124,7 @@
     "desc": "يفحص إمكانية الوصول مثل تباين الألوان والنصوص البديلة.",
     "desc_de": "Prüft die Barrierefreiheit, z. B. Farbkontrast und Alternativtexte.",
     "desc_en": "Checks accessibility, such as color contrast and alt text.",
-    "pushed": "2026-10-22",
+    "pushed": "2026-10-26",
     "added": "2026-10-24T00:00:00Z",
     "license": "MPL-2.0",
     "archived": false
@@ -1926,7 +1926,7 @@
     "isNew": true,
     "gh": "https://github.com/squirrelscan/squirrelscan",
     "site": "https://squirrelscan.com",
-    "stars": "297",
+    "stars": "298",
     "cmd": "npm install -g squirrelscan",
     "use": [
       "shop",
@@ -2045,7 +2045,7 @@
     "isNew": true,
     "gh": "https://github.com/heygen-com/hyperframes",
     "site": "https://hyperframes.dev",
-    "stars": "72.7k",
+    "stars": "72.8k",
     "cmd": "claude plugin marketplace add heygen-com/hyperframes\nclaude plugin install hyperframes@hyperframes",
     "use": [
       "shop",
@@ -2140,7 +2140,7 @@
     "isNew": true,
     "gh": "https://github.com/rampstackco/claude-skills",
     "site": "https://rampstack.co",
-    "stars": "996",
+    "stars": "999",
     "cmd": "/plugin marketplace add rampstackco/claude-skills\n/plugin install rampstack-skills@rampstack",
     "use": [
       "brand",
@@ -2909,7 +2909,7 @@
     "isNew": true,
     "gh": "https://github.com/cloudai-x/threejs-skills",
     "site": null,
-    "stars": "3.7k",
+    "stars": "3.8k",
     "cmd": "npx skills add cloudai-x/threejs-skills",
     "use": [
       "landing",
@@ -3229,7 +3229,7 @@
     "isNew": true,
     "gh": "https://github.com/remotion-dev/remotion",
     "site": "https://remotion.dev",
-    "stars": "67.7k",
+    "stars": "67.8k",
     "cmd": "npx create-video@latest",
     "use": [
       "shop",
@@ -3254,7 +3254,7 @@
     "isNew": true,
     "gh": "https://github.com/Vincentwei1021/video-shotcraft",
     "site": "https://vincentwei1021.github.io/video-shotcraft/",
-    "stars": "13.7k",
+    "stars": "13.8k",
     "cmd": "npx skills add Vincentwei1021/video-shotcraft",
     "use": [
       "shop",
@@ -3774,7 +3774,7 @@
     "isNew": true,
     "gh": "https://github.com/morluto/rea",
     "site": "https://rea.tools/",
-    "stars": "389.2k",
+    "stars": "389.8k",
     "cmd": "npx rea-agents setup",
     "use": [
       "mobile",
@@ -3797,7 +3797,7 @@
     "isNew": true,
     "gh": "https://github.com/harry0703/MoneyPrinterTurbo",
     "site": null,
-    "stars": "135.3k",
+    "stars": "135.4k",
     "cmd": "python -m pip install mpt\nmpt webui",
     "use": [
       "video",
@@ -4404,7 +4404,7 @@
     "isNew": true,
     "gh": "https://github.com/dair-ai/Prompt-Engineering-Guide",
     "site": "https://www.promptingguide.ai",
-    "stars": "79.5k",
+    "stars": "79.6k",
     "cmd": null,
     "use": [
       "claude",
@@ -4845,7 +4845,7 @@
     "isNew": true,
     "gh": "https://github.com/mvanhorn/last30days-skill",
     "site": null,
-    "stars": "65.5k",
+    "stars": "65.6k",
     "cmd": "/plugin marketplace add mvanhorn/last30days-skill\n/plugin install last30days",
     "use": [
       "claude",
@@ -5227,7 +5227,7 @@
     "desc": "مهارات Clerk الرسمية لتسجيل الدخول وإدارة المستخدمين: إضافة Clerk إلى Next.js وReact وVue وNuxt وExpo وiOS وAndroid، وبناء نماذج دخول مخصصة، والمؤسسات والاشتراكات وWebhooks، واختبارها بـ Playwright. تحتاج حساب Clerk.",
     "desc_de": "Offizielle Clerk-Skills für Anmeldung und Benutzerverwaltung: Einbindung von Clerk in Next.js, React, Vue, Nuxt, Expo, iOS und Android, Erstellung eigener Anmeldeformulare, Organisationen, Abos und Webhooks sowie Tests mit Playwright. Benötigt ein Clerk-Konto.",
     "desc_en": "Clerk's official skills for sign-in and user management: adding Clerk to Next.js, React, Vue, Nuxt, Expo, iOS and Android, building custom sign-in forms, organizations, subscriptions and webhooks, and testing them with Playwright. Requires a Clerk account.",
-    "pushed": "2026-10-25",
+    "pushed": "2026-10-26",
     "license": "none",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5240,7 +5240,7 @@
     "isNew": true,
     "gh": "https://github.com/resend/resend-skills",
     "site": "https://resend.com",
-    "stars": "206",
+    "stars": "207",
     "cmd": "npx skills add resend/resend-skills",
     "use": [
       "web",
@@ -5422,7 +5422,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business",
     "site": null,
-    "stars": "33.1k",
+    "stars": "33.2k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install small-business@knowledge-work-plugins",
     "use": [
       "shop",
@@ -5445,7 +5445,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/customer-support",
     "site": null,
-    "stars": "33.1k",
+    "stars": "33.2k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install customer-support@knowledge-work-plugins",
     "use": [
       "shop",
@@ -5467,7 +5467,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/legal",
     "site": null,
-    "stars": "33.1k",
+    "stars": "33.2k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install legal@knowledge-work-plugins",
     "use": [
       "shop",
@@ -5489,7 +5489,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/operations",
     "site": null,
-    "stars": "33.1k",
+    "stars": "33.2k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install operations@knowledge-work-plugins",
     "use": [
       "shop",
@@ -5511,7 +5511,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/data",
     "site": null,
-    "stars": "33.1k",
+    "stars": "33.2k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install data@knowledge-work-plugins",
     "use": [
       "dashboard",
@@ -5714,7 +5714,7 @@
     "isNew": true,
     "gh": "https://github.com/SupercmoHQ/superCMO-skills",
     "site": "https://getsupercmo.ai",
-    "stars": "222",
+    "stars": "223",
     "cmd": "/plugin marketplace add SupercmoHQ/superCMO-skills\n/plugin install supercmo@superCMO-skills",
     "use": [
       "shop",
@@ -6190,7 +6190,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/sales",
     "site": null,
-    "stars": "33.1k",
+    "stars": "33.2k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install sales@knowledge-work-plugins",
     "use": [
       "brand",
@@ -6212,7 +6212,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/finance",
     "site": null,
-    "stars": "33.1k",
+    "stars": "33.2k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install finance@knowledge-work-plugins",
     "use": [
       "finance"
@@ -6233,7 +6233,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management",
     "site": null,
-    "stars": "33.1k",
+    "stars": "33.2k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install product-management@knowledge-work-plugins",
     "use": [
       "web",
@@ -6256,7 +6256,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/human-resources",
     "site": null,
-    "stars": "33.1k",
+    "stars": "33.2k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install human-resources@knowledge-work-plugins",
     "use": [
       "claude"
@@ -6277,7 +6277,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/productivity",
     "site": null,
-    "stars": "33.1k",
+    "stars": "33.2k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install productivity@knowledge-work-plugins",
     "use": [
       "claude"
@@ -6304,7 +6304,7 @@
     "desc": "مدير حافظة خفيف لـ Mac: يحفظ كل ما تنسخه، وتفتح قائمته باختصار لوحة المفاتيح لتبحث فيها وتلصق أي نص أو صورة نسختها من قبل.",
     "desc_de": "Schlanker Zwischenablage-Manager für den Mac: Er merkt sich alles, was du kopierst. Per Tastenkürzel öffnest du die Liste, durchsuchst sie und fügst frühere Texte oder Bilder wieder ein.",
     "desc_en": "A lightweight clipboard manager for Mac: it keeps everything you copy, and a keyboard shortcut opens the list so you can search it and paste any earlier text or image.",
-    "pushed": "2026-10-23",
+    "pushed": "2026-10-26",
     "added": "2026-10-26T13:46:00Z",
     "license": "MIT",
     "archived": false
@@ -6323,7 +6323,7 @@
     "desc": "مراقب للنظام في شريط القوائم على Mac: المعالج ومعالج الرسوم والذاكرة والقرص والشبكة والبطارية والحرارة، وتختار ما يظهر منها.",
     "desc_de": "Systemmonitor für die Menüleiste des Macs: CPU, GPU, Arbeitsspeicher, Festplatte, Netzwerk, Akku und Temperatur – du wählst, was angezeigt wird.",
     "desc_en": "A system monitor for your Mac's menu bar: CPU, GPU, memory, disk, network, battery and temperatures, and you choose what shows.",
-    "pushed": "2026-10-25",
+    "pushed": "2026-10-26",
     "added": "2026-10-26T13:30:00Z",
     "license": "MIT",
     "archived": false
@@ -7278,7 +7278,7 @@
     "isNew": true,
     "gh": "https://github.com/github/github-mcp-server",
     "site": null,
-    "stars": null,
+    "stars": "34k",
     "cmd": "claude mcp add --transport http github https://api.githubcopilot.com/mcp -H \"Authorization: Bearer YOUR_GITHUB_PAT\"",
     "use": [
       "claude",
@@ -7288,7 +7288,10 @@
     "desc": "خادم GitHub الرسمي: يقرأ Claude المستودعات والكود، ويدير المشكلات وطلبات الدمج، ويؤتمت سير العمل.",
     "desc_de": "Offizieller GitHub-Server: Claude liest Repositories und Code, verwaltet Issues und Pull Requests und automatisiert Workflows.",
     "desc_en": "GitHub's official server: Claude reads repositories and code, manages issues and pull requests, and automates workflows.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-23",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "filesystem-mcp",
@@ -7298,7 +7301,7 @@
     "isNew": true,
     "gh": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
     "site": "https://www.npmjs.com/package/@modelcontextprotocol/server-filesystem",
-    "stars": null,
+    "stars": "91.6k",
     "cmd": "claude mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem /full/path/to/folder",
     "use": [
       "claude"
@@ -7306,7 +7309,10 @@
     "desc": "يتيح لـ Claude قراءة الملفات وكتابتها والبحث فيها، داخل المجلدات التي تسمح بها فقط.",
     "desc_de": "Lässt Claude Dateien lesen, schreiben und durchsuchen, nur in den Ordnern, die du freigibst.",
     "desc_en": "Lets Claude read, write and search files, only inside the folders you allow.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-25",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "fetch-mcp",
@@ -7316,7 +7322,7 @@
     "isNew": true,
     "gh": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
     "site": "https://pypi.org/project/mcp-server-fetch/",
-    "stars": null,
+    "stars": "91.6k",
     "cmd": "claude mcp add fetch -- uvx mcp-server-fetch",
     "use": [
       "claude",
@@ -7325,7 +7331,10 @@
     "desc": "يجلب صفحات الويب ويحوّلها إلى Markdown ليقرأها Claude بسهولة.",
     "desc_de": "Ruft Webseiten ab und wandelt sie in Markdown um, damit Claude sie leicht lesen kann.",
     "desc_en": "Fetches web pages and converts them to Markdown so Claude can read them easily.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-25",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "memory-mcp",
@@ -7335,7 +7344,7 @@
     "isNew": true,
     "gh": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
     "site": "https://www.npmjs.com/package/@modelcontextprotocol/server-memory",
-    "stars": null,
+    "stars": "91.6k",
     "cmd": "claude mcp add memory -- npx -y @modelcontextprotocol/server-memory",
     "use": [
       "claude"
@@ -7343,7 +7352,10 @@
     "desc": "ذاكرة دائمة في رسم معرفي محلي: يتذكر Claude معلوماتك بين المحادثات.",
     "desc_de": "Dauerhaftes Gedächtnis als lokaler Wissensgraph: Claude merkt sich Informationen über dich über Chats hinweg.",
     "desc_en": "Persistent memory in a local knowledge graph, so Claude remembers information about you across chats.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-25",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "sequential-thinking-mcp",
@@ -7353,7 +7365,7 @@
     "isNew": true,
     "gh": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
     "site": "https://www.npmjs.com/package/@modelcontextprotocol/server-sequential-thinking",
-    "stars": null,
+    "stars": "91.6k",
     "cmd": "claude mcp add sequential-thinking -- npx -y @modelcontextprotocol/server-sequential-thinking",
     "use": [
       "claude"
@@ -7361,7 +7373,10 @@
     "desc": "أداة تفكير منظّم خطوة بخطوة: يقسّم Claude المشكلة ويراجع خطواته ويعدّلها.",
     "desc_de": "Werkzeug für strukturiertes Denken Schritt für Schritt: Claude zerlegt ein Problem, prüft seine Schritte und passt sie an.",
     "desc_en": "A tool for structured step-by-step thinking: Claude breaks a problem down, reviews its steps and revises them.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-25",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "git-mcp",
@@ -7371,7 +7386,7 @@
     "isNew": true,
     "gh": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
     "site": "https://pypi.org/project/mcp-server-git/",
-    "stars": null,
+    "stars": "91.6k",
     "cmd": "claude mcp add git -- uvx mcp-server-git",
     "use": [
       "claude",
@@ -7380,7 +7395,10 @@
     "desc": "يقرأ Claude مستودعات Git المحلية ويبحث فيها ويعدّلها: الحالة والفروق والسجل والالتزامات.",
     "desc_de": "Claude liest, durchsucht und bearbeitet lokale Git-Repositories: Status, Diffs, Verlauf und Commits.",
     "desc_en": "Claude reads, searches and works with local Git repositories: status, diffs, history and commits.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-25",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "desktop-commander",
@@ -7390,7 +7408,7 @@
     "isNew": true,
     "gh": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
     "site": null,
-    "stars": null,
+    "stars": "10.1k",
     "cmd": "claude mcp add --scope user desktop-commander -- npx -y @wonderwhy-er/desktop-commander@latest",
     "use": [
       "claude",
@@ -7399,7 +7417,10 @@
     "desc": "يعمل Claude على جهازك مباشرة: يعدّل الملفات والكود، ويشغّل أوامر الطرفية والعمليات.",
     "desc_de": "Claude arbeitet direkt auf deinem Rechner: bearbeitet Dateien und Code und führt Terminalbefehle und Prozesse aus.",
     "desc_en": "Claude works directly on your computer: edits files and code and runs terminal commands and processes.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-26",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "task-master",
@@ -7409,7 +7430,7 @@
     "isNew": true,
     "gh": "https://github.com/eyaltoledano/claude-task-master",
     "site": null,
-    "stars": null,
+    "stars": "28.3k",
     "cmd": "claude mcp add taskmaster-ai -- npx -y task-master-ai",
     "use": [
       "claude",
@@ -7418,7 +7439,10 @@
     "desc": "يحوّل وصف مشروعك إلى قائمة مهام مرتبة، ويتابع Claude تنفيذها مهمة بعد مهمة.",
     "desc_de": "Macht aus deiner Projektbeschreibung eine geordnete Aufgabenliste, die Claude Schritt für Schritt abarbeitet.",
     "desc_en": "Turns your project description into an ordered task list that Claude works through one task at a time.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-04-28",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "serena",
@@ -7428,7 +7452,7 @@
     "isNew": true,
     "gh": "https://github.com/oraios/serena",
     "site": null,
-    "stars": null,
+    "stars": "30.7k",
     "cmd": "uv tool install -p 3.13 serena-agent\nclaude mcp add --scope user serena -- serena start-mcp-server --context claude-code --project-from-cwd",
     "use": [
       "claude",
@@ -7437,7 +7461,10 @@
     "desc": "يفهم Claude الكود على مستوى الدوال والأصناف لا كنص فقط، فيبحث ويعدّل بدقة في المشاريع الكبيرة.",
     "desc_de": "Claude versteht Code auf Ebene von Funktionen und Klassen statt nur als Text und sucht und bearbeitet so gezielt in großen Projekten.",
     "desc_en": "Claude understands code at the level of functions and classes, not just text, so it searches and edits precisely in large projects.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-26",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "exa-mcp",
@@ -7447,7 +7474,7 @@
     "isNew": true,
     "gh": "https://github.com/exa-labs/exa-mcp-server",
     "site": "https://exa.ai",
-    "stars": null,
+    "stars": "5.2k",
     "cmd": "claude mcp add --transport http exa https://mcp.exa.ai/mcp",
     "use": [
       "claude",
@@ -7456,7 +7483,10 @@
     "desc": "بحث في الويب وجلب الصفحات عبر Exa، محرك بحث مصمم للذكاء الاصطناعي.",
     "desc_de": "Websuche und Seitenabruf über Exa, eine Suchmaschine für KI.",
     "desc_en": "Web search and page fetching through Exa, a search engine built for AI.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-19",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "firecrawl-mcp",
@@ -7466,7 +7496,7 @@
     "isNew": true,
     "gh": "https://github.com/firecrawl/firecrawl-mcp-server",
     "site": "https://docs.firecrawl.dev/mcp-server",
-    "stars": null,
+    "stars": "7.7k",
     "cmd": "claude mcp add firecrawl -e FIRECRAWL_API_KEY=fc-YOUR_API_KEY -- npx -y firecrawl-mcp",
     "use": [
       "claude",
@@ -7476,7 +7506,10 @@
     "desc": "يجمع محتوى المواقع ويحوّله إلى بيانات نظيفة: صفحة واحدة أو موقع كامل أو بحث.",
     "desc_de": "Holt Inhalte von Websites als saubere Daten: eine Seite, eine ganze Website oder eine Suche.",
     "desc_en": "Turns website content into clean data: one page, a whole site or a search.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-26",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "brave-search-mcp",
@@ -7486,7 +7519,7 @@
     "isNew": true,
     "gh": "https://github.com/brave/brave-search-mcp-server",
     "site": null,
-    "stars": null,
+    "stars": "1.5k",
     "cmd": "claude mcp add brave-search -e BRAVE_API_KEY=YOUR_API_KEY -- npx -y @brave/brave-search-mcp-server",
     "use": [
       "claude"
@@ -7494,7 +7527,10 @@
     "desc": "بحث Brave داخل Claude: الويب والأخبار والصور والفيديو والأماكن.",
     "desc_de": "Brave-Suche in Claude: Web, News, Bilder, Videos und Orte.",
     "desc_en": "Brave Search inside Claude: web, news, images, videos and places.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-26",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "perplexity-mcp",
@@ -7504,7 +7540,7 @@
     "isNew": true,
     "gh": "https://github.com/perplexityai/modelcontextprotocol",
     "site": "https://docs.perplexity.ai",
-    "stars": null,
+    "stars": "2.6k",
     "cmd": "claude mcp add perplexity --env PERPLEXITY_API_KEY=\"your_key_here\" -- npx -y @perplexity-ai/mcp-server",
     "use": [
       "claude"
@@ -7512,7 +7548,10 @@
     "desc": "بحث فوري في الويب وأبحاث معمّقة من Perplexity داخل Claude، بمفتاح API.",
     "desc_de": "Echtzeit-Websuche und gründliche Recherche von Perplexity in Claude, mit API-Schlüssel.",
     "desc_en": "Real-time web search and in-depth research from Perplexity inside Claude, with an API key.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-21",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "hugging-face-mcp",
@@ -7522,7 +7561,7 @@
     "isNew": true,
     "gh": "https://github.com/huggingface/hf-mcp-server",
     "site": "https://huggingface.co/mcp",
-    "stars": null,
+    "stars": "309",
     "cmd": "claude mcp add hf-mcp-server -t http \"https://huggingface.co/mcp?login\"",
     "use": [
       "claude",
@@ -7531,7 +7570,10 @@
     "desc": "يربط Claude بمنصة Hugging Face: يبحث في النماذج وقواعد البيانات والأوراق، ويستخدم آلاف تطبيقات Gradio.",
     "desc_de": "Verbindet Claude mit dem Hugging Face Hub: Modelle, Datensätze und Papers durchsuchen und tausende Gradio-Apps nutzen.",
     "desc_en": "Connects Claude to the Hugging Face Hub: search models, datasets and papers, and use thousands of Gradio apps.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-24",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "microsoft-learn-mcp",
@@ -7541,7 +7583,7 @@
     "isNew": true,
     "gh": "https://github.com/MicrosoftDocs/mcp",
     "site": "https://learn.microsoft.com",
-    "stars": null,
+    "stars": "2k",
     "cmd": "claude mcp add --transport http microsoft-learn https://learn.microsoft.com/api/mcp",
     "use": [
       "claude",
@@ -7550,7 +7592,10 @@
     "desc": "وثائق Microsoft الرسمية المحدّثة مباشرة لـ Claude، بدل بيانات تدريب قديمة.",
     "desc_de": "Aktuelle offizielle Microsoft-Dokumentation direkt für Claude statt veralteter Trainingsdaten.",
     "desc_en": "Current official Microsoft documentation straight to Claude instead of outdated training data.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-25",
+    "license": "CC-BY-4.0",
+    "archived": false
   },
   {
     "slug": "atlassian-mcp",
@@ -7560,7 +7605,7 @@
     "isNew": true,
     "gh": "https://github.com/atlassian/atlassian-mcp-server",
     "site": null,
-    "stars": null,
+    "stars": "1.1k",
     "cmd": "claude mcp add --transport http atlassian https://mcp.atlassian.com/v2/mcp",
     "use": [
       "claude",
@@ -7569,7 +7614,10 @@
     "desc": "خادم Atlassian الرسمي: يقرأ Claude ويعدّل Jira وConfluence في حسابك السحابي.",
     "desc_de": "Offizieller Atlassian-Server: Claude liest und bearbeitet Jira und Confluence in deiner Cloud-Instanz.",
     "desc_en": "Atlassian's official server: Claude reads and updates Jira and Confluence in your cloud site.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-22",
+    "license": "Apache-2.0",
+    "archived": false
   },
   {
     "slug": "cloudflare-mcp",
@@ -7579,7 +7627,7 @@
     "isNew": true,
     "gh": "https://github.com/cloudflare/mcp-server-cloudflare",
     "site": null,
-    "stars": null,
+    "stars": "4.4k",
     "cmd": "claude mcp add --transport http cloudflare-docs https://docs.mcp.cloudflare.com/mcp",
     "use": [
       "web",
@@ -7588,7 +7636,10 @@
     "desc": "خوادم Cloudflare الرسمية: وثائق Cloudflare، وإدارة Workers والسجلات والحساب بلغة طبيعية.",
     "desc_de": "Offizielle Cloudflare-Server: Cloudflare-Dokumentation sowie Workers, Logs und Konto per natürlicher Sprache verwalten.",
     "desc_en": "Cloudflare's official servers: Cloudflare docs, plus managing Workers, logs and your account in plain language.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-22",
+    "license": "Apache-2.0",
+    "archived": false
   },
   {
     "slug": "apify-mcp",
@@ -7598,7 +7649,7 @@
     "isNew": true,
     "gh": "https://github.com/apify/apify-mcp-server",
     "site": "https://mcp.apify.com",
-    "stars": null,
+    "stars": "13.3k",
     "cmd": "claude mcp add --transport http apify https://mcp.apify.com",
     "use": [
       "shop",
@@ -7608,7 +7659,10 @@
     "desc": "آلاف أدوات الجمع الجاهزة من Apify: بيانات من مواقع التواصل والخرائط والمتاجر وأي موقع.",
     "desc_de": "Tausende fertige Scraper von Apify: Daten aus Social Media, Karten, Shops und jeder Website.",
     "desc_en": "Thousands of ready-made Apify scrapers: data from social media, maps, online shops and any website.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-26",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "figma-mcp",
@@ -7618,7 +7672,7 @@
     "isNew": true,
     "gh": "https://github.com/figma/mcp-server-guide",
     "site": null,
-    "stars": null,
+    "stars": "2.1k",
     "cmd": "claude mcp add --transport http figma https://mcp.figma.com/mcp",
     "use": [
       "web",
@@ -7628,7 +7682,10 @@
     "desc": "خادم Figma الرسمي: يقرأ Claude بيانات تصاميمك ومكوناتها ومتغيراتها ليحوّلها إلى كود مطابق.",
     "desc_de": "Offizieller Figma-Server: Claude liest deine Designs mit Komponenten und Variablen und setzt sie passgenau in Code um.",
     "desc_en": "Figma's official server: Claude reads your designs with their components and variables and turns them into matching code.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-20",
+    "license": "none",
+    "archived": false
   },
   {
     "slug": "supabase-mcp",
@@ -7638,7 +7695,7 @@
     "isNew": true,
     "gh": "https://github.com/supabase-community/supabase-mcp",
     "site": "https://supabase.com/mcp",
-    "stars": null,
+    "stars": "3k",
     "cmd": "claude mcp add --transport http supabase https://mcp.supabase.com/mcp",
     "use": [
       "web",
@@ -7648,7 +7705,10 @@
     "desc": "يربط Claude بمشروع Supabase: الجداول والاستعلامات والإعدادات.",
     "desc_de": "Verbindet Claude mit deinem Supabase-Projekt: Tabellen, Abfragen und Einstellungen.",
     "desc_en": "Connects Claude to your Supabase project: tables, queries and settings.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-26",
+    "license": "Apache-2.0",
+    "archived": false
   },
   {
     "slug": "neon-mcp",
@@ -7658,7 +7718,7 @@
     "isNew": true,
     "gh": "https://github.com/neondatabase/mcp-server-neon",
     "site": null,
-    "stars": null,
+    "stars": "655",
     "cmd": "claude mcp add --transport http neon https://mcp.neon.tech/mcp",
     "use": [
       "web",
@@ -7667,7 +7727,10 @@
     "desc": "يدير Claude قواعد Postgres على Neon: المشاريع والفروع والاستعلامات وتغييرات الجداول.",
     "desc_de": "Claude verwaltet Postgres-Datenbanken auf Neon: Projekte, Branches, Abfragen und Schemaänderungen.",
     "desc_en": "Claude manages Postgres databases on Neon: projects, branches, queries and schema changes.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-21",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "mongodb-mcp",
@@ -7677,7 +7740,7 @@
     "isNew": true,
     "gh": "https://github.com/mongodb-js/mongodb-mcp-server",
     "site": null,
-    "stars": null,
+    "stars": "1.2k",
     "cmd": "claude mcp add mongodb -e MDB_MCP_CONNECTION_STRING=YOUR_CONNECTION_STRING -- npx -y mongodb-mcp-server@latest --readOnly",
     "use": [
       "web",
@@ -7686,7 +7749,10 @@
     "desc": "يستعلم Claude في قواعد MongoDB ويديرها، ومعها MongoDB Atlas.",
     "desc_de": "Claude fragt MongoDB-Datenbanken ab und verwaltet sie, auch in MongoDB Atlas.",
     "desc_en": "Claude queries and manages MongoDB databases, including MongoDB Atlas.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-23",
+    "license": "Apache-2.0",
+    "archived": false
   },
   {
     "slug": "motherduck-duckdb-mcp",
@@ -7696,7 +7762,7 @@
     "isNew": true,
     "gh": "https://github.com/motherduckdb/mcp-server-motherduck",
     "site": null,
-    "stars": null,
+    "stars": "535",
     "cmd": "claude mcp add --scope user duckdb --transport stdio -- uvx mcp-server-motherduck --db-path :memory: --read-write --allow-switch-databases",
     "use": [
       "dashboard",
@@ -7705,7 +7771,10 @@
     "desc": "تحليل بيانات بـ SQL عبر DuckDB محليًا أو MotherDuck في السحابة.",
     "desc_de": "SQL-Analysen mit DuckDB lokal oder mit MotherDuck in der Cloud.",
     "desc_en": "SQL analytics with DuckDB locally or MotherDuck in the cloud.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-26",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "grafana-mcp",
@@ -7715,7 +7784,7 @@
     "isNew": true,
     "gh": "https://github.com/grafana/mcp-grafana",
     "site": null,
-    "stars": null,
+    "stars": "3.6k",
     "cmd": "claude mcp add grafana -e GRAFANA_URL=http://localhost:3000 -e GRAFANA_SERVICE_ACCOUNT_TOKEN=YOUR_TOKEN -- uvx mcp-grafana",
     "use": [
       "dashboard",
@@ -7724,7 +7793,10 @@
     "desc": "يقرأ Claude لوحات Grafana ومصادر البيانات والتنبيهات، ويبحث في المقاييس والسجلات.",
     "desc_de": "Claude liest Grafana-Dashboards, Datenquellen und Alerts und durchsucht Metriken und Logs.",
     "desc_en": "Claude reads Grafana dashboards, data sources and alerts, and searches metrics and logs.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-26",
+    "license": "Apache-2.0",
+    "archived": false
   },
   {
     "slug": "posthog-mcp",
@@ -7734,7 +7806,7 @@
     "isNew": true,
     "gh": "https://github.com/PostHog/posthog/tree/master/services/mcp",
     "site": null,
-    "stars": null,
+    "stars": "40.5k",
     "cmd": "claude mcp add --transport http posthog https://mcp.posthog.com/mcp",
     "use": [
       "web",
@@ -7745,7 +7817,10 @@
     "desc": "يقرأ Claude بيانات PostHog: اللوحات والتحليلات وأعلام الميزات، ويشغّل استعلامات SQL.",
     "desc_de": "Claude nutzt deine PostHog-Daten: Dashboards, Analysen und Feature Flags, auch per SQL-Abfrage.",
     "desc_en": "Claude works with your PostHog data: dashboards, insights and feature flags, including SQL queries.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-26",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "google-calendar-mcp",
@@ -7755,7 +7830,7 @@
     "isNew": true,
     "gh": "https://github.com/nspady/google-calendar-mcp",
     "site": null,
-    "stars": null,
+    "stars": "1.2k",
     "cmd": "claude mcp add google-calendar -e GOOGLE_OAUTH_CREDENTIALS=/full/path/to/gcp-oauth.keys.json -- npx -y @cocal/google-calendar-mcp",
     "use": [
       "booking",
@@ -7764,7 +7839,10 @@
     "desc": "يدير Claude تقويم Google: يعرض المواعيد ويبحث فيها ويضيفها ويعدّلها، ويجد الأوقات الفارغة.",
     "desc_de": "Claude verwaltet deinen Google Kalender: Termine anzeigen, suchen, anlegen und ändern und freie Zeiten finden.",
     "desc_en": "Claude manages your Google Calendar: lists, searches, creates and updates events, and finds free time.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-13",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "eventcalendar",
@@ -7774,7 +7852,7 @@
     "isNew": true,
     "gh": "https://github.com/vkurko/calendar",
     "site": "https://vkurko.github.io/calendar/",
-    "stars": null,
+    "stars": "2.3k",
     "cmd": "npm install @event-calendar/core",
     "use": [
       "booking",
@@ -7784,7 +7862,10 @@
     "desc": "تقويم مواعيد كامل بالسحب والإفلات، بعروض الموارد والخط الزمني، خفيف وبلا اعتماديات.",
     "desc_de": "Vollwertiger Terminkalender mit Drag & Drop, Ressourcen- und Timeline-Ansichten, leicht und ohne Abhängigkeiten.",
     "desc_en": "A full drag-and-drop event calendar with resource and timeline views, lightweight and dependency-free.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-25",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "react-big-calendar",
@@ -7794,7 +7875,7 @@
     "isNew": true,
     "gh": "https://github.com/bigcalendar/react-big-calendar",
     "site": "https://bigcalendar.github.io/react-big-calendar/",
-    "stars": null,
+    "stars": "8.8k",
     "cmd": "npm install react-big-calendar",
     "use": [
       "booking",
@@ -7804,7 +7885,10 @@
     "desc": "مكوّن تقويم مواعيد لـ React بعروض الشهر والأسبوع واليوم وجدول الأعمال.",
     "desc_de": "Kalenderkomponente für React mit Monats-, Wochen-, Tages- und Agenda-Ansicht.",
     "desc_en": "An events calendar component for React with month, week, day and agenda views.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-06-01",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "next-js-devtools-mcp",
@@ -7814,7 +7898,7 @@
     "isNew": true,
     "gh": "https://github.com/vercel/next-devtools-mcp",
     "site": null,
-    "stars": null,
+    "stars": "832",
     "cmd": "claude mcp add next-devtools npx next-devtools-mcp@latest",
     "use": [
       "web",
@@ -7823,7 +7907,10 @@
     "desc": "يوصل Claude بخادم تطوير Next.js 16 وما بعده: الأخطاء والمسارات والسجلات مباشرة أثناء العمل.",
     "desc_de": "Verbindet Claude mit dem laufenden Dev-Server ab Next.js 16: Laufzeitfehler, Routen und Logs live.",
     "desc_en": "Connects Claude to your running Next.js 16+ dev server: live runtime errors, routes and logs.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-09-15",
+    "license": "none",
+    "archived": false
   },
   {
     "slug": "ai-elements",
@@ -7833,7 +7920,7 @@
     "isNew": true,
     "gh": "https://github.com/vercel/ai-elements",
     "site": "https://ai-sdk.dev/elements",
-    "stars": null,
+    "stars": "2.5k",
     "cmd": "npx ai-elements@latest",
     "use": [
       "web",
@@ -7842,7 +7929,10 @@
     "desc": "مكونات React جاهزة لتطبيقات الذكاء الاصطناعي: المحادثات والرسائل وكتل الكود وعرض التفكير، تُضاف بأمر واحد.",
     "desc_de": "Fertige React-Komponenten für KI-Apps: Chats, Nachrichten, Codeblöcke und Denkschritte, per Befehl hinzugefügt.",
     "desc_en": "Ready-made React components for AI apps: conversations, messages, code blocks and reasoning displays, added with one command.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-14",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "streamdown",
@@ -7852,7 +7942,7 @@
     "isNew": true,
     "gh": "https://github.com/vercel/streamdown",
     "site": "https://www.npmjs.com/package/streamdown",
-    "stars": null,
+    "stars": "5.7k",
     "cmd": "npm install streamdown",
     "use": [
       "web"
@@ -7860,7 +7950,10 @@
     "desc": "بديل مباشر لـ react-markdown مصمم لعرض ردود الذكاء الاصطناعي أثناء وصولها، حتى لو كان Markdown ناقصًا.",
     "desc_de": "Direkter Ersatz für react-markdown, gebaut für gestreamte KI-Antworten, auch bei unvollständigem Markdown.",
     "desc_en": "A drop-in replacement for react-markdown built for streamed AI responses, even when the Markdown is incomplete.",
-    "added": "2026-10-26T16:00:00Z"
+    "added": "2026-10-26T16:00:00Z",
+    "pushed": "2026-10-26",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "flatseal",
