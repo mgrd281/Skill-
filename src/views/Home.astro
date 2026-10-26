@@ -7,6 +7,7 @@ import Odometer from "../components/Odometer.astro";
 import Mascot from "../components/Mascot.astro";
 import CardIcons from "../components/CardIcons.astro";
 import Newsletter from "../components/Newsletter.astro";
+import Sponsor from "../components/Sponsor.astro";
 import { tools, byStars, rankOf, categories, appCats, projects, starsUpdatedAt, formatDate, recentTools, initials, kindIcon, kindLabel, categoryIcon, projectIcon, txt, catName, projName, projAdvice } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
 import { kitPlan } from "../lib/install.js";
@@ -217,6 +218,9 @@ const kinds: Array<[string, any, string]> = [
       ))}
     </div>
   </section>
+
+  <!-- الراعي: إعلان واحد موسوم، حين يُضبط في data/meta.json (src/components/Sponsor.astro) -->
+  <Sponsor lang={lang} />
 
   <!-- «تطبيقات جاهزة»: كل بلاطة رابط إلى صفحة قسمها (Mac وWindows وiPhone ولكل الأنظمة) -->
   <section class="band alt apps" aria-labelledby="apps-h">

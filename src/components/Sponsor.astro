@@ -1,0 +1,27 @@
+---
+// مكان الراعي في الرئيسية: إعلان واحد مدفوع، يظهر حين يُضبط في data/meta.json حقل sponsor (src/lib/data.ts) حتى تاريخ until.
+// يُحذف عند أول بناء بعد التاريخ، ويخفيه src/scripts/ui.js في المتصفح قبل ذلك. موسوم دائمًا «إعلان» (القانون الألماني
+// يطلب تمييز الإعلان بوضوح)، والرابط الخارجي rel="sponsored". نص ورابط فقط: لا صور ولا سكربتات من الراعي، فلا تتبع.
+import Icon from "./Icon.astro";
+import { sponsor, tools, toolDesc, txt } from "../lib/data";
+import { type Lang, href, fwdIcon, t as dict } from "../i18n";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict(lang);
+const today = new Date().toISOString().slice(0, 10);
+const s = sponsor && sponsor.until >= today ? sponsor : null;
+const tool = s?.slug ? tools.find((x) => x.slug === s.slug) : undefined;
+const name = tool?.name ?? s?.name;
+const text = s?.text?.[lang] ?? (tool ? toolDesc(tool, lang) : "");
+const link = tool ? href(lang, "tools/" + tool.slug) : s?.url;
+---
+{s && name && link && (
+  <section class="band sponsor" aria-label={t.spLabel} data-until={s.until}>
+    <a class="spn" href={link} rel={tool ? undefined : "sponsored noopener"}>
+      <span class="spn-tag">{t.spLabel}</span>
+      <b class="spn-name"><bdi>{name}</bdi></b>
+      <span class="spn-text" set:html={txt(text, lang)} />
+      <span class="spn-go">{t.spCta}<Icon name={fwdIcon(lang)} /></span>
+    </a>
+  </section>
+)}

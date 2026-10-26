@@ -66,6 +66,28 @@ if ("newsletter" in meta) {
   if ("hidden" in n && !(n.hidden && typeof n.hidden === "object" && !Array.isArray(n.hidden) && Object.values(n.hidden).every((v) => typeof v === "string")))
     problems.push("newsletter.hidden في meta.json: كائن قيمه نصوص، مثل { \"locale\": \"{lang}\" }");
 }
+if ("verify" in meta) {
+  const v = meta.verify ?? {};
+  for (const [k, val] of Object.entries(v)) {
+    if (!["google", "bing"].includes(k)) problems.push(`حقل غير معروف verify.${k} في meta.json (المعروف: google، bing)`);
+    else if (!/^[\w-]{8,100}$/.test(val || "")) problems.push(`verify.${k} في meta.json: قيمة content وحدها من وسم التحقق، بلا علامات اقتباس ولا وسم`);
+  }
+}
+if ("sponsor" in meta) {
+  const sp = meta.sponsor ?? {};
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(sp.until || "")) problems.push("sponsor.until في meta.json: تاريخ انتهاء الإعلان بالصيغة 2026-12-31");
+  if (sp.slug) { if (!slugs.has(sp.slug)) problems.push(`sponsor.slug في meta.json: لا أداة بهذا الاسم (${sp.slug})`); }
+  else {
+    if (!str(sp.name)) problems.push("sponsor.name ناقص في meta.json (أو ضع slug لأداة من الدليل)");
+    if (!/^https:\/\/\S+$/.test(sp.url || "")) problems.push("sponsor.url في meta.json: رابط https");
+    if (!sp.text) problems.push("sponsor.text ناقص في meta.json: { ar, de, en }");
+  }
+  if (sp.text) {
+    if (!sp.text.ar || !AR.test(sp.text.ar)) problems.push("sponsor.text.ar ناقص في meta.json");
+    for (const lang of Object.keys(TR)) need(sp.text[lang], lang, `sponsor.text.${lang} في meta.json`);
+    for (const [k, v] of Object.entries(sp.text)) if (typeof v === "string" && v.length > 140) problems.push(`sponsor.text.${k} أطول من 140 حرفًا`);
+  }
+}
 // تحذير لا يفشل الفحص: بيانات GitHub (التاريخ والرخصة) تملؤها update-stars.mjs
 const noMeta = tools.filter((t) => t.gh && (!t.pushed || t.license === undefined));
 if (noMeta.length) console.warn(`تحذير: ${noMeta.length} أداة بلا تاريخ تحديث أو رخصة (شارات الحالة لن تظهر لها). شغّل update-stars.`);

@@ -107,3 +107,8 @@ if (footCols.length) {
     if (!narrow.matches && e.target.closest(".foot-col > summary")) e.preventDefault();
   });
 }
+
+// الإعلان (src/components/Sponsor.astro) ينتهي بنهاية يوم until: يُخفى للزائر حتى لو لم يُبنَ الموقع من جديد بعد
+for (const el of document.querySelectorAll("[data-until]")) {
+  if (Date.now() > new Date(el.dataset.until + "T23:59:59").getTime()) el.hidden = true;
+}

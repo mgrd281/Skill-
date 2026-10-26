@@ -53,6 +53,13 @@ export interface Operator {
   responsible?: string; // المسؤول عن المحتوى (§ 18 Abs. 2 MStV): شخص، وبدونه الممثل ثم الاسم
 }
 export const operator: Operator | null = (meta as any).operator ?? null;
+// وسوم التحقق من ملكية الموقع لأدوات مشرفي المواقع: في data/meta.json حقل "verify": { "google": "…", "bing": "…" }
+// (القيمة فقط، من content في الوسم الذي تعطيه Google Search Console أو Bing Webmaster Tools). تظهر في الصفحات الرئيسية الثلاث.
+export const verify: { google?: string; bing?: string } = (meta as any).verify ?? {};
+// الراعي (src/components/Sponsor.astro): إعلان واحد في الرئيسية حتى تاريخ until. إما أداة من الدليل (slug)،
+// أو منتج خارجي (name وurl وtext بثلاث لغات). text اختياري مع slug (وإلا وصف الأداة). يفحصه scripts/check-data.mjs.
+export interface Sponsor { slug?: string; name?: string; url?: string; text?: Record<"ar" | "de" | "en", string>; until: string }
+export const sponsor: Sponsor | null = (meta as any).sponsor ?? null;
 // النشرة البريدية (src/components/Newsletter.astro): مزوّد يدير القائمة والتأكيد المزدوج، والنموذج يرسل إليه مباشرة.
 // في data/meta.json: "newsletter": { "provider": "Brevo", "action": "رابط نموذج الاشتراك عند المزوّد", "field": "EMAIL",
 // "hidden": { "locale": "{lang}" } }. hidden حقول مخفية يطلبها المزوّد، و{lang} فيها تصير لغة الصفحة (ar أو de أو en).

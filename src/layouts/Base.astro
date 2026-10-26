@@ -26,7 +26,7 @@ import sansAr700 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arab
 import sansLat400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-latin-400-normal.woff2?url";
 import sansLat700 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-latin-700-normal.woff2?url";
 import { type Lang, LANGS, DEFAULT_LANG, dirOf, LANG_NAME, OG_LOCALE, href, fwdIcon, t as dict } from "../i18n";
-import { tools, categories, catName, txt, operator } from "../lib/data";
+import { tools, categories, catName, txt, operator, verify } from "../lib/data";
 
 // path: مسار الصفحة بدون بادئة اللغة ("/" أو "/tools/x"). كل صفحة موجودة بالعربية والألمانية.
 // switchPath: وجهة زر اللغة إن اختلفت عن path (صفحة 404 تفتح الرئيسية باللغة الأخرى)
@@ -71,6 +71,8 @@ useIcon(Astro.locals, "check", "bold");
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex" />}
+    {path === "/" && verify.google && <meta name="google-site-verification" content={verify.google} />}
+    {path === "/" && verify.bing && <meta name="msvalidate.01" content={verify.bing} />}
     {!noindex && LANGS.map((l) => <link rel="alternate" hreflang={l} href={abs(l)} />)}
     {!noindex && <link rel="alternate" hreflang="x-default" href={abs(DEFAULT_LANG)} />}
     <!-- الأيقونات: SVG للمتصفحات الحديثة، وICO (16/32/48) لغيرها ولمحركات البحث التي تطلب /favicon.ico، وPNG لـ iOS. تُولَّد بـ npm run brand -->
