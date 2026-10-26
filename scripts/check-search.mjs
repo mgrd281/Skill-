@@ -6,7 +6,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import { norm, words, rawWords, terms, score, makeDoc, suggest, makeVocab, translitWords } from "../src/lib/search.js";
 import { shellWords, mcpServer, mcpClients, kitPlan } from "../src/lib/install.js";
-import { sameSite, parseSuggest, parseMiss, KINDS } from "../api/_feedback.js";
+import { sameSite, parseSuggest, parseMiss, parseFinder, KINDS } from "../api/_feedback.js";
 import { weekKey, topOf, redis } from "../api/_counter.js";
 
 const tools = JSON.parse(fs.readFileSync(new URL("../data/tools.json", import.meta.url), "utf8"));
@@ -116,7 +116,12 @@ check("اقتراح أداة والبحث بلا نتيجة", () => {
     { queries: ["figma motion", "x".repeat(100)], lang: "en", path: "/en/" });
   assert.equal(parseMiss({ queries: [] }).error, "no queries");
   assert.equal(parseMiss({ queries: Array.from({ length: 9 }, (_, i) => "q" + i) }).value.queries.length, 5);
-  assert.deepEqual(Object.values(KINDS).map(([, folder]) => folder), ["feedback", "reports", "suggestions", "misses"]);
+  assert.deepEqual(parseFinder({ kind: "finder", need: "design", project: "web", type: "skill", from: "nudge", lang: "de", path: "/de/" }).value,
+    { need: "design", project: "web", type: "skill", from: "nudge", lang: "de", path: "/de/" });
+  assert.equal(parseFinder({ need: "design", project: "web", type: "skill", from: "x" }).value.from, "page");
+  assert.equal(parseFinder({ need: "Design!", project: "web", type: "skill" }).error, "bad answers");
+  assert.equal(parseFinder({ need: "design", project: "web" }).error, "bad answers");
+  assert.deepEqual(Object.values(KINDS).map(([, folder]) => folder), ["feedback", "reports", "suggestions", "misses", "finder"]);
 });
 
 check("عدّاد «الأكثر نسخًا»", () => {

@@ -1,6 +1,6 @@
 // يستقبل تقييم الزائر من نافذة "رأيك"، والإبلاغ عن مشكلة في أداة (kind: "report")، واقتراح أداة (kind: "suggest")،
-// وعمليات البحث التي لم تجد نتيجة (kind: "miss")، ويحفظها في Vercel Blob (مخزن خاص، لا يُقرأ إلا من لوحة Vercel
-// أو بـ npm run inbox): في feedback/ وreports/ وsuggestions/ وmisses/.
+// وعمليات البحث التي لم تجد نتيجة (kind: "miss")، وإجابات «ساعدني أختار» (kind: "finder")، ويحفظها في Vercel Blob
+// (مخزن خاص، لا يُقرأ إلا من لوحة Vercel أو بـ npm run inbox): في feedback/ وreports/ وsuggestions/ وmisses/ وfinder/.
 // يحتاج متغير البيئة BLOB_READ_WRITE_TOKEN، ويضيفه Vercel تلقائيًا عند ربط مخزن Blob بالمشروع.
 import { put } from "@vercel/blob";
 import { KINDS, sameSite } from "./_feedback.js";

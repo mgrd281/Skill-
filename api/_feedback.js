@@ -60,10 +60,22 @@ export function parseMiss(body) {
   return { value: { queries, lang, path } };
 }
 
+// «ساعدني أختار» (src/scripts/finder-app.js): الإجابات الثلاث بلا هوية حين يصل الزائر إلى النتائج، لنعرف ما يهتم به الزوار.
+// need الاهتمام وproject المشروع وtype شكل الأداة (any = لا تفضيل)، وfrom من أين فُتحت: النافذة الصغيرة أو زر في الصفحة أو رابط مشاركة
+const ANSWER = /^[a-z]{2,12}$/;
+const FROM = ["nudge", "page", "link"];
+export function parseFinder(body) {
+  if (!body || typeof body !== "object") return { error: "bad body" };
+  if (![body.need, body.project, body.type].every((v) => typeof v === "string" && ANSWER.test(v))) return { error: "bad answers" };
+  const { lang, path } = common(body);
+  return { value: { need: body.need, project: body.project, type: body.type, from: FROM.includes(body.from) ? body.from : "page", lang, path } };
+}
+
 // نوع الرسالة ← دالة التحقق ومجلد الحفظ في المخزن
 export const KINDS = {
   feedback: [parseFeedback, "feedback"],
   report: [parseReport, "reports"],
   suggest: [parseSuggest, "suggestions"],
   miss: [parseMiss, "misses"],
+  finder: [parseFinder, "finder"],
 };

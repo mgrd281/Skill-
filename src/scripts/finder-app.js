@@ -1,7 +1,8 @@
 // «ساعدني أختار» (src/views/FinderFragment.astro): الأسئلة الثلاثة والنتائج. يحمّله src/scripts/finder.js عند الحاجة
 // مع النافذة نفسها، والبيانات من /finder.json (src/lib/finder.ts) عند فتحها.
 // الترتيب: ماذا تبني شرط (إلا «أستكشف فقط»)، ثم ما يطابق الاهتمام والشكل معًا، ثم الاهتمام وحده، ثم الشكل وحده،
-// وداخل كل درجة الجودة q و«ابدأ بهذه» للمشروع المختار. الإجابات تُحفظ في toolkit-finder-v1 فيعود الزائر إلى نتيجته.
+// وداخل كل درجة الجودة q و«ابدأ بهذه» للمشروع المختار. الإجابات تُحفظ في toolkit-finder-v1 فيعود الزائر إلى نتيجته،
+// وتُعدّ بلا هوية حين يصل إلى النتائج (api/feedback بنوع finder، ويلخّصها npm run inbox).
 import { L, LANG, fmt, homePath } from "../i18n/client.js";
 import { addFavs, getFavs } from "./fav.js";
 
@@ -48,6 +49,9 @@ function loadData() {
 // الإجابات: null لم يُجب بعد، و"any" لا تفضيل
 const A = { need: null, project: null, kind: null };
 let step = null, editing = false, back = null, timer = null, res = null, shown = FIRST, drawing = 0;
+// fresh: إجابات جديدة لم تُعدّ بعد (لا تُعدّ النتيجة المحفوظة حين يعيد الزائر فتحها)، وfrom: من أين فُتحت
+let fresh = false, from = "page";
+const counted = new Set();
 
 const optsOf = (s) => [...dlg.querySelectorAll(`.fd-q[data-step="${s}"] .fd-o`)];
 const optOf = (s, v) => optsOf(s).find((o) => o.dataset.v === v) || null;
@@ -108,25 +112,25 @@ function wire() {
   $("fd-more").addEventListener("click", more);
   $("fd-save").addEventListener("click", save);
   $("fd-share").addEventListener("click", share);
-  // النافذة الصغيرة: الشريحة تفتح النافذة الكاملة على السؤال الثاني
+  // النافذة الصغيرة: البلاطة تفتح النافذة الكاملة على السؤال الثاني
   card.addEventListener("click", (e) => {
-    const c = e.target instanceof Element ? e.target.closest(".fn-c") : null;
+    const c = e.target instanceof Element ? e.target.closest("[data-v]") : null;
     if (c) open({ need: c.dataset.v });
   });
   const later = () => { hideNudge(); write(KEY, { state: "dismissed", at: Date.now() }); };
   $("fn-x").addEventListener("click", later);
-  $("fn-later").addEventListener("click", later);
   card.addEventListener("keydown", (e) => { if (e.key === "Escape") later(); });
 }
 
 // opts: opener الزر الذي فتحها (يعود إليه التركيز)، answers إجابات من رابط مشاركة، need إجابة السؤال الأول من النافذة الصغيرة
 function open(opts = {}) {
   back = opts.opener || null;
+  from = opts.need ? "nudge" : opts.answers ? "link" : "page";
   hideNudge();
   loadData().catch(() => {});
   let to = "need";
   const saved = read(KEY);
-  if (valid(opts.answers)) { set(opts.answers); to = "res"; }
+  if (valid(opts.answers)) { set(opts.answers); to = "res"; fresh = true; }
   else if (opts.need && optOf("need", opts.need)) { reset(); A.need = opts.need; press("need"); to = "project"; }
   else if (valid(A)) to = "res";
   else if (saved && valid(saved.a)) { set(saved.a); to = "res"; }
@@ -163,7 +167,7 @@ function choose(o) {
   press(s);
   o.focus({ preventScroll: true });
   const next = editing || s === ORDER[ORDER.length - 1] ? "res" : ORDER[ORDER.indexOf(s) + 1];
-  if (next === "res") editing = false;
+  if (next === "res") { editing = false; fresh = true; }
   clearTimeout(timer);
   // لحظة قصيرة ليرى الزائر اختياره قبل الانتقال
   timer = setTimeout(() => go(next, 1), reduce ? 0 : 300);
@@ -218,8 +222,9 @@ async function go(next, dir = 1, first = false) {
   const i = ORDER.indexOf(next);
   const done = i < 0 ? ORDER.length : i + 1;
   $("fd-prog").querySelectorAll("li").forEach((li, k) => li.classList.toggle("on", k < done));
-  $("fd-n").textContent = i < 0 ? "" : `${i + 1}/${ORDER.length}`;
-  $("fd-back").classList.toggle("off", i === 0);
+  // البوصلة في السؤال الأول، وزر الرجوع مكانها في غيره
+  $("fd-back").hidden = i === 0;
+  $("fd-mark").hidden = i !== 0;
   dlg.setAttribute("aria-labelledby", `fd-${next}-h`);
   // أزرار النتائج تظهر مع النتائج نفسها (results)
   $("fd-foot").hidden = true;
@@ -283,6 +288,16 @@ async function results() {
   $("fd-foot").hidden = !res.list.length;
   draw(0);
   write(KEY, { state: "done", at: Date.now(), a: { ...A } });
+  if (fresh) { fresh = false; count(); }
+}
+
+// عدّ الإجابات بلا هوية: الإجابات الثلاث ومن أين فُتحت ولغة الصفحة وعنوانها فقط، مرة لكل مجموعة إجابات في الصفحة
+function count() {
+  const key = ORDER.map((s) => A[s]).join(".");
+  if (counted.has(key) || !navigator.sendBeacon) return;
+  counted.add(key);
+  const body = JSON.stringify({ kind: "finder", need: A.need, project: A.project, type: A.kind, from, lang: LANG, path: location.pathname });
+  try { navigator.sendBeacon(BASE + "api/feedback", new Blob([body], { type: "application/json" })); } catch (e) {}
 }
 
 function row(r, i, k) {

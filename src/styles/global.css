@@ -1382,26 +1382,72 @@ button.link-more { border: 0; background: none; padding: 0; font: inherit; font-
 .fd-cta-t b { font-size: 1.05rem; font-weight: 700; }
 .fd-cta-t span { color: var(--muted); font-size: .92rem; }
 
-/* النافذة الصغيرة: مثل نافذة الرأي (.fb) في مكانها وحركتها، وتسأل أول سؤال بشرائح */
+/* النافذة الصغيرة: بطاقة عائمة داكنة (سطح معكوس مثل الإشعار القصير .toast: --ink خلفية و--bg نص)، وفي الوضع الداكن
+   بلون البطاقة بحد رفيع. مكانها مكان نافذة الرأي، وتسأل أول سؤال ببلاطات. ألوانها كلها من --fn-fg بشفافيات مختلفة */
 body.fn-open .totop { opacity: 0; pointer-events: none; }
-.fn-ic { width: 40px; height: 40px; border-radius: 12px; }
-.fn-ic .i { width: 24px; height: 24px; }
-.fn-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-.fn-c {
-  display: inline-flex; align-items: center; gap: 7px; min-height: 40px; padding: 0 14px; border: 0; border-radius: var(--r-full);
-  background: var(--fill-2); color: var(--ink); font: 500 .9rem var(--font); cursor: pointer;
-  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease), scale var(--dur-fast) var(--ease);
-  animation: fd-pop 420ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 30ms + 240ms);
+.fn {
+  --fn-bg: var(--ink); --fn-fg: var(--bg); --fn-soft: color-mix(in srgb, var(--fn-fg) 66%, transparent);
+  position: fixed; z-index: 65; right: 20px; bottom: 20px; width: min(360px, calc(100vw - 32px)); padding: 16px;
+  border: 1px solid color-mix(in srgb, var(--fn-fg) 10%, transparent); border-radius: 26px;
+  background: var(--fn-bg); color: var(--fn-fg);
+  animation: fn-in 640ms var(--spring) both;
 }
-.fn-c .i { width: 17px; height: 17px; }
-.fn-c:hover { background: var(--btn); color: #fff; }
-.fn-c:active { scale: .96; }
-.fn-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; }
-.fn-meta { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: .78rem; }
-.fn-dots { display: inline-flex; gap: 3px; }
-.fn-dots i { width: 14px; height: 4px; border-radius: 2px; background: var(--fill); }
-.fn-dots i:first-child { background: var(--ink); }
-#fn-later { min-height: 36px; padding: 0 2px; font-size: .86rem; }
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .fn { background: color-mix(in srgb, var(--fn-bg) 95%, transparent); -webkit-backdrop-filter: saturate(1.6) blur(24px); backdrop-filter: saturate(1.6) blur(24px); }
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .fn { --fn-bg: var(--card); --fn-fg: var(--ink); } }
+:root[data-theme="dark"] .fn { --fn-bg: var(--card); --fn-fg: var(--ink); }
+.fn.leaving { animation: fn-out 240ms var(--ease) both; }
+@keyframes fn-in { from { opacity: 0; transform: translateY(24px) scale(.96); } }
+@keyframes fn-out { to { opacity: 0; transform: translateY(16px) scale(.98); } }
+.fn :focus-visible { outline-color: var(--fn-soft); }
+.fn-top { display: flex; align-items: center; gap: 10px; }
+.fn-ic { width: 30px; height: 30px; border-radius: 9px; }
+.fn-ic .i { width: 19px; height: 19px; animation: fn-spin 900ms var(--spring) 240ms both; }
+@keyframes fn-spin { from { opacity: 0; transform: rotate(-120deg) scale(.6); } }
+.fn-name { flex: 1; min-width: 0; color: var(--fn-soft); font-size: .8rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* ثلاث خطوات، والأولى تمتلئ بجهة القراءة */
+.fn-steps { display: flex; gap: 4px; }
+.fn-steps i { width: 16px; height: 4px; border-radius: 2px; overflow: hidden; background: color-mix(in srgb, var(--fn-fg) 20%, transparent); }
+.fn-steps i:first-child::after { content: ""; display: block; height: 100%; background: var(--fn-fg); transform-origin: var(--start); animation: fn-fill 700ms var(--ease-out) 520ms both; }
+@keyframes fn-fill { from { transform: scaleX(0); } }
+.fn-x {
+  width: 28px; height: 28px; flex: none; display: grid; place-items: center; border: 0; border-radius: var(--r-full); cursor: pointer;
+  background: color-mix(in srgb, var(--fn-fg) 10%, transparent); color: var(--fn-soft);
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease), rotate var(--dur) var(--ease);
+}
+.fn-x:hover { background: color-mix(in srgb, var(--fn-fg) 17%, transparent); color: var(--fn-fg); rotate: 90deg; }
+.fn-x .i { width: 12px; height: 12px; }
+.fn-h { margin: 16px 0 2px; font-size: 1.3rem; font-weight: 700; line-height: 1.25; }
+.fn-sub { margin: 0; color: var(--fn-soft); font-size: .86rem; line-height: 1.45; }
+.fn-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
+.fn-t {
+  display: flex; align-items: center; gap: 10px; min-width: 0; min-height: 48px; padding: 0 12px;
+  border: 1px solid color-mix(in srgb, var(--fn-fg) 9%, transparent); border-radius: 14px;
+  background: color-mix(in srgb, var(--fn-fg) 7%, transparent); color: var(--fn-fg);
+  font: 600 .88rem var(--font); text-align: start; cursor: pointer;
+  transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease), translate var(--dur) var(--ease), scale var(--dur-fast) var(--ease);
+  animation: fd-pop 460ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 35ms + 220ms);
+}
+.fn-t .i { width: 21px; height: 21px; flex: none; }
+.fn-t span { min-width: 0; overflow-wrap: break-word; line-height: 1.3; }
+@media (hover: hover) {
+  .fn-t:hover { background: color-mix(in srgb, var(--fn-fg) 13%, transparent); border-color: color-mix(in srgb, var(--fn-fg) 20%, transparent); translate: 0 -2px; }
+}
+.fn-t:active { scale: .96; }
+/* «كل شيء»: سطر خفيف تحت البلاطات، بسهم «التالي» */
+.fn-all {
+  display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; min-height: 40px; margin-top: 8px; padding: 0 12px;
+  border: 0; border-radius: 12px; background: none; color: var(--fn-soft); font: 500 .86rem var(--font); cursor: pointer;
+  transition: color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+  animation: fd-pop 460ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 35ms + 220ms);
+}
+.fn-all .i { width: 15px; height: 15px; transition: translate var(--dur) var(--ease); }
+.fn-all:hover { color: var(--fn-fg); background: color-mix(in srgb, var(--fn-fg) 7%, transparent); }
+.fn-all:hover .i { translate: calc(var(--fwd) * 3px) 0; }
+@media (max-width: 600px) {
+  .fn { right: 10px; left: 10px; bottom: calc(10px + env(safe-area-inset-bottom, 0px)); width: auto; border-radius: 24px; }
+}
 
 /* النافذة: شريط علوي (رجوع، تقدم من ثلاث خطوات، إغلاق)، ثم سؤال واحد كل مرة، ثم النتائج وأزرارها.
    ارتفاعها ثابت فلا تقفز بين الأسئلة، والمحتوى يتمرر داخلها */
@@ -1421,29 +1467,33 @@ body.fn-open .totop { opacity: 0; pointer-events: none; }
 .fd-wait[open] { display: grid; }
 .fd-wait .qs-x { position: absolute; top: 14px; inset-inline-end: 16px; }
 .fd-wait-t { margin: 0; padding: 24px; color: var(--muted); text-align: center; }
-.fd-top { display: flex; align-items: center; gap: 14px; padding: 14px 16px 6px; }
+.fd-top { display: flex; align-items: center; gap: 10px; padding: 16px 16px 4px; padding-inline-start: 18px; }
+.fd-mark, .fd-back { width: 32px; height: 32px; flex: none; display: grid; place-items: center; }
+.fd-mark { border-radius: 10px; background: var(--btn); color: var(--on-accent); }
+.fd-mark .i { width: 20px; height: 20px; }
 .fd-back {
-  width: 36px; height: 36px; flex: none; display: grid; place-items: center; border: 0; border-radius: var(--r-full);
-  background: var(--fill-2); color: var(--ink); cursor: pointer; transition: background-color var(--dur) var(--ease), opacity var(--dur) var(--ease);
+  border: 0; border-radius: var(--r-full); background: var(--fill-2); color: var(--ink); cursor: pointer;
+  transition: background-color var(--dur) var(--ease), translate var(--dur) var(--ease);
 }
-.fd-back:hover { background: var(--fill); }
-.fd-back .i { width: 18px; height: 18px; }
-.fd-back.off { visibility: hidden; opacity: 0; }
-.fd-prog { flex: 1; display: flex; gap: 6px; margin: 0; padding: 0; list-style: none; }
-.fd-prog li { flex: 1; height: 4px; border-radius: 2px; background: var(--fill); overflow: hidden; }
+.fd-back:hover { background: var(--fill); translate: calc(var(--fwd) * -2px) 0; }
+.fd-back .i { width: 17px; height: 17px; }
+.fd-name { flex: 1; min-width: 0; color: var(--muted); font-size: .84rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* ثلاث خطوات، تمتلئ بجهة القراءة */
+.fd-prog { display: flex; gap: 5px; margin: 0 4px; padding: 0; list-style: none; }
+.fd-prog li { width: 28px; height: 5px; border-radius: 3px; background: var(--fill); overflow: hidden; }
 .fd-prog li::after {
   content: ""; display: block; height: 100%; background: var(--ink);
   transform: scaleX(0); transform-origin: var(--start); transition: transform 560ms var(--ease-out);
 }
 .fd-prog li.on::after { transform: none; }
-.fd-n { min-width: 2.4em; text-align: center; color: var(--muted); font-size: .8rem; font-weight: 600; font-variant-numeric: tabular-nums; direction: ltr; }
 .fd-body { flex: 1; min-height: 0; display: flex; flex-direction: column; overflow: auto; overscroll-behavior: contain; padding: 10px 28px 28px; scrollbar-width: thin; }
 .fd-q { display: grid; align-content: start; }
 /* على الشاشات الواسعة يتوسط السؤال ارتفاع النافذة (margin auto لا يقص المحتوى الطويل كما يفعل justify-content) */
 @media (min-width: 561px) { .fd-q:not(.fd-res) { margin-block: auto; } }
 .fd-q.enter { animation: fd-in 380ms var(--ease-out) both; }
 .fd-q.enter.back { animation-name: fd-in-back; }
-.fd-h { margin: 6px 0; font-size: clamp(1.45rem, 3.4vw, 1.85rem); font-weight: 700; line-height: 1.25; outline: none; }
+.fd-step { margin: 0; color: var(--muted); font-size: .82rem; font-weight: 600; }
+.fd-h { margin: 4px 0 6px; font-size: clamp(1.5rem, 3.6vw, 2rem); font-weight: 700; line-height: 1.2; outline: none; }
 .fd-sub { margin: 0 0 22px; color: var(--muted); font-size: .98rem; line-height: 1.5; }
 
 /* الخيارات: صفوف بأيقونة وسطر شرح، أو بلاطات للمشاريع. المختار بخلفية --ink وعلامة ✓ */
@@ -1528,7 +1578,7 @@ body.fn-open .totop { opacity: 0; pointer-events: none; }
 #fd-favs { animation: pop-in var(--dur-slow) var(--spring); }
 @media (max-width: 560px) {
   .fd { width: calc(100vw - 16px); height: calc(100dvh - 16px); margin-top: 8px; border-radius: var(--r-lg); }
-  .fd-top { padding: 12px 12px 4px; }
+  .fd-top { padding: 14px 12px 4px; padding-inline-start: 14px; }
   .fd-body { padding: 6px 18px 22px; }
   .fd-sub { margin-bottom: 18px; }
   .fd-opts.rows { grid-template-columns: minmax(0, 1fr); }
@@ -1558,7 +1608,7 @@ body.fn-open .totop { opacity: 0; pointer-events: none; }
   html[lang="de"] :is(.desc, .advice p, .p-note, .specs dd, .foot-notes p) { hyphens: auto; -webkit-hyphens: auto; }
 }
 /* تتبع أحرف خفيف للعناوين اللاتينية الكبيرة كما في عناوين Apple (ممنوع على العربية). الإنجليزية لا تحتاج تقسيم مقاطع كالألمانية */
-html:is([lang="de"], [lang="en"]) :is(.hero h1, .page-hero h1, .p-hero h1, .sec-title, .stats dd) { letter-spacing: -0.015em; }
+html:is([lang="de"], [lang="en"]) :is(.hero h1, .page-hero h1, .p-hero h1, .sec-title, .stats dd, .fd-h, .fn-h) { letter-spacing: -0.015em; }
 html[lang="de"] .hero h1 { max-width: 17ch; }
 
 @media (prefers-reduced-motion: reduce) {

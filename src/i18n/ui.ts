@@ -312,8 +312,7 @@ const ar = {
   fdShare: "شارك النتيجة",
   fdShareCopied: "تم نسخ رابط النتيجة",
   fdNoneFound: "لم نجد أدوات لهذه الإجابات. غيّر إجابة أو ابدأ من جديد.",
-  fnSub: "اختر، وبعد سؤالين آخرين نرشّح لك الأدوات المناسبة.",
-  fnMeta: "3 أسئلة · أقل من دقيقة",
+  fnSub: "ثلاثة أسئلة سريعة، ثم أنسب الأدوات لك.",
   fnLater: "ليس الآن",
 };
 
@@ -623,8 +622,7 @@ const de: Dict = {
   fdShare: "Ergebnis teilen",
   fdShareCopied: "Link zum Ergebnis kopiert",
   fdNoneFound: "Für diese Antworten haben wir keine Tools gefunden. Ändere eine Antwort oder starte neu.",
-  fnSub: "Wähle aus – nach zwei weiteren Fragen empfehlen wir dir passende Tools.",
-  fnMeta: "3 Fragen · unter einer Minute",
+  fnSub: "Drei kurze Fragen, dann deine passenden Tools.",
   fnLater: "Nicht jetzt",
 };
 
@@ -932,8 +930,7 @@ const en: Dict = {
   fdShare: "Share results",
   fdShareCopied: "Results link copied",
   fdNoneFound: "We couldn't find tools for these answers. Change an answer or start over.",
-  fnSub: "Pick one, and after two more questions we'll recommend the right tools.",
-  fnMeta: "3 questions · under a minute",
+  fnSub: "Three quick questions, then your best tools.",
   fnLater: "Not now",
 };
 
