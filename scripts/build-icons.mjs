@@ -21,7 +21,7 @@ const NAMES = [
   "windows-logo", "android-logo", "linux-logo", "device-mobile-camera", "apple-logo",
 ];
 // أوزان إضافية لحالات محددة: الممتلئ للحالة المفعّلة، والعريض لعلامات التأكيد الصغيرة.
-const EXTRA = { fill: ["star", "heart"], bold: ["check", "x"] };
+const EXTRA = { fill: ["star", "heart", "seal-check"], bold: ["check", "x"] };
 
 const pkg = new URL("../node_modules/@phosphor-icons/core/", import.meta.url);
 const root = path.join(pkg.pathname, "assets");

@@ -89,6 +89,20 @@ if ("sponsor" in meta) {
     for (const [k, v] of Object.entries(sp.text)) if (typeof v === "string" && v.length > 140) problems.push(`sponsor.text.${k} أطول من 140 حرفًا`);
   }
 }
+// «ننصح به» (data/picks.json): حتى ثلاث أدوات لكل قسم، من القسم نفسه، غير مؤرشفة، ولكل واحدة غرضها بثلاث لغات
+const picksData = read("picks.json"), bySlug = new Map(tools.map((t) => [t.slug, t]));
+for (const [cat, list] of Object.entries(picksData)) {
+  if (!catIds.has(cat)) problems.push(`قسم غير معروف في picks.json: ${cat}`);
+  if (list.length > 3) problems.push(`أكثر من ثلاث توصيات في القسم ${cat}`);
+  for (const p of list) {
+    const t = bySlug.get(p.slug);
+    if (!t) { problems.push(`توصية لأداة غير موجودة: ${p.slug}`); continue; }
+    if (t.cat !== cat) problems.push(`التوصية ${p.slug} ليست من القسم ${cat}`);
+    if (t.archived) problems.push(`التوصية ${p.slug} مؤرشفة: اختر غيرها في picks.json`);
+    if (!AR.test(p.for || "")) problems.push(`غرض عربي ناقص للتوصية ${p.slug}`);
+    for (const lang of Object.keys(TR)) need(p[`for_${lang}`], lang, `for_${lang} للتوصية ${p.slug}`);
+  }
+}
 // قوائم «الأفضل» (data/lists.json، src/lib/lists.ts): أقسام وأنواع معروفة، وترجمات، وخمس أدوات على الأقل
 const bestLists = read("lists.json"), listIds = new Set();
 for (const l of bestLists) {

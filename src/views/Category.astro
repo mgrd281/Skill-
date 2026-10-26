@@ -4,7 +4,7 @@
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
 import Icon from "../components/Icon.astro";
-import { type Category, tools, categories, catName, categoryIcon, isAppCat, txt } from "../lib/data";
+import { type Category, tools, categories, catName, categoryIcon, isAppCat, txt, picksOf, initials, appIcon, toolDesc } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
 import { listsForCat, listTitle } from "../lib/lists";
 interface Props { cat: Category; lang: Lang }
@@ -12,6 +12,9 @@ const { cat: c, lang } = Astro.props;
 const t = dict(lang);
 const name = catName(c.id, lang);
 const list = tools.filter((x) => x.cat === c.id).sort((a, b) => b.starsN - a.starsN || a.order - b.order);
+// «ننصح بها»: اختيارات القسم بترتيبها في data/picks.json
+const recs = picksOf(c.id).map((p) => ({ p, x: list.find((y) => y.slug === p.slug)! })).filter((r) => r.x);
+const recFor = (p: { for: string; for_de: string; for_en: string }) => t.recShort(lang === "ar" ? p.for : lang === "de" ? p.for_de : p.for_en);
 const others = categories.filter((o) => o.id !== c.id);
 const count = (id: string) => tools.filter((x) => x.cat === id).length;
 // أقسام «تطبيقات جاهزة» وصفها عن التطبيقات (رابط التنزيل أو أمر التثبيت)
@@ -45,6 +48,26 @@ const jsonLd = [
       <a class="best-link" href={href(lang, "best/" + l.id)}><Icon name="star" weight="fill" /><span set:html={txt(listTitle(l, lang), lang)} /><Icon name={fwdIcon(lang)} /></a>
     ))}
   </header>
+
+  {recs.length > 0 && (
+    <section class="band recs" aria-labelledby="rec-h">
+      <h2 class="sec-title" id="rec-h" set:html={t.recTitle_h} />
+      <div class="rec-grid">
+        {recs.map(({ p, x }) => (
+          <a class="rec" href={href(lang, "tools/" + x.slug)}>
+            {appIcon(x.slug) ? <span class="mono has-img" aria-hidden="true"><img src={appIcon(x.slug)} alt="" width="48" height="48" loading="lazy" decoding="async" /></span> : <span class="mono" aria-hidden="true">{initials(x.name)}</span>}
+            <span class="rec-t">
+              <b>{x.name}</b>
+              <span class="rec-for"><Icon name="seal-check" weight="fill" /><span set:html={txt(recFor(p), lang)} /></span>
+              <small set:html={txt(toolDesc(x, lang), lang)} />
+            </span>
+            {x.stars && <span class="stars"><Icon name="star" weight="fill" />{x.stars}</span>}
+          </a>
+        ))}
+      </div>
+      <p class="rec-note">{t.recNote}</p>
+    </section>
+  )}
 
   <main class="band alt">
     <div class="grid">

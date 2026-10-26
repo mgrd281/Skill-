@@ -10,6 +10,6 @@ const kinds = [...new Set(tools.map((x) => kindIcon(x.kind)))];
 ---
 <template id="card-icons">
   {kinds.map((k) => <Icon name={k} />)}
-  <Icon name="star" weight="fill" /><Icon name="clock" /><Icon name="heart" /><Icon name="heart" weight="fill" /><Icon name="eye-slash" />
+  <Icon name="star" weight="fill" /><Icon name="seal-check" weight="fill" /><Icon name="clock" /><Icon name="heart" /><Icon name="heart" weight="fill" /><Icon name="eye-slash" />
   <Icon name="copy" /><Icon name="check" weight="bold" /><Icon name="github-logo" /><Icon name="globe" /><Icon name={fwdIcon(lang)} />
 </template>

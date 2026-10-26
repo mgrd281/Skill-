@@ -1,0 +1,582 @@
+{
+  "design": [
+    {
+      "slug": "frontend-design",
+      "for": "لواجهات مميزة من أول مرة",
+      "for_de": "markante Oberflächen auf Anhieb",
+      "for_en": "distinctive interfaces from the start"
+    },
+    {
+      "slug": "ui-ux-pro-max",
+      "for": "لنظام تصميم كامل لمشروعك",
+      "for_de": "ein komplettes Designsystem",
+      "for_en": "a complete design system"
+    },
+    {
+      "slug": "impeccable",
+      "for": "لمراجعة التصميم وتلميعه",
+      "for_de": "Design-Reviews und Feinschliff",
+      "for_en": "reviewing and polishing a design"
+    }
+  ],
+  "brandskills": [
+    {
+      "slug": "brand-guidelines-template",
+      "for": "لتطبيق ألوانك وخطوطك تلقائيًا",
+      "for_de": "deine Farben und Schriften, automatisch",
+      "for_en": "your colors and fonts, automatically"
+    },
+    {
+      "slug": "design-md",
+      "for": "لشرح هويتك للذكاء الاصطناعي في ملف واحد",
+      "for_de": "deine Marke in einer Datei für die KI",
+      "for_en": "describing your brand to the AI in one file"
+    },
+    {
+      "slug": "dembrandt",
+      "for": "لاستخراج هوية موقعك الحالي",
+      "for_de": "das Auslesen deiner bestehenden Marke",
+      "for_en": "pulling the brand from your current site"
+    }
+  ],
+  "animation": [
+    {
+      "slug": "motion",
+      "for": "لحركة React وJavaScript",
+      "for_de": "Animation in React und JavaScript",
+      "for_en": "React and JavaScript motion"
+    },
+    {
+      "slug": "gsap",
+      "for": "للحركة المتقدمة وتأثيرات التمرير",
+      "for_de": "anspruchsvolle Animation und Scroll-Effekte",
+      "for_en": "advanced animation and scroll effects"
+    },
+    {
+      "slug": "ui-animation-skill",
+      "for": "ليكتب Claude حركة مدروسة",
+      "for_de": "durchdachte Animation von Claude",
+      "for_en": "purposeful motion written by Claude"
+    }
+  ],
+  "motiongfx": [
+    {
+      "slug": "remotion",
+      "for": "لصنع الفيديو بالكود في React",
+      "for_de": "Videos mit Code in React",
+      "for_en": "making videos with code in React"
+    },
+    {
+      "slug": "hyperframes",
+      "for": "لتحويل صفحات HTML إلى فيديو",
+      "for_de": "HTML-Seiten als Video",
+      "for_en": "turning HTML pages into video"
+    },
+    {
+      "slug": "video-use",
+      "for": "لمونتاج لقطاتك تلقائيًا",
+      "for_de": "den automatischen Schnitt deines Materials",
+      "for_en": "editing your footage automatically"
+    }
+  ],
+  "shopmkt": [
+    {
+      "slug": "marketing-skills",
+      "for": "لخطط تسويق جاهزة",
+      "for_de": "fertige Marketing-Playbooks",
+      "for_en": "ready-made marketing playbooks"
+    },
+    {
+      "slug": "shopify-ai-toolkit",
+      "for": "لمتاجر Shopify",
+      "for_de": "Shopify-Shops",
+      "for_en": "Shopify stores"
+    },
+    {
+      "slug": "geo-seo-claude",
+      "for": "للظهور في إجابات الذكاء الاصطناعي",
+      "for_de": "Sichtbarkeit in KI-Antworten",
+      "for_en": "showing up in AI answers"
+    }
+  ],
+  "devskills": [
+    {
+      "slug": "matt-pocock-skills",
+      "for": "لعادات برمجة منضبطة",
+      "for_de": "saubere Entwicklungsgewohnheiten",
+      "for_en": "disciplined engineering habits"
+    },
+    {
+      "slug": "anthropic-code-review-plugin",
+      "for": "لمراجعة طلبات الدمج",
+      "for_de": "Pull-Request-Reviews",
+      "for_en": "reviewing pull requests"
+    },
+    {
+      "slug": "anthropic-security-guidance-plugin",
+      "for": "لأمان الكود",
+      "for_de": "sicheren Code",
+      "for_en": "secure code"
+    }
+  ],
+  "mobskills": [
+    {
+      "slug": "expo-skills",
+      "for": "لتطبيقات React Native",
+      "for_de": "React-Native-Apps",
+      "for_en": "React Native apps"
+    },
+    {
+      "slug": "flutter-agent-skills",
+      "for": "لتطبيقات Flutter",
+      "for_de": "Flutter-Apps",
+      "for_en": "Flutter apps"
+    },
+    {
+      "slug": "maestro-mcp",
+      "for": "لاختبار تطبيقك على المحاكي",
+      "for_de": "App-Tests im Simulator",
+      "for_en": "testing your app in a simulator"
+    }
+  ],
+  "apple": [
+    {
+      "slug": "mobilebuildmcp",
+      "for": "لبناء تطبيقك وتشغيله واختباره",
+      "for_de": "das Bauen, Starten und Testen deiner App",
+      "for_en": "building, running and testing your app"
+    },
+    {
+      "slug": "swiftui-pro",
+      "for": "لكود SwiftUI صحيح",
+      "for_de": "korrekten SwiftUI-Code",
+      "for_en": "correct SwiftUI code"
+    },
+    {
+      "slug": "app-store-connect-skills",
+      "for": "للنشر في App Store",
+      "for_de": "die Veröffentlichung im App Store",
+      "for_en": "publishing to the App Store"
+    }
+  ],
+  "vercel": [
+    {
+      "slug": "vercel-agent-skills",
+      "for": "لأداء React وNext.js",
+      "for_de": "React- und Next.js-Performance",
+      "for_en": "React and Next.js performance"
+    },
+    {
+      "slug": "vercel-mcp",
+      "for": "لمتابعة النشر والأخطاء",
+      "for_de": "Deployments und Fehler im Blick",
+      "for_en": "watching deployments and errors"
+    },
+    {
+      "slug": "ai-sdk-skill",
+      "for": "لإضافة الذكاء الاصطناعي إلى تطبيقك",
+      "for_de": "KI in deiner App",
+      "for_en": "adding AI to your app"
+    }
+  ],
+  "general": [
+    {
+      "slug": "superpowers",
+      "for": "للعمل المنظم من الخطة إلى الاختبار",
+      "for_de": "strukturiertes Arbeiten vom Plan bis zum Test",
+      "for_en": "organized work from plan to test"
+    },
+    {
+      "slug": "skill-creator",
+      "for": "لصنع مهارتك الخاصة",
+      "for_de": "eigene Skills",
+      "for_en": "building your own skill"
+    },
+    {
+      "slug": "claude-mem",
+      "for": "لذاكرة بين الجلسات",
+      "for_de": "ein Gedächtnis über Sitzungen hinweg",
+      "for_en": "memory across sessions"
+    }
+  ],
+  "docs": [
+    {
+      "slug": "markitdown",
+      "for": "لتحويل الملفات إلى نص",
+      "for_de": "Dateien als Text",
+      "for_en": "turning files into text"
+    },
+    {
+      "slug": "word-docx-skill",
+      "for": "لمستندات Word",
+      "for_de": "Word-Dokumente",
+      "for_en": "Word documents"
+    },
+    {
+      "slug": "excel-xlsx-skill",
+      "for": "لجداول Excel",
+      "for_de": "Excel-Tabellen",
+      "for_en": "Excel spreadsheets"
+    }
+  ],
+  "business": [
+    {
+      "slug": "anthropic-small-business-plugin",
+      "for": "للأعمال الصغيرة",
+      "for_de": "kleine Unternehmen",
+      "for_en": "small businesses"
+    },
+    {
+      "slug": "anthropic-customer-support-plugin",
+      "for": "لدعم العملاء",
+      "for_de": "den Kundensupport",
+      "for_en": "customer support"
+    },
+    {
+      "slug": "anthropic-sales-plugin",
+      "for": "للمبيعات",
+      "for_de": "den Vertrieb",
+      "for_en": "sales"
+    }
+  ],
+  "data": [
+    {
+      "slug": "anthropic-data-plugin",
+      "for": "لتحليل البيانات وSQL",
+      "for_de": "Datenanalyse und SQL",
+      "for_en": "data analysis and SQL"
+    },
+    {
+      "slug": "last30days",
+      "for": "للبحث في ما يقوله الناس الآن",
+      "for_de": "die Recherche aktueller Meinungen",
+      "for_en": "researching what people say right now"
+    },
+    {
+      "slug": "supabase-mcp",
+      "for": "لقواعد بيانات Supabase",
+      "for_de": "Supabase-Datenbanken",
+      "for_en": "Supabase databases"
+    }
+  ],
+  "mcp": [
+    {
+      "slug": "context7",
+      "for": "لوثائق مكتبات محدّثة",
+      "for_de": "aktuelle Bibliotheksdokumentation",
+      "for_en": "up-to-date library docs"
+    },
+    {
+      "slug": "playwright-mcp",
+      "for": "لاختبار موقعك في المتصفح",
+      "for_de": "Website-Tests im Browser",
+      "for_en": "testing your site in the browser"
+    },
+    {
+      "slug": "github-mcp-server",
+      "for": "للعمل مع GitHub",
+      "for_de": "die Arbeit mit GitHub",
+      "for_en": "working with GitHub"
+    }
+  ],
+  "quality": [
+    {
+      "slug": "playwright",
+      "for": "للاختبار الآلي في كل المتصفحات",
+      "for_de": "automatische Tests in allen Browsern",
+      "for_en": "automated tests in every browser"
+    },
+    {
+      "slug": "claude-seo",
+      "for": "لتدقيق SEO",
+      "for_de": "SEO-Audits",
+      "for_en": "SEO audits"
+    },
+    {
+      "slug": "axe-core",
+      "for": "لإمكانية الوصول",
+      "for_de": "Barrierefreiheit",
+      "for_en": "accessibility"
+    }
+  ],
+  "ui": [
+    {
+      "slug": "shadcn-ui",
+      "for": "لمكونات تملك كودها",
+      "for_de": "Komponenten, deren Code dir gehört",
+      "for_en": "components whose code you own"
+    },
+    {
+      "slug": "daisyui",
+      "for": "لمكونات Tailwind بسيطة",
+      "for_de": "einfache Tailwind-Komponenten",
+      "for_en": "simple Tailwind components"
+    },
+    {
+      "slug": "sonner",
+      "for": "لإشعارات أنيقة",
+      "for_de": "elegante Benachrichtigungen",
+      "for_en": "elegant notifications"
+    }
+  ],
+  "icons": [
+    {
+      "slug": "lucide",
+      "for": "لأيقونات خطية متناسقة",
+      "for_de": "einheitliche Linien-Icons",
+      "for_en": "consistent line icons"
+    },
+    {
+      "slug": "tabler-icons",
+      "for": "لآلاف الأيقونات المجانية",
+      "for_de": "tausende kostenlose Icons",
+      "for_en": "thousands of free icons"
+    },
+    {
+      "slug": "thesvg",
+      "for": "لشعارات العلامات التجارية والدفع",
+      "for_de": "Marken- und Zahlungslogos",
+      "for_en": "brand and payment logos"
+    }
+  ],
+  "finance": [
+    {
+      "slug": "paperless-ngx",
+      "for": "لأرشفة الفواتير والإيصالات",
+      "for_de": "das Archivieren von Belegen und Rechnungen",
+      "for_en": "archiving receipts and invoices"
+    },
+    {
+      "slug": "anthropic-finance-plugin",
+      "for": "للمحاسبة والتقارير المالية",
+      "for_de": "Buchhaltung und Finanzberichte",
+      "for_en": "accounting and financial reports"
+    },
+    {
+      "slug": "kosit-validator",
+      "for": "للتحقق من فواتير XRechnung",
+      "for_de": "die Prüfung von XRechnungen",
+      "for_en": "validating XRechnung invoices"
+    }
+  ],
+  "infra": [
+    {
+      "slug": "supabase",
+      "for": "لقاعدة بيانات وتسجيل دخول جاهزين",
+      "for_de": "eine fertige Datenbank mit Login",
+      "for_en": "a ready database and login"
+    },
+    {
+      "slug": "uptime-kuma",
+      "for": "لمراقبة موقعك",
+      "for_de": "die Überwachung deiner Website",
+      "for_en": "monitoring your website"
+    },
+    {
+      "slug": "react-email",
+      "for": "لرسائل الطلبات والحجوزات",
+      "for_de": "Bestell- und Buchungsmails",
+      "for_en": "order and booking emails"
+    }
+  ],
+  "analytics": [
+    {
+      "slug": "umami",
+      "for": "لإحصاءات بسيطة بلا كوكيز",
+      "for_de": "einfache Statistik ohne Cookies",
+      "for_en": "simple, cookie-free stats"
+    },
+    {
+      "slug": "posthog",
+      "for": "لتسجيل الجلسات وخرائط النقر",
+      "for_de": "Session-Aufnahmen und Heatmaps",
+      "for_en": "session recordings and heatmaps"
+    },
+    {
+      "slug": "google-analytics-mcp",
+      "for": "لتقارير Google Analytics في Claude",
+      "for_de": "Google-Analytics-Berichte in Claude",
+      "for_en": "Google Analytics reports in Claude"
+    }
+  ],
+  "booking": [
+    {
+      "slug": "cal-com",
+      "for": "لحجز المواعيد في موقعك",
+      "for_de": "Terminbuchung auf deiner Website",
+      "for_en": "booking appointments on your site"
+    },
+    {
+      "slug": "fullcalendar",
+      "for": "لتقويم كامل في تطبيقك",
+      "for_de": "einen vollständigen Kalender in deiner App",
+      "for_en": "a full calendar in your app"
+    },
+    {
+      "slug": "google-calendar-mcp",
+      "for": "لإدارة تقويم Google من Claude",
+      "for_de": "deinen Google Kalender über Claude",
+      "for_en": "managing Google Calendar from Claude"
+    }
+  ],
+  "writing": [
+    {
+      "slug": "languagetool",
+      "for": "للتدقيق بالعربية والألمانية والإنجليزية",
+      "for_de": "Korrektur auf Arabisch, Deutsch und Englisch",
+      "for_en": "proofreading in Arabic, German and English"
+    },
+    {
+      "slug": "deepl-write",
+      "for": "لتحسين الصياغة بالألمانية",
+      "for_de": "bessere Formulierungen auf Deutsch",
+      "for_en": "better wording in German"
+    },
+    {
+      "slug": "sahehly",
+      "for": "للتدقيق العربي",
+      "for_de": "arabische Rechtschreibung",
+      "for_en": "Arabic proofreading"
+    }
+  ],
+  "prompts": [
+    {
+      "slug": "claude-prompting-best-practices",
+      "for": "لكتابة البرومبت لـ Claude",
+      "for_de": "Prompts für Claude",
+      "for_en": "writing prompts for Claude"
+    },
+    {
+      "slug": "prompts-chat",
+      "for": "لبرومبتات جاهزة",
+      "for_de": "fertige Prompts",
+      "for_en": "ready-made prompts"
+    },
+    {
+      "slug": "promptfoo",
+      "for": "لاختبار البرومبت",
+      "for_de": "das Testen von Prompts",
+      "for_en": "testing prompts"
+    }
+  ],
+  "macapps": [
+    {
+      "slug": "rectangle",
+      "for": "لترتيب النوافذ",
+      "for_de": "Fensterverwaltung",
+      "for_en": "window management"
+    },
+    {
+      "slug": "maccy",
+      "for": "للحافظة",
+      "for_de": "die Zwischenablage",
+      "for_en": "clipboard history"
+    },
+    {
+      "slug": "stats",
+      "for": "لمراقبة النظام",
+      "for_de": "die Systemüberwachung",
+      "for_en": "system monitoring"
+    }
+  ],
+  "winapps": [
+    {
+      "slug": "powertoys",
+      "for": "لأدوات Windows الإضافية",
+      "for_de": "Windows-Zusatztools",
+      "for_en": "extra Windows tools"
+    },
+    {
+      "slug": "sharex",
+      "for": "للقطات الشاشة وتسجيلها",
+      "for_de": "Screenshots und Bildschirmaufnahmen",
+      "for_en": "screenshots and screen recording"
+    },
+    {
+      "slug": "windows-terminal",
+      "for": "للطرفية",
+      "for_de": "das Terminal",
+      "for_en": "the terminal"
+    }
+  ],
+  "iosapps": [
+    {
+      "slug": "firefox",
+      "for": "للتصفح بحماية من التتبع",
+      "for_de": "Surfen mit Tracking-Schutz",
+      "for_en": "browsing with tracking protection"
+    },
+    {
+      "slug": "netnewswire",
+      "for": "لمتابعة المواقع عبر RSS",
+      "for_de": "Websites per RSS",
+      "for_en": "following sites via RSS"
+    },
+    {
+      "slug": "pocket-casts",
+      "for": "للبودكاست",
+      "for_de": "Podcasts",
+      "for_en": "podcasts"
+    }
+  ],
+  "androidapps": [
+    {
+      "slug": "newpipe",
+      "for": "لـ YouTube بلا إعلانات",
+      "for_de": "YouTube ohne Werbung",
+      "for_en": "YouTube without ads"
+    },
+    {
+      "slug": "bitwarden",
+      "for": "لكلمات المرور",
+      "for_de": "Passwörter",
+      "for_en": "passwords"
+    },
+    {
+      "slug": "aegis-authenticator",
+      "for": "لرموز التحقق بخطوتين",
+      "for_de": "Zwei-Faktor-Codes",
+      "for_en": "two-factor codes"
+    }
+  ],
+  "linuxapps": [
+    {
+      "slug": "flatseal",
+      "for": "لصلاحيات تطبيقات Flatpak",
+      "for_de": "Flatpak-Berechtigungen",
+      "for_en": "Flatpak permissions"
+    },
+    {
+      "slug": "bottles",
+      "for": "لتشغيل برامج Windows",
+      "for_de": "Windows-Programme unter Linux",
+      "for_en": "running Windows programs"
+    },
+    {
+      "slug": "czkawka",
+      "for": "لتنظيف الملفات المكررة",
+      "for_de": "das Aufräumen doppelter Dateien",
+      "for_en": "cleaning up duplicate files"
+    }
+  ],
+  "crossapps": [
+    {
+      "slug": "localsend",
+      "for": "لإرسال الملفات بين الأجهزة",
+      "for_de": "Dateien zwischen Geräten",
+      "for_en": "sending files between devices"
+    },
+    {
+      "slug": "obs-studio",
+      "for": "لتسجيل الشاشة والبث",
+      "for_de": "Bildschirmaufnahme und Streaming",
+      "for_en": "screen recording and streaming"
+    },
+    {
+      "slug": "keepassxc",
+      "for": "لكلمات المرور بلا سحابة",
+      "for_de": "Passwörter ohne Cloud",
+      "for_en": "passwords without the cloud"
+    }
+  ]
+}

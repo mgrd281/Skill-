@@ -1,6 +1,6 @@
 ---
 import Icon from "./Icon.astro";
-import { type Tool, projectById, txt, isLatin, repoLabel, host, isAppStore, statusBadges, formatDate, initials, appIcon, kindIcon, kindLabel, toolDesc, projName } from "../lib/data";
+import { type Tool, projectById, txt, isLatin, repoLabel, host, isAppStore, statusBadges, formatDate, initials, appIcon, pickFor, kindIcon, kindLabel, toolDesc, projName } from "../lib/data";
 import { type Lang, DEFAULT_LANG, href, fwdIcon, t as dict } from "../i18n";
 interface Props { tool: Tool; linkName?: boolean; hideBtn?: boolean; favBtn?: boolean; rank?: number; lang?: Lang }
 const { tool: t, linkName = true, hideBtn = false, favBtn = true, rank, lang = DEFAULT_LANG } = Astro.props;
@@ -12,6 +12,7 @@ const useName = (u: string) => projName(projectById(u)!, lang);
 const SHOW = 3;
 const extra = t.use.slice(SHOW).map(useName).join(s.listSep);
 const date = formatDate(t.added.slice(0, 10), lang);
+const rec = pickFor(t.slug, lang);
 const site = t.site && (isAppStore(t.site) ? "App Store" : s.officialSite);
 ---
 <article
@@ -59,6 +60,7 @@ const site = t.site && (isAppStore(t.site) ? "App Store" : s.officialSite);
 
   <div class="tags">
     <span class="badge-pick" hidden>{s.pick}</span>
+    {rec && <span class="badge-rec"><Icon name="seal-check" weight="fill" />{s.recFor(rec)}</span>}
     {t.isNew && <span class="badge-new">{s.isNew}</span>}
     {statusBadges(t, lang).map((b) => (
       <span class={b.kind === "ok" ? "tag" : `tag tag-${b.kind}`} title={b.title}>{b.text}{b.text && b.latin ? " " : ""}{b.latin && <bdi>{b.latin}</bdi>}</span>

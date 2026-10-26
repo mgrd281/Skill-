@@ -3,6 +3,7 @@ import categoriesJson from "../../data/categories.json";
 import projectsJson from "../../data/projects.json";
 import meta from "../../data/meta.json";
 import appIconsJson from "../../data/app-icons.json";
+import picksJson from "../../data/picks.json";
 import examplesJson from "../../data/examples.json";
 import type { IconName } from "./icons";
 import type { Lang } from "../i18n";
@@ -65,6 +66,17 @@ export const sponsor: Sponsor | null = (meta as any).sponsor ?? null;
 // في data/meta.json: "newsletter": { "provider": "Brevo", "action": "رابط نموذج الاشتراك عند المزوّد", "field": "EMAIL",
 // "hidden": { "locale": "{lang}" } }. hidden حقول مخفية يطلبها المزوّد، و{lang} فيها تصير لغة الصفحة (ar أو de أو en).
 export const newsletter: { provider: string; action: string; field?: string; hidden?: Record<string, string> } | null = (meta as any).newsletter?.action ? (meta as any).newsletter : null;
+
+// «ننصح به» (data/picks.json): ثلاث أدوات لكل قسم، لكل واحدة غرضها («لترتيب النوافذ»). اختيار تحريري بلا مقابل:
+// أدوات نشطة ومعروفة تغطي أغراضًا مختلفة. تظهر في رأس صفحة القسم وشارةً على بطاقة الأداة وصفحتها.
+type Pick = { slug: string; for: string; for_de: string; for_en: string };
+const picks = picksJson as Record<string, Pick[]>;
+const pickBySlug = new Map(Object.values(picks).flat().map((p) => [p.slug, p]));
+export const picksOf = (cat: string): Pick[] => picks[cat] ?? [];
+export const pickFor = (slug: string, lang: Lang): string | null => {
+  const p = pickBySlug.get(slug);
+  return p ? (lang === "ar" ? p.for : p[`for_${lang}`]) : null;
+};
 
 // أيقونة التطبيق الحقيقية (scripts/fetch-app-icons.mjs، ملف محلي في public/app-icons/)، أو null فتظهر الحروف الأولى
 const appIcons = appIconsJson as Record<string, { file: string; src: string }>;

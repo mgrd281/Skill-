@@ -7,7 +7,7 @@ import TrustPanel from "../components/TrustPanel.astro";
 import Inside from "../components/Inside.astro";
 import ReportDialog from "../components/ReportDialog.astro";
 import Icon from "../components/Icon.astro";
-import { type Tool, tools, projectById, txt, isLatin, formatDate, host, isAppStore, repoLabel, statusBadges, initials, appIcon, kindIcon, kindLabel, categoryIcon, toolDesc, toolExample, catName, projName } from "../lib/data";
+import { type Tool, tools, projectById, txt, isLatin, formatDate, host, isAppStore, repoLabel, statusBadges, initials, appIcon, pickFor, kindIcon, kindLabel, categoryIcon, toolDesc, toolExample, catName, projName } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
 interface Props { tool: Tool; lang: Lang }
 const { tool: x, lang } = Astro.props;
@@ -58,6 +58,7 @@ if (x.gh) jsonLd.push({
         <span class="kind"><Icon name={kindIcon(x.kind)} /><Fragment set:html={kindHtml} /></span>
         {x.stars && <span class="stars"><Icon name="star" weight="fill" />{x.stars}</span>}
         {x.isNew && <span class="badge-new">{t.isNew}</span>}
+        {pickFor(x.slug, lang) && <span class="badge-rec"><Icon name="seal-check" weight="fill" />{t.recFor(pickFor(x.slug, lang)!)}</span>}
         {badges.map((b) => <span class={b.kind === "ok" ? "tag" : `tag tag-${b.kind}`} title={b.title}>{b.text}{b.text && b.latin ? " " : ""}{b.latin && <bdi>{b.latin}</bdi>}</span>)}
       </div>
       <p class="p-sub" set:html={txt(desc, lang)} />
