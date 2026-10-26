@@ -95,6 +95,7 @@ npm run build      # بناء الموقع في مجلد dist
   - تدخل الحزمة أوامر إضافات Claude Code والأدوات العامة فقط (`claude mcp add` و`claude plugin` و`npx skills add` و`npm install -g` و`brew install`)، و`/plugin` تتحول إلى `claude plugin` لأن أوامر الشرطة المائلة لا تعمل خارج جلسة Claude Code.
   - لا تدخلها: السكربتات من الإنترنت، والأوامر التي تحتاج قيمك، ومكتبات المشروع. تظهر في النافذة بسبب كل منها ورابط صفحتها.
   - القواعد في `kitPlan` داخل `src/lib/install.js`.
+- **الفحص:** `npm run check-search` (ويعمل في CI) يختبر التطبيع والترتيب و«هل تقصد» وقراءة أوامر `claude mcp add` وقواعد الحزمة على كل الأدوات. شغّله بعد أي تعديل على `src/lib/search.js` أو `src/lib/install.js`.
 - **خوادم MCP في برامج أخرى:** إن كان أمر الأداة `claude mcp add …` (أو `npx mcp-remote <رابط>`) فصفحتها فيها تبويبات لـ Cursor وVS Code (رابط تثبيت بنقرة وملف الإعداد) وClaude Desktop (ملف الإعداد، أو موصل مخصص للخادم البعيد). تُستخرج من الأمر في `mcpServer` داخل `src/lib/install.js`، فلا حقول إضافية في البيانات.
 
 ## الأمان والثقة وصفحات الأقسام

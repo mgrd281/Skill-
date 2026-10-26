@@ -174,10 +174,10 @@ kbd {
 .langmenu[open] > .bell.langsw .ls-chev { rotate: 90deg; }
 .langmenu[open] > .langsw { background: var(--fill); color: var(--ink); }
 .lang-list {
-  position: absolute; top: 50px; inset-inline-start: 0; z-index: 60; margin: 0; padding: 6px; list-style: none;
+  position: absolute; top: 50px; inset-inline-end: 0; z-index: 60; margin: 0; padding: 6px; list-style: none;
   min-width: 168px; max-width: calc(100vw - 24px); display: grid; gap: 2px;
   background: var(--card); border: 1px solid var(--line); border-radius: var(--r-md);
-  transform-origin: top var(--start); animation: drop-in var(--dur) var(--ease-out);
+  transform-origin: top var(--end); animation: drop-in var(--dur) var(--ease-out);
 }
 .lang-item {
   display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 42px; padding: 8px 12px;
@@ -874,9 +874,10 @@ a.name:hover { color: var(--accent); }
 .notice li .i { margin-top: 4px; width: 18px; height: 18px; }
 .notice .n-warn { background: var(--orange-soft); color: var(--orange); }
 .notice .n-bad { background: var(--red-soft); color: var(--red); }
-.p-grid { display: grid; gap: 20px; }
+/* minmax(0, 1fr): محتوى عريض داخل البلاطة (تبويبات أو أمر طويل) يتمرر داخلها ولا يوسّعها خارج الشاشة */
+.p-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
 @media (min-width: 900px) { .p-grid { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); } }
-.p-tile { background: var(--card); border-radius: var(--r-xl); padding: clamp(24px, 4vw, 40px); display: grid; gap: 14px; align-content: start; }
+.p-tile { background: var(--card); border-radius: var(--r-xl); padding: clamp(24px, 4vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; align-content: start; min-width: 0; }
 .p-tile h2 { margin: 0; font-size: 1.4rem; font-weight: 700; }
 .p-note { margin: 0; color: var(--muted); font-size: .95rem; }
 /* تبويبات التثبيت لخوادم MCP (src/components/InstallTile.astro): مفتاح مقسّم بأسلوب Apple، والمختار بخلفية البطاقة.
@@ -985,7 +986,7 @@ a.tr-v:hover { color: var(--accent); text-decoration: underline; text-underline-
 .cmp-o b { font-weight: 600; text-align: var(--start); }
 .cmp-o small, .cmp-none { color: var(--muted); font-size: .8rem; }
 .cmp-none { padding: 10px 12px; }
-.cmp .share-view { margin-inline-start: auto; }
+.cmp #cmp-kit { margin-inline-start: auto; }
 /* الجدول: العمود الأول (عناوين الصفوف) ثابت عند التمرير الأفقي على الشاشات الضيقة */
 .cmp-wrap { overflow-x: auto; overscroll-behavior-x: contain; border-radius: var(--r-lg); background: var(--card); }
 .cmp-table { width: 100%; min-width: calc(150px + var(--n, 1) * 240px); border-collapse: collapse; table-layout: fixed; font-size: .92rem; }

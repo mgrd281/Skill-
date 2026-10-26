@@ -22,6 +22,8 @@ jobs:
       - run: npm ci
       - name: Check data
         run: npm run check
+      - name: Check search and install logic
+        run: npm run check-search
       - name: Build
         run: npm run build
         env:

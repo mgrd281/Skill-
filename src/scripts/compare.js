@@ -87,6 +87,10 @@ function render() {
   input.disabled = full;
   input.placeholder = full ? L.cmpMax : picked.length ? L.cmpAddMore : input.dataset.ph || input.placeholder;
   share.hidden = picked.length < 2;
+  // حزمة التثبيت للأدوات المقارنة (src/scripts/kit.js)
+  const kit = $("cmp-kit");
+  kit.hidden = picked.length === 0;
+  kit.dataset.kit = picked.join(" ");
   status.textContent = fmt(L.cmpN, { n: picked.length });
   empty.hidden = picked.length > 0;
   wrap.hidden = picked.length === 0;

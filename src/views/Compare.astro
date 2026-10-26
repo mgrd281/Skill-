@@ -3,6 +3,7 @@
 // يبنيه src/scripts/compare.js من /compare.json. عناوين الصفوف في <template> حتى تبقى النصوص في ui.ts.
 import Base from "../layouts/Base.astro";
 import Icon from "../components/Icon.astro";
+import KitDialog from "../components/KitDialog.astro";
 import { compareSuggestions } from "../lib/compare-index";
 import { txt } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
@@ -33,6 +34,7 @@ const ROWS: Array<[string, string]> = [
           aria-label={t.cmpAddAria} placeholder={t.cmpAddPh} autocomplete="off" spellcheck="false" />
         <ul class="cmp-list" id="cmp-list" role="listbox" aria-label={t.qsResults} hidden></ul>
       </div>
+      <button type="button" class="kit-btn" id="cmp-kit" data-kit="" data-kit-title={t.kitTitle} hidden><Icon name="terminal-window" />{t.kitBtn}</button>
       <button type="button" class="linkbtn share-view" id="cmp-share" data-share data-title={t.cmpTitle} hidden><Icon name="export" />{t.shareView}</button>
     </div>
     <p class="sr" id="cmp-status" aria-live="polite"></p>
@@ -61,6 +63,7 @@ const ROWS: Array<[string, string]> = [
     {ROWS.map(([id, label]) => <tr data-row={id}><th scope="row" set:html={label} /></tr>)}
   </template>
   <template id="cmp-icons"><Icon name="copy" class="ic-copy" /><Icon name="check" weight="bold" class="ic-check" /><Icon name="x" weight="bold" /><Icon name="warning" /></template>
+  <KitDialog lang={lang} />
   <script type="application/json" id="cmp-i18n" set:html={JSON.stringify({ copy: t.copy, copyAria: t.copyAria, cmdAria: t.cmdAria, open: t.cmpOpen })} />
 </Base>
 

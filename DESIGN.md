@@ -155,7 +155,7 @@
 
 ## قبل أي دمج
 
-1. `npm run check` و`npm run build` بلا أخطاء.
+1. `npm run check` و`npm run check-search` و`npm run build` بلا أخطاء.
 2. لا ظلال: `grep -nE "box-shadow|text-shadow|drop-shadow" src/styles/global.css` يجب ألا يُرجع شيئًا.
 3. فحص إمكانية الوصول (axe-core) بلا مخالفات في الوضعين الفاتح والداكن.
 4. لا تمرير أفقي على عرض 390px.
