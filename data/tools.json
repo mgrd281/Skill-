@@ -8406,5 +8406,28 @@
     "license": null,
     "archived": false,
     "added": "2026-10-26T18:00:00Z"
+  },
+  {
+    "slug": "earshot",
+    "cat": "motiongfx",
+    "name": "Earshot",
+    "kind": "MCP",
+    "isNew": true,
+    "gh": "https://github.com/Leonxlnx/earshot",
+    "site": null,
+    "stars": null,
+    "cmd": "git clone https://github.com/Leonxlnx/earshot && cd earshot\npython -m venv .venv\n.venv/bin/python -m pip install torch --index-url https://download.pytorch.org/whl/cpu\n.venv/bin/python -m pip install -e \".[mcp,llm,dev]\"\nclaude mcp add earshot --scope user -e EARSHOT_THREADS=3 -- /full/path/to/earshot/.venv/bin/python -m earshot mcp",
+    "use": [
+      "video",
+      "landing",
+      "claude"
+    ],
+    "desc": "يعطي Claude «أذنين»: يصف أي ملف صوتي ويقارنه ويراجع مزامنة الصوت مع الصورة، ويصنع مؤثرات صوتية بالكود (أكثر من 250 صوتًا جاهزًا) ويضبطها على الإطار المناسب في الفيديو. يعمل محليًا على المعالج، ويحمّل نموذجين مفتوحين (نحو 1.1 جيجابايت) عند أول استخدام، ويحتاج Python وffmpeg.",
+    "desc_de": "Gibt Claude „Ohren“: beschreibt und vergleicht Audiodateien, prüft die Synchronität von Ton und Bild und erzeugt Soundeffekte per Code (über 250 fertige Sounds), die auf das passende Frame im Video gesetzt werden. Läuft lokal auf der CPU, lädt beim ersten Einsatz zwei offene Modelle (rund 1,1 GB) und braucht Python und ffmpeg.",
+    "desc_en": "Gives Claude ears: it describes and compares audio files, checks how sound syncs with the picture, and makes sound effects in code (over 250 ready-made sounds) placed on the right frame of a video. Runs locally on CPU, downloads two open models (about 1.1 GB) on first use, and needs Python and ffmpeg.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-26T18:30:00Z"
   }
 ]
