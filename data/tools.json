@@ -555,7 +555,7 @@
     "isNew": true,
     "gh": "https://github.com/multica-ai/andrej-karpathy-skills",
     "site": null,
-    "stars": "224.2k",
+    "stars": "224.3k",
     "cmd": "/plugin marketplace add forrestchang/andrej-karpathy-skills\n/plugin install andrej-karpathy-skills@karpathy-skills",
     "use": [
       "web",
@@ -6965,14 +6965,16 @@
     "isNew": false,
     "gh": "https://github.com/duckduckgo/apple-browsers",
     "site": "https://duckduckgo.com/app",
-    "stars": null,
+    "stars": "266",
     "cmd": null,
     "use": [],
     "desc": "متصفح لـ iPhone وiPad وMac يركّز على الخصوصية: يحجب المتتبعات ويبحث دون أن يحفظ سجلك، وزرّ واحد يمسح كل بياناتك.",
     "desc_de": "Browser für iPhone, iPad und Mac mit Fokus auf Privatsphäre: blockiert Tracker, sucht, ohne deinen Verlauf zu speichern, und ein Knopf löscht alle Daten auf einmal.",
     "desc_en": "A privacy-first browser for iPhone, iPad and Mac: it blocks trackers, searches without saving your history, and one button wipes all your data.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "Apache-2.0",
+    "archived": false
   },
   {
     "slug": "firefox",
