@@ -8384,5 +8384,27 @@
     "pushed": "2026-09-12",
     "license": "GPL-3.0",
     "archived": false
+  },
+  {
+    "slug": "openverse",
+    "cat": "motiongfx",
+    "name": "Openverse",
+    "kind": "موقع",
+    "isNew": true,
+    "gh": "https://github.com/WordPress/openverse",
+    "site": "https://openverse.org",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "video",
+      "landing"
+    ],
+    "desc": "محرك بحث من WordPress في الصور والصوتيات المرخّصة ترخيصًا مفتوحًا: مؤثرات صوتية وموسيقى وصور. تفلتر النتائج بالرخصة ونوع الاستخدام، وتنسخ بيانات نسب العمل من كل ملف. رخصة كل ملف تأتي من مصدره، فاقرأها قبل الاستخدام التجاري.",
+    "desc_de": "Suchmaschine von WordPress für offen lizenzierte Bilder und Audiodateien: Soundeffekte, Musik und Fotos. Ergebnisse lassen sich nach Lizenz und Nutzungsart filtern, die Namensnennung kann pro Datei kopiert werden. Die Lizenz jeder Datei stammt von der Quelle; lies sie vor kommerzieller Nutzung.",
+    "desc_en": "WordPress's search engine for openly licensed images and audio: sound effects, music and photos. Filter results by license and permitted use, and copy the attribution for each file. Each file's license comes from its source, so read it before commercial use.",
+    "pushed": null,
+    "license": null,
+    "archived": false,
+    "added": "2026-10-26T18:00:00Z"
   }
 ]
