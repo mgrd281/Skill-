@@ -30,7 +30,7 @@
     "isNew": true,
     "gh": "https://github.com/pbakaus/impeccable",
     "site": "https://impeccable.style",
-    "stars": "88.4k",
+    "stars": "88.6k",
     "cmd": "npx skills add pbakaus/impeccable",
     "use": [
       "landing",
@@ -53,7 +53,7 @@
     "isNew": false,
     "gh": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
     "site": "https://www.uupm.cc/",
-    "stars": "140.6k",
+    "stars": "140.7k",
     "cmd": "/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill\n/plugin install ui-ux-pro-max@ui-ux-pro-max-skill",
     "use": [
       "web",
@@ -99,7 +99,7 @@
     "isNew": false,
     "gh": "https://github.com/emilkowalski/skills",
     "site": "https://emilkowal.ski/skill",
-    "stars": "49.7k",
+    "stars": "49.8k",
     "cmd": "npx skills add emilkowalski/skills --skill animate",
     "use": [
       "web",
@@ -121,7 +121,7 @@
     "isNew": false,
     "gh": "https://github.com/arnabbagxd/brand-building-skills",
     "site": null,
-    "stars": "787",
+    "stars": "790",
     "cmd": "npx skills add arnabbagxd/brand-building-skills",
     "use": [
       "brand"
@@ -186,7 +186,7 @@
     "isNew": true,
     "gh": "https://github.com/Leonxlnx/taste-skill",
     "site": "https://tasteskill.dev",
-    "stars": "102.7k",
+    "stars": "102.8k",
     "cmd": "npx skills add https://github.com/Leonxlnx/taste-skill",
     "use": [
       "web",
@@ -326,7 +326,7 @@
     "isNew": true,
     "gh": "https://github.com/Shopify/shopify-ai-toolkit",
     "site": "https://shopify.dev/docs/apps/build/ai-toolkit",
-    "stars": "613",
+    "stars": "614",
     "cmd": "claude plugin install shopify-ai-toolkit@claude-plugins-official",
     "use": [
       "shop"
@@ -393,7 +393,7 @@
     "isNew": true,
     "gh": "https://github.com/AgriciDaniel/claude-seo",
     "site": "https://claude-seo.md",
-    "stars": "21.7k",
+    "stars": "21.8k",
     "cmd": "/plugin marketplace add AgriciDaniel/claude-seo\n/plugin install claude-seo@agricidaniel-claude-seo\n/seo setup",
     "use": [
       "shop",
@@ -416,7 +416,7 @@
     "isNew": true,
     "gh": "https://github.com/blader/humanizer",
     "site": "https://skills.sh/blader/humanizer",
-    "stars": "60.8k",
+    "stars": "60.9k",
     "cmd": "/plugin marketplace add blader/humanizer\n/plugin install humanizer@humanizer",
     "use": [
       "brand",
@@ -440,7 +440,7 @@
     "isNew": true,
     "gh": "https://github.com/conorbronsdon/avoid-ai-writing",
     "site": "https://chainofthought.show/go/avoid-ai-writing/",
-    "stars": "5.2k",
+    "stars": "5.3k",
     "cmd": "/plugin marketplace add conorbronsdon/avoid-ai-writing\n/plugin install avoid-ai-writing@conorbronsdon-skills",
     "use": [
       "brand",
@@ -531,7 +531,7 @@
     "isNew": true,
     "gh": "https://github.com/mattpocock/skills",
     "site": "https://aihero.dev/skills",
-    "stars": "303.6k",
+    "stars": "303.8k",
     "cmd": "claude plugin install mattpocock-skills@claude-plugins-official",
     "use": [
       "web",
@@ -555,7 +555,7 @@
     "isNew": true,
     "gh": "https://github.com/multica-ai/andrej-karpathy-skills",
     "site": null,
-    "stars": "224.1k",
+    "stars": "224.2k",
     "cmd": "/plugin marketplace add forrestchang/andrej-karpathy-skills\n/plugin install andrej-karpathy-skills@karpathy-skills",
     "use": [
       "web",
@@ -580,7 +580,7 @@
     "isNew": true,
     "gh": "https://github.com/addyosmani/agent-skills",
     "site": "https://skills.addy.ie",
-    "stars": "110.6k",
+    "stars": "110.7k",
     "cmd": "npx skills add addyosmani/agent-skills",
     "use": [
       "web",
@@ -700,7 +700,7 @@
     "isNew": true,
     "gh": "https://github.com/wshobson/agents",
     "site": null,
-    "stars": "41.7k",
+    "stars": "41.8k",
     "cmd": "/plugin marketplace add wshobson/agents",
     "use": [
       "web",
@@ -852,7 +852,7 @@
     "isNew": true,
     "gh": "https://github.com/obra/superpowers",
     "site": null,
-    "stars": "305.3k",
+    "stars": "305.4k",
     "cmd": "/plugin install superpowers@claude-plugins-official",
     "use": [
       "claude"
@@ -981,7 +981,7 @@
     "isNew": false,
     "gh": "https://github.com/microsoft/playwright-mcp",
     "site": "https://www.npmjs.com/package/@playwright/mcp",
-    "stars": "38.6k",
+    "stars": "38.7k",
     "cmd": "claude mcp add playwright npx @playwright/mcp@latest",
     "use": [
       "claude",
@@ -1092,7 +1092,7 @@
     "isNew": false,
     "gh": "https://github.com/microsoft/playwright",
     "site": "https://playwright.dev",
-    "stars": "98.5k",
+    "stars": "98.6k",
     "cmd": "npm init playwright@latest",
     "use": [
       "web",
@@ -1101,7 +1101,7 @@
     "desc": "يختبر الموقع تلقائيًا على Chrome وFirefox وSafari وشاشات الجوال.",
     "desc_de": "Testet Websites automatisch in Chrome, Firefox und Safari sowie auf Smartphone-Bildschirmen.",
     "desc_en": "Tests the website automatically on Chrome, Firefox, Safari and mobile screens.",
-    "pushed": "2026-10-25",
+    "pushed": "2026-10-26",
     "added": "2026-10-24T00:00:00Z",
     "license": "Apache-2.0",
     "archived": false
@@ -1160,7 +1160,7 @@
     "isNew": false,
     "gh": "https://github.com/motiondivision/motion",
     "site": "https://motion.dev",
-    "stars": "34.5k",
+    "stars": "34.6k",
     "cmd": "npm install motion",
     "use": [
       "landing",
@@ -1301,7 +1301,7 @@
     "desc": "تعلّم Claude قواعد Remotion لصنع فيديوهات دعائية بالكود بدون أخطاء توقيت.",
     "desc_de": "Bringt Claude die Regeln von Remotion bei, damit Werbevideos per Code ohne Timing-Fehler entstehen.",
     "desc_en": "Teaches Claude Remotion's rules so promo videos made with code come out without timing errors.",
-    "pushed": "2026-10-22",
+    "pushed": "2026-10-26",
     "added": "2026-10-24T00:00:00Z",
     "license": "none",
     "archived": false
@@ -1751,7 +1751,7 @@
     "isNew": true,
     "gh": "https://github.com/PostHog/posthog",
     "site": "https://posthog.com",
-    "stars": "40.4k",
+    "stars": "40.5k",
     "cmd": "npm install posthog-js\nflutter pub add posthog_flutter",
     "use": [
       "web",
@@ -1999,7 +1999,7 @@
     "isNew": true,
     "gh": "https://github.com/lycheeverse/lychee",
     "site": "https://lychee.cli.rs",
-    "stars": "4k",
+    "stars": "4.1k",
     "cmd": "brew install lychee",
     "use": [
       "shop",
@@ -2009,7 +2009,7 @@
     "desc": "يكشف الروابط المعطلة بسرعة في الصفحات التي تعطيه إياها، مثل روابط خريطة الموقع.",
     "desc_de": "Findet schnell defekte Links auf den Seiten, die du ihm übergibst – z. B. die Links aus der Sitemap.",
     "desc_en": "Quickly finds broken links in the pages you give it, such as the links in your sitemap.",
-    "pushed": "2026-10-22",
+    "pushed": "2026-10-26",
     "added": "2026-10-24T00:00:00Z",
     "license": "Apache-2.0",
     "archived": false
@@ -2032,7 +2032,7 @@
     "desc": "فاحص Mozilla الرسمي لترويسات الأمان، ويعطي موقعك درجة ونتيجة لكل اختبار. في Shopify تتحكم المنصة بأغلب هذه الترويسات.",
     "desc_de": "Mozillas offizielles Prüftool für Sicherheits-Header gibt deiner Website eine Note und für jeden Test ein Ergebnis. Bei Shopify steuert die Plattform die meisten dieser Header.",
     "desc_en": "Mozilla's official security headers checker; it gives your website a grade and a result for each test. On Shopify the platform controls most of these headers.",
-    "pushed": "2026-10-22",
+    "pushed": "2026-10-26",
     "added": "2026-10-24T00:00:00Z",
     "license": "MPL-2.0",
     "archived": false
@@ -2045,7 +2045,7 @@
     "isNew": true,
     "gh": "https://github.com/heygen-com/hyperframes",
     "site": "https://hyperframes.dev",
-    "stars": "72.6k",
+    "stars": "72.7k",
     "cmd": "claude plugin marketplace add heygen-com/hyperframes\nclaude plugin install hyperframes@hyperframes",
     "use": [
       "shop",
@@ -2127,7 +2127,7 @@
     "desc": "أداة Motion الرسمية تضيف مهارة /motion وبحثًا في أحدث وثائق Motion. المستودع جديد جدًا، وبعض المزايا تحتاج اشتراك Motion+.",
     "desc_de": "Das offizielle Tool von Motion fügt den Skill /motion und eine Suche in der neuesten Motion-Dokumentation hinzu. Das Repository ist sehr neu, und einige Funktionen benötigen ein Motion+-Abo.",
     "desc_en": "Motion's official tool adds a /motion skill and a search of the latest Motion documentation. The repository is very new, and some features need a Motion+ subscription.",
-    "pushed": "2026-10-23",
+    "pushed": "2026-10-26",
     "added": "2026-10-24T00:00:00Z",
     "license": "none",
     "archived": false
@@ -2140,7 +2140,7 @@
     "isNew": true,
     "gh": "https://github.com/rampstackco/claude-skills",
     "site": "https://rampstack.co",
-    "stars": "995",
+    "stars": "996",
     "cmd": "/plugin marketplace add rampstackco/claude-skills\n/plugin install rampstack-skills@rampstack",
     "use": [
       "brand",
@@ -2368,7 +2368,7 @@
     "desc": "تطبيق صغير في شريط Mac يعطي Claude وصولًا إلى الرسائل وجهات الاتصال والتقويم والتذكيرات والاختصارات، مع إذن منفصل لكل خدمة.",
     "desc_de": "Kleine App in der Menüleiste des Mac, die Claude Zugriff auf Nachrichten, Kontakte, Kalender, Erinnerungen und Kurzbefehle gibt – mit einer eigenen Berechtigung für jeden Dienst.",
     "desc_en": "A small app in the Mac menu bar that gives Claude access to Messages, Contacts, Calendar, Reminders and Shortcuts, with a separate permission for each service.",
-    "pushed": "2026-10-25",
+    "pushed": "2026-10-26",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -2558,7 +2558,7 @@
     "isNew": true,
     "gh": "https://github.com/itplr-kosit/validator",
     "site": null,
-    "stars": "189",
+    "stars": "190",
     "cmd": "java -jar validator-<version>-standalone.jar -s <scenario-config-file>",
     "use": [
       "finance"
@@ -2743,7 +2743,7 @@
     "isNew": true,
     "gh": "https://github.com/DavidHDev/react-bits",
     "site": "https://reactbits.dev",
-    "stars": "50.2k",
+    "stars": "50.3k",
     "cmd": "npx shadcn@latest add @react-bits/HoldButton-TS-TW",
     "use": [
       "web",
@@ -2886,7 +2886,7 @@
     "isNew": true,
     "gh": "https://github.com/pmndrs/react-three-fiber",
     "site": "https://docs.pmnd.rs/react-three-fiber",
-    "stars": "33.2k",
+    "stars": "33.3k",
     "cmd": "npm install three @types/three @react-three/fiber",
     "use": [
       "landing",
@@ -2981,7 +2981,7 @@
     "isNew": true,
     "gh": "https://github.com/wshobson/agents",
     "site": null,
-    "stars": "41.7k",
+    "stars": "41.8k",
     "cmd": "npx skills add https://github.com/wshobson/agents --skill interaction-design",
     "use": [
       "web",
@@ -3216,7 +3216,7 @@
     "desc": "إضافة Capacitor الرسمية للاهتزاز الخفيف عند الضغط والنجاح، فيبدو التطبيق كأنه تطبيق أصلي عند دمجها مع الحركة.",
     "desc_de": "Offizielles Capacitor-Plugin für leichtes haptisches Feedback beim Tippen und bei Erfolg – in Kombination mit Animationen wirkt die App dadurch wie eine native App.",
     "desc_en": "Capacitor's official plugin for light haptic feedback on tap and success, so the app feels native when combined with animation.",
-    "pushed": "2026-10-23",
+    "pushed": "2026-10-26",
     "added": "2026-10-24T00:00:00Z",
     "license": "other",
     "archived": false
@@ -3229,7 +3229,7 @@
     "isNew": true,
     "gh": "https://github.com/remotion-dev/remotion",
     "site": "https://remotion.dev",
-    "stars": "67.6k",
+    "stars": "67.7k",
     "cmd": "npx create-video@latest",
     "use": [
       "shop",
@@ -3241,7 +3241,7 @@
     "desc": "إطار React لصنع فيديوهات MP4 بالكود، مع أدوات للصوت والترجمة. مجاني للأفراد والشركات حتى 3 أشخاص، وبعدها يحتاج رخصة مدفوعة.",
     "desc_de": "React-Framework, um MP4-Videos per Code zu erstellen, mit Tools für Audio und Untertitel. Kostenlos für Einzelpersonen und Unternehmen mit bis zu 3 Personen, darüber hinaus wird eine kostenpflichtige Lizenz benötigt.",
     "desc_en": "A React framework for making MP4 videos with code, with tools for audio and subtitles. Free for individuals and companies of up to 3 people; beyond that it needs a paid license.",
-    "pushed": "2026-10-25",
+    "pushed": "2026-10-26",
     "added": "2026-10-24T00:00:00Z",
     "license": "other",
     "archived": false
@@ -3279,7 +3279,7 @@
     "isNew": true,
     "gh": "https://github.com/calesthio/OpenMontage",
     "site": "https://www.openmontage.video/",
-    "stars": "72k",
+    "stars": "72.1k",
     "cmd": "git clone https://github.com/calesthio/OpenMontage.git\ncd OpenMontage\nmake setup",
     "use": [
       "shop",
@@ -3549,7 +3549,7 @@
     "isNew": true,
     "gh": "https://github.com/kumoproductions/mcp-aftereffects",
     "site": null,
-    "stars": "139",
+    "stars": "140",
     "cmd": "claude mcp add aftereffects -- npx -y @kumoproductions/mcp-aftereffects",
     "use": [
       "brand",
@@ -3749,7 +3749,7 @@
     "isNew": true,
     "gh": "https://github.com/Egonex-AI/Understand-Anything",
     "site": "https://understand-anything.com",
-    "stars": "88.3k",
+    "stars": "88.4k",
     "cmd": "/plugin marketplace add Egonex-AI/Understand-Anything\n/plugin install understand-anything",
     "use": [
       "web",
@@ -3774,7 +3774,7 @@
     "isNew": true,
     "gh": "https://github.com/morluto/rea",
     "site": "https://rea.tools/",
-    "stars": "388k",
+    "stars": "389.2k",
     "cmd": "npx rea-agents setup",
     "use": [
       "mobile",
@@ -3807,7 +3807,7 @@
     "desc": "يولّد فيديو قصيرًا بجودة عالية من موضوع أو كلمة مفتاحية: يكتب النص، ويختار اللقطات، ويضيف التعليق الصوتي والترجمة والموسيقى. يعمل من واجهة ويب أو من الطرفية، ومفيد لفيديوهات تيك توك وريلز ويوتيوب شورتس لمتجرك. الصوت عبر Edge TTS مجاني بلا مفتاح، أما النموذج اللغوي واللقطات والصوت المتقدم فتحتاج مفاتيح API خاصة بك وقد تكون مدفوعة. الحزمة الرسمية على PyPI اسمها mpt فقط، وحزمة MoneyPrinterTurbo هناك من طرف ثالث. يحتاج Python 3.11 أو أحدث. رخصته MIT.",
     "desc_de": "Erzeugt aus einem Thema oder Stichwort ein kurzes Video in hoher Qualität: schreibt das Skript, wählt das Filmmaterial aus und fügt Voice-over, Untertitel und Musik hinzu. Läuft über eine Weboberfläche oder im Terminal und eignet sich für TikTok-, Reels- und YouTube-Shorts-Videos für deinen Shop. Die Sprachausgabe über Edge TTS ist kostenlos und ohne Schlüssel; Sprachmodell, Filmmaterial und erweiterte Sprachausgabe benötigen dagegen deine eigenen API-Schlüssel und können kostenpflichtig sein. Das offizielle Paket auf PyPI heißt nur mpt – das dortige Paket MoneyPrinterTurbo stammt von Dritten. Benötigt Python 3.11 oder neuer. Lizenz: MIT.",
     "desc_en": "Generates a high-quality short video from a topic or keyword: it writes the script, picks the footage, and adds voice-over, subtitles and music. Runs from a web interface or from the terminal, and is useful for TikTok, Reels and YouTube Shorts videos for your store. Voice through Edge TTS is free with no key, while the language model, footage and advanced voice need your own API keys and may be paid. The official package on PyPI is called just mpt, and the MoneyPrinterTurbo package there is from a third party. Needs Python 3.11 or later. Licensed MIT.",
-    "pushed": "2026-10-25",
+    "pushed": "2026-10-26",
     "license": "MIT",
     "archived": false,
     "added": "2026-10-25T15:59:36Z"
@@ -4241,7 +4241,7 @@
     "desc": "قاموس مرادفات ألماني مجاني يحرره مجتمع المستخدمين، يقترح كلمات بديلة لتجنب تكرار اللفظ نفسه في أوصاف المنتجات والنصوص. بياناته قابلة للتنزيل برخصة CC BY-SA أو LGPL مع ذكر المصدر، وشيفرة الموقع مفتوحة. للألمانية فقط.",
     "desc_de": "Kostenloses deutsches Synonymwörterbuch, das von der Nutzer-Community bearbeitet wird: schlägt alternative Wörter vor, um Wiederholungen desselben Begriffs in Produktbeschreibungen und Texten zu vermeiden. Die Daten lassen sich unter der Lizenz CC BY-SA oder LGPL mit Quellenangabe herunterladen, der Code der Website ist Open Source. Nur für Deutsch.",
     "desc_en": "A free German thesaurus edited by its user community that suggests alternative words, to avoid repeating the same word in product descriptions and texts. Its data can be downloaded under a CC BY-SA or LGPL license with attribution, and the website's code is open. German only.",
-    "pushed": "2026-10-25",
+    "pushed": "2026-10-26",
     "license": "AGPL-3.0",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -4601,7 +4601,7 @@
     "isNew": true,
     "gh": "https://github.com/promptfoo/promptfoo",
     "site": "https://www.promptfoo.dev",
-    "stars": "26.4k",
+    "stars": "26.5k",
     "cmd": "npm install -g promptfoo\npromptfoo init --example getting-started",
     "use": [
       "claude",
@@ -4802,7 +4802,7 @@
     "isNew": true,
     "gh": "https://github.com/career-ops-hq/career-ops",
     "site": "https://career-ops.org",
-    "stars": "77.4k",
+    "stars": "77.5k",
     "cmd": "npx @santifer/career-ops init\ncd career-ops\nclaude",
     "use": [
       "claude"
@@ -5714,7 +5714,7 @@
     "isNew": true,
     "gh": "https://github.com/SupercmoHQ/superCMO-skills",
     "site": "https://getsupercmo.ai",
-    "stars": "221",
+    "stars": "222",
     "cmd": "/plugin marketplace add SupercmoHQ/superCMO-skills\n/plugin install supercmo@superCMO-skills",
     "use": [
       "shop",
@@ -5852,7 +5852,7 @@
     "isNew": true,
     "gh": "https://github.com/social-media-skills/skills",
     "site": "https://social-media-skills.com",
-    "stars": "199",
+    "stars": "200",
     "cmd": "/plugin marketplace add social-media-skills/skills\n/plugin install social-media-skills@social-media-skills",
     "use": [
       "shop",
@@ -5943,7 +5943,7 @@
     "isNew": true,
     "gh": "https://github.com/AgriciDaniel/claude-repurpose",
     "site": null,
-    "stars": "162",
+    "stars": "163",
     "cmd": "curl -fsSL https://raw.githubusercontent.com/AgriciDaniel/claude-repurpose/main/install.sh | bash",
     "use": [
       "brand",
@@ -6298,14 +6298,16 @@
     "isNew": false,
     "gh": "https://github.com/p0deje/Maccy",
     "site": "https://maccy.app",
-    "stars": null,
+    "stars": "22.1k",
     "cmd": "brew install --cask maccy",
     "use": [],
     "desc": "مدير حافظة خفيف لـ Mac: يحفظ كل ما تنسخه، وتفتح قائمته باختصار لوحة المفاتيح لتبحث فيها وتلصق أي نص أو صورة نسختها من قبل.",
     "desc_de": "Schlanker Zwischenablage-Manager für den Mac: Er merkt sich alles, was du kopierst. Per Tastenkürzel öffnest du die Liste, durchsuchst sie und fügst frühere Texte oder Bilder wieder ein.",
     "desc_en": "A lightweight clipboard manager for Mac: it keeps everything you copy, and a keyboard shortcut opens the list so you can search it and paste any earlier text or image.",
-    "pushed": null,
-    "added": "2026-10-26T13:46:00Z"
+    "pushed": "2026-10-23",
+    "added": "2026-10-26T13:46:00Z",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "stats",
@@ -6315,14 +6317,16 @@
     "isNew": false,
     "gh": "https://github.com/exelban/stats",
     "site": null,
-    "stars": null,
+    "stars": "42.8k",
     "cmd": "brew install --cask stats",
     "use": [],
     "desc": "مراقب للنظام في شريط القوائم على Mac: المعالج ومعالج الرسوم والذاكرة والقرص والشبكة والبطارية والحرارة، وتختار ما يظهر منها.",
     "desc_de": "Systemmonitor für die Menüleiste des Macs: CPU, GPU, Arbeitsspeicher, Festplatte, Netzwerk, Akku und Temperatur – du wählst, was angezeigt wird.",
     "desc_en": "A system monitor for your Mac's menu bar: CPU, GPU, memory, disk, network, battery and temperatures, and you choose what shows.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-25",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "rectangle",
@@ -6332,14 +6336,16 @@
     "isNew": false,
     "gh": "https://github.com/rxhanson/Rectangle",
     "site": "https://rectangleapp.com",
-    "stars": null,
+    "stars": "30.2k",
     "cmd": "brew install --cask rectangle",
     "use": [],
     "desc": "ترتيب النوافذ على Mac باختصارات لوحة المفاتيح أو بسحبها إلى حافة الشاشة: نصف الشاشة أو ربعها أو ملؤها.",
     "desc_de": "Fenster auf dem Mac per Tastenkürzel oder durch Ziehen an den Bildschirmrand anordnen: halbe Seite, Viertel oder Vollbild.",
     "desc_en": "Arrange windows on your Mac with keyboard shortcuts or by dragging them to a screen edge: halves, quarters or full screen.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-25",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "alttab",
@@ -6349,14 +6355,16 @@
     "isNew": false,
     "gh": "https://github.com/lwouis/alt-tab-macos",
     "site": "https://alt-tab-macos.netlify.app",
-    "stars": null,
+    "stars": "16.4k",
     "cmd": "brew install --cask alt-tab",
     "use": [],
     "desc": "مبدّل نوافذ بأسلوب Windows لـ Mac: اختصار واحد يعرض كل نافذة مفتوحة بصورة مصغرة، لا التطبيقات فقط، فتنتقل إلى النافذة التي تريدها مباشرة.",
     "desc_de": "Fensterwechsler im Windows-Stil für den Mac: Ein Tastenkürzel zeigt jedes offene Fenster als Vorschau – nicht nur die Apps – und du springst direkt zum richtigen.",
     "desc_en": "A Windows-style window switcher for Mac: one shortcut shows every open window as a thumbnail, not just apps, so you jump straight to the one you want.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-23",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "GPL-3.0",
+    "archived": false
   },
   {
     "slug": "ice",
@@ -6366,14 +6374,16 @@
     "isNew": false,
     "gh": "https://github.com/jordanbaird/Ice",
     "site": "https://icemenubar.app",
-    "stars": null,
+    "stars": "29.9k",
     "cmd": "brew install --cask jordanbaird-ice",
     "use": [],
     "desc": "يرتّب شريط القوائم في Mac: يخفي الأيقونات التي لا تحتاجها خلف زر أو في شريط ثانٍ، وتظهر حين تمرّ عليه.",
     "desc_de": "Räumt die Menüleiste deines Macs auf: Symbole, die du selten brauchst, verschwinden hinter einem Knopf oder in einer zweiten Leiste und erscheinen beim Darüberfahren.",
     "desc_en": "Tidies your Mac's menu bar: icons you rarely need hide behind a button or in a second bar, and show up when you hover.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-06",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "GPL-3.0",
+    "archived": false
   },
   {
     "slug": "iina",
@@ -6383,14 +6393,16 @@
     "isNew": false,
     "gh": "https://github.com/iina/iina",
     "site": "https://iina.io",
-    "stars": null,
+    "stars": "46.9k",
     "cmd": "brew install --cask iina",
     "use": [],
     "desc": "مشغّل فيديو حديث لـ Mac: يفتح كل الصيغ تقريبًا، مع الترجمات وصورة داخل صورة وإيماءات لوحة اللمس.",
     "desc_de": "Moderner Videoplayer für den Mac: spielt fast jedes Format ab, mit Untertiteln, Bild-in-Bild und Trackpad-Gesten.",
     "desc_en": "A modern video player for Mac: plays almost any format, with subtitles, picture-in-picture and trackpad gestures.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-25",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "GPL-3.0",
+    "archived": false
   },
   {
     "slug": "boring-notch",
@@ -6400,14 +6412,16 @@
     "isNew": false,
     "gh": "https://github.com/TheBoredTeam/boring.notch",
     "site": null,
-    "stars": null,
+    "stars": "11.1k",
     "cmd": "brew install --cask TheBoredTeam/boring-notch/boring-notch",
     "use": [],
     "desc": "يحوّل نتوء شاشة MacBook إلى لوحة حيّة: التحكم بالموسيقى مع موجة صوت، والتقويم، ورفّ تضع فيه الملفات.",
     "desc_de": "Macht die Notch deines MacBooks zur Steuerzentrale: Musiksteuerung mit Visualizer, Kalender und eine Ablage für Dateien.",
     "desc_en": "Turns your MacBook's notch into a control center: music controls with a visualizer, your calendar and a shelf for files.",
-    "pushed": null,
-    "added": "2026-10-26T13:43:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:43:00Z",
+    "license": "GPL-3.0",
+    "archived": false
   },
   {
     "slug": "tendedero",
@@ -6417,14 +6431,16 @@
     "isNew": false,
     "gh": "https://github.com/alejandrobujan/tendedero",
     "site": null,
-    "stars": null,
+    "stars": "2.6k",
     "cmd": null,
     "use": [],
     "desc": "يعلّق لقطات الشاشة على حبل غسيل أعلى شاشة Mac: يظهر حين تقترب من شريط القوائم، فتنقر اللقطة لنسخها أو تفتحها بنقرتين.",
     "desc_de": "Hängt deine Bildschirmfotos auf eine Wäscheleine oben am Mac-Bildschirm: Sie erscheint, wenn du an die Menüleiste fährst. Ein Klick kopiert ein Bild, ein Doppelklick öffnet es.",
     "desc_en": "Hangs your screenshots on a clothesline at the top of your Mac's screen: it appears when you reach the menu bar. Click a shot to copy it, double-click to open it.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-18",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "monitorcontrol",
@@ -6434,14 +6450,16 @@
     "isNew": false,
     "gh": "https://github.com/MonitorControl/MonitorControl",
     "site": null,
-    "stars": null,
+    "stars": "34.6k",
     "cmd": "brew install --cask monitorcontrol",
     "use": [],
     "desc": "تتحكم بسطوع الشاشة الخارجية وصوتها من Mac بمفاتيح لوحة المفاتيح نفسها، كأنها شاشة Apple.",
     "desc_de": "Steuere Helligkeit und Lautstärke externer Monitore mit den normalen Mac-Tasten – wie bei einem Apple-Display.",
     "desc_en": "Control the brightness and volume of external displays with your Mac's own keys, just like an Apple display.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-14",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "pearcleaner",
@@ -6451,14 +6469,16 @@
     "isNew": false,
     "gh": "https://github.com/alienator88/Pearcleaner",
     "site": null,
-    "stars": null,
+    "stars": "15k",
     "cmd": "brew install --cask pearcleaner",
     "use": [],
     "desc": "يحذف التطبيق من Mac مع كل ما يتركه خلفه: الإعدادات والذاكرة المؤقتة وملفات الدعم التي لا يحذفها السحب إلى سلة المهملات.",
     "desc_de": "Entfernt Apps samt aller Reste vom Mac: Einstellungen, Caches und Support-Dateien, die beim Ziehen in den Papierkorb liegen bleiben.",
     "desc_en": "Removes apps from your Mac along with everything they leave behind: settings, caches and support files that dragging to the Trash misses.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-06-22",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "loop",
@@ -6468,14 +6488,16 @@
     "isNew": false,
     "gh": "https://github.com/MrKai77/Loop",
     "site": null,
-    "stars": null,
+    "stars": "11.9k",
     "cmd": "brew install --cask loop",
     "use": [],
     "desc": "إدارة النوافذ على Mac بقائمة دائرية: تضغط مفتاحًا وتحرّك الفأرة نحو اتجاه، فتأخذ النافذة نصف الشاشة أو ربعها أو تملؤها.",
     "desc_de": "Fensterverwaltung für den Mac mit Radialmenü: Taste halten, Maus in eine Richtung bewegen – und das Fenster nimmt die Hälfte, ein Viertel oder den ganzen Bildschirm ein.",
     "desc_en": "Window management for Mac with a radial menu: hold a key, move the mouse in a direction, and the window snaps to a half, a quarter or the full screen.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-18",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "GPL-3.0",
+    "archived": false
   },
   {
     "slug": "lulu",
@@ -6485,14 +6507,16 @@
     "isNew": false,
     "gh": "https://github.com/objective-see/LuLu",
     "site": "https://objective-see.org/products/lulu.html",
-    "stars": null,
+    "stars": "13.4k",
     "cmd": "brew install --cask lulu",
     "use": [],
     "desc": "جدار حماية مجاني لـ Mac: ينبّهك حين يحاول تطبيق الاتصال بالإنترنت، فتسمح له أو تمنعه.",
     "desc_de": "Kostenlose Firewall für den Mac: Sie meldet sich, wenn eine App ins Internet will, und du erlaubst oder blockierst die Verbindung.",
     "desc_en": "A free firewall for Mac: it alerts you when an app tries to connect to the internet, so you can allow or block it.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-23",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "GPL-3.0",
+    "archived": false
   },
   {
     "slug": "aerospace",
@@ -6502,14 +6526,16 @@
     "isNew": false,
     "gh": "https://github.com/nikitabobko/AeroSpace",
     "site": null,
-    "stars": null,
+    "stars": "23.6k",
     "cmd": "brew install --cask nikitabobko/tap/aerospace",
     "use": [],
     "desc": "مدير نوافذ متجانبة لـ Mac بأسلوب i3: النوافذ تترتب جنبًا إلى جنب تلقائيًا، وتتنقل بينها وبين مساحات العمل بلوحة المفاتيح وحدها.",
     "desc_de": "Kachelnder Fenstermanager im Stil von i3 für den Mac: Fenster ordnen sich automatisch nebeneinander an, und du wechselst Fenster und Arbeitsbereiche nur per Tastatur.",
     "desc_en": "An i3-style tiling window manager for Mac: windows arrange themselves side by side, and you move between them and workspaces with the keyboard alone.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-02",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "keycastr",
@@ -6519,7 +6545,7 @@
     "isNew": false,
     "gh": "https://github.com/keycastr/keycastr",
     "site": null,
-    "stars": null,
+    "stars": "15.2k",
     "cmd": "brew install --cask keycastr",
     "use": [
       "video"
@@ -6527,8 +6553,10 @@
     "desc": "يعرض على شاشة Mac المفاتيح التي تضغطها أثناء التسجيل، ليرى المشاهد الاختصارات في الشروحات والعروض.",
     "desc_de": "Blendet deine Tastendrücke auf dem Mac-Bildschirm ein – ideal für Tutorials und Präsentationen, damit Zuschauer Tastenkürzel sehen.",
     "desc_en": "Shows the keys you press on your Mac's screen while you record, so viewers can follow shortcuts in tutorials and demos.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-09-07",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "BSD-3-Clause",
+    "archived": false
   },
   {
     "slug": "utm",
@@ -6538,14 +6566,16 @@
     "isNew": false,
     "gh": "https://github.com/utmapp/UTM",
     "site": "https://mac.getutm.app",
-    "stars": null,
+    "stars": "36.5k",
     "cmd": "brew install --cask utm",
     "use": [],
     "desc": "يشغّل Windows وLinux وأنظمة أخرى داخل Mac في أجهزة افتراضية، بواجهة بسيطة ومن غير برامج مدفوعة.",
     "desc_de": "Betreibt Windows, Linux und andere Systeme in virtuellen Maschinen auf dem Mac – mit einfacher Oberfläche und ohne kostenpflichtige Software.",
     "desc_en": "Runs Windows, Linux and other systems in virtual machines on your Mac, with a simple interface and no paid software.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-20",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "Apache-2.0",
+    "archived": false
   },
   {
     "slug": "powertoys",
@@ -6555,14 +6585,16 @@
     "isNew": false,
     "gh": "https://github.com/microsoft/PowerToys",
     "site": "https://learn.microsoft.com/windows/powertoys/",
-    "stars": null,
+    "stars": "140k",
     "cmd": "winget install -e --id Microsoft.PowerToys",
     "use": [],
     "desc": "مجموعة أدوات Microsoft لـ Windows: تخطيطات للنوافذ (FancyZones)، ومشغّل سريع، ومنتقي ألوان، ونسخ النص من الصور، وغيرها.",
     "desc_de": "Microsofts Werkzeugkasten für Windows: Fensterlayouts (FancyZones), ein Schnellstarter, ein Farbwähler, Text aus Bildern kopieren und vieles mehr.",
     "desc_en": "Microsoft's set of utilities for Windows: window layouts (FancyZones), a quick launcher, a color picker, copying text from images and more.",
-    "pushed": null,
-    "added": "2026-10-26T13:45:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:45:00Z",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "sharex",
@@ -6572,14 +6604,16 @@
     "isNew": false,
     "gh": "https://github.com/ShareX/ShareX",
     "site": "https://getsharex.com",
-    "stars": null,
+    "stars": "40.4k",
     "cmd": "winget install -e --id ShareX.ShareX",
     "use": [],
     "desc": "لقطات الشاشة وتسجيلها على Windows بكل ما تحتاجه: تحديد منطقة، والتعليق على الصورة، ونسخ النص منها، ورفعها ومشاركة رابطها.",
     "desc_de": "Bildschirmfotos und -aufnahmen unter Windows mit allem Drum und Dran: Bereich wählen, beschriften, Text erkennen, hochladen und Link teilen.",
     "desc_en": "Screenshots and screen recording on Windows with everything you need: capture a region, annotate it, pull out text, upload it and share the link.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "GPL-3.0",
+    "archived": false
   },
   {
     "slug": "flow-launcher",
@@ -6589,14 +6623,16 @@
     "isNew": false,
     "gh": "https://github.com/Flow-Launcher/Flow.Launcher",
     "site": "https://www.flowlauncher.com",
-    "stars": null,
+    "stars": "15.9k",
     "cmd": "winget install -e --id Flow-Launcher.Flow-Launcher",
     "use": [],
     "desc": "مشغّل سريع لـ Windows مثل Spotlight: اختصار واحد تبحث به في التطبيقات والملفات والويب، وتزيد قدراته بإضافات.",
     "desc_de": "Schnellstarter für Windows wie Spotlight: ein Tastenkürzel, um Apps, Dateien und das Web zu durchsuchen – erweiterbar mit Plugins.",
     "desc_en": "A quick launcher for Windows like Spotlight: one shortcut to search apps, files and the web, extendable with plugins.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-25",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "files",
@@ -6606,14 +6642,16 @@
     "isNew": false,
     "gh": "https://github.com/files-community/Files",
     "site": "https://files.community",
-    "stars": null,
+    "stars": "46.2k",
     "cmd": null,
     "use": [],
     "desc": "مدير ملفات حديث لـ Windows بتبويبات وعرض بالأعمدة ولوحين متجاورين، بتصميم يناسب Windows 11.",
     "desc_de": "Moderner Dateimanager für Windows mit Tabs, Spaltenansicht und Doppelansicht im Design von Windows 11.",
     "desc_en": "A modern file manager for Windows with tabs, columns and dual panes, designed to fit Windows 11.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "eartrumpet",
@@ -6623,14 +6661,16 @@
     "isNew": false,
     "gh": "https://github.com/File-New-Project/EarTrumpet",
     "site": null,
-    "stars": null,
+    "stars": "11.5k",
     "cmd": "winget install -e --id File-New-Project.EarTrumpet",
     "use": [],
     "desc": "تتحكم بصوت كل تطبيق على حدة في Windows من أيقونة شريط المهام، وتنقل أي تطبيق إلى سماعة أخرى.",
     "desc_de": "Lautstärke jeder App einzeln unter Windows regeln – direkt aus der Taskleiste – und Apps auf ein anderes Ausgabegerät legen.",
     "desc_en": "Control the volume of each app separately on Windows from the taskbar, and send any app to a different output device.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-25",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "nanazip",
@@ -6640,14 +6680,16 @@
     "isNew": false,
     "gh": "https://github.com/M2Team/NanaZip",
     "site": null,
-    "stars": null,
+    "stars": "16k",
     "cmd": "winget install -e --id M2Team.NanaZip",
     "use": [],
     "desc": "برنامج ضغط مبني على 7-Zip لـ Windows 11: تضغط الملفات وتفك ZIP و7z وRAR وغيرها من قائمة النقر بالزر الأيمن الجديدة.",
     "desc_de": "Ein auf 7-Zip basierendes Packprogramm für Windows 11: Packt und entpackt ZIP, 7z, RAR und mehr direkt im neuen Kontextmenü.",
     "desc_en": "A 7-Zip-based archiver made for Windows 11: compress and extract ZIP, 7z, RAR and more right from the new context menu.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "windhawk",
@@ -6657,14 +6699,16 @@
     "isNew": false,
     "gh": "https://github.com/ramensoftware/windhawk",
     "site": "https://windhawk.net",
-    "stars": null,
+    "stars": "9.6k",
     "cmd": "winget install -e --id RamenSoftware.Windhawk",
     "use": [],
     "desc": "تعديلات صغيرة تخصّص بها Windows كما تريد: شريط المهام وقائمة ابدأ والنوافذ، تثبّتها وتحذفها بنقرة من قائمة التعديلات.",
     "desc_de": "Kleine Mods, mit denen du Windows anpasst – Taskleiste, Startmenü, Fenster –, per Klick aus dem Mod-Katalog installiert und entfernt.",
     "desc_en": "Small mods to customize Windows the way you like – taskbar, Start menu, windows – installed and removed with one click from its mod catalog.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-25",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "GPL-3.0",
+    "archived": false
   },
   {
     "slug": "twinkle-tray",
@@ -6674,14 +6718,16 @@
     "isNew": false,
     "gh": "https://github.com/xanderfrangos/twinkle-tray",
     "site": null,
-    "stars": null,
+    "stars": "9.2k",
     "cmd": "winget install -e --id xanderfrangos.twinkletray",
     "use": [],
     "desc": "سطوع كل شاشة خارجية من شريط المهام في Windows، مثل سطوع الحاسوب المحمول، مع ضبطه حسب الوقت.",
     "desc_de": "Helligkeit jedes externen Monitors aus der Windows-Taskleiste regeln – wie beim Laptop-Display –, auch zeitgesteuert.",
     "desc_en": "Adjust the brightness of every external monitor from the Windows taskbar, like a laptop screen, including by time of day.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-21",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "notepad",
@@ -6691,14 +6737,16 @@
     "isNew": false,
     "gh": "https://github.com/notepad-plus-plus/notepad-plus-plus",
     "site": "https://notepad-plus-plus.org",
-    "stars": null,
+    "stars": "29.7k",
     "cmd": "winget install -e --id Notepad++.Notepad++",
     "use": [],
     "desc": "محرر نصوص وشيفرة سريع لـ Windows: تلوين لعشرات اللغات، وتبويبات، وبحث واستبدال قوي.",
     "desc_de": "Schneller Text- und Code-Editor für Windows: Syntaxhervorhebung für Dutzende Sprachen, Tabs und starkes Suchen und Ersetzen.",
     "desc_en": "A fast text and code editor for Windows: syntax highlighting for dozens of languages, tabs and powerful find and replace.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-23",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "ditto",
@@ -6708,14 +6756,16 @@
     "isNew": false,
     "gh": "https://github.com/sabrogden/Ditto",
     "site": null,
-    "stars": null,
+    "stars": "7.4k",
     "cmd": "winget install -e --id Ditto.Ditto",
     "use": [],
     "desc": "مدير حافظة لـ Windows: يحفظ كل ما تنسخه من نصوص وصور، فتبحث فيه وتلصقه لاحقًا.",
     "desc_de": "Zwischenablage-Manager für Windows: speichert alles, was du kopierst – Texte und Bilder –, zum späteren Suchen und Einfügen.",
     "desc_en": "A clipboard manager for Windows: it saves everything you copy, text and images, so you can search and paste it later.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-01",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "GPL-3.0",
+    "archived": false
   },
   {
     "slug": "windows-terminal",
@@ -6725,14 +6775,16 @@
     "isNew": false,
     "gh": "https://github.com/microsoft/terminal",
     "site": null,
-    "stars": null,
+    "stars": "105.2k",
     "cmd": "winget install -e --id Microsoft.WindowsTerminal",
     "use": [],
     "desc": "طرفية Microsoft الحديثة لـ Windows: تبويبات وألواح متجاورة لـ PowerShell وموجّه الأوامر وWSL، بسمات وخطوط تختارها.",
     "desc_de": "Microsofts modernes Terminal für Windows: Tabs und geteilte Bereiche für PowerShell, Eingabeaufforderung und WSL, mit anpassbaren Designs und Schriften.",
     "desc_en": "Microsoft's modern terminal for Windows: tabs and split panes for PowerShell, Command Prompt and WSL, with customizable themes and fonts.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "rufus",
@@ -6742,14 +6794,16 @@
     "isNew": false,
     "gh": "https://github.com/pbatard/rufus",
     "site": "https://rufus.ie",
-    "stars": null,
+    "stars": "38.1k",
     "cmd": "winget install -e --id Rufus.Rufus",
     "use": [],
     "desc": "برنامج لـ Windows ينشئ ذاكرة USB قابلة للإقلاع من ملف ISO، لتثبيت Windows أو Linux مثلًا، في خطوات قليلة.",
     "desc_de": "Erstellt unter Windows bootfähige USB-Sticks aus ISO-Dateien, etwa um Windows oder Linux zu installieren – in wenigen Schritten.",
     "desc_en": "Creates bootable USB drives from ISO files on Windows, for example to install Windows or Linux, in a few steps.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "GPL-3.0",
+    "archived": false
   },
   {
     "slug": "autohotkey",
@@ -6759,14 +6813,16 @@
     "isNew": false,
     "gh": "https://github.com/AutoHotkey/AutoHotkey",
     "site": "https://www.autohotkey.com",
-    "stars": null,
+    "stars": "13.4k",
     "cmd": "winget install -e --id AutoHotkey.AutoHotkey",
     "use": [],
     "desc": "لغة أتمتة لـ Windows: اختصارات لوحة مفاتيح خاصة بك، ونصوص تتوسع وحدها، ومهام متكررة تنفّذها بضغطة.",
     "desc_de": "Automatisierungssprache für Windows: eigene Tastenkürzel, Textbausteine, die sich selbst erweitern, und wiederkehrende Aufgaben auf Knopfdruck.",
     "desc_en": "An automation language for Windows: your own keyboard shortcuts, auto-expanding text and repetitive tasks done with one key.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-25",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "GPL-2.0",
+    "archived": false
   },
   {
     "slug": "netnewswire",
@@ -6776,14 +6832,16 @@
     "isNew": false,
     "gh": "https://github.com/Ranchero-Software/NetNewsWire",
     "site": "https://netnewswire.com",
-    "stars": null,
+    "stars": "10.5k",
     "cmd": null,
     "use": [],
     "desc": "قارئ RSS مجاني لـ iPhone وiPad وMac: تتابع المواقع والمدونات في مكان واحد، مع مزامنة بين أجهزتك.",
     "desc_de": "Kostenloser RSS-Reader für iPhone, iPad und Mac: Verfolge Websites und Blogs an einem Ort, synchronisiert über deine Geräte.",
     "desc_en": "A free RSS reader for iPhone, iPad and Mac: follow websites and blogs in one place, synced across your devices.",
-    "pushed": null,
-    "added": "2026-10-26T13:42:00Z"
+    "pushed": "2026-10-25",
+    "added": "2026-10-26T13:42:00Z",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "ice-cubes",
@@ -6793,14 +6851,16 @@
     "isNew": false,
     "gh": "https://github.com/Dimillian/IceCubesApp",
     "site": "https://apps.apple.com/app/ice-cubes-for-mastodon/id6444915884",
-    "stars": null,
+    "stars": "7.1k",
     "cmd": null,
     "use": [],
     "desc": "تطبيق Mastodon لـ iPhone وiPad وMac مكتوب بـ SwiftUI: عدة حسابات، وخطوط زمنية حيّة، وإشعارات فورية.",
     "desc_de": "Mastodon-App für iPhone, iPad und Mac, geschrieben in SwiftUI: mehrere Konten, Live-Timelines und Push-Mitteilungen.",
     "desc_en": "A Mastodon app for iPhone, iPad and Mac, built with SwiftUI: multiple accounts, live timelines and push notifications.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-13",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "AGPL-3.0",
+    "archived": false
   },
   {
     "slug": "ish",
@@ -6810,14 +6870,16 @@
     "isNew": false,
     "gh": "https://github.com/ish-app/ish",
     "site": "https://ish.app",
-    "stars": null,
+    "stars": "20.6k",
     "cmd": null,
     "use": [],
     "desc": "طرفية Linux على iPhone وiPad: تشغّل أوامر Alpine Linux وتثبّت حزمه مباشرة على الجهاز.",
     "desc_de": "Ein Linux-Terminal auf iPhone und iPad: Führe Alpine-Linux-Befehle aus und installiere Pakete direkt auf dem Gerät.",
     "desc_en": "A Linux shell on iPhone and iPad: run Alpine Linux commands and install its packages right on the device.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-24",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "a-shell",
@@ -6827,14 +6889,16 @@
     "isNew": false,
     "gh": "https://github.com/holzschu/a-shell",
     "site": "https://apps.apple.com/app/a-shell/id1473805438",
-    "stars": null,
+    "stars": "4k",
     "cmd": null,
     "use": [],
     "desc": "طرفية Unix على iPhone وiPad تعمل بلا إنترنت: Python وJavaScript وC وأوامر Unix المعتادة مباشرة على الجهاز.",
     "desc_de": "Ein Unix-Terminal für iPhone und iPad, das offline läuft: Python, JavaScript, C und die üblichen Unix-Befehle direkt auf dem Gerät.",
     "desc_en": "A Unix terminal for iPhone and iPad that works offline: Python, JavaScript, C and the usual Unix commands right on the device.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-24",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "BSD-3-Clause",
+    "archived": false
   },
   {
     "slug": "pocket-casts",
@@ -6844,14 +6908,16 @@
     "isNew": false,
     "gh": "https://github.com/Automattic/pocket-casts-ios",
     "site": "https://pocketcasts.com",
-    "stars": null,
+    "stars": "1.8k",
     "cmd": null,
     "use": [],
     "desc": "مشغّل بودكاست شهير لـ iPhone بشيفرة مفتوحة: اشتراكات وقوائم تشغيل وتسريع الصوت وحذف لحظات الصمت، مع مزامنة بين الأجهزة.",
     "desc_de": "Bekannter Podcast-Player fürs iPhone mit offenem Quellcode: Abos, Playlists, schnellere Wiedergabe und das Kürzen von Stille, synchron über deine Geräte.",
     "desc_en": "A popular podcast player for iPhone with open source code: subscriptions, playlists, faster playback and silence trimming, synced across devices.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "MPL-2.0",
+    "archived": false
   },
   {
     "slug": "wikipedia",
@@ -6861,14 +6927,16 @@
     "isNew": false,
     "gh": "https://github.com/wikimedia/wikipedia-ios",
     "site": "https://apps.apple.com/app/wikipedia/id324715238",
-    "stars": null,
+    "stars": "3.5k",
     "cmd": null,
     "use": [],
     "desc": "تطبيق ويكيبيديا الرسمي لـ iPhone وiPad: مقالات بكل اللغات، وقوائم قراءة تحفظها لتقرأها بلا إنترنت.",
     "desc_de": "Die offizielle Wikipedia-App für iPhone und iPad: Artikel in allen Sprachen und Leselisten, die du offline lesen kannst.",
     "desc_en": "The official Wikipedia app for iPhone and iPad: articles in every language and reading lists you can save to read offline.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "mastodon",
@@ -6878,14 +6946,16 @@
     "isNew": false,
     "gh": "https://github.com/mastodon/mastodon-ios",
     "site": "https://joinmastodon.org/apps",
-    "stars": null,
+    "stars": "2.3k",
     "cmd": null,
     "use": [],
     "desc": "تطبيق Mastodon الرسمي لـ iPhone وiPad: شبكة اجتماعية لا تملكها شركة واحدة، تختار فيها الخادم الذي تنضم إليه.",
     "desc_de": "Die offizielle Mastodon-App für iPhone und iPad: ein soziales Netzwerk, das keiner einzelnen Firma gehört – du wählst den Server, dem du beitrittst.",
     "desc_en": "The official Mastodon app for iPhone and iPad: a social network no single company owns, where you choose the server you join.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "GPL-3.0",
+    "archived": false
   },
   {
     "slug": "duckduckgo",
@@ -6895,14 +6965,16 @@
     "isNew": false,
     "gh": "https://github.com/duckduckgo/iOS",
     "site": "https://duckduckgo.com/app",
-    "stars": null,
+    "stars": "2k",
     "cmd": null,
     "use": [],
     "desc": "متصفح لـ iPhone وiPad يركّز على الخصوصية: يحجب المتتبعات ويبحث دون أن يحفظ سجلك، وزرّ واحد يمسح كل بياناتك.",
     "desc_de": "Browser für iPhone und iPad mit Fokus auf Privatsphäre: blockiert Tracker, sucht, ohne deinen Verlauf zu speichern, und ein Knopf löscht alle Daten auf einmal.",
     "desc_en": "A privacy-first browser for iPhone and iPad: it blocks trackers, searches without saving your history, and one button wipes all your data.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2025-02-19",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "Apache-2.0",
+    "archived": true
   },
   {
     "slug": "firefox",
@@ -6912,14 +6984,16 @@
     "isNew": false,
     "gh": "https://github.com/mozilla-mobile/firefox-ios",
     "site": "https://www.mozilla.org/firefox/browsers/mobile/ios/",
-    "stars": null,
+    "stars": "13.1k",
     "cmd": null,
     "use": [],
     "desc": "متصفح Firefox لـ iPhone وiPad: حماية من التتبع، ومزامنة الإشارات المرجعية والتبويبات وكلمات المرور مع Firefox على الكمبيوتر.",
     "desc_de": "Firefox für iPhone und iPad: Schutz vor Tracking und Synchronisierung von Lesezeichen, Tabs und Passwörtern mit Firefox auf dem Computer.",
     "desc_en": "Firefox for iPhone and iPad: tracking protection and syncing of bookmarks, tabs and passwords with Firefox on your computer.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "MPL-2.0",
+    "archived": false
   },
   {
     "slug": "localsend",
@@ -6929,14 +7003,16 @@
     "isNew": false,
     "gh": "https://github.com/localsend/localsend",
     "site": "https://localsend.org",
-    "stars": null,
+    "stars": "95.7k",
     "cmd": null,
     "use": [],
     "desc": "بديل AirDrop لكل الأجهزة: ترسل الملفات والرسائل بين Windows وMac وLinux وiPhone وAndroid عبر شبكتك المحلية، بلا إنترنت ولا حساب.",
     "desc_de": "AirDrop-Alternative für alle Geräte: Schicke Dateien und Nachrichten zwischen Windows, Mac, Linux, iPhone und Android über dein lokales Netzwerk – ohne Internet und ohne Konto.",
     "desc_en": "An AirDrop alternative for every device: send files and messages between Windows, Mac, Linux, iPhone and Android over your local network, no internet or account needed.",
-    "pushed": null,
-    "added": "2026-10-26T13:44:00Z"
+    "pushed": "2026-10-25",
+    "added": "2026-10-26T13:44:00Z",
+    "license": "Apache-2.0",
+    "archived": false
   },
   {
     "slug": "obs-studio",
@@ -6946,7 +7022,7 @@
     "isNew": false,
     "gh": "https://github.com/obsproject/obs-studio",
     "site": "https://obsproject.com",
-    "stars": null,
+    "stars": "78.3k",
     "cmd": null,
     "use": [
       "video"
@@ -6954,8 +7030,10 @@
     "desc": "تسجيل الشاشة والبث المباشر: تجمع الكاميرا والشاشة والصوت في مشاهد، ثم تبث إلى YouTube أو Twitch أو تسجّل فيديو، على Windows وMac وLinux.",
     "desc_de": "Bildschirmaufnahme und Livestreaming: Kombiniere Kamera, Bildschirm und Ton zu Szenen und streame zu YouTube oder Twitch oder nimm Videos auf – unter Windows, Mac und Linux.",
     "desc_en": "Screen recording and live streaming: combine camera, screen and audio into scenes, then stream to YouTube or Twitch or record video, on Windows, Mac and Linux.",
-    "pushed": null,
-    "added": "2026-10-26T13:41:00Z"
+    "pushed": "2026-10-23",
+    "added": "2026-10-26T13:41:00Z",
+    "license": "GPL-2.0",
+    "archived": false
   },
   {
     "slug": "vlc",
@@ -6965,14 +7043,16 @@
     "isNew": false,
     "gh": "https://github.com/videolan/vlc",
     "site": "https://www.videolan.org/vlc/",
-    "stars": null,
+    "stars": "20.2k",
     "cmd": null,
     "use": [],
     "desc": "المشغّل الذي يفتح أي ملف فيديو أو صوت تقريبًا بلا برامج ترميز إضافية، على كل الأجهزة من الكمبيوتر إلى الهاتف.",
     "desc_de": "Der Player, der fast jede Video- und Audiodatei ohne zusätzliche Codecs abspielt – auf allen Geräten vom Computer bis zum Handy.",
     "desc_en": "The player that opens almost any video or audio file without extra codecs, on every device from computer to phone.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "GPL-2.0",
+    "archived": false
   },
   {
     "slug": "blender",
@@ -6982,7 +7062,7 @@
     "isNew": false,
     "gh": "https://github.com/blender/blender",
     "site": "https://www.blender.org",
-    "stars": null,
+    "stars": "21.3k",
     "cmd": null,
     "use": [
       "video",
@@ -6991,8 +7071,10 @@
     "desc": "برنامج ثلاثي الأبعاد متكامل: نمذجة وتحريك وإكساء ومحاكاة وتصيير ومونتاج فيديو، على Windows وMac وLinux.",
     "desc_de": "Komplette 3D-Suite: Modellieren, Animieren, Texturieren, Simulieren, Rendern und Videoschnitt – unter Windows, Mac und Linux.",
     "desc_en": "A complete 3D suite: modeling, animation, texturing, simulation, rendering and video editing, on Windows, Mac and Linux.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "libreoffice",
@@ -7002,14 +7084,16 @@
     "isNew": false,
     "gh": "https://github.com/LibreOffice/core",
     "site": "https://www.libreoffice.org",
-    "stars": null,
+    "stars": "4.6k",
     "cmd": null,
     "use": [],
     "desc": "حزمة مكتبية كاملة لـ Windows وMac وLinux: مستندات وجداول وعروض تقديمية، وتفتح ملفات Word وExcel وPowerPoint وتحفظ بصيغتها.",
     "desc_de": "Komplettes Office-Paket für Windows, Mac und Linux: Texte, Tabellen und Präsentationen – öffnet und speichert auch Word-, Excel- und PowerPoint-Dateien.",
     "desc_en": "A full office suite for Windows, Mac and Linux: documents, spreadsheets and presentations, and it opens and saves Word, Excel and PowerPoint files.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "GPL-3.0",
+    "archived": false
   },
   {
     "slug": "audacity",
@@ -7019,7 +7103,7 @@
     "isNew": false,
     "gh": "https://github.com/audacity/audacity",
     "site": "https://www.audacityteam.org",
-    "stars": null,
+    "stars": "18.8k",
     "cmd": null,
     "use": [
       "video"
@@ -7027,8 +7111,10 @@
     "desc": "تسجيل الصوت وتحريره على Windows وMac وLinux: قص ومزج وإزالة الضجيج ومؤثرات، للبودكاست والتعليق الصوتي.",
     "desc_de": "Audio aufnehmen und bearbeiten unter Windows, Mac und Linux: schneiden, mischen, Rauschen entfernen und Effekte – für Podcasts und Voice-over.",
     "desc_en": "Record and edit audio on Windows, Mac and Linux: cut, mix, remove noise and add effects, for podcasts and voice-overs.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "handbrake",
@@ -7038,7 +7124,7 @@
     "isNew": false,
     "gh": "https://github.com/HandBrake/HandBrake",
     "site": "https://handbrake.fr",
-    "stars": null,
+    "stars": "24.8k",
     "cmd": null,
     "use": [
       "video"
@@ -7046,8 +7132,10 @@
     "desc": "يحوّل الفيديو إلى MP4 أو MKV ويصغّر حجمه على Windows وMac وLinux، مع إعدادات جاهزة للهاتف والويب والأجهزة.",
     "desc_de": "Wandelt Videos unter Windows, Mac und Linux in MP4 oder MKV um und verkleinert sie, mit fertigen Voreinstellungen für Handy, Web und Geräte.",
     "desc_en": "Converts video to MP4 or MKV and shrinks file sizes on Windows, Mac and Linux, with ready-made presets for phones, the web and devices.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "keepassxc",
@@ -7057,14 +7145,16 @@
     "isNew": false,
     "gh": "https://github.com/keepassxreboot/keepassxc",
     "site": "https://keepassxc.org",
-    "stars": null,
+    "stars": "29.5k",
     "cmd": null,
     "use": [],
     "desc": "مدير كلمات مرور لـ Windows وMac وLinux يحفظها في ملف مشفّر على جهازك أنت لا في سحابة شركة، مع إضافة للمتصفح تملأ الحقول.",
     "desc_de": "Passwort-Manager für Windows, Mac und Linux, der alles in einer verschlüsselten Datei auf deinem eigenen Gerät speichert statt in einer Firmen-Cloud – mit Browser-Erweiterung zum Ausfüllen.",
     "desc_en": "A password manager for Windows, Mac and Linux that keeps everything in an encrypted file on your own device, not a company cloud, with a browser extension to fill in fields.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "signal",
@@ -7074,14 +7164,16 @@
     "isNew": false,
     "gh": "https://github.com/signalapp/Signal-Desktop",
     "site": "https://signal.org",
-    "stars": null,
+    "stars": "16.6k",
     "cmd": null,
     "use": [],
     "desc": "رسائل ومكالمات مشفّرة من طرف إلى طرف. هذا تطبيق الكمبيوتر لـ Windows وMac وLinux، ويرتبط بحسابك على الهاتف.",
     "desc_de": "Ende-zu-Ende-verschlüsselte Nachrichten und Anrufe. Das ist die Desktop-App für Windows, Mac und Linux, verknüpft mit deinem Konto auf dem Handy.",
     "desc_en": "End-to-end encrypted messages and calls. This is the desktop app for Windows, Mac and Linux, linked to your account on your phone.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "AGPL-3.0",
+    "archived": false
   },
   {
     "slug": "joplin",
@@ -7091,14 +7183,16 @@
     "isNew": false,
     "gh": "https://github.com/laurent22/joplin",
     "site": "https://joplinapp.org",
-    "stars": null,
+    "stars": "56.9k",
     "cmd": null,
     "use": [],
     "desc": "تطبيق ملاحظات بصيغة Markdown للكمبيوتر والهاتف: دفاتر ووسوم ومهام، مع مزامنة مشفّرة عبر خدمة تختارها.",
     "desc_de": "Notiz-App mit Markdown für Computer und Handy: Notizbücher, Tags und Aufgaben, mit verschlüsselter Synchronisierung über einen Dienst deiner Wahl.",
     "desc_en": "A Markdown note-taking app for computer and phone: notebooks, tags and to-dos, with encrypted sync through a service you choose.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "other",
+    "archived": false
   },
   {
     "slug": "appflowy",
@@ -7108,14 +7202,16 @@
     "isNew": false,
     "gh": "https://github.com/AppFlowy-IO/AppFlowy",
     "site": "https://appflowy.com",
-    "stars": null,
+    "stars": "77.8k",
     "cmd": null,
     "use": [],
     "desc": "بديل Notion مفتوح المصدر للكمبيوتر والهاتف: صفحات وقواعد بيانات ولوحات مهام، وتبقى بياناتك عندك إن أردت.",
     "desc_de": "Open-Source-Alternative zu Notion für Computer und Handy: Seiten, Datenbanken und Kanban-Boards – und deine Daten bleiben bei dir, wenn du willst.",
     "desc_en": "An open-source Notion alternative for computer and phone: pages, databases and kanban boards, and your data stays with you if you want.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "AGPL-3.0",
+    "archived": false
   },
   {
     "slug": "upscayl",
@@ -7125,14 +7221,16 @@
     "isNew": false,
     "gh": "https://github.com/upscayl/upscayl",
     "site": "https://upscayl.org",
-    "stars": null,
+    "stars": "51.1k",
     "cmd": null,
     "use": [],
     "desc": "يكبّر الصور ويحسّن دقتها بالذكاء الاصطناعي على Windows وMac وLinux، دون رفعها إلى أي خادم.",
     "desc_de": "Vergrößert Bilder und verbessert ihre Auflösung per KI unter Windows, Mac und Linux, ohne sie auf einen Server hochzuladen.",
     "desc_en": "Upscales images and improves their resolution with AI on Windows, Mac and Linux, without uploading them to any server.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-05",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "AGPL-3.0",
+    "archived": false
   },
   {
     "slug": "flameshot",
@@ -7142,14 +7240,16 @@
     "isNew": false,
     "gh": "https://github.com/flameshot-org/flameshot",
     "site": "https://flameshot.org",
-    "stars": null,
+    "stars": "31.3k",
     "cmd": null,
     "use": [],
     "desc": "لقطات شاشة مع أدوات تعليق فورية: أسهم ومربعات ونص وتمويه، ثم نسخ أو حفظ، على Windows وMac وLinux.",
     "desc_de": "Bildschirmfotos mit direkten Markierungswerkzeugen: Pfeile, Rahmen, Text und Verpixeln, dann kopieren oder speichern – unter Windows, Mac und Linux.",
     "desc_en": "Screenshots with instant annotation tools: arrows, boxes, text and blur, then copy or save, on Windows, Mac and Linux.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-25",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "GPL-3.0",
+    "archived": false
   },
   {
     "slug": "organic-maps",
@@ -7159,13 +7259,15 @@
     "isNew": false,
     "gh": "https://github.com/organicmaps/organicmaps",
     "site": "https://organicmaps.app",
-    "stars": null,
+    "stars": "15.8k",
     "cmd": null,
     "use": [],
     "desc": "خرائط تعمل بلا إنترنت على iPhone وAndroid من بيانات OpenStreetMap، للمشي وركوب الدراجة والقيادة، بلا إعلانات ولا تتبع.",
     "desc_de": "Offline-Karten für iPhone und Android auf Basis von OpenStreetMap, zum Wandern, Radfahren und Autofahren – ohne Werbung und Tracking.",
     "desc_en": "Offline maps for iPhone and Android based on OpenStreetMap, for walking, cycling and driving, with no ads or tracking.",
-    "pushed": null,
-    "added": "2026-10-26T13:30:00Z"
+    "pushed": "2026-10-26",
+    "added": "2026-10-26T13:30:00Z",
+    "license": "other",
+    "archived": false
   }
 ]
