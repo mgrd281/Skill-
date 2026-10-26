@@ -6,7 +6,8 @@ import Icon from "../components/Icon.astro";
 import Odometer from "../components/Odometer.astro";
 import Mascot from "../components/Mascot.astro";
 import KitDialog from "../components/KitDialog.astro";
-import { tools, categories, projects, starsUpdatedAt, formatDate, recentTools, initials, kindIcon, kindLabel, categoryIcon, projectIcon, txt, catName, projName, projAdvice } from "../lib/data";
+import CardIcons from "../components/CardIcons.astro";
+import { tools, byStars, rankOf, categories, projects, starsUpdatedAt, formatDate, recentTools, initials, kindIcon, kindLabel, categoryIcon, projectIcon, txt, catName, projName, projAdvice } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
 import { kitPlan } from "../lib/install.js";
 interface Props { lang: Lang }
@@ -15,10 +16,9 @@ const t = dict(lang);
 const fwd = fwdIcon(lang);
 
 const total = tools.length;
-// الترتيب الافتراضي: الأعلى نجومًا أولًا (والتي بلا نجوم في النهاية)، ويُحسب وقت البناء فيتجدد مع تحديث النجوم الأسبوعي
-const byStars = [...tools].sort((a, b) => b.starsN - a.starsN || a.order - b.order);
-const rankOf = new Map<string, number>();
-byStars.filter((x) => x.starsN >= 0).forEach((x, i) => rankOf.set(x.slug, i + 1));
+// أول القائمة فقط مرسوم في الصفحة (بعدد PAGE في src/scripts/filter.js)، والباقي يُجلب عند الحاجة من /cards/
+// (src/views/CardsFragment.astro): 268 بطاقة دفعة واحدة كانت تجمّد الصفحة ثوانيَ على الجوال
+const FIRST = 12;
 const latest = recentTools.slice(0, 6);
 // المعرض المتحرك: أعلى ثلاث أدوات، ومع كل منها أول سطر من أمر تثبيتها (--n عدد خطوات الكتابة)
 const showcase = byStars.slice(0, 3).map((x) => ({ ...x, line: x.cmd ? x.cmd.split("\n")[0] : "" }));
@@ -31,6 +31,9 @@ const appData = {
   base: href(lang, "tools/"),
   feed: href(lang, "feed.xml"),
   recent: recentTools.map((r) => ({ slug: r.slug, name: r.name, added: r.added, cat: catName(r.cat, lang) })),
+  // ما تحتاجه الفلترة والترتيب والعدّ لكل أداة، بترتيب النجوم: s الاسم المختصر، c القسم، k مهارة، n جديدة،
+  // st النجوم، o ترتيب الإضافة، a تاريخها، u المشاريع
+  tools: byStars.map((x) => ({ s: x.slug, c: x.cat, k: x.kind === "Skill" ? 1 : 0, n: x.isNew ? 1 : 0, st: x.starsN, o: x.order, a: x.added, u: x.use.join(" ") })),
 };
 // بيانات منظمة: اسم الموقع وأعلى الأدوات نجومًا
 const abs = (p: string) => new URL(href(lang, p), Astro.site).href;
@@ -246,9 +249,12 @@ const kinds: Array<[string, any, string]> = [
     </div>
     <section class="cat" id="by-stars" aria-labelledby="flat-title">
       <div class="grid" id="stars-grid">
-        {byStars.map((x) => <Card tool={x} hideBtn rank={rankOf.get(x.slug)} lang={lang} />)}
+        {byStars.slice(0, FIRST).map((x) => <Card tool={x} hideBtn rank={rankOf.get(x.slug)} lang={lang} />)}
       </div>
       <div class="more-wrap"><button type="button" class="btn-more" id="more" hidden>{t.showMore} <span id="more-n"></span></button></div>
+      <noscript>
+        <p class="nojs-cats">{t.noJsCats} {categories.map((c, i) => <>{i > 0 && " · "}<a href={href(lang, "category/" + c.id)} set:html={txt(catName(c.id, lang), lang)} /></>)}</p>
+      </noscript>
     </section>
     {categories.map((c) => (
       <section class="cat" id={"cat-" + c.id} data-cat-section={c.id} hidden>
@@ -266,6 +272,7 @@ const kinds: Array<[string, any, string]> = [
         <button type="button" class="btn-more" id="empty-wide" hidden></button>
         <button type="button" class="btn-primary" id="empty-reset">{t.clearAll}</button>
       </div>
+      <p class="sg-row" id="empty-suggest-row" hidden><Icon name="lightbulb" />{t.sgEmpty} <button type="button" class="linkbtn" id="empty-suggest" data-suggest>{t.sgOpen}</button></p>
     </div>
   </main>
 
@@ -274,17 +281,18 @@ const kinds: Array<[string, any, string]> = [
   </Fragment>
 
   <KitDialog lang={lang} />
+  <CardIcons lang={lang} />
   <script type="application/json" id="app-data" set:html={JSON.stringify(appData)} />
 </Base>
 
 <script>
   import { initCopy } from "../scripts/copy.js";
   import { initFav } from "../scripts/fav.js";
-  import { initDates } from "../scripts/dates.js";
+  import { initDatesLater } from "../scripts/dates.js";
   import "../scripts/filter.js";
   import "../scripts/hero.js";
   import "../scripts/mascot.js";
   initCopy(document);
   initFav();
-  initDates();
+  initDatesLater();
 </script>

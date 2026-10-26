@@ -2318,7 +2318,8 @@
     "desc_de": "Skills für deutsche Steuern: Umsatzsteuer-Voranmeldung (UStVA), Buchhaltung und E-Rechnung. Ein Entwurf, den noch kein Buchhalter geprüft hat. Die Kleinunternehmerregelung wird nicht unterstützt.",
     "desc_en": "Skills for German taxes: the UStVA VAT return, accounting, and the e-invoice. A draft that no accountant has reviewed yet, and it doesn't support the Kleinunternehmer (small business) scheme.",
     "pushed": null,
-    "added": "2026-10-24T00:00:00Z"
+    "added": "2026-10-24T00:00:00Z",
+    "inside": "germany"
   },
   {
     "slug": "e-invoice-eu",

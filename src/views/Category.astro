@@ -29,7 +29,7 @@ const jsonLd = [
   },
 ];
 ---
-<Base title={t.catTitle(name)} description={desc} path={`/category/${c.id}`} lang={lang} jsonLd={jsonLd}>
+<Base title={t.catTitle(name)} description={desc} path={`/category/${c.id}`} lang={lang} image={`og/category/${c.id}-${lang === "de" ? "de" : "en"}.png`} imageAlt={name} jsonLd={jsonLd}>
   <header class="top page-hero cat-hero">
     <nav class="p-crumb" aria-label={t.crumbAria}>
       <a href={href(lang, "#list")}>{t.navTools}</a>
@@ -64,8 +64,8 @@ const jsonLd = [
 <script>
   import { initCopy } from "../scripts/copy.js";
   import { initFav } from "../scripts/fav.js";
-  import { initDates } from "../scripts/dates.js";
+  import { initDatesLater } from "../scripts/dates.js";
   initCopy(document);
   initFav();
-  initDates();
+  initDatesLater();
 </script>

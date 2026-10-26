@@ -5,7 +5,7 @@ import { LANGS, DEFAULT_LANG, href } from "../i18n";
 // كل صفحة بلغاتها الثلاث، مع روابط hreflang بين النسخ
 export function GET({ site }: APIContext) {
   const abs = (lang: (typeof LANGS)[number], path: string) => new URL(href(lang, path), site ?? "https://example.com").href;
-  const paths = ["", ...categories.map((c) => "category/" + c.id), ...tools.map((t) => "tools/" + t.slug)];
+  const paths = ["", "privacy", ...categories.map((c) => "category/" + c.id), ...tools.map((t) => "tools/" + t.slug)];
   const alts = (path: string) =>
     LANGS.map((l) => `<xhtml:link rel="alternate" hreflang="${l}" href="${abs(l, path)}"/>`).join("") +
     `<xhtml:link rel="alternate" hreflang="x-default" href="${abs(DEFAULT_LANG, path)}"/>`;

@@ -44,9 +44,9 @@ export function clearFavs() {
   notify(null);
 }
 
-// يحدّث كل أزرار القلب وعدّاد الرأس في الصفحة
-export function sync() {
-  document.querySelectorAll(".fav").forEach((b) => {
+// أزرار القلب داخل root (الصفحة كلها، أو بطاقة تُضاف إليها لاحقًا: src/scripts/cards.js)
+export function syncFavButtons(root = document) {
+  root.querySelectorAll(".fav").forEach((b) => {
     const on = favs.includes(b.dataset.fav);
     b.setAttribute("aria-pressed", on ? "true" : "false");
     const name = b.dataset.name || "";
@@ -55,6 +55,11 @@ export function sync() {
     const label = b.querySelector(".fav-label");
     if (label) label.textContent = on ? L.favOn : L.favOff;
   });
+}
+
+// يحدّث كل أزرار القلب وعدّاد الرأس في الصفحة
+export function sync() {
+  syncFavButtons(document);
   document.querySelectorAll(".favcount").forEach((c) => {
     c.hidden = favs.length === 0;
     c.textContent = favs.length > 99 ? "99+" : String(favs.length);

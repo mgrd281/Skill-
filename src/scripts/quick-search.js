@@ -3,6 +3,7 @@
 import { L, fmt } from "../i18n/client.js";
 import { words, terms, score, makeDoc, suggest } from "../lib/search.js";
 import { loadIndex, docOf, rawText, vocabOf, HOME } from "./search-data.js";
+import { noteMiss, clearMiss } from "./misses.js";
 
 const dlg = document.getElementById("qs");
 const opener = document.getElementById("qs-open");
@@ -112,6 +113,8 @@ if (dlg && opener) {
     }
     allT.textContent = hits.length ? fmt(L.qsAll, { n: hits.length }) : L.qsBrowse;
     status.textContent = fmt(L.qsN, { n: hits.length });
+    if (hits.length) clearMiss();
+    else noteMiss(q);
     if (!opts.length) {
       empty.hidden = false;
       emptyT.textContent = fmt(L.qsNone, { q });

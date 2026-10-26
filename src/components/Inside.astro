@@ -1,0 +1,43 @@
+---
+// «ماذا تحوي» في صفحة أداة من نوع Skill: المهارات التي تثبّتها باسمها ووصفها كما في ملفات SKILL.md
+// (data/inside.json، يحدّثه scripts/update-inside.mjs أسبوعيًا). الأوصاف بالإنجليزية كما كتبها أصحابها.
+import type { Tool } from "../lib/data";
+import inside from "../../data/inside.json";
+import { type Lang, t as dict } from "../i18n";
+interface Props { tool: Tool; lang: Lang }
+const { tool: x, lang } = Astro.props;
+const t = dict(lang);
+type Skill = { name: string; desc: string };
+const data = (inside as Record<string, { n: number; skills: Skill[] }>)[x.slug];
+const one = data && data.n === 1 ? data.skills[0] : null;
+// مهارة واحدة بلا وصف لا تضيف شيئًا
+const show = !!data && !(one && !one.desc);
+const SHOW = 8;
+const first = data ? data.skills.slice(0, SHOW) : [];
+const rest = data ? data.skills.slice(SHOW) : [];
+const more = data ? data.n - data.skills.length : 0;
+---
+{show && (
+  <section class="inside" aria-labelledby="inside-h">
+    <h2 class="sec-title" id="inside-h" set:html={one ? t.insideOne_h : t.insideMany_h(data!.n)} />
+    {one ? (
+      <blockquote class="inside-one" lang="en" dir="ltr"><p>{one.desc}</p></blockquote>
+    ) : (
+      <>
+        <ul class="inside-list" lang="en" dir="ltr">
+          {first.map((s) => <li><code>{s.name}</code>{s.desc && <span>{s.desc}</span>}</li>)}
+        </ul>
+        {rest.length > 0 && (
+          <details class="inside-more">
+            <summary>{t.insideAll(data!.n)}</summary>
+            <ul class="inside-list" lang="en" dir="ltr">
+              {rest.map((s) => <li><code>{s.name}</code>{s.desc && <span>{s.desc}</span>}</li>)}
+            </ul>
+            {more > 0 && x.gh && <p class="inside-gh"><a href={x.gh} target="_blank" rel="noopener noreferrer">{t.insideRest(more)}</a></p>}
+          </details>
+        )}
+      </>
+    )}
+    <p class="inside-src">{t.insideSrc}</p>
+  </section>
+)}

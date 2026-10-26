@@ -22,6 +22,7 @@ for (const lang of Object.keys(TR)) {
 for (const t of tools) {
   if (!t.name || !t.desc) problems.push(`ناقص: ${t.name || "(بدون اسم)"}`);
   for (const lang of Object.keys(TR)) need(t[`desc_${lang}`], lang, `desc_${lang} لـ ${t.name}`);
+  if ("inside" in t && t.inside !== false && !(typeof t.inside === "string" && t.inside.trim())) problems.push(`inside في ${t.name}: false أو كلمة (scripts/update-inside.mjs)`);
   if (!KINDS.includes(t.kind)) problems.push(`نوع غير معروف في ${t.name}: ${t.kind} (أضفه مع ترجمته في src/lib/data.ts وهنا)`);
   if (t.slug !== slugify(t.name)) problems.push(`slug غير مطابق للاسم: ${t.name}`);
   if (slugs.has(t.slug)) problems.push(`slug مكرر: ${t.slug}`);
@@ -31,6 +32,13 @@ for (const t of tools) {
   for (const k of ["gh", "site"]) if (t[k] && !/^https:\/\//.test(t[k])) problems.push(`${k} ليس https في ${t.name}`);
   if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/.test(t.added || "")) problems.push(`added غير صالح في ${t.name} (الصيغة: 2026-10-24T09:30:00Z)`);
   if (!t.gh && !t.site) problems.push(`لا رابط لـ ${t.name}`);
+}
+// أمثلة الطلب (data/examples.json): لأدوات موجودة، وبثلاث لغات
+const examples = read("examples.json");
+for (const [slug, ex] of Object.entries(examples)) {
+  if (!slugs.has(slug)) problems.push(`مثال لأداة غير موجودة: ${slug}`);
+  if (!ex.ar || !AR.test(ex.ar)) problems.push(`مثال عربي ناقص: ${slug}`);
+  for (const lang of Object.keys(TR)) need(ex[lang], lang, `مثال ${lang} لـ ${slug}`);
 }
 for (const p of projects) for (const k of p.picks) if (!slugs.has(slugify(k))) problems.push(`اقتراح غير موجود في ${p.id}: ${k}`);
 // تحذير لا يفشل الفحص: بيانات GitHub (التاريخ والرخصة) تملؤها update-stars.mjs

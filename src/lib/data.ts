@@ -2,6 +2,7 @@ import toolsJson from "../../data/tools.json";
 import categoriesJson from "../../data/categories.json";
 import projectsJson from "../../data/projects.json";
 import meta from "../../data/meta.json";
+import examplesJson from "../../data/examples.json";
 import type { IconName } from "./icons";
 import type { Lang } from "../i18n";
 import { RUNS_REMOTE_SCRIPT } from "./install.js";
@@ -21,6 +22,8 @@ export interface Tool {
   desc: string;
   desc_de: string;
   desc_en: string;
+  // تضييق «ماذا تحوي» إلى مهارات فيها كلمة، أو إلغاؤها (scripts/update-inside.mjs)
+  inside?: string | false;
   pushed: string | null;
   license?: string | null;
   archived?: boolean;
@@ -35,6 +38,9 @@ export interface Project {
 
 export const GH = "https://github.com/";
 export const starsUpdatedAt: string = meta.starsUpdatedAt;
+// مشغّل الموقع لصفحة الخصوصية والناشر (Impressum): يُضاف في data/meta.json حقلًا operator فيه name وaddress (أسطر)
+// وemail اختياري. بلا هذا الحقل تذكر الصفحة نافذة «رأيك» للتواصل، وتنبّه البناء (src/views/Privacy.astro).
+export const operator: { name: string; address: string[]; email?: string } | null = (meta as any).operator ?? null;
 
 export function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -59,6 +65,12 @@ export const tools: Tool[] = (toolsJson as any[]).map((t, i) => ({
   ...t, order: i, starsN: parseStars(t.stars),
   isNew: t.added > catalogStart && (buildTime - new Date(t.added).getTime()) / 864e5 <= NEW_DAYS,
 }));
+
+// ترتيب القائمة الافتراضي: الأعلى نجومًا أولًا (والتي بلا نجوم في النهاية)، ورقم الترتيب للتي لها نجوم.
+// يُحسب وقت البناء فيتجدد مع تحديث النجوم الأسبوعي. الرئيسية ترسم أول القائمة، والباقي في src/views/CardsFragment.astro
+export const byStars: Tool[] = [...tools].sort((a, b) => b.starsN - a.starsN || a.order - b.order);
+export const rankOf = new Map<string, number>();
+byStars.filter((x) => x.starsN >= 0).forEach((x, i) => rankOf.set(x.slug, i + 1));
 
 export function inProject(t: Tool, p: { id: string; cats?: string[] }): boolean {
   return t.use.includes(p.id) || !!(p.cats && p.cats.includes(t.cat));
@@ -94,6 +106,9 @@ function need(value: string | undefined, lang: Lang, what: string): string {
 const field = (o: Record<string, any>, name: string, lang: Lang, what: string): string =>
   lang === "ar" ? o[name] : need(o[`${name}_${lang}`], lang, what);
 export const toolDesc = (t: Tool, lang: Lang) => field(t, "desc", lang, `desc_${lang} لـ ${t.name}`);
+// مثال طلب من Claude بعد تثبيت الأداة (data/examples.json، اختياري): بالعربية ar وبالألمانية de وبالإنجليزية en
+const examples = examplesJson as Record<string, Record<Lang, string>>;
+export const toolExample = (t: Tool, lang: Lang): string | null => examples[t.slug]?.[lang] ?? null;
 export const catName = (id: string, lang: Lang) => field(categoryById(id), "name", lang, `name_${lang} للقسم ${id}`);
 export const projName = (p: Project, lang: Lang) => field(p, "name", lang, `name_${lang} للمشروع ${p.id}`);
 export const projAdvice = (p: Project, lang: Lang) => field(p, "advice", lang, `advice_${lang} للمشروع ${p.id}`);

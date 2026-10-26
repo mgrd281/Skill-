@@ -1,10 +1,12 @@
-// الفلترة والبحث والترتيب في الصفحة الرئيسية. الصفحة كاملة تُرسم وقت البناء،
-// وهذا السكربت يخفي ويُظهر ويعيد ترتيب البطاقات فقط.
+// الفلترة والبحث والترتيب في الصفحة الرئيسية. الفلترة والعدّ والترتيب من بيانات كل الأدوات في app-data،
+// والبطاقات نفسها: أول القائمة مرسوم في الصفحة، والباقي يُنشأ عند أول ظهور من /cards/ (src/scripts/cards.js).
 // حالة العرض (البحث والقسم والمشروع والترتيب) في رابط الصفحة أيضًا (?q=&cat=&p=&sort=&new=1&skills=1)، فيُشارَك كما هو.
 import { relative } from "./dates.js";
 import { L, fmt } from "../i18n/client.js";
-import { norm, words, terms, score, makeDoc, suggest } from "../lib/search.js";
+import { terms, score, suggest } from "../lib/search.js";
 import { loadIndex, docOf, rawText, vocabOf } from "./search-data.js";
+import { loadCards, cardsLoaded, makeCard } from "./cards.js";
+import { noteMiss, clearMiss } from "./misses.js";
 const KEY = "toolkit-filter-v3";
 const data = JSON.parse(document.getElementById("app-data").textContent);
 const projectById = (id) => data.projects.find((p) => p.id === id) || null;
@@ -99,50 +101,63 @@ const emptyEl = $("empty"), starsSection = $("by-stars"), starsGrid = $("stars-g
 const adviceEls = [...document.querySelectorAll("[data-advice]")];
 const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-const cards = [...document.querySelectorAll(".card")].map((el) => ({
-  el,
-  slug: el.dataset.slug,
-  rankEl: el.querySelector(".rank"),
-  cat: el.dataset.cat,
-  isNew: el.dataset.new === "1",
-  isSkill: el.dataset.kind === "Skill",
-  use: el.dataset.use.split(" "),
-  doc: null,
-  starsN: Number(el.dataset.stars),
-  order: Number(el.dataset.order),
-  added: el.dataset.added || "",
-  pickBadge: el.querySelector(".badge-pick"),
-  useChips: [...el.querySelectorAll(".usechip")],
-  grid: el.parentNode,
+// كل الأدوات بترتيب النجوم (src/views/Home.astro). el البطاقة حين تُنشأ، وdoc وtext للبحث حين يصل الفهرس
+const cards = data.tools.map((x) => ({
+  slug: x.s, cat: x.c, isSkill: x.k === 1, isNew: x.n === 1, starsN: x.st, order: x.o, added: x.a, use: x.u ? x.u.split(" ") : [],
+  el: null, rankEl: null, pickBadge: null, useChips: [], doc: null, text: "",
 }));
+const bySlug = new Map(cards.map((c) => [c.slug, c]));
+function attach(c, el) {
+  c.el = el;
+  c.rankEl = el.querySelector(".rank");
+  c.pickBadge = el.querySelector(".badge-pick");
+  c.useChips = [...el.querySelectorAll(".usechip")];
+  decorate(c);
+}
+document.querySelectorAll("#stars-grid .card").forEach((el) => { const c = bySlug.get(el.dataset.slug); if (c) attach(c, el); });
+// بطاقة الأداة، تُنشأ عند أول حاجة إليها. null إن لم تصل البطاقات بعد
+function cardEl(c) {
+  if (!c.el) { const el = makeCard(c.slug); if (el) attach(c, el); }
+  return c.el;
+}
+// تُطلب البطاقات حين تقترب القائمة من الشاشة، أو عند أول عرض يحتاج ما لم يُرسم (ويُعاد الرسم عند وصولها)
+let waiting = false;
+function needCards() {
+  if (waiting || cardsLoaded()) return;
+  waiting = true;
+  $("list").setAttribute("aria-busy", "true");
+  const done = () => { waiting = false; $("list").removeAttribute("aria-busy"); };
+  loadCards().then(() => { done(); renderList(); }, done);
+}
+// يضع البطاقات بالترتيب في أول الشبكة، ولا يحرّك ما هو في مكانه أصلًا (التحريك يُضيع التركيز ويعيد التخطيط)
+function place(grid, els) {
+  let ref = grid.firstElementChild;
+  for (const el of els) {
+    if (el === ref) { ref = ref.nextElementSibling; continue; }
+    grid.insertBefore(el, ref);
+  }
+}
 const sections = [...document.querySelectorAll("[data-cat-section]")].map((s) => ({
   el: s, id: s.dataset.catSection, grid: s.querySelector(".grid"), n: s.querySelector("h2 .n"), more: s.querySelector(".sec-more"),
 }));
 const moreBtn = $("more"), moreN = $("more-n");
 
 // ---- البحث ----
-// كل بطاقة لها وثيقة بحث (src/lib/search.js) ونص بشكله المكتوب لمفردات «هل تقصد». قبل وصول الفهرس يُبنيان من نص
-// البطاقة نفسها (بلغة الصفحة)، وبعد وصوله يشملان اللغات الثلاث والقسم، وتشمل الوثيقة كتابة الأسماء التقنية بالعربية.
-const textOf = (el, sel) => [...el.querySelectorAll(sel)].map((e) => e.textContent).join(" ");
-let indexed = false, vocab = null, qTerms = [];
+// لكل أداة وثيقة بحث (src/lib/search.js) ونص بشكله المكتوب لمفردات «هل تقصد»، من فهرس البحث باللغات الثلاث.
+// الفهرس يُطلب حين يقترب الزائر من البحث، وحتى يصل تقول القائمة «جارٍ التحميل» بدل «لا نتيجة».
+let indexed = false, indexFailed = false, vocab = null, qTerms = [];
 const scoreOf = new Map();
-function ensureDocs() {
-  cards.forEach((c) => {
-    if (c.doc) return;
-    const f = { n: textOf(c.el, ".name"), t: textOf(c.el, ".kind"), u: textOf(c.el, ".usechip"), d: textOf(c.el, ".desc") };
-    c.doc = makeDoc({ n: f.n, t: words(f.t), u: words(f.u), d: words(f.d), c: norm(textOf(c.el, "code")) });
-    c.text = [f.n, f.t, f.u, f.d].join(" ");
-  });
-}
+const searching = () => !!state.q && !indexed;
 function computeScores() {
   scoreOf.clear();
-  if (!state.q) return;
-  ensureDocs();
+  if (!state.q || !indexed) return;
   qTerms = terms(state.q);
-  cards.forEach((c) => scoreOf.set(c, score(c.doc, qTerms)));
+  cards.forEach((c) => scoreOf.set(c, c.doc ? score(c.doc, qTerms) : 0));
 }
 function wantIndex() {
+  needCards();
   if (indexed) return;
+  indexFailed = false;
   loadIndex().then((ix) => {
     if (indexed) return;
     indexed = true;
@@ -155,7 +170,7 @@ function wantIndex() {
       computeScores(); syncChips(); renderList();
       if (f && f !== document.activeElement && f.isConnected) f.focus({ preventScroll: true });
     }
-  }, () => {});
+  }, () => { indexFailed = true; if (state.q) renderList(); });
 }
 // وضع الترتيب "الأقرب لبحثك" لا يظهر في القائمة إلا أثناء البحث
 const matchOpt = document.createElement("option");
@@ -216,34 +231,58 @@ function syncProject() {
     b.setAttribute("aria-pressed", b.dataset.p === state.project ? "true" : "false");
   });
   adviceEls.forEach((a) => { a.hidden = a.dataset.advice !== state.project; });
+  cards.forEach((c) => { if (c.el) decorate(c); });
+}
+// شارة «اختيارنا» ومشروع البطاقة المختار، لكل بطاقة موجودة ولكل بطاقة تُنشأ لاحقًا
+function decorate(c) {
   const p = projectById(state.project);
-  cards.forEach((c) => {
-    const isPick = !!(p && p.pickSlugs.includes(c.slug));
-    c.pickBadge.hidden = !isPick;
-    c.el.classList.toggle("is-pick", isPick);
-    c.useChips.forEach((u) => u.classList.toggle("on", u.dataset.p === state.project));
+  const isPick = !!(p && p.pickSlugs.includes(c.slug));
+  c.pickBadge.hidden = !isPick;
+  c.el.classList.toggle("is-pick", isPick);
+  c.useChips.forEach((u) => u.classList.toggle("on", u.dataset.p === state.project));
+}
+
+// ترتيب العرض المسطح (النجوم أو الأحدث أو الأقرب للبحث)
+function sortFlat(list) {
+  const byNew = state.sort === "new", byMatch = state.sort === "match";
+  return list.sort(byNew
+    ? (a, b) => b.added.localeCompare(a.added) || b.order - a.order
+    : byMatch
+      ? (a, b) => scoreOf.get(b) - scoreOf.get(a) || b.starsN - a.starsN || a.order - b.order
+      : (a, b) => b.starsN - a.starsN || a.order - b.order);
+}
+// الأدوات المطابقة لعرض «حسب القسم» في قسم واحد: «اختيارنا» للمشروع أولًا، ثم الأعلى نجومًا
+function sortCat(list) {
+  const p = projectById(state.project);
+  return list.sort((a, b) => {
+    if (p) {
+      let pa = p.pickSlugs.indexOf(a.slug), pb = p.pickSlugs.indexOf(b.slug);
+      pa = pa === -1 ? 99 : pa; pb = pb === -1 ? 99 : pb;
+      if (pa !== pb) return pa - pb;
+    }
+    return b.starsN - a.starsN || a.order - b.order;
   });
 }
 
 function renderList() {
-  const visible = new Set(cards.filter((c) => matches(c, false)));
-  cards.forEach((c) => { c.el.hidden = !visible.has(c); });
+  const busy = searching();
+  const visible = busy ? [] : cards.filter((c) => matches(c, false));
   const p = projectById(state.project);
+  const on = new Set();
+  let missing = false;
+  const show = (c) => { const el = cardEl(c); if (el) on.add(el); else missing = true; return el; };
 
   if (state.sort !== "cat") {
-    const byNew = state.sort === "new", byMatch = state.sort === "match";
-    const sorted = [...visible].sort(byNew
-      ? (a, b) => b.added.localeCompare(a.added) || b.order - a.order
-      : byMatch
-        ? (a, b) => scoreOf.get(b) - scoreOf.get(a) || b.starsN - a.starsN || a.order - b.order
-        : (a, b) => b.starsN - a.starsN || a.order - b.order);
-    $("flat-title").textContent = byNew ? L.byNew : byMatch ? L.byMatch : L.byStars;
+    const sorted = sortFlat(visible);
+    $("flat-title").textContent = state.sort === "new" ? L.byNew : state.sort === "match" ? L.byMatch : L.byStars;
+    place(starsGrid, sorted.slice(0, state.limit).map(show).filter(Boolean));
+    // رقم التصنيف للأدوات التي لها نجوم فقط (في ترتيب النجوم)، والباقي في النهاية بلا رقم
     let rank = 0;
-    sorted.forEach((c, i) => {
-      starsGrid.appendChild(c.el);
-      c.el.hidden = i >= state.limit;
-      // رقم التصنيف للأدوات التي لها نجوم فقط (في ترتيب النجوم)، والباقي في النهاية بلا رقم
-      if (state.sort === "stars" && c.starsN >= 0) { rank++; c.rankEl.textContent = "#" + rank; c.rankEl.dataset.top = rank <= 3 ? String(rank) : ""; c.rankEl.hidden = false; }
+    sorted.forEach((c) => {
+      const ranked = state.sort === "stars" && c.starsN >= 0;
+      if (ranked) rank++;
+      if (!c.el || !on.has(c.el)) return;
+      if (ranked) { c.rankEl.textContent = "#" + rank; c.rankEl.dataset.top = rank <= 3 ? String(rank) : ""; c.rankEl.hidden = false; }
       else c.rankEl.hidden = true;
     });
     starsSection.hidden = sorted.length === 0;
@@ -255,35 +294,32 @@ function renderList() {
     $("flat-title").textContent = L.byCat;
     starsSection.hidden = true;
     moreBtn.hidden = true;
-    cards.forEach((c) => { c.rankEl.hidden = true; });
+    const vis = new Set(visible);
     sections.forEach((s) => {
-      const mine = cards.filter((c) => c.cat === s.id).sort((a, b) => {
-        if (p) {
-          let pa = p.pickSlugs.indexOf(a.slug), pb = p.pickSlugs.indexOf(b.slug);
-          pa = pa === -1 ? 99 : pa; pb = pb === -1 ? 99 : pb;
-          if (pa !== pb) return pa - pb;
-        }
-        // داخل كل قسم: الأعلى نجومًا أولًا، والتي بلا نجوم في النهاية
-        return b.starsN - a.starsN || a.order - b.order;
-      });
-      mine.forEach((c) => s.grid.appendChild(c.el));
-      const shown = mine.filter((c) => visible.has(c));
-      const n = shown.length;
+      const mine = sortCat(cards.filter((c) => c.cat === s.id && vis.has(c)));
+      const n = mine.length;
       // في عرض كل الأقسام يظهر أول 6 من كل قسم، و"عرض الكل" يفتح القسم كاملًا
       const cap = state.cat === "all" ? SECTION_CAP : Infinity;
-      shown.forEach((c, i) => { c.el.hidden = i >= cap; });
+      place(s.grid, mine.slice(0, cap).map(show).filter(Boolean));
       s.more.hidden = n <= cap;
       s.more.querySelector(".sm-n").textContent = n;
       s.n.textContent = n;
       s.el.hidden = n === 0;
     });
+    cards.forEach((c) => { if (c.el && on.has(c.el)) c.rankEl.hidden = true; });
   }
-  $("flat-n").textContent = visible.size;
-  emptyEl.hidden = visible.size !== 0;
-  if (visible.size === 0) syncEmpty();
-  statusEl.textContent = fmt(L.status, { n: visible.size, total: data.total }) + (p ? " · " + p.name : "");
+  // كل بطاقة موجودة ولا تظهر في هذا العرض تُخفى
+  cards.forEach((c) => { if (c.el) c.el.hidden = !on.has(c.el); });
+  $("flat-n").textContent = visible.length;
+  emptyEl.hidden = busy || visible.length !== 0;
+  if (!busy && visible.length === 0) syncEmpty();
+  // بحث بلا أي نتيجة حتى مع إلغاء الفلاتر يُسجَّل بلا هوية (src/scripts/misses.js)
+  if (!busy && state.q && !cards.some((c) => scoreOf.get(c) > 0)) noteMiss(state.q);
+  else clearMiss();
+  statusEl.textContent = busy ? (indexFailed ? L.qsError : L.qsLoading) : fmt(L.status, { n: visible.length, total: data.total }) + (p ? " · " + p.name : "");
   $("hiddenbar").hidden = hidden.size === 0;
   $("hidden-n").textContent = fmt(L.hiddenN, { n: hidden.size });
+  if (missing) needCards();
 }
 
 // لا نتيجة: «هل تقصد» بكلمة قريبة من مفردات الدليل، وزر يعرض نتائج البحث نفسه بلا الفلاتر الأخرى
@@ -291,18 +327,22 @@ const sugEl = $("empty-sug"), sugBtn = $("sug-btn"), wideBtn = $("empty-wide");
 function syncEmpty() {
   sugEl.hidden = true;
   wideBtn.hidden = true;
-  if (!state.q) return;
-  ensureDocs();
+  $("empty-suggest-row").hidden = true;
+  if (!state.q || !indexed) return;
   const sug = suggest(state.q, vocab || (vocab = vocabOf(cards.map((c) => c.text))));
   if (sug) {
     const ts = terms(sug);
-    if (cards.some((c) => !hidden.has(c.slug) && score(c.doc, ts) > 0)) {
+    if (cards.some((c) => !hidden.has(c.slug) && c.doc && score(c.doc, ts) > 0)) {
       sugBtn.textContent = sug;
       sugEl.hidden = false;
     }
   }
   const filtered = state.project || state.cat !== "all" || state.onlyNew || state.onlySkills;
   const n = filtered ? cards.filter((c) => !hidden.has(c.slug) && scoreOf.get(c) > 0).length : 0;
+  // لا شيء في الدليل كله: «اقترح أداة» باسم ما بحث عنه الزائر (src/scripts/suggest.js)
+  const none = !cards.some((c) => scoreOf.get(c) > 0);
+  $("empty-suggest-row").hidden = !none;
+  $("empty-suggest").dataset.suggestTool = none ? state.q : "";
   if (n) {
     wideBtn.textContent = fmt(L.searchAll, { n });
     wideBtn.hidden = false;
@@ -392,9 +432,10 @@ function setProject(id) {
   smooth(render);
 }
 
-function goTo(slug) {
-  const c = cards.find((x) => x.slug === slug);
+async function goTo(slug) {
+  const c = bySlug.get(slug);
   if (!c) return;
+  try { await loadCards(); } catch (e) { return; }
   if (hidden.delete(slug)) { saveHidden(); render(); }
   if (!matches(c, false)) {
     state.cat = "all"; state.onlyNew = false; state.onlySkills = false; setQuery(""); qEl.value = "";
@@ -402,14 +443,15 @@ function goTo(slug) {
     save(); render();
   }
   // البطاقة قد تكون بعد حد العرض: وسّع القائمة حتى تظهر
-  if (c.el.hidden) {
+  if (!c.el || c.el.hidden) {
     if (state.sort === "cat") { state.cat = c.cat; save(); render(); }
     else {
-      const i = [...starsGrid.children].indexOf(c.el);
+      const i = sortFlat(cards.filter((x) => matches(x, false))).indexOf(c);
       state.limit = Math.ceil((i + 1) / PAGE) * PAGE;
       renderList();
     }
   }
+  if (!c.el) return;
   c.el.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
   c.el.classList.remove("flash");
   void c.el.offsetWidth;
@@ -497,12 +539,13 @@ $("unhide").addEventListener("click", () => {
 });
 
 // "عرض المزيد": 24 أداة إضافية، والتركيز ينتقل إلى أول بطاقة جديدة
-moreBtn.addEventListener("click", () => {
+moreBtn.addEventListener("click", async () => {
   const first = state.limit;
   state.limit += PAGE * 2;
+  try { await loadCards(); } catch (e) {}
   renderList();
   const next = starsGrid.children[first];
-  if (next) next.querySelector(".name")?.focus({ preventScroll: true });
+  if (next && !next.hidden) next.querySelector(".name")?.focus({ preventScroll: true });
 });
 
 // ---- لوحة الأقسام: قائمة منسدلة على الشاشات الكبيرة، وورقة من الأسفل على الجوال ----
@@ -558,7 +601,11 @@ function refreshBell() {
   bellN.hidden = list.length === 0;
   bellN.textContent = list.length > 9 ? "9+" : String(list.length);
   bell.setAttribute("aria-label", list.length ? fmt(L.bellN, { n: list.length }) : L.bell);
-  // القائمة تعرض دائمًا آخر الأدوات المضافة، وما لم تقرأه بعد يحمل نقطة زرقاء
+  $("notif-read").hidden = list.length === 0;
+  if (!panel.hidden) fillBell(list);
+}
+// القائمة تُبنى حين تُفتح اللوحة: تعرض دائمًا آخر الأدوات المضافة، وما لم تقرأه بعد يحمل نقطة زرقاء
+function fillBell(list = unreadList()) {
   const unreadSet = new Set(list.map((r) => r.slug));
   const latest = data.recent.filter((r) => !hidden.has(r.slug)).slice(0, 8);
   listEl.textContent = "";
@@ -586,9 +633,9 @@ function refreshBell() {
     listEl.append(li);
   });
   emptyN.hidden = latest.length !== 0;
-  $("notif-read").hidden = list.length === 0;
 }
 function togglePanel(open) {
+  if (open) fillBell();
   panel.hidden = !open;
   bell.setAttribute("aria-expanded", open ? "true" : "false");
 }
@@ -617,3 +664,8 @@ if (state.q) {
 }
 render();
 syncUrl();
+// باقي البطاقات تُجلب (بلا قراءتها) حين تقترب القائمة من الشاشة، فيكون «عرض المزيد» والفلترة فوريين
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { io.disconnect(); needCards(); } }, { rootMargin: "600px 0px" });
+  io.observe($("list"));
+} else needCards();

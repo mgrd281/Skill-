@@ -1,9 +1,9 @@
 ---
 // صفحة المفضلة بلغة معينة. تُبنى من src/pages/favorites.astro ونظيريها في src/pages/de/ وsrc/pages/en/.
 import Base from "../layouts/Base.astro";
-import Card from "../components/Card.astro";
 import Icon from "../components/Icon.astro";
 import KitDialog from "../components/KitDialog.astro";
+import CardIcons from "../components/CardIcons.astro";
 import { tools } from "../lib/data";
 import { type Lang, href, t as dict } from "../i18n";
 interface Props { lang: Lang }
@@ -37,6 +37,7 @@ const t = dict(lang);
   </div>
 
   <main class="band alt" id="fav-main">
+    <p class="status fav-loading" id="fav-loading" aria-live="polite" hidden></p>
     <div class="grid" id="fav-grid"></div>
     <div class="favempty" id="fav-empty" hidden>
       <span class="empty-ic heart"><Icon name="heart" weight="duotone" /></span>
@@ -46,12 +47,10 @@ const t = dict(lang);
     </div>
   </main>
 
-  <!-- كل البطاقات هنا مخفية، والسكربت ينقل المفضلة منها إلى الشبكة أعلاه -->
-  <div id="pool" hidden>
-    {tools.map((x) => <Card tool={x} lang={lang} />)}
-  </div>
-
   <KitDialog lang={lang} />
+  <CardIcons lang={lang} />
+  <!-- أسماء الأدوات المختصرة فقط: البطاقات تُجلب من /cards/ ويُعرض منها ما في المفضلة (src/scripts/cards.js) -->
+  <script type="application/json" id="fav-slugs" set:html={JSON.stringify(tools.map((x) => x.slug))} />
 
   <Fragment slot="footer">
     <p>{t.favFoot}</p>
@@ -60,34 +59,56 @@ const t = dict(lang);
 
 <script>
   import { initCopy } from "../scripts/copy.js";
-  import { initFav, getFavs, onFavChange, clearFavs, addFavs } from "../scripts/fav.js";
-  import { initDates } from "../scripts/dates.js";
+  import { initFav, getFavs, onFavChange, clearFavs, addFavs, syncFavButtons } from "../scripts/fav.js";
+  import { loadCards, makeCard } from "../scripts/cards.js";
   import { toast } from "../scripts/ui.js";
   import { L, fmt } from "../i18n/client.js";
 
   const grid = document.getElementById("fav-grid");
-  const pool = document.getElementById("pool");
+  const loading = document.getElementById("fav-loading");
   const empty = document.getElementById("fav-empty");
   const bar = document.querySelector(".favtools");
   const status = document.getElementById("fav-status");
 
   // قائمة مشاركة في الرابط: الأدوات الموجودة فقط، بلا تكرار، 60 بحد أقصى
-  const known = (s) => !!pool.querySelector('[data-slug="' + s + '"]') || !!document.getElementById("t-" + s);
+  const slugs = new Set(JSON.parse(document.getElementById("fav-slugs").textContent));
+  const known = (s) => slugs.has(s);
   const shared = [...new Set((new URLSearchParams(location.search).get("list") || "").split(",").map((s) => s.trim()).filter(Boolean))].filter(known).slice(0, 60);
   const sharedMode = shared.length > 0;
   const list = () => (sharedMode ? shared : getFavs());
 
+  // بطاقات المفضلة: تُنشأ من البطاقات المجلوبة عند أول حاجة، بلا زر «إخفاء» ولا رقم ترتيب (خاصان بالرئيسية)
+  let state = "loading";
+  const made = new Map();
+  function cardOf(slug) {
+    let el = made.get(slug);
+    if (el) { syncFavButtons(el); return el; }
+    el = makeCard(slug);
+    if (!el) return null;
+    el.querySelector(".hide")?.remove();
+    el.querySelector(".rank")?.setAttribute("hidden", "");
+    made.set(slug, el);
+    return el;
+  }
+
   function render() {
-    const favs = list();
+    const favs = list().filter(known);
     const want = new Set(favs);
-    // أعد البطاقات التي لم تعد مفضلة إلى المخزن
-    [...grid.children].forEach((c) => { if (!want.has(c.dataset.slug)) pool.appendChild(c); });
-    // رتّب المفضلة: الأحدث أولًا
-    favs.forEach((slug) => {
-      const card = document.getElementById("t-" + slug) || pool.querySelector('[data-slug="' + slug + '"]');
-      if (card) grid.appendChild(card);
-    });
-    const n = grid.children.length;
+    const n = favs.length;
+    // حتى تصل البطاقات: «جارٍ التحميل» مكانها، والأزرار والعدد جاهزة
+    loading.hidden = state === "ready" || n === 0;
+    loading.textContent = state === "error" ? L.loadError : L.loading;
+    if (state === "ready") {
+      // التي لم تعد مفضلة تخرج، والمفضلة بترتيبها (الأحدث أولًا)، ولا تُحرَّك بطاقة في مكانها (يبقى التركيز)
+      [...grid.children].forEach((c) => { if (!want.has(c.dataset.slug)) c.remove(); });
+      let ref = grid.firstElementChild;
+      favs.forEach((slug) => {
+        const card = cardOf(slug);
+        if (!card) return;
+        if (card === ref) { ref = ref.nextElementSibling; return; }
+        grid.insertBefore(card, ref);
+      });
+    }
     empty.hidden = n !== 0;
     bar.hidden = n === 0 || sharedMode;
     status.textContent = fmt(L.favCount, { n });
@@ -108,7 +129,6 @@ const t = dict(lang);
 
   initCopy(document);
   initFav();
-  initDates();
   if (sharedMode) {
     document.getElementById("fav-h").textContent = L.sharedTitle;
     document.getElementById("fav-lead").textContent = L.sharedLead;
@@ -120,6 +140,7 @@ const t = dict(lang);
   }
   render();
   onFavChange(render);
+  loadCards().then(() => { state = "ready"; render(); }, () => { state = "error"; render(); });
   // مشاركة المفضلة رابطًا: قائمة المشاركة في الجوال، ونسخ الرابط على الحاسوب
   document.getElementById("fav-share").addEventListener("click", () => {
     const url = location.origin + location.pathname + "?list=" + getFavs().slice(0, 60).join(",");

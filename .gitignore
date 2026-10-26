@@ -5,3 +5,7 @@ dist/
 .DS_Store
 candidates-report.md
 links-report.md
+
+# متغيرات البيئة المحلية (فيها مفاتيح مثل BLOB_READ_WRITE_TOKEN من vercel env pull): لا تُرفع أبدًا
+.env
+.env.*

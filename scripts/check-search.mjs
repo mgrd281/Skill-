@@ -6,7 +6,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import { norm, words, rawWords, terms, score, makeDoc, suggest, makeVocab, translitWords } from "../src/lib/search.js";
 import { shellWords, mcpServer, mcpClients, kitPlan } from "../src/lib/install.js";
-import { sameSite } from "../api/_feedback.js";
+import { sameSite, parseSuggest, parseMiss, KINDS } from "../api/_feedback.js";
 
 const tools = JSON.parse(fs.readFileSync(new URL("../data/tools.json", import.meta.url), "utf8"));
 let n = 0;
@@ -104,6 +104,18 @@ check("«رأيك» و«أبلغ عن مشكلة» من الموقع نفسه ف
   assert.equal(sameSite(h({ host: "xskills.dev", "sec-fetch-site": "cross-site" })), false);
   assert.equal(sameSite(h({ host: "xskills.dev", "sec-fetch-site": "same-origin" })), true);
   assert.equal(sameSite(h({ host: "xskills.dev" })), true);
+});
+
+check("اقتراح أداة والبحث بلا نتيجة", () => {
+  assert.deepEqual(parseSuggest({ tool: "  https://github.com/x/y ", message: "مفيدة", lang: "de", path: "/de/" }).value,
+    { tool: "https://github.com/x/y", message: "مفيدة", lang: "de", path: "/de/" });
+  assert.equal(parseSuggest({ tool: "x" }).error, "tool required");
+  assert.equal(parseSuggest({ tool: "abc", website: "spam" }).spam, true);
+  assert.deepEqual(parseMiss({ queries: ["  figma motion ", "figma motion", 3, "a", "x".repeat(150)], lang: "en", path: "/en/" }).value,
+    { queries: ["figma motion", "x".repeat(100)], lang: "en", path: "/en/" });
+  assert.equal(parseMiss({ queries: [] }).error, "no queries");
+  assert.equal(parseMiss({ queries: Array.from({ length: 9 }, (_, i) => "q" + i) }).value.queries.length, 5);
+  assert.deepEqual(Object.values(KINDS).map(([, folder]) => folder), ["feedback", "reports", "suggestions", "misses"]);
 });
 
 if (process.exitCode) process.exit(1);

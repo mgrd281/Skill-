@@ -68,6 +68,8 @@ const ar = {
   qsNone: "لا نتيجة لـ «{q}».",
   qsSug: "هل تقصد: {q}؟",
   qsLoading: "جارٍ تحميل البحث…",
+  loading: "جارٍ التحميل…",
+  loadError: "تعذّر التحميل الآن. تحقق من اتصالك ثم أعد تحميل الصفحة.",
   qsError: "تعذّر تحميل البحث الآن. افتح الصفحة الرئيسية وابحث فيها.",
 };
 
@@ -140,6 +142,8 @@ const de = {
   qsNone: "Keine Treffer für „{q}“.",
   qsSug: "Meintest du: {q}?",
   qsLoading: "Suche wird geladen …",
+  loading: "Wird geladen …",
+  loadError: "Das hat gerade nicht geklappt. Prüfe deine Verbindung und lade die Seite neu.",
   qsError: "Die Suche lässt sich gerade nicht laden. Öffne die Startseite und suche dort.",
 };
 
@@ -212,6 +216,8 @@ const en = {
   qsNone: "No results for “{q}”.",
   qsSug: "Did you mean: {q}?",
   qsLoading: "Loading search…",
+  loading: "Loading…",
+  loadError: "Couldn't load right now. Check your connection and reload the page.",
   qsError: "Search couldn't load right now. Open the home page and search there.",
 };
 

@@ -1,0 +1,34 @@
+---
+// «اقترح أداة» في كل صفحة: اسم الأداة أو رابطها وسبب اختياري، تُرسل إلى api/feedback.js (kind: "suggest") وتُحفظ في
+// suggestions/ داخل مخزن Vercel Blob. بلا اسم ولا بريد. يفتحها أي عنصر [data-suggest]، و[data-suggest-tool] يملأ الاسم.
+// السلوك في src/scripts/suggest.js.
+import Icon from "./Icon.astro";
+import { type Lang, t as dict } from "../i18n";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict(lang);
+---
+<dialog class="kit report" id="suggest" aria-labelledby="sg-h">
+  <form class="kit-in" id="sg-form" novalidate>
+    <div class="kit-head">
+      <span class="kit-ic" aria-hidden="true"><Icon name="lightbulb" weight="duotone" /></span>
+      <h2 id="sg-h">{t.sgTitle}</h2>
+      <button type="button" class="qs-x" id="sg-x" aria-label={t.fbClose} title={t.fbClose}><Icon name="x" weight="bold" /></button>
+    </div>
+    <label class="rp-l" for="sg-tool">{t.sgTool}</label>
+    <input id="sg-tool" name="tool" type="text" maxlength="300" required autocomplete="off" dir="auto" placeholder={t.sgToolPh} />
+    <label class="rp-l" for="sg-msg">{t.sgWhy}</label>
+    <textarea id="sg-msg" name="message" rows="3" maxlength="1000" dir="auto" placeholder={t.sgWhyPh}></textarea>
+    <input type="text" name="website" class="fb-hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <p class="fb-err" id="sg-err" role="alert" hidden></p>
+    <div class="rp-acts">
+      <button type="submit" class="btn-primary" id="sg-send" disabled>{t.fbSend}</button>
+      <small>{t.sgPrivacy}</small>
+    </div>
+  </form>
+  <div class="kit-in rp-done" id="sg-done" hidden>
+    <span class="kit-ic" aria-hidden="true"><Icon name="check" weight="bold" /></span>
+    <p class="rp-thanks" role="status">{t.sgThanks}</p>
+    <button type="button" class="kit-btn" id="sg-close">{t.fbClose}</button>
+  </div>
+</dialog>

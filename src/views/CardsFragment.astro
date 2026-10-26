@@ -1,0 +1,11 @@
+---
+// كل بطاقات الأدوات بترتيب النجوم، بلا صفحة حولها (/cards/ و/de/cards/ و/en/cards/). الرئيسية ترسم أول القائمة فقط،
+// والمفضلة لا ترسم شيئًا، وكلتاهما تجلب هذا الملف عند الحاجة وتأخذ منه ما تعرضه (src/scripts/cards.js).
+// بين البطاقات <!--card--> فيُقسَّم النص بلا قراءته كله دفعة واحدة. أيقوناتها في رسم الصفحة عبر CardIcons.
+import Card from "../components/Card.astro";
+import { byStars, rankOf } from "../lib/data";
+import type { Lang } from "../i18n";
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+---
+{byStars.map((x) => <><Fragment set:html={"<!--card-->"} /><Card tool={x} hideBtn rank={rankOf.get(x.slug)} lang={lang} /></>)}

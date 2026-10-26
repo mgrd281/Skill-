@@ -41,3 +41,29 @@ export function parseReport(body) {
   if (!REPORT_REASONS.includes(body.reason)) return { error: "bad reason" };
   return { value: { slug: body.slug, reason: body.reason, ...common(body) } };
 }
+
+// «اقترح أداة» (src/components/SuggestDialog.astro): اسم الأداة أو رابطها، وسبب اختياري
+export function parseSuggest(body) {
+  if (!body || typeof body !== "object") return { error: "bad body" };
+  if (body.website) return { spam: true };
+  const tool = typeof body.tool === "string" ? body.tool.trim().slice(0, 300) : "";
+  if (tool.length < 2) return { error: "tool required" };
+  return { value: { tool, ...common(body) } };
+}
+
+// عمليات بحث لم تجد نتيجة (src/scripts/misses.js): حتى 5 في كل إرسال، بلا هوية، لنعرف ما ينقص الدليل
+export function parseMiss(body) {
+  if (!body || typeof body !== "object" || !Array.isArray(body.queries)) return { error: "bad body" };
+  const queries = [...new Set(body.queries.filter((q) => typeof q === "string").map((q) => q.trim().slice(0, 100)).filter((q) => q.length >= 2))].slice(0, 5);
+  if (!queries.length) return { error: "no queries" };
+  const { lang, path } = common(body);
+  return { value: { queries, lang, path } };
+}
+
+// نوع الرسالة ← دالة التحقق ومجلد الحفظ في المخزن
+export const KINDS = {
+  feedback: [parseFeedback, "feedback"],
+  report: [parseReport, "reports"],
+  suggest: [parseSuggest, "suggestions"],
+  miss: [parseMiss, "misses"],
+};

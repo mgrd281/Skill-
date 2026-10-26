@@ -8,6 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "update-stars": "node scripts/update-stars.mjs",
+    "update-inside": "node scripts/update-inside.mjs",
     "check": "node scripts/check-data.mjs",
     "check-search": "node scripts/check-search.mjs",
     "discover": "node scripts/discover.mjs --report candidates-report.md --no-save",
@@ -16,7 +17,8 @@
     "icons": "node scripts/build-icons.mjs",
     "check-icons": "node scripts/check-icons.mjs",
     "brand": "node scripts/build-brand.mjs",
-    "check-brand": "node scripts/check-brand.mjs"
+    "check-brand": "node scripts/check-brand.mjs",
+    "inbox": "node --env-file=.env.local scripts/inbox.mjs"
   },
   "dependencies": {
     "@fontsource/ibm-plex-mono": "5.3.0",
