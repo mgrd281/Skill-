@@ -80,6 +80,10 @@ const kinds: Array<[string, any, string]> = [
         </button>
         <a class="link-more" href="#build-h">{t.navBuild}<Icon name={fwd} /></a>
       </div>
+      <p class="tries" style="--i:3">
+        <span class="l">{t.heroTry}</span>
+        {t.heroTries.map((q) => <a class="try" href={"?q=" + encodeURIComponent(q) + "#list"} data-q={q} dir="auto">{q}</a>)}
+      </p>
       <ul class="promise" style="--i:4">
         <li><Icon name="magnifying-glass" weight="duotone" />{t.promiseSearch}</li>
         <li><Icon name="squares-four" weight="duotone" />{t.promiseOne}</li>
@@ -248,7 +252,7 @@ const kinds: Array<[string, any, string]> = [
     </section>
     {categories.map((c) => (
       <section class="cat" id={"cat-" + c.id} data-cat-section={c.id} hidden>
-        <h2 class="cat-title"><span class="ct-ic"><Icon name={categoryIcon(c.id)} weight="duotone" /></span><span set:html={txt(catName(c.id, lang), lang)} /><span class="n">{tools.filter((x) => x.cat === c.id).length}</span></h2>
+        <h2 class="cat-title"><span class="ct-ic"><Icon name={categoryIcon(c.id)} weight="duotone" /></span><a href={href(lang, "category/" + c.id)} set:html={txt(catName(c.id, lang), lang)} /><span class="n">{tools.filter((x) => x.cat === c.id).length}</span></h2>
         <div class="grid" data-grid={c.id}></div>
         <button type="button" class="sec-more" data-cat={c.id} hidden><span set:html={t.secMore_h} /><Icon name={fwd} /></button>
       </section>

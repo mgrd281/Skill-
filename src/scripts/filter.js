@@ -407,6 +407,17 @@ function goTo(slug) {
   c.el.classList.add("flash");
 }
 
+// «جرّب:» تحت حقل الواجهة: يملأ البحث وينزل إلى النتائج بلا تحميل الصفحة من جديد
+document.querySelector(".tries")?.addEventListener("click", (e) => {
+  const a = e.target.closest("[data-q]");
+  if (!a) return;
+  e.preventDefault();
+  qEl.value = a.dataset.q;
+  qEl.dispatchEvent(new Event("input", { bubbles: true }));
+  $("q-clear").hidden = false;
+  $("list").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+});
+
 projectsEl.addEventListener("click", (e) => {
   const b = e.target.closest(".ptile");
   if (b) setProject(b.dataset.p);

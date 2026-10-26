@@ -108,6 +108,7 @@ useIcon(Astro.locals, "check", "bold");
           <a href={href(lang, "#build-h")}>{t.navBuild}</a>
           <a href={href(lang, "#latest-h")}>{t.navLatest}</a>
           <a href={href(lang, "favorites")}>{t.navFavs}</a>
+          <a href={href(lang, "compare/")}>{t.navCompare}</a>
         </nav>
         <div class="actions">
           {quickSearch && (
@@ -154,6 +155,7 @@ useIcon(Astro.locals, "check", "bold");
           <nav class="foot-nav" aria-label={t.footNavAria}>
             <a href={href(lang)}>{t.home}</a>
             <a href={href(lang, "favorites")}>{t.navFavs}</a>
+            <a href={href(lang, "compare/")}>{t.navCompare}</a>
             <a href={href(lang, "feed.xml")}><bdi>RSS</bdi></a>
             <button type="button" data-feedback>{t.fbOpen}</button>
           </nav>

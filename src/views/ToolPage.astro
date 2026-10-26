@@ -4,6 +4,7 @@ import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
 import InstallTile from "../components/InstallTile.astro";
 import TrustPanel from "../components/TrustPanel.astro";
+import ReportDialog from "../components/ReportDialog.astro";
 import Icon from "../components/Icon.astro";
 import { type Tool, tools, projectById, txt, isLatin, formatDate, host, isAppStore, repoLabel, statusBadges, initials, kindIcon, kindLabel, categoryIcon, toolDesc, catName, projName } from "../lib/data";
 import { type Lang, href, fwdIcon, t as dict } from "../i18n";
@@ -109,6 +110,7 @@ if (x.gh) jsonLd.push({
           <div><dt>{t.specAdded}</dt><dd><time class="addedchip" datetime={x.added} data-added={x.added} title={t.addedOn + date}><span class="added-text">{date}</span></time></dd></div>
           {x.pushed && <div><dt>{t.specPushed}</dt><dd>{formatDate(x.pushed, lang)}</dd></div>}
         </dl>
+        <ReportDialog slug={x.slug} name={x.name} lang={lang} />
       </div>
     </section>
   </article>

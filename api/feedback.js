@@ -1,7 +1,8 @@
-// يستقبل تقييم الزائر من نافذة "رأيك" ويحفظه في Vercel Blob (مخزن خاص، لا يُقرأ إلا من لوحة Vercel).
+// يستقبل تقييم الزائر من نافذة "رأيك"، والإبلاغ عن مشكلة في أداة (kind: "report")، ويحفظهما في Vercel Blob
+// (مخزن خاص، لا يُقرأ إلا من لوحة Vercel): التقييمات في feedback/ والبلاغات في reports/.
 // يحتاج متغير البيئة BLOB_READ_WRITE_TOKEN، ويضيفه Vercel تلقائيًا عند ربط مخزن Blob بالمشروع.
 import { put } from "@vercel/blob";
-import { parseFeedback } from "./_feedback.js";
+import { parseFeedback, parseReport } from "./_feedback.js";
 
 const json = (status, data) =>
   new Response(JSON.stringify(data), { status, headers: { "Content-Type": "application/json", "Cache-Control": "no-store" } });
@@ -12,12 +13,13 @@ export async function POST(request) {
   if (len > 4000) return json(413, { ok: false });
   let body;
   try { body = await request.json(); } catch { return json(400, { ok: false }); }
-  const r = parseFeedback(body);
+  const report = !!body && body.kind === "report";
+  const r = report ? parseReport(body) : parseFeedback(body);
   if (r.spam) return json(200, { ok: true });
   if (r.error) return json(400, { ok: false, error: r.error });
   const at = new Date().toISOString();
   const record = { ...r.value, at }; // لا اسم ولا بريد ولا IP: التقييم والرسالة فقط
-  const name = `feedback/${at.slice(0, 10)}/${at.slice(11, 19).replace(/:/g, "")}-${crypto.randomUUID().slice(0, 8)}.json`;
+  const name = `${report ? "reports" : "feedback"}/${at.slice(0, 10)}/${at.slice(11, 19).replace(/:/g, "")}-${crypto.randomUUID().slice(0, 8)}.json`;
   await put(name, JSON.stringify(record, null, 2), { access: "private", contentType: "application/json", addRandomSuffix: false });
   return json(200, { ok: true });
 }

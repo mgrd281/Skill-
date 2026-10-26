@@ -1,0 +1,44 @@
+---
+// «أبلغ عن مشكلة» في صفحة الأداة: سبب من قائمة ثابتة ورسالة اختيارية، تُرسل إلى api/feedback.js (kind: "report")
+// وتُحفظ في reports/ داخل مخزن Vercel Blob. بلا اسم ولا بريد. السلوك في src/scripts/report.js.
+import Icon from "./Icon.astro";
+import { type Lang, t as dict } from "../i18n";
+interface Props { slug: string; name: string; lang: Lang }
+const { slug, name, lang } = Astro.props;
+const t = dict(lang);
+const REASONS: Array<[string, string]> = [["link", t.rpLink], ["command", t.rpCommand], ["outdated", t.rpOutdated], ["security", t.rpSecurity], ["other", t.rpOther]];
+---
+<p class="report-row"><Icon name="flag" /><button type="button" class="linkbtn" data-report aria-haspopup="dialog">{t.rpOpen}</button></p>
+
+<dialog class="kit report" id="report" aria-labelledby="rp-h" data-slug={slug}>
+  <form class="kit-in" id="rp-form" novalidate>
+    <div class="kit-head">
+      <span class="kit-ic" aria-hidden="true"><Icon name="flag" weight="duotone" /></span>
+      <h2 id="rp-h">{t.rpTitle(name)}</h2>
+      <button type="button" class="qs-x" id="rp-x" aria-label={t.fbClose} title={t.fbClose}><Icon name="x" weight="bold" /></button>
+    </div>
+    <fieldset class="rp-reasons">
+      <legend>{t.rpWhat}</legend>
+      {REASONS.map(([id, label]) => (
+        <label class="rp-r"><input type="radio" name="reason" value={id} /><span>{label}</span></label>
+      ))}
+    </fieldset>
+    <label class="rp-l" for="rp-msg">{t.rpMsg}</label>
+    <textarea id="rp-msg" name="message" rows="3" maxlength="1000" placeholder={t.rpPh}></textarea>
+    <input type="text" name="website" class="fb-hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <p class="fb-err" id="rp-err" role="alert" hidden></p>
+    <div class="rp-acts">
+      <button type="submit" class="btn-primary" id="rp-send" disabled>{t.fbSend}</button>
+      <small>{t.rpPrivacy}</small>
+    </div>
+  </form>
+  <div class="kit-in rp-done" id="rp-done" hidden>
+    <span class="kit-ic" aria-hidden="true"><Icon name="check" weight="bold" /></span>
+    <p class="rp-thanks" role="status">{t.rpThanks}</p>
+    <button type="button" class="kit-btn" id="rp-close">{t.fbClose}</button>
+  </div>
+</dialog>
+
+<script>
+  import "../scripts/report.js";
+</script>
