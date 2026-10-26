@@ -19,7 +19,8 @@
     "brand": "node scripts/build-brand.mjs",
     "check-brand": "node scripts/check-brand.mjs",
     "marketing": "node scripts/make-marketing.cjs",
-    "inbox": "node --env-file=.env.local scripts/inbox.mjs"
+    "inbox": "node --env-file=.env.local scripts/inbox.mjs",
+    "app-icons": "node scripts/fetch-app-icons.mjs"
   },
   "dependencies": {
     "@fontsource/ibm-plex-mono": "5.3.0",

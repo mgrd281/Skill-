@@ -1,0 +1,50 @@
+name: Fetch app icons
+
+# أيقونات «التطبيقات الجاهزة» من مستودعاتها (scripts/fetch-app-icons.mjs): يدويًا من تبويب Actions، وكل اثنين بعد
+# تحديث النجوم للتطبيقات الجديدة فقط. force: true يعيد جلب الكل (بعد تصحيح حقل icon في tools.json مثلًا).
+on:
+  schedule:
+    - cron: "29 6 * * 1" # كل يوم اثنين 06:29 UTC
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Re-fetch every icon"
+        type: boolean
+        default: false
+      slugs:
+        description: "Only these apps (space-separated slugs)"
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  icons:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Fetch icons
+        run: node scripts/fetch-app-icons.mjs ${{ inputs.force && '--force' || '' }} ${{ inputs.slugs }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit changes
+        run: |
+          git add data/app-icons.json public/app-icons
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update app icons"
+          git push
