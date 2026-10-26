@@ -159,6 +159,20 @@
     "name_en": "iPhone & iPad Apps"
   },
   {
+    "id": "androidapps",
+    "name": "تطبيقات Android",
+    "name_de": "Android-Apps",
+    "name_en": "Android Apps",
+    "group": "apps"
+  },
+  {
+    "id": "linuxapps",
+    "name": "تطبيقات Linux",
+    "name_de": "Linux-Apps",
+    "name_en": "Linux Apps",
+    "group": "apps"
+  },
+  {
     "id": "crossapps",
     "group": "apps",
     "name": "تطبيقات لكل الأنظمة",

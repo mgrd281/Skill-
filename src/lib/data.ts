@@ -270,7 +270,7 @@ const CAT_ICON: Record<string, IconName> = {
   docs: "file-text", business: "briefcase", data: "database", mcp: "plug", quality: "gauge",
   ui: "layout", icons: "shapes", finance: "receipt", infra: "hard-drives", analytics: "chart-line-up",
   booking: "calendar-check", writing: "pencil-simple-line", prompts: "chat-circle-text",
-  macapps: "laptop", winapps: "windows-logo", iosapps: "device-mobile-camera", crossapps: "devices",
+  macapps: "laptop", winapps: "windows-logo", androidapps: "android-logo", linuxapps: "linux-logo", iosapps: "device-mobile-camera", crossapps: "devices",
 };
 export const categoryIcon = (id: string): IconName => CAT_ICON[id] ?? "folder";
 

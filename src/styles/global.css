@@ -640,7 +640,7 @@ a.lang-item:hover, a.lang-item:focus-visible { background: var(--fill-2); }
 /* بلاطة لكل قسم من المجموعة apps: أيقونة النظام في مربع بحواف تطبيق، والاسم والعدد، وأشهر ثلاثة تطبيقات، وسهم إلى صفحة القسم.
    عمودان على الجوال وأربعة على الشاشات الواسعة */
 .aplats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-@media (min-width: 900px) { .aplats { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; } }
+@media (min-width: 900px) { .aplats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; } }
 .aplat {
   position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; min-width: 0; min-height: 192px;
   padding: 22px 20px 20px; border: 1px solid transparent; border-radius: var(--r-xl);

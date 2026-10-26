@@ -1,6 +1,6 @@
 // «الأمان والثقة» في صفحة الأداة: ما يحتاج الزائر أن يعرفه قبل التثبيت، من البيانات نفسها بلا درجات مخترعة.
 // ثلاث إشارات: من ينشرها (الحساب الرسمي للجهة أم حساب آخر)، وأين تعمل (جهازك، خادم بعيد ومن يستقبل البيانات،
-// داخل Claude، داخل مشروعك)، ومن أين تُثبَّت (السوق الرسمي، npm، Homebrew، winget، App Store، GitHub، سكربت من الإنترنت).
+// داخل Claude، داخل مشروعك)، ومن أين تُثبَّت (السوق الرسمي، npm، Homebrew، winget، Flathub، App Store، GitHub، سكربت من الإنترنت).
 // ثم نصيحة واحدة تناسب نوعها.
 import type { IconName } from "./icons";
 import type { Lang } from "../i18n";
@@ -184,6 +184,7 @@ function packageOf(cmd: string): { reg: string; name: string; href: string; tap?
     return m[2].includes("/") ? { reg: "Homebrew", name: m[2], href: "https://github.com/" + m[2].split("/").slice(0, 2).join("/").replace(/\/(.+)$/, "/homebrew-$1"), tap: true }
       : { reg: "Homebrew", name, href: `https://formulae.brew.sh/${m[1] ? "cask" : "formula"}/${name}` };
   }
+  if ((m = /^flatpak install (?:--user )?flathub ([\w.-]+)$/.exec(line))) return { reg: "Flathub", name: m[1], href: "https://flathub.org/apps/" + m[1] };
   if ((m = /^winget install (?:(?:-e|--exact) )?--id ([\w.+-]+)/.exec(line)))
     return { reg: "winget", name: m[1], href: `https://github.com/microsoft/winget-pkgs/tree/master/manifests/${m[1][0].toLowerCase()}/${m[1].replace(/\./g, "/")}` };
   if ((m = /^(?:python -m )?pip install '?([\w.-]+)/.exec(line))) return { reg: "PyPI", name: m[1], href: "https://pypi.org/project/" + m[1] + "/" };

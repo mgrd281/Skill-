@@ -18,7 +18,7 @@ const NAMES = [
   "calendar-check", "pencil-simple-line", "chat-circle-text", "browser", "laptop", "megaphone", "terminal-window",
   "folder", "compass",
   // أقسام «تطبيقات جاهزة» (والتفاحة لقسم تطوير Apple)
-  "windows-logo", "device-mobile-camera", "apple-logo",
+  "windows-logo", "android-logo", "linux-logo", "device-mobile-camera", "apple-logo",
 ];
 // أوزان إضافية لحالات محددة: الممتلئ للحالة المفعّلة، والعريض لعلامات التأكيد الصغيرة.
 const EXTRA = { fill: ["star", "heart"], bold: ["check", "x"] };
