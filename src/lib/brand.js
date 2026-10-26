@@ -1,51 +1,52 @@
 // الهوية البصرية للدليل: مصدر واحد لرسم الشعار. تستخدمه الواجهة (Logo.astro) وصور المشاركة (og.ts وscripts/og-home.cjs)
 // ومجموعة الأيقونات (scripts/build-brand.mjs). لا ترسم الشعار بيدك في مكان آخر: عدّل هنا ثم شغّل `npm run brand`.
 //
-// الشعار: رأس روبوت صديق داخل دائرة زرقاء: خوذة بيضاء بسماعتين، وشاشة كحلية بعينين مبتسمتين،
-// وهوائي في طرفه النجمة الذهبية اللامعة (رمز المهارات). الهوائي يخرج من الدائرة فوقها.
-// لا تدرّج ولا ظل (DESIGN.md): العمق بدرجات مصمتة فقط.
+// الشعار: وجه شخصية الدليل (src/components/Mascot.astro): بلاطة زرقاء مائلة قليلًا بعينين وحاجبين وخد ذهبي وابتسامة،
+// والنجمة الذهبية اللامعة (رمز المهارات) عند زاويتها العليا. مرسوم بنسب الشخصية نفسها مصغّرة إلى شبكة 32.
+// لا تدرّج ولا ظل (DESIGN.md).
 
-// ألوان الشعار ثابتة في الوضعين الفاتح والداكن، فلا تُقرأ من متغيرات الواجهة.
-// blue لون --btn، وnavy الشاشة (الأزرق نفسه داكنًا)، وeye عينا الشاشة، وear السماعتان، وgold النجمة
-export const COLORS = { blue: "#2446D6", navy: "#0F1B4D", eye: "#6FD3FF", ear: "#C9D5FF", white: "#FFFFFF", gold: "#FFC94D" };
+// ألوان الشعار ثابتة في الوضعين الفاتح والداكن، فلا تُقرأ من متغيرات الواجهة
+export const COLORS = { blue: "#2446D6", white: "#FFFFFF", gold: "#FFC94D", ink: "#1D1D1F" };
 
 // نجمة بأربعة أذرع من منحنيات تربيعية، مركزها (cx, cy) ونصف قطرها r
-export const sparkPath = (cx, cy, r, k = r * 0.125) =>
-  `M${cx} ${cy - r}Q${cx + k} ${cy - k} ${cx + r} ${cy}Q${cx + k} ${cy + k} ${cx} ${cy + r}Q${cx - k} ${cy + k} ${cx - r} ${cy}Q${cx - k} ${cy - k} ${cx} ${cy - r}Z`;
+const sparkPath = (cx, cy, r, q = r * 0.125) =>
+  `M${cx} ${cy - r}Q${cx + q} ${cy - q} ${cx + r} ${cy}Q${cx + q} ${cy + q} ${cx} ${cy + r}Q${cx - q} ${cy + q} ${cx - r} ${cy}Q${cx - q} ${cy - q} ${cx} ${cy - r}Z`;
 
-// الشبكة 32×32: الدائرة، والسماعتان، والهوائي، والرأس، والشاشة، والعينان (قوسان مبتسمان)، والنجمة
-const DISC = { cx: 16, cy: 18.5, r: 13.5 };
-const EARS = [[4.4, 13], [24, 13]]; // 3.6×8
-const HEAD = { x: 6.5, y: 8, w: 19, h: 16.6, r: 7 };
-const SCREEN = { x: 9, y: 11, w: 14, h: 10.6, r: 4.6 };
-const EYES = ["M11.3 17.5Q12.9 14.7 14.5 17.5", "M17.5 17.5Q19.1 14.7 20.7 17.5"];
-const SPARK = sparkPath(16, 3.6, 3.4);
-// مركز الرسم عموديًا دون الدائرة (من طرف النجمة إلى أسفل الرأس)، لأيقونات التطبيق التي لا دائرة فيها
-const GLYPH_MID = 12.4;
-
-const rect = ({ x, y, w, h, r }, attrs) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}"${attrs}/>`;
-// مستطيل بحواف مدورة كمسار (لثقب الشاشة في نسخة اللون الواحد)
-const rrPath = ({ x, y, w, h, r }) =>
-  `M${x + r} ${y}H${x + w - r}Q${x + w} ${y} ${x + w} ${y + r}V${y + h - r}Q${x + w} ${y + h} ${x + w - r} ${y + h}H${x + r}Q${x} ${y + h} ${x} ${y + h - r}V${y + r}Q${x} ${y} ${x + r} ${y}Z`;
+// من إحداثيات الشخصية (viewBox 132) إلى شبكة 32: البلاطة 92 تصير 26، وزاويتها العليا عند (2، 5.5)
+const K = 26 / 92;
+const r2 = (n) => +n.toFixed(2);
+const X = (x) => r2(2 + (x - 20) * K), Y = (y) => r2(5.5 + (y - 20) * K), S = (v) => r2(v * K);
+const pts = (d) => d.replace(/(-?\d+(?:\.\d+)?) (-?\d+(?:\.\d+)?)/g, (_, a, b) => `${X(+a)} ${Y(+b)}`);
+// البلاطة مائلة 4° مثل الشخصية حول مركزها
+const TILT = `rotate(-4 ${X(66)} ${Y(63)})`;
+const LINE = S(3.4) + 0.15, SMILE_W = S(4) + 0.15; // خطوط أسمك قليلًا من النسبة حتى لا تبهت في الأحجام الصغيرة
+const PLATE = `<rect x="${X(20)}" y="${Y(20)}" width="${S(92)}" height="${S(86)}" rx="${S(27)}"`;
+const BROWS = [pts("M40 40Q49 35 58 39"), pts("M72 39Q81 35 90 40")];
+const SMILE = pts("M58 83Q66 90 74 82");
+const SPARK = sparkPath(X(104), Y(19), S(13));
+// العينان: البياض ثم البؤبؤ ينظر قليلًا إلى الأمام (مثل الشخصية) ونقطة لمعة
+const eyes = (white, pupil) => [50, 80].map((x) => `<ellipse cx="${X(x)}" cy="${Y(58)}" rx="${S(11)}" ry="${S(13)}" fill="${white}"/>`).join("") +
+  [50, 80].map((x) => `<circle cx="${r2(X(x) + 0.35)}" cy="${Y(59.5)}" r="${r2(S(5.6) + 0.1)}" fill="${pupil}"/>`).join("");
+const glints = (fill) => [52, 82].map((x) => `<circle cx="${r2(X(x) + 0.35)}" cy="${Y(57)}" r=".55" fill="${fill}"/>`).join("");
 
 // محتوى الشعار (بلا وسم svg). class="spark" للنجمة وclass="eyes" للعينين: تتحركان في global.css.
-// bleed: مربع أزرق كامل بلا دائرة، والرأس في وسطه (أيقونة iOS وAndroid تقصّها بنفسها)
+// bleed: مربع أزرق كامل والوجه في وسطه (أيقونة iOS وAndroid تقصّها بنفسها)
 // scale: تصغير الرسم (المنطقة الآمنة للأيقونة القابلة للقص)
-// mono: لون واحد (currentColor) بلا دائرة، والشاشة ثقب فيه، للأختام والطباعة
+// mono: لون واحد (currentColor)، والوجه ثقوب في البلاطة، للأختام والطباعة (قناع بمعرّف: للملف المستقل فقط، لا داخل الصفحة)
 export function markInner({ bleed = false, scale = 1, mono = false } = {}) {
-  const ears = (fill) => EARS.map(([x, y]) => `<rect x="${x}" y="${y}" width="3.6" height="8" rx="1.8"${fill}/>`).join("");
-  const stem = (fill) => `<rect x="15.25" y="4.5" width="1.5" height="4" rx=".75"${fill}/>`;
-  const eyes = (color) => `<g class="eyes" fill="none" stroke="${color}" stroke-width="1.6" stroke-linecap="round">${EYES.map((d) => `<path d="${d}"/>`).join("")}</g>`;
   if (mono) {
-    return `<g fill="currentColor">${ears("")}${stem("")}<path fill-rule="evenodd" d="${rrPath(HEAD)}${rrPath(SCREEN)}"/><path class="spark" d="${SPARK}"/></g>${eyes("currentColor")}`;
+    const hole = `<mask id="face"><rect width="32" height="32" fill="#fff"/><g transform="${TILT}"><g fill="none" stroke="#000" stroke-width="${LINE}" stroke-linecap="round">${BROWS.map((d) => `<path d="${d}"/>`).join("")}<path d="${SMILE}" stroke-width="${SMILE_W}"/></g>${eyes("#000", "#fff")}</g></mask>`;
+    return `${hole}<g fill="currentColor"><g transform="${TILT}">${PLATE} mask="url(#face)"/></g><path class="spark" d="${SPARK}"/></g>`;
   }
-  const plate = bleed ? `<rect width="32" height="32" fill="${COLORS.blue}"/>` : `<circle cx="${DISC.cx}" cy="${DISC.cy}" r="${DISC.r}" fill="${COLORS.blue}"/>`;
-  const glyph = ears(` fill="${COLORS.ear}"`) + stem(` fill="${COLORS.navy}"`) + rect(HEAD, ` fill="${COLORS.white}"`) +
-    rect(SCREEN, ` fill="${COLORS.navy}"`) + eyes(COLORS.eye) + `<path class="spark" d="${SPARK}" fill="${COLORS.gold}"/>`;
-  if (!bleed && scale === 1) return plate + glyph;
-  // بلا دائرة يتوسط الرأس المربع؛ ومع الدائرة يبقى في مكانه منها
-  const mid = bleed ? GLYPH_MID : 16;
-  return plate + `<g transform="translate(16 16) scale(${scale}) translate(-16 -${mid})">${glyph}</g>`;
+  const face = `<g fill="none" stroke="#fff" stroke-width="${LINE}" stroke-linecap="round">${BROWS.map((d) => `<path d="${d}"/>`).join("")}</g>` +
+    `<g class="eyes">${eyes("#fff", COLORS.ink)}${glints("#fff")}</g>` +
+    `<circle cx="${X(35)}" cy="${Y(81)}" r="${S(6.5)}" fill="${COLORS.gold}"/>` +
+    `<path d="${SMILE}" fill="none" stroke="#fff" stroke-width="${SMILE_W}" stroke-linecap="round"/>`;
+  const glyph = `<g transform="${TILT}">${PLATE} fill="${COLORS.blue}"/>${face}</g><path class="spark" d="${SPARK}" fill="${COLORS.gold}"/>`;
+  if (!bleed && scale === 1) return glyph;
+  // في المربع الكامل تختفي البلاطة في الخلفية الزرقاء، فيتوسط الوجه والنجمة المربع
+  const plate = bleed ? `<rect width="32" height="32" fill="${COLORS.blue}"/>` : "";
+  return plate + `<g transform="translate(16 16) scale(${scale}) translate(-16 ${bleed ? -15.6 : -16})">${glyph}</g>`;
 }
 
 // الشعار كاملًا كنص SVG. title: عنوان لقراءات الشاشة عند استخدام الملف مستقلًا
@@ -57,18 +58,20 @@ export function markSvg({ title = "", size, ...opts } = {}) {
 // الشعار كرابط بيانات (لصور المشاركة التي تقبل صورة لا SVG مضمّنًا)
 export const markDataUrl = (opts) => "data:image/svg+xml;base64," + Buffer.from(markSvg(opts)).toString("base64");
 
-// نسخة 16 بكسل (أيقونة التبويب) بالتركيب نفسه على شبكة 16×16 بأعداد صحيحة، حتى لا تقع الحواف على أنصاف البكسل فتبهت:
-// الدائرة والرأس والشاشة، والعينان خطّان بعرض بكسلين (القوس لا يظهر بهذا الحجم)، والنجمة معيّن صغير فوق الرأس
+// نسخة 16 بكسل (أيقونة التبويب) مرسومة لهذا الحجم: بلاطة مستقيمة أكبر، وعينان وبؤبؤان أوضح، والخد والابتسامة،
+// بلا حاجبين ولا لمعة (لا تظهر بهذا الحجم)، والنجمة عند الزاوية العليا
 export function markInner16() {
-  return `<circle cx="8" cy="9" r="7" fill="${COLORS.blue}"/><rect x="2" y="4" width="12" height="9" rx="3.5" fill="#fff"/>` +
-    `<rect x="4" y="6" width="8" height="5" rx="1.8" fill="${COLORS.navy}"/>` +
-    `<rect x="5" y="8" width="2" height="1" fill="${COLORS.eye}"/><rect x="9" y="8" width="2" height="1" fill="${COLORS.eye}"/>` +
-    `<path d="M8 .2L9.3 2L8 3.8L6.7 2Z" fill="${COLORS.gold}"/>`;
+  return `<rect x=".5" y="2.5" width="14" height="13" rx="4" fill="${COLORS.blue}"/>` +
+    `<ellipse cx="5" cy="8.6" rx="2.2" ry="2.6" fill="#fff"/><ellipse cx="10.4" cy="8.6" rx="2.2" ry="2.6" fill="#fff"/>` +
+    `<circle cx="5.4" cy="9.1" r="1.2" fill="${COLORS.ink}"/><circle cx="10.8" cy="9.1" r="1.2" fill="${COLORS.ink}"/>` +
+    `<circle cx="2.8" cy="12.6" r=".9" fill="${COLORS.gold}"/>` +
+    `<path d="M6.4 12.8Q7.8 13.8 9.2 12.7" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round"/>` +
+    `<path d="${sparkPath(13.4, 2.5, 2.4, 0.36)}" fill="${COLORS.gold}"/>`;
 }
 
 export const markSvg16 = () => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">${markInner16()}</svg>`;
 
-// أيقونة التبويب SVG: الشعار الكامل، وتحت 20 بكسل تظهر نسخة 16 المحاذاة (استعلام الوسائط يقيس نافذة الصورة نفسها)
+// أيقونة التبويب SVG: الشعار الكامل، وتحت 20 بكسل تظهر نسخة 16 (استعلام الوسائط يقيس نافذة الصورة نفسها)
 export function faviconSvg() {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><style>.s{display:none}@media (max-width:20px){.m{display:none}.s{display:inline}}</style><g class="m">${markInner()}</g><g class="s" transform="scale(2)">${markInner16()}</g></svg>`;
 }

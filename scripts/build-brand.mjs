@@ -37,8 +37,8 @@ function ico(images) {
 }
 
 const title = "دليل الأدوات";
-const plate = markSvg(); // الدائرة والرأس (خلفية شفافة حولها)
-const bleed = markSvg({ bleed: true }); // مربع أزرق كامل والرأس في وسطه: iOS وAndroid يقصّانه بشكلهما الخاص
+const plate = markSvg(); // البلاطة والوجه والنجمة (خلفية شفافة حولها)
+const bleed = markSvg({ bleed: true, scale: 0.86 }); // مربع أزرق كامل والوجه في وسطه (أصغر قليلًا حتى لا تقترب النجمة من الزاوية المدورة): iOS وAndroid يقصّانه بشكلهما الخاص
 // القابلة للقص (maskable): الأقنعة تقصّ حتى 20% من كل جانب، فيُصغَّر الرسم ليبقى داخل المنطقة الآمنة (دائرة بنصف قطر 40%)
 const safe = markSvg({ bleed: true, scale: 0.8 });
 
