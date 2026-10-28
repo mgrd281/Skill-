@@ -71,6 +71,10 @@
     "file": "app-icons/files.png",
     "src": "https://raw.githubusercontent.com/files-community/Files/main/src/Files.App/Assets/AppTiles/Release/Large310x310Logo.scale-400.png"
   },
+  "firefox-vpn": {
+    "file": "app-icons/firefox-vpn.png",
+    "src": "https://raw.githubusercontent.com/armanlife/firefox-vpn-client/main/app/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png"
+  },
   "flameshot": {
     "file": "app-icons/flameshot.png",
     "src": "https://raw.githubusercontent.com/flameshot-org/flameshot/master/data/img/hicolor/scalable/apps/flameshot.svg"
@@ -175,6 +179,10 @@
     "file": "app-icons/obtainium.png",
     "src": "https://raw.githubusercontent.com/ImranR98/Obtainium/main/assets/graphics/icon-512x512.png"
   },
+  "opennavo": {
+    "file": "app-icons/opennavo.png",
+    "src": "https://raw.githubusercontent.com/opennavo/OpenNavo/main/apps/web/public/icon-512.png"
+  },
   "organic-maps": {
     "file": "app-icons/organic-maps.png",
     "src": "https://raw.githubusercontent.com/organicmaps/organicmaps/master/iphone/Maps/Resources/Images.xcassets/AppIcon.appiconset/1024.png"
@@ -226,6 +234,10 @@
   "thunderbird-for-android": {
     "file": "app-icons/thunderbird-for-android.png",
     "src": "https://raw.githubusercontent.com/thunderbird/thunderbird-android/main/app-thunderbird/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+  },
+  "twindesk": {
+    "file": "app-icons/twindesk.png",
+    "src": "https://raw.githubusercontent.com/InukaAsith/TwinDesk/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
   },
   "twinkle-tray": {
     "file": "app-icons/twinkle-tray.png",
