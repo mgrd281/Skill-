@@ -8429,5 +8429,53 @@
     "license": null,
     "archived": false,
     "added": "2026-10-26T18:30:00Z"
+  },
+  {
+    "slug": "opennavo",
+    "cat": "macapps",
+    "name": "OpenNavo",
+    "kind": "تطبيق",
+    "isNew": true,
+    "gh": "https://github.com/opennavo/OpenNavo",
+    "site": "https://opennavo.com/",
+    "stars": null,
+    "cmd": null,
+    "use": [],
+    "desc": "متجر تطبيقات لـ Mac فوق Homebrew: تتصفح أكثر من 7,700 تطبيق مع وصفها وملاحظات إصداراتها، وتثبّتها وتحدّثها بنقرة، مع تنظيف بقايا التطبيقات ومراقب نظام في شريط القوائم.",
+    "desc_de": "App-Store-Oberfläche für Homebrew auf dem Mac: über 7.700 Apps mit Beschreibung und Release Notes durchsuchen, per Klick installieren und aktualisieren, dazu Aufräumen von App-Resten und ein Systemmonitor in der Menüleiste.",
+    "desc_en": "An app-store interface for Homebrew on Mac: browse over 7,700 apps with descriptions and release notes, install and update in one click, plus cleanup of app leftovers and a system monitor in the menu bar.",
+    "added": "2026-10-28T08:00:00Z"
+  },
+  {
+    "slug": "twindesk",
+    "cat": "crossapps",
+    "name": "TwinDesk",
+    "kind": "تطبيق",
+    "isNew": true,
+    "gh": "https://github.com/InukaAsith/TwinDesk",
+    "site": null,
+    "stars": null,
+    "cmd": null,
+    "use": [],
+    "desc": "يجعل أجهزتك مكتبًا واحدًا: مشاركة الشاشة والملفات والحافظة والإشعارات والفأرة ولوحة المفاتيح بين Mac وWindows وLinux وAndroid. بلا حساب ولا سحابة ولا تتبع.",
+    "desc_de": "Macht deine Geräte zu einem Schreibtisch: Bildschirm, Dateien, Zwischenablage, Benachrichtigungen, Maus und Tastatur werden zwischen Mac, Windows, Linux und Android geteilt. Ohne Konto, ohne Cloud, ohne Tracking.",
+    "desc_en": "Turns your devices into one desk: screens, files, clipboard, notifications, mouse and keyboard shared between Mac, Windows, Linux and Android. No account, no cloud, no tracking.",
+    "added": "2026-10-28T08:00:00Z"
+  },
+  {
+    "slug": "firefox-vpn",
+    "cat": "crossapps",
+    "name": "Firefox VPN",
+    "kind": "تطبيق",
+    "isNew": true,
+    "gh": "https://github.com/armanlife/firefox-vpn-client",
+    "site": null,
+    "stars": null,
+    "cmd": null,
+    "use": [],
+    "desc": "عميل VPN مجاني ومفتوح المصدر لـ Android وWindows وmacOS وLinux، يمرّر حركتك عبر خوادم Mozilla بحساب Firefox (50 جيجابايت مجانًا شهريًا حسب صفحته). تنبيه: مطوّره شخص مستقل وليس Mozilla، فاقرأ الشروط وقرر بنفسك قبل الاعتماد عليه.",
+    "desc_de": "Kostenloser Open-Source-VPN-Client für Android, Windows, macOS und Linux, der deinen Verkehr mit einem Firefox-Konto über Mozillas Server leitet (laut Projektseite 50 GB pro Monat gratis). Achtung: Entwickelt von einer Einzelperson, nicht von Mozilla; lies die Bedingungen und entscheide selbst, bevor du dich darauf verlässt.",
+    "desc_en": "A free open-source VPN client for Android, Windows, macOS and Linux that routes your traffic through Mozilla's servers with a Firefox Account (50 GB free a month, per its page). Note: it is built by an independent developer, not by Mozilla, so read the terms and decide for yourself before relying on it.",
+    "added": "2026-10-28T08:00:00Z"
   }
 ]
