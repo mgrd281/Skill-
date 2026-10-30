@@ -105,7 +105,7 @@
   ]
  },
  "agent-browser": {
-  "n": 10,
+  "n": 11,
   "skills": [
    {
     "name": "agent-browser",
@@ -138,6 +138,10 @@
    {
     "name": "slack",
     "desc": "Interact with Slack workspaces using browser automation. Use when the user needs to check unread channels, navigate Slack, send messages, extract data, find information, search conversations, or automate any Slack task.…"
+   },
+   {
+    "name": "technical-writer",
+    "desc": "Write, review, and edit developer documentation for SDKs, libraries, and frameworks, including sites such as agent-browser.dev and portless.sh. Use for getting-started guides, tutorials, API references, conceptual…"
    },
    {
     "name": "vercel-sandbox",
@@ -207,7 +211,7 @@
   ]
  },
  "android-skills": {
-  "n": 33,
+  "n": 36,
   "skills": [
    {
     "name": "adaptive",
@@ -243,7 +247,7 @@
    },
    {
     "name": "appfunctions",
-    "desc": "Analyzes Android apps to identify key user workflows for AppFunctions"
+    "desc": "Analyzes Android apps to find user workflows to expose as AppFunctions,"
    },
    {
     "name": "camerax",
@@ -262,8 +266,20 @@
     "desc": "Helps developers integrate, debug, and resolve Play Engage SDK implementation"
    },
    {
+    "name": "glance-appwidget-updates-and-memory",
+    "desc": "Manages Android AppWidget state updates, background syncs, and RemoteViews"
+   },
+   {
     "name": "glance-canonical-layouts",
     "desc": "Use this skill to create home screen widgets using Jetpack Glance Canonical"
+   },
+   {
+    "name": "ink-app-builder",
+    "desc": "Adds inking and freehand drawing capabilities to an Android app using"
+   },
+   {
+    "name": "ink-custom-brush-builder",
+    "desc": "Creates custom BrushFamily definitions for an Android app using Jetpack"
    },
    {
     "name": "jetpack-compose-performance",
@@ -294,6 +310,10 @@
     "desc": "Analyzes Android codebases to implement ML Kit GenAI Prompt API. Use"
    },
    {
+    "name": "mlkit-agent-api",
+    "desc": "Builds autonomous on-device agentic workflows in Android apps using the"
+   },
+   {
     "name": "navigation-3",
     "desc": "Learn how to install and migrate to Jetpack Navigation 3, and how to"
    },
@@ -320,10 +340,6 @@
    {
     "name": "restore-credentials",
     "desc": "Provides knowledge and workflows to implement Android's Restore Credentials"
-   },
-   {
-    "name": "styles",
-    "desc": "Use this skill to integrate the Jetpack Compose Styles API into an Android"
    },
    {
     "name": "testing-setup",
@@ -1443,7 +1459,7 @@
    },
    {
     "name": "aws-observability",
-    "desc": "Builds, configures, debugs, and optimizes AWS observability - operator-symptom questions and detecting Omni vs classic CloudWatch. CloudWatch on an already-reporting service: Log Insights, metric/composite/anomaly…"
+    "desc": "Investigates root causes on the Omni context graph (service dependencies) and Intelligence insights; builds, configures, debugs, tunes AWS observability - operator-symptom questions, detecting Omni vs classic…"
    },
    {
     "name": "aws-sdk-js-v3-usage",
@@ -5277,7 +5293,7 @@
    },
    {
     "name": "revenuecat-migrate",
-    "desc": "Migrate to RevenueCat from raw StoreKit or Google Play Billing, or upgrade the RevenueCat SDK across a major version. Use when the user says migrate to RevenueCat, switch from StoreKit to RC, upgrade RevenueCat SDK,…"
+    "desc": "Migrate to RevenueCat from raw StoreKit or Google Play Billing, upgrade the RevenueCat SDK across a major version, or move the SDK's iOS dependency from CocoaPods/Carthage to Swift Package Manager. Use when the user…"
    },
    {
     "name": "revenuecat-paywall",
@@ -5730,7 +5746,7 @@
   "skills": [
    {
     "name": "shopify",
-    "desc": "Build anything on Shopify. One skill covering every Shopify developer surface: Use Shopify CLI, Admin API, ShopifyQL, Storefront GraphQL API, Partner API, Customer Account API, Payments Apps API, Shopify Functions,…"
+    "desc": "Build anything on Shopify. One skill covering every Shopify developer surface: Flow workflows, Use Shopify CLI, Admin API, ShopifyQL, Storefront GraphQL API, Partner API, Customer Account API, Payments Apps API, Shopify…"
    },
    {
     "name": "shopify-admin",
@@ -6959,7 +6975,7 @@
   "skills": [
    {
     "name": "video-shotcraft",
-    "desc": "Create cinematic product videos from shot recipe cards, a validated template, and code/audio assets (Remotion + real page screenshots + 2.5D camera moves + beat-synced cuts + sound design). Use when the user asks to…"
+    "desc": "Create cinematic product videos from frontend projects or webpages with Remotion, real page captures, shot cards, the Ink Press template, beat sync and sound design. Use for full product promos, reproducing Ink Press,…"
    }
   ]
  },
