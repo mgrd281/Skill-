@@ -8505,5 +8505,23 @@
     "pushed": "2026-10-29",
     "license": "MIT",
     "archived": false
+  },
+  {
+    "slug": "voicestudio",
+    "cat": "crossapps",
+    "name": "VoiceStudio",
+    "kind": "تطبيق",
+    "isNew": true,
+    "gh": "https://github.com/debpalash/VoiceStudio",
+    "site": "https://voicestudio.sh/",
+    "stars": null,
+    "cmd": null,
+    "use": [
+      "video"
+    ],
+    "desc": "استوديو صوت بالذكاء الاصطناعي يعمل على جهازك: استنساخ الأصوات، وتصميم صوت من وصف نصي، ودبلجة الفيديو بلغات أخرى، والتحويل بين الكلام والنص، وسرد الكتب. يعلن دعم 646 لغة، ويختلف الدعم حسب النموذج والميزة. يعمل على Mac وWindows وLinux، وعلى Android وiPhone بنسخة تجريبية. استنسخ صوتًا بموافقة صاحبه فقط.",
+    "desc_de": "KI-Sprachstudio auf deinem Gerät: Stimmen klonen, eine Stimme per Textbeschreibung entwerfen, Videos in andere Sprachen synchronisieren, Sprache und Text ineinander umwandeln und Bücher einsprechen. Laut Projekt 646 Sprachen, je nach Modell und Funktion unterschiedlich. Läuft auf Mac, Windows und Linux, auf Android und iPhone als Vorschau. Klone nur Stimmen mit Einwilligung der Person.",
+    "desc_en": "An AI voice studio that runs on your own device: clone voices, design a voice from a text description, dub videos into other languages, convert speech to text and back, and narrate books. The project claims 646 languages, and support varies by model and feature. Runs on Mac, Windows and Linux, with Android and iPhone in preview. Clone a voice only with its owner's consent.",
+    "added": "2026-10-30T09:00:00Z"
   }
 ]
