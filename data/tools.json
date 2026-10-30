@@ -30,7 +30,7 @@
     "isNew": true,
     "gh": "https://github.com/pbakaus/impeccable",
     "site": "https://impeccable.style",
-    "stars": "95.8k",
+    "stars": "95.9k",
     "cmd": "npx skills add pbakaus/impeccable",
     "use": [
       "landing",
@@ -53,7 +53,7 @@
     "isNew": false,
     "gh": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
     "site": "https://www.uupm.cc/",
-    "stars": "142.6k",
+    "stars": "142.7k",
     "cmd": "/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill\n/plugin install ui-ux-pro-max@ui-ux-pro-max-skill",
     "use": [
       "web",
@@ -3774,7 +3774,7 @@
     "isNew": true,
     "gh": "https://github.com/morluto/rea",
     "site": "https://rea.tools/",
-    "stars": "408.9k",
+    "stars": "409k",
     "cmd": "npx rea-agents setup",
     "use": [
       "mobile",
@@ -4317,7 +4317,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/claude-cookbooks",
     "site": "https://platform.claude.com/cookbook",
-    "stars": "53.9k",
+    "stars": "54k",
     "cmd": null,
     "use": [
       "claude",
@@ -5839,7 +5839,7 @@
     "desc": "يقيس مدى ظهور موقعك في إجابات ChatGPT وClaude وPerplexity وGoogle AI Overviews: درجة قابلية الاستشهاد بمحتواك، وسماح ملف robots.txt لزواحف الذكاء الاصطناعي، وإنشاء llms.txt، والبيانات المنظمة، وتقارير PDF. التثبيت بسكربت من الإنترنت ويحتاج Python 3.10 أو أحدث.",
     "desc_de": "Misst, wie sichtbar deine Website in den Antworten von ChatGPT, Claude, Perplexity und Google AI Overviews ist: Score für die Zitierfähigkeit deiner Inhalte, Prüfung, ob die robots.txt KI-Crawler zulässt, Erstellung einer llms.txt, strukturierte Daten und PDF-Berichte. Installation per Skript aus dem Internet; benötigt Python 3.10 oder neuer.",
     "desc_en": "Measures how visible your website is in answers from ChatGPT, Claude, Perplexity and Google AI Overviews: a citability score for your content, whether robots.txt allows AI crawlers, creating llms.txt, structured data, and PDF reports. Installed with a script from the internet and needs Python 3.10 or later.",
-    "pushed": "2026-10-29",
+    "pushed": "2026-10-30",
     "license": "MIT",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -7716,7 +7716,7 @@
     "desc_de": "Verbindet Claude mit deinem Supabase-Projekt: Tabellen, Abfragen und Einstellungen.",
     "desc_en": "Connects Claude to your Supabase project: tables, queries and settings.",
     "added": "2026-10-26T16:00:00Z",
-    "pushed": "2026-10-29",
+    "pushed": "2026-10-30",
     "license": "Apache-2.0",
     "archived": false
   },
@@ -8457,7 +8457,7 @@
     "isNew": true,
     "gh": "https://github.com/InukaAsith/TwinDesk",
     "site": null,
-    "stars": "1.5k",
+    "stars": "1.6k",
     "cmd": null,
     "use": [],
     "desc": "يجعل أجهزتك مكتبًا واحدًا: مشاركة الشاشة والملفات والحافظة والإشعارات والفأرة ولوحة المفاتيح بين Mac وWindows وLinux وAndroid. بلا حساب ولا سحابة ولا تتبع.",
@@ -8514,7 +8514,7 @@
     "isNew": true,
     "gh": "https://github.com/debpalash/VoiceStudio",
     "site": "https://voicestudio.sh/",
-    "stars": null,
+    "stars": "94.6k",
     "cmd": null,
     "use": [
       "video"
@@ -8522,6 +8522,9 @@
     "desc": "استوديو صوت بالذكاء الاصطناعي يعمل على جهازك: استنساخ الأصوات، وتصميم صوت من وصف نصي، ودبلجة الفيديو بلغات أخرى، والتحويل بين الكلام والنص، وسرد الكتب. يعلن دعم 646 لغة، ويختلف الدعم حسب النموذج والميزة. يعمل على Mac وWindows وLinux، وعلى Android وiPhone بنسخة تجريبية. استنسخ صوتًا بموافقة صاحبه فقط.",
     "desc_de": "KI-Sprachstudio auf deinem Gerät: Stimmen klonen, eine Stimme per Textbeschreibung entwerfen, Videos in andere Sprachen synchronisieren, Sprache und Text ineinander umwandeln und Bücher einsprechen. Laut Projekt 646 Sprachen, je nach Modell und Funktion unterschiedlich. Läuft auf Mac, Windows und Linux, auf Android und iPhone als Vorschau. Klone nur Stimmen mit Einwilligung der Person.",
     "desc_en": "An AI voice studio that runs on your own device: clone voices, design a voice from a text description, dub videos into other languages, convert speech to text and back, and narrate books. The project claims 646 languages, and support varies by model and feature. Runs on Mac, Windows and Linux, with Android and iPhone in preview. Clone a voice only with its owner's consent.",
-    "added": "2026-10-30T09:00:00Z"
+    "added": "2026-10-30T09:00:00Z",
+    "pushed": "2026-10-29",
+    "license": "AGPL-3.0",
+    "archived": false
   }
 ]
