@@ -8477,5 +8477,21 @@
     "desc_de": "Kostenloser Open-Source-VPN-Client für Android, Windows, macOS und Linux, der deinen Verkehr mit einem Firefox-Konto über Mozillas Server leitet (laut Projektseite 50 GB pro Monat gratis). Achtung: Entwickelt von einer Einzelperson, nicht von Mozilla; lies die Bedingungen und entscheide selbst, bevor du dich darauf verlässt.",
     "desc_en": "A free open-source VPN client for Android, Windows, macOS and Linux that routes your traffic through Mozilla's servers with a Firefox Account (50 GB free a month, per its page). Note: it is built by an independent developer, not by Mozilla, so read the terms and decide for yourself before relying on it.",
     "added": "2026-10-28T08:00:00Z"
+  },
+  {
+    "slug": "removemacai",
+    "cat": "macapps",
+    "name": "RemoveMacAI",
+    "kind": "تطبيق",
+    "isNew": true,
+    "gh": "https://github.com/omlahore/RemoveMacAI",
+    "site": "https://omlahore.github.io/RemoveMacAI/",
+    "stars": null,
+    "cmd": "brew install omlahore/tap/removemacai",
+    "use": [],
+    "desc": "ينظّف macOS مما لا تحتاجه: يعطّل ميزات Apple Intelligence ويحذف نماذجها ويمنع إعادة تنزيلها، ويوقف التحليلات والإعلانات المخصصة والنوافذ المزعجة، ويطفئ محدّثات التطبيقات الأخرى في الخلفية، ويكشف ما يمكن حذفه لاستعادة مساحة. يعرض كل تغيير قبل تطبيقه ويمكن التراجع عن كل تغيير. التطبيق غير موثّق من Apple (not notarized)، فتفتحه أول مرة من إعدادات الخصوصية والأمان.",
+    "desc_de": "Räumt macOS auf: schaltet Apple-Intelligence-Funktionen ab, löscht ihre Modelle und blockiert das erneute Laden, stoppt Analyse, personalisierte Werbung und lästige Hinweise, deaktiviert Hintergrund-Updater anderer Apps und zeigt, was sich zum Platzgewinnen löschen lässt. Jede Änderung wird vorher angezeigt und lässt sich rückgängig machen. Die App ist nicht von Apple notarisiert; beim ersten Öffnen bestätigst du sie in den Datenschutz-Einstellungen.",
+    "desc_en": "Debloats macOS: turns off Apple Intelligence features, deletes their models and blocks re-downloads, stops analytics, personalized ads and pop-ups, switches off other apps' background updaters, and shows what you can delete to get space back. Every change is shown before it happens and can be undone. The app isn't notarized by Apple, so you approve it in Privacy & Security the first time you open it.",
+    "added": "2026-10-30T08:00:00Z"
   }
 ]
