@@ -1541,7 +1541,7 @@
    },
    {
     "name": "baoyu-diagram",
-    "desc": "Create professional, dark-themed SVG diagrams of any type — architecture diagrams, flowcharts, sequence diagrams, structural diagrams, mind maps, timelines, illustrative/conceptual diagrams, and more. Use this skill…"
+    "desc": "Create professional diagrams with configurable dark/light theme via CSS custom properties. Use this skill whenever the user asks for any kind of technical or conceptual diagram, visualization of a system, process flow,…"
    },
    {
     "name": "baoyu-electron-extract",
@@ -3887,7 +3887,7 @@
   ]
  },
  "marketing-skills": {
-  "n": 52,
+  "n": 53,
   "skills": [
    {
     "name": "ab-testing",
@@ -4062,6 +4062,10 @@
     "desc": "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,'…"
    },
    {
+    "name": "reverse-engineer-marketing",
+    "desc": "When the user wants to reverse engineer how another company grew and copy what worked. Also use when the user mentions 'reverse engineer,' 'how did X grow,' 'how does X get customers,' 'growth teardown,' 'marketing…"
+   },
+   {
     "name": "revops",
     "desc": "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'outbound pipeline…"
    },
@@ -4100,7 +4104,7 @@
   ]
  },
  "matt-pocock-skills": {
-  "n": 38,
+  "n": 39,
   "skills": [
    {
     "name": "ask-matt",
@@ -4203,6 +4207,10 @@
     "desc": "Wire dependency-cruiser into a TypeScript repo so each package is a deep module, with implementation hidden in subfolders and reachable only through its entry-point files. User-invoked."
    },
    {
+    "name": "software-factory",
+    "desc": "Shared language for designing a software factory: the tasks it runs and the services it plugs into."
+   },
+   {
     "name": "tdd",
     "desc": "Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions \"red-green-refactor\", or wants integration tests."
    },
@@ -4296,7 +4304,7 @@
    },
    {
     "name": "neon-auth",
-    "desc": "Add authentication to a new app. Use for \"add auth\", \"add login\", Neon Auth (Managed Better Auth), identity routing, sign-up, sign-in, password reset, email OTP, magic links, organizations, phone OTP, OAuth, passkeys,…"
+    "desc": "Add authentication to a new app. Use for \"add auth\", \"add login\", Neon Auth (Managed Better Auth), identity routing, sign-up, sign-in, password reset, email OTP, magic links, organizations, phone OTP, OAuth, OAuth…"
    },
    {
     "name": "neon-functions",
@@ -4729,7 +4737,7 @@
   ]
  },
  "playwright-cli": {
-  "n": 2,
+  "n": 3,
   "skills": [
    {
     "name": "dev",
@@ -4738,6 +4746,10 @@
    {
     "name": "playwright-cli",
     "desc": "Automate browser interactions, test web pages and work with Playwright tests."
+   },
+   {
+    "name": "playwright-triage",
+    "desc": "Triage and fix one microsoft/playwright-cli issue, or do a maintainer's task, unattended inside the Issue triage GitHub Actions workflow (.github/workflows/triage.yml), which a needs-triage, needs-triage-mac or…"
    }
   ]
  },
@@ -5071,7 +5083,7 @@
   ]
  },
  "remotion-skills": {
-  "n": 12,
+  "n": 13,
   "skills": [
    {
     "name": "remotion-best-practices",
@@ -5092,6 +5104,10 @@
    {
     "name": "remotion-interactivity",
     "desc": "Structure Remotion markup for interactivity"
+   },
+   {
+    "name": "remotion-license",
+    "desc": "Find Remotion license information, FAQs, terms, and where to buy a license."
    },
    {
     "name": "remotion-maps",
@@ -5149,7 +5165,7 @@
   ]
  },
  "revenuecat-ai-toolkit": {
-  "n": 44,
+  "n": 45,
   "skills": [
    {
     "name": "create-revenuecat-project",
@@ -5242,6 +5258,10 @@
    {
     "name": "revenuecat",
     "desc": "Used for all interaction with RevenueCat not covered by a different skill"
+   },
+   {
+    "name": "revenuecat-ad-tracking",
+    "desc": "Add RevenueCat ad monetization tracking to an app so ad impressions, clicks, revenue and rewarded ads appear in RevenueCat Charts next to subscription revenue. Use when the user asks to track ad revenue in RevenueCat,…"
    },
    {
     "name": "revenuecat-app-valuation",
