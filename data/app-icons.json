@@ -207,6 +207,10 @@
     "file": "app-icons/rectangle.png",
     "src": "https://raw.githubusercontent.com/rxhanson/Rectangle/main/Rectangle/Assets.xcassets/AppIcon.appiconset/mac512pts1x.png"
   },
+  "removemacai": {
+    "file": "app-icons/removemacai.png",
+    "src": "https://raw.githubusercontent.com/omlahore/RemoveMacAI/main/tools/AppIcon.png"
+  },
   "resources": {
     "file": "app-icons/resources.png",
     "src": "https://raw.githubusercontent.com/nokyan/resources/main/data/icons/net.nokyan.Resources.svg"
@@ -254,6 +258,10 @@
   "vlc": {
     "file": "app-icons/vlc.png",
     "src": "https://raw.githubusercontent.com/videolan/vlc/master/extras/package/macosx/asset_sources/vlc_app_icon.svg"
+  },
+  "voicestudio": {
+    "file": "app-icons/voicestudio.png",
+    "src": "https://raw.githubusercontent.com/debpalash/VoiceStudio/main/fastlane/metadata/android/en-US/images/icon.png"
   },
   "warehouse": {
     "file": "app-icons/warehouse.png",
