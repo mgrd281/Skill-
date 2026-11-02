@@ -8526,5 +8526,56 @@
     "pushed": "2026-11-02",
     "license": "AGPL-3.0",
     "archived": false
+  },
+  {
+    "slug": "burrow",
+    "cat": "macapps",
+    "name": "Burrow",
+    "kind": "تطبيق",
+    "gh": "https://github.com/khan-umirzakoff/Mole-GUI",
+    "site": null,
+    "cmd": null,
+    "use": [],
+    "desc": "واجهة SwiftUI أصلية لأداة التنظيف Mole على Mac: تنظّف الذاكرة المؤقتة، وتحذف التطبيقات مع بقاياها، وتعرض خريطة لما يملأ قرصك، وتراقب صحة جهازك، بلا حساب ولا إعلانات ولا تتبع. يتطلب macOS 26 فأحدث على Apple silicon. مشروع مجتمعي غير تابع لـ Mole، والتطبيق موقّع بتوقيع محلي لا موثّق من Apple، فيوقفه macOS عند أول فتح ويلزمك فك الحجب كما في صفحته.",
+    "desc_de": "Native SwiftUI-Oberfläche für das Aufräumtool Mole auf dem Mac: leert Caches, deinstalliert Apps samt Resten, zeigt eine Karte dessen, was deine Platte füllt, und überwacht den Zustand deines Macs, ohne Konto, Werbung oder Tracking. Benötigt macOS 26 oder neuer auf Apple Silicon. Community-Projekt ohne Verbindung zu Mole; die App ist nur ad-hoc signiert, nicht von Apple notarisiert, daher blockiert macOS sie beim ersten Öffnen und du musst sie wie auf der Projektseite beschrieben freigeben.",
+    "desc_en": "A native SwiftUI app for the Mole cleaning tool on Mac: clears caches, uninstalls apps with their leftovers, maps what fills your disk and watches your Mac's health, with no account, ads or tracking. Needs macOS 26 or later on Apple silicon. A community project not affiliated with Mole; the app is ad-hoc signed, not notarized by Apple, so macOS blocks it the first time and you unblock it as its page describes.",
+    "isNew": true,
+    "stars": null,
+    "added": "2026-11-02T08:00:00Z"
+  },
+  {
+    "slug": "bridgeplay",
+    "cat": "macapps",
+    "name": "Bridgeplay",
+    "kind": "تطبيق",
+    "gh": "https://github.com/raymondchins/Bridgeplay",
+    "site": "https://bridgeplay.dev",
+    "cmd": null,
+    "use": [],
+    "desc": "يشغّل ألعاب Windows الحصرية داخل Steam على Mac بمعالجات Apple (M1 فأحدث)، من المكتبة نفسها وبزر اللعب نفسه، عبر Wine وأدوات Apple لتحويل الرسوميات. التطبيق موثّق من Apple. هو فرع من مشروع NotProton، ومطوّره يصفه بمشروع هواية بدعم على قدر الجهد. تنبيه: Valve لا تدعمه ولا ترعاه، وتعديل Steam قد يخالف اتفاقية المشتركين، والألعاب ذات الحماية من الغش قد لا تعمل. استخدمه على مسؤوليتك.",
+    "desc_de": "Spielt Windows-only-Steam-Spiele auf Apple-Silicon-Macs (M1 oder neuer) direkt im Steam, das du schon nutzt: gleiche Bibliothek, gleicher Play-Button, über Wine und Apples Grafikübersetzung. Die App ist von Apple notarisiert. Es ist ein Fork von NotProton; der Entwickler nennt es ein Hobbyprojekt mit Support nach Kräften. Achtung: Valve unterstützt es nicht, das Verändern von Steam kann gegen die Abonnentenvereinbarung verstoßen, und Spiele mit Anti-Cheat laufen eventuell nicht. Nutzung auf eigene Gefahr.",
+    "desc_en": "Runs Windows-only Steam games on Apple Silicon Macs (M1 or later) inside the Steam you already use: same library, same Play button, through Wine and Apple's graphics translation. The app is notarized by Apple. It's a fork of NotProton, and its developer calls it a hobby project with best-effort support. Note: Valve doesn't support it, modifying Steam may go against the Subscriber Agreement, and games with anti-cheat may not run. Use at your own risk.",
+    "isNew": true,
+    "stars": null,
+    "added": "2026-11-02T08:00:00Z"
+  },
+  {
+    "slug": "bang-motion",
+    "cat": "motiongfx",
+    "name": "Bang Motion",
+    "kind": "Skill",
+    "gh": "https://github.com/bangtutorial/bang-motion",
+    "site": null,
+    "cmd": "/plugin marketplace add bangtutorial/bang-motion\n/plugin install bang-motion@bang-motion",
+    "use": [
+      "video",
+      "landing"
+    ],
+    "desc": "مهارة تجعل وكيل البرمجة مصمم موشن: افتتاحيات وعروض منتجات وكتابة متحركة ومقاطع شرح، في ملف index.html واحد يعمل كالفيديو لا كالشرائح. تشتق النمط من هويتك البصرية وتبني البنية من قائمة أفكار، فلا تتشابه المشاريع. تعمل مع Claude Code وCodex وGemini CLI وCursor، ورخصتها MIT.",
+    "desc_de": "Ein Skill, der deinen Coding-Agenten zum Motion Designer macht: Intros, Produktdemos, kinetische Typografie und Erklärvideos in einer einzigen index.html, die wie ein Video läuft, nicht wie Folien. Der Stil wird aus deiner Marke abgeleitet und die Struktur aus einer Auswahl von Konzepten gewählt, damit Projekte nicht gleich aussehen. Funktioniert mit Claude Code, Codex, Gemini CLI und Cursor, Lizenz MIT.",
+    "desc_en": "A skill that turns your coding agent into a motion designer: openers, product demos, kinetic typography and explainers in a single index.html that plays like video, not slides. The style is derived from your brand and the structure chosen from a menu of concepts, so projects don't look alike. Works with Claude Code, Codex, Gemini CLI and Cursor, MIT licensed.",
+    "isNew": true,
+    "stars": null,
+    "added": "2026-11-02T08:00:00Z"
   }
 ]
