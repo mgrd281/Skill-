@@ -43,6 +43,10 @@
     "file": "app-icons/breezy-weather.png",
     "src": "https://raw.githubusercontent.com/breezy-weather/breezy-weather/main/fastlane/metadata/android/en-US/images/icon.png"
   },
+  "burrow": {
+    "file": "app-icons/burrow.png",
+    "src": "https://raw.githubusercontent.com/khan-umirzakoff/Mole-GUI/main/docs/icon.png"
+  },
   "czkawka": {
     "file": "app-icons/czkawka.png",
     "src": "https://raw.githubusercontent.com/qarmin/czkawka/master/data/icons/com.github.qarmin.czkawka.svg"
