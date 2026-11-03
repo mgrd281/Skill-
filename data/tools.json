@@ -8577,5 +8577,21 @@
     "isNew": true,
     "stars": null,
     "added": "2026-11-02T08:00:00Z"
+  },
+  {
+    "slug": "console-skill",
+    "cat": "devskills",
+    "name": "Console Skill",
+    "kind": "Skill",
+    "isNew": true,
+    "gh": "https://github.com/Jakeschincariol/console-skill",
+    "site": null,
+    "stars": null,
+    "cmd": "/plugin marketplace add Jakeschincariol/console-skill\n/plugin install console-skill@console-skill",
+    "use": [],
+    "desc": "إحدى عشرة مهارة تقود Claude لنقل ألعاب PlayStation 2 التي تملكها إلى الكمبيوتر: هندسة عكسية للكود، وإعادة بناء الرسوميات والصوت والخلفية، وربط أي يد تحكم، ثم تعديل اللعبة بوصف نصي. ليس محاكيًا: يترجم الكود إلى برنامج أصلي بالاعتماد على أداة PS2Recomp. يلزمك قرص لعبتك الأصلي وتفريغه بنفسك، ولا يوفر ملفات ISO ولا BIOS. القانون في نسخ الألعاب وتعديلها يختلف بين الدول، فالمسؤولية عليك.",
+    "desc_de": "Elf Skills, mit denen Claude PlayStation-2-Spiele, die du besitzt, auf den PC portiert: Reverse Engineering des Codes, Neuaufbau von Grafik, Sound und Backend, beliebige Controller, danach Mods per Textbeschreibung. Kein Emulator: der Code wird mit dem Tool PS2Recomp in ein natives Programm übersetzt. Du brauchst deine eigene Spiel-Disc und musst sie selbst auslesen; keine ISOs, kein BIOS. Die Rechtslage beim Kopieren und Verändern von Spielen unterscheidet sich je nach Land, die Verantwortung liegt bei dir.",
+    "desc_en": "Eleven skills that guide Claude in porting PlayStation 2 games you own to PC: reverse engineering the code, rebuilding the graphics, sound and backend, any controller, then modding the game from a plain-text description. Not an emulator: it translates the code into a native program using the PS2Recomp tool. You need your own game disc and must dump it yourself; no ISOs, no BIOS. The law on copying and modifying games differs by country, so the responsibility is yours.",
+    "added": "2026-11-03T08:00:00Z"
   }
 ]
