@@ -7,7 +7,7 @@
     "isNew": false,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
     "site": null,
-    "stars": "186.6k",
+    "stars": "186.9k",
     "cmd": "npx skills add anthropics/skills --skill frontend-design",
     "use": [
       "web",
@@ -30,7 +30,7 @@
     "isNew": true,
     "gh": "https://github.com/pbakaus/impeccable",
     "site": "https://impeccable.style",
-    "stars": "100k",
+    "stars": "101k",
     "cmd": "npx skills add pbakaus/impeccable",
     "use": [
       "landing",
@@ -53,7 +53,7 @@
     "isNew": false,
     "gh": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
     "site": "https://www.uupm.cc/",
-    "stars": "144.1k",
+    "stars": "144.5k",
     "cmd": "/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill\n/plugin install ui-ux-pro-max@ui-ux-pro-max-skill",
     "use": [
       "web",
@@ -64,7 +64,7 @@
     "desc": "تحلل متطلبات مشروعك وتولّد له نظام تصميم كامل من ألوان وخطوط وتخطيط. تدعم الويب وFlutter وSwiftUI أيضًا.",
     "desc_de": "Analysiert die Anforderungen deines Projekts und generiert dafür ein vollständiges Designsystem aus Farben, Schriften und Layout. Unterstützt neben dem Web auch Flutter und SwiftUI.",
     "desc_en": "Analyzes your project's requirements and generates a complete design system for it, with colors, fonts and layout. Works for the web, Flutter and SwiftUI too.",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-02",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -77,7 +77,7 @@
     "isNew": false,
     "gh": "https://github.com/vercel-labs/agent-skills",
     "site": "https://skills.sh/vercel-labs/agent-skills",
-    "stars": "33.4k",
+    "stars": "33.5k",
     "cmd": "npx skills add vercel-labs/agent-skills",
     "use": [
       "web",
@@ -99,7 +99,7 @@
     "isNew": false,
     "gh": "https://github.com/emilkowalski/skills",
     "site": "https://emilkowal.ski/skill",
-    "stars": "52.9k",
+    "stars": "53.1k",
     "cmd": "npx skills add emilkowalski/skills --skill animate",
     "use": [
       "web",
@@ -121,7 +121,7 @@
     "isNew": false,
     "gh": "https://github.com/arnabbagxd/brand-building-skills",
     "site": null,
-    "stars": "827",
+    "stars": "832",
     "cmd": "npx skills add arnabbagxd/brand-building-skills",
     "use": [
       "brand"
@@ -142,7 +142,7 @@
     "isNew": false,
     "gh": "https://github.com/VoltAgent/awesome-design-md",
     "site": "https://getdesign.md/",
-    "stars": "125.2k",
+    "stars": "125.4k",
     "cmd": null,
     "use": [
       "brand",
@@ -165,7 +165,7 @@
     "isNew": false,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/canvas-design",
     "site": null,
-    "stars": "186.6k",
+    "stars": "186.9k",
     "cmd": "npx skills add anthropics/skills --skill canvas-design",
     "use": [
       "brand"
@@ -186,7 +186,7 @@
     "isNew": true,
     "gh": "https://github.com/Leonxlnx/taste-skill",
     "site": "https://tasteskill.dev",
-    "stars": "108.3k",
+    "stars": "109.2k",
     "cmd": "npx skills add https://github.com/Leonxlnx/taste-skill",
     "use": [
       "web",
@@ -198,7 +198,7 @@
     "desc": "تبعد Claude عن الواجهات العامة المكررة نحو تخطيط وخطوط وحركة مميزة، وفيها مهارات لإعادة تصميم موقع موجود.",
     "desc_de": "Lenkt Claude weg von generischen, austauschbaren Oberflächen hin zu Layout, Schriften und Animationen mit Charakter. Enthält außerdem Skills für das Redesign einer bestehenden Website.",
     "desc_en": "Steers Claude away from generic, repetitive interfaces toward distinctive layout, typography and motion. Includes skills for redesigning an existing website.",
-    "pushed": "2026-10-31",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -221,7 +221,7 @@
     "desc": "مهارة shadcn الرسمية: تعلّم Claude إضافة المكونات وتنسيقها وإصلاحها بالطريقة الصحيحة لمشروعك.",
     "desc_de": "Offizieller Skill von shadcn: Bringt Claude bei, Komponenten auf die für dein Projekt richtige Weise hinzuzufügen, zu stylen und zu reparieren.",
     "desc_en": "The official shadcn skill: teaches Claude to add, style and fix components the right way for your project.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -234,7 +234,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/design",
     "site": null,
-    "stars": "34.4k",
+    "stars": "34.5k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install design@knowledge-work-plugins",
     "use": [
       "web",
@@ -245,7 +245,7 @@
     "desc": "إضافة Anthropic الرسمية: نقد التصميم، ومراجعة نظام التصميم، ونصوص الواجهة، وفحص إمكانية الوصول حسب WCAG.",
     "desc_de": "Offizielles Plugin von Anthropic: Designkritik, Überprüfung des Designsystems, Texte für die Oberfläche und Prüfung der Barrierefreiheit nach WCAG.",
     "desc_en": "Anthropic's official plugin: design critique, design system review, interface copy, and WCAG accessibility checks.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "Apache-2.0",
     "archived": false
@@ -305,7 +305,7 @@
     "isNew": true,
     "gh": "https://github.com/zarazhangrui/frontend-slides",
     "site": null,
-    "stars": "31.7k",
+    "stars": "31.8k",
     "cmd": "/plugin marketplace add https://github.com/zarazhangrui/frontend-slides\n/plugin install frontend-slides@frontend-slides",
     "use": [
       "brand"
@@ -326,7 +326,7 @@
     "isNew": true,
     "gh": "https://github.com/Shopify/shopify-ai-toolkit",
     "site": "https://shopify.dev/docs/apps/build/ai-toolkit",
-    "stars": "625",
+    "stars": "627",
     "cmd": "claude plugin install shopify-ai-toolkit@claude-plugins-official",
     "use": [
       "shop"
@@ -368,7 +368,7 @@
     "isNew": true,
     "gh": "https://github.com/coreyhaines31/marketingskills",
     "site": "https://marketing-skills.com",
-    "stars": "58k",
+    "stars": "58.2k",
     "cmd": "npx skills add coreyhaines31/marketingskills",
     "use": [
       "shop",
@@ -393,7 +393,7 @@
     "isNew": true,
     "gh": "https://github.com/AgriciDaniel/claude-seo",
     "site": "https://claude-seo.md",
-    "stars": "25.8k",
+    "stars": "26.1k",
     "cmd": "/plugin marketplace add AgriciDaniel/claude-seo\n/plugin install claude-seo@agricidaniel-claude-seo\n/seo setup",
     "use": [
       "shop",
@@ -416,7 +416,7 @@
     "isNew": true,
     "gh": "https://github.com/blader/humanizer",
     "site": "https://skills.sh/blader/humanizer",
-    "stars": "63.8k",
+    "stars": "64.2k",
     "cmd": "/plugin marketplace add blader/humanizer\n/plugin install humanizer@humanizer",
     "use": [
       "brand",
@@ -451,7 +451,7 @@
     "desc": "يكشف أنماط الكتابة الآلية ويعيد صياغتها، مع وضع للفحص فقط. توجد له نسخة مجتمعية صغيرة للألمانية.",
     "desc_de": "Erkennt Muster maschinell erzeugter Texte und formuliert sie um, inklusive eines reinen Prüfmodus. Für Deutsch gibt es eine kleine Community-Version.",
     "desc_en": "Detects machine-written patterns and rewrites them, with a check-only mode. A small community version exists for German.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -464,7 +464,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/marketing",
     "site": null,
-    "stars": "34.4k",
+    "stars": "34.5k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install marketing@knowledge-work-plugins",
     "use": [
       "brand",
@@ -475,7 +475,7 @@
     "desc": "إضافة Anthropic الرسمية للتسويق: كتابة المحتوى، وخطط الحملات، وفحص النصوص مقابل نبرة علامتك، وتسلسلات البريد.",
     "desc_de": "Offizielles Marketing-Plugin von Anthropic: Content-Erstellung, Kampagnenpläne, Abgleich von Texten mit der Tonalität deiner Marke und E-Mail-Sequenzen.",
     "desc_en": "Anthropic's official marketing plugin: content writing, campaign plans, checking copy against your brand voice, and email sequences.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "Apache-2.0",
     "archived": false
@@ -531,7 +531,7 @@
     "isNew": true,
     "gh": "https://github.com/mattpocock/skills",
     "site": "https://aihero.dev/skills",
-    "stars": "309.8k",
+    "stars": "310.7k",
     "cmd": "claude plugin install mattpocock-skills@claude-plugins-official",
     "use": [
       "web",
@@ -555,7 +555,7 @@
     "isNew": true,
     "gh": "https://github.com/multica-ai/andrej-karpathy-skills",
     "site": null,
-    "stars": "228.3k",
+    "stars": "228.8k",
     "cmd": "/plugin marketplace add forrestchang/andrej-karpathy-skills\n/plugin install andrej-karpathy-skills@karpathy-skills",
     "use": [
       "web",
@@ -580,7 +580,7 @@
     "isNew": true,
     "gh": "https://github.com/addyosmani/agent-skills",
     "site": "https://skills.addy.ie",
-    "stars": "112.7k",
+    "stars": "112.9k",
     "cmd": "npx skills add addyosmani/agent-skills",
     "use": [
       "web",
@@ -629,7 +629,7 @@
     "isNew": true,
     "gh": "https://github.com/vercel/next.js/tree/canary/skills",
     "site": "https://nextjs.org",
-    "stars": "143.5k",
+    "stars": "143.2k",
     "cmd": "npx skills add vercel/next.js",
     "use": [
       "web",
@@ -640,7 +640,7 @@
     "desc": "مهارات Next.js الرسمية: تتحقق من كل تعديل على خادم التطوير والمتصفح، وتكشف ما يكبّر حجم الصفحات. النجوم لمستودع Next.js كله.",
     "desc_de": "Offizielle Skills von Next.js: Sie prüfen jede Änderung auf dem Entwicklungsserver und im Browser und decken auf, was die Seitengröße erhöht. Die Sterne gelten für das gesamte Next.js-Repository.",
     "desc_en": "Official Next.js skills: they verify every change on the dev server and in the browser, and reveal what inflates page size. The stars belong to the whole Next.js repository.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -653,7 +653,7 @@
     "isNew": true,
     "gh": "https://github.com/vercel-labs/agent-browser",
     "site": "https://agent-browser.dev",
-    "stars": "45.2k",
+    "stars": "45.3k",
     "cmd": "npm install -g agent-browser\nagent-browser install\nnpx skills add vercel-labs/agent-browser",
     "use": [
       "web",
@@ -664,7 +664,7 @@
     "desc": "متصفح سريع من Vercel يفتح الصفحات ويضغط ويملأ النماذج ويقرأ الأخطاء، ليتحقق Claude من المتجر أو التطبيق بنفسه.",
     "desc_de": "Schneller Browser von Vercel, der Seiten öffnet, klickt, Formulare ausfüllt und Fehler ausliest – damit Claude den Shop oder die App selbst überprüfen kann.",
     "desc_en": "A fast browser from Vercel that opens pages, clicks, fills in forms and reads errors, so Claude can check the store or app itself.",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "Apache-2.0",
     "archived": false
@@ -687,7 +687,7 @@
     "desc": "مهارات أمان من شركة تدقيق معروفة: مراجعة التعديلات أمنيًا، وكشف الإعدادات غير الآمنة، وفحص مخاطر حزم npm.",
     "desc_de": "Sicherheits-Skills einer bekannten Audit-Firma: Sicherheitsprüfung von Änderungen, Erkennen unsicherer Konfigurationen und Prüfung von npm-Paketen auf Risiken.",
     "desc_en": "Security skills from a well-known audit firm: security review of changes, detecting insecure configurations, and checking npm packages for risks.",
-    "pushed": "2026-10-28",
+    "pushed": "2026-11-02",
     "added": "2026-10-24T00:00:00Z",
     "license": "CC-BY-SA-4.0",
     "archived": false
@@ -732,7 +732,7 @@
     "desc": "مهارات فريق Flutter الرسمية: بنية التطبيق، والتخطيط المتجاوب، وإصلاح أخطاء overflow، والتوجيه، والترجمة، والاختبارات.",
     "desc_de": "Offizielle Skills des Flutter-Teams: App-Architektur, responsives Layout, Beheben von Overflow-Fehlern, Routing, Lokalisierung und Tests.",
     "desc_en": "Official skills from the Flutter team: app architecture, responsive layout, fixing overflow errors, routing, localization and testing.",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "BSD-3-Clause",
     "archived": false
@@ -852,7 +852,7 @@
     "isNew": true,
     "gh": "https://github.com/obra/superpowers",
     "site": null,
-    "stars": "311k",
+    "stars": "311.5k",
     "cmd": "/plugin install superpowers@claude-plugins-official",
     "use": [
       "claude"
@@ -860,7 +860,7 @@
     "desc": "تعلّم Claude العصف الذهني والتخطيط والاختبار وإصلاح الأخطاء بشكل منظم. الأكثر نجومًا في هذا الدليل.",
     "desc_de": "Bringt Claude bei, systematisch zu brainstormen, zu planen, zu testen und Fehler zu beheben. Das meistmarkierte Projekt in diesem Verzeichnis.",
     "desc_en": "Teaches Claude to brainstorm, plan, test and fix bugs in an organized way. The most-starred in this directory.",
-    "pushed": "2026-10-29",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -873,7 +873,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing",
     "site": null,
-    "stars": "186.6k",
+    "stars": "186.9k",
     "cmd": "npx skills add anthropics/skills --skill webapp-testing",
     "use": [
       "claude",
@@ -895,7 +895,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
     "site": null,
-    "stars": "186.6k",
+    "stars": "186.9k",
     "cmd": "npx skills add anthropics/skills --skill skill-creator",
     "use": [
       "claude"
@@ -937,7 +937,7 @@
     "isNew": true,
     "gh": "https://github.com/vercel-labs/skills",
     "site": "https://skills.sh",
-    "stars": "37.7k",
+    "stars": "37.9k",
     "cmd": "npx skills add https://github.com/vercel-labs/skills --skill find-skills",
     "use": [
       "claude"
@@ -945,7 +945,7 @@
     "desc": "اسأل Claude هل توجد مهارة لعمل ما، فيبحث في دليل المهارات ويثبّت المناسبة. الأكثر تثبيتًا على skills.sh.",
     "desc_de": "Frag Claude, ob es einen Skill für eine bestimmte Aufgabe gibt – Claude durchsucht dann das Skill-Verzeichnis und installiert den passenden. Auf skills.sh am häufigsten installiert.",
     "desc_en": "Ask Claude whether a skill exists for a task, and it searches the skills directory and installs the right one. The most installed on skills.sh.",
-    "pushed": "2026-10-30",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -968,7 +968,7 @@
     "desc": "يجلب أحدث وثائق المكتبات حتى لا يكتب Claude كودًا قديمًا.",
     "desc_de": "Holt die aktuellste Dokumentation von Bibliotheken, damit Claude keinen veralteten Code schreibt.",
     "desc_en": "Fetches the latest library documentation so Claude doesn't write outdated code.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -981,7 +981,7 @@
     "isNew": false,
     "gh": "https://github.com/microsoft/playwright-mcp",
     "site": "https://www.npmjs.com/package/@playwright/mcp",
-    "stars": "39k",
+    "stars": "39.1k",
     "cmd": "claude mcp add playwright npx @playwright/mcp@latest",
     "use": [
       "claude",
@@ -1047,7 +1047,7 @@
     "isNew": true,
     "gh": "https://github.com/21st-dev/magic-mcp",
     "site": "https://21st.dev/mcp",
-    "stars": "6.3k",
+    "stars": "6.4k",
     "cmd": null,
     "use": [
       "web",
@@ -1079,7 +1079,7 @@
     "desc": "يقرأ أخطاء موقعك أو تطبيقك الحي ويساعد في إصلاحها.",
     "desc_de": "Liest die Fehler deiner Live-Website oder -App und hilft, sie zu beheben.",
     "desc_en": "Reads the errors from your live website or app and helps fix them.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "other",
     "archived": false
@@ -1092,7 +1092,7 @@
     "isNew": false,
     "gh": "https://github.com/microsoft/playwright",
     "site": "https://playwright.dev",
-    "stars": "99.1k",
+    "stars": "99.2k",
     "cmd": "npm init playwright@latest",
     "use": [
       "web",
@@ -1101,7 +1101,7 @@
     "desc": "يختبر الموقع تلقائيًا على Chrome وFirefox وSafari وشاشات الجوال.",
     "desc_de": "Testet Websites automatisch in Chrome, Firefox und Safari sowie auf Smartphone-Bildschirmen.",
     "desc_en": "Tests the website automatically on Chrome, Firefox, Safari and mobile screens.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "Apache-2.0",
     "archived": false
@@ -1124,7 +1124,7 @@
     "desc": "يفحص إمكانية الوصول مثل تباين الألوان والنصوص البديلة.",
     "desc_de": "Prüft die Barrierefreiheit, z. B. Farbkontrast und Alternativtexte.",
     "desc_en": "Checks accessibility, such as color contrast and alt text.",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-02",
     "added": "2026-10-24T00:00:00Z",
     "license": "MPL-2.0",
     "archived": false
@@ -1147,7 +1147,7 @@
     "desc": "يقيس الأداء وSEO مع كل تحديث وينبهك إذا ساءت النتيجة.",
     "desc_de": "Misst Performance und SEO bei jedem Update und warnt dich, wenn sich das Ergebnis verschlechtert.",
     "desc_en": "Measures performance and SEO with every update and alerts you if the score gets worse.",
-    "pushed": "2026-10-31",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "Apache-2.0",
     "archived": false
@@ -1169,7 +1169,7 @@
     "desc": "حركات وانتقالات سلسة لمشاريع React وJavaScript.",
     "desc_de": "Flüssige Animationen und Übergänge für React- und JavaScript-Projekte.",
     "desc_en": "Smooth animations and transitions for React and JavaScript projects.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -1270,7 +1270,7 @@
     "isNew": false,
     "gh": "https://github.com/LottieFiles/dotlottie-web",
     "site": "https://lottiefiles.com/dotlottie",
-    "stars": "936",
+    "stars": "937",
     "cmd": "npm i @lottiefiles/dotlottie-web",
     "use": [
       "landing",
@@ -1293,7 +1293,7 @@
     "isNew": false,
     "gh": "https://github.com/remotion-dev/skills",
     "site": "https://www.remotion.dev/docs/ai/skills",
-    "stars": "6.1k",
+    "stars": "6.2k",
     "cmd": "npx skills add remotion-dev/skills",
     "use": [
       "brand"
@@ -1342,7 +1342,7 @@
     "desc": "مكونات جاهزة تنسخها إلى مشروعك وتعدّلها بحرية.",
     "desc_de": "Fertige Komponenten, die du in dein Projekt kopierst und frei anpasst.",
     "desc_en": "Ready-made components that you copy into your project and customize freely.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -1377,7 +1377,7 @@
     "isNew": true,
     "gh": "https://github.com/magicuidesign/magicui",
     "site": "https://magicui.design",
-    "stars": "23k",
+    "stars": "23.1k",
     "cmd": null,
     "use": [
       "landing"
@@ -1385,7 +1385,7 @@
     "desc": "مكونات متحركة لصفحات الهبوط، تُضاف إلى مشروعك عبر أداة shadcn.",
     "desc_de": "Animierte Komponenten für Landingpages – sie werden über das shadcn-Tool zu deinem Projekt hinzugefügt.",
     "desc_en": "Animated components for landing pages, added to your project through the shadcn tool.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -1536,7 +1536,7 @@
     "desc": "أيقونات خطية بسيطة ومتناسقة.",
     "desc_de": "Einfache, einheitliche Linien-Icons.",
     "desc_en": "Simple, consistent line icons.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "other",
     "archived": false
@@ -1601,7 +1601,7 @@
     "desc": "أداة Shopify الرسمية لتطوير الثيم على جهازك مع معاينة حية، ثم رفع التعديلات إلى المتجر.",
     "desc_de": "Offizielles Tool von Shopify, um das Theme auf deinem Rechner mit Live-Vorschau zu entwickeln und die Änderungen dann in den Shop hochzuladen.",
     "desc_en": "Shopify's official tool for developing your theme on your computer with a live preview, then uploading the changes to the store.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -1614,7 +1614,7 @@
     "isNew": true,
     "gh": "https://github.com/supabase/supabase",
     "site": "https://supabase.com",
-    "stars": "114.4k",
+    "stars": "114.5k",
     "cmd": "npm install @supabase/supabase-js\nflutter pub add supabase_flutter",
     "use": [
       "web",
@@ -1625,7 +1625,7 @@
     "desc": "قاعدة بيانات وتسجيل دخول وتخزين ملفات جاهزة لتطبيقات الويب والجوال، تعمل مع Next.js وFlutter.",
     "desc_de": "Fertige Datenbank, Login und Dateispeicher für Web- und Smartphone-Apps – funktioniert mit Next.js und Flutter.",
     "desc_en": "A ready-made database, login and file storage for web and mobile apps, working with Next.js and Flutter.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "Apache-2.0",
     "archived": false
@@ -1715,7 +1715,7 @@
     "desc": "يراقب موقعك أو متجرك على مدار الساعة وينبهك فورًا إذا توقف، عبر Telegram أو البريد.",
     "desc_de": "Überwacht deine Website oder deinen Shop rund um die Uhr und warnt dich bei einem Ausfall sofort – per Telegram oder E-Mail.",
     "desc_en": "Monitors your website or store around the clock and alerts you immediately if it goes down, via Telegram or email.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -1738,7 +1738,7 @@
     "desc": "إحصاءات زوار بسيطة بدون كوكيز، متوافقة مع GDPR.",
     "desc_de": "Einfache Besucherstatistiken ohne Cookies, DSGVO-konform.",
     "desc_en": "Simple visitor statistics without cookies, GDPR-compliant.",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -1762,7 +1762,7 @@
     "desc": "تحليلات مع تسجيل جلسات الزوار وخرائط حرارية لتحسين المبيعات.",
     "desc_de": "Analytics mit Aufzeichnung von Besuchersitzungen und Heatmaps, um die Verkäufe zu steigern.",
     "desc_en": "Analytics with visitor session recording and heatmaps to improve sales.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "other",
     "archived": false
@@ -1797,7 +1797,7 @@
     "isNew": false,
     "gh": "https://github.com/calcom/cal.com",
     "site": "https://cal.com",
-    "stars": "49.6k",
+    "stars": "49.7k",
     "cmd": "npm install @calcom/embed-react",
     "use": [
       "booking"
@@ -1805,7 +1805,7 @@
     "desc": "نظام حجز مواعيد مفتوح المصدر، والأمر أدناه يضيف نافذة الحجز إلى موقعك. نسخة الاستضافة الذاتية اسمها الآن Cal.diy.",
     "desc_de": "Open-Source-System für Terminbuchungen – der Befehl unten fügt das Buchungsfenster zu deiner Website hinzu. Die selbst gehostete Version heißt jetzt Cal.diy.",
     "desc_en": "An open-source appointment booking system; the command below adds the booking window to your website. The self-hosted version is now called Cal.diy.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -1826,7 +1826,7 @@
     "desc": "منصة لبناء تطبيقات طبية على معيار FHIR.",
     "desc_de": "Plattform zum Entwickeln medizinischer Apps auf Basis des FHIR-Standards.",
     "desc_en": "A platform for building medical apps on the FHIR standard.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "Apache-2.0",
     "archived": false
@@ -1849,7 +1849,7 @@
     "desc": "إضافة Vercel الرسمية: 33 مهارة للنشر والنطاقات والكاش والجدار الناري، وأوامر جاهزة للنشر والحالة، ومعها Vercel MCP.",
     "desc_de": "Offizielles Plugin von Vercel: 33 Skills für Deployment, Domains, Caching und Firewall, fertige Befehle für Deployment und Status, dazu Vercel MCP.",
     "desc_en": "Vercel's official plugin: 33 skills for deployment, domains, caching and the firewall, ready-made commands for deployment and status, and Vercel MCP included.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "other",
     "archived": false
@@ -1892,7 +1892,7 @@
     "desc": "مهارة رسمية تعلّم Claude أحدث إصدار من AI SDK لإضافة محادثة ووكلاء ذكاء اصطناعي إلى تطبيق Next.js. النجوم لمستودع AI SDK كله.",
     "desc_de": "Offizieller Skill, der Claude die neueste Version des AI SDK beibringt, um Chat und KI-Agenten in eine Next.js-App einzubauen. Die Sterne beziehen sich auf das gesamte Repository des AI SDK.",
     "desc_en": "An official skill that teaches Claude the latest version of the AI SDK for adding chat and AI agents to a Next.js app. The stars belong to the whole AI SDK repository.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "other",
     "archived": false
@@ -1926,7 +1926,7 @@
     "isNew": true,
     "gh": "https://github.com/squirrelscan/squirrelscan",
     "site": "https://squirrelscan.com",
-    "stars": "302",
+    "stars": "304",
     "cmd": "npm install -g squirrelscan",
     "use": [
       "shop",
@@ -2032,7 +2032,7 @@
     "desc": "فاحص Mozilla الرسمي لترويسات الأمان، ويعطي موقعك درجة ونتيجة لكل اختبار. في Shopify تتحكم المنصة بأغلب هذه الترويسات.",
     "desc_de": "Mozillas offizielles Prüftool für Sicherheits-Header gibt deiner Website eine Note und für jeden Test ein Ergebnis. Bei Shopify steuert die Plattform die meisten dieser Header.",
     "desc_en": "Mozilla's official security headers checker; it gives your website a grade and a result for each test. On Shopify the platform controls most of these headers.",
-    "pushed": "2026-10-30",
+    "pushed": "2026-11-02",
     "added": "2026-10-24T00:00:00Z",
     "license": "MPL-2.0",
     "archived": false
@@ -2045,7 +2045,7 @@
     "isNew": true,
     "gh": "https://github.com/heygen-com/hyperframes",
     "site": "https://hyperframes.dev",
-    "stars": "77.5k",
+    "stars": "78k",
     "cmd": "claude plugin marketplace add heygen-com/hyperframes\nclaude plugin install hyperframes@hyperframes",
     "use": [
       "shop",
@@ -2056,7 +2056,7 @@
     "desc": "إطار مفتوح من HeyGen يحوّل صفحات HTML وحركات GSAP وLottie إلى فيديو MP4، ومعه مهارات ليصنع Claude إعلانات وفيديوهات ترويجية بالكود.",
     "desc_de": "Open-Source-Framework von HeyGen, das HTML-Seiten sowie GSAP- und Lottie-Animationen in MP4-Videos umwandelt. Dazu gibt es Skills, mit denen Claude Werbespots und Promo-Videos per Code erstellt.",
     "desc_en": "An open framework from HeyGen that turns HTML pages and GSAP and Lottie animations into MP4 video, with skills so Claude can make ads and promo videos with code.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "Apache-2.0",
     "archived": false
@@ -2069,7 +2069,7 @@
     "isNew": true,
     "gh": "https://github.com/greensock/gsap-skills",
     "site": null,
-    "stars": "17.7k",
+    "stars": "17.8k",
     "cmd": "npx skills add https://github.com/greensock/gsap-skills",
     "use": [
       "web",
@@ -2117,7 +2117,7 @@
     "isNew": true,
     "gh": "https://github.com/motiondivision/ai-kit",
     "site": "https://motion.dev/docs/ai-kit",
-    "stars": "68",
+    "stars": "70",
     "cmd": "npx motion-ai",
     "use": [
       "web",
@@ -2188,7 +2188,7 @@
     "isNew": true,
     "gh": "https://github.com/canva-sdks/canva-skills",
     "site": null,
-    "stars": "145",
+    "stars": "147",
     "cmd": "/plugin marketplace add canva-sdks/canva-skills\n/plugin install canva@canva-skills",
     "use": [
       "brand",
@@ -2211,7 +2211,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines",
     "site": null,
-    "stars": "186.6k",
+    "stars": "186.9k",
     "cmd": "/plugin marketplace add anthropics/skills\n/plugin install example-skills@anthropic-agent-skills",
     "use": [
       "brand",
@@ -2433,7 +2433,7 @@
     "desc": "يجعل Claude يستخدم تطبيقك على محاكي iPhone أو Android ويحفظ الخطوات كاختبارات تتكرر. يعمل مع Flutter وCapacitor والتطبيقات الأصلية.",
     "desc_de": "Lässt Claude deine App im iPhone-Simulator oder Android-Emulator bedienen und speichert die Schritte als wiederholbare Tests. Funktioniert mit Flutter, Capacitor und nativen Apps.",
     "desc_en": "Has Claude use your app on an iPhone simulator or Android emulator and saves the steps as repeatable tests. Works with Flutter, Capacitor and native apps.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "Apache-2.0",
     "archived": false
@@ -2477,7 +2477,7 @@
     "desc": "خادم رسمي لمنصة محاسبة ألمانية: فواتير ZUGFeRD، وتصنيف المعاملات، ومطابقة الإيصالات، وإقرار ضريبة القيمة المضافة عبر ELSTER، وتصدير DATEV للمستشار الضريبي.",
     "desc_de": "Offizieller MCP-Server einer deutschen Buchhaltungsplattform: ZUGFeRD-Rechnungen, Kategorisierung von Transaktionen, Belegabgleich, Umsatzsteuermeldung über ELSTER und DATEV-Export für den Steuerberater.",
     "desc_en": "An official server for a German accounting platform: ZUGFeRD invoices, transaction categorization, receipt matching, VAT returns through ELSTER, and a DATEV export for your tax advisor.",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-02",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -2512,7 +2512,7 @@
     "isNew": true,
     "gh": "https://github.com/openaccountants/openaccountants",
     "site": "https://www.openaccountants.com/",
-    "stars": "470",
+    "stars": "473",
     "cmd": "claude plugin marketplace add openaccountants/marketplace",
     "use": [
       "finance",
@@ -2521,7 +2521,7 @@
     "desc": "مهارات للضرائب الألمانية: إقرار ضريبة القيمة المضافة UStVA، والمحاسبة، والفاتورة الإلكترونية. مسودة لم يراجعها محاسب بعد، ولا تدعم نظام Kleinunternehmer.",
     "desc_de": "Skills für deutsche Steuern: Umsatzsteuer-Voranmeldung (UStVA), Buchhaltung und E-Rechnung. Ein Entwurf, den noch kein Buchhalter geprüft hat. Die Kleinunternehmerregelung wird nicht unterstützt.",
     "desc_en": "Skills for German taxes: the UStVA VAT return, accounting, and the e-invoice. A draft that no accountant has reviewed yet, and it doesn't support the Kleinunternehmer (small business) scheme.",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "inside": "germany",
     "license": "AGPL-3.0",
@@ -2535,7 +2535,7 @@
     "isNew": true,
     "gh": "https://github.com/gflohr/e-invoice-eu",
     "site": null,
-    "stars": "370",
+    "stars": "373",
     "cmd": "npm install @e-invoice-eu/core",
     "use": [
       "finance",
@@ -2545,7 +2545,7 @@
     "desc": "مكتبة JavaScript تحوّل بيانات الفاتورة إلى فاتورة إلكترونية أوروبية بصيغة XRechnung أو ZUGFeRD. افحص كل فاتورة بعد إنشائها.",
     "desc_de": "JavaScript-Bibliothek, die Rechnungsdaten in eine europäische E-Rechnung im Format XRechnung oder ZUGFeRD umwandelt. Prüfe jede Rechnung nach dem Erstellen.",
     "desc_en": "A JavaScript library that turns invoice data into a European e-invoice in XRechnung or ZUGFeRD format. Check every invoice after creating it.",
-    "pushed": "2026-10-30",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "other",
     "archived": false
@@ -2587,7 +2587,7 @@
     "desc": "أرشيف إلكتروني للإيصالات والفواتير على خادمك: يقرأ نص المستندات الممسوحة ويرتبها ويبحث فيها. تأكد مع مستشارك الضريبي أن طريقة الأرشفة مناسبة.",
     "desc_de": "Digitales Archiv für Belege und Rechnungen auf deinem Server, das den Text gescannter Dokumente ausliest, sie ordnet und durchsuchbar macht. Kläre mit deinem Steuerberater, ob diese Art der Archivierung geeignet ist.",
     "desc_en": "A digital archive for receipts and invoices on your own server: it reads the text of scanned documents, organizes them and makes them searchable. Check with your tax advisor that this way of archiving is suitable.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "GPL-3.0",
     "archived": false
@@ -2658,7 +2658,7 @@
     "desc": "أكثر من 6000 أيقونة مجانية بنمط واحد لـ React وFlutter معًا، مع مهارة رسمية تمنع Claude من اختراع أسماء أيقونات. نمط واحد فقط مجاني والباقي مدفوع.",
     "desc_de": "Mehr als 6000 kostenlose Icons in einem Stil für React und Flutter zugleich, dazu ein offizieller Skill, der verhindert, dass Claude Icon-Namen erfindet. Nur ein Stil ist kostenlos, die übrigen sind kostenpflichtig.",
     "desc_en": "More than 6,000 free icons in one style for React and Flutter alike, with an official skill that stops Claude from inventing icon names. Only one style is free; the rest are paid.",
-    "pushed": "2026-10-31",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -2743,7 +2743,7 @@
     "isNew": true,
     "gh": "https://github.com/DavidHDev/react-bits",
     "site": "https://reactbits.dev",
-    "stars": "51k",
+    "stars": "51.1k",
     "cmd": "npx shadcn@latest add @react-bits/HoldButton-TS-TW",
     "use": [
       "web",
@@ -2765,7 +2765,7 @@
     "isNew": true,
     "gh": "https://github.com/uiverse-io/galaxy",
     "site": "https://uiverse.io",
-    "stars": "14.7k",
+    "stars": "14.8k",
     "cmd": null,
     "use": [
       "shop",
@@ -2800,7 +2800,7 @@
     "desc": "محرك حركة خفيف يجمع الخط الزمني والتمرير وحركة SVG والنصوص والنوابض في مكتبة واحدة، ويعمل في ثيم Shopify بملف واحد. احفظ الملف داخل الثيم بدل تحميله من خادم خارجي.",
     "desc_de": "Schlanke Animations-Engine, die Timelines, Scroll-Effekte, SVG- und Textanimationen sowie Federeffekte in einer Bibliothek vereint und in einem Shopify-Theme mit nur einer Datei läuft. Speichere die Datei im Theme, statt sie von einem externen Server zu laden.",
     "desc_en": "A lightweight motion engine that combines timelines, scrolling, SVG and text animation, and springs in one library, and runs in a Shopify theme with a single file. Save the file inside the theme instead of loading it from an external server.",
-    "pushed": "2026-08-21",
+    "pushed": "2026-11-02",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -2862,7 +2862,7 @@
     "isNew": true,
     "gh": "https://github.com/mrdoob/three.js",
     "site": "https://threejs.org",
-    "stars": "117.4k",
+    "stars": "117.5k",
     "cmd": "npm install --save three",
     "use": [
       "landing",
@@ -2873,7 +2873,7 @@
     "desc": "المكتبة الأساسية للحركة ثلاثية الأبعاد في المتصفح: عارض منتجات ومشاهد وتأثيرات. حجمها كبير، فحمّلها عند الحاجة فقط.",
     "desc_de": "Die zentrale Bibliothek für 3D-Animation im Browser: Produkt-Viewer, Szenen und Effekte. Sie ist groß, lade sie daher nur bei Bedarf.",
     "desc_en": "The core library for 3D animation in the browser: product viewers, scenes and effects. It's large, so load it only when needed.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -2886,7 +2886,7 @@
     "isNew": true,
     "gh": "https://github.com/pmndrs/react-three-fiber",
     "site": "https://docs.pmnd.rs/react-three-fiber",
-    "stars": "33.4k",
+    "stars": "33.5k",
     "cmd": "npm install three @types/three @react-three/fiber",
     "use": [
       "landing",
@@ -2933,7 +2933,7 @@
     "isNew": true,
     "gh": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-view-transitions",
     "site": null,
-    "stars": "33.4k",
+    "stars": "33.5k",
     "cmd": "npx skills add https://github.com/vercel-labs/agent-skills --skill vercel-react-view-transitions",
     "use": [
       "web",
@@ -2956,7 +2956,7 @@
     "isNew": true,
     "gh": "https://github.com/ibelick/ui-skills",
     "site": "https://www.ui-skills.com",
-    "stars": "10.5k",
+    "stars": "10.6k",
     "cmd": "npx skills add https://github.com/ibelick/ui-skills --skill fixing-motion-performance",
     "use": [
       "web",
@@ -2968,7 +2968,7 @@
     "desc": "يكشف الحركات البطيئة والمتقطعة في الكود ويصلحها، لتبقى الحركة فاخرة وسريعة على الجوال.",
     "desc_de": "Erkennt langsame und ruckelnde Animationen im Code und behebt sie, damit Bewegungen auf dem Smartphone hochwertig und schnell bleiben.",
     "desc_en": "Finds slow and janky animations in the code and fixes them, so motion stays premium and fast on mobile.",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -3086,7 +3086,7 @@
     "desc": "حزمة فريق Flutter الرسمية لانتقالات جاهزة بين الشاشات: تحوّل البطاقة إلى صفحة، والانزلاق، والتلاشي. النجوم لمستودع حزم Flutter كله.",
     "desc_de": "Offizielles Paket des Flutter-Teams für fertige Übergänge zwischen Bildschirmen: Verwandlung einer Karte in eine Seite, Gleiten und Überblenden. Die Sterne gelten für das gesamte Repository der Flutter-Pakete.",
     "desc_en": "The official Flutter team package for ready-made transitions between screens: a card turning into a page, sliding and fading. The stars belong to the whole Flutter packages repository.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "BSD-3-Clause",
     "archived": false
@@ -3216,7 +3216,7 @@
     "desc": "إضافة Capacitor الرسمية للاهتزاز الخفيف عند الضغط والنجاح، فيبدو التطبيق كأنه تطبيق أصلي عند دمجها مع الحركة.",
     "desc_de": "Offizielles Capacitor-Plugin für leichtes haptisches Feedback beim Tippen und bei Erfolg – in Kombination mit Animationen wirkt die App dadurch wie eine native App.",
     "desc_en": "Capacitor's official plugin for light haptic feedback on tap and success, so the app feels native when combined with animation.",
-    "pushed": "2026-10-28",
+    "pushed": "2026-11-02",
     "added": "2026-10-24T00:00:00Z",
     "license": "other",
     "archived": false
@@ -3229,7 +3229,7 @@
     "isNew": true,
     "gh": "https://github.com/remotion-dev/remotion",
     "site": "https://remotion.dev",
-    "stars": "69.9k",
+    "stars": "70.3k",
     "cmd": "npx create-video@latest",
     "use": [
       "shop",
@@ -3241,7 +3241,7 @@
     "desc": "إطار React لصنع فيديوهات MP4 بالكود، مع أدوات للصوت والترجمة. مجاني للأفراد والشركات حتى 3 أشخاص، وبعدها يحتاج رخصة مدفوعة.",
     "desc_de": "React-Framework, um MP4-Videos per Code zu erstellen, mit Tools für Audio und Untertitel. Kostenlos für Einzelpersonen und Unternehmen mit bis zu 3 Personen, darüber hinaus wird eine kostenpflichtige Lizenz benötigt.",
     "desc_en": "A React framework for making MP4 videos with code, with tools for audio and subtitles. Free for individuals and companies of up to 3 people; beyond that it needs a paid license.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "other",
     "archived": false
@@ -3254,7 +3254,7 @@
     "isNew": true,
     "gh": "https://github.com/Vincentwei1021/video-shotcraft",
     "site": "https://vincentwei1021.github.io/video-shotcraft/",
-    "stars": "16.1k",
+    "stars": "16.4k",
     "cmd": "npx skills add Vincentwei1021/video-shotcraft",
     "use": [
       "shop",
@@ -3279,7 +3279,7 @@
     "isNew": true,
     "gh": "https://github.com/calesthio/OpenMontage",
     "site": "https://www.openmontage.video/",
-    "stars": "74.9k",
+    "stars": "75.6k",
     "cmd": "git clone https://github.com/calesthio/OpenMontage.git\ncd OpenMontage\nmake setup",
     "use": [
       "shop",
@@ -3350,7 +3350,7 @@
     "isNew": true,
     "gh": "https://github.com/browser-use/video-use",
     "site": "https://video-use.com",
-    "stars": "30.4k",
+    "stars": "30.5k",
     "cmd": "git clone https://github.com/browser-use/video-use",
     "use": [
       "shop",
@@ -3407,7 +3407,7 @@
     "desc": "مهارة Figma الرسمية: يضيف Claude الحركة والتوقيت إلى تصاميمك داخل Figma، وتصدّرها فيديو أو كود. ميزة الحركة في Figma ما زالت تجريبية.",
     "desc_de": "Offizieller Skill von Figma: Claude ergänzt deine Designs in Figma um Animationen und Timing, und du exportierst sie als Video oder Code. Die Animationsfunktion in Figma ist noch experimentell.",
     "desc_en": "Figma's official skill: Claude adds motion and timing to your designs inside Figma, and you export them as video or code. Figma's motion feature is still experimental.",
-    "pushed": "2026-10-28",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "none",
     "archived": false
@@ -3549,7 +3549,7 @@
     "isNew": true,
     "gh": "https://github.com/kumoproductions/mcp-aftereffects",
     "site": null,
-    "stars": "150",
+    "stars": "152",
     "cmd": "claude mcp add aftereffects -- npx -y @kumoproductions/mcp-aftereffects",
     "use": [
       "brand",
@@ -3571,7 +3571,7 @@
     "isNew": true,
     "gh": "https://github.com/ManimCommunity/manim",
     "site": "https://www.manim.community",
-    "stars": "42.1k",
+    "stars": "42.2k",
     "cmd": "pip install manim",
     "use": [
       "brand",
@@ -3593,7 +3593,7 @@
     "isNew": true,
     "gh": "https://github.com/adithya-s-k/manim_skill",
     "site": null,
-    "stars": "1.2k",
+    "stars": "1.3k",
     "cmd": "npx skills add adithya-s-k/manim_skill",
     "use": [
       "brand",
@@ -3615,7 +3615,7 @@
     "isNew": true,
     "gh": "https://github.com/motion-canvas/motion-canvas",
     "site": "https://motion-canvas.io",
-    "stars": "19.6k",
+    "stars": "19.7k",
     "cmd": "npm init @motion-canvas@latest",
     "use": [
       "brand",
@@ -3683,7 +3683,7 @@
     "isNew": true,
     "gh": "https://github.com/KyaniteLabs/kinocut",
     "site": null,
-    "stars": "236",
+    "stars": "238",
     "cmd": "claude mcp add kinocut -- uvx --from kinocut kino --mcp",
     "use": [
       "shop",
@@ -3693,7 +3693,7 @@
     "desc": "يجعل Claude يقص الفيديو ويدمجه ويحوّل صيغه عبر FFmpeg. أفضل خوادم FFmpeg MCP المتاحة، لكنه ما زال صغيرًا.",
     "desc_de": "Lässt Claude Videos per FFmpeg schneiden, zusammenfügen und in andere Formate umwandeln. Der beste verfügbare FFmpeg-MCP-Server, aber noch ein kleines Projekt.",
     "desc_en": "Lets Claude cut, merge and convert video formats through FFmpeg. The best FFmpeg MCP server available, but still small.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "Apache-2.0",
     "archived": false
@@ -3727,7 +3727,7 @@
     "isNew": true,
     "gh": "https://github.com/rive-app/rive-ios",
     "site": "https://rive.app",
-    "stars": "856",
+    "stars": "857",
     "cmd": ".package(url: \"https://github.com/rive-app/rive-ios\", from: \"6.24.0\")",
     "use": [
       "mobile",
@@ -3736,7 +3736,7 @@
     "desc": "مشغّل Rive الرسمي لتطبيقات iPhone وMac: أزرار ورسوم تفاعلية تتفاعل مع حالة التطبيق في SwiftUI.",
     "desc_de": "Offizieller Rive-Player für iPhone- und Mac-Apps: Buttons und interaktive Grafiken, die in SwiftUI auf den Zustand der App reagieren.",
     "desc_en": "Rive's official player for iPhone and Mac apps: buttons and interactive graphics that react to the app's state in SwiftUI.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-24T00:00:00Z",
     "license": "MIT",
     "archived": false
@@ -3749,7 +3749,7 @@
     "isNew": true,
     "gh": "https://github.com/Egonex-AI/Understand-Anything",
     "site": "https://understand-anything.com",
-    "stars": "89.8k",
+    "stars": "90.1k",
     "cmd": "/plugin marketplace add Egonex-AI/Understand-Anything\n/plugin install understand-anything",
     "use": [
       "web",
@@ -3774,7 +3774,7 @@
     "isNew": true,
     "gh": "https://github.com/morluto/rea",
     "site": "https://rea.tools/",
-    "stars": "421.2k",
+    "stars": "424.8k",
     "cmd": "npx rea-agents setup",
     "use": [
       "mobile",
@@ -3784,7 +3784,7 @@
     "desc": "خادم MCP يتيح لـ Claude تحليل التطبيقات والملفات التنفيذية: تطبيقات Electron وجافاسكريبت وملفات APK والمواقع وسجلات الشبكة، وحتى الملفات الأصلية عبر Hopper أو Ghidra أو IDA. التحليل محلي على جهازك. للأبحاث المشروعة وتحليل ما تملكه أو مصرّح لك بفحصه فقط، وأدوات IDA وHopper التجارية تحتاج ترخيصك الخاص. التقاط التشغيل يشغّل التطبيق بصلاحياتك. مشروع حديث ظهر في أكتوبر 2026 ونجومه كثيرة جدًا، فتحقق منه بنفسك قبل التثبيت. رخصته MIT ويحتاج Node.js 22 أو أحدث.",
     "desc_de": "MCP-Server, mit dem Claude Apps und ausführbare Dateien analysieren kann: Electron-Apps, JavaScript, APK-Dateien, Websites und Netzwerk-Logs, sogar native Binärdateien über Hopper, Ghidra oder IDA. Die Analyse läuft lokal auf deinem Gerät. Nur für legitime Forschung und die Analyse dessen, was dir gehört oder wofür du eine Prüfberechtigung hast; die kommerziellen Tools IDA und Hopper benötigen deine eigene Lizenz. Die Laufzeitaufzeichnung führt die App mit deinen Berechtigungen aus. Neues Projekt, erschienen im Oktober 2026, mit sehr vielen Sternen – prüfe es daher selbst vor der Installation. Lizenz: MIT; benötigt Node.js 22 oder neuer.",
     "desc_en": "An MCP server that lets Claude analyze apps and executables: Electron apps, JavaScript, APK files, websites and network logs, and even native binaries through Hopper, Ghidra or IDA. The analysis is local, on your own device. For legitimate research and for analyzing only what you own or are authorized to inspect; the commercial IDA and Hopper tools need your own license. Runtime capture runs the app with your permissions. A recent project that appeared in October 2026 with a very large number of stars, so check it yourself before installing. Licensed MIT, and needs Node.js 22 or later.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "MIT",
     "archived": false,
     "added": "2026-10-24T22:15:00Z"
@@ -3797,7 +3797,7 @@
     "isNew": true,
     "gh": "https://github.com/harry0703/MoneyPrinterTurbo",
     "site": null,
-    "stars": "137.3k",
+    "stars": "137.9k",
     "cmd": "python -m pip install mpt\nmpt webui",
     "use": [
       "video",
@@ -4241,7 +4241,7 @@
     "desc": "قاموس مرادفات ألماني مجاني يحرره مجتمع المستخدمين، يقترح كلمات بديلة لتجنب تكرار اللفظ نفسه في أوصاف المنتجات والنصوص. بياناته قابلة للتنزيل برخصة CC BY-SA أو LGPL مع ذكر المصدر، وشيفرة الموقع مفتوحة. للألمانية فقط.",
     "desc_de": "Kostenloses deutsches Synonymwörterbuch, das von der Nutzer-Community bearbeitet wird: schlägt alternative Wörter vor, um Wiederholungen desselben Begriffs in Produktbeschreibungen und Texten zu vermeiden. Die Daten lassen sich unter der Lizenz CC BY-SA oder LGPL mit Quellenangabe herunterladen, der Code der Website ist Open Source. Nur für Deutsch.",
     "desc_en": "A free German thesaurus edited by its user community that suggests alternative words, to avoid repeating the same word in product descriptions and texts. Its data can be downloaded under a CC BY-SA or LGPL license with attribution, and the website's code is open. German only.",
-    "pushed": "2026-10-26",
+    "pushed": "2026-11-02",
     "license": "AGPL-3.0",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -4326,7 +4326,7 @@
     "desc": "وصفات وأكواد جاهزة للنسخ من Anthropic في أقسام مثل الوكلاء والأدوات والتقييم والمهارات والرؤية، بينها وصفة Prompting for frontend aesthetics لتحسين شكل الواجهات التي يولدها Claude. تحتاج مفتاح Claude API، والأمثلة بلغة Python غالبًا. مجانية بالإنجليزية.",
     "desc_de": "Rezepte und kopierfertiger Code von Anthropic in Bereichen wie Agenten, Tools, Evaluierung, Skills und Vision, darunter das Rezept „Prompting for frontend aesthetics“, mit dem von Claude erzeugte Oberflächen besser aussehen. Benötigt einen API-Schlüssel für die Claude API, die Beispiele sind meist in Python. Kostenlos auf Englisch.",
     "desc_en": "Recipes and copy-ready code from Anthropic in sections such as agents, tools, evaluation, skills and vision, including the Prompting for frontend aesthetics recipe for improving the look of interfaces Claude generates. Needs a Claude API key, and the examples are mostly in Python. Free, in English.",
-    "pushed": "2026-10-29",
+    "pushed": "2026-11-02",
     "license": "MIT",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -4381,7 +4381,7 @@
     "isNew": true,
     "gh": "https://github.com/f/prompts.chat",
     "site": "https://prompts.chat",
-    "stars": "175.6k",
+    "stars": "175.7k",
     "cmd": "/plugin marketplace add f/prompts.chat\n/plugin install prompts.chat@prompts.chat",
     "use": [
       "claude",
@@ -4391,7 +4391,7 @@
     "desc": "مكتبة مفتوحة المصدر للأوامر الجاهزة (كانت Awesome ChatGPT Prompts) تتصفحها وتنسخ منها وتضيف أوامرك، وتعمل مع Claude وChatGPT وGemini. لها أمر npx وخادم MCP وإضافة Claude Code للبحث فيها من الطرفية. مجانية، وأوامرها من المجتمع فراجع كل أمر قبل استعماله.",
     "desc_de": "Open-Source-Bibliothek mit fertigen Prompts (früher Awesome ChatGPT Prompts): Du stöberst darin, kopierst Prompts und fügst eigene hinzu; funktioniert mit Claude, ChatGPT und Gemini. Bietet einen npx-Befehl, einen MCP-Server und ein Plugin für Claude Code, um sie aus dem Terminal zu durchsuchen. Kostenlos; die Prompts stammen aus der Community, prüfe daher jeden vor der Verwendung.",
     "desc_en": "An open-source library of ready-made prompts (formerly Awesome ChatGPT Prompts) that you browse, copy from and add your own to, working with Claude, ChatGPT and Gemini. It has an npx command, an MCP server and a Claude Code plugin to search it from the terminal. Free, and its prompts come from the community, so review each prompt before using it.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "other",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -4601,7 +4601,7 @@
     "isNew": true,
     "gh": "https://github.com/promptfoo/promptfoo",
     "site": "https://www.promptfoo.dev",
-    "stars": "26.7k",
+    "stars": "26.8k",
     "cmd": "npm install -g promptfoo\npromptfoo init --example getting-started",
     "use": [
       "claude",
@@ -4610,7 +4610,7 @@
     "desc": "أداة سطر أوامر مفتوحة المصدر تختبر أوامرك على عدة نماذج (Claude وGPT وGemini وغيرها) وتقارن نتائجها جنبًا إلى جنب، وتفحص التطبيقات بحثًا عن ثغرات، وتعمل في CI. تفيد من يضيف ميزة ذكاء اصطناعي إلى متجره أو تطبيقه. تحتاج مفاتيح API، والشركة صارت جزءًا من OpenAI مع بقاء الشيفرة MIT.",
     "desc_de": "Open-Source-Kommandozeilentool, das deine Prompts mit mehreren Modellen testet (Claude, GPT, Gemini u. a.), die Ergebnisse direkt nebeneinander vergleicht, Apps auf Sicherheitslücken prüft und in CI läuft. Hilfreich für alle, die ihrem Shop oder ihrer App eine KI-Funktion hinzufügen. Benötigt API-Schlüssel; das Unternehmen gehört inzwischen zu OpenAI, der Code steht weiterhin unter MIT-Lizenz.",
     "desc_en": "An open-source command-line tool that tests your prompts on several models (Claude, GPT, Gemini and others) and compares their results side by side, scans apps for vulnerabilities, and runs in CI. Useful if you're adding an AI feature to your store or app. Needs API keys, and the company is now part of OpenAI while the code stays MIT.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "MIT",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -4632,7 +4632,7 @@
     "desc": "منصة مفتوحة المصدر لإدارة الأوامر وتتبع استدعاءات النماذج وتقييمها: تحفظ إصدارات الأوامر وتجربها في Playground وتقارن نتائجها. تستضيفها بنفسك بـ Docker Compose أو تستعمل السحابة بخطة مجانية. موجهة للمطورين، وأصبحت جزءًا من ClickHouse منذ يناير 2026.",
     "desc_de": "Open-Source-Plattform für Prompt-Management sowie Tracing und Evaluierung von Modellaufrufen: speichert Prompt-Versionen, testet sie im Playground und vergleicht ihre Ergebnisse. Du hostest sie selbst mit Docker Compose oder nutzt die Cloud mit kostenlosem Tarif. Richtet sich an Entwickler; gehört seit Januar 2026 zu ClickHouse.",
     "desc_en": "An open-source platform for managing prompts and tracing and evaluating model calls: it stores prompt versions, tries them in a Playground and compares their results. You host it yourself with Docker Compose or use the cloud with a free plan. Aimed at developers, and part of ClickHouse since January 2026.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "other",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -4645,7 +4645,7 @@
     "isNew": true,
     "gh": "https://github.com/kepano/obsidian-skills",
     "site": null,
-    "stars": "50.6k",
+    "stars": "50.7k",
     "cmd": "/plugin marketplace add kepano/obsidian-skills\n/plugin install obsidian@obsidian-skills",
     "use": [
       "claude"
@@ -4687,7 +4687,7 @@
     "isNew": true,
     "gh": "https://github.com/microsoft/markitdown",
     "site": "https://pypi.org/project/markitdown/",
-    "stars": "193.5k",
+    "stars": "193.7k",
     "cmd": "pip install 'markitdown[all]'",
     "use": [
       "claude",
@@ -4709,7 +4709,7 @@
     "isNew": true,
     "gh": "https://github.com/nicobailon/visual-explainer",
     "site": null,
-    "stars": "10.7k",
+    "stars": "10.8k",
     "cmd": "/plugin marketplace add nicobailon/visual-explainer\n/plugin install visual-explainer@visual-explainer-marketplace",
     "use": [
       "claude",
@@ -4719,7 +4719,7 @@
     "desc": "مهارة تجعل Claude يعرض الشرح كصفحة HTML منسّقة بدل نص الطرفية: مخططات انسيابية وجداول مقارنة ومراجعة للتعديلات والخطط وعروض شرائح (ويمكن تصديرها إلى PPTX بدقة محدودة). مفيدة لتوضيح خطوات الطلبات أو بنية الموقع لفريقك. يكفي متصفح لعرض الناتج.",
     "desc_de": "Skill, mit dem Claude Erklärungen als gestaltete HTML-Seite statt als Terminaltext ausgibt: Flussdiagramme, Vergleichstabellen, Reviews von Änderungen und Plänen sowie Präsentationen (als PPTX exportierbar, allerdings mit eingeschränkter Genauigkeit). Hilfreich, um deinem Team Bestellabläufe oder den Aufbau der Website zu erklären. Zum Ansehen des Ergebnisses genügt ein Browser.",
     "desc_en": "A skill that makes Claude present explanations as a formatted HTML page instead of terminal text: flowcharts, comparison tables, reviews of changes and plans, and slide decks (which can be exported to PPTX with limited fidelity). Useful for explaining order flows or the site's structure to your team. A browser is enough to view the result.",
-    "pushed": "2026-10-30",
+    "pushed": "2026-11-03",
     "license": "MIT",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -4732,7 +4732,7 @@
     "isNew": true,
     "gh": "https://github.com/jgraph/drawio-mcp",
     "site": "https://www.drawio.com/mcp/",
-    "stars": "5.7k",
+    "stars": "5.8k",
     "cmd": "/plugin marketplace add jgraph/drawio-mcp\n/plugin install drawio@drawio",
     "use": [
       "claude",
@@ -4741,7 +4741,7 @@
     "desc": "الإضافة الرسمية من draw.io: يولّد Claude مخططات قابلة للتحرير بصيغة .drawio (انسيابية، وهياكل، وخرائط موقع) من وصف نصي أو Mermaid، ويصدّرها إلى PNG وSVG وPDF. النسخة المستضافة تعرض المخطط داخل المحادثة لكنها ترسل محتواه إلى خادم mcp.draw.io، والتصدير يحتاج draw.io Desktop.",
     "desc_de": "Offizielles Plugin von draw.io: Claude erstellt bearbeitbare Diagramme im Format .drawio (Flussdiagramme, Strukturdiagramme, Sitemaps) aus einer Textbeschreibung oder Mermaid und exportiert sie als PNG, SVG und PDF. Die gehostete Version zeigt das Diagramm im Chat an, sendet seinen Inhalt aber an den Server mcp.draw.io; für den Export wird draw.io Desktop benötigt.",
     "desc_en": "The official add-on from draw.io: Claude generates editable diagrams in .drawio format (flowcharts, structures, sitemaps) from a text description or Mermaid, and exports them to PNG, SVG and PDF. The hosted version shows the diagram inside the chat but sends its content to the mcp.draw.io server, and exporting needs draw.io Desktop.",
-    "pushed": "2026-10-31",
+    "pushed": "2026-11-02",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -4802,7 +4802,7 @@
     "isNew": true,
     "gh": "https://github.com/career-ops-hq/career-ops",
     "site": "https://career-ops.org",
-    "stars": "79.4k",
+    "stars": "79.7k",
     "cmd": "npx @santifer/career-ops init\ncd career-ops\nclaude",
     "use": [
       "claude"
@@ -4810,7 +4810,7 @@
     "desc": "وكيل مفتوح المصدر للبحث عن وظيفة يعمل داخل Claude Code: يقيّم إعلان الوظيفة مقابل سيرتك الذاتية، ويعدّ سيرة PDF متوافقة مع أنظمة ATS ورسالة تغطية، ويتتبع طلباتك، وأنت من يضغط إرسال. سيرتك تُرسل إلى مزوّد الذكاء الاصطناعي الذي تختاره، ووجود مفتاح ANTHROPIC_API_KEY في البيئة يجعل الاستهلاك يُحتسب بالرموز.",
     "desc_de": "Open-Source-Agent für die Jobsuche, der in Claude Code läuft: bewertet eine Stellenanzeige im Abgleich mit deinem Lebenslauf, erstellt einen ATS-kompatiblen Lebenslauf als PDF sowie ein Anschreiben und verfolgt deine Bewerbungen – auf „Senden“ klickst du selbst. Dein Lebenslauf wird an den KI-Anbieter deiner Wahl übermittelt; ist ANTHROPIC_API_KEY als Umgebungsvariable gesetzt, wird die Nutzung nach Tokens abgerechnet.",
     "desc_en": "An open-source job search agent that runs inside Claude Code: it evaluates a job posting against your CV, prepares an ATS-compatible PDF CV and a cover letter, and tracks your applications, and you are the one who presses send. Your CV is sent to the AI provider you choose, and having an ANTHROPIC_API_KEY in the environment means usage is billed by tokens.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "MIT",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -4823,7 +4823,7 @@
     "isNew": true,
     "gh": "https://github.com/duckdb/duckdb-skills",
     "site": "https://duckdb.org",
-    "stars": "614",
+    "stars": "615",
     "cmd": "/plugin marketplace add duckdb/duckdb-skills\n/plugin install duckdb-skills@duckdb-skills",
     "use": [
       "dashboard",
@@ -4845,7 +4845,7 @@
     "isNew": true,
     "gh": "https://github.com/mvanhorn/last30days-skill",
     "site": null,
-    "stars": "66.3k",
+    "stars": "66.4k",
     "cmd": "/plugin marketplace add mvanhorn/last30days-skill\n/plugin install last30days",
     "use": [
       "claude",
@@ -4868,7 +4868,7 @@
     "isNew": true,
     "gh": "https://github.com/K-Dense-AI/scientific-agent-skills",
     "site": "https://k-dense.ai",
-    "stars": "55.8k",
+    "stars": "55.9k",
     "cmd": "npx skills add K-Dense-AI/scientific-agent-skills",
     "use": [
       "claude"
@@ -4889,7 +4889,7 @@
     "isNew": true,
     "gh": "https://github.com/OthmanAdi/planning-with-files",
     "site": null,
-    "stars": "27.8k",
+    "stars": "27.9k",
     "cmd": "/plugin marketplace add OthmanAdi/planning-with-files\n/plugin install planning-with-files@planning-with-files",
     "use": [
       "claude",
@@ -4898,7 +4898,7 @@
     "desc": "مهارة تحفظ خطة المهمة على القرص في ثلاثة ملفات Markdown (الخطة والنتائج والتقدم) فيستأنف Claude عمله بعد /clear أو ضغط السياق أو انقطاع الجلسة. مفيدة للمهام الطويلة مثل بناء متجر أو موقع كامل. تتوفر نسخ مترجمة للعربية والألمانية، وتضيف hooks تعمل في كل دورة.",
     "desc_de": "Skill, der den Aufgabenplan in drei Markdown-Dateien (Plan, Erkenntnisse, Fortschritt) auf der Festplatte speichert, sodass Claude nach /clear, einer Kontext-Komprimierung oder einem Sitzungsabbruch weiterarbeiten kann. Hilfreich für lange Aufgaben wie den Aufbau eines kompletten Shops oder einer Website. Übersetzte Versionen gibt es für Arabisch und Deutsch; fügt Hooks hinzu, die bei jedem Durchlauf ausgeführt werden.",
     "desc_en": "A skill that saves the task plan on disk in three Markdown files (plan, findings and progress), so Claude resumes work after /clear, context compaction or a dropped session. Useful for long tasks such as building a whole store or website. Translated versions are available for Arabic and German, and it adds hooks that run on every turn.",
-    "pushed": "2026-10-30",
+    "pushed": "2026-11-03",
     "license": "MIT",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -4911,7 +4911,7 @@
     "isNew": true,
     "gh": "https://github.com/thedotmack/claude-mem",
     "site": "https://docs.claude-mem.ai/",
-    "stars": "110.3k",
+    "stars": "111.2k",
     "cmd": "/plugin marketplace add thedotmack/claude-mem\n/plugin install claude-mem",
     "use": [
       "claude"
@@ -4919,7 +4919,7 @@
     "desc": "إضافة ذاكرة دائمة لـ Claude Code: تسجّل ما يفعله Claude في كل جلسة وتضغطه بالذكاء الاصطناعي ثم تعيد المعلومات المناسبة في الجلسات التالية، مع بحث في السجل عبر أدوات MCP، فلا تعيد شرح مشروعك كل مرة. تعمل بخدمة محلية (Bun وSQLite)، وقد يعرض المثبّت اشتراكًا سحابيًا مدفوعًا بعد تجربة مجانية.",
     "desc_de": "Plugin für ein dauerhaftes Gedächtnis in Claude Code: zeichnet auf, was Claude in jeder Sitzung tut, komprimiert es per KI und stellt in späteren Sitzungen die passenden Informationen wieder bereit, samt Suche im Verlauf über MCP-Tools – so musst du dein Projekt nicht jedes Mal neu erklären. Läuft als lokaler Dienst (Bun und SQLite); der Installer kann ein kostenpflichtiges Cloud-Abo nach einer kostenlosen Testphase anbieten.",
     "desc_en": "A persistent-memory plugin for Claude Code: it records what Claude does in each session, compresses it with AI and brings back the right information in later sessions, with a search of the history through MCP tools, so you don't re-explain your project every time. Runs as a local service (Bun and SQLite), and the installer may offer a paid cloud subscription after a free trial.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -4985,7 +4985,7 @@
     "desc": "مهارات Stripe الرسمية تعلّم Claude بناء الدفع بالطريقة الصحيحة: اختيار Checkout أو PaymentIntents، والاشتراكات والضرائب، وتأمين Webhooks والمفاتيح، وترقية إصدار API. تفيد عند إضافة الدفع لتطبيق أو موقع خارج Shopify. تحتاج حساب Stripe للتجربة.",
     "desc_de": "Offizielle Skills von Stripe, die Claude beibringen, Zahlungen richtig umzusetzen: Wahl zwischen Checkout und PaymentIntents, Abos und Steuern, Absicherung von Webhooks und Schlüsseln sowie Upgrade der API-Version. Hilfreich beim Einbau von Zahlungen in eine App oder Website außerhalb von Shopify. Zum Ausprobieren wird ein Stripe-Konto benötigt.",
     "desc_en": "Stripe's official skills that teach Claude to build payments the right way: choosing Checkout or PaymentIntents, subscriptions and taxes, securing webhooks and keys, and upgrading the API version. Useful when adding payments to an app or website outside Shopify. A Stripe account is needed to try it.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "MIT",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -4998,7 +4998,7 @@
     "isNew": true,
     "gh": "https://github.com/paypal/AI-Toolkit",
     "site": "https://claude.com/plugins/paypal",
-    "stars": "40",
+    "stars": "42",
     "cmd": "/plugin install paypal@claude-plugins-official",
     "use": [
       "shop",
@@ -5031,7 +5031,7 @@
     "desc": "مهارات Cloudflare الرسمية لنشر الواجهات والخدمات على Workers عبر Wrangler، وتدقيق Core Web Vitals، وإضافة حماية Turnstile من الروبوتات، وإعداد إرسال البريد. تُثبَّت كإضافة تضم خادم Cloudflare MCP، وتحتاج حساب Cloudflare.",
     "desc_de": "Offizielle Skills von Cloudflare, um Oberflächen und Dienste per Wrangler auf Workers bereitzustellen, Core Web Vitals zu prüfen, Bot-Schutz mit Turnstile hinzuzufügen und den E-Mail-Versand einzurichten. Die Installation erfolgt als Plugin, das den MCP-Server von Cloudflare enthält; ein Cloudflare-Konto wird benötigt.",
     "desc_en": "Cloudflare's official skills for deploying front ends and services to Workers via Wrangler, auditing Core Web Vitals, adding Turnstile bot protection, and setting up email sending. Installed as a plugin that includes the Cloudflare MCP server, and requires a Cloudflare account.",
-    "pushed": "2026-10-31",
+    "pushed": "2026-11-02",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5053,7 +5053,7 @@
     "desc": "الحزمة الرسمية من AWS لوكلاء الترميز: مهارات لاختيار الخدمات وكتابة CDK وCloudFormation والنشر والأمان وتحسين التكلفة، مع خادم AWS MCP. تحتاج حساب AWS وبيانات اعتماد محلية وأداة uv، وهي موجهة لمن يستضيف تطبيقاته على AWS.",
     "desc_de": "Offizielles Paket von AWS für Coding-Agenten: Skills für die Auswahl von Diensten, das Schreiben von CDK und CloudFormation, Deployment, Sicherheit und Kostenoptimierung, dazu der MCP-Server von AWS. Benötigt ein AWS-Konto, lokale Zugangsdaten und das Tool uv; richtet sich an alle, die ihre Apps auf AWS hosten.",
     "desc_en": "AWS's official package for coding agents: skills for choosing services, writing CDK and CloudFormation, deployment, security and cost optimization, with the AWS MCP server. Requires an AWS account, local credentials and the uv tool, and is aimed at people who host their apps on AWS.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5129,7 +5129,7 @@
     "isNew": true,
     "gh": "https://github.com/firebase/agent-skills",
     "site": "https://firebase.google.com/docs/ai-assistance/agent-skills",
-    "stars": "498",
+    "stars": "499",
     "cmd": "claude plugin marketplace add firebase/skills\nclaude plugin install firebase@firebase",
     "use": [
       "mobile",
@@ -5138,7 +5138,7 @@
     "desc": "مهارات Firebase الرسمية: إعداد Firebase CLI، وتسجيل الدخول، وقواعد بيانات Firestore، والاستضافة، وCrashlytics لتتبع انهيار التطبيق، وRemote Config، ومراجعة قواعد الأمان. مناسبة لتطبيقات الجوال والويب، وتحتاج مشروع Firebase في حساب Google.",
     "desc_de": "Offizielle Firebase-Skills: Einrichtung der Firebase CLI, Nutzeranmeldung, Firestore-Datenbanken, Hosting, Crashlytics zur Verfolgung von App-Abstürzen, Remote Config und Prüfung der Sicherheitsregeln. Geeignet für Mobil- und Web-Apps; benötigt ein Firebase-Projekt in einem Google-Konto.",
     "desc_en": "Firebase's official skills: setting up the Firebase CLI, user sign-in, Firestore databases, hosting, Crashlytics for tracking app crashes, Remote Config, and reviewing security rules. Suited to mobile and web apps, and needs a Firebase project in a Google account.",
-    "pushed": "2026-10-30",
+    "pushed": "2026-11-02",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5172,7 +5172,7 @@
     "isNew": true,
     "gh": "https://github.com/getsentry/sentry-for-ai",
     "site": "https://skills.sentry.dev",
-    "stars": "273",
+    "stars": "274",
     "cmd": "claude plugin install sentry@claude-plugins-official",
     "use": [
       "web",
@@ -5182,7 +5182,7 @@
     "desc": "مهارات Sentry الرسمية لمراقبة الأخطاء: تضيف Sentry إلى مشروعك بعد اكتشاف المنصة، وتجلب أخطاء الإنتاج مع سياقها وتقترح الإصلاح، وتنشئ التنبيهات. تُثبَّت كإضافة تضم خادم Sentry MCP، وتحتاج حساب Sentry.",
     "desc_de": "Offizielle Sentry-Skills für die Fehlerüberwachung: Sie fügen Sentry nach Erkennung der Plattform zu deinem Projekt hinzu, rufen Produktionsfehler samt Kontext ab, schlagen Korrekturen vor und richten Alerts ein. Installation als Plugin, das den Sentry-MCP-Server enthält; benötigt ein Sentry-Konto.",
     "desc_en": "Sentry's official skills for error monitoring: they add Sentry to your project after detecting the platform, fetch production errors with their context and suggest fixes, and create alerts. Installed as a plugin that includes the Sentry MCP server, and requires a Sentry account.",
-    "pushed": "2026-10-30",
+    "pushed": "2026-11-02",
     "license": "MIT",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5195,7 +5195,7 @@
     "isNew": true,
     "gh": "https://github.com/neondatabase/agent-skills",
     "site": "https://neon.com",
-    "stars": "110",
+    "stars": "111",
     "cmd": "npx skills add neondatabase/agent-skills",
     "use": [
       "web",
@@ -5204,7 +5204,7 @@
     "desc": "مهارات Neon الرسمية لقاعدة Postgres السحابية: أفضل ممارسات الاتصال والاستعلام، وفروع قاعدة البيانات للاختبار الآمن، وتقليل تكاليف نقل البيانات، وNeon Auth وتخزين الملفات. تفيد مع Drizzle وNext.js، وأغلبها يحتاج حساب Neon.",
     "desc_de": "Offizielle Neon-Skills für die Postgres-Datenbank in der Cloud: Best Practices für Verbindungen und Abfragen, Datenbank-Branches für sicheres Testen, Senkung der Kosten für Datentransfer, Neon Auth und Dateispeicher. Nützlich in Kombination mit Drizzle und Next.js; die meisten davon benötigen ein Neon-Konto.",
     "desc_en": "Neon's official skills for its cloud Postgres database: best practices for connecting and querying, database branches for safe testing, reducing data transfer costs, Neon Auth and file storage. Useful with Drizzle and Next.js, and most of them need a Neon account.",
-    "pushed": "2026-10-30",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5227,7 +5227,7 @@
     "desc": "مهارات Clerk الرسمية لتسجيل الدخول وإدارة المستخدمين: إضافة Clerk إلى Next.js وReact وVue وNuxt وExpo وiOS وAndroid، وبناء نماذج دخول مخصصة، والمؤسسات والاشتراكات وWebhooks، واختبارها بـ Playwright. تحتاج حساب Clerk.",
     "desc_de": "Offizielle Clerk-Skills für Anmeldung und Benutzerverwaltung: Einbindung von Clerk in Next.js, React, Vue, Nuxt, Expo, iOS und Android, Erstellung eigener Anmeldeformulare, Organisationen, Abos und Webhooks sowie Tests mit Playwright. Benötigt ein Clerk-Konto.",
     "desc_en": "Clerk's official skills for sign-in and user management: adding Clerk to Next.js, React, Vue, Nuxt, Expo, iOS and Android, building custom sign-in forms, organizations, subscriptions and webhooks, and testing them with Playwright. Requires a Clerk account.",
-    "pushed": "2026-10-30",
+    "pushed": "2026-11-02",
     "license": "none",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5332,7 +5332,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/xlsx",
     "site": null,
-    "stars": "186.6k",
+    "stars": "186.9k",
     "cmd": "npx skills add anthropics/skills --skill xlsx",
     "use": [
       "shop",
@@ -5355,7 +5355,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/docx",
     "site": null,
-    "stars": "186.6k",
+    "stars": "186.9k",
     "cmd": "npx skills add anthropics/skills --skill docx",
     "use": [
       "shop",
@@ -5378,7 +5378,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/pdf",
     "site": null,
-    "stars": "186.6k",
+    "stars": "186.9k",
     "cmd": "npx skills add anthropics/skills --skill pdf",
     "use": [
       "shop",
@@ -5400,7 +5400,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/pptx",
     "site": null,
-    "stars": "186.6k",
+    "stars": "186.9k",
     "cmd": "npx skills add anthropics/skills --skill pptx",
     "use": [
       "shop",
@@ -5422,7 +5422,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business",
     "site": null,
-    "stars": "34.4k",
+    "stars": "34.5k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install small-business@knowledge-work-plugins",
     "use": [
       "shop",
@@ -5432,7 +5432,7 @@
     "desc": "إضافة Anthropic الرسمية للأعمال الصغيرة، تضم 44 مهارة: تخطيط المخزون وإعادة الطلب من بيانات Shopify، ومتابعة تقييمات العملاء، والتدفق النقدي وتحصيل الفواتير، والتسويق وSEO. كل خطوة تمس المال أو العملاء تنتظر موافقتك. وحسابات الضرائب فيها أمريكية فقط.",
     "desc_de": "Offizielles Anthropic-Plugin für kleine Unternehmen mit 44 Skills: Bestandsplanung und Nachbestellung auf Basis von Shopify-Daten, Beobachtung von Kundenbewertungen, Cashflow und Einzug offener Rechnungen, Marketing und SEO. Jeder Schritt, der Geld oder Kunden betrifft, wartet auf deine Freigabe. Die Steuerberechnungen darin gelten nur für die USA.",
     "desc_en": "Anthropic's official plugin for small businesses, with 44 skills: inventory planning and reordering from Shopify data, following customer reviews, cash flow and invoice collection, marketing and SEO. Every step that touches money or customers waits for your approval. Its tax calculations are for the US only.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5445,7 +5445,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/customer-support",
     "site": null,
-    "stars": "34.4k",
+    "stars": "34.5k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install customer-support@knowledge-work-plugins",
     "use": [
       "shop",
@@ -5454,7 +5454,7 @@
     "desc": "إضافة Anthropic الرسمية لخدمة العملاء: تصنيف التذاكر وترتيب أولوياتها، وصياغة ردود مهنية، وتجهيز ملف التصعيد، وتحويل المشكلات المحلولة إلى مقالات مركز مساعدة. تناسب بريد المتجر وصفحة الأسئلة الشائعة. الربط مع Intercom وHubSpot اختياري.",
     "desc_de": "Offizielles Anthropic-Plugin für den Kundenservice: Tickets kategorisieren und priorisieren, professionelle Antworten formulieren, Eskalationsunterlagen vorbereiten und gelöste Probleme in Help-Center-Artikel umwandeln. Geeignet für das E-Mail-Postfach des Shops und die FAQ-Seite. Die Anbindung an Intercom und HubSpot ist optional.",
     "desc_en": "Anthropic's official plugin for customer support: categorizing and prioritizing tickets, drafting professional replies, preparing escalation files, and turning solved problems into help center articles. Suited to the store's inbox and FAQ page. Connecting to Intercom and HubSpot is optional.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5467,7 +5467,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/legal",
     "site": null,
-    "stars": "34.4k",
+    "stars": "34.5k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install legal@knowledge-work-plugins",
     "use": [
       "shop",
@@ -5476,7 +5476,7 @@
     "desc": "إضافة Anthropic الرسمية للشؤون القانونية: مراجعة العقود مقابل قواعدك، وفرز اتفاقيات السرية، وفحص الامتثال (GDPR وغيره)، وصياغة ردود على طلبات أصحاب البيانات. قواعدها الافتراضية أمريكية فعدّلها لألمانيا، ولا تغني عن محامٍ.",
     "desc_de": "Offizielles Anthropic-Plugin für Rechtsangelegenheiten: Verträge anhand deiner Regeln prüfen, Geheimhaltungsvereinbarungen vorsortieren, die Compliance (DSGVO u. a.) kontrollieren und Antworten auf Anfragen betroffener Personen formulieren. Die Standardregeln sind US-amerikanisch – passe sie für Deutschland an. Ersetzt keinen Anwalt.",
     "desc_en": "Anthropic's official plugin for legal matters: reviewing contracts against your rules, triaging NDAs, checking compliance (GDPR and others), and drafting replies to data subject requests. Its default rules are American, so adapt them for Germany, and it's no substitute for a lawyer.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5489,7 +5489,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/operations",
     "site": null,
-    "stars": "34.4k",
+    "stars": "34.5k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install operations@knowledge-work-plugins",
     "use": [
       "shop",
@@ -5498,7 +5498,7 @@
     "desc": "إضافة Anthropic الرسمية للعمليات: تقييم الموردين من حيث التكلفة والمخاطر والتجديد، وتوثيق الإجراءات (SOP وRACI)، وكتابة runbook للمهام المتكررة، وتقارير الحالة. تفيد في تنظيم الموردين والشحن. تعمل دون ربط أدوات.",
     "desc_de": "Offizielles Anthropic-Plugin für Betriebsabläufe: Lieferanten nach Kosten, Risiken und Vertragsverlängerung bewerten, Prozesse dokumentieren (SOP und RACI), Runbooks für wiederkehrende Aufgaben schreiben und Statusberichte erstellen. Nützlich, um Lieferanten und Versand zu organisieren. Funktioniert ohne angebundene Tools.",
     "desc_en": "Anthropic's official plugin for operations: evaluating vendors on cost, risk and renewal, documenting procedures (SOP and RACI), writing runbooks for recurring tasks, and status reports. Useful for organizing suppliers and shipping. Works without connecting any tools.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5511,7 +5511,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/data",
     "site": null,
-    "stars": "34.4k",
+    "stars": "34.5k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install data@knowledge-work-plugins",
     "use": [
       "dashboard",
@@ -5521,7 +5521,7 @@
     "desc": "إضافة Anthropic الرسمية لتحليل البيانات: كتابة استعلامات SQL، واستكشاف الجداول، ورسم المخططات، وبناء لوحات HTML تفاعلية، ومراجعة التحليل قبل مشاركته. تعمل مع ملفات CSV وExcel مثل تصدير طلبات المتجر، ويمكن ربطها بـ BigQuery وSnowflake.",
     "desc_de": "Offizielles Anthropic-Plugin für Datenanalyse: SQL-Abfragen schreiben, Tabellen erkunden, Diagramme erstellen, interaktive HTML-Dashboards bauen und Analysen vor dem Teilen prüfen. Funktioniert mit CSV- und Excel-Dateien wie etwa dem Bestellexport des Shops und lässt sich mit BigQuery und Snowflake verbinden.",
     "desc_en": "Anthropic's official plugin for data analysis: writing SQL queries, exploring tables, drawing charts, building interactive HTML dashboards, and reviewing an analysis before sharing it. Works with CSV and Excel files such as a store orders export, and can be connected to BigQuery and Snowflake.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5534,7 +5534,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder",
     "site": null,
-    "stars": "186.6k",
+    "stars": "186.9k",
     "cmd": "npx skills add anthropics/skills --skill mcp-builder",
     "use": [
       "claude",
@@ -5557,7 +5557,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/claude-api",
     "site": null,
-    "stars": "186.6k",
+    "stars": "186.9k",
     "cmd": "npx skills add anthropics/skills --skill claude-api",
     "use": [
       "claude",
@@ -5580,7 +5580,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance",
     "site": null,
-    "stars": "45.8k",
+    "stars": "45.9k",
     "cmd": "/plugin install security-guidance@claude-plugins-official",
     "use": [
       "web",
@@ -5590,7 +5590,7 @@
     "desc": "إضافة Anthropic الرسمية لمراجعة أمان الكود الذي يكتبه Claude: تنبيه فوري للأنماط الخطرة، ومراجعة للفروقات عند انتهاء Claude من كل رد، ومراجعة عند commit تكشف الحقن وXSS وSSRF والأسرار المكتوبة في الكود. تستهلك رموزًا إضافية وترسل الفروقات إلى نموذج Claude.",
     "desc_de": "Offizielles Anthropic-Plugin zur Sicherheitsprüfung des Codes, den Claude schreibt: sofortige Warnung bei gefährlichen Mustern, Prüfung der Diffs nach jeder abgeschlossenen Antwort von Claude und eine Prüfung beim Commit, die Injections, XSS, SSRF und hartcodierte Secrets aufdeckt. Verbraucht zusätzliche Tokens und sendet die Diffs an das Claude-Modell.",
     "desc_en": "Anthropic's official plugin for reviewing the security of the code Claude writes: an instant warning on risky patterns, a review of the diffs when Claude finishes each reply, and a review at commit that catches injection, XSS, SSRF and secrets written into the code. Uses extra tokens and sends the diffs to the Claude model.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5603,7 +5603,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review",
     "site": null,
-    "stars": "45.8k",
+    "stars": "45.9k",
     "cmd": "/plugin install code-review@claude-plugins-official",
     "use": [
       "web",
@@ -5612,7 +5612,7 @@
     "desc": "إضافة Anthropic الرسمية لمراجعة طلبات الدمج (Pull Requests): الأمر /code-review يشغّل عدة وكلاء بالتوازي للبحث عن الأخطاء والتحقق من التزام الكود بتعليمات CLAUDE.md، ثم ينشر الملاحظات عالية الثقة فقط. تحتاج مستودع GitHub وأداة gh.",
     "desc_de": "Offizielles Anthropic-Plugin für das Review von Pull Requests: Der Befehl /code-review startet mehrere Agenten parallel, die nach Fehlern suchen und prüfen, ob der Code die Anweisungen in CLAUDE.md einhält; anschließend veröffentlicht er nur Anmerkungen mit hoher Konfidenz. Benötigt ein GitHub-Repository und das Tool gh.",
     "desc_en": "Anthropic's official plugin for reviewing pull requests: the /code-review command runs several agents in parallel to look for bugs and check that the code follows the instructions in CLAUDE.md, then posts only high-confidence comments. Requires a GitHub repository and the gh tool.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5625,7 +5625,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/skills/tree/main/skills/academy-guide",
     "site": "https://academy.claude.com",
-    "stars": "186.6k",
+    "stars": "186.9k",
     "cmd": "npx skills add anthropics/skills --skill academy-guide",
     "use": [
       "claude"
@@ -5691,7 +5691,7 @@
     "isNew": true,
     "gh": "https://github.com/motiful/product-shots",
     "site": null,
-    "stars": "122",
+    "stars": "125",
     "cmd": "npx skills add motiful/product-shots",
     "use": [
       "shop",
@@ -5714,7 +5714,7 @@
     "isNew": true,
     "gh": "https://github.com/SupercmoHQ/superCMO-skills",
     "site": "https://getsupercmo.ai",
-    "stars": "285",
+    "stars": "287",
     "cmd": "/plugin marketplace add SupercmoHQ/superCMO-skills\n/plugin install supercmo@superCMO-skills",
     "use": [
       "shop",
@@ -5760,7 +5760,7 @@
     "isNew": true,
     "gh": "https://github.com/elevenlabs/skills",
     "site": "https://elevenlabs.io",
-    "stars": "530",
+    "stars": "531",
     "cmd": "npx skills add elevenlabs/skills",
     "use": [
       "video",
@@ -5770,7 +5770,7 @@
     "desc": "المهارات الرسمية من ElevenLabs: تحويل النص إلى صوت بأكثر من 90 لغة، ودبلجة الفيديو إلى لغات أخرى مع الحفاظ على صوت المتحدث، وتوليد مؤثرات وموسيقى، وعزل الكلام عن الضوضاء. تفيد في تعليق صوتي لفيديوهات المنتجات بالألمانية والعربية. تحتاج مفتاح ElevenLabs API، وحدود الاستخدام حسب خطتك.",
     "desc_de": "Die offiziellen Skills von ElevenLabs: Text-to-Speech in über 90 Sprachen, Synchronisation von Videos in andere Sprachen unter Beibehaltung der Sprecherstimme, Erzeugung von Soundeffekten und Musik sowie Trennung von Sprache und Störgeräuschen. Nützlich für Voiceovers zu Produktvideos auf Deutsch und Arabisch. Benötigt einen ElevenLabs-API-Schlüssel; die Nutzungslimits richten sich nach deinem Tarif.",
     "desc_en": "ElevenLabs' official skills: text to speech in more than 90 languages, dubbing video into other languages while keeping the speaker's voice, generating effects and music, and isolating speech from noise. Useful for voice-over on product videos in German and Arabic. Needs an ElevenLabs API key, and usage limits depend on your plan.",
-    "pushed": "2026-10-28",
+    "pushed": "2026-11-02",
     "license": "MIT",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5783,7 +5783,7 @@
     "isNew": true,
     "gh": "https://github.com/heygen-com/skills",
     "site": "https://developers.heygen.com/docs/quick-start",
-    "stars": "531",
+    "stars": "535",
     "cmd": "gh skill install heygen-com/skills heygen-avatar\ngh skill install heygen-com/skills heygen-video\ngh skill install heygen-com/skills heygen-translate",
     "use": [
       "video",
@@ -5806,7 +5806,7 @@
     "isNew": true,
     "gh": "https://github.com/fal-ai-community/skills",
     "site": "https://fal.ai",
-    "stars": "258",
+    "stars": "259",
     "cmd": "curl https://genmedia.sh/install -fsS | bash\ngenmedia setup\ngenmedia init",
     "use": [
       "video",
@@ -5829,7 +5829,7 @@
     "isNew": true,
     "gh": "https://github.com/zubair-trabzada/geo-seo-claude",
     "site": null,
-    "stars": "11.4k",
+    "stars": "11.5k",
     "cmd": "curl -fsSL https://raw.githubusercontent.com/zubair-trabzada/geo-seo-claude/main/install.sh | bash",
     "use": [
       "shop",
@@ -5839,7 +5839,7 @@
     "desc": "يقيس مدى ظهور موقعك في إجابات ChatGPT وClaude وPerplexity وGoogle AI Overviews: درجة قابلية الاستشهاد بمحتواك، وسماح ملف robots.txt لزواحف الذكاء الاصطناعي، وإنشاء llms.txt، والبيانات المنظمة، وتقارير PDF. التثبيت بسكربت من الإنترنت ويحتاج Python 3.10 أو أحدث.",
     "desc_de": "Misst, wie sichtbar deine Website in den Antworten von ChatGPT, Claude, Perplexity und Google AI Overviews ist: Score für die Zitierfähigkeit deiner Inhalte, Prüfung, ob die robots.txt KI-Crawler zulässt, Erstellung einer llms.txt, strukturierte Daten und PDF-Berichte. Installation per Skript aus dem Internet; benötigt Python 3.10 oder neuer.",
     "desc_en": "Measures how visible your website is in answers from ChatGPT, Claude, Perplexity and Google AI Overviews: a citability score for your content, whether robots.txt allows AI crawlers, creating llms.txt, structured data, and PDF reports. Installed with a script from the internet and needs Python 3.10 or later.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "MIT",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5852,7 +5852,7 @@
     "isNew": true,
     "gh": "https://github.com/social-media-skills/skills",
     "site": "https://social-media-skills.com",
-    "stars": "234",
+    "stars": "240",
     "cmd": "/plugin marketplace add social-media-skills/skills\n/plugin install social-media-skills@social-media-skills",
     "use": [
       "shop",
@@ -5875,7 +5875,7 @@
     "isNew": true,
     "gh": "https://github.com/gitroomhq/postiz-agent",
     "site": "https://postiz.com/agent",
-    "stars": "562",
+    "stars": "563",
     "cmd": "npx skills add gitroomhq/postiz-agent\nnpm install -g postiz",
     "use": [
       "shop",
@@ -5930,7 +5930,7 @@
     "desc": "محرك مدوّنة كامل لـ Claude Code: تخطيط المواضيع، وكتابة مقالات محسّنة لـ Google ولاستشهاد محركات الذكاء الاصطناعي، وتقييم كل مسودة من 100 نقطة قبل تسليمها، مع بيانات منظمة وصور وتصدير HTML وPDF ونشر متعدد اللغات. مناسب لمدوّنة المتجر، لكنه ثقيل (31 مهارة فرعية) ويحتاج Python 3.11 أو أحدث.",
     "desc_de": "Komplette Blog-Engine für Claude Code: Themenplanung, Schreiben von Artikeln, die für Google und für Zitate durch KI-Suchmaschinen optimiert sind, und Bewertung jedes Entwurfs auf einer 100-Punkte-Skala vor der Übergabe, dazu strukturierte Daten, Bilder, HTML- und PDF-Export sowie mehrsprachige Veröffentlichung. Geeignet für einen Shop-Blog, aber umfangreich (31 Unter-Skills); benötigt Python 3.11 oder neuer.",
     "desc_en": "A complete blog engine for Claude Code: planning topics, writing articles optimized for Google and for citation by AI search engines, and scoring every draft out of 100 points before handing it over, with structured data, images, HTML and PDF export and multilingual publishing. Suited to a store blog, but heavy (31 sub-skills) and needs Python 3.11 or later.",
-    "pushed": "2026-10-30",
+    "pushed": "2026-11-03",
     "license": "MIT",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5975,7 +5975,7 @@
     "desc": "21 مهارة لصناعة المحتوى: إنفوغرافيك وصور أغلفة ورسوم توضيحية للمقالات وعروض شرائح، وتوليد صور عبر عدة مزودين، ونشر على X، واستخراج نص يوتيوب وترجمته. تركيزها قوي على المنصات الصينية. مهارتان تستخدمان واجهات غير رسمية عبر كوكيز المتصفح، فاستخدمهما على مسؤوليتك.",
     "desc_de": "21 Skills für die Content-Erstellung: Infografiken, Titelbilder, Illustrationen für Artikel, Folienpräsentationen, Bildgenerierung über mehrere Anbieter, Veröffentlichung auf X sowie Extraktion und Übersetzung von YouTube-Transkripten. Starker Fokus auf chinesische Plattformen. Zwei Skills nutzen inoffizielle Schnittstellen über Browser-Cookies – verwende sie auf eigene Verantwortung.",
     "desc_en": "21 skills for content creation: infographics, cover images, article illustrations and slide decks, image generation through several providers, publishing to X, and extracting and translating YouTube transcripts. A strong focus on Chinese platforms. Two skills use unofficial interfaces through browser cookies, so use them at your own risk.",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-02",
     "license": "MIT",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -5997,7 +5997,7 @@
     "desc": "خادم MCP رسمي من vidIQ يربط Claude ببيانات YouTube الحية: بحث الكلمات المفتاحية، والفيديوهات الرائجة، وتحليل المنافسين، وتقييم العناوين والصور المصغرة، مع دراسة محتوى Instagram وTikTok القصير. يضم 14 مهارة لسير العمل. يحتاج حساب vidIQ وقد تستهلك أدواته رصيدًا، والمستودع جديد وعدد نجومه قليل.",
     "desc_de": "Offizieller MCP-Server von vidIQ, der Claude mit Live-Daten von YouTube verbindet: Keyword-Recherche, Trend-Videos, Konkurrenzanalyse und Bewertung von Titeln und Thumbnails, dazu Analyse von Kurzvideo-Content auf Instagram und TikTok. Enthält 14 Workflow-Skills. Benötigt ein vidIQ-Konto, die Tools können Credits verbrauchen, und das Repository ist neu und hat nur wenige Sterne.",
     "desc_en": "An official MCP server from vidIQ that connects Claude to live YouTube data: keyword research, trending videos, competitor analysis, and scoring titles and thumbnails, plus studying short-form content on Instagram and TikTok. Includes 14 workflow skills. Needs a vidIQ account and its tools may use credits, and the repository is new with few stars.",
-    "pushed": "2026-10-29",
+    "pushed": "2026-11-02",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-25T18:11:55Z"
@@ -6043,7 +6043,7 @@
     "desc": "خادم Google الرسمي لـ Google Analytics: يقرأ Claude تقارير موقعك ويجيب عن أسئلة مثل «من أين جاء زوار هذا الأسبوع؟» و«أي صفحة تحوّل أكثر؟». للقراءة فقط افتراضيًا، ويحتاج إعداد صلاحيات Google Cloud وأداة pipx أولًا.",
     "desc_de": "Offizieller MCP-Server von Google für Google Analytics: Claude liest die Berichte deiner Website und beantwortet Fragen wie „Woher kamen die Besucher diese Woche?“ oder „Welche Seite konvertiert am besten?“. Standardmäßig nur lesend; vorher brauchst du Google-Cloud-Zugangsdaten und pipx.",
     "desc_en": "Google's official server for Google Analytics: Claude reads your site's reports and answers questions like “Where did this week's visitors come from?” or “Which page converts best?”. Read-only by default, and it needs Google Cloud credentials and pipx set up first.",
-    "pushed": "2026-10-29",
+    "pushed": "2026-11-02",
     "added": "2026-10-26T05:30:00Z",
     "license": "Apache-2.0",
     "archived": false
@@ -6056,7 +6056,7 @@
     "isNew": true,
     "gh": "https://github.com/microsoft/clarity-mcp-server",
     "site": "https://clarity.microsoft.com",
-    "stars": "136",
+    "stars": "137",
     "cmd": "claude mcp add clarity -- npx -y @microsoft/clarity-mcp-server --clarity_api_token=<your-token>",
     "use": [
       "shop",
@@ -6079,7 +6079,7 @@
     "isNew": true,
     "gh": "https://github.com/plausible/analytics",
     "site": "https://plausible.io",
-    "stars": "29.7k",
+    "stars": "29.8k",
     "cmd": null,
     "use": [
       "shop",
@@ -6089,7 +6089,7 @@
     "desc": "إحصاءات زوار مفتوحة المصدر تحترم الخصوصية: بلا ملفات تعريف ارتباط، بسكربت خفيف ولوحة واحدة واضحة. سحابة مدفوعة، أو نسخة مجتمعية تستضيفها بنفسك مجانًا.",
     "desc_de": "Datenschutzfreundliche Open-Source-Besucherstatistik: ohne Cookies, mit schlankem Skript und einem übersichtlichen Dashboard. Als bezahlte Cloud oder als kostenlose Community Edition zum Selbsthosten.",
     "desc_en": "Privacy-friendly open-source visitor analytics: no cookies, a lightweight script and one clear dashboard. Available as a paid cloud or a free community edition you host yourself.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T05:30:00Z",
     "license": "AGPL-3.0",
     "archived": false
@@ -6133,7 +6133,7 @@
     "desc": "نظام حجز مواعيد مفتوح المصدر تستضيفه بنفسك: إدارة العملاء والمواعيد، وخدمات ومقدّمو خدمة بخطط عمل وقواعد حجز، ومزامنة مع Google Calendar وإشعارات بالبريد. مجاني حتى للاستخدام التجاري.",
     "desc_de": "Open-Source-Terminbuchung zum Selbsthosten: Kunden und Termine verwalten, Leistungen und Mitarbeitende mit Arbeitszeiten und Buchungsregeln, Synchronisierung mit Google Calendar und E-Mail-Benachrichtigungen. Auch kommerziell kostenlos.",
     "desc_en": "Open-source appointment booking you host yourself: customer and appointment management, services and providers with working plans and booking rules, Google Calendar sync and email notifications. Free even for commercial use.",
-    "pushed": "2026-10-26",
+    "pushed": "2026-11-02",
     "added": "2026-10-26T05:30:00Z",
     "license": "GPL-3.0",
     "archived": false
@@ -6154,7 +6154,7 @@
     "desc": "نظام سجلات صحية إلكترونية وإدارة عيادات مفتوح المصدر: ملفات المرضى، والمواعيد، والفوترة الإلكترونية، بعدة لغات. مجاني وتستضيفه بنفسك، فراجع قواعد حماية البيانات الصحية في بلدك قبل استخدامه.",
     "desc_de": "Open-Source-Software für elektronische Patientenakten und Praxisverwaltung: Patientenakten, Termine und elektronische Abrechnung, mehrsprachig. Kostenlos zum Selbsthosten – prüfe vor dem Einsatz die Datenschutzregeln für Gesundheitsdaten in deinem Land.",
     "desc_en": "Open-source electronic health records and practice management: patient records, scheduling and electronic billing, in many languages. Free and self-hosted, so check your country's health-data protection rules before using it.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T05:30:00Z",
     "license": "GPL-3.0",
     "archived": false
@@ -6177,7 +6177,7 @@
     "desc": "تقويم أحداث حديث لتطبيقات الويب: متجاوب ومتعدد اللغات وقابل للتوسعة، مع مكونات جاهزة لـ React وVue وAngular وSvelte وPreact.",
     "desc_de": "Moderner Eventkalender für Web-Apps: responsiv, mehrsprachig und erweiterbar, mit fertigen Komponenten für React, Vue, Angular, Svelte und Preact.",
     "desc_en": "A modern event calendar for web apps: responsive, multilingual and extensible, with ready components for React, Vue, Angular, Svelte and Preact.",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-02",
     "added": "2026-10-26T05:30:00Z",
     "license": "MIT",
     "archived": false
@@ -6190,7 +6190,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/sales",
     "site": null,
-    "stars": "34.4k",
+    "stars": "34.5k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install sales@knowledge-work-plugins",
     "use": [
       "brand",
@@ -6199,7 +6199,7 @@
     "desc": "إضافة Anthropic الرسمية للمبيعات: تحضير المكالمات وتلخيصها ومتابعتها، والبحث عن الحسابات، ومراجعة الصفقات وخط المبيعات، وكتابة التوقعات، من أدوات CRM والبريد والتقويم التي تستخدمها أو من ملفات ترفعها. تحدّث السجلات وترسل البريد حين تطلب ذلك فقط.",
     "desc_de": "Offizielles Anthropic-Plugin für den Vertrieb: Gespräche vorbereiten, zusammenfassen und nachfassen, Accounts recherchieren, Deals und Pipeline prüfen und die Prognose schreiben – mit deinem CRM, E-Mail und Kalender oder hochgeladenen Dateien. Datensätze und E-Mails nur auf deine Anweisung.",
     "desc_en": "Anthropic's official sales plugin: prep calls, summarize and follow up, research accounts, review deals and pipeline, and write the forecast, from the CRM, email and calendar tools you use or uploaded files. It updates records and sends email only when you ask.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-26T05:30:00Z"
@@ -6212,7 +6212,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/finance",
     "site": null,
-    "stars": "34.4k",
+    "stars": "34.5k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install finance@knowledge-work-plugins",
     "use": [
       "finance"
@@ -6220,7 +6220,7 @@
     "desc": "إضافة Anthropic الرسمية للمالية والمحاسبة: قيود اليومية والتسويات، والقوائم المالية وتحليل الفروقات، وتسريع التحضير للتدقيق وإقفال نهاية الشهر. لا تغني عن مراجعة محاسبك.",
     "desc_de": "Offizielles Anthropic-Plugin für Finanzen und Buchhaltung: Buchungssätze und Abstimmungen, Abschlüsse und Abweichungsanalysen, schnellere Vorbereitung auf Prüfung und Monatsabschluss. Ersetzt nicht die Prüfung durch deine Steuerberatung.",
     "desc_en": "Anthropic's official finance and accounting plugin: journal entries and reconciliation, financial statements and variance analysis, faster audit prep and month-end close. No substitute for your accountant's review.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-26T05:30:00Z"
@@ -6233,7 +6233,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management",
     "site": null,
-    "stars": "34.4k",
+    "stars": "34.5k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install product-management@knowledge-work-plugins",
     "use": [
       "web",
@@ -6243,7 +6243,7 @@
     "desc": "إضافة Anthropic الرسمية لإدارة المنتجات: كتابة مواصفات الميزات، وتخطيط خارطة الطريق، وتلخيص أبحاث المستخدمين، وإطلاع أصحاب المصلحة على التقدم، ومتابعة المنافسين.",
     "desc_de": "Offizielles Anthropic-Plugin für Produktmanagement: Feature-Spezifikationen schreiben, Roadmaps planen, Nutzerforschung zusammenfassen, Stakeholder auf dem Laufenden halten und den Wettbewerb im Blick behalten.",
     "desc_en": "Anthropic's official product management plugin: write feature specs, plan roadmaps, synthesize user research, keep stakeholders updated and keep an eye on competitors.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-26T05:30:00Z"
@@ -6256,7 +6256,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/human-resources",
     "site": null,
-    "stars": "34.4k",
+    "stars": "34.5k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install human-resources@knowledge-work-plugins",
     "use": [
       "claude"
@@ -6264,7 +6264,7 @@
     "desc": "إضافة Anthropic الرسمية لشؤون الموظفين: التوظيف، والتأهيل، وتقييمات الأداء، وتحليل الرواتب، وإرشادات السياسات. قواعد العمل تختلف بين البلدان فراجعها لبلدك.",
     "desc_de": "Offizielles Anthropic-Plugin für Personalarbeit: Recruiting, Onboarding, Leistungsbeurteilungen, Vergütungsanalysen und Hinweise zu Richtlinien. Arbeitsrecht unterscheidet sich je nach Land – prüfe es für deines.",
     "desc_en": "Anthropic's official HR plugin: recruiting, onboarding, performance reviews, compensation analysis and policy guidance. Employment rules differ by country, so check them for yours.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-26T05:30:00Z"
@@ -6277,7 +6277,7 @@
     "isNew": true,
     "gh": "https://github.com/anthropics/knowledge-work-plugins/tree/main/productivity",
     "site": null,
-    "stars": "34.4k",
+    "stars": "34.5k",
     "cmd": "claude plugin marketplace add anthropics/knowledge-work-plugins\nclaude plugin install productivity@knowledge-work-plugins",
     "use": [
       "claude"
@@ -6285,7 +6285,7 @@
     "desc": "إضافة Anthropic الرسمية للإنتاجية: إدارة المهام وتخطيط يومك، وذاكرة لما يهمّ من سياق عملك، مع مزامنة التقويم والبريد والدردشة.",
     "desc_de": "Offizielles Anthropic-Plugin für Produktivität: Aufgaben verwalten, den Tag planen und ein Gedächtnis für wichtigen Arbeitskontext aufbauen, abgestimmt mit Kalender, E-Mail und Chat.",
     "desc_en": "Anthropic's official productivity plugin: manage tasks, plan your day and build up memory of important work context, synced with your calendar, email and chat.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false,
     "added": "2026-10-26T05:30:00Z"
@@ -6323,7 +6323,7 @@
     "desc": "مراقب للنظام في شريط القوائم على Mac: المعالج ومعالج الرسوم والذاكرة والقرص والشبكة والبطارية والحرارة، وتختار ما يظهر منها.",
     "desc_de": "Systemmonitor für die Menüleiste des Macs: CPU, GPU, Arbeitsspeicher, Festplatte, Netzwerk, Akku und Temperatur – du wählst, was angezeigt wird.",
     "desc_en": "A system monitor for your Mac's menu bar: CPU, GPU, memory, disk, network, battery and temperatures, and you choose what shows.",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-02",
     "added": "2026-10-26T13:30:00Z",
     "license": "MIT",
     "archived": false
@@ -6400,7 +6400,7 @@
     "desc": "مشغّل فيديو حديث لـ Mac: يفتح كل الصيغ تقريبًا، مع الترجمات وصورة داخل صورة وإيماءات لوحة اللمس.",
     "desc_de": "Moderner Videoplayer für den Mac: spielt fast jedes Format ab, mit Untertiteln, Bild-in-Bild und Trackpad-Gesten.",
     "desc_en": "A modern video player for Mac: plays almost any format, with subtitles, picture-in-picture and trackpad gestures.",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:30:00Z",
     "license": "GPL-3.0",
     "archived": false,
@@ -6414,13 +6414,13 @@
     "isNew": false,
     "gh": "https://github.com/TheBoredTeam/boring.notch",
     "site": null,
-    "stars": "11.2k",
+    "stars": "11.3k",
     "cmd": "brew install --cask TheBoredTeam/boring-notch/boring-notch",
     "use": [],
     "desc": "يحوّل نتوء شاشة MacBook إلى لوحة حيّة: التحكم بالموسيقى مع موجة صوت، والتقويم، ورفّ تضع فيه الملفات.",
     "desc_de": "Macht die Notch deines MacBooks zur Steuerzentrale: Musiksteuerung mit Visualizer, Kalender und eine Ablage für Dateien.",
     "desc_en": "Turns your MacBook's notch into a control center: music controls with a visualizer, your calendar and a shelf for files.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:43:00Z",
     "license": "GPL-3.0",
     "archived": false
@@ -6433,7 +6433,7 @@
     "isNew": false,
     "gh": "https://github.com/alejandrobujan/tendedero",
     "site": null,
-    "stars": "2.9k",
+    "stars": "3k",
     "cmd": null,
     "use": [],
     "desc": "يعلّق لقطات الشاشة على حبل غسيل أعلى شاشة Mac: يظهر حين تقترب من شريط القوائم، فتنقر اللقطة لنسخها أو تفتحها بنقرتين.",
@@ -6588,13 +6588,13 @@
     "isNew": false,
     "gh": "https://github.com/microsoft/PowerToys",
     "site": "https://learn.microsoft.com/windows/powertoys/",
-    "stars": "140.4k",
+    "stars": "140.5k",
     "cmd": "winget install -e --id Microsoft.PowerToys",
     "use": [],
     "desc": "مجموعة أدوات Microsoft لـ Windows: تخطيطات للنوافذ (FancyZones)، ومشغّل سريع، ومنتقي ألوان، ونسخ النص من الصور، وغيرها.",
     "desc_de": "Microsofts Werkzeugkasten für Windows: Fensterlayouts (FancyZones), ein Schnellstarter, ein Farbwähler, Text aus Bildern kopieren und vieles mehr.",
     "desc_en": "Microsoft's set of utilities for Windows: window layouts (FancyZones), a quick launcher, a color picker, copying text from images and more.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:45:00Z",
     "license": "MIT",
     "archived": false
@@ -6626,13 +6626,13 @@
     "isNew": false,
     "gh": "https://github.com/Flow-Launcher/Flow.Launcher",
     "site": "https://www.flowlauncher.com",
-    "stars": "15.9k",
+    "stars": "16k",
     "cmd": "winget install -e --id Flow-Launcher.Flow-Launcher",
     "use": [],
     "desc": "مشغّل سريع لـ Windows مثل Spotlight: اختصار واحد تبحث به في التطبيقات والملفات والويب، وتزيد قدراته بإضافات.",
     "desc_de": "Schnellstarter für Windows wie Spotlight: ein Tastenkürzel, um Apps, Dateien und das Web zu durchsuchen – erweiterbar mit Plugins.",
     "desc_en": "A quick launcher for Windows like Spotlight: one shortcut to search apps, files and the web, extendable with plugins.",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-02",
     "added": "2026-10-26T13:30:00Z",
     "license": "MIT",
     "archived": false
@@ -6645,13 +6645,13 @@
     "isNew": false,
     "gh": "https://github.com/files-community/Files",
     "site": "https://files.community",
-    "stars": "46.4k",
+    "stars": "46.5k",
     "cmd": null,
     "use": [],
     "desc": "مدير ملفات حديث لـ Windows بتبويبات وعرض بالأعمدة ولوحين متجاورين، بتصميم يناسب Windows 11.",
     "desc_de": "Moderner Dateimanager für Windows mit Tabs, Spaltenansicht und Doppelansicht im Design von Windows 11.",
     "desc_en": "A modern file manager for Windows with tabs, columns and dual panes, designed to fit Windows 11.",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:30:00Z",
     "license": "MIT",
     "archived": false
@@ -6785,7 +6785,7 @@
     "desc": "طرفية Microsoft الحديثة لـ Windows: تبويبات وألواح متجاورة لـ PowerShell وموجّه الأوامر وWSL، بسمات وخطوط تختارها.",
     "desc_de": "Microsofts modernes Terminal für Windows: Tabs und geteilte Bereiche für PowerShell, Eingabeaufforderung und WSL, mit anpassbaren Designs und Schriften.",
     "desc_en": "Microsoft's modern terminal for Windows: tabs and split panes for PowerShell, Command Prompt and WSL, with customizable themes and fonts.",
-    "pushed": "2026-10-31",
+    "pushed": "2026-11-02",
     "added": "2026-10-26T13:30:00Z",
     "license": "MIT",
     "archived": false,
@@ -6919,7 +6919,7 @@
     "desc": "مشغّل بودكاست شهير لـ iPhone بشيفرة مفتوحة: اشتراكات وقوائم تشغيل وتسريع الصوت وحذف لحظات الصمت، مع مزامنة بين الأجهزة.",
     "desc_de": "Bekannter Podcast-Player fürs iPhone mit offenem Quellcode: Abos, Playlists, schnellere Wiedergabe und das Kürzen von Stille, synchron über deine Geräte.",
     "desc_en": "A popular podcast player for iPhone with open source code: subscriptions, playlists, faster playback and silence trimming, synced across devices.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:30:00Z",
     "license": "MPL-2.0",
     "archived": false
@@ -6938,7 +6938,7 @@
     "desc": "تطبيق ويكيبيديا الرسمي لـ iPhone وiPad: مقالات بكل اللغات، وقوائم قراءة تحفظها لتقرأها بلا إنترنت.",
     "desc_de": "Die offizielle Wikipedia-App für iPhone und iPad: Artikel in allen Sprachen und Leselisten, die du offline lesen kannst.",
     "desc_en": "The official Wikipedia app for iPhone and iPad: articles in every language and reading lists you can save to read offline.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:30:00Z",
     "license": "MIT",
     "archived": false,
@@ -6958,7 +6958,7 @@
     "desc": "تطبيق Mastodon الرسمي لـ iPhone وiPad: شبكة اجتماعية لا تملكها شركة واحدة، تختار فيها الخادم الذي تنضم إليه.",
     "desc_de": "Die offizielle Mastodon-App für iPhone und iPad: ein soziales Netzwerk, das keiner einzelnen Firma gehört – du wählst den Server, dem du beitrittst.",
     "desc_en": "The official Mastodon app for iPhone and iPad: a social network no single company owns, where you choose the server you join.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:30:00Z",
     "license": "GPL-3.0",
     "archived": false
@@ -6977,7 +6977,7 @@
     "desc": "متصفح لـ iPhone وiPad وMac يركّز على الخصوصية: يحجب المتتبعات ويبحث دون أن يحفظ سجلك، وزرّ واحد يمسح كل بياناتك.",
     "desc_de": "Browser für iPhone, iPad und Mac mit Fokus auf Privatsphäre: blockiert Tracker, sucht, ohne deinen Verlauf zu speichern, und ein Knopf löscht alle Daten auf einmal.",
     "desc_en": "A privacy-first browser for iPhone, iPad and Mac: it blocks trackers, searches without saving your history, and one button wipes all your data.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:30:00Z",
     "license": "Apache-2.0",
     "archived": false,
@@ -6997,7 +6997,7 @@
     "desc": "متصفح Firefox لـ iPhone وiPad: حماية من التتبع، ومزامنة الإشارات المرجعية والتبويبات وكلمات المرور مع Firefox على الكمبيوتر.",
     "desc_de": "Firefox für iPhone und iPad: Schutz vor Tracking und Synchronisierung von Lesezeichen, Tabs und Passwörtern mit Firefox auf dem Computer.",
     "desc_en": "Firefox for iPhone and iPad: tracking protection and syncing of bookmarks, tabs and passwords with Firefox on your computer.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:30:00Z",
     "license": "MPL-2.0",
     "archived": false,
@@ -7011,7 +7011,7 @@
     "isNew": false,
     "gh": "https://github.com/localsend/localsend",
     "site": "https://localsend.org",
-    "stars": "97k",
+    "stars": "97.1k",
     "cmd": null,
     "use": [],
     "desc": "بديل AirDrop لكل الأجهزة: ترسل الملفات والرسائل بين Windows وMac وLinux وiPhone وAndroid عبر شبكتك المحلية، بلا إنترنت ولا حساب.",
@@ -7030,7 +7030,7 @@
     "isNew": false,
     "gh": "https://github.com/obsproject/obs-studio",
     "site": "https://obsproject.com",
-    "stars": "78.8k",
+    "stars": "78.9k",
     "cmd": null,
     "use": [
       "video"
@@ -7038,7 +7038,7 @@
     "desc": "تسجيل الشاشة والبث المباشر: تجمع الكاميرا والشاشة والصوت في مشاهد، ثم تبث إلى YouTube أو Twitch أو تسجّل فيديو، على Windows وMac وLinux.",
     "desc_de": "Bildschirmaufnahme und Livestreaming: Kombiniere Kamera, Bildschirm und Ton zu Szenen und streame zu YouTube oder Twitch oder nimm Videos auf – unter Windows, Mac und Linux.",
     "desc_en": "Screen recording and live streaming: combine camera, screen and audio into scenes, then stream to YouTube or Twitch or record video, on Windows, Mac and Linux.",
-    "pushed": "2026-10-29",
+    "pushed": "2026-11-02",
     "added": "2026-10-26T13:41:00Z",
     "license": "GPL-2.0",
     "archived": false
@@ -7057,7 +7057,7 @@
     "desc": "المشغّل الذي يفتح أي ملف فيديو أو صوت تقريبًا بلا برامج ترميز إضافية، على كل الأجهزة من الكمبيوتر إلى الهاتف.",
     "desc_de": "Der Player, der fast jede Video- und Audiodatei ohne zusätzliche Codecs abspielt – auf allen Geräten vom Computer bis zum Handy.",
     "desc_en": "The player that opens almost any video or audio file without extra codecs, on every device from computer to phone.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:30:00Z",
     "license": "GPL-2.0",
     "archived": false
@@ -7070,7 +7070,7 @@
     "isNew": false,
     "gh": "https://github.com/blender/blender",
     "site": "https://www.blender.org",
-    "stars": "21.5k",
+    "stars": "21.6k",
     "cmd": null,
     "use": [
       "video",
@@ -7079,7 +7079,7 @@
     "desc": "برنامج ثلاثي الأبعاد متكامل: نمذجة وتحريك وإكساء ومحاكاة وتصيير ومونتاج فيديو، على Windows وMac وLinux.",
     "desc_de": "Komplette 3D-Suite: Modellieren, Animieren, Texturieren, Simulieren, Rendern und Videoschnitt – unter Windows, Mac und Linux.",
     "desc_en": "A complete 3D suite: modeling, animation, texturing, simulation, rendering and video editing, on Windows, Mac and Linux.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:30:00Z",
     "license": "other",
     "archived": false,
@@ -7099,7 +7099,7 @@
     "desc": "حزمة مكتبية كاملة لـ Windows وMac وLinux: مستندات وجداول وعروض تقديمية، وتفتح ملفات Word وExcel وPowerPoint وتحفظ بصيغتها.",
     "desc_de": "Komplettes Office-Paket für Windows, Mac und Linux: Texte, Tabellen und Präsentationen – öffnet und speichert auch Word-, Excel- und PowerPoint-Dateien.",
     "desc_en": "A full office suite for Windows, Mac and Linux: documents, spreadsheets and presentations, and it opens and saves Word, Excel and PowerPoint files.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:30:00Z",
     "license": "GPL-3.0",
     "archived": false
@@ -7120,7 +7120,7 @@
     "desc": "تسجيل الصوت وتحريره على Windows وMac وLinux: قص ومزج وإزالة الضجيج ومؤثرات، للبودكاست والتعليق الصوتي.",
     "desc_de": "Audio aufnehmen und bearbeiten unter Windows, Mac und Linux: schneiden, mischen, Rauschen entfernen und Effekte – für Podcasts und Voice-over.",
     "desc_en": "Record and edit audio on Windows, Mac and Linux: cut, mix, remove noise and add effects, for podcasts and voice-overs.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:30:00Z",
     "license": "other",
     "archived": false
@@ -7141,7 +7141,7 @@
     "desc": "يحوّل الفيديو إلى MP4 أو MKV ويصغّر حجمه على Windows وMac وLinux، مع إعدادات جاهزة للهاتف والويب والأجهزة.",
     "desc_de": "Wandelt Videos unter Windows, Mac und Linux in MP4 oder MKV um und verkleinert sie, mit fertigen Voreinstellungen für Handy, Web und Geräte.",
     "desc_en": "Converts video to MP4 or MKV and shrinks file sizes on Windows, Mac and Linux, with ready-made presets for phones, the web and devices.",
-    "pushed": "2026-10-31",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:30:00Z",
     "license": "other",
     "archived": false
@@ -7179,7 +7179,7 @@
     "desc": "رسائل ومكالمات مشفّرة من طرف إلى طرف. هذا تطبيق الكمبيوتر لـ Windows وMac وLinux، ويرتبط بحسابك على الهاتف.",
     "desc_de": "Ende-zu-Ende-verschlüsselte Nachrichten und Anrufe. Das ist die Desktop-App für Windows, Mac und Linux, verknüpft mit deinem Konto auf dem Handy.",
     "desc_en": "End-to-end encrypted messages and calls. This is the desktop app for Windows, Mac and Linux, linked to your account on your phone.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:30:00Z",
     "license": "AGPL-3.0",
     "archived": false,
@@ -7199,7 +7199,7 @@
     "desc": "تطبيق ملاحظات بصيغة Markdown للكمبيوتر والهاتف: دفاتر ووسوم ومهام، مع مزامنة مشفّرة عبر خدمة تختارها.",
     "desc_de": "Notiz-App mit Markdown für Computer und Handy: Notizbücher, Tags und Aufgaben, mit verschlüsselter Synchronisierung über einen Dienst deiner Wahl.",
     "desc_en": "A Markdown note-taking app for computer and phone: notebooks, tags and to-dos, with encrypted sync through a service you choose.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:30:00Z",
     "license": "other",
     "archived": false
@@ -7218,7 +7218,7 @@
     "desc": "بديل Notion مفتوح المصدر للكمبيوتر والهاتف: صفحات وقواعد بيانات ولوحات مهام، وتبقى بياناتك عندك إن أردت.",
     "desc_de": "Open-Source-Alternative zu Notion für Computer und Handy: Seiten, Datenbanken und Kanban-Boards – und deine Daten bleiben bei dir, wenn du willst.",
     "desc_en": "An open-source Notion alternative for computer and phone: pages, databases and kanban boards, and your data stays with you if you want.",
-    "pushed": "2026-10-28",
+    "pushed": "2026-11-02",
     "added": "2026-10-26T13:30:00Z",
     "license": "AGPL-3.0",
     "archived": false
@@ -7231,7 +7231,7 @@
     "isNew": false,
     "gh": "https://github.com/upscayl/upscayl",
     "site": "https://upscayl.org",
-    "stars": "51.6k",
+    "stars": "51.7k",
     "cmd": null,
     "use": [],
     "desc": "يكبّر الصور ويحسّن دقتها بالذكاء الاصطناعي على Windows وMac وLinux، دون رفعها إلى أي خادم.",
@@ -7256,7 +7256,7 @@
     "desc": "لقطات شاشة مع أدوات تعليق فورية: أسهم ومربعات ونص وتمويه، ثم نسخ أو حفظ، على Windows وMac وLinux.",
     "desc_de": "Bildschirmfotos mit direkten Markierungswerkzeugen: Pfeile, Rahmen, Text und Verpixeln, dann kopieren oder speichern – unter Windows, Mac und Linux.",
     "desc_en": "Screenshots with instant annotation tools: arrows, boxes, text and blur, then copy or save, on Windows, Mac and Linux.",
-    "pushed": "2026-10-31",
+    "pushed": "2026-11-02",
     "added": "2026-10-26T13:30:00Z",
     "license": "GPL-3.0",
     "archived": false
@@ -7275,7 +7275,7 @@
     "desc": "خرائط تعمل بلا إنترنت على iPhone وAndroid من بيانات OpenStreetMap، للمشي وركوب الدراجة والقيادة، بلا إعلانات ولا تتبع.",
     "desc_de": "Offline-Karten für iPhone und Android auf Basis von OpenStreetMap, zum Wandern, Radfahren und Autofahren – ohne Werbung und Tracking.",
     "desc_en": "Offline maps for iPhone and Android based on OpenStreetMap, for walking, cycling and driving, with no ads or tracking.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "added": "2026-10-26T13:30:00Z",
     "license": "other",
     "archived": false
@@ -7311,7 +7311,7 @@
     "isNew": true,
     "gh": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
     "site": "https://www.npmjs.com/package/@modelcontextprotocol/server-filesystem",
-    "stars": "91.7k",
+    "stars": "91.8k",
     "cmd": "claude mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem /full/path/to/folder",
     "use": [
       "claude"
@@ -7332,7 +7332,7 @@
     "isNew": true,
     "gh": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
     "site": "https://pypi.org/project/mcp-server-fetch/",
-    "stars": "91.7k",
+    "stars": "91.8k",
     "cmd": "claude mcp add fetch -- uvx mcp-server-fetch",
     "use": [
       "claude",
@@ -7354,7 +7354,7 @@
     "isNew": true,
     "gh": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
     "site": "https://www.npmjs.com/package/@modelcontextprotocol/server-memory",
-    "stars": "91.7k",
+    "stars": "91.8k",
     "cmd": "claude mcp add memory -- npx -y @modelcontextprotocol/server-memory",
     "use": [
       "claude"
@@ -7375,7 +7375,7 @@
     "isNew": true,
     "gh": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
     "site": "https://www.npmjs.com/package/@modelcontextprotocol/server-sequential-thinking",
-    "stars": "91.7k",
+    "stars": "91.8k",
     "cmd": "claude mcp add sequential-thinking -- npx -y @modelcontextprotocol/server-sequential-thinking",
     "use": [
       "claude"
@@ -7396,7 +7396,7 @@
     "isNew": true,
     "gh": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
     "site": "https://pypi.org/project/mcp-server-git/",
-    "stars": "91.7k",
+    "stars": "91.8k",
     "cmd": "claude mcp add git -- uvx mcp-server-git",
     "use": [
       "claude",
@@ -7428,7 +7428,7 @@
     "desc_de": "Claude arbeitet direkt auf deinem Rechner: bearbeitet Dateien und Code und führt Terminalbefehle und Prozesse aus.",
     "desc_en": "Claude works directly on your computer: edits files and code and runs terminal commands and processes.",
     "added": "2026-10-26T16:00:00Z",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "MIT",
     "archived": false
   },
@@ -7494,7 +7494,7 @@
     "desc_de": "Websuche und Seitenabruf über Exa, eine Suchmaschine für KI.",
     "desc_en": "Web search and page fetching through Exa, a search engine built for AI.",
     "added": "2026-10-26T16:00:00Z",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "MIT",
     "archived": false
   },
@@ -7517,7 +7517,7 @@
     "desc_de": "Holt Inhalte von Websites als saubere Daten: eine Seite, eine ganze Website oder eine Suche.",
     "desc_en": "Turns website content into clean data: one page, a whole site or a search.",
     "added": "2026-10-26T16:00:00Z",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "MIT",
     "archived": false
   },
@@ -7659,7 +7659,7 @@
     "isNew": true,
     "gh": "https://github.com/apify/apify-mcp-server",
     "site": "https://mcp.apify.com",
-    "stars": "14.3k",
+    "stars": "14.5k",
     "cmd": "claude mcp add --transport http apify https://mcp.apify.com",
     "use": [
       "shop",
@@ -7670,7 +7670,7 @@
     "desc_de": "Tausende fertige Scraper von Apify: Daten aus Social Media, Karten, Shops und jeder Website.",
     "desc_en": "Thousands of ready-made Apify scrapers: data from social media, maps, online shops and any website.",
     "added": "2026-10-26T16:00:00Z",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "MIT",
     "archived": false
   },
@@ -7693,7 +7693,7 @@
     "desc_de": "Offizieller Figma-Server: Claude liest deine Designs mit Komponenten und Variablen und setzt sie passgenau in Code um.",
     "desc_en": "Figma's official server: Claude reads your designs with their components and variables and turns them into matching code.",
     "added": "2026-10-26T16:00:00Z",
-    "pushed": "2026-10-28",
+    "pushed": "2026-11-03",
     "license": "none",
     "archived": false
   },
@@ -7716,7 +7716,7 @@
     "desc_de": "Verbindet Claude mit deinem Supabase-Projekt: Tabellen, Abfragen und Einstellungen.",
     "desc_en": "Connects Claude to your Supabase project: tables, queries and settings.",
     "added": "2026-10-26T16:00:00Z",
-    "pushed": "2026-10-31",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false
   },
@@ -7728,7 +7728,7 @@
     "isNew": true,
     "gh": "https://github.com/neondatabase/mcp-server-neon",
     "site": null,
-    "stars": "659",
+    "stars": "660",
     "cmd": "claude mcp add --transport http neon https://mcp.neon.tech/mcp",
     "use": [
       "web",
@@ -7738,7 +7738,7 @@
     "desc_de": "Claude verwaltet Postgres-Datenbanken auf Neon: Projekte, Branches, Abfragen und Schemaänderungen.",
     "desc_en": "Claude manages Postgres databases on Neon: projects, branches, queries and schema changes.",
     "added": "2026-10-26T16:00:00Z",
-    "pushed": "2026-10-31",
+    "pushed": "2026-11-02",
     "license": "MIT",
     "archived": false
   },
@@ -7760,7 +7760,7 @@
     "desc_de": "Claude fragt MongoDB-Datenbanken ab und verwaltet sie, auch in MongoDB Atlas.",
     "desc_en": "Claude queries and manages MongoDB databases, including MongoDB Atlas.",
     "added": "2026-10-26T16:00:00Z",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false
   },
@@ -7772,7 +7772,7 @@
     "isNew": true,
     "gh": "https://github.com/motherduckdb/mcp-server-motherduck",
     "site": null,
-    "stars": "538",
+    "stars": "539",
     "cmd": "claude mcp add --scope user duckdb --transport stdio -- uvx mcp-server-motherduck --db-path :memory: --read-write --allow-switch-databases",
     "use": [
       "dashboard",
@@ -7804,7 +7804,7 @@
     "desc_de": "Claude liest Grafana-Dashboards, Datenquellen und Alerts und durchsucht Metriken und Logs.",
     "desc_en": "Claude reads Grafana dashboards, data sources and alerts, and searches metrics and logs.",
     "added": "2026-10-26T16:00:00Z",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false
   },
@@ -7828,7 +7828,7 @@
     "desc_de": "Claude nutzt deine PostHog-Daten: Dashboards, Analysen und Feature Flags, auch per SQL-Abfrage.",
     "desc_en": "Claude works with your PostHog data: dashboards, insights and feature flags, including SQL queries.",
     "added": "2026-10-26T16:00:00Z",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "other",
     "archived": false
   },
@@ -7908,7 +7908,7 @@
     "isNew": true,
     "gh": "https://github.com/vercel/next-devtools-mcp",
     "site": null,
-    "stars": "834",
+    "stars": "835",
     "cmd": "claude mcp add next-devtools npx next-devtools-mcp@latest",
     "use": [
       "web",
@@ -7961,7 +7961,7 @@
     "desc_de": "Direkter Ersatz für react-markdown, gebaut für gestreamte KI-Antworten, auch bei unvollständigem Markdown.",
     "desc_en": "A drop-in replacement for react-markdown built for streamed AI responses, even when the Markdown is incomplete.",
     "added": "2026-10-26T16:00:00Z",
-    "pushed": "2026-10-31",
+    "pushed": "2026-11-02",
     "license": "other",
     "archived": false
   },
@@ -7999,7 +7999,7 @@
     "desc_de": "Führt Windows-Programme und -Spiele unter Linux aus, jedes in einer eigenen Umgebung.",
     "desc_en": "Run Windows programs and games on Linux, each in its own environment.",
     "added": "2026-10-26T17:00:00Z",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "GPL-3.0",
     "archived": false
   },
@@ -8075,7 +8075,7 @@
     "desc_de": "Findet doppelte Dateien, ähnliche Bilder, leere Ordner und große Dateien, um Platz zu schaffen.",
     "desc_en": "Finds duplicate files, similar images, empty folders and large files to free up space.",
     "added": "2026-10-26T17:00:00Z",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-02",
     "license": "other",
     "archived": false
   },
@@ -8113,7 +8113,7 @@
     "desc_de": "Systemweite Audioeffekte über PipeWire: Equalizer, Rauschunterdrückung und besseres Mikrofon.",
     "desc_en": "System-wide audio effects through PipeWire: equalizer, noise reduction and a better microphone.",
     "added": "2026-10-26T17:00:00Z",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-02",
     "license": "GPL-3.0",
     "archived": false
   },
@@ -8170,7 +8170,7 @@
     "desc_de": "Leichte YouTube-App ohne Werbung und ohne Google-Konto: Downloads, Hintergrundwiedergabe und Popup-Player.",
     "desc_en": "A lightweight YouTube app with no ads and no Google account: downloads, background play and a popup player.",
     "added": "2026-10-26T17:00:00Z",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "GPL-3.0",
     "archived": false
   },
@@ -8182,7 +8182,7 @@
     "isNew": true,
     "gh": "https://github.com/beemdevelopment/Aegis",
     "site": "https://getaegis.app",
-    "stars": "13.4k",
+    "stars": "13.5k",
     "cmd": null,
     "use": [],
     "desc": "رموز التحقق بخطوتين في خزنة مشفّرة، مع نسخ احتياطي ونقل سهل من التطبيقات الأخرى.",
@@ -8208,7 +8208,7 @@
     "desc_de": "Thunderbird-Mail auf dem Handy: mehrere Konten in einer App mit gemeinsamem Posteingang, datenschutzfreundlich.",
     "desc_en": "Thunderbird email on your phone: several accounts in one app with a unified inbox, privacy-focused.",
     "added": "2026-10-26T17:00:00Z",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "Apache-2.0",
     "archived": false,
     "icon": "app-thunderbird/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
@@ -8247,7 +8247,7 @@
     "desc_de": "Einfacher, flexibler Podcast-Manager: Abos, Downloads und Warteschlange, ohne Konto und Tracking.",
     "desc_en": "An easy, flexible podcast manager: subscriptions, downloads and a queue, with no account or tracking.",
     "added": "2026-10-26T17:00:00Z",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-02",
     "license": "GPL-3.0",
     "archived": false
   },
@@ -8266,7 +8266,7 @@
     "desc_de": "Schnelle, private Foto- und Video-Galerie ohne Werbung und unnötige Berechtigungen.",
     "desc_en": "A fast, private photo and video gallery with no ads and no unnecessary permissions.",
     "added": "2026-10-26T17:00:00Z",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "GPL-3.0",
     "archived": false
   },
@@ -8297,7 +8297,7 @@
     "isNew": true,
     "gh": "https://github.com/ImranR98/Obtainium",
     "site": null,
-    "stars": "21.1k",
+    "stars": "21.2k",
     "cmd": null,
     "use": [],
     "desc": "يحدّث تطبيقاتك مباشرة من مصدرها (GitHub وغيره) دون متجر.",
@@ -8393,7 +8393,7 @@
     "isNew": true,
     "gh": "https://github.com/WordPress/openverse",
     "site": "https://openverse.org",
-    "stars": "471",
+    "stars": "485",
     "cmd": null,
     "use": [
       "video",
@@ -8402,7 +8402,7 @@
     "desc": "محرك بحث من WordPress في الصور والصوتيات المرخّصة ترخيصًا مفتوحًا: مؤثرات صوتية وموسيقى وصور. تفلتر النتائج بالرخصة ونوع الاستخدام، وتنسخ بيانات نسب العمل من كل ملف. رخصة كل ملف تأتي من مصدره، فاقرأها قبل الاستخدام التجاري.",
     "desc_de": "Suchmaschine von WordPress für offen lizenzierte Bilder und Audiodateien: Soundeffekte, Musik und Fotos. Ergebnisse lassen sich nach Lizenz und Nutzungsart filtern, die Namensnennung kann pro Datei kopiert werden. Die Lizenz jeder Datei stammt von der Quelle; lies sie vor kommerzieller Nutzung.",
     "desc_en": "WordPress's search engine for openly licensed images and audio: sound effects, music and photos. Filter results by license and permitted use, and copy the attribution for each file. Each file's license comes from its source, so read it before commercial use.",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "MIT",
     "archived": false,
     "added": "2026-10-26T18:00:00Z"
@@ -8415,7 +8415,7 @@
     "isNew": true,
     "gh": "https://github.com/Leonxlnx/earshot",
     "site": null,
-    "stars": "3.5k",
+    "stars": "3.6k",
     "cmd": "git clone https://github.com/Leonxlnx/earshot && cd earshot\npython -m venv .venv\n.venv/bin/python -m pip install torch --index-url https://download.pytorch.org/whl/cpu\n.venv/bin/python -m pip install -e \".[mcp,llm,dev]\"\nclaude mcp add earshot --scope user -e EARSHOT_THREADS=3 -- /full/path/to/earshot/.venv/bin/python -m earshot mcp",
     "use": [
       "video",
@@ -8438,14 +8438,14 @@
     "isNew": true,
     "gh": "https://github.com/opennavo/OpenNavo",
     "site": "https://opennavo.com/",
-    "stars": "84",
+    "stars": "86",
     "cmd": null,
     "use": [],
     "desc": "متجر تطبيقات لـ Mac فوق Homebrew: تتصفح أكثر من 7,700 تطبيق مع وصفها وملاحظات إصداراتها، وتثبّتها وتحدّثها بنقرة، مع تنظيف بقايا التطبيقات ومراقب نظام في شريط القوائم.",
     "desc_de": "App-Store-Oberfläche für Homebrew auf dem Mac: über 7.700 Apps mit Beschreibung und Release Notes durchsuchen, per Klick installieren und aktualisieren, dazu Aufräumen von App-Resten und ein Systemmonitor in der Menüleiste.",
     "desc_en": "An app-store interface for Homebrew on Mac: browse over 7,700 apps with descriptions and release notes, install and update in one click, plus cleanup of app leftovers and a system monitor in the menu bar.",
     "added": "2026-10-28T08:00:00Z",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "GPL-3.0",
     "archived": false
   },
@@ -8457,14 +8457,14 @@
     "isNew": true,
     "gh": "https://github.com/InukaAsith/TwinDesk",
     "site": null,
-    "stars": "2.9k",
+    "stars": "3.1k",
     "cmd": null,
     "use": [],
     "desc": "يجعل أجهزتك مكتبًا واحدًا: مشاركة الشاشة والملفات والحافظة والإشعارات والفأرة ولوحة المفاتيح بين Mac وWindows وLinux وAndroid. بلا حساب ولا سحابة ولا تتبع.",
     "desc_de": "Macht deine Geräte zu einem Schreibtisch: Bildschirm, Dateien, Zwischenablage, Benachrichtigungen, Maus und Tastatur werden zwischen Mac, Windows, Linux und Android geteilt. Ohne Konto, ohne Cloud, ohne Tracking.",
     "desc_en": "Turns your devices into one desk: screens, files, clipboard, notifications, mouse and keyboard shared between Mac, Windows, Linux and Android. No account, no cloud, no tracking.",
     "added": "2026-10-28T08:00:00Z",
-    "pushed": "2026-11-01",
+    "pushed": "2026-11-02",
     "license": "GPL-3.0",
     "archived": false
   },
@@ -8476,7 +8476,7 @@
     "isNew": true,
     "gh": "https://github.com/armanlife/firefox-vpn-client",
     "site": null,
-    "stars": "598",
+    "stars": "618",
     "cmd": null,
     "use": [],
     "desc": "عميل VPN مجاني ومفتوح المصدر لـ Android وWindows وmacOS وLinux، يمرّر حركتك عبر خوادم Mozilla بحساب Firefox (50 جيجابايت مجانًا شهريًا حسب صفحته). تنبيه: مطوّره شخص مستقل وليس Mozilla، فاقرأ الشروط وقرر بنفسك قبل الاعتماد عليه.",
@@ -8495,14 +8495,14 @@
     "isNew": true,
     "gh": "https://github.com/omlahore/RemoveMacAI",
     "site": "https://omlahore.github.io/RemoveMacAI/",
-    "stars": "5.7k",
+    "stars": "5.8k",
     "cmd": "brew install omlahore/tap/removemacai",
     "use": [],
     "desc": "ينظّف macOS مما لا تحتاجه: يعطّل ميزات Apple Intelligence ويحذف نماذجها ويمنع إعادة تنزيلها، ويوقف التحليلات والإعلانات المخصصة والنوافذ المزعجة، ويطفئ محدّثات التطبيقات الأخرى في الخلفية، ويكشف ما يمكن حذفه لاستعادة مساحة. يعرض كل تغيير قبل تطبيقه ويمكن التراجع عن كل تغيير. التطبيق غير موثّق من Apple (not notarized)، فتفتحه أول مرة من إعدادات الخصوصية والأمان.",
     "desc_de": "Räumt macOS auf: schaltet Apple-Intelligence-Funktionen ab, löscht ihre Modelle und blockiert das erneute Laden, stoppt Analyse, personalisierte Werbung und lästige Hinweise, deaktiviert Hintergrund-Updater anderer Apps und zeigt, was sich zum Platzgewinnen löschen lässt. Jede Änderung wird vorher angezeigt und lässt sich rückgängig machen. Die App ist nicht von Apple notarisiert; beim ersten Öffnen bestätigst du sie in den Datenschutz-Einstellungen.",
     "desc_en": "Debloats macOS: turns off Apple Intelligence features, deletes their models and blocks re-downloads, stops analytics, personalized ads and pop-ups, switches off other apps' background updaters, and shows what you can delete to get space back. Every change is shown before it happens and can be undone. The app isn't notarized by Apple, so you approve it in Privacy & Security the first time you open it.",
     "added": "2026-10-30T08:00:00Z",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "MIT",
     "archived": false
   },
@@ -8514,7 +8514,7 @@
     "isNew": true,
     "gh": "https://github.com/debpalash/VoiceStudio",
     "site": "https://voicestudio.sh/",
-    "stars": "98.6k",
+    "stars": "99.6k",
     "cmd": null,
     "use": [
       "video"
@@ -8523,7 +8523,7 @@
     "desc_de": "KI-Sprachstudio auf deinem Gerät: Stimmen klonen, eine Stimme per Textbeschreibung entwerfen, Videos in andere Sprachen synchronisieren, Sprache und Text ineinander umwandeln und Bücher einsprechen. Laut Projekt 646 Sprachen, je nach Modell und Funktion unterschiedlich. Läuft auf Mac, Windows und Linux, auf Android und iPhone als Vorschau. Klone nur Stimmen mit Einwilligung der Person.",
     "desc_en": "An AI voice studio that runs on your own device: clone voices, design a voice from a text description, dub videos into other languages, convert speech to text and back, and narrate books. The project claims 646 languages, and support varies by model and feature. Runs on Mac, Windows and Linux, with Android and iPhone in preview. Clone a voice only with its owner's consent.",
     "added": "2026-10-30T09:00:00Z",
-    "pushed": "2026-11-02",
+    "pushed": "2026-11-03",
     "license": "AGPL-3.0",
     "archived": false
   },
@@ -8540,8 +8540,11 @@
     "desc_de": "Native SwiftUI-Oberfläche für das Aufräumtool Mole auf dem Mac: leert Caches, deinstalliert Apps samt Resten, zeigt eine Karte dessen, was deine Platte füllt, und überwacht den Zustand deines Macs, ohne Konto, Werbung oder Tracking. Benötigt macOS 26 oder neuer auf Apple Silicon. Community-Projekt ohne Verbindung zu Mole; die App ist nur ad-hoc signiert, nicht von Apple notarisiert, daher blockiert macOS sie beim ersten Öffnen und du musst sie wie auf der Projektseite beschrieben freigeben.",
     "desc_en": "A native SwiftUI app for the Mole cleaning tool on Mac: clears caches, uninstalls apps with their leftovers, maps what fills your disk and watches your Mac's health, with no account, ads or tracking. Needs macOS 26 or later on Apple silicon. A community project not affiliated with Mole; the app is ad-hoc signed, not notarized by Apple, so macOS blocks it the first time and you unblock it as its page describes.",
     "isNew": true,
-    "stars": null,
-    "added": "2026-11-02T08:00:00Z"
+    "stars": "59",
+    "added": "2026-11-02T08:00:00Z",
+    "pushed": "2026-11-03",
+    "license": "GPL-3.0",
+    "archived": false
   },
   {
     "slug": "bridgeplay",
@@ -8556,8 +8559,11 @@
     "desc_de": "Spielt Windows-only-Steam-Spiele auf Apple-Silicon-Macs (M1 oder neuer) direkt im Steam, das du schon nutzt: gleiche Bibliothek, gleicher Play-Button, über Wine und Apples Grafikübersetzung. Die App ist von Apple notarisiert. Es ist ein Fork von NotProton; der Entwickler nennt es ein Hobbyprojekt mit Support nach Kräften. Achtung: Valve unterstützt es nicht, das Verändern von Steam kann gegen die Abonnentenvereinbarung verstoßen, und Spiele mit Anti-Cheat laufen eventuell nicht. Nutzung auf eigene Gefahr.",
     "desc_en": "Runs Windows-only Steam games on Apple Silicon Macs (M1 or later) inside the Steam you already use: same library, same Play button, through Wine and Apple's graphics translation. The app is notarized by Apple. It's a fork of NotProton, and its developer calls it a hobby project with best-effort support. Note: Valve doesn't support it, modifying Steam may go against the Subscriber Agreement, and games with anti-cheat may not run. Use at your own risk.",
     "isNew": true,
-    "stars": null,
-    "added": "2026-11-02T08:00:00Z"
+    "stars": "826",
+    "added": "2026-11-02T08:00:00Z",
+    "pushed": "2026-11-03",
+    "license": "GPL-3.0",
+    "archived": false
   },
   {
     "slug": "bang-motion",
@@ -8575,8 +8581,11 @@
     "desc_de": "Ein Skill, der deinen Coding-Agenten zum Motion Designer macht: Intros, Produktdemos, kinetische Typografie und Erklärvideos in einer einzigen index.html, die wie ein Video läuft, nicht wie Folien. Der Stil wird aus deiner Marke abgeleitet und die Struktur aus einer Auswahl von Konzepten gewählt, damit Projekte nicht gleich aussehen. Funktioniert mit Claude Code, Codex, Gemini CLI und Cursor, Lizenz MIT.",
     "desc_en": "A skill that turns your coding agent into a motion designer: openers, product demos, kinetic typography and explainers in a single index.html that plays like video, not slides. The style is derived from your brand and the structure chosen from a menu of concepts, so projects don't look alike. Works with Claude Code, Codex, Gemini CLI and Cursor, MIT licensed.",
     "isNew": true,
-    "stars": null,
-    "added": "2026-11-02T08:00:00Z"
+    "stars": "1k",
+    "added": "2026-11-02T08:00:00Z",
+    "pushed": "2026-09-15",
+    "license": "MIT",
+    "archived": false
   },
   {
     "slug": "console-skill",
@@ -8586,12 +8595,15 @@
     "isNew": true,
     "gh": "https://github.com/Jakeschincariol/console-skill",
     "site": null,
-    "stars": null,
+    "stars": "251",
     "cmd": "/plugin marketplace add Jakeschincariol/console-skill\n/plugin install console-skill@console-skill",
     "use": [],
     "desc": "إحدى عشرة مهارة تقود Claude لنقل ألعاب PlayStation 2 التي تملكها إلى الكمبيوتر: هندسة عكسية للكود، وإعادة بناء الرسوميات والصوت والخلفية، وربط أي يد تحكم، ثم تعديل اللعبة بوصف نصي. ليس محاكيًا: يترجم الكود إلى برنامج أصلي بالاعتماد على أداة PS2Recomp. يلزمك قرص لعبتك الأصلي وتفريغه بنفسك، ولا يوفر ملفات ISO ولا BIOS. القانون في نسخ الألعاب وتعديلها يختلف بين الدول، فالمسؤولية عليك.",
     "desc_de": "Elf Skills, mit denen Claude PlayStation-2-Spiele, die du besitzt, auf den PC portiert: Reverse Engineering des Codes, Neuaufbau von Grafik, Sound und Backend, beliebige Controller, danach Mods per Textbeschreibung. Kein Emulator: der Code wird mit dem Tool PS2Recomp in ein natives Programm übersetzt. Du brauchst deine eigene Spiel-Disc und musst sie selbst auslesen; keine ISOs, kein BIOS. Die Rechtslage beim Kopieren und Verändern von Spielen unterscheidet sich je nach Land, die Verantwortung liegt bei dir.",
     "desc_en": "Eleven skills that guide Claude in porting PlayStation 2 games you own to PC: reverse engineering the code, rebuilding the graphics, sound and backend, any controller, then modding the game from a plain-text description. Not an emulator: it translates the code into a native program using the PS2Recomp tool. You need your own game disc and must dump it yourself; no ISOs, no BIOS. The law on copying and modifying games differs by country, so the responsibility is yours.",
-    "added": "2026-11-03T08:00:00Z"
+    "added": "2026-11-03T08:00:00Z",
+    "pushed": "2026-10-22",
+    "license": "MIT",
+    "archived": false
   }
 ]

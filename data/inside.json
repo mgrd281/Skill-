@@ -1512,6 +1512,15 @@
    }
   ]
  },
+ "bang-motion": {
+  "n": 1,
+  "skills": [
+   {
+    "name": "bang-motion",
+    "desc": "Membangun motion graphic sinematik di browser (promo video, opener, intro, bumper, kinetic typography, explainer/video penjelasan bergambar 16:9 atau 9:16) memakai HTML + CSS + GSAP (+ Three.js bila perlu), dengan hasil…"
+   }
+  ]
+ },
  "baoyu-skills": {
   "n": 22,
   "skills": [
@@ -2152,15 +2161,15 @@
   "skills": [
    {
     "name": "blog",
-    "desc": "Full-lifecycle blog engine with 31 sub-skills, 12 content templates, 5-category 100-point scoring, and 5 specialized agents. Routes user requests to the right sub-skill: writing, rewriting, analysis, outlines, audits,…"
+    "desc": "Full-lifecycle blog engine with 31 sub-skills, 12 templates, 100-point scoring, and 5 agents. Routes requests to the right sub-skill: writing, rewriting, analysis, outlines, audits, schema, charts, images, repurposing,…"
    },
    {
     "name": "blog-analyze",
-    "desc": "Audit and score blog posts on a 5-category 100-point scoring system covering content quality, SEO optimization, E-E-A-T signals, technical elements, and AI citation readiness. Includes AI content detection (burstiness,…"
+    "desc": "Score one blog post (or a folder of posts) on a 5-category 100-point scale covering content quality, SEO, E-E-A-T, technical elements, and AI citation readiness. Runs the deterministic analyzer first, then adds judgment…"
    },
    {
     "name": "blog-audio",
-    "desc": "Generate audio narration of blog posts using Google Gemini TTS. Supports summary narration, full article read-aloud, and two-speaker podcast/dialogue mode with 30 voice options. Outputs MP3 with HTML5 audio embed code.…"
+    "desc": "Paid Gemini TTS audio for a finished blog post: summary, full read-aloud, or two-speaker dialogue, with an MP3 and an HTML5 embed. Asks for explicit consent before the first paid call. Runs only on an explicit request:…"
    },
    {
     "name": "blog-audit",
@@ -2172,19 +2181,19 @@
    },
    {
     "name": "blog-brief",
-    "desc": "Generate detailed content briefs for blog posts with target keywords, content outlines, competitive analysis, recommended statistics, image and chart suggestions, word count targets, internal linking architecture,…"
+    "desc": "Create a content brief for ONE planned post: target and secondary keywords, search intent, template choice, competitor gaps from the live SERP, sourced statistics to include, section plan, internal-link targets, and…"
    },
    {
     "name": "blog-calendar",
-    "desc": "Generate editorial calendars for blogs with topic clusters, publishing schedules, content decay detection, freshness update plans, seasonal opportunities, content mix formula, template integration, and distribution…"
+    "desc": "Build a dated monthly or quarterly editorial calendar: which posts to publish or review when, content mix, templates, distribution timing, and a material-change review queue. Use when the user says \"editorial calendar\",…"
    },
    {
     "name": "blog-cannibalization",
-    "desc": "Detect keyword cannibalization across blog posts by extracting primary keywords from titles and headings, clustering semantically similar targets, and flagging posts competing for the same search intent. Supports…"
+    "desc": "Detect keyword cannibalization across blog posts by extracting primary keywords from titles and headings, clustering semantically similar targets, and flagging posts competing for the same search intent. Supports a free…"
    },
    {
     "name": "blog-chart",
-    "desc": "Generate dark-mode-compatible inline SVG data visualization charts for blog posts. Supports horizontal bar, grouped bar, donut, line, lollipop, area, and radar charts with automatic platform detection (HTML vs JSX/MDX).…"
+    "desc": "Internal capability, not user-invocable: the orchestrator calls it while running blog-write or blog-rewrite to turn research data into dark-mode compatible inline SVG charts (horizontal bar, grouped bar, donut, line,…"
    },
    {
     "name": "blog-cluster",
@@ -2192,7 +2201,7 @@
    },
    {
     "name": "blog-decay",
-    "desc": "Detect content decay from Google Search Console exports by comparing current and previous page performance, flagging quarter-over-quarter traffic drops, dropped pages, and refresh, consolidate, prune, or query-shift…"
+    "desc": "Compare two Google Search Console page exports (current vs previous period) to flag pages whose clicks or impressions fell by a chosen threshold, with a triage hint (refresh, query shift, consolidate, prune). The 20%…"
    },
    {
     "name": "blog-discourse",
@@ -2204,27 +2213,27 @@
    },
    {
     "name": "blog-flow",
-    "desc": "FLOW framework integration for bloggers. Evidence-led content workflow using the Find, Optimize, Win loop with stage-specific AI prompts from the FLOW knowledge base (30 blog-applicable prompts, CC BY 4.0). Use when…"
+    "desc": "FLOW framework integration for bloggers. Evidence-led content workflow using the Find, Optimize, Win loop with stage-specific AI prompts from the FLOW knowledge base (30 blog-applicable prompts, adapted from FLOW under…"
    },
    {
     "name": "blog-geo",
-    "desc": "AI citation readiness audit as part of SEO, covering classic Google search and AI search surfaces together. Use whenever the user wants their content to rank or be cited in ChatGPT, Perplexity, Claude, Gemini, Copilot,…"
+    "desc": "Audit one blog post file for AI-citation readiness (self-contained, sourced passages, entity clarity, structure, crawler access) and score it with an internal 0-100 heuristic plus per-surface notes for AI Overviews, AI…"
    },
    {
     "name": "blog-google",
-    "desc": "Google API integration for blog performance: PageSpeed Insights, CrUX Core Web Vitals with 25-week history, Search Console performance, URL Inspection, Indexing API, GA4 organic traffic, NLP entity analysis for E-E-A-T,…"
+    "desc": "Credentialed Google API calls for a blog: PageSpeed Insights, CrUX history, Search Console performance and URL Inspection, GA4 organic traffic, Cloud NLP entities, YouTube video search, Google Ads Keyword Planner, and…"
    },
    {
     "name": "blog-image",
-    "desc": "AI image generation and editing for blog content powered by Gemini via MCP. Claude acts as Creative Director - interpreting intent, selecting domain expertise, constructing optimized 6-component prompts (Subject +…"
+    "desc": "Paid Gemini image generation for blog heroes, inline illustrations, and OG cards (direct API by default, optional MCP for edits). Asks for explicit consent before the first paid call. Runs only on an explicit request:…"
    },
    {
     "name": "blog-locale-audit",
-    "desc": "Audit a directory of multilingual blog content for completeness, consistency, hreflang correctness, meta-tag parity, and freshness. Builds a translation coverage matrix, flags stale translations, validates hreflang and…"
+    "desc": "Read-only audit of a folder of existing multilingual blog posts: translation coverage, parity, hreflang and canonical consistency, meta-tag parity, and stale translations, with a prioritized report. Use when the user…"
    },
    {
     "name": "blog-localize",
-    "desc": "Cultural adaptation for translated content. Run AFTER blog-translate completes. Adjusts brand examples, CTAs, legal references, and formality for the target market (German, French, Japanese, Spanish, etc.). Deep…"
+    "desc": "Deep cultural adaptation of an already translated blog post for one target market: local examples, CTAs, legal references, statistic sources, and formality (Sie/du, tu/vous). Built-in profiles for DACH, Francophone,…"
    },
    {
     "name": "blog-multilingual",
@@ -2232,7 +2241,7 @@
    },
    {
     "name": "blog-notebooklm",
-    "desc": "Query Google NotebookLM notebooks for source-grounded, citation-backed answers from user-uploaded documents. Manages notebook library, handles Google authentication, and supports smart discovery. Works standalone via…"
+    "desc": "Query a user's Gemini Notebook (formerly NotebookLM) for source-grounded answers through a logged-in browser session on their Google account. Uses the account's usage limits and writes browser state. Runs only on an…"
    },
    {
     "name": "blog-outline",
@@ -2244,31 +2253,31 @@
    },
    {
     "name": "blog-repurpose",
-    "desc": "Repurpose blog posts for social media, email, video, podcast, and community channels. Generates Twitter/X threads, LinkedIn posts and articles, Threads, Bluesky, TikTok, Instagram, YouTube Shorts and long-form scripts,…"
+    "desc": "Turn an existing blog post into draft text for other channels: X threads, LinkedIn posts, Threads/Bluesky, short-video scripts, YouTube scripts, Reddit posts, newsletter excerpts, podcast scripts. Saves drafts to files;…"
    },
    {
     "name": "blog-rewrite",
-    "desc": "Rewrite and optimize existing blog posts for Google SEO (May 2026 Core Update, March 2026 core/spam context, June 2026 spam context, E-E-A-T) and AI citation visibility as one SEO discipline. Full rewrite for both…"
+    "desc": "Rewrite and optimize existing blog posts for Google SEO (E-E-A-T, helpful content) and AI citation visibility as one SEO discipline. For AI-citation-only audit (no Google work), use blog-geo instead. Replaces fabricated…"
    },
    {
     "name": "blog-schema",
-    "desc": "Generate complete JSON-LD schema markup for blog posts with Article/BlogPosting, Person, Organization, BreadcrumbList, ImageObject, and optional FAQPage. Validates against Google requirements and warns about deprecated…"
+    "desc": "Generate JSON-LD for ONE blog post (BlogPosting with Person, Organization, BreadcrumbList, ImageObject, VideoObject; FAQPage only as optional entity markup) in a single @graph, and check it against Google's current…"
    },
    {
     "name": "blog-seo-check",
-    "desc": "Post-writing SEO validation with pass/fail checklist covering title tag length and keyword placement, meta description quality, heading hierarchy and keyword density, internal/external link audit with anchor text…"
+    "desc": "Post-writing SEO validation with pass/fail checklist covering title tag clarity and uniqueness, meta description quality, heading hierarchy, internal/external link audit with anchor text analysis, canonical URL…"
    },
    {
     "name": "blog-strategy",
-    "desc": "Blog strategy development including topic cluster architecture with hub-and-spoke design, audience mapping, competitive landscape analysis, AI citation surface strategy across ChatGPT/Perplexity/AI Overviews,…"
+    "desc": "Build a blog-level strategy for a niche or business: audience segments, 3-5 content pillars with hub-and-spoke clusters, competitive gaps, measurement plan, and a 90-day roadmap. Use when the user says \"blog strategy\",…"
    },
    {
     "name": "blog-style",
-    "desc": "Learn author writing style from 5 to 10 existing blog posts and generate a voice profile for /blog style learn, VOICE.md, blog-persona, and blog-write when users ask to infer tone, analyze author voice, learn style, or…"
+    "desc": "Measure writing-style statistics (sentence length, vocabulary, transitions, phrasing) from 5 to 10 posts you or your client wrote, and produce a voice profile for VOICE.md, blog-persona, and blog-write. Use for \"learn…"
    },
    {
     "name": "blog-taxonomy",
-    "desc": "Extract, suggest, and sync tags and categories for blog posts across all major CMS platforms. Supports WordPress REST API, Shopify GraphQL, Ghost Content API, Strapi REST/GraphQL, and Sanity GROQ. Generates tag…"
+    "desc": "Suggest tags and categories for a blog post from its content, audit a site's tag and category health, and, only after the user approves a shown plan, sync tags and categories to WordPress, Shopify, Ghost, Strapi, or…"
    },
    {
     "name": "blog-translate",
@@ -2276,7 +2285,7 @@
    },
    {
     "name": "blog-write",
-    "desc": "Write new blog articles from scratch optimized for Google rankings and AI citations. Generates full articles with template selection, answer-first formatting, Key Takeaways summary box, information gain markers,…"
+    "desc": "Write a new blog article from scratch for Google rankings and AI citations, then take it through the delivery gates. Generates the full article with template selection, answer-first formatting, Key Takeaways box,…"
    },
    {
     "name": "claude-blog-brain",
@@ -2857,6 +2866,55 @@
    }
   ]
  },
+ "console-skill": {
+  "n": 11,
+  "skills": [
+   {
+    "name": "console-anywhere",
+    "desc": "Play Anywhere. Builds the port for Windows, Mac, Linux, Steam Deck, Android and PS Vita and packages it without any game files inside. doctor checks this machine's tools for a target and prints the exact install command…"
+   },
+   {
+    "name": "console-backend",
+    "desc": "Backend Engineer. Builds the engine room the recompiled game runs on: syscalls, kernel stubs, file and disc I/O, the IOP. Reads PS2Recomp runtime logs and turns every \"Unimplemented PS2 stub\", \"[Syscall TODO]\", missing…"
+   },
+   {
+    "name": "console-controller",
+    "desc": "Controller Mapper. Hooks the game up to any controller: DualSense, Xbox, Switch Pro, keyboard or touch, remapped how you like. Reads a mapping in console/controls.json (a layout preset plus per-button overrides, radial…"
+   },
+   {
+    "name": "console-graphics",
+    "desc": "Graphics Artist. Rebuilds the graphics: dumps every texture, lets you repaint or replace them with your own art, finds the widescreen fix. Converts PS2 TIM2 textures (.tm2, 32/24/16-bit and 8/4-bit indexed) from the…"
+   },
+   {
+    "name": "console-levels",
+    "desc": "Level Designer. Maps the disc's data files, unpacks the archives the levels live in, and swaps in your edits. Inventories an extracted PS2 disc (size, type by magic, entropy, a table-of-contents guess with a confidence…"
+   },
+   {
+    "name": "console-mod",
+    "desc": "Mod Maker. Describe any change in plain English and Claude builds it into the game: patches, cheats, new behaviour, as code that never touches the original files. Ports PCSX2 .pnach patches to the PS2Recomp port (code…"
+   },
+   {
+    "name": "console-physics",
+    "desc": "Physics Tuner. Finds the numbers that decide how the game moves (speed, gravity, grip, jump height, frame rate) and tunes them. Scans the user's own game ELF for a float32 value stored in data or built in code (lui, ori…"
+   },
+   {
+    "name": "console-reverse",
+    "desc": "Reverse Engineer. Opens your own disc image, finds the game's code and maps how it works: the boot ELF, every function, the design doc. Drives the whole port and is the entry point of the Console pack. Reads ISO 9660…"
+   },
+   {
+    "name": "console-saves",
+    "desc": "Save Manager. Brings your old memory card saves over, backs them up and syncs them to the cloud so you continue on any device. Reads PS2 memory card images (PCSX2 .ps2 and .mcd, raw 8 MB dumps, with or without ECC) and…"
+   },
+   {
+    "name": "console-sound",
+    "desc": "Sound Designer. Rips the music and sound effects and puts your own tracks back in. Decodes PS2 VAG files and raw SPU2 ADPCM from sound banks (.bd) to WAV, finds VAGs hidden inside archives and disc files, and encodes…"
+   },
+   {
+    "name": "console-tester",
+    "desc": "Playtester. Runs the port again and again, reads every crash, ranks what to fix next and checks nothing broke. run.py starts ps2EntryRunner with your game's ELF under a hard timeout, kills the whole process tree, keeps…"
+   }
+  ]
+ },
  "context-engineering-skills": {
   "n": 19,
   "skills": [
@@ -3389,7 +3447,7 @@
   ]
  },
  "firebase-agent-skills": {
-  "n": 13,
+  "n": 14,
   "skills": [
    {
     "name": "extension-to-functions-codebase",
@@ -3398,6 +3456,10 @@
    {
     "name": "firebase-ai-logic-basics",
     "desc": "Integrates Firebase AI Logic (formerly Vertex AI for Firebase) into mobile and web apps (Android, iOS, Web, and Flutter) to call Gemini models from client code. Use when provisioning or initializing Firebase AI Logic,…"
+   },
+   {
+    "name": "firebase-analytics",
+    "desc": "Comprehensive guide for Google Analytics for Firebase (GA4F), including base setup, SDK initialization, screen tracking, and event logging on Android and iOS. Use this skill when setting up Google Analytics, adding the…"
    },
    {
     "name": "firebase-app-hosting-basics",
@@ -4292,7 +4354,7 @@
   ]
  },
  "neon-agent-skills": {
-  "n": 10,
+  "n": 8,
   "skills": [
    {
     "name": "neon",
@@ -4316,15 +4378,7 @@
    },
    {
     "name": "neon-postgres",
-    "desc": "Guides and best practices for working with Lakebase Postgres on Neon: connections, pooled vs direct, schema migrations, branching, autoscaling, scale-to-zero, instant restore, read replicas, IP allow lists, logical…"
-   },
-   {
-    "name": "neon-postgres-branches",
-    "desc": "Choose and create the right Neon branch type for testing and development. Use when users ask about Neon branching, migration testing with real data, isolated test environments, schema-only branch workflows for sensitive…"
-   },
-   {
-    "name": "neon-postgres-egress-optimizer",
-    "desc": "Diagnose and fix excessive Postgres egress (network data transfer) in a codebase. Use when a user mentions high database bills, unexpected data transfer costs, network transfer charges, egress spikes, \"why is my Neon…"
+    "desc": "Guides and best practices for working with Lakebase Postgres on Neon: connections, pooled vs direct, schema migrations, branching (including schema-only, reset-from-parent, and branch-per-PR workflows), autoscaling,…"
    },
    {
     "name": "neon-realtime",
@@ -6797,7 +6851,7 @@
   ]
  },
  "vercel-plugin": {
-  "n": 45,
+  "n": 46,
   "skills": [
    {
     "name": "access-protected-vercel-deployment",
@@ -6958,6 +7012,10 @@
    {
     "name": "vercel-sandbox",
     "desc": "Vercel Sandbox guidance — ephemeral Firecracker microVMs for running untrusted code safely. Supports AI agents, code generation, and experimentation. Use when executing user-generated or AI-generated code in isolation."
+   },
+   {
+    "name": "vercel-schedules",
+    "desc": "Vercel Schedules guidance — run a private function, route, or Vercel Queues topic on a cron cadence or once at a set time. Covers static schedules in vercel.json, dynamic per-user schedules with @vercel/schedules,…"
    },
    {
     "name": "vercel-services",
