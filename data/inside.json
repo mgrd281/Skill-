@@ -154,7 +154,7 @@
   ]
  },
  "ai-sdk-skill": {
-  "n": 13,
+  "n": 12,
   "skills": [
    {
     "name": "add-function-examples",
@@ -183,10 +183,6 @@
    {
     "name": "develop-ai-functions-example",
     "desc": "Develop examples for AI SDK functions. Use when creating, running, or modifying examples under examples/ai-functions/src to validate provider support, demonstrate features, or create test fixtures."
-   },
-   {
-    "name": "edit-package-readme",
-    "desc": "Create or edit package README.md files in the AI SDK monorepo."
    },
    {
     "name": "list-npm-package-content",
@@ -231,7 +227,7 @@
    },
    {
     "name": "android-intent-security",
-    "desc": "Best practices for Android Intent security. Use this skill when auditing"
+    "desc": "Audits, detects, and remediates Android Intent and component security"
    },
    {
     "name": "android-permissions-security",
@@ -1399,7 +1395,7 @@
   ]
  },
  "aws-agent-toolkit": {
-  "n": 25,
+  "n": 26,
   "skills": [
    {
     "name": "amazon-bedrock",
@@ -1450,6 +1446,10 @@
     "desc": "Provides verified corrections for IAM behaviors that AI agents frequently get wrong — policy evaluation edge cases, trust policy gotchas, STS session limits, Organizations quirks, and SAML/MFA specifics. Also provides…"
    },
    {
+    "name": "aws-investigation",
+    "desc": "Investigates what is happening in an AWS account from evidence already recorded there. Not for capturing new data from running code (snapshots of function arguments on a live service, Dynamic Instrumentation), questions…"
+   },
+   {
     "name": "aws-messaging-and-streaming",
     "desc": "Guides general use of AWS messaging and streaming services. Covers Amazon SQS, Amazon SNS, Amazon EventBridge, Amazon MQ, Amazon Kinesis Data Streams, Amazon Data Firehose, Amazon Managed Service for Apache Flink, and…"
    },
@@ -1483,7 +1483,7 @@
    },
    {
     "name": "aws-serverless",
-    "desc": "Routes serverless requests to a compute form factor and the skill that owns it. Applies first to Lambda, API Gateway, EventBridge, Step Functions and event-driven work while the compute, orchestration or integration…"
+    "desc": "Routes serverless requests to a compute form factor and the skill that owns it. Applies to Lambda, API Gateway, EventBridge, Step Functions and event-driven work while the compute, orchestration or integration choice is…"
    },
    {
     "name": "aws-storage",
@@ -1851,7 +1851,7 @@
    },
    {
     "name": "canva-resize-for-social-media",
-    "desc": "Resize a Canva design into multiple social media formats (Facebook post, Facebook story, Instagram post, Instagram story, LinkedIn post). Use this skill when users want to resize Canva designs specifically for multiple…"
+    "desc": "Create channel-ready variants of an existing Canva campaign design. Use when users ask to resize or adapt one campaign for multiple social platforms, produce variants for each channel, turn landscape creative into…"
    },
    {
     "name": "canva-translate-design",
@@ -1869,8 +1869,12 @@
   ]
  },
  "capacitor-skills": {
-  "n": 31,
+  "n": 32,
   "skills": [
+   {
+    "name": "capacitor-android-dex-optimization",
+    "desc": "Guides the agent through enabling R8 in a Capacitor Android app so that it meets the Google Play DEX code optimization requirement (at least 25% obfuscation, optimization and shrinking from February 2027 for apps with…"
+   },
    {
     "name": "capacitor-angular",
     "desc": "Guides the agent through Angular-specific patterns for Capacitor app development. Covers project structure, adding Capacitor to Angular projects, using Capacitor plugins in Angular services and components, NgZone…"
@@ -2801,7 +2805,7 @@
    },
    {
     "name": "clerk-cli",
-    "desc": "Operate the Clerk CLI (`clerk` binary) for authentication, user/org/session management, impersonation, local webhook testing, deploy verification, instance config, env keys, feature toggles, and any Clerk Backend,…"
+    "desc": "Operate the Clerk CLI (`clerk` binary) for authentication, user/org/session management, impersonation, local webhook testing, deploy verification, instance config, security audits, env keys, feature toggles, and any…"
    },
    {
     "name": "clerk-custom-ui",
@@ -3288,11 +3292,19 @@
   ]
  },
  "fal-ai-skills": {
-  "n": 17,
+  "n": 36,
   "skills": [
+   {
+    "name": "branded-graphics",
+    "desc": "Create finished static branded images with original logos, exact copy and verified dimensions. Use for banners, covers, ads and brand cards."
+   },
    {
     "name": "character-design",
     "desc": "Build consistent character designs and character media with genmedia. Use this for original characters, reference sheets, expression sheets, outfit variations, identity-preserving edits, and character-to-video workflows."
+   },
+   {
+    "name": "character-sheet",
+    "desc": "Create one character turnaround or expression reference sheet in a single image. Use for front, side and back design views; scene storyboards use storytelling."
    },
    {
     "name": "cinematography",
@@ -3300,23 +3312,39 @@
    },
    {
     "name": "commercial",
-    "desc": "Plan and run commercial image or video production with genmedia. Use this for product photography, ads, e-commerce batches, product reveals, lifestyle commercials, background replacement, social formats, and brand-safe…"
+    "desc": "Direct individual commercial product images or clips on fal. Use for product placement, reveal shots and product fidelity; use product-ad-campaign for a complete campaign."
+   },
+   {
+    "name": "ecommerce-product-photography",
+    "desc": "Create a consistent fal e-commerce product photo set from real SKU references. Deliver verified hero, detail and lifestyle images with accurate packaging and channel exports."
+   },
+   {
+    "name": "fal-audio-generation",
+    "desc": "Produce fal voiceover, dubbing, speech transcription, sound effects or music. Use for audio deliverables, a pinned project voice and timing checks."
    },
    {
     "name": "fal-gamedev",
-    "desc": "Generate 2D pixel art game assets, characters, sprite sheets, background removal, and game backgrounds. Trigger for \"pixel art character\", \"sprite sheet\", \"walk cycle\", \"game sprites\", \"isometric sprites\",…"
+    "desc": "Generate individual 2D pixel art characters, animation sheets and backgrounds with fal. Use game-asset-production for an engine-ready asset pack and validation."
+   },
+   {
+    "name": "fal-media",
+    "desc": "Generate or process media with connected fal MCP tools. Use for Fal model selection, schemas, pricing, uploads and job recovery; preserve an explicitly chosen provider."
    },
    {
     "name": "fal-models-catalog",
-    "desc": "Choose the right fal.ai endpoint for a given task. Modality-organized catalog of production endpoint defaults, text-to-image, image-to-image, text-to-video, image-to-video, and more. Use when the user has not named a…"
+    "desc": "Compare fal model families by modality and role. Use for catalog exploration; verify current availability and contracts before execution."
+   },
+   {
+    "name": "fal-motion-graphics",
+    "desc": "Render animated titles, lower thirds, logo cards and captions over video. Use for deterministic text and logo motion with a verified local renderer."
    },
    {
     "name": "fal-prompting",
-    "desc": "Model-family-specific prompt craft for fal.ai endpoints. Trigger when the user mentions a specific model family by name and asks how to prompt it (\"how do I prompt Kling\", \"GPT Image 2 prompt structure\", \"Happy Horse…"
+    "desc": "Write prompts for a selected fal model family. Use for GPT Image, Kling and Happy Horse parameter-specific prompt craft; select an endpoint before use."
    },
    {
     "name": "fal-recipes",
-    "desc": "Use-case-driven multi-step pipelines on fal.ai. Trigger when the user asks for a specific kind of content production rather than a single endpoint call: \"make a commercial\", \"ad creative\", \"product photography\",…"
+    "desc": "Consult fal pipeline recipes for try-on, restoration, lip sync and production techniques. Use as supporting guidance rather than a second orchestration layer."
    },
    {
     "name": "fal-redesign",
@@ -3324,39 +3352,91 @@
    },
    {
     "name": "fal-regenerate-3d",
-    "desc": "Build a fully-interactive 3D character-selector experience powered entirely by fal.ai. Generates stylized characters (FLUX.2 / GPT-Image-2), rigged animated GLBs (Meshy v6), themed companion creatures, per-character…"
+    "desc": "Build a Three.js character selector with fal-generated 3D characters, companions, textures and video backgrounds. Use for an interactive 3D roster experience."
+   },
+   {
+    "name": "fal-script-writer",
+    "desc": "Write timed scripts and shot tables for short films or ads. Use for story beats, voiceover budgets and continuity notes; this skill makes no model calls."
+   },
+   {
+    "name": "fal-shot-craft",
+    "desc": "Write or improve one fal video shot prompt. Use for physical action, motivated cameras and continuity anchors; do not use for full film assembly."
+   },
+   {
+    "name": "fal-video-generation",
+    "desc": "Generate or transform a fal video clip. Use for image animation, reference video, extension, restyling or upscaling; use storyboard-to-short-film for a complete cut."
+   },
+   {
+    "name": "fal-video-production",
+    "desc": "Coordinate fal short-ad production with per-shot picture, voice, music and final quality checks. Use when a finished ad with audio is requested."
    },
    {
     "name": "fal-workflow",
-    "desc": "Author and execute multi-step media pipelines on fal.ai. Two modes: (A) declarative workflow JSON files for the fal.ai workflow runtime (\"create workflow\", \"chain models\", \"image to video pipeline\"); (B) imperative…"
+    "desc": "Author fal workflow JSON or orchestrate multi-step genmedia jobs. Use for reusable model chains, batch pipelines and frame bridging."
    },
    {
     "name": "fan-cam",
     "desc": "Create personalized live sports broadcast fan-cam videos with genmedia. Use this for realistic spectator cutaways, stadium or arena crowd reactions, broadcast screenshots, sports TV shots, scoreboard overlays, TV…"
    },
    {
+    "name": "game-asset-production",
+    "desc": "Produce an engine-ready 2D game asset pack with fal. Deliver transparent sprites, sliced animation frames, backgrounds and an atlas with measured frame geometry."
+   },
+   {
     "name": "genmedia",
-    "desc": "Use the genmedia CLI to search, inspect, run, and manage 1200+ fal.ai model endpoints. Trigger when the user mentions \"genmedia\", \"fal CLI\", or asks to \"search models\", \"run a model\", \"fetch schema\", \"check pricing\",…"
+    "desc": "Run fal models from a terminal with the genmedia CLI. Use for model discovery, schemas, pricing, uploads, execution and request recovery. MCP hosts use fal-media instead."
    },
    {
     "name": "genmedia-workflow",
-    "desc": "Design and execute multi-step media workflows with genmedia. Use this for pipelines that combine planning, generation, editing, image or video utilities, audio, subtitles, batching, and final delivery manifests."
+    "desc": "Use the legacy genmedia-workflow entry point for local media pipelines. New workflow requests use fal-workflow; existing references remain available."
+   },
+   {
+    "name": "h3-cinematic-prompter",
+    "desc": "Write or revise MiniMax H3 cinematic prompt text for fal. Use for prompt-only requests, first-frame direction and prompt repair; do not submit generation."
+   },
+   {
+    "name": "localize-and-repurpose",
+    "desc": "Localize and repurpose existing creative content with fal. Deliver translated speech, accurate subtitles and channel cuts while preserving meaning, brand assets and source provenance."
    },
    {
     "name": "marketing",
-    "desc": "Plan and run campaign-level marketing asset production with genmedia. Use this for launch kits, campaign matrices, paid social variants, landing-page visuals, email and banner imagery, hook/proof/conversion assets,…"
+    "desc": "Plan fal marketing asset matrices, hooks and channel variants. Use for campaign strategy; use product-ad-campaign when the deliverable is the produced asset package."
    },
    {
     "name": "model-routing",
-    "desc": "Choose default fal.ai endpoint IDs for genmedia production skills. Use this with commercial, marketing, ugc, character-design, cinematography, storytelling, and workflow when the user has not named a specific model."
+    "desc": "Select fal models by production role when no model is named. Verify current published routing first; static endpoint lists are fallback candidates."
+   },
+   {
+    "name": "photo-editing",
+    "desc": "Apply deterministic image corrections, crops, resizing and composition in Python. Use for pixel edits; semantic scene changes use fal edit models."
+   },
+   {
+    "name": "product-ad-campaign",
+    "desc": "Produce a complete fal product ad campaign from a brief and product references. Deliver reviewed hero art, channel variants, short motion ads and a reusable asset manifest."
+   },
+   {
+    "name": "reels-creator",
+    "desc": "Produce presenter-led Reels, Shorts or TikToks with fal media and timed graphics. Requires local rendering dependencies described in the production guide."
+   },
+   {
+    "name": "storyboard-to-short-film",
+    "desc": "Turn a storyboard or shot list into a finished fal short film. Preserve character and scene continuity, render each shot, assemble picture and sound, and verify the final cut."
    },
    {
     "name": "storytelling",
-    "desc": "Build multi-shot narrative image, video, and audio workflows with genmedia. Use this for storyboards, shot lists, multi-prompt video, first-frame to last-frame pipelines, social stories, brand films, and sequence…"
+    "desc": "Plan narrative scenes and continuity for fal images and videos. Use for story development and shot design; use storyboard-to-short-film for a rendered film."
    },
    {
     "name": "ugc",
     "desc": "Plan and run UGC-style creator ads and social proof videos with genmedia. Use this for direct-to-camera creator scripts, talking-head ads, product demos, testimonials, founder clips, unboxing, reaction, before-after,…"
+   },
+   {
+    "name": "video-compositing",
+    "desc": "Assemble footage, captions, graphics and audio into a rendered video. Use when the required renderer is available; check host prerequisites before execution."
+   },
+   {
+    "name": "wrap-it-up",
+    "desc": "Export the current creative project as an organized ZIP and progress handoff. Use only when the user asks to package or hand off the session."
    }
   ]
  },
@@ -3483,7 +3563,7 @@
    },
    {
     "name": "firebase-firestore",
-    "desc": "Sets up, manages, queries, and configures Cloud Firestore databases (Standard/Enterprise edition), including data modeling, security rules, indexes, and SDK integrations (Web, Python, iOS, Android, Flutter). Use when…"
+    "desc": "Sets up, manages, queries, and configures Cloud Firestore databases (Standard/Enterprise edition), including data modeling, security rules, indexes, and SDK integrations (Web, Admin, Python, iOS, Android, Flutter). Use…"
    },
    {
     "name": "firebase-hosting-basics",
@@ -4665,23 +4745,55 @@
   ]
  },
  "notion-plugin": {
-  "n": 4,
+  "n": 12,
   "skills": [
    {
+    "name": "notion-build-my-engineering-wiki",
+    "desc": "Build a personalized Notion engineering home from technical docs, project context, and chat or connected sources. Use to get started with an engineering wiki and a clear view of current work."
+   },
+   {
+    "name": "notion-create-my-team-handbook",
+    "desc": "Create a team handbook in Notion from scattered processes, team documents, requests, and chat context. Make procedures easy to find, show who maintains them, and track related requests."
+   },
+   {
+    "name": "notion-database-designer",
+    "desc": "Turns scattered notes and recurring work into useful Notion trackers for requests, content plans, or team work. Use to set up or improve a tracker, choosing its fields and views from the user's needs; ordinary record…"
+   },
+   {
     "name": "notion-knowledge-capture",
-    "desc": "Transforms conversations and discussions into structured documentation pages in Notion. Captures insights, decisions, and knowledge from chat context, formats appropriately, and saves to wikis or databases with proper…"
+    "desc": "Captures conversations and supplied notes as Notion wiki pages, how-to guides, FAQs, decision records, or retrospectives. Use when saving or updating durable knowledge from existing context; use research-documentation…"
    },
    {
     "name": "notion-meeting-intelligence",
-    "desc": "Prepares meeting materials by gathering context from Notion, enriching with Claude research, and creating both an internal pre-read and external agenda saved to Notion. Helps you arrive prepared with comprehensive…"
+    "desc": "Prepares meeting agendas, internal pre-reads, and decision briefs using Notion context and relevant research. Use for meeting preparation, recurring meeting context, or updating meeting outcomes; use knowledge-capture…"
+   },
+   {
+    "name": "notion-organize-my-semester",
+    "desc": "Organize a semester in Notion from course notes, syllabi, assignments, and chat context. Use when getting organized for a course or semester to keep notes clear and upcoming work easy to find."
+   },
+   {
+    "name": "notion-plan-marketing-campaigns",
+    "desc": "Organize campaign briefs, content ideas, and production work in Notion. Use when planning a marketing campaign, building a content calendar, or tracking content production."
    },
    {
     "name": "notion-research-documentation",
-    "desc": "Searches across your Notion workspace, synthesizes findings from multiple pages, and creates comprehensive research documentation saved as new Notion pages. Turns scattered information into structured reports with…"
+    "desc": "Researches questions across Notion sources and synthesizes cited briefs, comparisons, or reports. Use when answering requires discovering and reconciling workspace information, optionally with external research, and…"
+   },
+   {
+    "name": "notion-set-up-my-project",
+    "desc": "Create a useful initial Notion project home with tasks, docs, and meeting notes, then work with the user to confirm the team and choose a Projects database. Use when starting or organizing a project in Notion; routine…"
+   },
+   {
+    "name": "notion-setup",
+    "desc": "Set up Notion so your agents can remember your preferences, find your work, and pick up where you left off."
    },
    {
     "name": "notion-spec-to-implementation",
-    "desc": "Turns product or tech specs into concrete Notion tasks that Claude code can implement. Breaks down spec pages into detailed implementation plans with clear tasks, acceptance criteria, and progress tracking to guide…"
+    "desc": "Converts Notion product or technical specs into implementation plans, linked tasks, and evidence-based progress updates. Use for planning or implementing a spec, creating tasks from requirements, or reconciling…"
+   },
+   {
+    "name": "notion-weekly-project-digest",
+    "desc": "Produces evidence-based weekly project or team updates by comparing reporting periods, tasks, decisions, and blockers in Notion. Use for recurring status digests; use spec-to-implementation for requirement-level…"
    }
   ]
  },
@@ -4734,8 +4846,8 @@
     "desc": "Use this skill whenever asked about forming, incorporating, or registering a company in Germany. Trigger on phrases like \\\"set up a company in Germany\\\", \\\"GmbH formation\\\", \\\"UG gründen\\\", \\\"Handelsregister\\\", \\\"German…"
    },
    {
-    "name": "germany-payroll",
-    "desc": "Use this skill whenever asked about German payroll processing for employees. Trigger on phrases like \\\"German payroll\\\", \\\"Lohnsteuer\\\", \\\"Gehaltsabrechnung\\\", \\\"Brutto Netto Rechner\\\", \\\"Steuerklasse\\\",…"
+    "name": "germany-income-tax",
+    "desc": "Use this skill to turn a German self-employed person's year of bank transactions into profit (Anlage EÜR) and the 2026 income tax, for a Freiberufler (Anlage S) or a sole trader (Anlage G) resident in Germany. Tax year…"
    },
    {
     "name": "germany-tax-optimization",
@@ -4892,7 +5004,7 @@
   ]
  },
  "rampstack-brand-build-skills": {
-  "n": 107,
+  "n": 109,
   "skills": [
    {
     "name": "accessibility-audit",
@@ -4921,6 +5033,10 @@
    {
     "name": "art-direction",
     "desc": "Direct visual and creative work for campaigns, photography, illustration, video, and branded experiences. Use this skill whenever the user wants to brief a photographer, direct illustrators, plan a creative campaign,…"
+   },
+   {
+    "name": "backlog-triage",
+    "desc": "Turn an inbox of raw requests (bug reports, feature asks, support escalations, feedback, incident follow-ups) into a ranked, deduplicated backlog where every item at the top meets the definition of ready, with recorded…"
    },
    {
     "name": "backup-and-disaster-recovery",
@@ -5129,10 +5245,6 @@
    {
     "name": "jtbd-framing",
     "desc": "The Jobs-to-be-Done framework as applied product methodology. Job statements, struggling moments, hire and fire criteria, the difference between feature-thinking and job-thinking. Honest about where JTBD adds clarity…"
-   },
-   {
-    "name": "landing-page-copy",
-    "desc": "Write landing page copy with attention to the hero, value proposition, social proof, objection handling, and conversion-focused CTAs. Use this skill whenever the user wants to write a landing page, sales page, hero…"
    }
   ]
  },
@@ -5219,7 +5331,7 @@
   ]
  },
  "revenuecat-ai-toolkit": {
-  "n": 45,
+  "n": 46,
   "skills": [
    {
     "name": "create-revenuecat-project",
@@ -5231,7 +5343,7 @@
    },
    {
     "name": "rc-alternative-billing",
-    "desc": "Use this skill when scoping Google Play alternative billing work with RevenueCat Android SDK 10.x. Documents the current support status, which flows RevenueCat abstracts and which require direct integration at the time…"
+    "desc": "Use this skill when scoping Google Play alternative billing work with RevenueCat Android SDK 10.x. Documents the support status as of purchases-android 10.27.1, which flows RevenueCat abstracts, and which require direct…"
    },
    {
     "name": "rc-backend",
@@ -5239,7 +5351,7 @@
    },
    {
     "name": "rc-cancellations-pauses-winback",
-    "desc": "Use this skill when surfacing cancellation, pause, and winback state on Android with RevenueCat. Covers reading unsubscribeDetectedAt, billingIssuesDetectedAt, pause state via periodType, managementURL for deep link,…"
+    "desc": "Use this skill when surfacing cancellation, pause, and winback state on Android with RevenueCat. Covers reading unsubscribeDetectedAt, billingIssueDetectedAt, pause state and resume date via…"
    },
    {
     "name": "rc-catalog-management",
@@ -5247,7 +5359,7 @@
    },
    {
     "name": "rc-configuring-the-sdk",
-    "desc": "Use this skill when adding and configuring the RevenueCat Android SDK (purchases-kt/purchases) in an app. Covers the Gradle dependency, Purchases.configure with PurchasesConfiguration, initial app user id strategy, and…"
+    "desc": "Use this skill when adding and configuring the RevenueCat Android SDK (purchases-android, artifact com.revenuecat.purchases:purchases) in an app. Covers the Gradle dependency, Purchases.configure with…"
    },
    {
     "name": "rc-error-handling",
@@ -5263,11 +5375,11 @@
    },
    {
     "name": "rc-plan-changes",
-    "desc": "Use this skill when implementing subscription upgrades, downgrades, and plan switches via RevenueCat on Android. Covers GoogleProductChangeInfo, picking a Google replacement mode, and letting the SDK manage…"
+    "desc": "Use this skill when implementing subscription upgrades, downgrades, and plan switches via RevenueCat on Android. Covers StoreReplacementMode, picking a replacement mode, and letting the SDK manage linkedPurchaseToken…"
    },
    {
     "name": "rc-price-changes",
-    "desc": "Use this skill when rolling out subscription price changes on Android with RevenueCat. Covers opt out decreases versus opt in increases, RevenueCat's automatic handling of the change confirmation flow, and the dashboard…"
+    "desc": "Use this skill when rolling out subscription price changes on Android with RevenueCat. Covers price decreases, opt out versus opt in increases, the in app notice required for opt out increases, RevenueCat's price…"
    },
    {
     "name": "rc-purchase-flow",
@@ -5283,11 +5395,11 @@
    },
    {
     "name": "rc-security",
-    "desc": "Use this skill when hardening a RevenueCat integration on Android. Covers Trusted Entitlements response verification (INFORMATIONAL vs ENFORCED), why the server is always the authority, API key hygiene (public SDK key…"
+    "desc": "Use this skill when hardening a RevenueCat integration on Android. Covers Trusted Entitlements response verification (INFORMATIONAL, the default since SDK 8.11.0), why the server is always the authority, API key hygiene…"
    },
    {
     "name": "rc-setup",
-    "desc": "Use this skill when setting up a RevenueCat project for Android: creating the app in the dashboard, uploading the Google Play service account credentials, configuring entitlements and offerings, and getting the public…"
+    "desc": "Use this skill when setting up a RevenueCat project for Android: creating the app in the dashboard, uploading the Google Play service account credentials, connecting Real Time Developer Notifications, configuring…"
    },
    {
     "name": "rc-subscription-states",
@@ -5299,7 +5411,7 @@
    },
    {
     "name": "rc-testing",
-    "desc": "Use this skill when testing a RevenueCat Android integration. Covers the RevenueCat Test Store (test_ API key prefix, in dialog Success/Fail/Cancel choice), mockk based unit testing with an interface wrapper around…"
+    "desc": "Use this skill when testing a RevenueCat Android integration. Covers the RevenueCat Test Store (test_ API key prefix, in dialog choice of Test valid purchase, Test failed purchase, or Cancel), mockk based unit testing…"
    },
    {
     "name": "rc-understanding-revenuecat",
@@ -5307,7 +5419,7 @@
    },
    {
     "name": "rc-webhooks",
-    "desc": "Use this skill when consuming RevenueCat webhooks on your backend. Covers the normalized event schema, the full event type list, idempotency via the event id field, and the correct handling for CANCELLATION versus…"
+    "desc": "Use this skill when consuming RevenueCat webhooks on your backend. Covers authenticating requests (Authorization header, optional HMAC signing), parsing the normalized event schema without breaking on new fields,…"
    },
    {
     "name": "revenuecat",
@@ -5367,7 +5479,11 @@
    },
    {
     "name": "revenuecat-migrate",
-    "desc": "Migrate to RevenueCat from raw StoreKit or Google Play Billing, upgrade the RevenueCat SDK across a major version, or move the SDK's iOS dependency from CocoaPods/Carthage to Swift Package Manager. Use when the user…"
+    "desc": "Migrate to RevenueCat from raw StoreKit or Google Play Billing, or upgrade the RevenueCat SDK across a major version. Use when the user says migrate to RevenueCat, switch from StoreKit to RC, upgrade RevenueCat SDK,…"
+   },
+   {
+    "name": "revenuecat-migrate-to-spm",
+    "desc": "Move the RevenueCat SDK's iOS dependency from CocoaPods or Carthage to Swift Package Manager. Use when the user says migrate from CocoaPods to SPM, move off CocoaPods, CocoaPods trunk read-only, migrate from Carthage to…"
    },
    {
     "name": "revenuecat-paywall",
@@ -6426,7 +6542,7 @@
   "skills": [
    {
     "name": "design-taste-frontend",
-    "desc": "tasteskill v2, the anti-slop frontend skill. Art direction for websites, distilled from a study of 247 curated gallery sites (One Page Love, Awwwards Sites of the Day). Deals researched directions (idea, composition,…"
+    "desc": "tasteskill 2.5.1, the anti-slop frontend skill. Builds professional company websites at the level of figma.com and x.ai: plain copy in a voice of its own, one system, one section per screen, equal edges, real…"
    }
   ]
  },
@@ -6497,7 +6613,7 @@
   ]
  },
  "trail-of-bits-skills": {
-  "n": 95,
+  "n": 96,
   "skills": [
    {
     "name": "address-sanitizer",
@@ -6586,6 +6702,10 @@
    {
     "name": "crypto-protocol-diagram",
     "desc": "Extracts protocol message flow from source code, RFCs, academic papers, pseudocode, informal prose, ProVerif (.pv), or Tamarin (.spthy) models and generates Mermaid sequenceDiagrams with cryptographic annotations. Use…"
+   },
+   {
+    "name": "cvss-scoring",
+    "desc": "Produces CVSS v4.0 vector strings from plain-text vulnerability descriptions by systematically evaluating base metrics. Use when scoring a vulnerability, generating a CVSS vector, or estimating severity."
    },
    {
     "name": "devcontainer-setup",
@@ -6734,10 +6854,6 @@
    {
     "name": "replay-regression",
     "desc": "Use when independently verifying a supplied PoC against fresh live before/after deployments."
-   },
-   {
-    "name": "report-regressions",
-    "desc": "Use when assembling or refreshing an evidence-linked regression report from saved campaign decisions."
    }
   ]
  },
