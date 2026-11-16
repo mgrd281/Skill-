@@ -40,7 +40,7 @@
    },
    {
     "name": "documentation-and-adrs",
-    "desc": "Records decisions and documentation. Use when you need to document an architecture decision (ADR) or the reasoning behind a design choice, when changing public APIs, shipping features, or when you need to record context…"
+    "desc": "Records decisions and documentation, and detects when documentation has drifted from the code it describes. Use when you need to document an architecture decision (ADR) or the reasoning behind a design choice, when…"
    },
    {
     "name": "doubt-driven-development",
@@ -105,7 +105,7 @@
   ]
  },
  "agent-browser": {
-  "n": 11,
+  "n": 12,
   "skills": [
    {
     "name": "agent-browser",
@@ -132,8 +132,8 @@
     "desc": "Automate Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify, etc.) using agent-browser via Chrome DevTools Protocol. Use when the user needs to interact with an Electron app, automate a desktop app,…"
    },
    {
-    "name": "protected-vercel-deployments",
-    "desc": "Access and test Vercel deployments protected by Vercel Authentication, SSO, or Deployment Protection with agent-browser. Use when a preview or production URL redirects to a Vercel login page, returns a protection 401 or…"
+    "name": "modern-web-guidance",
+    "desc": "Apply Chrome's Modern Web Guidance to frontend code, then verify the built page in a real browser with agent-browser. Use when asked to build or modernize UI with web platform best practices, follow Modern Web Guidance…"
    },
    {
     "name": "slack",
@@ -142,6 +142,10 @@
    {
     "name": "technical-writer",
     "desc": "Write, review, and edit developer documentation for SDKs, libraries, and frameworks, including sites such as agent-browser.dev and portless.sh. Use for getting-started guides, tutorials, API references, conceptual…"
+   },
+   {
+    "name": "vercel",
+    "desc": "Access and test Vercel deployments with agent-browser, behind Deployment Protection or at a different feature flag variant. Use when a preview or production URL redirects to a Vercel login page, returns a protection 401…"
    },
    {
     "name": "vercel-sandbox",
@@ -170,7 +174,7 @@
    },
    {
     "name": "adr-skill",
-    "desc": "Create and maintain Architecture Decision Records (ADRs) optimized for agentic coding workflows. Use when you need to propose, write, update, accept/reject, deprecate, or supersede an ADR; bootstrap an adr folder and…"
+    "desc": "Create, update, or consult Architecture Decision Records (ADRs). Use when capturing an architecture decision and its rationale, maintaining its lifecycle, checking decisions that govern planned changes, or when a…"
    },
    {
     "name": "ai-sdk",
@@ -207,7 +211,7 @@
   ]
  },
  "android-skills": {
-  "n": 36,
+  "n": 37,
   "skills": [
    {
     "name": "adaptive",
@@ -276,6 +280,10 @@
    {
     "name": "ink-custom-brush-builder",
     "desc": "Creates custom BrushFamily definitions for an Android app using Jetpack"
+   },
+   {
+    "name": "ios-to-android",
+    "desc": "\"Use for ANY task that ports or implements Android functionality from\\"
    },
    {
     "name": "jetpack-compose-performance",
@@ -1060,7 +1068,7 @@
    },
    {
     "name": "asc-apple-ads",
-    "desc": "Use when managing Apple Ads with asc, including OAuth profiles, ad-account discovery, Platform API v1 campaigns and targeting, reports, assets, recommendations, guarded mutations, raw requests, and Campaign Management…"
+    "desc": "Use when managing Apple Ads with asc, including OAuth profiles, ad-account discovery, Platform API v1 campaigns and targeting, reports, assets, recommendations, guarded mutations, raw requests, and migrating existing v5…"
    },
    {
     "name": "asc-aso-audit",
@@ -1395,7 +1403,7 @@
   ]
  },
  "aws-agent-toolkit": {
-  "n": 26,
+  "n": 27,
   "skills": [
    {
     "name": "amazon-bedrock",
@@ -1442,6 +1450,10 @@
     "desc": "Configures CI/CD pipelines using AWS CodePipeline, CodeBuild, CodeDeploy, CodeConnections, and CodeArtifact. Covers CodePipeline V2 (triggers, variables, execution modes, cross-account), buildspec.yml (caching, VPC,…"
    },
    {
+    "name": "aws-emulator",
+    "desc": "Installs, starts and troubleshoots AWS Emulator, the local emulator of AWS service APIs, and checks whether a project or a single operation works on the installed build. Use when the user wants to install or start the…"
+   },
+   {
     "name": "aws-iam",
     "desc": "Provides verified corrections for IAM behaviors that AI agents frequently get wrong — policy evaluation edge cases, trust policy gotchas, STS session limits, Organizations quirks, and SAML/MFA specifics. Also provides…"
    },
@@ -1459,7 +1471,7 @@
    },
    {
     "name": "aws-observability",
-    "desc": "Investigates root causes on the Omni context graph (service dependencies) and Intelligence insights; builds, configures, debugs, tunes AWS observability - operator-symptom questions, detecting Omni vs classic…"
+    "desc": "Investigates root causes on the Omni context graph (service dependencies); builds, configures, debugs, tunes AWS observability - operator-symptom questions, detecting Omni vs classic CloudWatch. CloudWatch on a…"
    },
    {
     "name": "aws-sdk-js-v3-usage",
@@ -2632,7 +2644,7 @@
   ]
  },
  "claude-seo": {
-  "n": 33,
+  "n": 35,
   "skills": [
    {
     "name": "seo",
@@ -2735,6 +2747,10 @@
     "desc": "Strategic SEO planning for new or existing websites. Industry-specific templates, competitive analysis, content strategy, and implementation roadmap. Use when user says \"SEO plan\", \"SEO strategy\", \"SEO planning\",…"
    },
    {
+    "name": "seo-posthog",
+    "desc": "PostHog MCP extension. PostHog analytics as a GA4 alternative or complement. Organic traffic, landing pages, device / country breakdowns, referrers, via the PostHog MCP server. Triggers on \"PostHog\", \"posthog…"
+   },
+   {
     "name": "seo-profound",
     "desc": "Profound LLM citation tracker (extension). Time-series brand citation rates across ChatGPT, Perplexity, and other LLMs. Pairs with seo-seranking for triangulated AI visibility coverage."
    },
@@ -2749,6 +2765,10 @@
    {
     "name": "seo-seranking",
     "desc": "SE Ranking AI visibility analyst (extension). Tracks AI Share-of-Voice across ChatGPT, Gemini, Perplexity, AI Overviews, and AI Mode in a single query."
+   },
+   {
+    "name": "seo-shopify",
+    "desc": "Uncapped, sitemap-complete crawl of a Shopify storefront using the merchant's Crawler Access signature from a project-local .shopify-env, feeding the standard seo-audit pipeline. Use when the user says 'Shopify audit',…"
    },
    {
     "name": "seo-sitemap",
@@ -2781,15 +2801,15 @@
    },
    {
     "name": "clerk",
-    "desc": "Clerk authentication router. Use when user asks about Clerk CLI operations,"
+    "desc": "Clerk authentication router. Use when user asks about Clerk CLI operations, adding authentication, setting up Clerk, custom sign-in flows, Swift or native iOS auth, native Android auth, Next.js patterns, React patterns,…"
    },
    {
     "name": "clerk-android",
-    "desc": "Implement Clerk authentication for native Android apps using Kotlin and"
+    "desc": "Implement Clerk authentication for native Android apps using Kotlin and Jetpack Compose with clerk-android source-guided patterns. Use for prebuilt AuthView/UserButton or custom API-driven auth flows. Do not use for…"
    },
    {
     "name": "clerk-astro-patterns",
-    "desc": "'Astro patterns with Clerk — middleware, SSR pages, island components,"
+    "desc": "Astro patterns with Clerk — middleware, SSR pages, island components, API routes, static vs SSR rendering. Triggers on: astro clerk, clerk astro middleware, astro protected page, clerk island component, astro API route…"
    },
    {
     "name": "clerk-backend-api",
@@ -2797,11 +2817,11 @@
    },
    {
     "name": "clerk-billing",
-    "desc": "Clerk Billing for subscription management - render Clerk's PricingTable"
+    "desc": "Clerk Billing for subscription management - render Clerk's PricingTable and in-app checkout drawer, configure subscription plans, seat-limit plans for B2B, feature entitlements with has(), and billing webhooks. Use for…"
    },
    {
     "name": "clerk-chrome-extension-patterns",
-    "desc": "'Chrome Extension auth with @clerk/chrome-extension -- popup/sidepanel"
+    "desc": "Chrome Extension auth with @clerk/chrome-extension -- popup/sidepanel setup, syncHost for OAuth/SAML via web app, createClerkClient for service workers and headless extensions, stable CRX ID. Triggers on: Chrome…"
    },
    {
     "name": "clerk-cli",
@@ -2809,31 +2829,31 @@
    },
    {
     "name": "clerk-custom-ui",
-    "desc": "Custom authentication flows and component appearance - hooks (useSignIn,"
+    "desc": "Custom authentication flows and component appearance - hooks (useSignIn, useSignUp), themes, colors, fonts, CSS. Use for custom sign-in/sign-up flows, appearance styling, visual customization, branding."
    },
    {
     "name": "clerk-expo",
-    "desc": "Add Clerk authentication to Expo and React Native apps using @clerk/expo."
+    "desc": "Add Clerk authentication to Expo and React Native apps using @clerk/expo. Use for Expo setup, prebuilt native components (AuthView, UserButton), custom sign-in/sign-up flows (email, password, SMS/phone OTP, MFA),…"
    },
    {
     "name": "clerk-nextjs-patterns",
-    "desc": "Advanced Next.js patterns - middleware, Server Actions, caching with"
+    "desc": "Advanced Next.js patterns - middleware, Server Actions, caching with Clerk."
    },
    {
     "name": "clerk-nuxt-patterns",
-    "desc": "'Nuxt 3 auth patterns with @clerk/nuxt - middleware, composables, server"
+    "desc": "Nuxt 3 auth patterns with @clerk/nuxt - middleware, composables, server API routes, SSR. Triggers on: Nuxt auth, useAuth composable, clerkMiddleware Nuxt, server API Clerk, Nuxt route protection."
    },
    {
     "name": "clerk-orgs",
-    "desc": "Clerk Organizations for B2B and multi-tenant apps - org switching,"
+    "desc": "Clerk Organizations for B2B and multi-tenant apps - org switching, roles and permissions, verified domains, and enterprise SSO. Use for team workspaces, RBAC, org-scoped routing, member management. Also load this when a…"
    },
    {
     "name": "clerk-react-patterns",
-    "desc": "'React SPA auth patterns with @clerk/react for Vite/CRA - ClerkProvider"
+    "desc": "React SPA auth patterns with @clerk/react for Vite/CRA - ClerkProvider setup, useAuth/useUser/useClerk hooks, React Router protected routes, custom sign-in flows. Triggers on: Vite Clerk setup, React Router auth,…"
    },
    {
     "name": "clerk-react-router-patterns",
-    "desc": "'React Router v7/v8 patterns with Clerk — rootAuthLoader, getAuth in loaders,"
+    "desc": "React Router v7/v8 patterns with Clerk — rootAuthLoader, getAuth in loaders, clerkMiddleware, protected routes, SSR user data, org switching. Triggers on: react-router auth, rootAuthLoader, getAuth loader, react-router…"
    },
    {
     "name": "clerk-setup",
@@ -2845,19 +2865,19 @@
    },
    {
     "name": "clerk-tanstack-patterns",
-    "desc": "'TanStack React Start auth patterns with @clerk/tanstack-react-start"
+    "desc": "TanStack React Start auth patterns with @clerk/tanstack-react-start - createServerFn, beforeLoad guards, loaders, Vite plugin, server middleware. Triggers on: TanStack auth, createServerFn clerk, beforeLoad protection,…"
    },
    {
     "name": "clerk-testing",
-    "desc": "E2E testing for Clerk apps. Use with Playwright or Cypress for auth flow"
+    "desc": "E2E testing for Clerk apps. Use with Playwright or Cypress for auth flow tests."
    },
    {
     "name": "clerk-vue-patterns",
-    "desc": "'Vue 3 patterns with Clerk — composables (useAuth, useUser,"
+    "desc": "Vue 3 patterns with Clerk — composables (useAuth, useUser, useClerk, useOrganization), Vue Router guards, Pinia auth store integration. Triggers on: vue clerk, useAuth vue, clerk composables, vue router clerk guard,…"
    },
    {
     "name": "clerk-webhooks",
-    "desc": "Clerk webhooks for real-time events and data syncing. Verify with verifyWebhook"
+    "desc": "Clerk webhooks for real-time events and data syncing. Verify with verifyWebhook from the framework-specific package. Handle user, session, organization, billing, and payment events. Build event-driven features like…"
    }
   ]
  },
@@ -3156,7 +3176,7 @@
    },
    {
     "name": "speech-to-text",
-    "desc": "Transcribe audio to text using ElevenLabs Scribe v2. Use when converting audio/video to text, generating subtitles, transcribing meetings, or processing spoken content."
+    "desc": "Transcribe audio to text using ElevenLabs Scribe v3. Use when converting audio/video to text, generating subtitles, transcribing meetings, or processing spoken content."
    },
    {
     "name": "text-to-speech",
@@ -3211,7 +3231,7 @@
    },
    {
     "name": "eas-simulator",
-    "desc": "Run and control a user's app on a remote iOS/Android simulator hosted on EAS cloud. Read before running any `eas simulator:*` commands - it has the current syntax for this experimental API. Use whenever the user needs a…"
+    "desc": "Run and control a user's app on a remote iOS/Android simulator with Expo Simulators (also called EAS Simulator). Read before running any `eas simulator:*` commands - it has the current syntax and workflow. Use whenever…"
    },
    {
     "name": "eas-update",
@@ -3441,8 +3461,12 @@
   ]
  },
  "figma-motion-skill": {
-  "n": 18,
+  "n": 19,
   "skills": [
+   {
+    "name": "figma-3d-transforms",
+    "desc": "Add or edit 3D transforms — depth, perspective, z-axis rotation, tilt, isometric, and parallax looks that flat 2D rotation cannot express. Use whenever a request reaches into the third dimension — \"make it 3D\", \"add…"
+   },
    {
     "name": "figma-code-connect",
     "desc": "Creates and maintains Figma Code Connect template files that map Figma components to code snippets. Use when the user mentions Code Connect, Figma component mapping, design-to-code translation, or asks to create/update…"
@@ -4033,215 +4057,215 @@
   "skills": [
    {
     "name": "ab-testing",
-    "desc": "When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program. Also use when the user mentions \"A/B test,\" \"split test,\" \"experiment,\" \"test this change,\"…"
+    "desc": "When the user wants to plan, run, or read A/B tests, or asks a judgement call on one: is the result real, can we stop, which version won, is this worth testing at all: sample size, duration, significance, hypotheses,…"
    },
    {
     "name": "ad-creative",
-    "desc": "When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform. Also use when the user mentions 'ad copy variations,'…"
+    "desc": "When the user wants to write or judge ad creative, or asks which ad, hook, or angle to run or kill: headlines, primary text, and variations for Google, Meta, LinkedIn, and TikTok, fresh angles when creative fatigues.…"
    },
    {
     "name": "ads",
-    "desc": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad…"
+    "desc": "When the user wants to plan, run, or fix paid ads on Google, Meta, and LinkedIn, or asks a judgement call on them: are ads worth it, which channel or budget split, why CPA rose, kill or keep a campaign. End with facts,…"
    },
    {
     "name": "ai-seo",
-    "desc": "When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,'…"
+    "desc": "When the user wants to get cited and recommended in AI answers (ChatGPT, Perplexity, AI Overviews), or asks why AI cites a competitor, which content gets cited, or whether llms.txt or a page format is worth it: AEO,…"
    },
    {
     "name": "analytics",
-    "desc": "When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions \"set up tracking,\" \"GA4,\" \"Google Analytics,\" \"event tracking,\" \"UTM parameters,\" \"tag manager,\"…"
+    "desc": "When the user wants to set up or audit analytics, or asks whether a metric or number is calculated right, what to track, or how to name events: tracking plans, GA4, GTM, Mixpanel, PostHog, UTMs. Rate metrics divide…"
    },
    {
     "name": "aso",
-    "desc": "When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO audit,' 'app store optimization,' 'optimize my app listing,' 'improve app visibility,' 'app store…"
+    "desc": "When the user wants to audit or optimize an App Store or Google Play listing, or asks which title, keywords, or screenshots to pick or why downloads are low: subtitle, description, ratings, and comparing listings with…"
    },
    {
     "name": "attribution",
-    "desc": "When the user wants to figure out which marketing actually drives conversions and revenue, choose or interpret an attribution model, or reconcile conflicting numbers across tools. Also use when the user mentions…"
+    "desc": "When the user wants to work out which marketing drives revenue, or asks whether a channel is really working, which numbers to trust, or how to credit podcasts and dark social: attribution models, platforms that…"
    },
    {
     "name": "churn-prevention",
-    "desc": "When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies. Also use when the user mentions 'churn,' 'cancel flow,' 'offboarding,' 'save…"
+    "desc": "When the user wants to reduce churn, or asks why customers cancel, whether to offer a discount or pause: cancellation flows, exit surveys, save offers, dunning and failed-payment recovery. For win-back emails, see…"
    },
    {
     "name": "co-marketing",
-    "desc": "When the user wants to find co-marketing partners, plan joint campaigns, or brainstorm partnership opportunities. Use when the user says 'co-marketing,' 'partner marketing,' 'joint campaign,' 'who should we partner…"
+    "desc": "When the user wants co-marketing partners or joint campaigns, or asks whether a partner fits, a size mismatch matters, or how to split work and leads: integration partners, cross-promotion, co-branded content, joint…"
    },
    {
     "name": "cold-email",
-    "desc": "Write and run B2B cold outbound that gets replies, from cold emails and follow-ups to sending setup, LinkedIn, multichannel cadences, and reply handling. Use when the user mentions \"cold email,\" \"cold outreach,\"…"
+    "desc": "When the user wants to write or run B2B cold outbound, or asks whether an opener, reason to reach out, or email works or why nobody replies: cold emails, follow-ups, sending domains, deliverability, LinkedIn, cadences.…"
    },
    {
     "name": "community-marketing",
-    "desc": "Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a community strategy, grow a Discord or Slack community, manage a forum or subreddit, build brand…"
+    "desc": "When the user wants to build or grow an online community, or asks whether a community is worth it, where to host it, or why members stay quiet: Discord, Slack, forums, participation, community-led growth, advocates. For…"
    },
    {
     "name": "competitor-profiling",
-    "desc": "When the user wants to research, profile, or analyze competitors from their URLs. Also use when the user mentions 'competitor profile,' 'competitor research,' 'competitor analysis,' 'profile this competitor,' 'analyze…"
+    "desc": "When the user wants to research competitors into dated profiles, or asks what a rival charges, claims, or is doing, or whether a conclusion about them is fair: positioning, pricing, features, reviews, SEO, observed…"
    },
    {
     "name": "competitors",
-    "desc": "When the user wants to create competitor comparison or alternative pages for SEO and buyer-facing use. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,'…"
+    "desc": "When the user wants to create or audit comparison and alternative pages ('X vs Y', 'X alternative', 'best X alternatives'), or asks what a public page may say about a competitor: page formats, fair claims, and outdated…"
    },
    {
     "name": "content-strategy",
-    "desc": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \"content strategy,\" \"what should I write about,\" \"content ideas,\" \"blog…"
+    "desc": "When the user wants to plan content, or asks which topic or piece to prioritize, what to write about, or why posts bring no customers: topic clusters, editorial calendars, roadmaps tied to customers and search. For…"
    },
    {
     "name": "conversion-tracking",
-    "desc": "Set up, audit, verify, or fix website conversion tracking. Use when the conversion is a form submission, booked meeting, chat, phone call, signup, or purchase; when conversions must reach Google Ads, Meta, GA4,…"
+    "desc": "When the user wants to set up, audit, or fix conversion tracking to Google Ads, Meta, GA4, LinkedIn, and TikTok, or asks why conversions are missing or doubled: GTM, pixels, CAPI, Enhanced Conversions, offline imports.…"
    },
    {
     "name": "copy-editing",
-    "desc": "When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,'…"
+    "desc": "When the user wants to edit, tighten, proofread, or refresh existing copy, or asks whether to keep, cut, or change a line in it, without rewriting from scratch. Every edit removes AI tells: 'it's not X, it's Y' reveals,…"
    },
    {
     "name": "copywriting",
-    "desc": "When the user wants to write, rewrite, or improve marketing copy for any page, including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \"write copy…"
+    "desc": "When the user wants to write or rewrite page copy (homepage, landing, pricing, feature), or asks which headline, promise, or message to lead with. Diagnoses the input first (blank brief, real voice, or point edit) and…"
    },
    {
     "name": "cro",
-    "desc": "When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pricing pages, feature pages, lead capture forms, or contact forms. Also use when the…"
+    "desc": "When the user wants more conversions from a page or form, or asks why a page isn't converting, what to change first, or whether to add or remove a field or element: landing and pricing pages, lead forms, or a URL shared…"
    },
    {
     "name": "customer-research",
-    "desc": "When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions \"customer research,\" \"ICP research,\" \"talk to customers,\" \"analyze transcripts,\" \"customer interviews,\" \"survey…"
+    "desc": "When the user wants to run or synthesize customer research, or asks what customer quotes, reviews, or feedback really mean, what is safe to conclude, and what to ask next: interviews, surveys, voice of customer,…"
    },
    {
     "name": "directory-submissions",
-    "desc": "When the user wants to submit their product to startup, SaaS, AI, agent, MCP, no-code, or review directories for backlinks, domain rating, and discovery. Also use when the user mentions \"directory submissions,\" \"submit…"
+    "desc": "When the user wants to list a product in startup, SaaS, AI, MCP, and review directories, or asks which directories are worth it or whether listings are working: Product Hunt, G2, Capterra, AlternativeTo, MCP registries,…"
    },
    {
     "name": "emails",
-    "desc": "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions \"email sequence,\" \"drip campaign,\" \"nurture sequence,\"…"
+    "desc": "When the user wants to create or improve automated email sequences, or asks what to send, when, or whether an email or flow is working: welcome, onboarding, nurture, and win-back flows. No AI tells like 'it's not X,…"
    },
    {
     "name": "events",
-    "desc": "When the user wants to plan, run, sponsor, speak at, or get pipeline from events — webinars, conferences, trade shows, meetups, dinners, workshops, virtual summits, or user conferences. Also use when the user mentions…"
+    "desc": "When the user wants to plan, run, sponsor, or speak at events, or asks whether an event or booth is worth the money: webinars, conferences, booths, meetups, show-up rates, and follow-up into pipeline. For launches, see…"
    },
    {
     "name": "free-tools",
-    "desc": "When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or brand awareness. Also use when the user mentions \"engineering as marketing,\" \"free tool,\" \"marketing…"
+    "desc": "When the user wants to plan or build a free tool as marketing, or asks whether a tool idea is worth building or which one to pick: calculators, graders, generators, and other interactive tools for leads, SEO, and links.…"
    },
    {
     "name": "image",
-    "desc": "When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product mockups, profile banners, listing visuals, or brand assets. Also use when the user mentions 'AI…"
+    "desc": "When the user wants to create, generate, edit, or optimize marketing images, or asks which approach to take (generate, design, or photograph): blog heroes, social graphics, product mockups, banners, OG images. For ad…"
    },
    {
     "name": "influencer-marketing",
-    "desc": "When the user wants to run influencer, creator, or ambassador partnerships to promote their product — finding and vetting partners, structuring deals, briefing creators, disclosure compliance, and measuring ROI. Also…"
+    "desc": "When the user wants creator, influencer, or ambassador partnerships, or asks which creators fit, what to pay, which rights to buy, or whether a sponsorship worked: vetting, contracts, briefs, UGC, newsletter and podcast…"
    },
    {
     "name": "launch",
-    "desc": "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early…"
+    "desc": "When the user wants to plan a product or feature launch, or asks whether it's ready, when to announce, or how to get noticed: Product Hunt, beta and early access, waitlists, release go-to-market, launch checklists,…"
    },
    {
     "name": "lead-magnets",
-    "desc": "When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions \"lead magnet,\" \"gated content,\" \"content upgrade,\" \"downloadable,\" \"ebook,\" \"cheat…"
+    "desc": "When the user wants to plan or improve a lead magnet, or asks what to give away for emails or how much to ask in return (gating, form fields): checklists, templates, ebooks, gated guides, content upgrades. For…"
    },
    {
     "name": "link-building",
-    "desc": "When the user wants to earn backlinks or third-party mentions that lift rankings and AI citations. Also use when the user mentions 'link building,' 'linkbuilding,' 'backlinks,' 'get more backlinks,' 'link prospecting,'…"
+    "desc": "When the user wants backlinks and mentions that lift rankings and AI citations, or asks how to get sites to link or whether a link tactic is safe: link gaps, unlinked mentions, broken links, guest posts, best-of…"
    },
    {
     "name": "marketing-council",
-    "desc": "When the user wants multiple expert perspectives on a marketing question — a simulated board of advisors staffed by legendary marketers (Seth Godin, David Ogilvy, Eugene Schwartz, April Dunford, Rory Sutherland, Alex…"
+    "desc": "When the user wants several expert takes on a marketing decision, or asks what a famous marketer would say about it: a simulated board (Seth Godin, David Ogilvy, April Dunford, Byron Sharp, and more), each grounded in…"
    },
    {
     "name": "marketing-ideas",
-    "desc": "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing…"
+    "desc": "When the user wants marketing ideas or growth tactics for a software product, or asks what to try to get attention or the next customers with little time or budget, or after the obvious channels. Draws on a library of…"
    },
    {
     "name": "marketing-loops",
-    "desc": "When the user wants to set up a recurring, self-running marketing workflow — a repeatable loop an AI agent runs on a cadence (weekly, daily, on a trigger) rather than a one-off task. Also use when the user mentions…"
+    "desc": "When the user wants a recurring marketing job an AI agent runs on a cadence or trigger, or asks what a weekly or daily automated check should do, remember, and when it should stop: SEO and ads checks, churn watches,…"
    },
    {
     "name": "marketing-plan",
-    "desc": "When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use when the user mentions \"marketing plan,\" \"growth plan,\" \"GTM plan,\" \"go-to-market plan,\" \"AARRR…"
+    "desc": "When the user wants a full marketing or go-to-market plan for a client, an advised company, or their own product, or asks how to sequence or prioritize several initiatives with a fixed team and budget: channels, budget,…"
    },
    {
     "name": "marketing-psychology",
-    "desc": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral…"
+    "desc": "When the user wants to apply psychology to marketing, or asks why buyers behave or value things as they do, or whether a persuasion tactic is honest: biases, mental models, anchoring, social proof, scarcity, loss…"
    },
    {
     "name": "offers",
-    "desc": "When the user wants to design, construct, or improve an offer — the thing they actually sell — including value framing, bonus stacking, guarantee design, scarcity/urgency, naming, and payment structure. Also use when…"
+    "desc": "When the user wants to design or improve the offer itself, or asks why it isn't selling or how to add urgency honestly: value stacking, bonuses, guarantees, scarcity, payment plans, upsells. Best for services, courses,…"
    },
    {
     "name": "onboarding",
-    "desc": "When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions \"onboarding flow,\" \"activation rate,\" \"user activation,\" \"first-run…"
+    "desc": "When the user wants better onboarding and activation, or asks why new users don't stick or what the first session should do: first-run experience, aha moments, checklists, empty states, time to value. For the signup…"
    },
    {
     "name": "paywalls",
-    "desc": "When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions \"paywall,\" \"upgrade screen,\" \"upgrade modal,\" \"upsell,\" \"feature gate,\"…"
+    "desc": "When the user wants to create or improve in-app paywalls and upgrade moments, or asks when or how hard to ask free users to pay (after they've seen value): upgrade screens, upsell modals, feature gates, limit-reached…"
    },
    {
     "name": "popups",
-    "desc": "When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions \"exit intent,\" \"popup conversions,\" \"modal optimization,\" \"lead capture…"
+    "desc": "When the user wants to create or improve popups, modals, slide-ins, sticky bars, and banners, or asks whether one will help or annoy and when to show it: exit intent, email capture, scroll and time triggers,…"
    },
    {
     "name": "pricing",
-    "desc": "When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,'…"
+    "desc": "When the user wants to set pricing and packaging, or asks what to charge, whether to raise prices, or how to move existing customers: tiers, value metrics, per-seat vs usage, freemium and trials, willingness to pay,…"
    },
    {
     "name": "product-marketing",
-    "desc": "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,'…"
+    "desc": "When the user wants to create or update the product marketing context doc (.agents/product-marketing.md), or asks what belongs in it or whether positioning or ICP is clear enough: product, ICP, positioning, competitors,…"
    },
    {
     "name": "programmatic-seo",
-    "desc": "When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions \"programmatic SEO,\" \"template pages,\" \"pages at scale,\" \"directory pages,\" \"location pages,\" \"[keyword] +…"
+    "desc": "When the user wants SEO pages at scale from templates and data, or asks whether a page set will rank or look thin: location, integration, comparison, directory, and '[X] for [Y]' pages, each useful rather than thin. For…"
    },
    {
     "name": "prospecting",
-    "desc": "When the user wants to find, qualify, and build a list of prospects to reach out to, across B2B SaaS, general B2B, or local small businesses. Also use when the user mentions \"prospecting,\" \"build a prospect list,\" \"find…"
+    "desc": "When the user wants to find and qualify prospects for outbound, or asks who to target first, which signal to prioritize, or where to spot buyers with the problem: buying signals, enrichment, verification, account…"
    },
    {
     "name": "public-relations",
-    "desc": "When the user wants help with public relations, earned media, press coverage, journalist outreach, or media strategy (not pull requests). Also use when the user mentions 'PR,' 'press,' 'press release,' 'media outreach,'…"
+    "desc": "When the user wants press and media coverage, or asks what to say to a reporter, whether a story is newsworthy, or how to handle a crisis: pitches, press releases, media lists, HARO, op-eds, podcast guest prep,…"
    },
    {
     "name": "referrals",
-    "desc": "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,'…"
+    "desc": "When the user wants referral and affiliate programs or word of mouth, or asks what to reward, how much to pay, or which loop to start with: refer-a-friend incentives, commissions and payouts, partner programs, 'made…"
    },
    {
     "name": "reverse-engineer-marketing",
-    "desc": "When the user wants to reverse engineer how another company grew and copy what worked. Also use when the user mentions 'reverse engineer,' 'how did X grow,' 'how does X get customers,' 'growth teardown,' 'marketing…"
+    "desc": "When the user wants to know how another company grew and what to copy, or asks what a competitor did and when: a dated log of their moves against their traffic from public data, archives, job posts, reviews, and their…"
    },
    {
     "name": "revops",
-    "desc": "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'outbound pipeline…"
+    "desc": "When the user wants to design revenue operations, or asks when a lead is ready for sales or why sales and marketing disagree on lead quality: lifecycle stages, MQL and SQL, scoring, routing, handoff, pipeline stages,…"
    },
    {
     "name": "sales-enablement",
-    "desc": "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection…"
+    "desc": "When the user wants sales collateral, or asks what to give a champion or rep, or how to answer an objection or make the case: decks, one-pagers, objection handling, demo scripts, talk tracks, battle cards, proposals,…"
    },
    {
     "name": "schema",
-    "desc": "When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions \"schema markup,\" \"structured data,\" \"JSON-LD,\" \"rich snippets,\" \"schema.org,\" \"FAQ schema,\"…"
+    "desc": "When the user wants to add, fix, or validate schema markup (JSON-LD), or asks which type fits a page or whether some markup is allowed: product, review, recipe, FAQ, rich result eligibility (FAQ no longer earns Google…"
    },
    {
     "name": "seo-audit",
-    "desc": "When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions \"SEO audit,\" \"technical SEO,\" \"why am I not ranking,\" \"SEO issues,\" \"on-page SEO,\" \"meta tags review,\" \"SEO…"
+    "desc": "When the user wants to audit or diagnose SEO, or asks why traffic dropped, a page won't rank, or whether a setup like canonicals, hreflang, or redirects is right: technical SEO, indexing, Google updates, on-page and…"
    },
    {
     "name": "signup",
-    "desc": "When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions \"signup conversions,\" \"registration friction,\" \"signup form optimization,\" \"free trial…"
+    "desc": "When the user wants better signup, registration, and trial start flows, or asks which fields or steps to cut or whether to require a card: SSO and drop-off before an account exists. For what happens after signup, see…"
    },
    {
     "name": "site-architecture",
-    "desc": "When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions \"sitemap,\" \"site map,\" \"visual sitemap,\" \"site structure,\"…"
+    "desc": "When the user wants to plan or restructure a website, or asks which pages they need or where something belongs: hierarchy, navigation, URL structure, internal linking, website builders and migrations. Not XML sitemaps…"
    },
    {
     "name": "sms",
-    "desc": "When the user wants to plan, build, or optimize SMS, MMS, or WhatsApp marketing — including welcome flows, abandoned cart texts, post-purchase, win-back, promotional sends, or transactional/auth SMS. Also use when the…"
+    "desc": "When the user wants SMS, MMS, or WhatsApp marketing, or asks whether texting is worth it or a message is allowed: abandoned cart, win-back, and promo texts, WhatsApp templates and windows, TCPA and A2P 10DLC compliance,…"
    },
    {
     "name": "social",
-    "desc": "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, or Facebook, or wants to do social listening and engagement triage. Also use when the user…"
+    "desc": "When the user wants organic social content for LinkedIn, X, Instagram, TikTok, or Facebook, or asks what to post, which format to favor, or from which account: posts, threads, carousels, short-form video scripts,…"
    },
    {
     "name": "video",
-    "desc": "When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use when the user mentions 'video production,' 'AI video,' 'Remotion,' 'Hyperframes,' 'HeyGen,'…"
+    "desc": "When the user wants to create video with AI tools or code, or asks which approach to use (screen recording, AI avatar, generated, or templated) or how to make videos repeatably: product demos, AI generation (Veo, Sora,…"
    }
   ]
  },
@@ -4798,7 +4822,7 @@
   ]
  },
  "obsidian-skills": {
-  "n": 6,
+  "n": 7,
   "skills": [
    {
     "name": "defuddle",
@@ -4819,6 +4843,10 @@
    {
     "name": "obsidian-cli",
     "desc": "Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, properties, and more. Also supports plugin and theme development with commands to reload plugins, run JavaScript,…"
+   },
+   {
+    "name": "obsidian-headless",
+    "desc": "Sync and publish Obsidian vaults from the command line with Obsidian Headless (`ob`), without the desktop app. Use when the user wants to set up or run Obsidian Sync or Obsidian Publish on a server, in CI, or from a…"
    },
    {
     "name": "obsidian-markdown",
@@ -4903,7 +4931,7 @@
   ]
  },
  "playwright-cli": {
-  "n": 3,
+  "n": 2,
   "skills": [
    {
     "name": "dev",
@@ -4912,10 +4940,6 @@
    {
     "name": "playwright-cli",
     "desc": "Automate browser interactions, test web pages and work with Playwright tests."
-   },
-   {
-    "name": "playwright-triage",
-    "desc": "Triage and fix one microsoft/playwright-cli issue, or do a maintainer's task, unattended inside the Issue triage GitHub Actions workflow (.github/workflows/triage.yml), which a needs-triage, needs-triage-mac or…"
    }
   ]
  },
@@ -5004,7 +5028,7 @@
   ]
  },
  "rampstack-brand-build-skills": {
-  "n": 109,
+  "n": 110,
   "skills": [
    {
     "name": "accessibility-audit",
@@ -5269,7 +5293,7 @@
    },
    {
     "name": "remotion-interactivity",
-    "desc": "Structure Remotion markup for interactivity"
+    "desc": "Structures Remotion markup so layers, timing and styles are editable in Remotion Studio. Use when writing a new composition or restructuring existing markup."
    },
    {
     "name": "remotion-license",
@@ -5289,7 +5313,7 @@
    },
    {
     "name": "remotion-render",
-    "desc": "Export a Remotion video"
+    "desc": "Export a Remotion video, still image, or editable OpenTimelineIO timeline"
    },
    {
     "name": "remotion-saas",
@@ -5343,7 +5367,7 @@
    },
    {
     "name": "rc-alternative-billing",
-    "desc": "Use this skill when scoping Google Play alternative billing work with RevenueCat Android SDK 10.x. Documents the support status as of purchases-android 10.27.1, which flows RevenueCat abstracts, and which require direct…"
+    "desc": "Use this skill when scoping Google Play alternative billing work with RevenueCat Android SDK 11.x. Documents the support status as of purchases-android 11.1.0, which flows RevenueCat abstracts, and which require direct…"
    },
    {
     "name": "rc-backend",
@@ -5387,7 +5411,7 @@
    },
    {
     "name": "rc-revenuecat-api-quick-reference",
-    "desc": "Use this skill as a quick reference for the RevenueCat Android SDK 10.x and REST API. Covers SDK init, common Purchases calls, CustomerInfo / Offerings access patterns, and the most used REST endpoints."
+    "desc": "Use this skill as a quick reference for the RevenueCat Android SDK 11.x and REST API. Covers SDK init, common Purchases calls, CustomerInfo / Offerings access patterns, and the most used REST endpoints."
    },
    {
     "name": "rc-revenuecat-vs-raw-billing",
@@ -5415,7 +5439,7 @@
    },
    {
     "name": "rc-understanding-revenuecat",
-    "desc": "Use this skill to orient an agent to the RevenueCat Android SDK (10.x) architecture. Covers how RevenueCat reorganizes BillingClient, Google Play Developer API, and RTDN into a single SDK, and how Products, Packages,…"
+    "desc": "Use this skill to orient an agent to the RevenueCat Android SDK (11.x) architecture. Covers how RevenueCat reorganizes BillingClient, Google Play Developer API, and RTDN into a single SDK, and how Products, Packages,…"
    },
    {
     "name": "rc-webhooks",
@@ -6300,7 +6324,7 @@
   ]
  },
  "stripe-agent-skills": {
-  "n": 10,
+  "n": 11,
   "skills": [
    {
     "name": "connect-recommend",
@@ -6329,6 +6353,10 @@
    {
     "name": "stripe-docs",
     "desc": "Use when the user or agent needs to read, search, or look up Stripe documentation or API reference. Prefer this over curl or WebFetch for any docs.stripe.com content. Use to fetch gated documentation."
+   },
+   {
+    "name": "stripe-implementation-planner",
+    "desc": "Plans Stripe product selection and integration architecture for an initial Stripe setup or a material expansion of an existing setup. Use when the user needs personalized recommendations based on their business model,…"
    },
    {
     "name": "stripe-pay",
@@ -6613,7 +6641,7 @@
   ]
  },
  "trail-of-bits-skills": {
-  "n": 96,
+  "n": 97,
   "skills": [
    {
     "name": "address-sanitizer",
@@ -6967,7 +6995,7 @@
   ]
  },
  "vercel-plugin": {
-  "n": 46,
+  "n": 47,
   "skills": [
    {
     "name": "access-protected-vercel-deployment",
@@ -7047,7 +7075,7 @@
    },
    {
     "name": "flags-sdk",
-    "desc": "Implement feature flags in Next.js or SvelteKit code with the Flags SDK (`flags` npm package). Use when installing or configuring the SDK, declaring flags with `flag()`, wiring a provider adapter (`@flags-sdk/vercel`,…"
+    "desc": "Implement feature flags in Next.js or SvelteKit code with the Flags SDK (`flags` npm package). Use when installing or configuring the SDK, declaring flags with `flag()`, reading a connected same-team project's flags…"
    },
    {
     "name": "is-agentic",
@@ -7087,15 +7115,19 @@
    },
    {
     "name": "routing-middleware",
-    "desc": "Vercel Routing Middleware guidance — request interception before cache, rewrites, redirects, personalization. Works with any framework. Supports Edge, Node.js, and Bun runtimes. Use when intercepting requests at the…"
+    "desc": "Vercel Routing Middleware guidance — request interception before cache, rewrites, redirects, personalization. Works with any framework. Supports Edge, Node.js, Bun, and Python runtimes. Use when intercepting requests at…"
    },
    {
     "name": "runtime-cache",
     "desc": "Vercel Runtime Cache API guidance — ephemeral per-region key-value cache with tag-based invalidation. Shared across Functions, Routing Middleware, and Builds. Use when implementing caching strategies beyond…"
    },
    {
+    "name": "sandbox",
+    "desc": "Creates isolated Linux MicroVMs using Vercel Sandbox SDK. Use when building code execution environments, running untrusted code, spinning up dev servers, testing in isolation, or when the user mentions \"sandbox\",…"
+   },
+   {
     "name": "vercel-agent",
-    "desc": "Vercel Agent guidance — dashboard and Slack chat, code review, production investigation, approved actions, and product installation. Use when configuring or working with Vercel's AI assistant."
+    "desc": "Vercel Agent guidance — dashboard and Slack chat, code review, Security Review, production investigation, approved actions, and product installation. Use when configuring or working with Vercel's AI assistant."
    },
    {
     "name": "vercel-cli",
@@ -7111,11 +7143,11 @@
    },
    {
     "name": "vercel-flags",
-    "desc": "Feature flags, A/B tests, and gradual rollouts with Vercel Flags, in any app or framework. Use whenever the user is planning, adding, or changing a feature flag, toggle, kill switch, experiment, percentage rollout, or…"
+    "desc": "Feature flags, A/B tests, and gradual rollouts with Vercel Flags, in any app or framework. Use whenever the user is planning, adding, changing, or cleaning up a feature flag, toggle, kill switch, experiment, percentage…"
    },
    {
     "name": "vercel-functions",
-    "desc": "Vercel Functions expert guidance — Node.js/Bun/Python runtimes, Fluid Compute, long-duration (30 min) functions, large functions (5 GB bundles), Docker/OCI container images, plan limits, streaming, WebSockets, and Cron…"
+    "desc": "Vercel Functions expert guidance — Node.js/Bun/Python runtimes, Fluid Compute, long-duration (30 min) functions, large functions (5 GB bundles), Docker/OCI container images, plan limits, streaming, WebSockets, and…"
    },
    {
     "name": "vercel-plugin-eval",
