@@ -1,7 +1,11 @@
 {
  "addy-osmani-agent-skills": {
-  "n": 25,
+  "n": 26,
   "skills": [
+   {
+    "name": "accessibility-engineering",
+    "desc": "Audits existing interfaces for WCAG 2.2 AA conformance and remediates the violations found. Use when auditing a page or component for accessibility, running axe-core or pa11y, triaging a11y violations, or checking…"
+   },
    {
     "name": "api-and-interface-design",
     "desc": "Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or establishing…"
@@ -211,7 +215,7 @@
   ]
  },
  "android-skills": {
-  "n": 37,
+  "n": 42,
   "skills": [
    {
     "name": "adaptive",
@@ -234,6 +238,10 @@
     "desc": "Audits, detects, and remediates Android Intent and component security"
    },
    {
+    "name": "android-jni-security",
+    "desc": "Audits, detects, and remediates Android JNI and native C/C++ boundary"
+   },
+   {
     "name": "android-permissions-security",
     "desc": "Audits, detects gaps, and remediates Android permissions and IPC component"
    },
@@ -252,6 +260,18 @@
    {
     "name": "camerax",
     "desc": "Provide technical guidance for Android camera development with CameraX."
+   },
+   {
+    "name": "credential-holder",
+    "desc": "Implement digital credential holder (wallet) registration, presentation,"
+   },
+   {
+    "name": "credential-issuer",
+    "desc": "Issue digital credentials to user holder wallets from an Android issuer"
+   },
+   {
+    "name": "credential-verifier",
+    "desc": "Request and verify digital credentials (such as ISO mdoc mobile driver's"
    },
    {
     "name": "display-glasses-with-jetpack-compose-glimmer",
@@ -291,7 +311,7 @@
    },
    {
     "name": "leanback-to-compose-tv-migration",
-    "desc": "Provides instructions and architectural patterns for migrating Android"
+    "desc": "Migrate Android TV apps from legacy Leanback UI Toolkit, Android Views,"
    },
    {
     "name": "litert-lm",
@@ -324,6 +344,10 @@
    {
     "name": "navigation-event",
     "desc": "Intercept back gestures and run Predictive Back animations using the"
+   },
+   {
+    "name": "phone-number-verification",
+    "desc": "Verify user phone numbers without SMS in an Android app using the Credential"
    },
    {
     "name": "play-billing-library-version-upgrade",
@@ -1411,7 +1435,7 @@
    },
    {
     "name": "aws-ai-ml",
-    "desc": "Selects, deploys, and customizes AI models on Amazon SageMaker. Training or Processing jobs, fine-tuning (SFT/DPO/RLVR/RLAIF), model selection, dataset preparation, evaluation, SageMaker or Bedrock deployment, inference…"
+    "desc": "Selects, deploys, and customizes AI models on Amazon SageMaker. Training or Processing jobs, fine-tuning (SFT/DPO/RLVR/RLAIF), model selection, evaluation, SageMaker or Bedrock deployment, inference optimization and…"
    },
    {
     "name": "aws-auth",
@@ -1422,12 +1446,12 @@
     "desc": "Analyze AWS costs, find savings, manage budgets, evaluate Savings Plans and Reserved Instances, right-size EC2/Lambda/RDS/EBS with Compute Optimizer, look up service pricing, query CUR with Athena, detect cost…"
    },
    {
-    "name": "aws-blocks",
-    "desc": "Guides building full-stack applications with AWS Blocks — an Infrastructure-from-Code framework. Applies when creating APIs, selecting Building Blocks (KVStore, DistributedTable, Database, AuthBasic, AuthCognito,…"
-   },
-   {
     "name": "aws-cdk",
     "desc": "Authors, deploys, and troubleshoots AWS infrastructure using CDK with TypeScript or Python. Covers best practices, stack architecture, and construct patterns. Applies when writing CDK constructs, bootstrapping…"
+   },
+   {
+    "name": "aws-cdk-blocks",
+    "desc": "Guides building or extending apps with AWS CDK Blocks (formerly AWS Blocks), an Infrastructure-from-Code framework on CDK. Each Block packages an application capability with its infrastructure, the app code that…"
    },
    {
     "name": "aws-cloudformation",
@@ -1471,7 +1495,7 @@
    },
    {
     "name": "aws-observability",
-    "desc": "Investigates root causes on the Omni context graph (service dependencies); builds, configures, debugs, tunes AWS observability - operator-symptom questions, detecting Omni vs classic CloudWatch. CloudWatch on a…"
+    "desc": "Investigates root causes on the Omni context graph (service dependencies); builds/configures/debugs AWS observability - operator-symptom questions, detecting Omni vs classic. CloudWatch on a reporting service: fleet…"
    },
    {
     "name": "aws-sdk-js-v3-usage",
@@ -1511,7 +1535,7 @@
    },
    {
     "name": "signing-in-to-aws",
-    "desc": "Gets AWS credentials for CLI/SDK access via `aws login`. Activates when a developer needs to authenticate to AWS for local development, when an AWS operation fails due to missing or expired credentials, or when someone…"
+    "desc": "Gets AWS credentials for CLI/SDK access via `aws login`, or `aws signup` for a developer with no AWS account, creating the account on the way. Activates when a developer needs to authenticate to AWS for local…"
    }
   ]
  },
@@ -1534,7 +1558,7 @@
   ]
  },
  "baoyu-skills": {
-  "n": 22,
+  "n": 23,
   "skills": [
    {
     "name": "baoyu-article-illustrator",
@@ -1583,6 +1607,10 @@
    {
     "name": "baoyu-markdown-to-html",
     "desc": "Converts Markdown to styled HTML with WeChat-compatible themes. Supports code highlighting, math, Mermaid (rendered to PNG via headless Chrome), PlantUML, footnotes, alerts, infographics, and optional bottom citations…"
+   },
+   {
+    "name": "baoyu-podcast-summary",
+    "desc": "Summarizes podcasts, interviews, panels, and other conversation transcripts into an objective, reader-first summary written in the user's preferred language. Leads with the few takeaways worth keeping, retells them…"
    },
    {
     "name": "baoyu-post-to-wechat",
@@ -1823,8 +1851,16 @@
   ]
  },
  "canva-skills": {
-  "n": 11,
+  "n": 14,
   "skills": [
+   {
+    "name": "canva-agent-guide",
+    "desc": "Start here for any Canva task. Explains how to discover the Canva MCP tools and skills available in the current session, which tool to use for which design job, the shape every multi-step Canva workflow follows, and how…"
+   },
+   {
+    "name": "canva-autofill",
+    "desc": "Populate Canva Brand Templates (or existing Canva designs) with structured data through the Canva MCP autofill flow - find a template with data fields, read its field schema, map the user's content to those fields,…"
+   },
    {
     "name": "canva-brand-check",
     "desc": "Check a Canva design against a brand kit and report where it diverges — off-palette colors, non-brand fonts, logo misuse, and off-tone copy. Read-only; makes no changes. Use when the user asks \"is this on brand\", \"check…"
@@ -1856,6 +1892,10 @@
    {
     "name": "canva-implement-feedback",
     "desc": "Implement reviewer feedback on a Canva design. Reads all comment threads, synthesises what reviewers want, makes the clear-cut changes directly, and flags anything that needs a human decision. Use when the user asks to…"
+   },
+   {
+    "name": "canva-instagram-post",
+    "desc": "Create editable Canva instagram posts, stories and carousels, proactively offer Canva Resize and fresh variations, and inspect and repair visual quality before delivery."
    },
    {
     "name": "canva-presentation-time-fitting",
@@ -2789,7 +2829,7 @@
   ]
  },
  "clerk-skills": {
-  "n": 22,
+  "n": 23,
   "skills": [
    {
     "name": "audit-clerk-skill",
@@ -2825,7 +2865,7 @@
    },
    {
     "name": "clerk-cli",
-    "desc": "Operate the Clerk CLI (`clerk` binary) for authentication, user/org/session management, impersonation, local webhook testing, deploy verification, instance config, security audits, env keys, feature toggles, and any…"
+    "desc": "Operate the Clerk CLI (`clerk` binary) for authentication, user/org/session management, impersonation, local webhook testing, deploy verification, instance config, security audits, Application Logs, env keys, feature…"
    },
    {
     "name": "clerk-custom-ui",
@@ -2834,6 +2874,10 @@
    {
     "name": "clerk-expo",
     "desc": "Add Clerk authentication to Expo and React Native apps using @clerk/expo. Use for Expo setup, prebuilt native components (AuthView, UserButton), custom sign-in/sign-up flows (email, password, SMS/phone OTP, MFA),…"
+   },
+   {
+    "name": "clerk-migrate",
+    "desc": "Migrate users into Clerk from another auth provider, or between Clerk instances, using the `clerk migrate` command family. Use when the user says \"migrate my users to Clerk\", \"import users from Auth0 / Supabase /…"
    },
    {
     "name": "clerk-nextjs-patterns",
@@ -2940,7 +2984,7 @@
   ]
  },
  "context-engineering-skills": {
-  "n": 19,
+  "n": 20,
   "skills": [
    {
     "name": "advanced-evaluation",
@@ -2985,6 +3029,10 @@
    {
     "name": "hosted-agents",
     "desc": "This skill should be used when designing hosted or background agent infrastructure: sandboxed execution, remote coding environments, warm pools, session persistence, multiplayer collaboration, self-spawning agents, or…"
+   },
+   {
+    "name": "instruction-surface-security",
+    "desc": "Hardens agent runtimes against persistent prompt injection or unauthorized changes to instructions and permissions. Use to audit what agents auto-load, design reviewed activation for project rules, skills, memory, or…"
    },
    {
     "name": "latent-briefing",
@@ -3115,7 +3163,7 @@
    },
    {
     "name": "install-duckdb",
-    "desc": "Install or update DuckDB extensions. Each argument is either a plain extension name (installs from core) or name@repo (e.g. magic@community). Pass --update to update extensions instead of installing."
+    "desc": "Install or update DuckDB extensions. Each argument is either a plain extension name (installs from core) or name@repo (e.g. magic@community). Pass --update to update extensions instead of installing. Also checks that…"
    },
    {
     "name": "query",
@@ -3223,7 +3271,7 @@
    },
    {
     "name": "eas-hosting",
-    "desc": "Deploy Expo websites and Expo Router API routes to EAS Hosting - export the web bundle, run eas deploy for production and PR preview URLs, manage environment secrets and custom domains, and work within the Cloudflare…"
+    "desc": "Deploy Expo websites and Expo Router API routes to EAS Hosting - export the web bundle, deploy to production or PR preview URLs, manage environment secrets and custom domains, and work within the Cloudflare Workers…"
    },
    {
     "name": "eas-observe",
@@ -3235,7 +3283,7 @@
    },
    {
     "name": "eas-update",
-    "desc": "Configure and use EAS Update for over-the-air JavaScript and asset updates with expo-updates and EAS CLI. Use when setting up OTA updates, running eas update:configure or eas update, publishing to…"
+    "desc": "Configure and use EAS Update for over-the-air JavaScript and asset updates with expo-updates and EAS CLI. Use when setting up OTA updates, configuring branches/channels/runtime versions, publishing to…"
    },
    {
     "name": "eas-update-insights",
@@ -3259,11 +3307,11 @@
    },
    {
     "name": "expo-data-fetching",
-    "desc": "Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, React Query, SWR, error handling, caching, offline support, loading/empty/error screen states, and Expo Router data…"
+    "desc": "Implement or debug data fetching in Expo apps. Use for fetch API calls, React Query, SWR, authenticated requests, caching, retries, offline support, loading and error states, or Expo Router data loaders (useLoaderData)."
    },
    {
     "name": "expo-design-system",
-    "desc": "Build and maintain a design system inside an Expo app - a reusable theme of design tokens (color, spacing, typography, radius, shadow, motion), reusable component structure with variant/size/state prop conventions, and…"
+    "desc": "Create or extend an Expo app's theme, design tokens, and reusable component conventions. Use for inconsistent styling, generic or AI-generated screens, component libraries, or audits of hardcoded colors, spacing, and…"
    },
    {
     "name": "expo-dev-client",
@@ -3287,7 +3335,7 @@
    },
    {
     "name": "expo-overview",
-    "desc": "Entry point and router for every Expo or EAS task. Load this skill first — before writing code and before choosing another expo-* / eas-* skill — when the request, PRD, or spec mentions Expo, EAS, Expo Go, or an expo-*…"
+    "desc": "Entry point for Expo and EAS tasks. Load first when the request mentions Expo, EAS, Expo Go, or an expo-* package, or the project has an expo dependency. Identify the goal, apply shared SDK and setup rules, and select…"
    },
    {
     "name": "expo-project-structure",
@@ -4165,7 +4213,7 @@
    },
    {
     "name": "link-building",
-    "desc": "When the user wants backlinks and mentions that lift rankings and AI citations, or asks how to get sites to link or whether a link tactic is safe: link gaps, unlinked mentions, broken links, guest posts, best-of…"
+    "desc": "When the user wants backlinks and mentions that lift rankings and AI citations, or asks how to get sites to link, whether a link tactic is safe, or where to buy placements: link gaps, unlinked mentions, broken links,…"
    },
    {
     "name": "marketing-council",
@@ -5355,7 +5403,7 @@
   ]
  },
  "revenuecat-ai-toolkit": {
-  "n": 46,
+  "n": 47,
   "skills": [
    {
     "name": "create-revenuecat-project",
@@ -5540,6 +5588,10 @@
    {
     "name": "revenuecat-troubleshoot",
     "desc": "Diagnose and resolve RevenueCat integration issues — inspects dashboard configuration through the RevenueCat MCP, walks the SDK debug logs, and covers code-side gotchas. Use when the user says offerings are empty,…"
+   },
+   {
+    "name": "revenuecat-webhooks",
+    "desc": "Receive RevenueCat webhooks on a backend and keep the server's record of subscriptions, entitlements, and consumable purchases correct. Use when the user asks to add, write, or fix a RevenueCat webhook endpoint or…"
    }
   ]
  },
@@ -5992,7 +6044,7 @@
    },
    {
     "name": "shopify-hydrogen",
-    "desc": "Hydrogen storefront implementation cookbooks. Some of the available recipes are: B2B Commerce, Bundles, Combined Listings, Custom Cart Method, Dynamic Content with Metaobjects, Express Server, Google Tag Manager…"
+    "desc": "Hydrogen 2026-10 is an SDK for building custom storefronts in the developer's own framework, with the Storefront API client, cart, products, search, customer accounts, analytics, and Shop Pay. MANDATORY: Use this API…"
    },
    {
     "name": "shopify-liquid",
@@ -6347,6 +6399,10 @@
     "desc": "Guides Stripe integration decisions across development and test environment planning (separate sandboxes vs the shared test mode sandbox), API selection (Checkout Sessions vs PaymentIntents), Connect platform setup…"
    },
    {
+    "name": "stripe-bfcm-dashboard",
+    "desc": "Builds a Black Friday and Cyber Monday (BFCM) season dashboard of payments, customers, and recurring revenue from the connected Stripe MCP account, as a hosted dashboard or artifact where the agent's tools support one,…"
+   },
+   {
     "name": "stripe-directory",
     "desc": "Identifies external providers, merchants, nonprofits, platforms, APIs, and software services, and resolves the documented way to engage them — to pay, donate, subscribe, book, provision, or integrate with them. MUST be…"
    },
@@ -6365,10 +6421,6 @@
    {
     "name": "stripe-projects",
     "desc": "Use when the user wants to provision infrastructure or third-party services using Stripe Projects. Triggers: \"I need a database\", \"set up auth\", \"add caching\", \"give me a Postgres\", \"provision Redis\", \"I need hosting\",…"
-   },
-   {
-    "name": "upgrade-stripe",
-    "desc": "Guide for upgrading Stripe API versions, webhook endpoints, server-side SDKs, Stripe.js, and mobile SDKs"
    }
   ]
  },
@@ -6995,7 +7047,7 @@
   ]
  },
  "vercel-plugin": {
-  "n": 47,
+  "n": 48,
   "skills": [
    {
     "name": "access-protected-vercel-deployment",
@@ -7022,16 +7074,16 @@
     "desc": "End-to-end benchmark suite for vercel-plugin. Runs realistic projects through skill injection, launches dev servers, verifies everything works, analyzes conversation logs, and produces an improvement report for…"
    },
    {
-    "name": "benchmark-sandbox",
-    "desc": "Run vercel-plugin eval scenarios in Vercel Sandboxes instead of local WezTerm panels. Provisions ephemeral microVMs with Claude Code + plugin pre-installed, runs benchmark prompts, extracts hook artifacts, and produces…"
-   },
-   {
     "name": "benchmark-testing",
     "desc": "Create and launch benchmark test projects to exercise vercel-plugin skill injection across realistic scenarios. Sets up isolated directories, installs the plugin, and spawns WezTerm panes running Claude Code with…"
    },
    {
     "name": "bootstrap",
     "desc": "Project bootstrapping orchestrator for repos that depend on Vercel-linked resources (databases, auth, and managed integrations). Use when setting up or repairing a repository so linking, environment provisioning, env…"
+   },
+   {
+    "name": "botid",
+    "desc": "Protect specific routes and server actions from bots in code with Vercel BotID (`botid` npm package). Use when installing BotID, calling `initBotId()` or `checkBotId()`, mounting `<BotIdClient />`, gating signup, login,…"
    },
    {
     "name": "build-agents",
@@ -7046,12 +7098,16 @@
     "desc": "Vercel Chat SDK expert guidance. Use when building multi-platform chat bots — Slack, Telegram, Microsoft Teams, Discord, Google Chat, GitHub, Linear — with a single codebase. Covers the Chat class, adapters, threads,…"
    },
    {
+    "name": "client-side-security",
+    "desc": "Protect what runs in your users' browsers on Vercel with a Content-Security-Policy header and Page Integrity script monitoring. Use when adding or debugging a CSP, choosing where to set it (Next.js proxy.ts or…"
+   },
+   {
     "name": "create-a-backend",
     "desc": "Backend architecture guidance. Use when planning, building, or migrating an API or backend; choosing between Functions, Services, containers, Daemons, Workflow, Queues, and Marketplace databases; or selecting a…"
    },
    {
     "name": "custom-metrics",
-    "desc": "Emit and query Vercel Custom Metrics. Use when instrumenting application or business measurements in Vercel Functions, using metric() from @vercel/functions, choosing metric names and attributes, or querying emitted…"
+    "desc": "Emit and query Vercel Custom Metrics. Use proactively whenever you write or change server code that runs as a Vercel Function (route handlers, API routes, server actions, webhooks, scheduled jobs, queue consumers, AI or…"
    },
    {
     "name": "daemons",
@@ -7123,7 +7179,7 @@
    },
    {
     "name": "sandbox",
-    "desc": "Creates isolated Linux MicroVMs using Vercel Sandbox SDK. Use when building code execution environments, running untrusted code, spinning up dev servers, testing in isolation, or when the user mentions \"sandbox\",…"
+    "desc": "Creates isolated Linux MicroVMs using Vercel Sandbox SDK. Use when building code execution environments, running untrusted code, spinning up dev servers, testing in isolation, streaming a sandbox desktop for graphical…"
    },
    {
     "name": "vercel-agent",
@@ -7159,7 +7215,7 @@
    },
    {
     "name": "vercel-sandbox",
-    "desc": "Vercel Sandbox guidance — ephemeral Firecracker microVMs for running untrusted code safely. Supports AI agents, code generation, and experimentation. Use when executing user-generated or AI-generated code in isolation."
+    "desc": "Vercel Sandbox guidance — ephemeral Firecracker microVMs for running untrusted code safely. Supports AI agents, code generation, and experimentation. Use when executing user-generated or AI-generated code in isolation,…"
    },
    {
     "name": "vercel-schedules",
