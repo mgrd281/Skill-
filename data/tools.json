@@ -8605,5 +8605,21 @@
     "pushed": "2026-10-22",
     "license": "MIT",
     "archived": false
+  },
+  {
+    "slug": "remove-your-data",
+    "cat": "general",
+    "name": "Remove Your Data",
+    "kind": "Skill",
+    "gh": "https://github.com/k7cfo/remove-your-data",
+    "site": "https://k7cfo.github.io/remove-your-data/",
+    "stars": null,
+    "cmd": "npx skills add k7cfo/remove-your-data",
+    "use": [],
+    "desc": "مهارة تقود وكيلك لحذف بياناتك من مواقع البحث عن الأشخاص وسماسرة البيانات بلا اشتراك مدفوع: تقدّم طلبات الحذف من بريدك أنت، وتتابع رسائل التحقق والمهل القانونية (GDPR وقوانين الولايات الأمريكية وDROP في كاليفورنيا)، وتحفظ سجل كل طلب في ملف SQLite على جهازك. ليست استشارة قانونية، وما تخبر به الوكيل يراه النموذج الذي تستخدمه.",
+    "desc_de": "Ein Skill, mit dem dein Agent deine Daten bei Personensuchseiten und Datenhändlern löschen lässt, ohne Abo: Er stellt die Löschanträge von deiner eigenen E-Mail-Adresse, kümmert sich um Bestätigungsmails und gesetzliche Fristen (DSGVO, US-Bundesstaaten, DROP in Kalifornien) und protokolliert jeden Antrag in einer SQLite-Datei auf deinem Rechner. Keine Rechtsberatung, und was du dem Agenten sagst, sieht auch das KI-Modell.",
+    "desc_en": "A skill that has your agent remove your data from people-search sites and data brokers without a paid service: it files opt-outs from your own email, handles verification emails and legal deadlines (GDPR, US state laws, California DROP), and logs every request in a SQLite file on your machine. Not legal advice, and the AI model you use sees what you tell the agent.",
+    "pushed": null,
+    "added": "2026-11-26T00:30:00Z"
   }
 ]

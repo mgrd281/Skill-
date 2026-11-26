@@ -1188,5 +1188,10 @@
   "ar": "رتّب مهامي لهذا الأسبوع حسب الأولوية، وخطّط ليوم الغد حول اجتماعاتي.",
   "de": "Sortier meine Aufgaben für diese Woche nach Priorität und plan den morgigen Tag rund um meine Termine.",
   "en": "Prioritize my tasks for this week and plan tomorrow around my meetings."
+ },
+ "remove-your-data": {
+  "ar": "احذف بياناتي من مواقع البحث عن الأشخاص مثل Spokeo وWhitepages، وتابع طلبات الحذف.",
+  "de": "Lösche meine Daten von Personensuchseiten wie Spokeo und Whitepages und verfolge die Anträge.",
+  "en": "Remove my data from people-search sites like Spokeo and Whitepages and track the requests."
  }
 }
